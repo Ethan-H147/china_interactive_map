@@ -1,0 +1,51 @@
+{
+  "retrieved": "2026-10-30",
+  "coverage": "Samoa: 11 political districts. Dated 2018 boundary reference; source dates and licenses are retained below. Child areas are reconciled within their displayed parents. Shared land frontiers are owned once; coastlines and maritime boundaries are not stroked. National statistics are not distributed to subdivisions.",
+  "counts": {
+    "1": 11
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "WSM-gb.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/WSM/ADM1/",
+      "sha256": "961c2495c6285dd532d2bd0b320242768de987a804d8265aa842ee8294d691d0",
+      "bytes": 1697
+    },
+    "WSM-adm1.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/WSM/ADM1/geoBoundaries-WSM-ADM1.geojson",
+      "credit": "Wikipedia / geoBoundaries",
+      "license": "Creative Commons Attribution-ShareAlike 3.0 Unported",
+      "page": "en.wikipedia.org/wiki/File",
+      "year": "2018",
+      "sha256": "cbcb8c6b492f63f3a8bfe820eefeee3882288e31a629c5a5880298ddf256aaf7",
+      "bytes": 753337
+    },
+    "flag-ws.svg": {
+      "url": "https://flagcdn.com/ws.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT distribution",
+      "sha256": "acedd8fb18df15e9483cc8c0f30f24b7ff2299ca9006c261040e88677c0df0b3",
+      "bytes": 640
+    },
+    "naturalEarth": {
+      "url": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+      "license": "Public domain",
+      "credit": "Natural Earth",
+      "method": "Land-frontier guides, lake separation and the neutral Bir Tawil reference; displayed country borders follow reconciled land geometry.",
+      "files": {
+        "ne-borders.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-borders.json.gz",
+          "sha256": "a2c796c19a530964eedaecde02e605150607cc0a0517da68cf013ddeeed8655c"
+        },
+        "ne-countries.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-countries.json.gz",
+          "sha256": "103135920ec1bfdd5ada2f4f7e0ba1e985b28f881d39ef9343a8a43d92b23610"
+        },
+        "ne-lakes.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-lakes.json.gz",
+          "sha256": "1550308007c3457c65e68b2a47d06797d474073cf7fdeb5eaf6ff55164d1903e"
+        }
+      }
+    }
+  }
+}

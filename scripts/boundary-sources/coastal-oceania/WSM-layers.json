@@ -1,0 +1,18 @@
+{
+  "iso": "WSM",
+  "type": "gb",
+  "layers": [
+    {
+      "level": 1,
+      "file": "WSM-adm1.geojson",
+      "count": 11,
+      "properties": {
+        "shapeName": "A'ana",
+        "shapeISO": "",
+        "shapeID": "40696546B36446689180219",
+        "shapeGroup": "WSM",
+        "shapeType": "ADM1"
+      }
+    }
+  ]
+}

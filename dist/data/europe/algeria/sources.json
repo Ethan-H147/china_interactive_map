@@ -1,0 +1,174 @@
+{
+  "retrieved": "2026-10-30",
+  "coverage": "Algeria: 58 provinces (transition reference), 1541 communes. Dated 2026 boundary reference; source dates and licenses are retained below. The province layer uses the 58 parent-province transition geography. The 2026 law creates 69 provinces; the parent administrations continue through the transition ending December 2026. Commune source geometry is older, joined by largest spatial overlap. Child areas are reconciled within their displayed parents. Shared land frontiers are owned once; coastlines and maritime boundaries are not stroked. National statistics are not distributed to subdivisions.",
+  "counts": {
+    "1": 58,
+    "2": 1541
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "DZA-hdx.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-dza",
+      "sha256": "f421fc8ba287ef8e10952deb1a29433d6cc0e301b4867b7d02f11f9fdb2caca6",
+      "bytes": 32887
+    },
+    "DZA-gb.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/DZA/ADM1/",
+      "sha256": "953b1f0ed0b68a95a83ccba0b03c80deaea24fc69f8718358ccd7b78b3ac97a9",
+      "bytes": 1749
+    },
+    "flag-dz.svg": {
+      "url": "https://flagcdn.com/dz.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT distribution",
+      "sha256": "51bda9bdc313fa5418550d94d46f31e0c396f4e70c810b629fac0430f4b7e638",
+      "bytes": 285
+    },
+    "DZA-adm1.geojson": {
+      "url": "https://data.humdata.org/dataset/3d17274d-0812-4b21-b87a-4854af4eb244/resource/d2b759f7-5f43-48b8-8186-21bb096186d1/download/dza_admin_boundaries.geojson.zip",
+      "member": "dza_admin1.geojson",
+      "archiveSha256": "446b8fe85c5e0c6a2611965ff2dd7dcfd6f16c2a525ed67835c78d68e317a7f9",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-dza",
+      "sha256": "24e6c80f97859c052038f47628f04a04383ea7d6a962c0c5001b0a78aef60513",
+      "bytes": 2659060
+    },
+    "DZA-adm2.geojson": {
+      "url": "https://data.humdata.org/dataset/3d17274d-0812-4b21-b87a-4854af4eb244/resource/d2b759f7-5f43-48b8-8186-21bb096186d1/download/dza_admin_boundaries.geojson.zip",
+      "member": "dza_admin2.geojson",
+      "archiveSha256": "446b8fe85c5e0c6a2611965ff2dd7dcfd6f16c2a525ed67835c78d68e317a7f9",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-dza",
+      "sha256": "9487ce3040ea9820f149ced85d26a86e2862007c7a107de15450def996bc396b",
+      "bytes": 9252972
+    },
+    "DZA-new-gb.json": {
+      "url": "https://www.geoboundaries-dev.org/api/nightly/gbOpen/DZA/ADM1/",
+      "sha256": "29747d321dfaefe1cfb54ab350720e15fb2049a6a1d888e225be89e1d1bf7a9b",
+      "bytes": 2071
+    },
+    "DZA-admin-tags.json": {
+      "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A90%5D%3Brel%5B%22ISO3166-2%22~%22%5EDZ-%22%5D%5B%22admin_level%22%3D%224%22%5D%3Bout%20tags%3B",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "sha256": "cbf5f599fa466c5b1a2e3bec18d1287448bc5db5a56641cd58d81489230adb60",
+      "bytes": 152116
+    },
+    "DZA-osm-part-0.json": {
+      "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A180%5D%3Brel(id%3A157062%2C1258647%2C1258648%2C1258649%2C1258650%2C1258651%2C1259187%2C1259188)%3Bout%20geom%3B",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "sha256": "4cc7b051db741b9112ed03cdf1659063a52a0be129787e5b1860baf74477c30f",
+      "bytes": 1898453
+    },
+    "DZA-osm-part-8.json": {
+      "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A180%5D%3Brel(id%3A1259189%2C1259190%2C1259191%2C1273368%2C1273369%2C1273544%2C1273552%2C1278746)%3Bout%20geom%3B",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "sha256": "87f404c80eef9d390017f565cfe468fbb4b7cb4a13b026239dbac4f7878ae96a",
+      "bytes": 3050483
+    },
+    "DZA-osm-part-16.json": {
+      "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A180%5D%3Brel(id%3A1278747%2C1278748%2C1278749%2C1278765%2C1278766%2C1278767%2C1279666%2C1279667)%3Bout%20geom%3B",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "sha256": "7f45876e57dac2ea8c2628754739c426d0b35954a5d1baf5899feecae88f90f2",
+      "bytes": 2370793
+    },
+    "DZA-osm-part-24.json": {
+      "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A180%5D%3Brel(id%3A1279811%2C1279816%2C1280071%2C1280072%2C1280073%2C1280081%2C1280465%2C1280466)%3Bout%20geom%3B",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "sha256": "802a88bb233dcb35c66ad8e2a2a487b4c1018045164a59d8fb881d2495ca68c7",
+      "bytes": 1193075
+    },
+    "DZA-osm-part-32.json": {
+      "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A180%5D%3Brel(id%3A1280702%2C1281260%2C1281404%2C1282090%2C1282091%2C1282111%2C1283093%2C1283457)%3Bout%20geom%3B",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "sha256": "3156ce5a6637d832303a9042e3122d01662b9304e48659f3a3795e817dabc934",
+      "bytes": 2551034
+    },
+    "DZA-osm-part-40.json": {
+      "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A180%5D%3Brel(id%3A1283601%2C1283608%2C1283678%2C1283683%2C1283740%2C1286213%2C1455599%2C1455600)%3Bout%20geom%3B",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "sha256": "5af7d217d8577d8bd685808ad6ef3520606f36acc3cd07836646158c8c14f606",
+      "bytes": 3605516
+    },
+    "DZA-osm-part-48.json": {
+      "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A180%5D%3Brel(id%3A6528163%2C6528164%2C6822397%2C6824843%2C6824900%2C6825874%2C6825876%2C6825881)%3Bout%20geom%3B",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "sha256": "0d86554dba8770306926e7821dde7b5b2b0075dd05eebb5ab8cb626881ef8172",
+      "bytes": 474352
+    },
+    "DZA-osm-part-56.json": {
+      "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A180%5D%3Brel(id%3A6825901%2C10489092%2C20419608%2C20420206%2C20421910%2C20442307%2C20442362%2C20442406)%3Bout%20geom%3B",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "sha256": "78327f5a371db27cbbacd9fa8800dcb89e88be5206191b1f551314273abd92f3",
+      "bytes": 867067
+    },
+    "DZA-osm-part-64.json": {
+      "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A180%5D%3Brel(id%3A20812604%2C20816671%2C20819318%2C20953792)%3Bout%20geom%3B",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "sha256": "077df0c4f00e805cdaf0e4d1115994ec1c31e9dba8939464f87a93c9027eb4bc",
+      "bytes": 558187
+    },
+    "DZA-admin-osm.json": {
+      "url": "Retained DZA-admin-tags and numbered OSM relation geometry batches",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "sha256": "4b261894d8362a3f0283f0252e915e53f7736304b66a3034eaf934ad72f6f0b0",
+      "bytes": 11172039
+    },
+    "DZA-current-adm1.geojson": {
+      "url": "Derived from retained DZA OSM administrative relations and OCHA country land",
+      "credit": "© OpenStreetMap contributors / national authorities via OCHA",
+      "license": "ODbL 1.0; OCHA source-specific attribution",
+      "sha256": "e26c930da9b59b6f7b484b079c7628fabd1c30aa797c62e89832ff46149ecc19",
+      "bytes": 5316944
+    },
+    "DZA-government-reform.pdf": {
+      "url": "https://www.joradp.dz/FTP/jo-francais/2026/F2026025.pdf",
+      "credit": "Algerian Official Gazette, 4 April 2026",
+      "license": "Official legislative reference; attribution",
+      "sha256": "f6d7f5261e997e490d54a1a061648a5635d3263e1f19aed50e5cd1e5ad01e46f",
+      "bytes": 260776
+    },
+    "DZA-adm0.geojson": {
+      "url": "https://data.humdata.org/dataset/3d17274d-0812-4b21-b87a-4854af4eb244/resource/d2b759f7-5f43-48b8-8186-21bb096186d1/download/dza_admin_boundaries.geojson.zip",
+      "member": "dza_admin0.geojson",
+      "archiveSha256": "446b8fe85c5e0c6a2611965ff2dd7dcfd6f16c2a525ed67835c78d68e317a7f9",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-dza",
+      "sha256": "06b36fcc1b611c57c347bda218b4d3ae8c3f70b25a2cc095e4333bf86e537e1f",
+      "bytes": 1316300
+    },
+    "naturalEarth": {
+      "url": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+      "license": "Public domain",
+      "credit": "Natural Earth",
+      "method": "Land-frontier guides, lake separation and the neutral Bir Tawil reference; displayed country borders follow reconciled land geometry.",
+      "files": {
+        "ne-borders.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-borders.json.gz",
+          "sha256": "a2c796c19a530964eedaecde02e605150607cc0a0517da68cf013ddeeed8655c"
+        },
+        "ne-countries.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-countries.json.gz",
+          "sha256": "103135920ec1bfdd5ada2f4f7e0ba1e985b28f881d39ef9343a8a43d92b23610"
+        },
+        "ne-lakes.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-lakes.json.gz",
+          "sha256": "1550308007c3457c65e68b2a47d06797d474073cf7fdeb5eaf6ff55164d1903e"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "retrieved": "2026-10-30",
+  "coverage": "Palau: 17 states. Dated 2017 boundary reference; source dates and licenses are retained below. Child areas are reconciled within their displayed parents. Shared land frontiers are owned once; coastlines and maritime boundaries are not stroked. National statistics are not distributed to subdivisions. Ordinary quiz pools exclude unassigned offshore reference land; lagoon and sea areas are not land.",
+  "counts": {
+    "1": 17
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "PLW-gb.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/PLW/ADM1/",
+      "sha256": "ba85d7798e3b59aadcfceb075e16cb8c186a83074d0e216016b926d222b9d74d",
+      "bytes": 1747
+    },
+    "PLW-adm1.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/PLW/ADM1/geoBoundaries-PLW-ADM1.geojson",
+      "credit": "OpenStreetMap, Wambacher / geoBoundaries",
+      "license": "Open Data Commons Open Database License 1.0",
+      "page": "www.openstreetmap.org/copyright",
+      "year": "2017",
+      "sha256": "6e9940fe651dcb9ad9a6f0b4274068f6bb2966bbf035a0a41421d30bfb9e946d",
+      "bytes": 332315
+    },
+    "flag-pw.svg": {
+      "url": "https://flagcdn.com/pw.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT distribution",
+      "sha256": "47fc578c8ad500ed537a46e73859b597f819474e3d0227ccd266cdd793596aa6",
+      "bytes": 157
+    },
+    "PLW-coast.json": {
+      "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A180%5D%3Brel%5B%22ISO3166-1%22%3D%22PW%22%5D%5B%22boundary%22%3D%22administrative%22%5D%5B%22admin_level%22%3D%222%22%5D%3Bmap_to_area%3Bway(area)%5B%22natural%22%3D%22coastline%22%5D%3Bout%20geom%3B",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/copyright",
+      "sha256": "a2c1bd7645088f35ff526aff900bad1408a6ba2811c673f18fd305b140101d8e",
+      "bytes": 1904985
+    },
+    "naturalEarth": {
+      "url": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+      "license": "Public domain",
+      "credit": "Natural Earth",
+      "method": "Land-frontier guides, lake separation and the neutral Bir Tawil reference; displayed country borders follow reconciled land geometry.",
+      "files": {
+        "ne-borders.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-borders.json.gz",
+          "sha256": "a2c796c19a530964eedaecde02e605150607cc0a0517da68cf013ddeeed8655c"
+        },
+        "ne-countries.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-countries.json.gz",
+          "sha256": "103135920ec1bfdd5ada2f4f7e0ba1e985b28f881d39ef9343a8a43d92b23610"
+        },
+        "ne-lakes.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-lakes.json.gz",
+          "sha256": "1550308007c3457c65e68b2a47d06797d474073cf7fdeb5eaf6ff55164d1903e"
+        }
+      }
+    }
+  }
+}

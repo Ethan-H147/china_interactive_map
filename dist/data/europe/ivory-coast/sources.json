@@ -1,0 +1,88 @@
+{
+  "retrieved": "2026-10-30",
+  "coverage": "Ivory Coast: 33 regions & autonomous districts, 108 departments. Dated 2018 boundary reference; source dates and licenses are retained below. Child areas are reconciled within their displayed parents. Shared land frontiers are owned once; coastlines and maritime boundaries are not stroked. National statistics are not distributed to subdivisions.",
+  "counts": {
+    "1": 33,
+    "2": 108
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "CIV-hdx.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-civ",
+      "sha256": "07b28dd117110ee8f87f826fe78abf2b925ed3d167f7862aa3c19414d91da9c5",
+      "bytes": 23417
+    },
+    "CIV-gb.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/CIV/ADM1/",
+      "sha256": "894cc20791f8874926545c5ee0a7bb316be83234dbddd2bc1ca67865cb6ea900",
+      "bytes": 1832
+    },
+    "CIV-adm2.geojson": {
+      "url": "https://data.humdata.org/dataset/503a9167-ba56-4174-b160-bdb0fb703719/resource/321e55d2-3486-400a-a855-4b749cf9ef88/download/civ_admin_boundaries.geojson.zip",
+      "member": "civ_admin2_em.geojson",
+      "archiveSha256": "9c89ee383fe51833e896135a6c83efe4034a0ffef44e33c44d38e763c1cfbb51",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-civ",
+      "sha256": "52f2e39a009c8a6ed28fa00538f196dca4e6ec6a36d5a136dc5483ea44cc8b13",
+      "bytes": 4364416
+    },
+    "CIV-adm1.geojson": {
+      "url": "https://data.humdata.org/dataset/503a9167-ba56-4174-b160-bdb0fb703719/resource/321e55d2-3486-400a-a855-4b749cf9ef88/download/civ_admin_boundaries.geojson.zip",
+      "member": "civ_admin1.geojson",
+      "archiveSha256": "9c89ee383fe51833e896135a6c83efe4034a0ffef44e33c44d38e763c1cfbb51",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-civ",
+      "sha256": "dd04fb3cd2b6fd8d11cf6aba798973b8cb51ed00435eda4500b911cd08fc6f6c",
+      "bytes": 2540714
+    },
+    "flag-ci.svg": {
+      "url": "https://flagcdn.com/ci.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT distribution",
+      "sha256": "aaf7093dc7c4b1e65d6cd0a65cf20dc957971205a04985897fb3980bccb3a394",
+      "bytes": 194
+    },
+    "CIV-adm3.geojson": {
+      "url": "https://data.humdata.org/dataset/503a9167-ba56-4174-b160-bdb0fb703719/resource/321e55d2-3486-400a-a855-4b749cf9ef88/download/civ_admin_boundaries.geojson.zip",
+      "member": "civ_admin3.geojson",
+      "archiveSha256": "9c89ee383fe51833e896135a6c83efe4034a0ffef44e33c44d38e763c1cfbb51",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-civ",
+      "sha256": "2d164764a6de1b05c982250e4c834123a6dc5d876e08ce467f4b6cf3f62d7ef7",
+      "bytes": 7288499
+    },
+    "CIV-adm0.geojson": {
+      "url": "https://data.humdata.org/dataset/503a9167-ba56-4174-b160-bdb0fb703719/resource/321e55d2-3486-400a-a855-4b749cf9ef88/download/civ_admin_boundaries.geojson.zip",
+      "member": "civ_admin0.geojson",
+      "archiveSha256": "9c89ee383fe51833e896135a6c83efe4034a0ffef44e33c44d38e763c1cfbb51",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-civ",
+      "sha256": "b2acbcfbe1473846c3381e17fcae1547a8487d456e07fc038cb3c14c970aba62",
+      "bytes": 296083
+    },
+    "naturalEarth": {
+      "url": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+      "license": "Public domain",
+      "credit": "Natural Earth",
+      "method": "Land-frontier guides, lake separation and the neutral Bir Tawil reference; displayed country borders follow reconciled land geometry.",
+      "files": {
+        "ne-borders.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-borders.json.gz",
+          "sha256": "a2c796c19a530964eedaecde02e605150607cc0a0517da68cf013ddeeed8655c"
+        },
+        "ne-countries.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-countries.json.gz",
+          "sha256": "103135920ec1bfdd5ada2f4f7e0ba1e985b28f881d39ef9343a8a43d92b23610"
+        },
+        "ne-lakes.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-lakes.json.gz",
+          "sha256": "1550308007c3457c65e68b2a47d06797d474073cf7fdeb5eaf6ff55164d1903e"
+        }
+      }
+    }
+  }
+}

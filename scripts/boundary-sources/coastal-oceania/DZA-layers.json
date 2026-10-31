@@ -1,0 +1,67 @@
+{
+  "iso": "DZA",
+  "type": "hdx",
+  "layers": [
+    {
+      "level": 1,
+      "file": "DZA-adm1.geojson",
+      "count": 48,
+      "properties": {
+        "adm1_name": "Adrar",
+        "adm1_name1": "أدرا",
+        "adm1_name2": null,
+        "adm1_name3": null,
+        "adm1_pcode": "DZ001",
+        "adm0_name": "Algeria",
+        "adm0_name1": "الجزائر",
+        "adm0_name2": null,
+        "adm0_name3": null,
+        "adm0_pcode": "DZ",
+        "valid_on": "2021-01-20",
+        "valid_to": null,
+        "area_sqkm": 429898.93249661,
+        "version": "v01",
+        "lang": "en",
+        "lang1": "ar",
+        "lang2": null,
+        "lang3": null,
+        "adm1_ref_name": "Adrar",
+        "center_lat": 25.90990829,
+        "center_lon": -1.91608866
+      }
+    },
+    {
+      "level": 2,
+      "file": "DZA-adm2.geojson",
+      "count": 1541,
+      "properties": {
+        "adm2_name": "Adrar",
+        "adm2_name1": null,
+        "adm2_name2": null,
+        "adm2_name3": null,
+        "adm2_pcode": "DZ001001",
+        "adm1_name": "Adrar",
+        "adm1_name1": "أدرا",
+        "adm1_name2": null,
+        "adm1_name3": null,
+        "adm1_pcode": "DZ001",
+        "adm0_name": "Algeria",
+        "adm0_name1": "الجزائر",
+        "adm0_name2": null,
+        "adm0_name3": null,
+        "adm0_pcode": "DZ",
+        "valid_on": "2021-01-20",
+        "valid_to": null,
+        "area_sqkm": 691.27506458,
+        "version": "v01",
+        "lang": "en",
+        "lang1": "ar",
+        "lang2": null,
+        "lang3": null,
+        "adm2_ref_name": "Adrar",
+        "center_lat": 27.9419632,
+        "center_lon": -0.21529181
+      }
+    }
+  ]
+}

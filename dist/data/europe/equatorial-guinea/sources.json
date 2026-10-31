@@ -1,0 +1,98 @@
+{
+  "retrieved": "2026-10-30",
+  "coverage": "Equatorial Guinea: 8 provinces, 32 district reference areas. Dated 2026 boundary reference; source dates and licenses are retained below. Eight provinces include Djibloho. District reference geometry is older and joined by largest spatial overlap. Child areas are reconciled within their displayed parents. Shared land frontiers are owned once; coastlines and maritime boundaries are not stroked. National statistics are not distributed to subdivisions.",
+  "counts": {
+    "1": 8,
+    "2": 32
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "GNQ-hdx.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-gnq",
+      "sha256": "492769712ebc76f8badef247240916a7d68f9aa2ce2c54c698499e08f61d995f",
+      "bytes": 44231
+    },
+    "GNQ-gb.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/GNQ/ADM1/",
+      "sha256": "9475c60b107a9fba58457085f8a9bfa5ed67eb7e6ba0fccb98858380a7b16544",
+      "bytes": 1741
+    },
+    "GNQ-adm1.geojson": {
+      "url": "https://data.humdata.org/dataset/0c1a3093-c97d-48a2-a992-e652ebcbf05c/resource/6b004317-faaa-4176-b5f4-eb6cd4ed46a6/download/gnq_admin_boundaries.geojson.zip",
+      "member": "gnq_admin1.geojson",
+      "archiveSha256": "ea64e4a40e98e54210aadbcd98a8b998c8860f674723f8d1f090a4c62259b861",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-gnq",
+      "sha256": "0cfe8b49b6e88e8ab60020d11489895af3c8fc647aa722ec763871d69ecc1df7",
+      "bytes": 7148210
+    },
+    "GNQ-adm2.geojson": {
+      "url": "https://data.humdata.org/dataset/0c1a3093-c97d-48a2-a992-e652ebcbf05c/resource/6b004317-faaa-4176-b5f4-eb6cd4ed46a6/download/gnq_admin_boundaries.geojson.zip",
+      "member": "gnq_admin2.geojson",
+      "archiveSha256": "ea64e4a40e98e54210aadbcd98a8b998c8860f674723f8d1f090a4c62259b861",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-gnq",
+      "sha256": "4ef210a1fa84412af120af7b058c8904d0ac75dbc3df37628749c33db4799e95",
+      "bytes": 15751548
+    },
+    "flag-gq.svg": {
+      "url": "https://flagcdn.com/gq.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT distribution",
+      "sha256": "c9127828406765ae4faf593ac240d82be9913bde2664ed462fc31dcae68eef52",
+      "bytes": 5658
+    },
+    "GNQ-new-gb.json": {
+      "url": "https://www.geoboundaries-dev.org/api/nightly/gbOpen/GNQ/ADM1/",
+      "sha256": "59326744cd7242ccd6cb1d7fc81fb3341775bb173786ee84d16f6c0a636f77c6",
+      "bytes": 2064
+    },
+    "GNQ-admin-osm.json": {
+      "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A180%5D%3Brel%5B%22boundary%22%3D%22administrative%22%5D%5B%22admin_level%22%3D%224%22%5D%5B%22ISO3166-2%22~%22%5EGQ-%22%5D%3Bout%20geom%3B",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/copyright",
+      "sha256": "05391c06b93a78b834c4dca44ef342393e209e1cb7af6b24bf61364c2af317a0",
+      "bytes": 1332537
+    },
+    "GNQ-current-adm1.geojson": {
+      "url": "Derived from retained GNQ OSM administrative relations and OCHA country land",
+      "credit": "© OpenStreetMap contributors / national authorities via OCHA",
+      "license": "ODbL 1.0; OCHA source-specific attribution",
+      "sha256": "f5dca28f6fceb7f8a5f6bf244bb027532b5f9d5d7ebdfb862b1a4ea9c6840720",
+      "bytes": 517783
+    },
+    "GNQ-adm0.geojson": {
+      "url": "https://data.humdata.org/dataset/0c1a3093-c97d-48a2-a992-e652ebcbf05c/resource/6b004317-faaa-4176-b5f4-eb6cd4ed46a6/download/gnq_admin_boundaries.geojson.zip",
+      "member": "gnq_admin0.geojson",
+      "archiveSha256": "ea64e4a40e98e54210aadbcd98a8b998c8860f674723f8d1f090a4c62259b861",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-gnq",
+      "sha256": "a583a2358ce7a2e7982b9ff73c29586deba2836a132cf8d0c759b42d6aa0a98e",
+      "bytes": 566375
+    },
+    "naturalEarth": {
+      "url": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+      "license": "Public domain",
+      "credit": "Natural Earth",
+      "method": "Land-frontier guides, lake separation and the neutral Bir Tawil reference; displayed country borders follow reconciled land geometry.",
+      "files": {
+        "ne-borders.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-borders.json.gz",
+          "sha256": "a2c796c19a530964eedaecde02e605150607cc0a0517da68cf013ddeeed8655c"
+        },
+        "ne-countries.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-countries.json.gz",
+          "sha256": "103135920ec1bfdd5ada2f4f7e0ba1e985b28f881d39ef9343a8a43d92b23610"
+        },
+        "ne-lakes.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-lakes.json.gz",
+          "sha256": "1550308007c3457c65e68b2a47d06797d474073cf7fdeb5eaf6ff55164d1903e"
+        }
+      }
+    }
+  }
+}

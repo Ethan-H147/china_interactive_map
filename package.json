@@ -450,6 +450,12 @@
     "build:brazil-bolivia": "node --max-old-space-size=10000 scripts/repair-brazil-bolivia.mjs --apply",
     "test:brazil-bolivia": "node --max-old-space-size=10000 scripts/validate-brazil-bolivia.mjs && node scripts/browser/run.mjs brazil-bolivia",
     "build:thailand-malaysia": "node --max-old-space-size=10000 scripts/repair-thailand-malaysia.mjs --apply",
-    "test:thailand-malaysia": "node --max-old-space-size=10000 scripts/validate-thailand-malaysia.mjs && node scripts/browser/run.mjs thailand-malaysia"
+    "test:thailand-malaysia": "node --max-old-space-size=10000 scripts/validate-thailand-malaysia.mjs && node scripts/browser/run.mjs thailand-malaysia",
+    "fetch:horn-islands": "node scripts/fetch-horn-islands.mjs",
+    "build:horn-islands": "node scripts/register-horn-islands.mjs && node --max-old-space-size=12000 scripts/build-horn-islands.mjs && node scripts/build-horn-islands-statistics.mjs && node --max-old-space-size=12000 scripts/build-horn-islands-assets.mjs",
+    "test:horn-islands": "node scripts/validate-horn-islands.mjs && node scripts/audit-horn-islands-frontiers.mjs && node scripts/browser/run.mjs horn-islands",
+    "fetch:coastal-oceania": "node scripts/fetch-coastal-oceania.mjs",
+    "build:coastal-oceania": "node scripts/prepare-coastal-current.mjs && node scripts/coastal-oceania-definitions.mjs --prepare && node scripts/register-coastal-oceania.mjs && node --max-old-space-size=14000 scripts/build-coastal-oceania.mjs && node scripts/register-coastal-oceania.mjs && node --max-old-space-size=14000 scripts/build-coastal-oceania-assets.mjs",
+    "test:coastal-oceania": "node --max-old-space-size=12000 scripts/validate-coastal-oceania.mjs && node scripts/audit-coastal-oceania-frontiers.mjs && node scripts/browser/run.mjs coastal-oceania"
   }
 }

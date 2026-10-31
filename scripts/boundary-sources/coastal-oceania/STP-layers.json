@@ -1,0 +1,31 @@
+{
+  "iso": "STP",
+  "type": "hdx",
+  "layers": [
+    {
+      "level": 1,
+      "file": "STP-adm1.geojson",
+      "count": 7,
+      "properties": {
+        "adm1_name": "Caué",
+        "adm1_name1": null,
+        "adm1_name2": null,
+        "adm1_name3": null,
+        "adm1_pcode": "ST23",
+        "adm0_name": "São Tomé e Príncipe",
+        "adm0_name1": null,
+        "adm0_name2": null,
+        "adm0_name3": null,
+        "adm0_pcode": "ST",
+        "valid_on": "2026-06-01",
+        "valid_to": null,
+        "area_sqkm": 276.49886721,
+        "version": "v01",
+        "lang": "pt",
+        "lang1": null,
+        "lang2": null,
+        "lang3": null
+      }
+    }
+  ]
+}

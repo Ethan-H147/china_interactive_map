@@ -1,0 +1,18 @@
+{
+  "iso": "KIR",
+  "type": "gb",
+  "layers": [
+    {
+      "level": 1,
+      "file": "KIR-adm1.geojson",
+      "count": 3,
+      "properties": {
+        "shapeName": "Gilbert Islands",
+        "shapeISO": "KI-G",
+        "shapeID": "97431129B55805139245338",
+        "shapeGroup": "KIR",
+        "shapeType": "ADM1"
+      }
+    }
+  ]
+}

@@ -196,3 +196,85 @@ body[data-atlas=antarctica],.country-option[data-atlas=antarctica]{--ink:#263c4b
 
 
 .region-color-legend .region-color-ramp{position:relative;overflow:visible}
+
+:root[data-atlas=ethiopia],body[data-atlas=ethiopia],.country-option[data-atlas=ethiopia]{--red:#376a49;--red-dark:#234e34;--ink:#273934;--muted:#677674;--gold:#c0a12b;--line:#dfe7e2;--paper:#fefefd;--map:#f3f5eb;--surface-soft:#f2f5eb;--accent-soft:#e5ece7;--title-accent:#376a49;--header-stripe:linear-gradient(90deg,#348052 0 33.333%,#e2c44b 33.333% 66.667%,#b44749 66.667%)}
+
+:root[data-atlas=somalia],body[data-atlas=somalia],.country-option[data-atlas=somalia]{--red:#356e9f;--red-dark:#254f76;--ink:#273a49;--muted:#667787;--gold:#b09a54;--line:#dfe8f0;--paper:#fdfefe;--map:#eef5f9;--surface-soft:#ecf3f8;--accent-soft:#e5ecf3;--title-accent:#356e9f;--header-stripe:linear-gradient(90deg,#5d9ed1 0 45%,#fffefa 45% 55%,#5d9ed1 55%)}
+
+:root[data-atlas=uganda],body[data-atlas=uganda],.country-option[data-atlas=uganda]{--red:#8b4d41;--red-dark:#61372f;--ink:#3b3233;--muted:#797072;--gold:#b49a2c;--line:#ece3e1;--paper:#fefdfd;--map:#f7f3e9;--surface-soft:#f7f1e8;--accent-soft:#f0e8e6;--title-accent:#8b4d41;--header-stripe:linear-gradient(90deg,#303236 0 16.667%,#d4b646 16.667% 33.333%,#b64b49 33.333% 50%,#303236 50% 66.667%,#d4b646 66.667% 83.333%,#b64b49 83.333%)}
+
+:root[data-atlas=rwanda],body[data-atlas=rwanda],.country-option[data-atlas=rwanda]{--red:#326f8b;--red-dark:#235065;--ink:#263b44;--muted:#657882;--gold:#bba12e;--line:#dee8ec;--paper:#fdfefe;--map:#eff6f3;--surface-soft:#eef5f4;--accent-soft:#e4ecf0;--title-accent:#326f8b;--header-stripe:linear-gradient(90deg,#4b9dc8 0 50%,#e2c148 50% 75%,#3a8057 75%)}
+
+:root[data-atlas=burundi],body[data-atlas=burundi],.country-option[data-atlas=burundi]{--red:#3d7051;--red-dark:#285239;--ink:#283b36;--muted:#687876;--gold:#b54a53;--line:#e0e8e3;--paper:#fdfefd;--map:#f1f6ee;--surface-soft:#f1f5ed;--accent-soft:#e6ece8;--title-accent:#3d7051;--header-stripe:linear-gradient(90deg,#3d8457 0 30%,#fffdf8 30% 40%,#b74651 40% 70%,#fffdf8 70% 80%,#3d8457 80%)}
+
+:root[data-atlas=maldives],body[data-atlas=maldives],.country-option[data-atlas=maldives]{--red:#a13e4d;--red-dark:#762a38;--ink:#402f35;--muted:#7e6d75;--gold:#357457;--line:#f0e0e3;--paper:#fdfefd;--map:#f1f7f4;--surface-soft:#eff5f1;--accent-soft:#f3e6e8;--title-accent:#a13e4d;--header-stripe:linear-gradient(90deg,#b24351 0 18%,#3b805b 18% 82%,#b24351 82%)}
+
+:root[data-atlas=egypt],body[data-atlas=egypt],.country-option[data-atlas=egypt]{--red:#7d6631;--red-dark:#594a26;--ink:#38382f;--muted:#76766f;--gold:#42979a;--line:#eae7de;--paper:#fefefd;--map:#faf8f5;--surface-soft:#f6f4ef;--accent-soft:#eeebe4;--title-accent:#7d6631;--header-stripe:linear-gradient(90deg,#a68330 0 33%,#fffdf8 33% 40%,#35b2b6 40% 67%,#a68330 67%)}
+
+:root[data-atlas=eritrea],body[data-atlas=eritrea],.country-option[data-atlas=eritrea]{--red:#7d3931;--red-dark:#592c26;--ink:#382e2f;--muted:#766c6f;--gold:#429a69;--line:#eadfde;--paper:#fefdfd;--map:#faf6f5;--surface-soft:#f6f0ef;--accent-soft:#eee5e4;--title-accent:#7d3931;--header-stripe:linear-gradient(90deg,#a63e30 0 33%,#fffdf8 33% 40%,#35b66f 40% 67%,#a63e30 67%)}
+
+:root[data-atlas=djibouti],body[data-atlas=djibouti],.country-option[data-atlas=djibouti]{--red:#316a7d;--red-dark:#264d59;--ink:#263941;--muted:#65767f;--gold:#9a4266;--line:#dee7ea;--paper:#fdfefe;--map:#f5f8fa;--surface-soft:#eff4f6;--accent-soft:#e4ecee;--title-accent:#316a7d;--header-stripe:linear-gradient(90deg,#3089a6 0 33%,#fffdf8 33% 40%,#b6356b 40% 67%,#3089a6 67%)}
+
+:root[data-atlas=sudan],body[data-atlas=sudan],.country-option[data-atlas=sudan]{--red:#7d4431;--red-dark:#593326;--ink:#38302f;--muted:#766e6f;--gold:#429a75;--line:#eae1de;--paper:#fefdfd;--map:#faf6f5;--surface-soft:#f6f1ef;--accent-soft:#eee7e4;--title-accent:#7d4431;--header-stripe:linear-gradient(90deg,#a64e30 0 33%,#fffdf8 33% 40%,#35b680 40% 67%,#a64e30 67%)}
+
+:root[data-atlas=libya],body[data-atlas=libya],.country-option[data-atlas=libya]{--red:#317d6a;--red-dark:#26594d;--ink:#263e3c;--muted:#657b7b;--gold:#9a4292;--line:#deeae7;--paper:#fdfefe;--map:#f5faf8;--surface-soft:#eff6f4;--accent-soft:#e4eeec;--title-accent:#317d6a;--header-stripe:linear-gradient(90deg,#30a689 0 33%,#fffdf8 33% 40%,#b635ab 40% 67%,#30a689 67%)}
+
+:root[data-atlas=tunisia],body[data-atlas=tunisia],.country-option[data-atlas=tunisia]{--red:#7d313d;--red-dark:#59262f;--ink:#382c32;--muted:#766a71;--gold:#429a50;--line:#eadee0;--paper:#fefdfd;--map:#faf5f6;--surface-soft:#f6eff0;--accent-soft:#eee4e6;--title-accent:#7d313d;--header-stripe:linear-gradient(90deg,#a63044 0 33%,#fffdf8 33% 40%,#35b64a 40% 67%,#a63044 67%)}
+
+:root[data-atlas=algeria],body[data-atlas=algeria],.country-option[data-atlas=algeria]{--red:#317d4a;--red-dark:#265937;--ink:#263e35;--muted:#657b74;--gold:#7c429a;--line:#deeae2;--paper:#fdfefe;--map:#f5faf7;--surface-soft:#eff6f1;--accent-soft:#e4eee7;--title-accent:#317d4a;--header-stripe:linear-gradient(90deg,#30a657 0 33%,#fffdf8 33% 40%,#8b35b6 40% 67%,#30a657 67%)}
+
+:root[data-atlas=mauritania],body[data-atlas=mauritania],.country-option[data-atlas=mauritania]{--red:#577d31;--red-dark:#405926;--ink:#2f3e2f;--muted:#6e7b6f;--gold:#42509a;--line:#e4eade;--paper:#fefefd;--map:#f7faf5;--surface-soft:#f2f6ef;--accent-soft:#e9eee4;--title-accent:#577d31;--header-stripe:linear-gradient(90deg,#6ba630 0 33%,#fffdf8 33% 40%,#354ab6 40% 67%,#6ba630 67%)}
+
+:root[data-atlas=senegal],body[data-atlas=senegal],.country-option[data-atlas=senegal]{--red:#317d44;--red-dark:#265933;--ink:#263e33;--muted:#657b73;--gold:#75429a;--line:#deeae1;--paper:#fdfefd;--map:#f5faf6;--surface-soft:#eff6f1;--accent-soft:#e4eee7;--title-accent:#317d44;--header-stripe:linear-gradient(90deg,#30a64e 0 33%,#fffdf8 33% 40%,#8035b6 40% 67%,#30a64e 67%)}
+
+:root[data-atlas=gambia],body[data-atlas=gambia],.country-option[data-atlas=gambia]{--red:#7d3731;--red-dark:#592a26;--ink:#382d2f;--muted:#766b6f;--gold:#429a66;--line:#eadfde;--paper:#fefdfd;--map:#faf5f5;--surface-soft:#f6efef;--accent-soft:#eee5e4;--title-accent:#7d3731;--header-stripe:linear-gradient(90deg,#a63a30 0 33%,#fffdf8 33% 40%,#35b66b 40% 67%,#a63a30 67%)}
+
+:root[data-atlas=guinea-bissau],body[data-atlas=guinea-bissau],.country-option[data-atlas=guinea-bissau]{--red:#7d5731;--red-dark:#594026;--ink:#38352f;--muted:#76726f;--gold:#429a8b;--line:#eae4de;--paper:#fefefd;--map:#faf7f5;--surface-soft:#f6f2ef;--accent-soft:#eee9e4;--title-accent:#7d5731;--header-stripe:linear-gradient(90deg,#a66b30 0 33%,#fffdf8 33% 40%,#35b6a0 40% 67%,#a66b30 67%)}
+
+:root[data-atlas=guinea],body[data-atlas=guinea],.country-option[data-atlas=guinea]{--red:#7d6e31;--red-dark:#594f26;--ink:#383a2f;--muted:#76776f;--gold:#428e9a;--line:#eae8de;--paper:#fefefd;--map:#faf9f5;--surface-soft:#f6f5ef;--accent-soft:#eeece4;--title-accent:#7d6e31;--header-stripe:linear-gradient(90deg,#a68e30 0 33%,#fffdf8 33% 40%,#35a5b6 40% 67%,#a68e30 67%)}
+
+:root[data-atlas=sierra-leone],body[data-atlas=sierra-leone],.country-option[data-atlas=sierra-leone]{--red:#317d7d;--red-dark:#265959;--ink:#263e41;--muted:#657b7f;--gold:#9a427c;--line:#deeaea;--paper:#fdfefe;--map:#f5fafa;--surface-soft:#eff6f6;--accent-soft:#e4eeee;--title-accent:#317d7d;--header-stripe:linear-gradient(90deg,#30a6a6 0 33%,#fffdf8 33% 40%,#b6358b 40% 67%,#30a6a6 67%)}
+
+:root[data-atlas=liberia],body[data-atlas=liberia],.country-option[data-atlas=liberia]{--red:#7d3137;--red-dark:#59262a;--ink:#382c30;--muted:#766a70;--gold:#429a58;--line:#eadedf;--paper:#fefdfd;--map:#faf5f5;--surface-soft:#f6efef;--accent-soft:#eee4e5;--title-accent:#7d3137;--header-stripe:linear-gradient(90deg,#a6303a 0 33%,#fffdf8 33% 40%,#35b655 40% 67%,#a6303a 67%)}
+
+:root[data-atlas=ivory-coast],body[data-atlas=ivory-coast],.country-option[data-atlas=ivory-coast]{--red:#7d5031;--red-dark:#593c26;--ink:#38332f;--muted:#76716f;--gold:#429a84;--line:#eae3de;--paper:#fefefd;--map:#faf7f5;--surface-soft:#f6f2ef;--accent-soft:#eee8e4;--title-accent:#7d5031;--header-stripe:linear-gradient(90deg,#a66130 0 33%,#fffdf8 33% 40%,#35b696 40% 67%,#a66130 67%)}
+
+:root[data-atlas=ghana],body[data-atlas=ghana],.country-option[data-atlas=ghana]{--red:#7d5731;--red-dark:#594026;--ink:#38352f;--muted:#76726f;--gold:#429a8b;--line:#eae4de;--paper:#fefefd;--map:#faf7f5;--surface-soft:#f6f2ef;--accent-soft:#eee9e4;--title-accent:#7d5731;--header-stripe:linear-gradient(90deg,#a66b30 0 33%,#fffdf8 33% 40%,#35b6a0 40% 67%,#a66b30 67%)}
+
+:root[data-atlas=togo],body[data-atlas=togo],.country-option[data-atlas=togo]{--red:#317d4a;--red-dark:#265937;--ink:#263e35;--muted:#657b74;--gold:#7c429a;--line:#deeae2;--paper:#fdfefe;--map:#f5faf7;--surface-soft:#eff6f1;--accent-soft:#e4eee7;--title-accent:#317d4a;--header-stripe:linear-gradient(90deg,#30a657 0 33%,#fffdf8 33% 40%,#8b35b6 40% 67%,#30a657 67%)}
+
+:root[data-atlas=benin],body[data-atlas=benin],.country-option[data-atlas=benin]{--red:#317d57;--red-dark:#265940;--ink:#263e38;--muted:#657b77;--gold:#8b429a;--line:#deeae4;--paper:#fdfefe;--map:#f5faf7;--surface-soft:#eff6f2;--accent-soft:#e4eee9;--title-accent:#317d57;--header-stripe:linear-gradient(90deg,#30a66b 0 33%,#fffdf8 33% 40%,#a035b6 40% 67%,#30a66b 67%)}
+
+:root[data-atlas=cameroon],body[data-atlas=cameroon],.country-option[data-atlas=cameroon]{--red:#317d5d;--red-dark:#265944;--ink:#263e39;--muted:#657b78;--gold:#92429a;--line:#deeae5;--paper:#fdfefe;--map:#f5faf8;--surface-soft:#eff6f3;--accent-soft:#e4eeea;--title-accent:#317d5d;--header-stripe:linear-gradient(90deg,#30a675 0 33%,#fffdf8 33% 40%,#ab35b6 40% 67%,#30a675 67%)}
+
+:root[data-atlas=equatorial-guinea],body[data-atlas=equatorial-guinea],.country-option[data-atlas=equatorial-guinea]{--red:#31507d;--red-dark:#263b59;--ink:#263341;--muted:#65717f;--gold:#9a4249;--line:#dee3ea;--paper:#fdfefe;--map:#f5f7fa;--surface-soft:#eff2f6;--accent-soft:#e4e8ee;--title-accent:#31507d;--header-stripe:linear-gradient(90deg,#3061a6 0 33%,#fffdf8 33% 40%,#b63540 40% 67%,#3061a6 67%)}
+
+:root[data-atlas=gabon],body[data-atlas=gabon],.country-option[data-atlas=gabon]{--red:#317d63;--red-dark:#265948;--ink:#263e3b;--muted:#657b7a;--gold:#9a429a;--line:#deeae6;--paper:#fdfefe;--map:#f5faf8;--surface-soft:#eff6f3;--accent-soft:#e4eeeb;--title-accent:#317d63;--header-stripe:linear-gradient(90deg,#30a67f 0 33%,#fffdf8 33% 40%,#b635b6 40% 67%,#30a67f 67%)}
+
+:root[data-atlas=cabo-verde],body[data-atlas=cabo-verde],.country-option[data-atlas=cabo-verde]{--red:#31447d;--red-dark:#263359;--ink:#263041;--muted:#656e7f;--gold:#9a4942;--line:#dee1ea;--paper:#fdfdfe;--map:#f5f6fa;--surface-soft:#eff1f6;--accent-soft:#e4e7ee;--title-accent:#31447d;--header-stripe:linear-gradient(90deg,#304ea6 0 33%,#fffdf8 33% 40%,#b64035 40% 67%,#304ea6 67%)}
+
+:root[data-atlas=sao-tome-principe],body[data-atlas=sao-tome-principe],.country-option[data-atlas=sao-tome-principe]{--red:#317d37;--red-dark:#26592b;--ink:#263e30;--muted:#657b70;--gold:#66429a;--line:#deeadf;--paper:#fdfefd;--map:#f5faf5;--surface-soft:#eff6ef;--accent-soft:#e4eee5;--title-accent:#317d37;--header-stripe:linear-gradient(90deg,#30a63a 0 33%,#fffdf8 33% 40%,#6b35b6 40% 67%,#30a63a 67%)}
+
+:root[data-atlas=comoros],body[data-atlas=comoros],.country-option[data-atlas=comoros]{--red:#7d6a31;--red-dark:#594d26;--ink:#38392f;--muted:#76766f;--gold:#42929a;--line:#eae7de;--paper:#fefefd;--map:#faf8f5;--surface-soft:#f6f4ef;--accent-soft:#eeece4;--title-accent:#7d6a31;--header-stripe:linear-gradient(90deg,#a68930 0 33%,#fffdf8 33% 40%,#35abb6 40% 67%,#a68930 67%)}
+
+:root[data-atlas=mauritius],body[data-atlas=mauritius],.country-option[data-atlas=mauritius]{--red:#317d76;--red-dark:#265955;--ink:#263e3f;--muted:#657b7e;--gold:#9a4284;--line:#deeae9;--paper:#fdfefe;--map:#f5faf9;--surface-soft:#eff6f6;--accent-soft:#e4eeed;--title-accent:#317d76;--header-stripe:linear-gradient(90deg,#30a69c 0 33%,#fffdf8 33% 40%,#b63596 40% 67%,#30a69c 67%)}
+
+:root[data-atlas=seychelles],body[data-atlas=seychelles],.country-option[data-atlas=seychelles]{--red:#316a7d;--red-dark:#264d59;--ink:#263941;--muted:#65767f;--gold:#9a4266;--line:#dee7ea;--paper:#fdfefe;--map:#f5f8fa;--surface-soft:#eff4f6;--accent-soft:#e4ecee;--title-accent:#316a7d;--header-stripe:linear-gradient(90deg,#3089a6 0 33%,#fffdf8 33% 40%,#b6356b 40% 67%,#3089a6 67%)}
+
+:root[data-atlas=fiji],body[data-atlas=fiji],.country-option[data-atlas=fiji]{--red:#316a7d;--red-dark:#264d59;--ink:#263941;--muted:#65767f;--gold:#9a4266;--line:#dee7ea;--paper:#fdfefe;--map:#f5f8fa;--surface-soft:#eff4f6;--accent-soft:#e4ecee;--title-accent:#316a7d;--header-stripe:linear-gradient(90deg,#3089a6 0 33%,#fffdf8 33% 40%,#b6356b 40% 67%,#3089a6 67%)}
+
+:root[data-atlas=samoa],body[data-atlas=samoa],.country-option[data-atlas=samoa]{--red:#7d3137;--red-dark:#59262a;--ink:#382c30;--muted:#766a70;--gold:#429a58;--line:#eadedf;--paper:#fefdfd;--map:#faf5f5;--surface-soft:#f6efef;--accent-soft:#eee4e5;--title-accent:#7d3137;--header-stripe:linear-gradient(90deg,#a6303a 0 33%,#fffdf8 33% 40%,#35b655 40% 67%,#a6303a 67%)}
+
+:root[data-atlas=tonga],body[data-atlas=tonga],.country-option[data-atlas=tonga]{--red:#7d313d;--red-dark:#59262f;--ink:#382c32;--muted:#766a71;--gold:#429a50;--line:#eadee0;--paper:#fefdfd;--map:#faf5f6;--surface-soft:#f6eff0;--accent-soft:#eee4e6;--title-accent:#7d313d;--header-stripe:linear-gradient(90deg,#a63044 0 33%,#fffdf8 33% 40%,#35b64a 40% 67%,#a63044 67%)}
+
+:root[data-atlas=tuvalu],body[data-atlas=tuvalu],.country-option[data-atlas=tuvalu]{--red:#31707d;--red-dark:#265159;--ink:#263b41;--muted:#65787f;--gold:#9a426e;--line:#dee8ea;--paper:#fdfefe;--map:#f5f9fa;--surface-soft:#eff5f6;--accent-soft:#e4ecee;--title-accent:#31707d;--header-stripe:linear-gradient(90deg,#3092a6 0 33%,#fffdf8 33% 40%,#b63575 40% 67%,#3092a6 67%)}
+
+:root[data-atlas=kiribati],body[data-atlas=kiribati],.country-option[data-atlas=kiribati]{--red:#7d4a31;--red-dark:#593726;--ink:#38322f;--muted:#766f6f;--gold:#429a7c;--line:#eae2de;--paper:#fefefd;--map:#faf7f5;--surface-soft:#f6f1ef;--accent-soft:#eee7e4;--title-accent:#7d4a31;--header-stripe:linear-gradient(90deg,#a65730 0 33%,#fffdf8 33% 40%,#35b68b 40% 67%,#a65730 67%)}
+
+:root[data-atlas=nauru],body[data-atlas=nauru],.country-option[data-atlas=nauru]{--red:#31507d;--red-dark:#263b59;--ink:#263341;--muted:#65717f;--gold:#9a4249;--line:#dee3ea;--paper:#fdfefe;--map:#f5f7fa;--surface-soft:#eff2f6;--accent-soft:#e4e8ee;--title-accent:#31507d;--header-stripe:linear-gradient(90deg,#3061a6 0 33%,#fffdf8 33% 40%,#b63540 40% 67%,#3061a6 67%)}
+
+:root[data-atlas=palau],body[data-atlas=palau],.country-option[data-atlas=palau]{--red:#31767d;--red-dark:#265559;--ink:#263c41;--muted:#65797f;--gold:#9a4275;--line:#dee9ea;--paper:#fdfefe;--map:#f5f9fa;--surface-soft:#eff6f6;--accent-soft:#e4edee;--title-accent:#31767d;--header-stripe:linear-gradient(90deg,#309ca6 0 33%,#fffdf8 33% 40%,#b63580 40% 67%,#309ca6 67%)}
+
+:root[data-atlas=marshall-islands],body[data-atlas=marshall-islands],.country-option[data-atlas=marshall-islands]{--red:#31507d;--red-dark:#263b59;--ink:#263341;--muted:#65717f;--gold:#9a4249;--line:#dee3ea;--paper:#fdfefe;--map:#f5f7fa;--surface-soft:#eff2f6;--accent-soft:#e4e8ee;--title-accent:#31507d;--header-stripe:linear-gradient(90deg,#3061a6 0 33%,#fffdf8 33% 40%,#b63540 40% 67%,#3061a6 67%)}
+
+:root[data-atlas=micronesia],body[data-atlas=micronesia],.country-option[data-atlas=micronesia]{--red:#315d7d;--red-dark:#264459;--ink:#263641;--muted:#65747f;--gold:#9a4258;--line:#dee5ea;--paper:#fdfefe;--map:#f5f8fa;--surface-soft:#eff3f6;--accent-soft:#e4eaee;--title-accent:#315d7d;--header-stripe:linear-gradient(90deg,#3075a6 0 33%,#fffdf8 33% 40%,#b63555 40% 67%,#3075a6 67%)}

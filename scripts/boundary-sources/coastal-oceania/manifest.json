@@ -1,0 +1,1673 @@
+{
+  "retrieved": "2026-10-30",
+  "files": {
+    "DZA-hdx.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-dza",
+      "sha256": "f421fc8ba287ef8e10952deb1a29433d6cc0e301b4867b7d02f11f9fdb2caca6",
+      "bytes": 32887
+    },
+    "EGY-hdx.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-egy",
+      "sha256": "9167242dc8cf35dae4cb38be02b525da424d77fc6f1bfc767d2cf63d254340e5",
+      "bytes": 37326
+    },
+    "TUN-hdx.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-tun",
+      "sha256": "d9abcf8bb00de149e05cd7a29a65329ff457365e3e99cb0a7a6e3bfbfe7efdfd",
+      "bytes": 39371
+    },
+    "LBY-hdx.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-lby",
+      "sha256": "a7a980ae66e89ac61df1cec29026c9a2a300e39355b47eb85c7c43f5304d95fc",
+      "bytes": 35386
+    },
+    "EGY-gb.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/EGY/ADM1/",
+      "sha256": "965ad93f3b17c56bab170a7d042ba959d1beb9bd5979c7c5ffd4294c6c137077",
+      "bytes": 1748
+    },
+    "LBY-gb.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/LBY/ADM1/",
+      "sha256": "6f7b9c18a34e9f412b0d8cecefe9af779888497c138b30bb8d833ddc310f0725",
+      "bytes": 1721
+    },
+    "TUN-gb.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/TUN/ADM1/",
+      "sha256": "abcdec6053bcdfb393b4c65c56c71c7385602189920f6213601dd7da4f9129c8",
+      "bytes": 1751
+    },
+    "DZA-gb.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/DZA/ADM1/",
+      "sha256": "953b1f0ed0b68a95a83ccba0b03c80deaea24fc69f8718358ccd7b78b3ac97a9",
+      "bytes": 1749
+    },
+    "SDN-hdx.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-sdn",
+      "sha256": "e7c506425100d6a134c5b34a2f309b14a00433dc8ab754c0fa4d7eaec5a751a3",
+      "bytes": 38900
+    },
+    "MRT-hdx.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-mrt",
+      "sha256": "88a348eb7116c4f2b1690ace138f3a276e5b5ecbfdcb7577ed1208d95060f957",
+      "bytes": 37706
+    },
+    "DJI-hdx.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-dji",
+      "sha256": "4ee877d72c4f83e9af05bbe4861b6987c444e91b29c8572223296aadd7168cb6",
+      "bytes": 10143
+    },
+    "ERI-hdx.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-eri",
+      "sha256": "881b3d5722974098d29c7bec8a218ff77e5dc10721956c44e8aaa8026e0f3e03",
+      "bytes": 34169
+    },
+    "SDN-gb.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/SDN/ADM1/",
+      "sha256": "08258fc59c17c2c9f1014abff2273ca667667e9815f8c0cbc5faaf29deb77f93",
+      "bytes": 1852
+    },
+    "MRT-gb.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/MRT/ADM1/",
+      "sha256": "33c1aeb7378339616f8eddb2ce25647a42baa0d6f38d78f11578045e072fe527",
+      "bytes": 1749
+    },
+    "DJI-gb.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/DJI/ADM1/",
+      "sha256": "57e7b82adb2f8bcfbc2f6e3414b0fa26d1a80ffd0c21ca0c75a9545768f3dddd",
+      "bytes": 1703
+    },
+    "ERI-gb.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/ERI/ADM1/",
+      "sha256": "089156ca6a300deaef408aafb57785af914441a054480118ce7c1738da2d79ca",
+      "bytes": 1727
+    },
+    "SEN-hdx.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-sen",
+      "sha256": "6e1d6b8ec2d3ec84f95d0164a2ddbf7ffe070614e138655f19df175128d49d5a",
+      "bytes": 41951
+    },
+    "GMB-hdx.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-gmb",
+      "sha256": "78a3fbcc425d0c1f71cfdecc5e8577ab3275d10bd80a2db420dfb7f5313c0b10",
+      "bytes": 47186
+    },
+    "GNB-hdx.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-gnb",
+      "sha256": "6379d1928f78bd9cc018d8aab56d867da92e7b4afd696ca5e4835ba251857ad2",
+      "bytes": 19893
+    },
+    "SEN-gb.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/SEN/ADM1/",
+      "sha256": "46fe731a7efb3b3acd80023171a9160d95df5034109ec4400962ae093e26dcc0",
+      "bytes": 1783
+    },
+    "GMB-gb.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/GMB/ADM1/",
+      "sha256": "212c5ad17ae2d09f23751dad23896ae7a14853945527267a36ddb0f3aff43b35",
+      "bytes": 1913
+    },
+    "GIN-hdx.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-gin",
+      "sha256": "a16370bee8e69df745ebfd9c5b79f5e10ca53f501af8e75c1501848d4744ae27",
+      "bytes": 38423
+    },
+    "GNB-gb.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/GNB/ADM1/",
+      "sha256": "9a41648cadaeb1b7dfaa105671ab11be0d34a4d3c918a286e05a606155433446",
+      "bytes": 1738
+    },
+    "GIN-gb.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/GIN/ADM1/",
+      "sha256": "ea511b699fa3a3c7b85f6b9e19db5dd733f0357aa73edeaa418837acecafdbba",
+      "bytes": 1851
+    },
+    "SLE-hdx.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-sle",
+      "sha256": "c11cc2487326a1637b693a796297501d7b317a74b1b36ad7c64d2b48fc513d1e",
+      "bytes": 40949
+    },
+    "CIV-hdx.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-civ",
+      "sha256": "07b28dd117110ee8f87f826fe78abf2b925ed3d167f7862aa3c19414d91da9c5",
+      "bytes": 23417
+    },
+    "LBR-hdx.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-lbr",
+      "sha256": "7ef62beff26b1cbfe3ba49961685fe16abed4ead3c70aefd563699af092bfddc",
+      "bytes": 45626
+    },
+    "SLE-gb.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/SLE/ADM1/",
+      "sha256": "2ce60454ed4a7e9ff2b71c74ca7749271e6e7c10f8341444bf220459768f86fd",
+      "bytes": 1808
+    },
+    "CIV-gb.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/CIV/ADM1/",
+      "sha256": "894cc20791f8874926545c5ee0a7bb316be83234dbddd2bc1ca67865cb6ea900",
+      "bytes": 1832
+    },
+    "GHA-hdx.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-gha",
+      "sha256": "29c4d1c3cd3b67027676b4bb0fdeda8181e5f3ebbe6f7d99f3cc47fc26c40486",
+      "bytes": 21347
+    },
+    "LBR-gb.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/LBR/ADM1/",
+      "sha256": "e23a68b30dc43b66942ef8efcece1dc6e69081f0b23b952a2375d0a28776387e",
+      "bytes": 1765
+    },
+    "GHA-gb.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/GHA/ADM1/",
+      "sha256": "d7bee38893595ae211fd16d5a88c214af835799a1345a4dbefbb3fa1fc4a4ab5",
+      "bytes": 1669
+    },
+    "BEN-hdx.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-ben",
+      "sha256": "0a9f446980331c4da82c0a85345be421710f376142ec0feea578279006b3c1d1",
+      "bytes": 35538
+    },
+    "TGO-hdx.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-tgo",
+      "sha256": "721f6d7bbb3b8e7cbd43b0d9c668fed6b22ef041a9b901b7f441c1ad66e9d323",
+      "bytes": 42779
+    },
+    "BEN-gb.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/BEN/ADM1/",
+      "sha256": "a7f6ebbeba6562db0b0c6867aab7e89f346c4421e4eecbb5fb1713cbd82b0d64",
+      "bytes": 1659
+    },
+    "TGO-gb.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/TGO/ADM1/",
+      "sha256": "d0b2a852158509eed8a4327db30df6ab8d24bb64a826191f57a4092acbb5ea8d",
+      "bytes": 1682
+    },
+    "GNQ-hdx.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-gnq",
+      "sha256": "492769712ebc76f8badef247240916a7d68f9aa2ce2c54c698499e08f61d995f",
+      "bytes": 44231
+    },
+    "CMR-hdx.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-cmr",
+      "sha256": "edb70423278810d25bba423d621f0c4ddc182ae7356278de8c6524825f5475fb",
+      "bytes": 54770
+    },
+    "GNQ-gb.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/GNQ/ADM1/",
+      "sha256": "9475c60b107a9fba58457085f8a9bfa5ed67eb7e6ba0fccb98858380a7b16544",
+      "bytes": 1741
+    },
+    "CMR-gb.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/CMR/ADM1/",
+      "sha256": "ab0dbd814735727b497f607ff69d2ee2bcca5fe6ec6ffbc4e0a1ddc0a6035745",
+      "bytes": 1686
+    },
+    "GAB-hdx.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-gab",
+      "sha256": "4c4161ea7286eca72bf56cd0e83933ea153398b7d12f1eaff7425c79e82c36f7",
+      "bytes": 16859
+    },
+    "CPV-hdx.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-cpv",
+      "sha256": "d1614f6cf085660862d8888493886d15ecaa24d92b5f526029867a7e1d5f4068",
+      "bytes": 35988
+    },
+    "GAB-gb.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/GAB/ADM1/",
+      "sha256": "8ea43a3f8d85bf5c5ef7af559e6484c6be41adcd3275df464c005d9efc46b15c",
+      "bytes": 1794
+    },
+    "CPV-gb.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/CPV/ADM1/",
+      "sha256": "5d7be88120588e3cb85d1ec9b9114f8c21bd5b4efec6e7691953eb0503f08ae2",
+      "bytes": 1736
+    },
+    "COM-hdx.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-com",
+      "sha256": "a233bf85f928f865a6260293ac9237d072c795fe244ceff87937d50b9c8fce0a",
+      "bytes": 35663
+    },
+    "STP-hdx.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-stp",
+      "sha256": "52cf8ba54bbf41ea81f3b5d99945c29e6f0e02f8dcc0a580be24678d468c6938",
+      "bytes": 17306
+    },
+    "MUS-hdx.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-mus",
+      "sha256": "2465a4c6b1e405a2b3692b007c10ab5d2f7f06f554d74998931632d6bb0af144",
+      "bytes": 10270
+    },
+    "COM-gb.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/COM/ADM1/",
+      "sha256": "b2804a55c6f48f7e65683d03564e2257a27f9788d951d579e0e56d5d7799a92a",
+      "bytes": 1727
+    },
+    "STP-gb.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/STP/ADM1/",
+      "sha256": "c9f9e3c881c9fac2d5128601ad3d8c778424e8853f0ac088785a2189bc48aece",
+      "bytes": 1747
+    },
+    "MUS-gb.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/MUS/ADM1/",
+      "sha256": "6a5183dcc453f662be5552fc89869b76802ce7d07972518317fc4789ec7f6f72",
+      "bytes": 1771
+    },
+    "SYC-hdx.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-syc",
+      "sha256": "baa27219d1aecf1b958ab190d34971ec99c8e298da92133cc9cabb20f0cea97e",
+      "bytes": 12943
+    },
+    "SYC-gb.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/SYC/ADM1/",
+      "sha256": "a877bf5c81da69f17cd51619264b5e079ff22d95909faba96e1f536ac29d06d3",
+      "bytes": 1726
+    },
+    "FJI-hdx.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-fji",
+      "sha256": "9491def2c289878a4e1a20acb71f1e2fcd83e27b6304401382eeb0a3075a4c0d",
+      "bytes": 29897
+    },
+    "FJI-gb.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/FJI/ADM1/",
+      "sha256": "9a285e2e5d0b3d7bf342bc5f510e02a3df46adac7e64fb5e125c5273af491f32",
+      "bytes": 1705
+    },
+    "TON-hdx.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-ton",
+      "sha256": "bc039a5f2d7a64ad69a03b66c0b717176968ab4791ad9ed2185aa8f2faf5f33b",
+      "bytes": 22967
+    },
+    "WSM-gb.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/WSM/ADM1/",
+      "sha256": "961c2495c6285dd532d2bd0b320242768de987a804d8265aa842ee8294d691d0",
+      "bytes": 1697
+    },
+    "TON-gb.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/TON/ADM1/",
+      "sha256": "59a46b5cee76962f120f03bab1c9cf80a9fa7776d0e7fc3439e4b25016a5eebe",
+      "bytes": 1756
+    },
+    "TUV-gb.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/TUV/ADM1/",
+      "sha256": "d6878f7625da2b7a7e08d7a0c6641f46bcc4d3a3cd25bedd798137d445bc7199",
+      "bytes": 1753
+    },
+    "KIR-hdx.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-kir",
+      "sha256": "8b1f5f493c15d7134b398e95b28a5c63b2d2da5cb6c4828a179ae5b8d47f0b2e",
+      "bytes": 9316
+    },
+    "KIR-gb.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/KIR/ADM1/",
+      "sha256": "b0bd58ec351dd2997e4e805fc1ff261cda47af35bec03d4319df40c5cf1aed34",
+      "bytes": 1759
+    },
+    "NRU-gb.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/NRU/ADM1/",
+      "sha256": "8ffaa1de84af0f7e3b2f62c2da2017284c06d8ade164c61596377169d29ec49e",
+      "bytes": 1722
+    },
+    "PLW-gb.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/PLW/ADM1/",
+      "sha256": "ba85d7798e3b59aadcfceb075e16cb8c186a83074d0e216016b926d222b9d74d",
+      "bytes": 1747
+    },
+    "MHL-hdx.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-mhl",
+      "sha256": "e8689d7b7dbbc16f9a69a66af54af1e9cbfedb659e503583e33b946f5f7068c6",
+      "bytes": 11214
+    },
+    "MHL-gb.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/MHL/ADM1/",
+      "sha256": "156c7585b56908b18545ac6cdc34ffd81d3e1ec00737627d59ba8b96c088096a",
+      "bytes": 1766
+    },
+    "FSM-hdx.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-fsm",
+      "sha256": "d37f55919c2c7084ca9ce7203e860eb027687db853887404d8179d862d42f009",
+      "bytes": 10264
+    },
+    "FSM-gb.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/FSM/ADM1/",
+      "sha256": "78d5a90d6ca5947142b2d70cc01cf22fc275d13439edd70b2488b797e2dfb0c2",
+      "bytes": 1945
+    },
+    "flag-sd.svg": {
+      "url": "https://flagcdn.com/sd.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT distribution",
+      "sha256": "305064d3c23eac774752898e1b3e9ff8ab7ecdfa45495be446dc520de8415727",
+      "bytes": 229
+    },
+    "DJI-adm1.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/DJI/ADM1/geoBoundaries-DJI-ADM1.geojson",
+      "credit": "Natural Earth / geoBoundaries",
+      "license": "Public Domain",
+      "page": "www.naturalearthdata.com/about/terms-of-use/",
+      "year": "2021",
+      "sha256": "797fdc48fb9176f33134a279e4cac3436ec190af3340c5a76ee887321137235e",
+      "bytes": 15132
+    },
+    "flag-dj.svg": {
+      "url": "https://flagcdn.com/dj.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT distribution",
+      "sha256": "072cd869e9430e51fe7d48b0bd33c882b6365386c9987c03cb76f802597af936",
+      "bytes": 371
+    },
+    "flag-er.svg": {
+      "url": "https://flagcdn.com/er.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT distribution",
+      "sha256": "69f92c176c843d7c899eaa7beaa1f75a0499d49fbb24e2053ed98be77e176498",
+      "bytes": 3251
+    },
+    "flag-dz.svg": {
+      "url": "https://flagcdn.com/dz.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT distribution",
+      "sha256": "51bda9bdc313fa5418550d94d46f31e0c396f4e70c810b629fac0430f4b7e638",
+      "bytes": 285
+    },
+    "flag-ly.svg": {
+      "url": "https://flagcdn.com/ly.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT distribution",
+      "sha256": "e2b019746d67350a9dcfc595616d0b73b868c8f3757f9516665e9141d8f0c117",
+      "bytes": 353
+    },
+    "flag-eg.svg": {
+      "url": "https://flagcdn.com/eg.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT distribution",
+      "sha256": "07129395f46d9e71844fe9b485e05bf49741bc72a480b567297d6d865f3d8150",
+      "bytes": 18351
+    },
+    "MRT-adm1.geojson": {
+      "url": "https://data.humdata.org/dataset/8d49f50d-92a8-46d9-9462-f821a8058f6d/resource/916850dc-92e3-4c2b-a972-f6964498346e/download/mrt_admin_boundaries.geojson.zip",
+      "member": "mrt_admin1.geojson",
+      "archiveSha256": "ca7751c5dac56b85a7f7807601f1c45ffa30c7fce8881ea406ebb3623cf165ae",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-mrt",
+      "sha256": "5130ce4b910d60f411c3f002fc35ae7df77c857887e12fba19a899bef69c2cab",
+      "bytes": 427387
+    },
+    "MRT-adm2.geojson": {
+      "url": "https://data.humdata.org/dataset/8d49f50d-92a8-46d9-9462-f821a8058f6d/resource/916850dc-92e3-4c2b-a972-f6964498346e/download/mrt_admin_boundaries.geojson.zip",
+      "member": "mrt_admin2.geojson",
+      "archiveSha256": "ca7751c5dac56b85a7f7807601f1c45ffa30c7fce8881ea406ebb3623cf165ae",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-mrt",
+      "sha256": "4b6736bbe7bd876a707ccf1646c090bc589c4b5770bb128144b619f15b72c269",
+      "bytes": 951659
+    },
+    "flag-mr.svg": {
+      "url": "https://flagcdn.com/mr.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT distribution",
+      "sha256": "1655e7ed2d848678e50138df15f3db7b37ed7a9c4f61cdf7e26cfec12d0e7057",
+      "bytes": 333
+    },
+    "GMB-adm2.geojson": {
+      "url": "https://data.humdata.org/dataset/9f2ce756-2e50-4042-a952-32160977d223/resource/7dec73e0-1c4f-403c-953e-cdad41c01b0e/download/gmb_admin_boundaries.geojson.zip",
+      "member": "gmb_admin2.geojson",
+      "archiveSha256": "e01bef935f2a9a51dd167b5b6ceb7e325f8580f755823db4f74019d669dc00ad",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-gmb",
+      "sha256": "df5b7d0773c195873aa19fded8a299ec370565e84ae4cba8c8094cd4034e6445",
+      "bytes": 565666
+    },
+    "GMB-adm1.geojson": {
+      "url": "https://data.humdata.org/dataset/9f2ce756-2e50-4042-a952-32160977d223/resource/7dec73e0-1c4f-403c-953e-cdad41c01b0e/download/gmb_admin_boundaries.geojson.zip",
+      "member": "gmb_admin1.geojson",
+      "archiveSha256": "e01bef935f2a9a51dd167b5b6ceb7e325f8580f755823db4f74019d669dc00ad",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-gmb",
+      "sha256": "01cf40c8ca6b52db664f522795b474bbc7a854ab26e02953c60461c327de7f30",
+      "bytes": 278215
+    },
+    "flag-gm.svg": {
+      "url": "https://flagcdn.com/gm.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT distribution",
+      "sha256": "d4418b31447cb5b7ddfcc3b47f3075795700363cc97132d9ab8b2de417027b98",
+      "bytes": 246
+    },
+    "GNB-adm2.geojson": {
+      "url": "https://data.humdata.org/dataset/3db6297f-55d7-4e79-8969-281b1838ef79/resource/0cb66179-f8b5-4c77-a356-ea94ca2442a5/download/gnb_admin_boundaries.geojson.zip",
+      "member": "gnb_admin2_em.geojson",
+      "archiveSha256": "502403c0530e7ccd97f615aeb577feed328aba3d4b6e3dceeac54731d137d38f",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-gnb",
+      "sha256": "bc2365308a5528a336f4c264b12ec8b0f896dc2245a018302028c5f8b2b21515",
+      "bytes": 418499
+    },
+    "GNB-adm1.geojson": {
+      "url": "https://data.humdata.org/dataset/3db6297f-55d7-4e79-8969-281b1838ef79/resource/0cb66179-f8b5-4c77-a356-ea94ca2442a5/download/gnb_admin_boundaries.geojson.zip",
+      "member": "gnb_admin1_em.geojson",
+      "archiveSha256": "502403c0530e7ccd97f615aeb577feed328aba3d4b6e3dceeac54731d137d38f",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-gnb",
+      "sha256": "65237f0cbaeb4b8f1da437a35cefe7e0dec82299fc82a8c6b243385b00ca5603",
+      "bytes": 302919
+    },
+    "flag-gw.svg": {
+      "url": "https://flagcdn.com/gw.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT distribution",
+      "sha256": "00dd3c3891158fcb6de6afc3f93b8b4afc20f6aea7c344f097350fc8c9c0ffbc",
+      "bytes": 583
+    },
+    "GIN-adm2.geojson": {
+      "url": "https://data.humdata.org/dataset/f814a950-4d4e-4f46-a880-4da5522f14c4/resource/25ff3310-b84d-46cd-a50f-16e831332193/download/gin_admin_boundaries.geojson.zip",
+      "member": "gin_admin2_em.geojson",
+      "archiveSha256": "d80761c508fc9368ec17111e06680cb90296a512b143b90b81a7c27b5d507677",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-gin",
+      "sha256": "031f62ed90494f4053785c92850a17d4f6c7d9b2aecc15a2ea20d21dc73f33ef",
+      "bytes": 956352
+    },
+    "GIN-adm1.geojson": {
+      "url": "https://data.humdata.org/dataset/f814a950-4d4e-4f46-a880-4da5522f14c4/resource/25ff3310-b84d-46cd-a50f-16e831332193/download/gin_admin_boundaries.geojson.zip",
+      "member": "gin_admin1.geojson",
+      "archiveSha256": "d80761c508fc9368ec17111e06680cb90296a512b143b90b81a7c27b5d507677",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-gin",
+      "sha256": "fab88415a1cb3513e96537705500e35feb2e1c4698244007c9631e6f5a27d920",
+      "bytes": 403767
+    },
+    "flag-gn.svg": {
+      "url": "https://flagcdn.com/gn.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT distribution",
+      "sha256": "4932e18d832d6a781bc00400b69136cc9406234d3800e1e66ea809550a84b423",
+      "bytes": 205
+    },
+    "SEN-adm1.geojson": {
+      "url": "https://data.humdata.org/dataset/bd9bc484-155d-41a3-87cf-064310a94492/resource/02745b5a-88b7-4132-ae11-8bdaf64afff8/download/sen_admin_boundaries.geojson.zip",
+      "member": "sen_admin1.geojson",
+      "archiveSha256": "ab0d33dd71f0af2e53a283f1d3e82b6e889c87ae465c8896a0e242949a80d310",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-sen",
+      "sha256": "1a2e3d9865d9f616c5fc37f8366d6c80be82045c8ccedba05874b54c7d52c742",
+      "bytes": 7059777
+    },
+    "SEN-adm2.geojson": {
+      "url": "https://data.humdata.org/dataset/bd9bc484-155d-41a3-87cf-064310a94492/resource/02745b5a-88b7-4132-ae11-8bdaf64afff8/download/sen_admin_boundaries.geojson.zip",
+      "member": "sen_admin2.geojson",
+      "archiveSha256": "ab0d33dd71f0af2e53a283f1d3e82b6e889c87ae465c8896a0e242949a80d310",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-sen",
+      "sha256": "c3a4f6e597dcfbc38c2c0eac73668459f94a8283987312ff51f0ead391201c54",
+      "bytes": 11179929
+    },
+    "flag-sn.svg": {
+      "url": "https://flagcdn.com/sn.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT distribution",
+      "sha256": "c0593c9c104142eadae2d76bd739b28a37d2218bf1ef4b37bf8fa9655bfab087",
+      "bytes": 228
+    },
+    "LBR-adm2.geojson": {
+      "url": "https://data.humdata.org/dataset/bbb2f45c-3d7a-4ad3-afc5-459303dbc8f4/resource/7a2422f8-c5d8-46b1-9703-b7b6203a13b9/download/lbr_admin_boundaries.geojson.zip",
+      "member": "lbr_admin2_em.geojson",
+      "archiveSha256": "a993b89efe9bf0ee4cfa624361d49a71e0b69c0c55ed26e97c786f3eb1daf8e1",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-lbr",
+      "sha256": "83c81649ef306977700a8a93bb53cc6343e01ab35c791ac5503c29fff769ed48",
+      "bytes": 1725258
+    },
+    "LBR-adm1.geojson": {
+      "url": "https://data.humdata.org/dataset/bbb2f45c-3d7a-4ad3-afc5-459303dbc8f4/resource/7a2422f8-c5d8-46b1-9703-b7b6203a13b9/download/lbr_admin_boundaries.geojson.zip",
+      "member": "lbr_admin1_em.geojson",
+      "archiveSha256": "a993b89efe9bf0ee4cfa624361d49a71e0b69c0c55ed26e97c786f3eb1daf8e1",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-lbr",
+      "sha256": "859d921c57a639431710ef1b7fa9a04439f4df3590d2bf9e9f2202fc263dd136",
+      "bytes": 879475
+    },
+    "flag-lr.svg": {
+      "url": "https://flagcdn.com/lr.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT distribution",
+      "sha256": "b722560baa4a55e843b78f3a3485ff4ad31e5acd659142add4ba3990be2578cb",
+      "bytes": 675
+    },
+    "SLE-adm1.geojson": {
+      "url": "https://data.humdata.org/dataset/a4816317-a913-4619-b1e9-d89e21c056b4/resource/dfd53f5f-9846-4f14-bda7-953d3c767279/download/sle_admin_boundaries.geojson.zip",
+      "member": "sle_admin1.geojson",
+      "archiveSha256": "33f5a966603937437ae39463b1196901ddccc3a10275bb25b7eda75878487816",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-sle",
+      "sha256": "79c3f269e76d173f3b61f8ad8c96e94c774c25f5b12f92264e57b716a2222d2e",
+      "bytes": 1299859
+    },
+    "SLE-adm2.geojson": {
+      "url": "https://data.humdata.org/dataset/a4816317-a913-4619-b1e9-d89e21c056b4/resource/dfd53f5f-9846-4f14-bda7-953d3c767279/download/sle_admin_boundaries.geojson.zip",
+      "member": "sle_admin2.geojson",
+      "archiveSha256": "33f5a966603937437ae39463b1196901ddccc3a10275bb25b7eda75878487816",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-sle",
+      "sha256": "1867aa0e2cb0b13049055ce78fdd39e8ac235ce06d2a8ad7068c2f2bc4fc5cd4",
+      "bytes": 1685101
+    },
+    "flag-sl.svg": {
+      "url": "https://flagcdn.com/sl.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT distribution",
+      "sha256": "21d7e0663d2b8e1d455a0e1456c63dfbb273becdacbf7c1fa0e22d915f136cf4",
+      "bytes": 194
+    },
+    "GHA-adm2.geojson": {
+      "url": "https://data.humdata.org/dataset/dc4c17cf-59d9-478c-b2b7-acd889241194/resource/c8d647a7-f396-4108-9fe4-cf7b31731a73/download/gha_admin_boundaries.geojson.zip",
+      "member": "gha_admin2_em.geojson",
+      "archiveSha256": "fbc2a72af2bfc928045031aff76e36fab49dea48e858a4ac640d7070d2dc1e22",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-gha",
+      "sha256": "dac4f17b930cc4ddfeb12487dcdef28eece0117a538ed38253f0eeb1e4a09d83",
+      "bytes": 3237857
+    },
+    "GHA-adm1.geojson": {
+      "url": "https://data.humdata.org/dataset/dc4c17cf-59d9-478c-b2b7-acd889241194/resource/c8d647a7-f396-4108-9fe4-cf7b31731a73/download/gha_admin_boundaries.geojson.zip",
+      "member": "gha_admin1_em.geojson",
+      "archiveSha256": "fbc2a72af2bfc928045031aff76e36fab49dea48e858a4ac640d7070d2dc1e22",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-gha",
+      "sha256": "90db6d3ddd0719c586c9b08f91dbf20858bbfed74dbe6f95d98ece1318eb867b",
+      "bytes": 1087863
+    },
+    "TUN-adm2.geojson": {
+      "url": "https://data.humdata.org/dataset/e47eda48-8f83-4858-b739-dbffb8a50c47/resource/ebe19593-9438-4d14-8291-e65f811e2671/download/tun_admin_boundaries.geojson.zip",
+      "member": "tun_admin2.geojson",
+      "archiveSha256": "0716809d4b18161c226978b53c39445ae506448e26073b2dcd67d4ba10cdf83e",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-tun",
+      "sha256": "60592248545ab494ee01f58e7d804ac92cee6f013cada920feafc9251db02196",
+      "bytes": 7812100
+    },
+    "TUN-adm1.geojson": {
+      "url": "https://data.humdata.org/dataset/e47eda48-8f83-4858-b739-dbffb8a50c47/resource/ebe19593-9438-4d14-8291-e65f811e2671/download/tun_admin_boundaries.geojson.zip",
+      "member": "tun_admin1.geojson",
+      "archiveSha256": "0716809d4b18161c226978b53c39445ae506448e26073b2dcd67d4ba10cdf83e",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-tun",
+      "sha256": "5bd9b717f1ed73ab4473f32b7737d905d6229ce5209b6cc7a66a54394affab8c",
+      "bytes": 5461055
+    },
+    "flag-gh.svg": {
+      "url": "https://flagcdn.com/gh.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT distribution",
+      "sha256": "a8c4320f89adc39f1c43f0100031e6acfce9299aed5bf035732d00d34d44ee88",
+      "bytes": 255
+    },
+    "flag-tn.svg": {
+      "url": "https://flagcdn.com/tn.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT distribution",
+      "sha256": "b0d8964ee6ff40309779e0a1ea2780926a85edf9f1715c22ecbd04e14a4be9b4",
+      "bytes": 278
+    },
+    "flag-bj.svg": {
+      "url": "https://flagcdn.com/bj.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT distribution",
+      "sha256": "03e7fd78282d719338630eaf2301fa9c9dbcbf57a9639a20e8fbb43353409569",
+      "bytes": 197
+    },
+    "CIV-adm2.geojson": {
+      "url": "https://data.humdata.org/dataset/503a9167-ba56-4174-b160-bdb0fb703719/resource/321e55d2-3486-400a-a855-4b749cf9ef88/download/civ_admin_boundaries.geojson.zip",
+      "member": "civ_admin2_em.geojson",
+      "archiveSha256": "9c89ee383fe51833e896135a6c83efe4034a0ffef44e33c44d38e763c1cfbb51",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-civ",
+      "sha256": "52f2e39a009c8a6ed28fa00538f196dca4e6ec6a36d5a136dc5483ea44cc8b13",
+      "bytes": 4364416
+    },
+    "CIV-adm1.geojson": {
+      "url": "https://data.humdata.org/dataset/503a9167-ba56-4174-b160-bdb0fb703719/resource/321e55d2-3486-400a-a855-4b749cf9ef88/download/civ_admin_boundaries.geojson.zip",
+      "member": "civ_admin1.geojson",
+      "archiveSha256": "9c89ee383fe51833e896135a6c83efe4034a0ffef44e33c44d38e763c1cfbb51",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-civ",
+      "sha256": "dd04fb3cd2b6fd8d11cf6aba798973b8cb51ed00435eda4500b911cd08fc6f6c",
+      "bytes": 2540714
+    },
+    "flag-ci.svg": {
+      "url": "https://flagcdn.com/ci.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT distribution",
+      "sha256": "aaf7093dc7c4b1e65d6cd0a65cf20dc957971205a04985897fb3980bccb3a394",
+      "bytes": 194
+    },
+    "TGO-adm2.geojson": {
+      "url": "https://data.humdata.org/dataset/e6439952-e487-4682-8251-e9688aac60e1/resource/e08c2ae7-411b-4d83-a61e-2350ba93c924/download/tgo_admin_boundaries.geojson.zip",
+      "member": "tgo_admin2_em.geojson",
+      "archiveSha256": "271c75f6bafea603160a2317b23153bc6d013468886ebf1221af4bf6919dbfa2",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-tgo",
+      "sha256": "e1abc915c7dd4707f4ceab80c8d2226e7e6421b7aa022f917a42dc4bba5bdc2f",
+      "bytes": 764186
+    },
+    "TGO-adm1.geojson": {
+      "url": "https://data.humdata.org/dataset/e6439952-e487-4682-8251-e9688aac60e1/resource/e08c2ae7-411b-4d83-a61e-2350ba93c924/download/tgo_admin_boundaries.geojson.zip",
+      "member": "tgo_admin1.geojson",
+      "archiveSha256": "271c75f6bafea603160a2317b23153bc6d013468886ebf1221af4bf6919dbfa2",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-tgo",
+      "sha256": "a572ea2657b75a52ab1bcfa883253a2b4f57038fbb380c9e02dff01f991b31bb",
+      "bytes": 112219
+    },
+    "flag-tg.svg": {
+      "url": "https://flagcdn.com/tg.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT distribution",
+      "sha256": "8d50a4818de595d967b3cd0d6b0dc91ce0532b1679813af9eea27a560a7662c1",
+      "bytes": 423
+    },
+    "flag-ga.svg": {
+      "url": "https://flagcdn.com/ga.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT distribution",
+      "sha256": "43e2be0bceff86a5e9611d197478256416e2ed1b106b9df24651d553bc87b41f",
+      "bytes": 201
+    },
+    "CMR-adm1.geojson": {
+      "url": "https://data.humdata.org/dataset/b13f08ef-92ee-4446-9b0a-e219f5c25415/resource/2248ac6d-9675-47de-90d3-1e7ce6e601b1/download/cmr_admin_boundaries.geojson.zip",
+      "member": "cmr_admin1_em.geojson",
+      "archiveSha256": "f24a75c41ee2e107448ff1d2b8769ee970dad376d20cd7093da0c9106814ab5a",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-cmr",
+      "sha256": "285dac9e7ecba4471c3c53f76696680fb34f878f248ef0de3a715080c2e005b6",
+      "bytes": 1849181
+    },
+    "CMR-adm2.geojson": {
+      "url": "https://data.humdata.org/dataset/b13f08ef-92ee-4446-9b0a-e219f5c25415/resource/2248ac6d-9675-47de-90d3-1e7ce6e601b1/download/cmr_admin_boundaries.geojson.zip",
+      "member": "cmr_admin2.geojson",
+      "archiveSha256": "f24a75c41ee2e107448ff1d2b8769ee970dad376d20cd7093da0c9106814ab5a",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-cmr",
+      "sha256": "c44bdf8de07b95d3c1789f9f62d453a5821daa6cbfd84ea745125ebabb009b9a",
+      "bytes": 4264408
+    },
+    "flag-cm.svg": {
+      "url": "https://flagcdn.com/cm.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT distribution",
+      "sha256": "e00c6cbb0cb7364bc1b825e145ae6232d611d0e457dfa621b6bfafa3b7c76a7f",
+      "bytes": 266
+    },
+    "flag-st.svg": {
+      "url": "https://flagcdn.com/st.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT distribution",
+      "sha256": "a95075950bff55641b4274439a909c6bda8005b22c397ef6315839ce9d0dec55",
+      "bytes": 355
+    },
+    "flag-km.svg": {
+      "url": "https://flagcdn.com/km.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT distribution",
+      "sha256": "21e3ee9de83bf7ac6b57400e92f63d81f1f174624e9a2f408a5dd23d4d8f8f04",
+      "bytes": 558
+    },
+    "MUS-adm1.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/MUS/ADM1/geoBoundaries-MUS-ADM1.geojson",
+      "credit": "geoBoundaries, OpenStreetMap / geoBoundaries",
+      "license": "Open Data Commons Open Database License 1.0",
+      "page": "www.openstreetmap.org/copyright",
+      "year": "2017",
+      "sha256": "fd3c09513dba7df021ed0f7bd2b05d187932155c99027b4dcc1c90ef8ee554c3",
+      "bytes": 429365
+    },
+    "flag-mu.svg": {
+      "url": "https://flagcdn.com/mu.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT distribution",
+      "sha256": "c35ef8388abd492cb6ddbb0b46e3be87244ec1088682de208a745c93c4852a80",
+      "bytes": 239
+    },
+    "SYC-adm1.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/SYC/ADM1/geoBoundaries-SYC-ADM1.geojson",
+      "credit": "Digitizedhttps, Digitizedhttps / geoBoundaries",
+      "license": "Creative Commons Attribution-ShareAlike 3.0 Unported",
+      "page": "commons.wikimedia.org/wiki/File",
+      "year": "2018",
+      "sha256": "164cc48b6300a17058c1955171b04d2775a2d1e6b8980e6f2154fdc0186d80c2",
+      "bytes": 521518
+    },
+    "flag-sc.svg": {
+      "url": "https://flagcdn.com/sc.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT distribution",
+      "sha256": "b7a1ccdf0b210a2273426eaf334679dba7d3f5a90dddd91882beffa891bf3035",
+      "bytes": 273
+    },
+    "FJI-adm1.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/FJI/ADM1/geoBoundaries-FJI-ADM1.geojson",
+      "credit": "geoBoundaries, Wikimedia Commons / geoBoundaries",
+      "license": "Creative Commons Attribution 2.5 Generic",
+      "page": "en.wikipedia.org/wiki/File",
+      "year": "2006",
+      "sha256": "61b6f3d135dd1de37bc55b78936bf0758fea96ffbcf4337f0c153a30bb564433",
+      "bytes": 40808
+    },
+    "flag-fj.svg": {
+      "url": "https://flagcdn.com/fj.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT distribution",
+      "sha256": "e2c0c872c02b315510c6923a7913d1783accabab0ea1eef103a3f23165af320f",
+      "bytes": 40121
+    },
+    "GNQ-adm1.geojson": {
+      "url": "https://data.humdata.org/dataset/0c1a3093-c97d-48a2-a992-e652ebcbf05c/resource/6b004317-faaa-4176-b5f4-eb6cd4ed46a6/download/gnq_admin_boundaries.geojson.zip",
+      "member": "gnq_admin1.geojson",
+      "archiveSha256": "ea64e4a40e98e54210aadbcd98a8b998c8860f674723f8d1f090a4c62259b861",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-gnq",
+      "sha256": "0cfe8b49b6e88e8ab60020d11489895af3c8fc647aa722ec763871d69ecc1df7",
+      "bytes": 7148210
+    },
+    "GNQ-adm2.geojson": {
+      "url": "https://data.humdata.org/dataset/0c1a3093-c97d-48a2-a992-e652ebcbf05c/resource/6b004317-faaa-4176-b5f4-eb6cd4ed46a6/download/gnq_admin_boundaries.geojson.zip",
+      "member": "gnq_admin2.geojson",
+      "archiveSha256": "ea64e4a40e98e54210aadbcd98a8b998c8860f674723f8d1f090a4c62259b861",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-gnq",
+      "sha256": "4ef210a1fa84412af120af7b058c8904d0ac75dbc3df37628749c33db4799e95",
+      "bytes": 15751548
+    },
+    "flag-gq.svg": {
+      "url": "https://flagcdn.com/gq.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT distribution",
+      "sha256": "c9127828406765ae4faf593ac240d82be9913bde2664ed462fc31dcae68eef52",
+      "bytes": 5658
+    },
+    "WSM-adm1.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/WSM/ADM1/geoBoundaries-WSM-ADM1.geojson",
+      "credit": "Wikipedia / geoBoundaries",
+      "license": "Creative Commons Attribution-ShareAlike 3.0 Unported",
+      "page": "en.wikipedia.org/wiki/File",
+      "year": "2018",
+      "sha256": "cbcb8c6b492f63f3a8bfe820eefeee3882288e31a629c5a5880298ddf256aaf7",
+      "bytes": 753337
+    },
+    "flag-ws.svg": {
+      "url": "https://flagcdn.com/ws.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT distribution",
+      "sha256": "acedd8fb18df15e9483cc8c0f30f24b7ff2299ca9006c261040e88677c0df0b3",
+      "bytes": 640
+    },
+    "TON-adm1.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/TON/ADM1/geoBoundaries-TON-ADM1.geojson",
+      "credit": "OpenStreetMap, Wambacher / geoBoundaries",
+      "license": "Open Data Commons Open Database License 1.0",
+      "page": "www.openstreetmap.org/copyright",
+      "year": "2017",
+      "sha256": "c879101306e56a83d5efc5cae56b5c92f02d1e3485ea6ac64bd3f94a67b7e24a",
+      "bytes": 1202782
+    },
+    "TUV-adm1.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/TUV/ADM1/geoBoundaries-TUV-ADM1.geojson",
+      "credit": "OpenStreetMap, Wambacher / geoBoundaries",
+      "license": "Open Data Commons Open Database License 1.0",
+      "page": "www.openstreetmap.org/copyright",
+      "year": "2017",
+      "sha256": "3c06779be3173360c9a2927729798eacb5533c745e31313f11940041585030aa",
+      "bytes": 79396
+    },
+    "flag-to.svg": {
+      "url": "https://flagcdn.com/to.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT distribution",
+      "sha256": "aaf4a1b55742a45ae01330347e723ec9d9da9b15e1e9e05cd7d1910de91eef00",
+      "bytes": 227
+    },
+    "flag-tv.svg": {
+      "url": "https://flagcdn.com/tv.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT distribution",
+      "sha256": "8596575d86d9ca070a2453f8fdfe7a0168d1df078e1e04ebfee804dff04069ef",
+      "bytes": 1120
+    },
+    "flag-cv.svg": {
+      "url": "https://flagcdn.com/cv.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT distribution",
+      "sha256": "bcbf0add799b13377bdf842e1f380ff630650d3b7dba2d8f1273093cfa6ceb0f",
+      "bytes": 1494
+    },
+    "NRU-adm1.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/NRU/ADM1/geoBoundaries-NRU-ADM1.geojson",
+      "credit": "geoBoundaries, FreeMapViewer / geoBoundaries",
+      "license": "Public Domain",
+      "page": "creativecommons.org/share-your-work/public-domain/",
+      "year": "2005",
+      "sha256": "afb3d32bd9c6ec0fc04e5feb4a943cdf0db71a83f7f25d8f0f12b1270d1617fe",
+      "bytes": 152843
+    },
+    "KIR-adm1.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/KIR/ADM1/geoBoundaries-KIR-ADM1.geojson",
+      "credit": "OpenStreetMap, Wambacher / geoBoundaries",
+      "license": "Open Data Commons Open Database License 1.0",
+      "page": "www.openstreetmap.org/copyright",
+      "year": "2017",
+      "sha256": "93a0914dc2572951a72cae1aef5145bc056180d75b96812c770bff06e8d8e86f",
+      "bytes": 805741
+    },
+    "flag-nr.svg": {
+      "url": "https://flagcdn.com/nr.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT distribution",
+      "sha256": "1db6563151cfc25388f8167a967a96b0794cde41f1bcfa3e521bdaa794af2fcc",
+      "bytes": 545
+    },
+    "flag-ki.svg": {
+      "url": "https://flagcdn.com/ki.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT distribution",
+      "sha256": "3c5c18f1a61d1c782f2f313f197b00530b6de5d72b3ed81814d7984d73c4e05d",
+      "bytes": 3271
+    },
+    "PLW-adm1.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/PLW/ADM1/geoBoundaries-PLW-ADM1.geojson",
+      "credit": "OpenStreetMap, Wambacher / geoBoundaries",
+      "license": "Open Data Commons Open Database License 1.0",
+      "page": "www.openstreetmap.org/copyright",
+      "year": "2017",
+      "sha256": "6e9940fe651dcb9ad9a6f0b4274068f6bb2966bbf035a0a41421d30bfb9e946d",
+      "bytes": 332315
+    },
+    "flag-pw.svg": {
+      "url": "https://flagcdn.com/pw.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT distribution",
+      "sha256": "47fc578c8ad500ed537a46e73859b597f819474e3d0227ccd266cdd793596aa6",
+      "bytes": 157
+    },
+    "MHL-adm1.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/MHL/ADM1/geoBoundaries-MHL-ADM1.geojson",
+      "credit": "OpenStreetMap, Wambacher / geoBoundaries",
+      "license": "Open Data Commons Open Database License 1.0",
+      "page": "www.openstreetmap.org/copyright",
+      "year": "2017",
+      "sha256": "148cca24be2a9c92476d915409bdc5b222812237a89dabe58daf95b5243c9c9b",
+      "bytes": 327376
+    },
+    "flag-mh.svg": {
+      "url": "https://flagcdn.com/mh.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT distribution",
+      "sha256": "4d9431d294c64f7e972d174778186715be741d5941e23db89a32dcffcfbfa2ab",
+      "bytes": 796
+    },
+    "FSM-adm1.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/FSM/ADM1/geoBoundaries-FSM-ADM1.geojson",
+      "credit": "OCHA ROP, Federated States of Micronesia Division of Statistics, 2010 Census of Population and Housing and Secretariat of the Pacific Community, Statistics for Development Division / geoBoundaries",
+      "license": "Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+      "page": "Data https",
+      "year": "2019",
+      "sha256": "a30e5bc26f291a7f286090782361154263ad603e4de451b23a77e346f63327e0",
+      "bytes": 2023931
+    },
+    "flag-fm.svg": {
+      "url": "https://flagcdn.com/fm.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT distribution",
+      "sha256": "d88d4388bd3ecf181378e5f7889b04a5d6ccb10e0b0b73baf8f0149c440ad5af",
+      "bytes": 686
+    },
+    "worldbank.json": {
+      "url": "https://api.worldbank.org/v2/country/EGY;SDN;ERI;DJI;DZA;TUN;LBY;MRT;SEN;GMB;GNB;GIN;SLE;LBR;CIV;GHA;TGO;BEN;CMR;GNQ;GAB;CPV;STP;COM;MUS;SYC;FJI;WSM;TON;TUV;KIR;NRU;PLW;MHL;FSM/indicator/SP.POP.TOTL;NY.GDP.MKTP.CD;NY.GDP.PCAP.CD?source=2&date=2020:2025&format=json&per_page=5000",
+      "credit": "World Bank WDI",
+      "license": "CC BY 4.0",
+      "sha256": "4f7198cf889f9574f0871ee1e8564c8d5fc40d4f745ecdc26b47392e96bbe206",
+      "bytes": 131226
+    },
+    "EGY-adm2.geojson": {
+      "url": "https://data.humdata.org/dataset/b90d81ba-7c7a-4283-9899-827480d80a79/resource/2080e95f-51c7-45b6-b5ab-613ff1cfc041/download/egy_admin_boundaries.geojson.zip",
+      "member": "egy_admin2.geojson",
+      "archiveSha256": "259987be0b7c5e367d52eadf3dfea39802c7750cace8498833e3212d61b9dba9",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-egy",
+      "sha256": "d16163eab5d85fa4ec847a3bcdbb29bb2ff6aaca5d1c2bc2c2f4965e4dd0d0c9",
+      "bytes": 9202137
+    },
+    "EGY-adm3.geojson": {
+      "url": "https://data.humdata.org/dataset/b90d81ba-7c7a-4283-9899-827480d80a79/resource/2080e95f-51c7-45b6-b5ab-613ff1cfc041/download/egy_admin_boundaries.geojson.zip",
+      "member": "egy_admin3.geojson",
+      "archiveSha256": "259987be0b7c5e367d52eadf3dfea39802c7750cace8498833e3212d61b9dba9",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-egy",
+      "sha256": "0ea7b88be0b88a4de4fbff7a3973b27f03e3fa5ff5aaa3e08a21ed65963043fb",
+      "bytes": 22555118
+    },
+    "EGY-adm1.geojson": {
+      "url": "https://data.humdata.org/dataset/b90d81ba-7c7a-4283-9899-827480d80a79/resource/2080e95f-51c7-45b6-b5ab-613ff1cfc041/download/egy_admin_boundaries.geojson.zip",
+      "member": "egy_admin1.geojson",
+      "archiveSha256": "259987be0b7c5e367d52eadf3dfea39802c7750cace8498833e3212d61b9dba9",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-egy",
+      "sha256": "d55fe552bb2c426f49e5fcec850b17e541bce684f11508d148988bfc6e7de196",
+      "bytes": 5704231
+    },
+    "SDN-adm2.geojson": {
+      "url": "https://data.humdata.org/dataset/a66a4b6c-92de-4507-9546-aa1900474180/resource/018af991-4aa7-4043-a0d5-e429a55851fb/download/sdn_admin_boundaries.geojson.zip",
+      "member": "sdn_admin2.geojson",
+      "archiveSha256": "75330d4e12e53f966df0e5683e04f0919e9964952fbbf827f3729038e603c95e",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-sdn",
+      "sha256": "c13cf1e8515730267d41bd560a1f1a0489552ab2900abb070a9aececacca1bb9",
+      "bytes": 1621077
+    },
+    "SDN-adm1.geojson": {
+      "url": "https://data.humdata.org/dataset/a66a4b6c-92de-4507-9546-aa1900474180/resource/018af991-4aa7-4043-a0d5-e429a55851fb/download/sdn_admin_boundaries.geojson.zip",
+      "member": "sdn_admin1.geojson",
+      "archiveSha256": "75330d4e12e53f966df0e5683e04f0919e9964952fbbf827f3729038e603c95e",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-sdn",
+      "sha256": "06c4ea9d2b2d62aa6a982efa054f828db583420ee42eb8b2760a81d2520699fa",
+      "bytes": 876096
+    },
+    "ERI-adm2.geojson": {
+      "url": "https://data.humdata.org/dataset/2025e742-8b5a-4f72-aac5-a28e96ce3cb8/resource/1e31c86b-8903-4720-a306-f9f60322a7ca/download/eri_admin_boundaries.geojson.zip",
+      "member": "eri_admin2.geojson",
+      "archiveSha256": "1d3888cea4d97346ce0144950a66d7d6c01465e0d54b98122a811704ae4ae17e",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-eri",
+      "sha256": "b77664c0b9900bc7881b7d307f1bff6c72335d399d3158bc009d7e0e9afcbae8",
+      "bytes": 4582442
+    },
+    "ERI-adm1.geojson": {
+      "url": "https://data.humdata.org/dataset/2025e742-8b5a-4f72-aac5-a28e96ce3cb8/resource/1e31c86b-8903-4720-a306-f9f60322a7ca/download/eri_admin_boundaries.geojson.zip",
+      "member": "eri_admin1.geojson",
+      "archiveSha256": "1d3888cea4d97346ce0144950a66d7d6c01465e0d54b98122a811704ae4ae17e",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-eri",
+      "sha256": "56b849e52d2eb88810822af3c8afeb521923299c429ee27eee639018ec91adbc",
+      "bytes": 2904851
+    },
+    "DZA-adm1.geojson": {
+      "url": "https://data.humdata.org/dataset/3d17274d-0812-4b21-b87a-4854af4eb244/resource/d2b759f7-5f43-48b8-8186-21bb096186d1/download/dza_admin_boundaries.geojson.zip",
+      "member": "dza_admin1.geojson",
+      "archiveSha256": "446b8fe85c5e0c6a2611965ff2dd7dcfd6f16c2a525ed67835c78d68e317a7f9",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-dza",
+      "sha256": "24e6c80f97859c052038f47628f04a04383ea7d6a962c0c5001b0a78aef60513",
+      "bytes": 2659060
+    },
+    "DZA-adm2.geojson": {
+      "url": "https://data.humdata.org/dataset/3d17274d-0812-4b21-b87a-4854af4eb244/resource/d2b759f7-5f43-48b8-8186-21bb096186d1/download/dza_admin_boundaries.geojson.zip",
+      "member": "dza_admin2.geojson",
+      "archiveSha256": "446b8fe85c5e0c6a2611965ff2dd7dcfd6f16c2a525ed67835c78d68e317a7f9",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-dza",
+      "sha256": "9487ce3040ea9820f149ced85d26a86e2862007c7a107de15450def996bc396b",
+      "bytes": 9252972
+    },
+    "TUN-adm3.geojson": {
+      "url": "https://data.humdata.org/dataset/e47eda48-8f83-4858-b739-dbffb8a50c47/resource/ebe19593-9438-4d14-8291-e65f811e2671/download/tun_admin_boundaries.geojson.zip",
+      "member": "tun_admin3.geojson",
+      "archiveSha256": "0716809d4b18161c226978b53c39445ae506448e26073b2dcd67d4ba10cdf83e",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-tun",
+      "sha256": "ea9d88f0d5ee9c241654244af281c0d9a6908d5a273bcfb8978fbbd97b007fb9",
+      "bytes": 18215971
+    },
+    "LBY-adm1.geojson": {
+      "url": "https://data.humdata.org/dataset/fd9fb749-5b68-4942-b5f9-115f20b5c00e/resource/6933bac2-4f6b-4095-a629-21193981b80c/download/lby_admin_boundaries.geojson.zip",
+      "member": "lby_admin1.geojson",
+      "archiveSha256": "0c4bfd12c78bcacc8aa7d5ce8cbc722c6563e271ec7b5504bebb7d77ce9e063b",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-lby",
+      "sha256": "dc80ecdadaa460f2826819feb4db8937c53c61da73a249af77812cfd5dff7f08",
+      "bytes": 303995
+    },
+    "LBY-adm2.geojson": {
+      "url": "https://data.humdata.org/dataset/fd9fb749-5b68-4942-b5f9-115f20b5c00e/resource/6933bac2-4f6b-4095-a629-21193981b80c/download/lby_admin_boundaries.geojson.zip",
+      "member": "lby_admin2.geojson",
+      "archiveSha256": "0c4bfd12c78bcacc8aa7d5ce8cbc722c6563e271ec7b5504bebb7d77ce9e063b",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-lby",
+      "sha256": "264db16a633c9c335599af28e81f5aa33c972585ddfe4d19fec707eb485fd1a1",
+      "bytes": 556595
+    },
+    "MRT-adm3.geojson": {
+      "url": "https://data.humdata.org/dataset/8d49f50d-92a8-46d9-9462-f821a8058f6d/resource/916850dc-92e3-4c2b-a972-f6964498346e/download/mrt_admin_boundaries.geojson.zip",
+      "member": "mrt_admin3_em.geojson",
+      "archiveSha256": "ca7751c5dac56b85a7f7807601f1c45ffa30c7fce8881ea406ebb3623cf165ae",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-mrt",
+      "sha256": "b193fab8b8590404e9c8e69edabaa2188a9a2364a53e8cb9e498d0b6b2176489",
+      "bytes": 1418549
+    },
+    "SEN-adm3.geojson": {
+      "url": "https://data.humdata.org/dataset/bd9bc484-155d-41a3-87cf-064310a94492/resource/02745b5a-88b7-4132-ae11-8bdaf64afff8/download/sen_admin_boundaries.geojson.zip",
+      "member": "sen_admin3.geojson",
+      "archiveSha256": "ab0d33dd71f0af2e53a283f1d3e82b6e889c87ae465c8896a0e242949a80d310",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-sen",
+      "sha256": "c9fe51405005a831e28e8b0dbb586b7b97aa6fe195355285d3c97f7a9af0576f",
+      "bytes": 14315193
+    },
+    "GMB-adm3.geojson": {
+      "url": "https://data.humdata.org/dataset/9f2ce756-2e50-4042-a952-32160977d223/resource/7dec73e0-1c4f-403c-953e-cdad41c01b0e/download/gmb_admin_boundaries.geojson.zip",
+      "member": "gmb_admin3.geojson",
+      "archiveSha256": "e01bef935f2a9a51dd167b5b6ceb7e325f8580f755823db4f74019d669dc00ad",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-gmb",
+      "sha256": "0e27621bedab308b6a7e2ad333ca797d6e2183785b38af1e9e2458d34d170408",
+      "bytes": 737764
+    },
+    "GIN-adm3.geojson": {
+      "url": "https://data.humdata.org/dataset/f814a950-4d4e-4f46-a880-4da5522f14c4/resource/25ff3310-b84d-46cd-a50f-16e831332193/download/gin_admin_boundaries.geojson.zip",
+      "member": "gin_admin3_em.geojson",
+      "archiveSha256": "d80761c508fc9368ec17111e06680cb90296a512b143b90b81a7c27b5d507677",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-gin",
+      "sha256": "9b07743b8d0fcd013f4331ece311d6997846c18177e5277710d479e75ad0cd41",
+      "bytes": 1609570
+    },
+    "SLE-adm3.geojson": {
+      "url": "https://data.humdata.org/dataset/a4816317-a913-4619-b1e9-d89e21c056b4/resource/dfd53f5f-9846-4f14-bda7-953d3c767279/download/sle_admin_boundaries.geojson.zip",
+      "member": "sle_admin3.geojson",
+      "archiveSha256": "33f5a966603937437ae39463b1196901ddccc3a10275bb25b7eda75878487816",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-sle",
+      "sha256": "f3622998329a80d96ac50bb35fb109cf432700800218e67540ec3ab73ac4567a",
+      "bytes": 3418653
+    },
+    "CIV-adm3.geojson": {
+      "url": "https://data.humdata.org/dataset/503a9167-ba56-4174-b160-bdb0fb703719/resource/321e55d2-3486-400a-a855-4b749cf9ef88/download/civ_admin_boundaries.geojson.zip",
+      "member": "civ_admin3.geojson",
+      "archiveSha256": "9c89ee383fe51833e896135a6c83efe4034a0ffef44e33c44d38e763c1cfbb51",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-civ",
+      "sha256": "2d164764a6de1b05c982250e4c834123a6dc5d876e08ce467f4b6cf3f62d7ef7",
+      "bytes": 7288499
+    },
+    "TGO-adm3.geojson": {
+      "url": "https://data.humdata.org/dataset/e6439952-e487-4682-8251-e9688aac60e1/resource/e08c2ae7-411b-4d83-a61e-2350ba93c924/download/tgo_admin_boundaries.geojson.zip",
+      "member": "tgo_admin3.geojson",
+      "archiveSha256": "271c75f6bafea603160a2317b23153bc6d013468886ebf1221af4bf6919dbfa2",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-tgo",
+      "sha256": "d7bccccfd442e4948dda18a47adf74b6bde1766d66d4e9fa113d792129584901",
+      "bytes": 1184619
+    },
+    "BEN-adm2.geojson": {
+      "url": "https://data.humdata.org/dataset/494229d9-eee0-4872-8864-2baf98691554/resource/a1f07015-1ee2-49c3-b3f6-b75221b52bf3/download/ben_admin_boundaries.geojson.zip",
+      "member": "ben_admin2.geojson",
+      "archiveSha256": "e691548e370e954d838a98557bf2a14782216d7d0778a57c0bb76f710908d128",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-ben",
+      "sha256": "34238b6806a41e8b87f505a96addc2dcdd787cdd9064b34bd040f423ea2af117",
+      "bytes": 282515
+    },
+    "BEN-adm1.geojson": {
+      "url": "https://data.humdata.org/dataset/494229d9-eee0-4872-8864-2baf98691554/resource/a1f07015-1ee2-49c3-b3f6-b75221b52bf3/download/ben_admin_boundaries.geojson.zip",
+      "member": "ben_admin1.geojson",
+      "archiveSha256": "e691548e370e954d838a98557bf2a14782216d7d0778a57c0bb76f710908d128",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-ben",
+      "sha256": "749e743304e65e878a049e6576dcf91b9a46905917d9119e0b0fe3cfb2208881",
+      "bytes": 107730
+    },
+    "CMR-adm3.geojson": {
+      "url": "https://data.humdata.org/dataset/b13f08ef-92ee-4446-9b0a-e219f5c25415/resource/2248ac6d-9675-47de-90d3-1e7ce6e601b1/download/cmr_admin_boundaries.geojson.zip",
+      "member": "cmr_admin3_em.geojson",
+      "archiveSha256": "f24a75c41ee2e107448ff1d2b8769ee970dad376d20cd7093da0c9106814ab5a",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-cmr",
+      "sha256": "7be7331e2c74e38902be3d436ff726b5b9d6f67698cb9b104891c3044e1b6fbc",
+      "bytes": 7572887
+    },
+    "GAB-adm1.geojson": {
+      "url": "https://data.humdata.org/dataset/d8d992f3-5374-448f-a3d5-bed7c1925a11/resource/72ab3a59-84a4-461f-ac4d-d49bb79574b9/download/gab_admin_boundaries.geojson.zip",
+      "member": "gab_admin1.geojson",
+      "archiveSha256": "c35285c71d6927c1aa126d6bf5354a3f58df8ee2dceb7d3319feabb931a4156b",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-gab",
+      "sha256": "8598685e4c269ebc87d980734ec837b9bdabc9e2ce1fbdac652fa2ddbb0fb6a6",
+      "bytes": 142727
+    },
+    "GAB-adm2.geojson": {
+      "url": "https://data.humdata.org/dataset/d8d992f3-5374-448f-a3d5-bed7c1925a11/resource/72ab3a59-84a4-461f-ac4d-d49bb79574b9/download/gab_admin_boundaries.geojson.zip",
+      "member": "gab_admin2.geojson",
+      "archiveSha256": "c35285c71d6927c1aa126d6bf5354a3f58df8ee2dceb7d3319feabb931a4156b",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-gab",
+      "sha256": "46e67eb10baa5180c9f544dd6c1d0144e62a7176ffe1209a248a6715753eba41",
+      "bytes": 289004
+    },
+    "CPV-adm1.geojson": {
+      "url": "https://data.humdata.org/dataset/ce7df560-f77b-4f55-9175-4719ea21f50b/resource/f809561f-66ea-4f48-b6fb-52e839c74237/download/cpv_admin_boundaries.geojson.zip",
+      "member": "cpv_admin1.geojson",
+      "archiveSha256": "da1ad8732413d0a615c645e0e1c72d1c0f1182c91d2e55fb77817f8999231ff2",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-cpv",
+      "sha256": "4dd84203f5c7e5421713664d9984655388bea048c6123c0284280d8138234af2",
+      "bytes": 14017191
+    },
+    "CPV-adm2.geojson": {
+      "url": "https://data.humdata.org/dataset/ce7df560-f77b-4f55-9175-4719ea21f50b/resource/f809561f-66ea-4f48-b6fb-52e839c74237/download/cpv_admin_boundaries.geojson.zip",
+      "member": "cpv_admin2.geojson",
+      "archiveSha256": "da1ad8732413d0a615c645e0e1c72d1c0f1182c91d2e55fb77817f8999231ff2",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-cpv",
+      "sha256": "953139577c26e99c8d75501f716c609b1fe240ee6f4136d010f50add43b6dc7a",
+      "bytes": 14773499
+    },
+    "STP-adm1.geojson": {
+      "url": "https://data.humdata.org/dataset/9746c0f7-9ed3-4a3f-890e-88bc19166770/resource/45594be6-9c33-4d55-b70c-2bfaf2bb6d5e/download/stp_admin_boundaries.geojson.zip",
+      "member": "stp_admin1.geojson",
+      "archiveSha256": "fa19b1bed2070cdf9c3061b1366d3780192b00248ac77c05e4bae506d81aff88",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-stp",
+      "sha256": "2803be007271d7ca74215d61fa85ba3373c29f7219a0933a0ccefab9f7e190db",
+      "bytes": 310794
+    },
+    "COM-adm1.geojson": {
+      "url": "https://data.humdata.org/dataset/7f80a5d1-9f1a-462c-b298-338c7edc9224/resource/ce499503-58c7-4566-a578-c8738b2574d9/download/com_admin_boundaries.geojson.zip",
+      "member": "com_admin1.geojson",
+      "archiveSha256": "c094bd9fe28236deaf22403ad86c9d576cd8b0b087c8d7cb428bea44b47a4573",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-com",
+      "sha256": "36305dc67a132142829926cc3d843d7c077cf70db2af1ce79ccda72671c608d2",
+      "bytes": 540411
+    },
+    "COM-adm3.geojson": {
+      "url": "https://data.humdata.org/dataset/7f80a5d1-9f1a-462c-b298-338c7edc9224/resource/ce499503-58c7-4566-a578-c8738b2574d9/download/com_admin_boundaries.geojson.zip",
+      "member": "com_admin3.geojson",
+      "archiveSha256": "c094bd9fe28236deaf22403ad86c9d576cd8b0b087c8d7cb428bea44b47a4573",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-com",
+      "sha256": "5a97de9f796370d5a84bebf9a81b6146f59ba4bc81d1fccdcaaa5a8f258c1232",
+      "bytes": 648795
+    },
+    "COM-adm2.geojson": {
+      "url": "https://data.humdata.org/dataset/7f80a5d1-9f1a-462c-b298-338c7edc9224/resource/ce499503-58c7-4566-a578-c8738b2574d9/download/com_admin_boundaries.geojson.zip",
+      "member": "com_admin2.geojson",
+      "archiveSha256": "c094bd9fe28236deaf22403ad86c9d576cd8b0b087c8d7cb428bea44b47a4573",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-com",
+      "sha256": "ef369c68f077d38b7562c858e7e3f423fb6b4c331f29018565749d633f7a4116",
+      "bytes": 591024
+    },
+    "DZA-new-gb.json": {
+      "url": "https://www.geoboundaries-dev.org/api/nightly/gbOpen/DZA/ADM1/",
+      "sha256": "29747d321dfaefe1cfb54ab350720e15fb2049a6a1d888e225be89e1d1bf7a9b",
+      "bytes": 2071
+    },
+    "GNQ-new-gb.json": {
+      "url": "https://www.geoboundaries-dev.org/api/nightly/gbOpen/GNQ/ADM1/",
+      "sha256": "59326744cd7242ccd6cb1d7fc81fb3341775bb173786ee84d16f6c0a636f77c6",
+      "bytes": 2064
+    },
+    "MHL-coast.json": {
+      "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A180%5D%3Brel%5B%22ISO3166-1%22%3D%22MH%22%5D%5B%22boundary%22%3D%22administrative%22%5D%5B%22admin_level%22%3D%222%22%5D%3Bmap_to_area%3Bway(area)%5B%22natural%22%3D%22coastline%22%5D%3Bout%20geom%3B",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/copyright",
+      "sha256": "f825e261b5f459efae15b6f2c1cfd10da32585cfff2ca031290e4d75b745e618",
+      "bytes": 5416535
+    },
+    "PLW-coast.json": {
+      "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A180%5D%3Brel%5B%22ISO3166-1%22%3D%22PW%22%5D%5B%22boundary%22%3D%22administrative%22%5D%5B%22admin_level%22%3D%222%22%5D%3Bmap_to_area%3Bway(area)%5B%22natural%22%3D%22coastline%22%5D%3Bout%20geom%3B",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/copyright",
+      "sha256": "a2c1bd7645088f35ff526aff900bad1408a6ba2811c673f18fd305b140101d8e",
+      "bytes": 1904985
+    },
+    "GNQ-admin-osm.json": {
+      "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A180%5D%3Brel%5B%22boundary%22%3D%22administrative%22%5D%5B%22admin_level%22%3D%224%22%5D%5B%22ISO3166-2%22~%22%5EGQ-%22%5D%3Bout%20geom%3B",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/copyright",
+      "sha256": "05391c06b93a78b834c4dca44ef342393e209e1cb7af6b24bf61364c2af317a0",
+      "bytes": 1332537
+    },
+    "SYC-government.html": {
+      "url": "https://www.localgovernment.gov.sc/district-profiles",
+      "credit": "Seychelles Ministry of Local Government",
+      "license": "Official district names; attribution",
+      "sha256": "92b964bca93791bd6fa7c7d7f0f37c94048d2df35a351a4ddea9d1f9069ad99c",
+      "bytes": 187051
+    },
+    "DZA-admin-tags.json": {
+      "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A90%5D%3Brel%5B%22ISO3166-2%22~%22%5EDZ-%22%5D%5B%22admin_level%22%3D%224%22%5D%3Bout%20tags%3B",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "sha256": "cbf5f599fa466c5b1a2e3bec18d1287448bc5db5a56641cd58d81489230adb60",
+      "bytes": 152116
+    },
+    "DZA-osm-part-0.json": {
+      "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A180%5D%3Brel(id%3A157062%2C1258647%2C1258648%2C1258649%2C1258650%2C1258651%2C1259187%2C1259188)%3Bout%20geom%3B",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "sha256": "4cc7b051db741b9112ed03cdf1659063a52a0be129787e5b1860baf74477c30f",
+      "bytes": 1898453
+    },
+    "DZA-osm-part-8.json": {
+      "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A180%5D%3Brel(id%3A1259189%2C1259190%2C1259191%2C1273368%2C1273369%2C1273544%2C1273552%2C1278746)%3Bout%20geom%3B",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "sha256": "87f404c80eef9d390017f565cfe468fbb4b7cb4a13b026239dbac4f7878ae96a",
+      "bytes": 3050483
+    },
+    "DZA-osm-part-16.json": {
+      "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A180%5D%3Brel(id%3A1278747%2C1278748%2C1278749%2C1278765%2C1278766%2C1278767%2C1279666%2C1279667)%3Bout%20geom%3B",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "sha256": "7f45876e57dac2ea8c2628754739c426d0b35954a5d1baf5899feecae88f90f2",
+      "bytes": 2370793
+    },
+    "DZA-osm-part-24.json": {
+      "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A180%5D%3Brel(id%3A1279811%2C1279816%2C1280071%2C1280072%2C1280073%2C1280081%2C1280465%2C1280466)%3Bout%20geom%3B",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "sha256": "802a88bb233dcb35c66ad8e2a2a487b4c1018045164a59d8fb881d2495ca68c7",
+      "bytes": 1193075
+    },
+    "DZA-osm-part-32.json": {
+      "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A180%5D%3Brel(id%3A1280702%2C1281260%2C1281404%2C1282090%2C1282091%2C1282111%2C1283093%2C1283457)%3Bout%20geom%3B",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "sha256": "3156ce5a6637d832303a9042e3122d01662b9304e48659f3a3795e817dabc934",
+      "bytes": 2551034
+    },
+    "DZA-osm-part-40.json": {
+      "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A180%5D%3Brel(id%3A1283601%2C1283608%2C1283678%2C1283683%2C1283740%2C1286213%2C1455599%2C1455600)%3Bout%20geom%3B",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "sha256": "5af7d217d8577d8bd685808ad6ef3520606f36acc3cd07836646158c8c14f606",
+      "bytes": 3605516
+    },
+    "DZA-osm-part-48.json": {
+      "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A180%5D%3Brel(id%3A6528163%2C6528164%2C6822397%2C6824843%2C6824900%2C6825874%2C6825876%2C6825881)%3Bout%20geom%3B",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "sha256": "0d86554dba8770306926e7821dde7b5b2b0075dd05eebb5ab8cb626881ef8172",
+      "bytes": 474352
+    },
+    "DZA-osm-part-56.json": {
+      "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A180%5D%3Brel(id%3A6825901%2C10489092%2C20419608%2C20420206%2C20421910%2C20442307%2C20442362%2C20442406)%3Bout%20geom%3B",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "sha256": "78327f5a371db27cbbacd9fa8800dcb89e88be5206191b1f551314273abd92f3",
+      "bytes": 867067
+    },
+    "DZA-osm-part-64.json": {
+      "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A180%5D%3Brel(id%3A20812604%2C20816671%2C20819318%2C20953792)%3Bout%20geom%3B",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "sha256": "077df0c4f00e805cdaf0e4d1115994ec1c31e9dba8939464f87a93c9027eb4bc",
+      "bytes": 558187
+    },
+    "DZA-admin-osm.json": {
+      "url": "Retained DZA-admin-tags and numbered OSM relation geometry batches",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "sha256": "4b261894d8362a3f0283f0252e915e53f7736304b66a3034eaf934ad72f6f0b0",
+      "bytes": 11172039
+    },
+    "FJI-coast-part-0.json": {
+      "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A180%5D%3Bway%5B%22natural%22%3D%22coastline%22%5D(-22%2C176%2C-12%2C180)%3Bout%20geom%3B",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "sha256": "ecd36cb5c841e57364c79a7db33fd9c23b1e1859d831839e9ccf043187e832af",
+      "bytes": 9841594
+    },
+    "FJI-coast-part-1.json": {
+      "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A180%5D%3Bway%5B%22natural%22%3D%22coastline%22%5D(-22%2C-180%2C-12%2C-178)%3Bout%20geom%3B",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "sha256": "7c7a2176b87fdd18c24c664aa4519cee9b1f140785101b4e896cf4e69fd25992",
+      "bytes": 2472331
+    },
+    "FJI-coast.json": {
+      "url": "Retained Fiji coastline bounding-box batches",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "sha256": "7c463b1ee37f9132e5f45c8a3140e51a495416384cde3bd42fd94668f85d2571",
+      "bytes": 9374102
+    },
+    "DZA-current-adm1.geojson": {
+      "url": "Derived from retained DZA OSM administrative relations and OCHA country land",
+      "credit": "© OpenStreetMap contributors / national authorities via OCHA",
+      "license": "ODbL 1.0; OCHA source-specific attribution",
+      "sha256": "e26c930da9b59b6f7b484b079c7628fabd1c30aa797c62e89832ff46149ecc19",
+      "bytes": 5316944
+    },
+    "GNQ-current-adm1.geojson": {
+      "url": "Derived from retained GNQ OSM administrative relations and OCHA country land",
+      "credit": "© OpenStreetMap contributors / national authorities via OCHA",
+      "license": "ODbL 1.0; OCHA source-specific attribution",
+      "sha256": "f5dca28f6fceb7f8a5f6bf244bb027532b5f9d5d7ebdfb862b1a4ea9c6840720",
+      "bytes": 517783
+    },
+    "DZA-government-reform.pdf": {
+      "url": "https://www.joradp.dz/FTP/jo-francais/2026/F2026025.pdf",
+      "credit": "Algerian Official Gazette, 4 April 2026",
+      "license": "Official legislative reference; attribution",
+      "sha256": "f6d7f5261e997e490d54a1a061648a5635d3263e1f19aed50e5cd1e5ad01e46f",
+      "bytes": 260776
+    },
+    "FJI-coast-neighbors.json": {
+      "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A180%5D%3Bway(bn%3A241969312%2C241954699%2C241953141%2C241960766%2C241961397%2C242070251%2C242070269%2C241971297%2C6130221678%2C6130221670)%5B%22natural%22%3D%22coastline%22%5D%3Bout%20geom%3B",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "sha256": "ce07522aabcb6e7d4d992cab2075b79a5e6edabfd551d3ab00c92748e48aaeef",
+      "bytes": 287
+    },
+    "FJI-country-osm.json": {
+      "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A180%5D%3Brel%5B%22ISO3166-1%22%3D%22FJ%22%5D%5B%22admin_level%22%3D%222%22%5D%3Bout%20geom%3B",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "sha256": "96c724908d2d3febb9f4eac3bc43bc450a95146235e09c426afa61636fc63d66",
+      "bytes": 35562
+    },
+    "BEN-adm0.geojson": {
+      "url": "https://data.humdata.org/dataset/494229d9-eee0-4872-8864-2baf98691554/resource/a1f07015-1ee2-49c3-b3f6-b75221b52bf3/download/ben_admin_boundaries.geojson.zip",
+      "member": "ben_admin0.geojson",
+      "archiveSha256": "e691548e370e954d838a98557bf2a14782216d7d0778a57c0bb76f710908d128",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-ben",
+      "sha256": "eb05cd86af6d2144d4aa14ace0a5f02170c44603057328a103d98515b3eef8e3",
+      "bytes": 60190
+    },
+    "CIV-adm0.geojson": {
+      "url": "https://data.humdata.org/dataset/503a9167-ba56-4174-b160-bdb0fb703719/resource/321e55d2-3486-400a-a855-4b749cf9ef88/download/civ_admin_boundaries.geojson.zip",
+      "member": "civ_admin0.geojson",
+      "archiveSha256": "9c89ee383fe51833e896135a6c83efe4034a0ffef44e33c44d38e763c1cfbb51",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-civ",
+      "sha256": "b2acbcfbe1473846c3381e17fcae1547a8487d456e07fc038cb3c14c970aba62",
+      "bytes": 296083
+    },
+    "CMR-adm0.geojson": {
+      "url": "https://data.humdata.org/dataset/b13f08ef-92ee-4446-9b0a-e219f5c25415/resource/2248ac6d-9675-47de-90d3-1e7ce6e601b1/download/cmr_admin_boundaries.geojson.zip",
+      "member": "cmr_admin0.geojson",
+      "archiveSha256": "f24a75c41ee2e107448ff1d2b8769ee970dad376d20cd7093da0c9106814ab5a",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-cmr",
+      "sha256": "a962a2eeb0662fe9de1d9dbb8ed0c83f61435d93dbed1f59eb7a25953f9a9637",
+      "bytes": 1074417
+    },
+    "COM-adm0.geojson": {
+      "url": "https://data.humdata.org/dataset/7f80a5d1-9f1a-462c-b298-338c7edc9224/resource/ce499503-58c7-4566-a578-c8738b2574d9/download/com_admin_boundaries.geojson.zip",
+      "member": "com_admin0.geojson",
+      "archiveSha256": "c094bd9fe28236deaf22403ad86c9d576cd8b0b087c8d7cb428bea44b47a4573",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-com",
+      "sha256": "329c0faac102f9c5baba3651fc72b0789dd12a4c17e36e7459a3caf33d5d080c",
+      "bytes": 539204
+    },
+    "CPV-adm0.geojson": {
+      "url": "https://data.humdata.org/dataset/ce7df560-f77b-4f55-9175-4719ea21f50b/resource/f809561f-66ea-4f48-b6fb-52e839c74237/download/cpv_admin_boundaries.geojson.zip",
+      "member": "cpv_admin0.geojson",
+      "archiveSha256": "da1ad8732413d0a615c645e0e1c72d1c0f1182c91d2e55fb77817f8999231ff2",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-cpv",
+      "sha256": "fe44e430a0017020ddf2966b216f4959a73961dcf9a436787d5c32dc06ea7ea8",
+      "bytes": 12316372
+    },
+    "DZA-adm0.geojson": {
+      "url": "https://data.humdata.org/dataset/3d17274d-0812-4b21-b87a-4854af4eb244/resource/d2b759f7-5f43-48b8-8186-21bb096186d1/download/dza_admin_boundaries.geojson.zip",
+      "member": "dza_admin0.geojson",
+      "archiveSha256": "446b8fe85c5e0c6a2611965ff2dd7dcfd6f16c2a525ed67835c78d68e317a7f9",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-dza",
+      "sha256": "06b36fcc1b611c57c347bda218b4d3ae8c3f70b25a2cc095e4333bf86e537e1f",
+      "bytes": 1316300
+    },
+    "EGY-adm0.geojson": {
+      "url": "https://data.humdata.org/dataset/b90d81ba-7c7a-4283-9899-827480d80a79/resource/2080e95f-51c7-45b6-b5ab-613ff1cfc041/download/egy_admin_boundaries.geojson.zip",
+      "member": "egy_admin0.geojson",
+      "archiveSha256": "259987be0b7c5e367d52eadf3dfea39802c7750cace8498833e3212d61b9dba9",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-egy",
+      "sha256": "d6637089dd0e28ef8b5d18c98656afdb0c6d7e6b72e1a0c3bbe69feed83eb06d",
+      "bytes": 5300867
+    },
+    "ERI-adm0.geojson": {
+      "url": "https://data.humdata.org/dataset/2025e742-8b5a-4f72-aac5-a28e96ce3cb8/resource/1e31c86b-8903-4720-a306-f9f60322a7ca/download/eri_admin_boundaries.geojson.zip",
+      "member": "eri_admin0.geojson",
+      "archiveSha256": "1d3888cea4d97346ce0144950a66d7d6c01465e0d54b98122a811704ae4ae17e",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-eri",
+      "sha256": "06a4abac2b69b20ec9163860b68ab0bec8e6108a07b0a840e9b1a003d6ec237c",
+      "bytes": 2160205
+    },
+    "GAB-adm0.geojson": {
+      "url": "https://data.humdata.org/dataset/d8d992f3-5374-448f-a3d5-bed7c1925a11/resource/72ab3a59-84a4-461f-ac4d-d49bb79574b9/download/gab_admin_boundaries.geojson.zip",
+      "member": "gab_admin0.geojson",
+      "archiveSha256": "c35285c71d6927c1aa126d6bf5354a3f58df8ee2dceb7d3319feabb931a4156b",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-gab",
+      "sha256": "21dc02becae89063a73eddd39f9e8dfabb72c865bfc5bcb197f8410b51ee9bb8",
+      "bytes": 99623
+    },
+    "GHA-adm0.geojson": {
+      "url": "https://data.humdata.org/dataset/dc4c17cf-59d9-478c-b2b7-acd889241194/resource/c8d647a7-f396-4108-9fe4-cf7b31731a73/download/gha_admin_boundaries.geojson.zip",
+      "member": "gha_admin0.geojson",
+      "archiveSha256": "fbc2a72af2bfc928045031aff76e36fab49dea48e858a4ac640d7070d2dc1e22",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-gha",
+      "sha256": "d0fe824abf1d0e7a09f493858e556fcb1650fe232a6ec5416a977bd38fe57736",
+      "bytes": 168040
+    },
+    "GIN-adm0.geojson": {
+      "url": "https://data.humdata.org/dataset/f814a950-4d4e-4f46-a880-4da5522f14c4/resource/25ff3310-b84d-46cd-a50f-16e831332193/download/gin_admin_boundaries.geojson.zip",
+      "member": "gin_admin0.geojson",
+      "archiveSha256": "d80761c508fc9368ec17111e06680cb90296a512b143b90b81a7c27b5d507677",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-gin",
+      "sha256": "177945899947f89c8f35feca9ebe43a7225ce06faee74226dbf50d27971b6848",
+      "bytes": 281735
+    },
+    "GMB-adm0.geojson": {
+      "url": "https://data.humdata.org/dataset/9f2ce756-2e50-4042-a952-32160977d223/resource/7dec73e0-1c4f-403c-953e-cdad41c01b0e/download/gmb_admin_boundaries.geojson.zip",
+      "member": "gmb_admin0.geojson",
+      "archiveSha256": "e01bef935f2a9a51dd167b5b6ceb7e325f8580f755823db4f74019d669dc00ad",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-gmb",
+      "sha256": "5258f3a7059c704c828b63d132eaa95fe1c19ed2393a9e39df8de914becf079d",
+      "bytes": 126835
+    },
+    "GNB-adm0.geojson": {
+      "url": "https://data.humdata.org/dataset/3db6297f-55d7-4e79-8969-281b1838ef79/resource/0cb66179-f8b5-4c77-a356-ea94ca2442a5/download/gnb_admin_boundaries.geojson.zip",
+      "member": "gnb_admin0.geojson",
+      "archiveSha256": "502403c0530e7ccd97f615aeb577feed328aba3d4b6e3dceeac54731d137d38f",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-gnb",
+      "sha256": "372589f4b764c52185a9a73a32179f422119b9ce4af765825d5b52221c574f95",
+      "bytes": 116745
+    },
+    "GNQ-adm0.geojson": {
+      "url": "https://data.humdata.org/dataset/0c1a3093-c97d-48a2-a992-e652ebcbf05c/resource/6b004317-faaa-4176-b5f4-eb6cd4ed46a6/download/gnq_admin_boundaries.geojson.zip",
+      "member": "gnq_admin0.geojson",
+      "archiveSha256": "ea64e4a40e98e54210aadbcd98a8b998c8860f674723f8d1f090a4c62259b861",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-gnq",
+      "sha256": "a583a2358ce7a2e7982b9ff73c29586deba2836a132cf8d0c759b42d6aa0a98e",
+      "bytes": 566375
+    },
+    "LBR-adm0.geojson": {
+      "url": "https://data.humdata.org/dataset/bbb2f45c-3d7a-4ad3-afc5-459303dbc8f4/resource/7a2422f8-c5d8-46b1-9703-b7b6203a13b9/download/lbr_admin_boundaries.geojson.zip",
+      "member": "lbr_admin0.geojson",
+      "archiveSha256": "a993b89efe9bf0ee4cfa624361d49a71e0b69c0c55ed26e97c786f3eb1daf8e1",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-lbr",
+      "sha256": "1fae6e146c50753c797681d0723ddae62abc521f317e776028028225afdbde72",
+      "bytes": 237366
+    },
+    "LBY-adm0.geojson": {
+      "url": "https://data.humdata.org/dataset/fd9fb749-5b68-4942-b5f9-115f20b5c00e/resource/6933bac2-4f6b-4095-a629-21193981b80c/download/lby_admin_boundaries.geojson.zip",
+      "member": "lby_admin0.geojson",
+      "archiveSha256": "0c4bfd12c78bcacc8aa7d5ce8cbc722c6563e271ec7b5504bebb7d77ce9e063b",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-lby",
+      "sha256": "3050191416f1256c946891aca69357bda522bea1fdb8d257e0532ebec1867c45",
+      "bytes": 293993
+    },
+    "MRT-adm0.geojson": {
+      "url": "https://data.humdata.org/dataset/8d49f50d-92a8-46d9-9462-f821a8058f6d/resource/916850dc-92e3-4c2b-a972-f6964498346e/download/mrt_admin_boundaries.geojson.zip",
+      "member": "mrt_admin0.geojson",
+      "archiveSha256": "ca7751c5dac56b85a7f7807601f1c45ffa30c7fce8881ea406ebb3623cf165ae",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-mrt",
+      "sha256": "5320bc4bf5d3be1689ffa3a4aeafc032251e39e878fb13134f9282b3cd7b99c4",
+      "bytes": 237937
+    },
+    "SDN-adm0.geojson": {
+      "url": "https://data.humdata.org/dataset/a66a4b6c-92de-4507-9546-aa1900474180/resource/018af991-4aa7-4043-a0d5-e429a55851fb/download/sdn_admin_boundaries.geojson.zip",
+      "member": "sdn_admin0.geojson",
+      "archiveSha256": "75330d4e12e53f966df0e5683e04f0919e9964952fbbf827f3729038e603c95e",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-sdn",
+      "sha256": "ce0d571f32be001aa9c73d9a86b869a90c19bd2e671da73afed2cb2f7e7495ec",
+      "bytes": 263182
+    },
+    "SEN-adm0.geojson": {
+      "url": "https://data.humdata.org/dataset/bd9bc484-155d-41a3-87cf-064310a94492/resource/02745b5a-88b7-4132-ae11-8bdaf64afff8/download/sen_admin_boundaries.geojson.zip",
+      "member": "sen_admin0.geojson",
+      "archiveSha256": "ab0d33dd71f0af2e53a283f1d3e82b6e889c87ae465c8896a0e242949a80d310",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-sen",
+      "sha256": "292e4e1d0bc1638f8b5547e176044772c7043ff61828860d4ec4a679a7c22ef4",
+      "bytes": 3143223
+    },
+    "SLE-adm0.geojson": {
+      "url": "https://data.humdata.org/dataset/a4816317-a913-4619-b1e9-d89e21c056b4/resource/dfd53f5f-9846-4f14-bda7-953d3c767279/download/sle_admin_boundaries.geojson.zip",
+      "member": "sle_admin0.geojson",
+      "archiveSha256": "33f5a966603937437ae39463b1196901ddccc3a10275bb25b7eda75878487816",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-sle",
+      "sha256": "8ede355b30cf85833cbfb3b4ecd1c6b83fc62e42b55b8ac4debac012867078b1",
+      "bytes": 1043672
+    },
+    "STP-adm0.geojson": {
+      "url": "https://data.humdata.org/dataset/9746c0f7-9ed3-4a3f-890e-88bc19166770/resource/45594be6-9c33-4d55-b70c-2bfaf2bb6d5e/download/stp_admin_boundaries.geojson.zip",
+      "member": "stp_admin0.geojson",
+      "archiveSha256": "fa19b1bed2070cdf9c3061b1366d3780192b00248ac77c05e4bae506d81aff88",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-stp",
+      "sha256": "fb7dd4262dc81c6034189a5adfbc9e11059b237efb634c8f4c756d637eb829b7",
+      "bytes": 279628
+    },
+    "TGO-adm0.geojson": {
+      "url": "https://data.humdata.org/dataset/e6439952-e487-4682-8251-e9688aac60e1/resource/e08c2ae7-411b-4d83-a61e-2350ba93c924/download/tgo_admin_boundaries.geojson.zip",
+      "member": "tgo_admin0.geojson",
+      "archiveSha256": "271c75f6bafea603160a2317b23153bc6d013468886ebf1221af4bf6919dbfa2",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-tgo",
+      "sha256": "3395e3e2e75e7858ab1cf1ab8e640ef7326ed7e2113ed42f841e45702bc19c4b",
+      "bytes": 55261
+    },
+    "TUN-adm0.geojson": {
+      "url": "https://data.humdata.org/dataset/e47eda48-8f83-4858-b739-dbffb8a50c47/resource/ebe19593-9438-4d14-8291-e65f811e2671/download/tun_admin_boundaries.geojson.zip",
+      "member": "tun_admin0.geojson",
+      "archiveSha256": "0716809d4b18161c226978b53c39445ae506448e26073b2dcd67d4ba10cdf83e",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-tun",
+      "sha256": "8c0efa686217e1ebae80017b4a266701510659c40334b1a856ad7a3cbde156a9",
+      "bytes": 4036719
+    },
+    "FJI-admin-osm.json": {
+      "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A180%5D%3Brel%5B%22boundary%22%3D%22administrative%22%5D%5B%22ISO3166-2%22~%22%5EFJ-%5BCENWR%5D%24%22%5D%3Bout%20geom%3B",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "sha256": "ae719f8c10f2f8d354f32f3939aaa32213583a67ac5d0f3b418f6b9fbedc7f17",
+      "bytes": 496869
+    },
+    "FJI-current-adm1.geojson": {
+      "url": "Derived from retained FJI-admin-osm.json administrative relations",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "sha256": "c5160367af75cb29666e04640783cfccfd2ec2b1b7b8e17acd85a1566f951110",
+      "bytes": 232139
+    }
+  }
+}

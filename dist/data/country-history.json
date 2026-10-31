@@ -1577,6 +1577,539 @@
           "scripts/build-indian-ocean.mjs"
         ]
       }
+    },
+    {
+      "country": "ethiopia",
+      "name": "Ethiopia",
+      "addedOn": "2026-10-30",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced administrative maps and complete Maldives island registry; shared-border audit; kept local.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-horn-islands.mjs"
+        ]
+      }
+    },
+    {
+      "country": "somalia",
+      "name": "Somalia",
+      "addedOn": "2026-10-30",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced administrative maps and complete Maldives island registry; shared-border audit; kept local.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-horn-islands.mjs"
+        ]
+      }
+    },
+    {
+      "country": "uganda",
+      "name": "Uganda",
+      "addedOn": "2026-10-30",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced administrative maps and complete Maldives island registry; shared-border audit; kept local.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-horn-islands.mjs"
+        ]
+      }
+    },
+    {
+      "country": "rwanda",
+      "name": "Rwanda",
+      "addedOn": "2026-10-30",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced administrative maps and complete Maldives island registry; shared-border audit; kept local.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-horn-islands.mjs"
+        ]
+      }
+    },
+    {
+      "country": "burundi",
+      "name": "Burundi",
+      "addedOn": "2026-10-30",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced administrative maps and complete Maldives island registry; shared-border audit; kept local.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-horn-islands.mjs"
+        ]
+      }
+    },
+    {
+      "country": "maldives",
+      "name": "Maldives",
+      "addedOn": "2026-10-30",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced administrative maps and complete Maldives island registry; shared-border audit; kept local.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-horn-islands.mjs"
+        ]
+      }
+    },
+    {
+      "country": "egypt",
+      "name": "Egypt",
+      "addedOn": "2026-10-30",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced coastal African and Pacific maps; shared-border and coastline checks; kept local.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-coastal-oceania.mjs"
+        ]
+      }
+    },
+    {
+      "country": "eritrea",
+      "name": "Eritrea",
+      "addedOn": "2026-10-30",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced coastal African and Pacific maps; shared-border and coastline checks; kept local.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-coastal-oceania.mjs"
+        ]
+      }
+    },
+    {
+      "country": "djibouti",
+      "name": "Djibouti",
+      "addedOn": "2026-10-30",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced coastal African and Pacific maps; shared-border and coastline checks; kept local.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-coastal-oceania.mjs"
+        ]
+      }
+    },
+    {
+      "country": "sudan",
+      "name": "Sudan",
+      "addedOn": "2026-10-30",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced coastal African and Pacific maps; shared-border and coastline checks; kept local.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-coastal-oceania.mjs"
+        ]
+      }
+    },
+    {
+      "country": "libya",
+      "name": "Libya",
+      "addedOn": "2026-10-30",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced coastal African and Pacific maps; shared-border and coastline checks; kept local.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-coastal-oceania.mjs"
+        ]
+      }
+    },
+    {
+      "country": "tunisia",
+      "name": "Tunisia",
+      "addedOn": "2026-10-30",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced coastal African and Pacific maps; shared-border and coastline checks; kept local.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-coastal-oceania.mjs"
+        ]
+      }
+    },
+    {
+      "country": "algeria",
+      "name": "Algeria",
+      "addedOn": "2026-10-30",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced coastal African and Pacific maps; shared-border and coastline checks; kept local.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-coastal-oceania.mjs"
+        ]
+      }
+    },
+    {
+      "country": "mauritania",
+      "name": "Mauritania",
+      "addedOn": "2026-10-30",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced coastal African and Pacific maps; shared-border and coastline checks; kept local.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-coastal-oceania.mjs"
+        ]
+      }
+    },
+    {
+      "country": "senegal",
+      "name": "Senegal",
+      "addedOn": "2026-10-30",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced coastal African and Pacific maps; shared-border and coastline checks; kept local.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-coastal-oceania.mjs"
+        ]
+      }
+    },
+    {
+      "country": "gambia",
+      "name": "The Gambia",
+      "addedOn": "2026-10-30",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced coastal African and Pacific maps; shared-border and coastline checks; kept local.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-coastal-oceania.mjs"
+        ]
+      }
+    },
+    {
+      "country": "guinea-bissau",
+      "name": "Guinea-Bissau",
+      "addedOn": "2026-10-30",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced coastal African and Pacific maps; shared-border and coastline checks; kept local.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-coastal-oceania.mjs"
+        ]
+      }
+    },
+    {
+      "country": "guinea",
+      "name": "Guinea",
+      "addedOn": "2026-10-30",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced coastal African and Pacific maps; shared-border and coastline checks; kept local.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-coastal-oceania.mjs"
+        ]
+      }
+    },
+    {
+      "country": "sierra-leone",
+      "name": "Sierra Leone",
+      "addedOn": "2026-10-30",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced coastal African and Pacific maps; shared-border and coastline checks; kept local.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-coastal-oceania.mjs"
+        ]
+      }
+    },
+    {
+      "country": "liberia",
+      "name": "Liberia",
+      "addedOn": "2026-10-30",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced coastal African and Pacific maps; shared-border and coastline checks; kept local.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-coastal-oceania.mjs"
+        ]
+      }
+    },
+    {
+      "country": "ivory-coast",
+      "name": "Ivory Coast",
+      "addedOn": "2026-10-30",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced coastal African and Pacific maps; shared-border and coastline checks; kept local.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-coastal-oceania.mjs"
+        ]
+      }
+    },
+    {
+      "country": "ghana",
+      "name": "Ghana",
+      "addedOn": "2026-10-30",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced coastal African and Pacific maps; shared-border and coastline checks; kept local.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-coastal-oceania.mjs"
+        ]
+      }
+    },
+    {
+      "country": "togo",
+      "name": "Togo",
+      "addedOn": "2026-10-30",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced coastal African and Pacific maps; shared-border and coastline checks; kept local.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-coastal-oceania.mjs"
+        ]
+      }
+    },
+    {
+      "country": "benin",
+      "name": "Benin",
+      "addedOn": "2026-10-30",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced coastal African and Pacific maps; shared-border and coastline checks; kept local.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-coastal-oceania.mjs"
+        ]
+      }
+    },
+    {
+      "country": "cameroon",
+      "name": "Cameroon",
+      "addedOn": "2026-10-30",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced coastal African and Pacific maps; shared-border and coastline checks; kept local.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-coastal-oceania.mjs"
+        ]
+      }
+    },
+    {
+      "country": "equatorial-guinea",
+      "name": "Equatorial Guinea",
+      "addedOn": "2026-10-30",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced coastal African and Pacific maps; shared-border and coastline checks; kept local.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-coastal-oceania.mjs"
+        ]
+      }
+    },
+    {
+      "country": "gabon",
+      "name": "Gabon",
+      "addedOn": "2026-10-30",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced coastal African and Pacific maps; shared-border and coastline checks; kept local.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-coastal-oceania.mjs"
+        ]
+      }
+    },
+    {
+      "country": "cabo-verde",
+      "name": "Cabo Verde",
+      "addedOn": "2026-10-30",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced coastal African and Pacific maps; shared-border and coastline checks; kept local.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-coastal-oceania.mjs"
+        ]
+      }
+    },
+    {
+      "country": "sao-tome-principe",
+      "name": "São Tomé and Príncipe",
+      "addedOn": "2026-10-30",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced coastal African and Pacific maps; shared-border and coastline checks; kept local.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-coastal-oceania.mjs"
+        ]
+      }
+    },
+    {
+      "country": "comoros",
+      "name": "Comoros",
+      "addedOn": "2026-10-30",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced coastal African and Pacific maps; shared-border and coastline checks; kept local.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-coastal-oceania.mjs"
+        ]
+      }
+    },
+    {
+      "country": "mauritius",
+      "name": "Mauritius",
+      "addedOn": "2026-10-30",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced coastal African and Pacific maps; shared-border and coastline checks; kept local.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-coastal-oceania.mjs"
+        ]
+      }
+    },
+    {
+      "country": "seychelles",
+      "name": "Seychelles",
+      "addedOn": "2026-10-30",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced coastal African and Pacific maps; shared-border and coastline checks; kept local.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-coastal-oceania.mjs"
+        ]
+      }
+    },
+    {
+      "country": "fiji",
+      "name": "Fiji",
+      "addedOn": "2026-10-30",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced coastal African and Pacific maps; shared-border and coastline checks; kept local.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-coastal-oceania.mjs"
+        ]
+      }
+    },
+    {
+      "country": "samoa",
+      "name": "Samoa",
+      "addedOn": "2026-10-30",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced coastal African and Pacific maps; shared-border and coastline checks; kept local.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-coastal-oceania.mjs"
+        ]
+      }
+    },
+    {
+      "country": "tonga",
+      "name": "Tonga",
+      "addedOn": "2026-10-30",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced coastal African and Pacific maps; shared-border and coastline checks; kept local.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-coastal-oceania.mjs"
+        ]
+      }
+    },
+    {
+      "country": "tuvalu",
+      "name": "Tuvalu",
+      "addedOn": "2026-10-30",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced coastal African and Pacific maps; shared-border and coastline checks; kept local.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-coastal-oceania.mjs"
+        ]
+      }
+    },
+    {
+      "country": "kiribati",
+      "name": "Kiribati",
+      "addedOn": "2026-10-30",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced coastal African and Pacific maps; shared-border and coastline checks; kept local.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-coastal-oceania.mjs"
+        ]
+      }
+    },
+    {
+      "country": "nauru",
+      "name": "Nauru",
+      "addedOn": "2026-10-30",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced coastal African and Pacific maps; shared-border and coastline checks; kept local.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-coastal-oceania.mjs"
+        ]
+      }
+    },
+    {
+      "country": "palau",
+      "name": "Palau",
+      "addedOn": "2026-10-30",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced coastal African and Pacific maps; shared-border and coastline checks; kept local.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-coastal-oceania.mjs"
+        ]
+      }
+    },
+    {
+      "country": "marshall-islands",
+      "name": "Marshall Islands",
+      "addedOn": "2026-10-30",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced coastal African and Pacific maps; shared-border and coastline checks; kept local.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-coastal-oceania.mjs"
+        ]
+      }
+    },
+    {
+      "country": "micronesia",
+      "name": "Micronesia",
+      "addedOn": "2026-10-30",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced coastal African and Pacific maps; shared-border and coastline checks; kept local.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-coastal-oceania.mjs"
+        ]
+      }
     }
   ]
 }

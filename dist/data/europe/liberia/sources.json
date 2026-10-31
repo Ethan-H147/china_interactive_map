@@ -1,0 +1,78 @@
+{
+  "retrieved": "2026-10-30",
+  "coverage": "Liberia: 15 counties, 136 districts. Dated 2019 boundary reference; source dates and licenses are retained below. Child areas are reconciled within their displayed parents. Shared land frontiers are owned once; coastlines and maritime boundaries are not stroked. National statistics are not distributed to subdivisions.",
+  "counts": {
+    "1": 15,
+    "2": 136
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "LBR-hdx.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-lbr",
+      "sha256": "7ef62beff26b1cbfe3ba49961685fe16abed4ead3c70aefd563699af092bfddc",
+      "bytes": 45626
+    },
+    "LBR-gb.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/LBR/ADM1/",
+      "sha256": "e23a68b30dc43b66942ef8efcece1dc6e69081f0b23b952a2375d0a28776387e",
+      "bytes": 1765
+    },
+    "LBR-adm2.geojson": {
+      "url": "https://data.humdata.org/dataset/bbb2f45c-3d7a-4ad3-afc5-459303dbc8f4/resource/7a2422f8-c5d8-46b1-9703-b7b6203a13b9/download/lbr_admin_boundaries.geojson.zip",
+      "member": "lbr_admin2_em.geojson",
+      "archiveSha256": "a993b89efe9bf0ee4cfa624361d49a71e0b69c0c55ed26e97c786f3eb1daf8e1",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-lbr",
+      "sha256": "83c81649ef306977700a8a93bb53cc6343e01ab35c791ac5503c29fff769ed48",
+      "bytes": 1725258
+    },
+    "LBR-adm1.geojson": {
+      "url": "https://data.humdata.org/dataset/bbb2f45c-3d7a-4ad3-afc5-459303dbc8f4/resource/7a2422f8-c5d8-46b1-9703-b7b6203a13b9/download/lbr_admin_boundaries.geojson.zip",
+      "member": "lbr_admin1_em.geojson",
+      "archiveSha256": "a993b89efe9bf0ee4cfa624361d49a71e0b69c0c55ed26e97c786f3eb1daf8e1",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-lbr",
+      "sha256": "859d921c57a639431710ef1b7fa9a04439f4df3590d2bf9e9f2202fc263dd136",
+      "bytes": 879475
+    },
+    "flag-lr.svg": {
+      "url": "https://flagcdn.com/lr.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT distribution",
+      "sha256": "b722560baa4a55e843b78f3a3485ff4ad31e5acd659142add4ba3990be2578cb",
+      "bytes": 675
+    },
+    "LBR-adm0.geojson": {
+      "url": "https://data.humdata.org/dataset/bbb2f45c-3d7a-4ad3-afc5-459303dbc8f4/resource/7a2422f8-c5d8-46b1-9703-b7b6203a13b9/download/lbr_admin_boundaries.geojson.zip",
+      "member": "lbr_admin0.geojson",
+      "archiveSha256": "a993b89efe9bf0ee4cfa624361d49a71e0b69c0c55ed26e97c786f3eb1daf8e1",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-lbr",
+      "sha256": "1fae6e146c50753c797681d0723ddae62abc521f317e776028028225afdbde72",
+      "bytes": 237366
+    },
+    "naturalEarth": {
+      "url": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+      "license": "Public domain",
+      "credit": "Natural Earth",
+      "method": "Land-frontier guides, lake separation and the neutral Bir Tawil reference; displayed country borders follow reconciled land geometry.",
+      "files": {
+        "ne-borders.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-borders.json.gz",
+          "sha256": "a2c796c19a530964eedaecde02e605150607cc0a0517da68cf013ddeeed8655c"
+        },
+        "ne-countries.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-countries.json.gz",
+          "sha256": "103135920ec1bfdd5ada2f4f7e0ba1e985b28f881d39ef9343a8a43d92b23610"
+        },
+        "ne-lakes.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-lakes.json.gz",
+          "sha256": "1550308007c3457c65e68b2a47d06797d474073cf7fdeb5eaf6ff55164d1903e"
+        }
+      }
+    }
+  }
+}

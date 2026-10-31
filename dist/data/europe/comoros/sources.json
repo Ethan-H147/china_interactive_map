@@ -1,0 +1,88 @@
+{
+  "retrieved": "2026-10-30",
+  "coverage": "Comoros: 3 islands, 17 prefectures. Dated 2019 boundary reference; source dates and licenses are retained below. Child areas are reconciled within their displayed parents. Shared land frontiers are owned once; coastlines and maritime boundaries are not stroked. National statistics are not distributed to subdivisions.",
+  "counts": {
+    "1": 3,
+    "2": 17
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "COM-hdx.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-com",
+      "sha256": "a233bf85f928f865a6260293ac9237d072c795fe244ceff87937d50b9c8fce0a",
+      "bytes": 35663
+    },
+    "COM-gb.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/COM/ADM1/",
+      "sha256": "b2804a55c6f48f7e65683d03564e2257a27f9788d951d579e0e56d5d7799a92a",
+      "bytes": 1727
+    },
+    "flag-km.svg": {
+      "url": "https://flagcdn.com/km.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT distribution",
+      "sha256": "21e3ee9de83bf7ac6b57400e92f63d81f1f174624e9a2f408a5dd23d4d8f8f04",
+      "bytes": 558
+    },
+    "COM-adm1.geojson": {
+      "url": "https://data.humdata.org/dataset/7f80a5d1-9f1a-462c-b298-338c7edc9224/resource/ce499503-58c7-4566-a578-c8738b2574d9/download/com_admin_boundaries.geojson.zip",
+      "member": "com_admin1.geojson",
+      "archiveSha256": "c094bd9fe28236deaf22403ad86c9d576cd8b0b087c8d7cb428bea44b47a4573",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-com",
+      "sha256": "36305dc67a132142829926cc3d843d7c077cf70db2af1ce79ccda72671c608d2",
+      "bytes": 540411
+    },
+    "COM-adm3.geojson": {
+      "url": "https://data.humdata.org/dataset/7f80a5d1-9f1a-462c-b298-338c7edc9224/resource/ce499503-58c7-4566-a578-c8738b2574d9/download/com_admin_boundaries.geojson.zip",
+      "member": "com_admin3.geojson",
+      "archiveSha256": "c094bd9fe28236deaf22403ad86c9d576cd8b0b087c8d7cb428bea44b47a4573",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-com",
+      "sha256": "5a97de9f796370d5a84bebf9a81b6146f59ba4bc81d1fccdcaaa5a8f258c1232",
+      "bytes": 648795
+    },
+    "COM-adm2.geojson": {
+      "url": "https://data.humdata.org/dataset/7f80a5d1-9f1a-462c-b298-338c7edc9224/resource/ce499503-58c7-4566-a578-c8738b2574d9/download/com_admin_boundaries.geojson.zip",
+      "member": "com_admin2.geojson",
+      "archiveSha256": "c094bd9fe28236deaf22403ad86c9d576cd8b0b087c8d7cb428bea44b47a4573",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-com",
+      "sha256": "ef369c68f077d38b7562c858e7e3f423fb6b4c331f29018565749d633f7a4116",
+      "bytes": 591024
+    },
+    "COM-adm0.geojson": {
+      "url": "https://data.humdata.org/dataset/7f80a5d1-9f1a-462c-b298-338c7edc9224/resource/ce499503-58c7-4566-a578-c8738b2574d9/download/com_admin_boundaries.geojson.zip",
+      "member": "com_admin0.geojson",
+      "archiveSha256": "c094bd9fe28236deaf22403ad86c9d576cd8b0b087c8d7cb428bea44b47a4573",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-com",
+      "sha256": "329c0faac102f9c5baba3651fc72b0789dd12a4c17e36e7459a3caf33d5d080c",
+      "bytes": 539204
+    },
+    "naturalEarth": {
+      "url": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+      "license": "Public domain",
+      "credit": "Natural Earth",
+      "method": "Land-frontier guides, lake separation and the neutral Bir Tawil reference; displayed country borders follow reconciled land geometry.",
+      "files": {
+        "ne-borders.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-borders.json.gz",
+          "sha256": "a2c796c19a530964eedaecde02e605150607cc0a0517da68cf013ddeeed8655c"
+        },
+        "ne-countries.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-countries.json.gz",
+          "sha256": "103135920ec1bfdd5ada2f4f7e0ba1e985b28f881d39ef9343a8a43d92b23610"
+        },
+        "ne-lakes.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-lakes.json.gz",
+          "sha256": "1550308007c3457c65e68b2a47d06797d474073cf7fdeb5eaf6ff55164d1903e"
+        }
+      }
+    }
+  }
+}

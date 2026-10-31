@@ -1,0 +1,1876 @@
+[
+  {
+    "iso": "EGY",
+    "country": "egypt",
+    "en": "Egypt",
+    "local": "مصر",
+    "lang": "ar",
+    "prefix": "eg",
+    "continent": "Africa",
+    "wrap": false,
+    "sourceType": "hdx",
+    "sourceLevels": [
+      1,
+      2
+    ],
+    "levels": [
+      "Governorates",
+      "District reference areas"
+    ],
+    "kinds": [
+      "Governorate",
+      "District reference area"
+    ],
+    "counts": {
+      "1": 27,
+      "2": 365
+    },
+    "year": 2017,
+    "fill": "#efebe1",
+    "selected": "#d8ccb0",
+    "line": "#837149",
+    "accent": "#7d6631",
+    "dark": "#594a26",
+    "secondary": "#42979a",
+    "background": "#faf8f5",
+    "stripe": "linear-gradient(90deg,#a68330 0 33%,#fffdf8 33% 40%,#35b2b6 40% 67%,#a68330 67%)",
+    "bounds": [
+      [
+        24.684507999999997,
+        21.989127999999997
+      ],
+      [
+        36.918707,
+        31.680280000000003
+      ]
+    ],
+    "center": [
+      30.8016075,
+      26.834704000000002
+    ],
+    "labelCenter": [
+      28.39906,
+      24.810227
+    ],
+    "zoom": 4.933202845958341
+  },
+  {
+    "iso": "ERI",
+    "country": "eritrea",
+    "en": "Eritrea",
+    "local": "ኤርትራ",
+    "lang": "ti",
+    "prefix": "er",
+    "continent": "Africa",
+    "wrap": false,
+    "sourceType": "hdx",
+    "sourceLevels": [
+      1,
+      2
+    ],
+    "levels": [
+      "Regions",
+      "Subregions"
+    ],
+    "kinds": [
+      "Region",
+      "Subregion"
+    ],
+    "counts": {
+      "1": 6,
+      "2": 58
+    },
+    "year": 2020,
+    "fill": "#efe3e1",
+    "selected": "#d8b5b0",
+    "line": "#835049",
+    "accent": "#7d3931",
+    "dark": "#592c26",
+    "secondary": "#429a69",
+    "background": "#faf6f5",
+    "stripe": "linear-gradient(90deg,#a63e30 0 33%,#fffdf8 33% 40%,#35b66f 40% 67%,#a63e30 67%)",
+    "bounds": [
+      [
+        36.424008,
+        12.344304000000001
+      ],
+      [
+        43.16213,
+        18.014839000000002
+      ]
+    ],
+    "center": [
+      39.793069,
+      15.179571500000002
+    ],
+    "labelCenter": [
+      38.56921,
+      16.979078
+    ],
+    "zoom": 5.708503125371626
+  },
+  {
+    "iso": "DJI",
+    "country": "djibouti",
+    "en": "Djibouti",
+    "local": "جيبوتي",
+    "lang": "ar",
+    "prefix": "dj",
+    "continent": "Africa",
+    "wrap": false,
+    "sourceType": "gb",
+    "sourceLevels": [
+      1
+    ],
+    "levels": [
+      "Regions"
+    ],
+    "kinds": [
+      "Region"
+    ],
+    "counts": {
+      "1": 6
+    },
+    "year": 2021,
+    "fill": "#e1ebef",
+    "selected": "#b0ced8",
+    "line": "#497483",
+    "accent": "#316a7d",
+    "dark": "#264d59",
+    "secondary": "#9a4266",
+    "background": "#f5f8fa",
+    "stripe": "linear-gradient(90deg,#3089a6 0 33%,#fffdf8 33% 40%,#b6356b 40% 67%,#3089a6 67%)",
+    "bounds": [
+      [
+        41.749860000000005,
+        10.932220000000001
+      ],
+      [
+        43.428712,
+        12.715919
+      ]
+    ],
+    "center": [
+      42.589286,
+      11.8240695
+    ],
+    "labelCenter": [
+      42.528973,
+      11.99791
+    ],
+    "zoom": 7.388286229872231
+  },
+  {
+    "iso": "SDN",
+    "country": "sudan",
+    "en": "Sudan",
+    "local": "السودان",
+    "lang": "ar",
+    "prefix": "sd",
+    "continent": "Africa",
+    "wrap": false,
+    "sourceType": "hdx",
+    "sourceLevels": [
+      1,
+      2
+    ],
+    "levels": [
+      "States & disputed reference area",
+      "Localities"
+    ],
+    "kinds": [
+      "State",
+      "Locality"
+    ],
+    "counts": {
+      "1": 19,
+      "2": 189
+    },
+    "year": 2020,
+    "fill": "#efe5e1",
+    "selected": "#d8bab0",
+    "line": "#835849",
+    "accent": "#7d4431",
+    "dark": "#593326",
+    "secondary": "#429a75",
+    "background": "#faf6f5",
+    "stripe": "linear-gradient(90deg,#a64e30 0 33%,#fffdf8 33% 40%,#35b680 40% 67%,#a64e30 67%)",
+    "bounds": [
+      [
+        21.80368,
+        8.631329000000001
+      ],
+      [
+        38.592363999999996,
+        22.252005
+      ]
+    ],
+    "center": [
+      30.198022,
+      15.441666999999999
+    ],
+    "labelCenter": [
+      29.659469,
+      19.563655
+    ],
+    "zoom": 4.441284140597724
+  },
+  {
+    "iso": "LBY",
+    "country": "libya",
+    "en": "Libya",
+    "local": "ليبيا",
+    "lang": "ar",
+    "prefix": "ly",
+    "continent": "Africa",
+    "wrap": false,
+    "sourceType": "hdx",
+    "sourceLevels": [
+      2
+    ],
+    "levels": [
+      "District reference areas"
+    ],
+    "kinds": [
+      "District reference area"
+    ],
+    "counts": {
+      "1": 22
+    },
+    "year": 2018,
+    "fill": "#e1efeb",
+    "selected": "#b0d8ce",
+    "line": "#498374",
+    "accent": "#317d6a",
+    "dark": "#26594d",
+    "secondary": "#9a4292",
+    "background": "#f5faf8",
+    "stripe": "linear-gradient(90deg,#30a689 0 33%,#fffdf8 33% 40%,#b635ab 40% 67%,#30a689 67%)",
+    "bounds": [
+      [
+        9.379968,
+        19.498046
+      ],
+      [
+        25.159905000000002,
+        33.175197999999995
+      ]
+    ],
+    "center": [
+      17.2699365,
+      26.336622
+    ],
+    "labelCenter": [
+      22.26435,
+      23.780653
+    ],
+    "zoom": 4.435305838752112
+  },
+  {
+    "iso": "TUN",
+    "country": "tunisia",
+    "en": "Tunisia",
+    "local": "تونس",
+    "lang": "ar",
+    "prefix": "tn",
+    "continent": "Africa",
+    "wrap": false,
+    "sourceType": "hdx",
+    "sourceLevels": [
+      2,
+      3
+    ],
+    "levels": [
+      "Governorates",
+      "Delegations"
+    ],
+    "kinds": [
+      "Governorate",
+      "Delegation"
+    ],
+    "counts": {
+      "1": 24,
+      "2": 264
+    },
+    "year": 2022,
+    "fill": "#efe1e3",
+    "selected": "#d8b0b7",
+    "line": "#834953",
+    "accent": "#7d313d",
+    "dark": "#59262f",
+    "secondary": "#429a50",
+    "background": "#faf5f6",
+    "stripe": "linear-gradient(90deg,#a63044 0 33%,#fffdf8 33% 40%,#35b64a 40% 67%,#a63044 67%)",
+    "bounds": [
+      [
+        7.5125280000000005,
+        30.230538999999997
+      ],
+      [
+        11.60827,
+        37.569841
+      ]
+    ],
+    "center": [
+      9.560399,
+      33.900189999999995
+    ],
+    "labelCenter": [
+      9.859377,
+      32.067961
+    ],
+    "zoom": 5.3351845221201
+  },
+  {
+    "iso": "DZA",
+    "country": "algeria",
+    "en": "Algeria",
+    "local": "الجزائر",
+    "lang": "ar",
+    "prefix": "dz",
+    "continent": "Africa",
+    "wrap": false,
+    "sourceType": "hdx",
+    "sourceLevels": [
+      1,
+      2
+    ],
+    "levels": [
+      "Provinces (transition reference)",
+      "Communes"
+    ],
+    "kinds": [
+      "Province",
+      "Commune"
+    ],
+    "counts": {
+      "1": 58,
+      "2": 1541
+    },
+    "year": 2026,
+    "fill": "#e1efe6",
+    "selected": "#b0d8be",
+    "line": "#49835c",
+    "accent": "#317d4a",
+    "dark": "#265937",
+    "secondary": "#7c429a",
+    "background": "#f5faf7",
+    "stripe": "linear-gradient(90deg,#30a657 0 33%,#fffdf8 33% 40%,#8b35b6 40% 67%,#30a657 67%)",
+    "bounds": [
+      [
+        -8.678898,
+        18.953286
+      ],
+      [
+        12.0085,
+        37.103469
+      ]
+    ],
+    "center": [
+      1.6648009999999998,
+      28.028377499999998
+    ],
+    "labelCenter": [
+      5.196086,
+      23.485126
+    ],
+    "zoom": 4.026569013484643,
+    "firstFile": "DZA-current-adm1.geojson",
+    "reparent": true
+  },
+  {
+    "iso": "MRT",
+    "country": "mauritania",
+    "en": "Mauritania",
+    "local": "موريتانيا",
+    "lang": "ar",
+    "prefix": "mr",
+    "continent": "Africa",
+    "wrap": false,
+    "sourceType": "hdx",
+    "sourceLevels": [
+      1,
+      2
+    ],
+    "levels": [
+      "Regions",
+      "Departments"
+    ],
+    "kinds": [
+      "Region",
+      "Department"
+    ],
+    "counts": {
+      "1": 15,
+      "2": 63
+    },
+    "year": 2024,
+    "fill": "#e8efe1",
+    "selected": "#c4d8b0",
+    "line": "#668349",
+    "accent": "#577d31",
+    "dark": "#405926",
+    "secondary": "#42509a",
+    "background": "#f7faf5",
+    "stripe": "linear-gradient(90deg,#6ba630 0 33%,#fffdf8 33% 40%,#354ab6 40% 67%,#6ba630 67%)",
+    "bounds": [
+      [
+        -17.078077,
+        14.706957000000001
+      ],
+      [
+        -4.827082,
+        27.322736000000003
+      ]
+    ],
+    "center": [
+      -10.952579499999999,
+      21.0148465
+    ],
+    "labelCenter": [
+      -9.683746,
+      24.243896
+    ],
+    "zoom": 4.552022150805971
+  },
+  {
+    "iso": "SEN",
+    "country": "senegal",
+    "en": "Senegal",
+    "local": "Sénégal",
+    "lang": "fr",
+    "prefix": "sn",
+    "continent": "Africa",
+    "wrap": false,
+    "sourceType": "hdx",
+    "sourceLevels": [
+      1,
+      2
+    ],
+    "levels": [
+      "Regions",
+      "Departments"
+    ],
+    "kinds": [
+      "Region",
+      "Department"
+    ],
+    "counts": {
+      "1": 14,
+      "2": 46
+    },
+    "year": 2024,
+    "fill": "#e1efe5",
+    "selected": "#b0d8ba",
+    "line": "#498358",
+    "accent": "#317d44",
+    "dark": "#265933",
+    "secondary": "#75429a",
+    "background": "#f5faf6",
+    "stripe": "linear-gradient(90deg,#30a64e 0 33%,#fffdf8 33% 40%,#8035b6 40% 67%,#30a64e 67%)",
+    "bounds": [
+      [
+        -17.541147000000002,
+        12.298126
+      ],
+      [
+        -11.335215,
+        16.700868
+      ]
+    ],
+    "center": [
+      -14.438181,
+      14.499496999999998
+    ],
+    "labelCenter": [
+      -13.16169,
+      13.841876
+    ],
+    "zoom": 6.075056841746175
+  },
+  {
+    "iso": "GMB",
+    "country": "gambia",
+    "en": "The Gambia",
+    "local": "",
+    "lang": "en",
+    "prefix": "gm",
+    "continent": "Africa",
+    "wrap": false,
+    "sourceType": "hdx",
+    "sourceLevels": [
+      1,
+      2
+    ],
+    "levels": [
+      "Local government areas",
+      "Districts"
+    ],
+    "kinds": [
+      "Local government area",
+      "District"
+    ],
+    "counts": {
+      "1": 8,
+      "2": 49
+    },
+    "year": 2022,
+    "fill": "#efe2e1",
+    "selected": "#d8b4b0",
+    "line": "#834e49",
+    "accent": "#7d3731",
+    "dark": "#592a26",
+    "secondary": "#429a66",
+    "background": "#faf5f5",
+    "stripe": "linear-gradient(90deg,#a63a30 0 33%,#fffdf8 33% 40%,#35b66b 40% 67%,#a63a30 67%)",
+    "bounds": [
+      [
+        -16.824265,
+        13.05745
+      ],
+      [
+        -13.782209,
+        13.835523
+      ]
+    ],
+    "center": [
+      -15.303237,
+      13.446486499999999
+    ],
+    "labelCenter": [
+      -16.297824,
+      13.480339
+    ],
+    "zoom": 7.196322701818415
+  },
+  {
+    "iso": "GNB",
+    "country": "guinea-bissau",
+    "en": "Guinea-Bissau",
+    "local": "Guiné-Bissau",
+    "lang": "pt",
+    "prefix": "gw",
+    "continent": "Africa",
+    "wrap": false,
+    "sourceType": "hdx",
+    "sourceLevels": [
+      1,
+      2
+    ],
+    "levels": [
+      "Regions & Bissau",
+      "Sectors"
+    ],
+    "kinds": [
+      "Region",
+      "Sector"
+    ],
+    "counts": {
+      "1": 9,
+      "2": 39
+    },
+    "year": 2021,
+    "fill": "#efe8e1",
+    "selected": "#d8c4b0",
+    "line": "#836649",
+    "accent": "#7d5731",
+    "dark": "#594026",
+    "secondary": "#429a8b",
+    "background": "#faf7f5",
+    "stripe": "linear-gradient(90deg,#a66b30 0 33%,#fffdf8 33% 40%,#35b6a0 40% 67%,#a66b30 67%)",
+    "bounds": [
+      [
+        -16.727535000000003,
+        10.84997
+      ],
+      [
+        -13.626522,
+        12.694507999999999
+      ]
+    ],
+    "center": [
+      -15.1770285,
+      11.772238999999999
+    ],
+    "labelCenter": [
+      -14.201945,
+      12.059904
+    ],
+    "zoom": 7.168448326644404
+  },
+  {
+    "iso": "GIN",
+    "country": "guinea",
+    "en": "Guinea",
+    "local": "Guinée",
+    "lang": "fr",
+    "prefix": "gn",
+    "continent": "Africa",
+    "wrap": false,
+    "sourceType": "hdx",
+    "sourceLevels": [
+      1,
+      2
+    ],
+    "levels": [
+      "Regions",
+      "Prefectures & Conakry"
+    ],
+    "kinds": [
+      "Region",
+      "Prefecture"
+    ],
+    "counts": {
+      "1": 8,
+      "2": 34
+    },
+    "year": 2016,
+    "fill": "#efece1",
+    "selected": "#d8d0b0",
+    "line": "#837749",
+    "accent": "#7d6e31",
+    "dark": "#594f26",
+    "secondary": "#428e9a",
+    "background": "#faf9f5",
+    "stripe": "linear-gradient(90deg,#a68e30 0 33%,#fffdf8 33% 40%,#35a5b6 40% 67%,#a68e30 67%)",
+    "bounds": [
+      [
+        -15.096256,
+        7.183552000000001
+      ],
+      [
+        -7.6310720000000005,
+        12.684107
+      ]
+    ],
+    "center": [
+      -11.363664,
+      9.9338295
+    ],
+    "labelCenter": [
+      -9.3057,
+      10.445442
+    ],
+    "zoom": 5.7525685974584375
+  },
+  {
+    "iso": "SLE",
+    "country": "sierra-leone",
+    "en": "Sierra Leone",
+    "local": "",
+    "lang": "en",
+    "prefix": "sl",
+    "continent": "Africa",
+    "wrap": false,
+    "sourceType": "hdx",
+    "sourceLevels": [
+      1,
+      2
+    ],
+    "levels": [
+      "Regions",
+      "Districts"
+    ],
+    "kinds": [
+      "Region",
+      "District"
+    ],
+    "counts": {
+      "1": 5,
+      "2": 16
+    },
+    "year": 2023,
+    "fill": "#e1efef",
+    "selected": "#b0d8d8",
+    "line": "#498383",
+    "accent": "#317d7d",
+    "dark": "#265959",
+    "secondary": "#9a427c",
+    "background": "#f5fafa",
+    "stripe": "linear-gradient(90deg,#30a6a6 0 33%,#fffdf8 33% 40%,#b6358b 40% 67%,#30a6a6 67%)",
+    "bounds": [
+      [
+        -13.31257,
+        6.912676
+      ],
+      [
+        -10.263923,
+        10.01043
+      ]
+    ],
+    "center": [
+      -11.7882465,
+      8.461553
+    ],
+    "labelCenter": [
+      -11.545873,
+      9.270405
+    ],
+    "zoom": 6.5850126716626995
+  },
+  {
+    "iso": "LBR",
+    "country": "liberia",
+    "en": "Liberia",
+    "local": "",
+    "lang": "en",
+    "prefix": "lr",
+    "continent": "Africa",
+    "wrap": false,
+    "sourceType": "hdx",
+    "sourceLevels": [
+      1,
+      2
+    ],
+    "levels": [
+      "Counties",
+      "Districts"
+    ],
+    "kinds": [
+      "County",
+      "District"
+    ],
+    "counts": {
+      "1": 15,
+      "2": 136
+    },
+    "year": 2019,
+    "fill": "#efe1e2",
+    "selected": "#d8b0b4",
+    "line": "#83494e",
+    "accent": "#7d3137",
+    "dark": "#59262a",
+    "secondary": "#429a58",
+    "background": "#faf5f5",
+    "stripe": "linear-gradient(90deg,#a6303a 0 33%,#fffdf8 33% 40%,#35b655 40% 67%,#a6303a 67%)",
+    "bounds": [
+      [
+        -11.508796,
+        4.344004
+      ],
+      [
+        -7.358560000000001,
+        8.561791
+      ]
+    ],
+    "center": [
+      -9.433678,
+      6.4528975
+    ],
+    "labelCenter": [
+      -8.775369,
+      6.836556
+    ],
+    "zoom": 6.137261630941239
+  },
+  {
+    "iso": "CIV",
+    "country": "ivory-coast",
+    "en": "Ivory Coast",
+    "local": "Côte d’Ivoire",
+    "lang": "fr",
+    "prefix": "ci",
+    "continent": "Africa",
+    "wrap": false,
+    "sourceType": "hdx",
+    "sourceLevels": [
+      1,
+      2
+    ],
+    "levels": [
+      "Regions & autonomous districts",
+      "Departments"
+    ],
+    "kinds": [
+      "Region",
+      "Department"
+    ],
+    "counts": {
+      "1": 33,
+      "2": 108
+    },
+    "year": 2018,
+    "fill": "#efe7e1",
+    "selected": "#d8c1b0",
+    "line": "#836149",
+    "accent": "#7d5031",
+    "dark": "#593c26",
+    "secondary": "#429a84",
+    "background": "#faf7f5",
+    "stripe": "linear-gradient(90deg,#a66130 0 33%,#fffdf8 33% 40%,#35b696 40% 67%,#a66130 67%)",
+    "bounds": [
+      [
+        -8.618892,
+        4.350553000000001
+      ],
+      [
+        -2.4823090000000003,
+        10.755651
+      ]
+    ],
+    "center": [
+      -5.550600500000001,
+      7.553102000000001
+    ],
+    "labelCenter": [
+      -3.363996,
+      9.200026
+    ],
+    "zoom": 5.53218183268459
+  },
+  {
+    "iso": "GHA",
+    "country": "ghana",
+    "en": "Ghana",
+    "local": "",
+    "lang": "en",
+    "prefix": "gh",
+    "continent": "Africa",
+    "wrap": false,
+    "sourceType": "hdx",
+    "sourceLevels": [
+      1,
+      2
+    ],
+    "levels": [
+      "Regions",
+      "District reference areas"
+    ],
+    "kinds": [
+      "Region",
+      "District reference area"
+    ],
+    "counts": {
+      "1": 16,
+      "2": 260
+    },
+    "year": 2021,
+    "fill": "#efe8e1",
+    "selected": "#d8c4b0",
+    "line": "#836649",
+    "accent": "#7d5731",
+    "dark": "#594026",
+    "secondary": "#429a8b",
+    "background": "#faf7f5",
+    "stripe": "linear-gradient(90deg,#a66b30 0 33%,#fffdf8 33% 40%,#35b6a0 40% 67%,#a66b30 67%)",
+    "bounds": [
+      [
+        -3.270727,
+        4.730723
+      ],
+      [
+        1.210317,
+        11.184683
+      ]
+    ],
+    "center": [
+      -1.030205,
+      7.957703
+    ],
+    "labelCenter": [
+      -1.780265,
+      9.208702
+    ],
+    "zoom": 5.5211836288409035
+  },
+  {
+    "iso": "TGO",
+    "country": "togo",
+    "en": "Togo",
+    "local": "",
+    "lang": "fr",
+    "prefix": "tg",
+    "continent": "Africa",
+    "wrap": false,
+    "sourceType": "hdx",
+    "sourceLevels": [
+      1,
+      2
+    ],
+    "levels": [
+      "Regions",
+      "Prefectures"
+    ],
+    "kinds": [
+      "Region",
+      "Prefecture"
+    ],
+    "counts": {
+      "1": 5,
+      "2": 40
+    },
+    "year": 2021,
+    "fill": "#e1efe6",
+    "selected": "#b0d8be",
+    "line": "#49835c",
+    "accent": "#317d4a",
+    "dark": "#265937",
+    "secondary": "#7c429a",
+    "background": "#f5faf7",
+    "stripe": "linear-gradient(90deg,#30a657 0 33%,#fffdf8 33% 40%,#8b35b6 40% 67%,#30a657 67%)",
+    "bounds": [
+      [
+        -0.15349400000000002,
+        6.099324
+      ],
+      [
+        1.8175270000000001,
+        11.14804
+      ]
+    ],
+    "center": [
+      0.8320165,
+      8.623682
+    ],
+    "labelCenter": [
+      1.135314,
+      7.455651
+    ],
+    "zoom": 5.876700517029989
+  },
+  {
+    "iso": "BEN",
+    "country": "benin",
+    "en": "Benin",
+    "local": "Bénin",
+    "lang": "fr",
+    "prefix": "bj",
+    "continent": "Africa",
+    "wrap": false,
+    "sourceType": "hdx",
+    "sourceLevels": [
+      1,
+      2
+    ],
+    "levels": [
+      "Departments",
+      "Communes"
+    ],
+    "kinds": [
+      "Department",
+      "Commune"
+    ],
+    "counts": {
+      "1": 12,
+      "2": 77
+    },
+    "year": 2019,
+    "fill": "#e1efe8",
+    "selected": "#b0d8c4",
+    "line": "#498366",
+    "accent": "#317d57",
+    "dark": "#265940",
+    "secondary": "#8b429a",
+    "background": "#f5faf7",
+    "stripe": "linear-gradient(90deg,#30a66b 0 33%,#fffdf8 33% 40%,#a035b6 40% 67%,#30a66b 67%)",
+    "bounds": [
+      [
+        0.7643449999999999,
+        6.215763
+      ],
+      [
+        3.861963,
+        12.41861
+      ]
+    ],
+    "center": [
+      2.313154,
+      9.3171865
+    ],
+    "labelCenter": [
+      2.894094,
+      11.324591
+    ],
+    "zoom": 5.578619290329187
+  },
+  {
+    "iso": "CMR",
+    "country": "cameroon",
+    "en": "Cameroon",
+    "local": "Cameroun",
+    "lang": "fr",
+    "prefix": "cm",
+    "continent": "Africa",
+    "wrap": false,
+    "sourceType": "hdx",
+    "sourceLevels": [
+      1,
+      2
+    ],
+    "levels": [
+      "Regions",
+      "Departments"
+    ],
+    "kinds": [
+      "Region",
+      "Department"
+    ],
+    "counts": {
+      "1": 10,
+      "2": 58
+    },
+    "year": 2019,
+    "fill": "#e1efe9",
+    "selected": "#b0d8c8",
+    "line": "#49836b",
+    "accent": "#317d5d",
+    "dark": "#265944",
+    "secondary": "#92429a",
+    "background": "#f5faf8",
+    "stripe": "linear-gradient(90deg,#30a675 0 33%,#fffdf8 33% 40%,#ab35b6 40% 67%,#30a675 67%)",
+    "bounds": [
+      [
+        8.488953,
+        1.64255
+      ],
+      [
+        16.203473000000002,
+        13.093174
+      ]
+    ],
+    "center": [
+      12.346213,
+      7.367862
+    ],
+    "labelCenter": [
+      14.173311,
+      3.781532
+    ],
+    "zoom": 4.692058338014532
+  },
+  {
+    "iso": "GNQ",
+    "country": "equatorial-guinea",
+    "en": "Equatorial Guinea",
+    "local": "Guinea Ecuatorial",
+    "lang": "es",
+    "prefix": "gq",
+    "continent": "Africa",
+    "wrap": false,
+    "sourceType": "hdx",
+    "sourceLevels": [
+      1,
+      2
+    ],
+    "levels": [
+      "Provinces",
+      "District reference areas"
+    ],
+    "kinds": [
+      "Province",
+      "District reference area"
+    ],
+    "counts": {
+      "1": 8,
+      "2": 32
+    },
+    "year": 2026,
+    "fill": "#e1e7ef",
+    "selected": "#b0c1d8",
+    "line": "#496183",
+    "accent": "#31507d",
+    "dark": "#263b59",
+    "secondary": "#9a4249",
+    "background": "#f5f7fa",
+    "stripe": "linear-gradient(90deg,#3061a6 0 33%,#fffdf8 33% 40%,#b63540 40% 67%,#3061a6 67%)",
+    "bounds": [
+      [
+        5.606441,
+        -1.477639
+      ],
+      [
+        11.347437,
+        3.7987499999999996
+      ]
+    ],
+    "center": [
+      8.476939,
+      1.1605555
+    ],
+    "labelCenter": [
+      10.348301,
+      1.445288
+    ],
+    "zoom": 5.812818549095112,
+    "firstFile": "GNQ-current-adm1.geojson",
+    "reparent": true
+  },
+  {
+    "iso": "GAB",
+    "country": "gabon",
+    "en": "Gabon",
+    "local": "",
+    "lang": "fr",
+    "prefix": "ga",
+    "continent": "Africa",
+    "wrap": false,
+    "sourceType": "hdx",
+    "sourceLevels": [
+      1,
+      2
+    ],
+    "levels": [
+      "Provinces",
+      "Departments"
+    ],
+    "kinds": [
+      "Province",
+      "Department"
+    ],
+    "counts": {
+      "1": 9,
+      "2": 48
+    },
+    "year": 2026,
+    "fill": "#e1efea",
+    "selected": "#b0d8cb",
+    "line": "#498370",
+    "accent": "#317d63",
+    "dark": "#265948",
+    "secondary": "#9a429a",
+    "background": "#f5faf8",
+    "stripe": "linear-gradient(90deg,#30a67f 0 33%,#fffdf8 33% 40%,#b635b6 40% 67%,#30a67f 67%)",
+    "bounds": [
+      [
+        8.685471,
+        -3.988806
+      ],
+      [
+        14.51235,
+        2.328217
+      ]
+    ],
+    "center": [
+      11.598910499999999,
+      -0.8302944999999999
+    ],
+    "labelCenter": [
+      13.32555,
+      0.690861
+    ],
+    "zoom": 5.552220658775742
+  },
+  {
+    "iso": "CPV",
+    "country": "cabo-verde",
+    "en": "Cabo Verde",
+    "local": "",
+    "lang": "pt",
+    "prefix": "cv",
+    "continent": "Africa",
+    "wrap": false,
+    "sourceType": "hdx",
+    "sourceLevels": [
+      1,
+      2
+    ],
+    "levels": [
+      "Municipalities",
+      "Parishes"
+    ],
+    "kinds": [
+      "Municipality",
+      "Parish"
+    ],
+    "counts": {
+      "1": 22,
+      "2": 32
+    },
+    "year": 2024,
+    "fill": "#e1e5ef",
+    "selected": "#b0bad8",
+    "line": "#495883",
+    "accent": "#31447d",
+    "dark": "#263359",
+    "secondary": "#9a4942",
+    "background": "#f5f6fa",
+    "stripe": "linear-gradient(90deg,#304ea6 0 33%,#fffdf8 33% 40%,#b64035 40% 67%,#304ea6 67%)",
+    "bounds": [
+      [
+        -25.371188,
+        14.792617
+      ],
+      [
+        -22.647585,
+        17.215123000000002
+      ]
+    ],
+    "center": [
+      -24.009386499999998,
+      16.00387
+    ],
+    "labelCenter": [
+      -22.81424,
+      16.097268
+    ],
+    "zoom": 6.942350561629498
+  },
+  {
+    "iso": "STP",
+    "country": "sao-tome-principe",
+    "en": "São Tomé and Príncipe",
+    "local": "",
+    "lang": "pt",
+    "prefix": "st",
+    "continent": "Africa",
+    "wrap": false,
+    "sourceType": "hdx",
+    "sourceLevels": [
+      1
+    ],
+    "levels": [
+      "Districts & Príncipe"
+    ],
+    "kinds": [
+      "District"
+    ],
+    "counts": {
+      "1": 7
+    },
+    "year": 2026,
+    "fill": "#e1efe2",
+    "selected": "#b0d8b4",
+    "line": "#49834e",
+    "accent": "#317d37",
+    "dark": "#26592b",
+    "secondary": "#66429a",
+    "background": "#f5faf5",
+    "stripe": "linear-gradient(90deg,#30a63a 0 33%,#fffdf8 33% 40%,#6b35b6 40% 67%,#30a63a 67%)",
+    "bounds": [
+      [
+        6.449862,
+        -0.024027
+      ],
+      [
+        7.472638,
+        1.711529
+      ]
+    ],
+    "center": [
+      6.96125,
+      0.843751
+    ],
+    "labelCenter": [
+      6.583488,
+      0.146332
+    ],
+    "zoom": 7.428214375802331
+  },
+  {
+    "iso": "COM",
+    "country": "comoros",
+    "en": "Comoros",
+    "local": "Comores",
+    "lang": "fr",
+    "prefix": "km",
+    "continent": "Africa",
+    "wrap": false,
+    "sourceType": "hdx",
+    "sourceLevels": [
+      1,
+      2
+    ],
+    "levels": [
+      "Islands",
+      "Prefectures"
+    ],
+    "kinds": [
+      "Island",
+      "Prefecture"
+    ],
+    "counts": {
+      "1": 3,
+      "2": 17
+    },
+    "year": 2019,
+    "fill": "#efebe1",
+    "selected": "#d8ceb0",
+    "line": "#837449",
+    "accent": "#7d6a31",
+    "dark": "#594d26",
+    "secondary": "#42929a",
+    "background": "#faf8f5",
+    "stripe": "linear-gradient(90deg,#a68930 0 33%,#fffdf8 33% 40%,#35abb6 40% 67%,#a68930 67%)",
+    "bounds": [
+      [
+        43.218556,
+        -12.432779
+      ],
+      [
+        44.550672,
+        -11.355276
+      ]
+    ],
+    "center": [
+      43.884614,
+      -11.8940275
+    ],
+    "labelCenter": [
+      43.339647,
+      -11.720485
+    ],
+    "zoom": 8.126228839517209
+  },
+  {
+    "iso": "MUS",
+    "country": "mauritius",
+    "en": "Mauritius",
+    "local": "Maurice",
+    "lang": "fr",
+    "prefix": "mu",
+    "continent": "Africa",
+    "wrap": false,
+    "sourceType": "gb",
+    "sourceLevels": [
+      1
+    ],
+    "levels": [
+      "Districts & outer islands"
+    ],
+    "kinds": [
+      "District"
+    ],
+    "counts": {
+      "1": 12
+    },
+    "year": 2017,
+    "fill": "#e1efee",
+    "selected": "#b0d8d5",
+    "line": "#49837e",
+    "accent": "#317d76",
+    "dark": "#265955",
+    "secondary": "#9a4284",
+    "background": "#f5faf9",
+    "stripe": "linear-gradient(90deg,#30a69c 0 33%,#fffdf8 33% 40%,#b63596 40% 67%,#30a69c 67%)",
+    "bounds": [
+      [
+        57.298434,
+        -20.535357
+      ],
+      [
+        57.820060999999995,
+        -19.972064999999997
+      ]
+    ],
+    "center": [
+      57.5592475,
+      -20.253711
+    ],
+    "labelCenter": [
+      57.719046,
+      -20.229038
+    ],
+    "zoom": 9.087090887081896
+  },
+  {
+    "iso": "SYC",
+    "country": "seychelles",
+    "en": "Seychelles",
+    "local": "",
+    "lang": "fr",
+    "prefix": "sc",
+    "continent": "Africa",
+    "wrap": false,
+    "sourceType": "gb",
+    "sourceLevels": [
+      1
+    ],
+    "levels": [
+      "District reference areas & outer islands"
+    ],
+    "kinds": [
+      "District reference area"
+    ],
+    "counts": {
+      "1": 26
+    },
+    "year": 2018,
+    "fill": "#e1ebef",
+    "selected": "#b0ced8",
+    "line": "#497483",
+    "accent": "#316a7d",
+    "dark": "#264d59",
+    "secondary": "#9a4266",
+    "background": "#f5f8fa",
+    "stripe": "linear-gradient(90deg,#3089a6 0 33%,#fffdf8 33% 40%,#b6356b 40% 67%,#3089a6 67%)",
+    "bounds": [
+      [
+        55.191669000000005,
+        -4.823147
+      ],
+      [
+        55.963125999999995,
+        -3.7002990000000002
+      ]
+    ],
+    "center": [
+      55.577397500000004,
+      -4.261723
+    ],
+    "labelCenter": [
+      55.231323,
+      -4.486543
+    ],
+    "zoom": 8.065656630388485
+  },
+  {
+    "iso": "FJI",
+    "country": "fiji",
+    "en": "Fiji",
+    "local": "Viti",
+    "lang": "fj",
+    "prefix": "fj",
+    "continent": "Oceania",
+    "wrap": true,
+    "sourceType": "gb",
+    "sourceLevels": [
+      1
+    ],
+    "levels": [
+      "Divisions"
+    ],
+    "kinds": [
+      "Division"
+    ],
+    "counts": {
+      "1": 5
+    },
+    "year": 2026,
+    "fill": "#e1ebef",
+    "selected": "#b0ced8",
+    "line": "#497483",
+    "accent": "#316a7d",
+    "dark": "#264d59",
+    "secondary": "#9a4266",
+    "background": "#f5f8fa",
+    "stripe": "linear-gradient(90deg,#3089a6 0 33%,#fffdf8 33% 40%,#b6356b 40% 67%,#3089a6 67%)",
+    "bounds": [
+      [
+        176.86518700000002,
+        -21.052194
+      ],
+      [
+        181.78007599999998,
+        -15.69998
+      ]
+    ],
+    "center": [
+      179.3226315,
+      -18.376087
+    ],
+    "labelCenter": [
+      177.749428,
+      -17.74531
+    ],
+    "zoom": 5.792155913729394,
+    "firstFile": "FJI-current-adm1.geojson"
+  },
+  {
+    "iso": "WSM",
+    "country": "samoa",
+    "en": "Samoa",
+    "local": "Sāmoa",
+    "lang": "sm",
+    "prefix": "ws",
+    "continent": "Oceania",
+    "wrap": true,
+    "sourceType": "gb",
+    "sourceLevels": [
+      1
+    ],
+    "levels": [
+      "Political districts"
+    ],
+    "kinds": [
+      "Political district"
+    ],
+    "counts": {
+      "1": 11
+    },
+    "year": 2018,
+    "fill": "#efe1e2",
+    "selected": "#d8b0b4",
+    "line": "#83494e",
+    "accent": "#7d3137",
+    "dark": "#59262a",
+    "secondary": "#429a58",
+    "background": "#faf5f5",
+    "stripe": "linear-gradient(90deg,#a6303a 0 33%,#fffdf8 33% 40%,#35b655 40% 67%,#a6303a 67%)",
+    "bounds": [
+      [
+        187.185933,
+        -14.079194
+      ],
+      [
+        188.59414999999998,
+        -13.428808
+      ]
+    ],
+    "center": [
+      187.8900415,
+      -13.754000999999999
+    ],
+    "labelCenter": [
+      187.514798,
+      -13.70595
+    ],
+    "zoom": 8.318619995017151
+  },
+  {
+    "iso": "TON",
+    "country": "tonga",
+    "en": "Tonga",
+    "local": "",
+    "lang": "to",
+    "prefix": "to",
+    "continent": "Oceania",
+    "wrap": true,
+    "sourceType": "gb",
+    "sourceLevels": [
+      1
+    ],
+    "levels": [
+      "Divisions"
+    ],
+    "kinds": [
+      "Division"
+    ],
+    "counts": {
+      "1": 5
+    },
+    "year": 2017,
+    "fill": "#efe1e3",
+    "selected": "#d8b0b7",
+    "line": "#834953",
+    "accent": "#7d313d",
+    "dark": "#59262f",
+    "secondary": "#429a50",
+    "background": "#faf5f6",
+    "stripe": "linear-gradient(90deg,#a63044 0 33%,#fffdf8 33% 40%,#35b64a 40% 67%,#a63044 67%)",
+    "bounds": [
+      [
+        183.77570400000002,
+        -22.358721000000003
+      ],
+      [
+        186.273034,
+        -15.556135
+      ]
+    ],
+    "center": [
+      185.024369,
+      -18.957428
+    ],
+    "labelCenter": [
+      184.852069,
+      -21.231637
+    ],
+    "zoom": 5.445055160290919
+  },
+  {
+    "iso": "TUV",
+    "country": "tuvalu",
+    "en": "Tuvalu",
+    "local": "",
+    "lang": "tvl",
+    "prefix": "tv",
+    "continent": "Oceania",
+    "wrap": true,
+    "sourceType": "gb",
+    "sourceLevels": [
+      1
+    ],
+    "levels": [
+      "Island councils"
+    ],
+    "kinds": [
+      "Island council"
+    ],
+    "counts": {
+      "1": 8
+    },
+    "year": 2017,
+    "fill": "#e1edef",
+    "selected": "#b0d2d8",
+    "line": "#497983",
+    "accent": "#31707d",
+    "dark": "#265159",
+    "secondary": "#9a426e",
+    "background": "#f5f9fa",
+    "stripe": "linear-gradient(90deg,#3092a6 0 33%,#fffdf8 33% 40%,#b63575 40% 67%,#3092a6 67%)",
+    "bounds": [
+      [
+        176.04891700000002,
+        -9.445155999999999
+      ],
+      [
+        179.881272,
+        -5.6324950000000005
+      ]
+    ],
+    "center": [
+      177.96509450000002,
+      -7.5388255
+    ],
+    "labelCenter": [
+      178.674447,
+      -7.472678
+    ],
+    "zoom": 6.283680170845781
+  },
+  {
+    "iso": "KIR",
+    "country": "kiribati",
+    "en": "Kiribati",
+    "local": "",
+    "lang": "gil",
+    "prefix": "ki",
+    "continent": "Oceania",
+    "wrap": true,
+    "sourceType": "gb",
+    "sourceLevels": [
+      1
+    ],
+    "levels": [
+      "Island groups"
+    ],
+    "kinds": [
+      "Island group"
+    ],
+    "counts": {
+      "1": 3
+    },
+    "year": 2017,
+    "fill": "#efe6e1",
+    "selected": "#d8beb0",
+    "line": "#835c49",
+    "accent": "#7d4a31",
+    "dark": "#593726",
+    "secondary": "#429a7c",
+    "background": "#faf7f5",
+    "stripe": "linear-gradient(90deg,#a65730 0 33%,#fffdf8 33% 40%,#35b68b 40% 67%,#a65730 67%)",
+    "bounds": [
+      [
+        169.510989,
+        -2.880741
+      ],
+      [
+        202.846306,
+        4.709344
+      ]
+    ],
+    "center": [
+      186.1786475,
+      0.9143014999999999
+    ],
+    "labelCenter": [
+      202.597712,
+      1.857338
+    ],
+    "zoom": 3.733739380321564
+  },
+  {
+    "iso": "NRU",
+    "country": "nauru",
+    "en": "Nauru",
+    "local": "Naoero",
+    "lang": "na",
+    "prefix": "nr",
+    "continent": "Oceania",
+    "wrap": true,
+    "sourceType": "gb",
+    "sourceLevels": [
+      1
+    ],
+    "levels": [
+      "Districts"
+    ],
+    "kinds": [
+      "District"
+    ],
+    "counts": {
+      "1": 14
+    },
+    "year": 2005,
+    "fill": "#e1e7ef",
+    "selected": "#b0c1d8",
+    "line": "#496183",
+    "accent": "#31507d",
+    "dark": "#263b59",
+    "secondary": "#9a4249",
+    "background": "#f5f7fa",
+    "stripe": "linear-gradient(90deg,#3061a6 0 33%,#fffdf8 33% 40%,#b63540 40% 67%,#3061a6 67%)",
+    "bounds": [
+      [
+        166.899203,
+        -0.5645600000000001
+      ],
+      [
+        166.968909,
+        -0.493398
+      ]
+    ],
+    "center": [
+      166.934056,
+      -0.5289790000000001
+    ],
+    "labelCenter": [
+      166.938249,
+      -0.54523
+    ],
+    "zoom": 10
+  },
+  {
+    "iso": "PLW",
+    "country": "palau",
+    "en": "Palau",
+    "local": "Belau",
+    "lang": "pau",
+    "prefix": "pw",
+    "continent": "Oceania",
+    "wrap": true,
+    "sourceType": "gb",
+    "sourceLevels": [
+      1
+    ],
+    "levels": [
+      "States"
+    ],
+    "kinds": [
+      "State"
+    ],
+    "counts": {
+      "1": 17
+    },
+    "year": 2017,
+    "fill": "#e1eeef",
+    "selected": "#b0d5d8",
+    "line": "#497e83",
+    "accent": "#31767d",
+    "dark": "#265559",
+    "secondary": "#9a4275",
+    "background": "#f5f9fa",
+    "stripe": "linear-gradient(90deg,#309ca6 0 33%,#fffdf8 33% 40%,#b63580 40% 67%,#309ca6 67%)",
+    "bounds": [
+      [
+        131.11013200000002,
+        2.959788
+      ],
+      [
+        134.731124,
+        8.104072
+      ]
+    ],
+    "center": [
+      132.92062800000002,
+      5.53193
+    ],
+    "labelCenter": [
+      134.552885,
+      7.527844
+    ],
+    "zoom": 5.849540160124621
+  },
+  {
+    "iso": "MHL",
+    "country": "marshall-islands",
+    "en": "Marshall Islands",
+    "local": "Aorōkin M̧ajeļ",
+    "lang": "mh",
+    "prefix": "mh",
+    "continent": "Oceania",
+    "wrap": true,
+    "sourceType": "gb",
+    "sourceLevels": [
+      1
+    ],
+    "levels": [
+      "Municipality reference areas"
+    ],
+    "kinds": [
+      "Municipality"
+    ],
+    "counts": {
+      "1": 25
+    },
+    "year": 2017,
+    "fill": "#e1e7ef",
+    "selected": "#b0c1d8",
+    "line": "#496183",
+    "accent": "#31507d",
+    "dark": "#263b59",
+    "secondary": "#9a4249",
+    "background": "#f5f7fa",
+    "stripe": "linear-gradient(90deg,#3061a6 0 33%,#fffdf8 33% 40%,#b63540 40% 67%,#3061a6 67%)",
+    "bounds": [
+      [
+        160.936623,
+        4.562882
+      ],
+      [
+        172.180186,
+        14.651993
+      ]
+    ],
+    "center": [
+      166.5584045,
+      9.6074375
+    ],
+    "labelCenter": [
+      171.551038,
+      7.064318
+    ],
+    "zoom": 4.875026187039616
+  },
+  {
+    "iso": "FSM",
+    "country": "micronesia",
+    "en": "Micronesia",
+    "local": "",
+    "lang": "en",
+    "prefix": "fm",
+    "continent": "Oceania",
+    "wrap": true,
+    "sourceType": "gb",
+    "sourceLevels": [
+      1
+    ],
+    "levels": [
+      "States"
+    ],
+    "kinds": [
+      "State"
+    ],
+    "counts": {
+      "1": 4
+    },
+    "year": 2019,
+    "fill": "#e1e9ef",
+    "selected": "#b0c8d8",
+    "line": "#496b83",
+    "accent": "#315d7d",
+    "dark": "#264459",
+    "secondary": "#9a4258",
+    "background": "#f5f8fa",
+    "stripe": "linear-gradient(90deg,#3075a6 0 33%,#fffdf8 33% 40%,#b63555 40% 67%,#3075a6 67%)",
+    "bounds": [
+      [
+        137.475918,
+        1.016214
+      ],
+      [
+        163.04544299999998,
+        10.100335
+      ]
+    ],
+    "center": [
+      150.26068049999998,
+      5.5582745
+    ],
+    "labelCenter": [
+      158.226501,
+      6.881095
+    ],
+    "zoom": 4.116628531669417
+  }
+]

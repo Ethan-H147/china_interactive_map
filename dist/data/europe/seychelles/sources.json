@@ -1,0 +1,63 @@
+{
+  "retrieved": "2026-10-30",
+  "coverage": "Seychelles: 26 district reference areas & outer islands. Dated 2018 boundary reference; source dates and licenses are retained below. The dated reference includes Outer Islands and predates the newer Île Persévérance district. Child areas are reconciled within their displayed parents. Shared land frontiers are owned once; coastlines and maritime boundaries are not stroked. National statistics are not distributed to subdivisions.",
+  "counts": {
+    "1": 26
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "SYC-hdx.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-syc",
+      "sha256": "baa27219d1aecf1b958ab190d34971ec99c8e298da92133cc9cabb20f0cea97e",
+      "bytes": 12943
+    },
+    "SYC-gb.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/SYC/ADM1/",
+      "sha256": "a877bf5c81da69f17cd51619264b5e079ff22d95909faba96e1f536ac29d06d3",
+      "bytes": 1726
+    },
+    "SYC-adm1.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/SYC/ADM1/geoBoundaries-SYC-ADM1.geojson",
+      "credit": "Digitizedhttps, Digitizedhttps / geoBoundaries",
+      "license": "Creative Commons Attribution-ShareAlike 3.0 Unported",
+      "page": "commons.wikimedia.org/wiki/File",
+      "year": "2018",
+      "sha256": "164cc48b6300a17058c1955171b04d2775a2d1e6b8980e6f2154fdc0186d80c2",
+      "bytes": 521518
+    },
+    "flag-sc.svg": {
+      "url": "https://flagcdn.com/sc.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT distribution",
+      "sha256": "b7a1ccdf0b210a2273426eaf334679dba7d3f5a90dddd91882beffa891bf3035",
+      "bytes": 273
+    },
+    "SYC-government.html": {
+      "url": "https://www.localgovernment.gov.sc/district-profiles",
+      "credit": "Seychelles Ministry of Local Government",
+      "license": "Official district names; attribution",
+      "sha256": "92b964bca93791bd6fa7c7d7f0f37c94048d2df35a351a4ddea9d1f9069ad99c",
+      "bytes": 187051
+    },
+    "naturalEarth": {
+      "url": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+      "license": "Public domain",
+      "credit": "Natural Earth",
+      "method": "Land-frontier guides, lake separation and the neutral Bir Tawil reference; displayed country borders follow reconciled land geometry.",
+      "files": {
+        "ne-borders.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-borders.json.gz",
+          "sha256": "a2c796c19a530964eedaecde02e605150607cc0a0517da68cf013ddeeed8655c"
+        },
+        "ne-countries.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-countries.json.gz",
+          "sha256": "103135920ec1bfdd5ada2f4f7e0ba1e985b28f881d39ef9343a8a43d92b23610"
+        },
+        "ne-lakes.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-lakes.json.gz",
+          "sha256": "1550308007c3457c65e68b2a47d06797d474073cf7fdeb5eaf6ff55164d1903e"
+        }
+      }
+    }
+  }
+}

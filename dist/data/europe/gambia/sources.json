@@ -1,0 +1,88 @@
+{
+  "retrieved": "2026-10-30",
+  "coverage": "The Gambia: 8 local government areas, 49 districts. Dated 2022 boundary reference; source dates and licenses are retained below. Child areas are reconciled within their displayed parents. Shared land frontiers are owned once; coastlines and maritime boundaries are not stroked. National statistics are not distributed to subdivisions.",
+  "counts": {
+    "1": 8,
+    "2": 49
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "GMB-hdx.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-gmb",
+      "sha256": "78a3fbcc425d0c1f71cfdecc5e8577ab3275d10bd80a2db420dfb7f5313c0b10",
+      "bytes": 47186
+    },
+    "GMB-gb.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/GMB/ADM1/",
+      "sha256": "212c5ad17ae2d09f23751dad23896ae7a14853945527267a36ddb0f3aff43b35",
+      "bytes": 1913
+    },
+    "GMB-adm2.geojson": {
+      "url": "https://data.humdata.org/dataset/9f2ce756-2e50-4042-a952-32160977d223/resource/7dec73e0-1c4f-403c-953e-cdad41c01b0e/download/gmb_admin_boundaries.geojson.zip",
+      "member": "gmb_admin2.geojson",
+      "archiveSha256": "e01bef935f2a9a51dd167b5b6ceb7e325f8580f755823db4f74019d669dc00ad",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-gmb",
+      "sha256": "df5b7d0773c195873aa19fded8a299ec370565e84ae4cba8c8094cd4034e6445",
+      "bytes": 565666
+    },
+    "GMB-adm1.geojson": {
+      "url": "https://data.humdata.org/dataset/9f2ce756-2e50-4042-a952-32160977d223/resource/7dec73e0-1c4f-403c-953e-cdad41c01b0e/download/gmb_admin_boundaries.geojson.zip",
+      "member": "gmb_admin1.geojson",
+      "archiveSha256": "e01bef935f2a9a51dd167b5b6ceb7e325f8580f755823db4f74019d669dc00ad",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-gmb",
+      "sha256": "01cf40c8ca6b52db664f522795b474bbc7a854ab26e02953c60461c327de7f30",
+      "bytes": 278215
+    },
+    "flag-gm.svg": {
+      "url": "https://flagcdn.com/gm.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT distribution",
+      "sha256": "d4418b31447cb5b7ddfcc3b47f3075795700363cc97132d9ab8b2de417027b98",
+      "bytes": 246
+    },
+    "GMB-adm3.geojson": {
+      "url": "https://data.humdata.org/dataset/9f2ce756-2e50-4042-a952-32160977d223/resource/7dec73e0-1c4f-403c-953e-cdad41c01b0e/download/gmb_admin_boundaries.geojson.zip",
+      "member": "gmb_admin3.geojson",
+      "archiveSha256": "e01bef935f2a9a51dd167b5b6ceb7e325f8580f755823db4f74019d669dc00ad",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-gmb",
+      "sha256": "0e27621bedab308b6a7e2ad333ca797d6e2183785b38af1e9e2458d34d170408",
+      "bytes": 737764
+    },
+    "GMB-adm0.geojson": {
+      "url": "https://data.humdata.org/dataset/9f2ce756-2e50-4042-a952-32160977d223/resource/7dec73e0-1c4f-403c-953e-cdad41c01b0e/download/gmb_admin_boundaries.geojson.zip",
+      "member": "gmb_admin0.geojson",
+      "archiveSha256": "e01bef935f2a9a51dd167b5b6ceb7e325f8580f755823db4f74019d669dc00ad",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-gmb",
+      "sha256": "5258f3a7059c704c828b63d132eaa95fe1c19ed2393a9e39df8de914becf079d",
+      "bytes": 126835
+    },
+    "naturalEarth": {
+      "url": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+      "license": "Public domain",
+      "credit": "Natural Earth",
+      "method": "Land-frontier guides, lake separation and the neutral Bir Tawil reference; displayed country borders follow reconciled land geometry.",
+      "files": {
+        "ne-borders.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-borders.json.gz",
+          "sha256": "a2c796c19a530964eedaecde02e605150607cc0a0517da68cf013ddeeed8655c"
+        },
+        "ne-countries.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-countries.json.gz",
+          "sha256": "103135920ec1bfdd5ada2f4f7e0ba1e985b28f881d39ef9343a8a43d92b23610"
+        },
+        "ne-lakes.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-lakes.json.gz",
+          "sha256": "1550308007c3457c65e68b2a47d06797d474073cf7fdeb5eaf6ff55164d1903e"
+        }
+      }
+    }
+  }
+}

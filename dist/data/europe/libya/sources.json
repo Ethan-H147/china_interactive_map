@@ -1,0 +1,77 @@
+{
+  "retrieved": "2026-10-30",
+  "coverage": "Libya: 22 district reference areas. Dated 2018 boundary reference; source dates and licenses are retained below. Child areas are reconciled within their displayed parents. Shared land frontiers are owned once; coastlines and maritime boundaries are not stroked. National statistics are not distributed to subdivisions.",
+  "counts": {
+    "1": 22
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "LBY-hdx.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-lby",
+      "sha256": "a7a980ae66e89ac61df1cec29026c9a2a300e39355b47eb85c7c43f5304d95fc",
+      "bytes": 35386
+    },
+    "LBY-gb.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/LBY/ADM1/",
+      "sha256": "6f7b9c18a34e9f412b0d8cecefe9af779888497c138b30bb8d833ddc310f0725",
+      "bytes": 1721
+    },
+    "flag-ly.svg": {
+      "url": "https://flagcdn.com/ly.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT distribution",
+      "sha256": "e2b019746d67350a9dcfc595616d0b73b868c8f3757f9516665e9141d8f0c117",
+      "bytes": 353
+    },
+    "LBY-adm1.geojson": {
+      "url": "https://data.humdata.org/dataset/fd9fb749-5b68-4942-b5f9-115f20b5c00e/resource/6933bac2-4f6b-4095-a629-21193981b80c/download/lby_admin_boundaries.geojson.zip",
+      "member": "lby_admin1.geojson",
+      "archiveSha256": "0c4bfd12c78bcacc8aa7d5ce8cbc722c6563e271ec7b5504bebb7d77ce9e063b",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-lby",
+      "sha256": "dc80ecdadaa460f2826819feb4db8937c53c61da73a249af77812cfd5dff7f08",
+      "bytes": 303995
+    },
+    "LBY-adm2.geojson": {
+      "url": "https://data.humdata.org/dataset/fd9fb749-5b68-4942-b5f9-115f20b5c00e/resource/6933bac2-4f6b-4095-a629-21193981b80c/download/lby_admin_boundaries.geojson.zip",
+      "member": "lby_admin2.geojson",
+      "archiveSha256": "0c4bfd12c78bcacc8aa7d5ce8cbc722c6563e271ec7b5504bebb7d77ce9e063b",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-lby",
+      "sha256": "264db16a633c9c335599af28e81f5aa33c972585ddfe4d19fec707eb485fd1a1",
+      "bytes": 556595
+    },
+    "LBY-adm0.geojson": {
+      "url": "https://data.humdata.org/dataset/fd9fb749-5b68-4942-b5f9-115f20b5c00e/resource/6933bac2-4f6b-4095-a629-21193981b80c/download/lby_admin_boundaries.geojson.zip",
+      "member": "lby_admin0.geojson",
+      "archiveSha256": "0c4bfd12c78bcacc8aa7d5ce8cbc722c6563e271ec7b5504bebb7d77ce9e063b",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-lby",
+      "sha256": "3050191416f1256c946891aca69357bda522bea1fdb8d257e0532ebec1867c45",
+      "bytes": 293993
+    },
+    "naturalEarth": {
+      "url": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+      "license": "Public domain",
+      "credit": "Natural Earth",
+      "method": "Land-frontier guides, lake separation and the neutral Bir Tawil reference; displayed country borders follow reconciled land geometry.",
+      "files": {
+        "ne-borders.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-borders.json.gz",
+          "sha256": "a2c796c19a530964eedaecde02e605150607cc0a0517da68cf013ddeeed8655c"
+        },
+        "ne-countries.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-countries.json.gz",
+          "sha256": "103135920ec1bfdd5ada2f4f7e0ba1e985b28f881d39ef9343a8a43d92b23610"
+        },
+        "ne-lakes.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-lakes.json.gz",
+          "sha256": "1550308007c3457c65e68b2a47d06797d474073cf7fdeb5eaf6ff55164d1903e"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "iso": "GAB",
+  "type": "hdx",
+  "layers": [
+    {
+      "level": 1,
+      "file": "GAB-adm1.geojson",
+      "count": 9,
+      "properties": {
+        "adm1_name": "Estuaire",
+        "adm1_name1": null,
+        "adm1_name2": null,
+        "adm1_name3": null,
+        "adm1_pcode": "GA01",
+        "adm0_name": "Gabon",
+        "adm0_name1": null,
+        "adm0_name2": null,
+        "adm0_name3": null,
+        "adm0_pcode": "GA",
+        "valid_on": "2026-06-01",
+        "valid_to": null,
+        "area_sqkm": 19613.00771868,
+        "version": "v01",
+        "lang": "en",
+        "lang1": null,
+        "lang2": null,
+        "lang3": null,
+        "field": null,
+        "multipart": 4
+      }
+    },
+    {
+      "level": 2,
+      "file": "GAB-adm2.geojson",
+      "count": 48,
+      "properties": {
+        "adm2_name": "Abanga-Bigne",
+        "adm2_name1": null,
+        "adm2_name2": null,
+        "adm2_name3": null,
+        "adm2_pcode": "GA0301",
+        "adm1_name": "Moyen-Ogooue",
+        "adm1_name1": null,
+        "adm1_name2": null,
+        "adm1_name3": null,
+        "adm1_pcode": "GA03",
+        "adm0_name": "Gabon",
+        "adm0_name1": null,
+        "adm0_name2": null,
+        "adm0_name3": null,
+        "adm0_pcode": "GA",
+        "valid_on": "2026-06-01",
+        "valid_to": null,
+        "area_sqkm": 8170.93458869,
+        "version": "v01",
+        "lang": "en",
+        "lang1": null,
+        "lang2": null,
+        "lang3": null,
+        "multipart": 1
+      }
+    }
+  ]
+}

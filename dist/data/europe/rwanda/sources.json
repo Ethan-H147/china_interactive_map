@@ -1,0 +1,203 @@
+{
+  "retrieved": "2026-10-30",
+  "coverage": "Five provinces / Kigali City, 30 districts and 416 sectors from the retained NISR 2018 boundary release. Local areas are clipped to their displayed parent and residual source gaps are reconciled within that parent. Inland lake water is excluded; coastlines have no border stroke. Population is not inferred by distributing national totals.",
+  "counts": {
+    "1": 5,
+    "2": 30,
+    "3": 416
+  },
+  "processing": "Retained source bytes are verified by SHA-256. Administrative polygons are cleaned together at 0.00012-degree simplification; Maldives island footprints retain government source resolution. Complete neighboring outline arcs share projected endpoints and previously established junctions. Local areas are clipped individually on a mic degree lattice, with source gaps assigned within their displayed parent. Lake masks preserve the 56 mapped Lake Tana islands. Coastlines have no border stroke. Only selected-parent local geometry loads.",
+  "sources": {
+    "rwa-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-rwa",
+      "sha256": "3ef9e1d8905b73e9e80bf57d9b4aadfe66f807d5929c42f521ee083d9c7ed1b0",
+      "bytes": 11978
+    },
+    "rwa-source.zip": {
+      "url": "https://data.humdata.org/dataset/2768bdfd-6486-4963-8e3d-e63149478eb4/resource/176eaace-708c-46b3-94e9-d5ba91cca08c/download/rwa_adm_2006_nisr_wgs1984_20181002_shp.zip",
+      "credit": "OCHA Regional Office for Southern and Eastern Africa (ROSEA) / OCHA HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-rwa",
+      "sha256": "7ac36f57ea3723db2ef773f5ae23657cfa21170919106fcfb82dba10cd423fe0",
+      "bytes": 15483326,
+      "retained": false
+    },
+    "rwa-rwa_adm1_2006_NISR_WGS1984_20181002.dbf": {
+      "url": "https://data.humdata.org/dataset/2768bdfd-6486-4963-8e3d-e63149478eb4/resource/176eaace-708c-46b3-94e9-d5ba91cca08c/download/rwa_adm_2006_nisr_wgs1984_20181002_shp.zip",
+      "credit": "OCHA Regional Office for Southern and Eastern Africa (ROSEA) / OCHA HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-rwa",
+      "member": "rwa_adm1_2006_NISR_WGS1984_20181002.dbf",
+      "archiveSha256": "7ac36f57ea3723db2ef773f5ae23657cfa21170919106fcfb82dba10cd423fe0",
+      "sha256": "4d3c6b244c3e758cc8e6026f1a96c9c802362c85b332db1a526089509c93865b",
+      "bytes": 11757
+    },
+    "rwa-rwa_adm1_2006_NISR_WGS1984_20181002.prj": {
+      "url": "https://data.humdata.org/dataset/2768bdfd-6486-4963-8e3d-e63149478eb4/resource/176eaace-708c-46b3-94e9-d5ba91cca08c/download/rwa_adm_2006_nisr_wgs1984_20181002_shp.zip",
+      "credit": "OCHA Regional Office for Southern and Eastern Africa (ROSEA) / OCHA HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-rwa",
+      "member": "rwa_adm1_2006_NISR_WGS1984_20181002.prj",
+      "archiveSha256": "7ac36f57ea3723db2ef773f5ae23657cfa21170919106fcfb82dba10cd423fe0",
+      "sha256": "a02a27b1d1982c8516d83398e85a3c8b1aef1713c13ef4d84d7bde17430c07c4",
+      "bytes": 145
+    },
+    "rwa-rwa_adm1_2006_NISR_WGS1984_20181002.shp": {
+      "url": "https://data.humdata.org/dataset/2768bdfd-6486-4963-8e3d-e63149478eb4/resource/176eaace-708c-46b3-94e9-d5ba91cca08c/download/rwa_adm_2006_nisr_wgs1984_20181002_shp.zip",
+      "credit": "OCHA Regional Office for Southern and Eastern Africa (ROSEA) / OCHA HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-rwa",
+      "member": "rwa_adm1_2006_NISR_WGS1984_20181002.shp",
+      "archiveSha256": "7ac36f57ea3723db2ef773f5ae23657cfa21170919106fcfb82dba10cd423fe0",
+      "sha256": "db237dc16b722f70f37693446edf7021bf3b24d633e2eb75fc65b664ab00b11e",
+      "bytes": 1197012
+    },
+    "rwa-rwa_adm1_2006_NISR_WGS1984_20181002.shx": {
+      "url": "https://data.humdata.org/dataset/2768bdfd-6486-4963-8e3d-e63149478eb4/resource/176eaace-708c-46b3-94e9-d5ba91cca08c/download/rwa_adm_2006_nisr_wgs1984_20181002_shp.zip",
+      "credit": "OCHA Regional Office for Southern and Eastern Africa (ROSEA) / OCHA HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-rwa",
+      "member": "rwa_adm1_2006_NISR_WGS1984_20181002.shx",
+      "archiveSha256": "7ac36f57ea3723db2ef773f5ae23657cfa21170919106fcfb82dba10cd423fe0",
+      "sha256": "950a37e0b3f1abcca131be8017be7f83885dac637ae6c037bd5deb2ee2d100c5",
+      "bytes": 140
+    },
+    "rwa-rwa_adm2_2006_NISR_WGS1984_20181002.dbf": {
+      "url": "https://data.humdata.org/dataset/2768bdfd-6486-4963-8e3d-e63149478eb4/resource/176eaace-708c-46b3-94e9-d5ba91cca08c/download/rwa_adm_2006_nisr_wgs1984_20181002_shp.zip",
+      "credit": "OCHA Regional Office for Southern and Eastern Africa (ROSEA) / OCHA HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-rwa",
+      "member": "rwa_adm2_2006_NISR_WGS1984_20181002.dbf",
+      "archiveSha256": "7ac36f57ea3723db2ef773f5ae23657cfa21170919106fcfb82dba10cd423fe0",
+      "sha256": "38b938b084b750bed72063b01a25e74cad2bf1324732612c1ecb4b7964291282",
+      "bytes": 84236
+    },
+    "rwa-rwa_adm2_2006_NISR_WGS1984_20181002.prj": {
+      "url": "https://data.humdata.org/dataset/2768bdfd-6486-4963-8e3d-e63149478eb4/resource/176eaace-708c-46b3-94e9-d5ba91cca08c/download/rwa_adm_2006_nisr_wgs1984_20181002_shp.zip",
+      "credit": "OCHA Regional Office for Southern and Eastern Africa (ROSEA) / OCHA HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-rwa",
+      "member": "rwa_adm2_2006_NISR_WGS1984_20181002.prj",
+      "archiveSha256": "7ac36f57ea3723db2ef773f5ae23657cfa21170919106fcfb82dba10cd423fe0",
+      "sha256": "a02a27b1d1982c8516d83398e85a3c8b1aef1713c13ef4d84d7bde17430c07c4",
+      "bytes": 145
+    },
+    "rwa-rwa_adm2_2006_NISR_WGS1984_20181002.shp": {
+      "url": "https://data.humdata.org/dataset/2768bdfd-6486-4963-8e3d-e63149478eb4/resource/176eaace-708c-46b3-94e9-d5ba91cca08c/download/rwa_adm_2006_nisr_wgs1984_20181002_shp.zip",
+      "credit": "OCHA Regional Office for Southern and Eastern Africa (ROSEA) / OCHA HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-rwa",
+      "member": "rwa_adm2_2006_NISR_WGS1984_20181002.shp",
+      "archiveSha256": "7ac36f57ea3723db2ef773f5ae23657cfa21170919106fcfb82dba10cd423fe0",
+      "sha256": "78a65e65552ab3b07e3cd3ff3335df14cb34d0b4e38110d6effbe9c33032d39d",
+      "bytes": 2913420
+    },
+    "rwa-rwa_adm2_2006_NISR_WGS1984_20181002.shx": {
+      "url": "https://data.humdata.org/dataset/2768bdfd-6486-4963-8e3d-e63149478eb4/resource/176eaace-708c-46b3-94e9-d5ba91cca08c/download/rwa_adm_2006_nisr_wgs1984_20181002_shp.zip",
+      "credit": "OCHA Regional Office for Southern and Eastern Africa (ROSEA) / OCHA HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-rwa",
+      "member": "rwa_adm2_2006_NISR_WGS1984_20181002.shx",
+      "archiveSha256": "7ac36f57ea3723db2ef773f5ae23657cfa21170919106fcfb82dba10cd423fe0",
+      "sha256": "50b14c6d7b8667ef2c06e4ad059695ae2c6c55268cb5c197684595cf7d6d07c6",
+      "bytes": 340
+    },
+    "rwa-rwa_adm3_2006_NISR_WGS1984_20181002.dbf": {
+      "url": "https://data.humdata.org/dataset/2768bdfd-6486-4963-8e3d-e63149478eb4/resource/176eaace-708c-46b3-94e9-d5ba91cca08c/download/rwa_adm_2006_nisr_wgs1984_20181002_shp.zip",
+      "credit": "OCHA Regional Office for Southern and Eastern Africa (ROSEA) / OCHA HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-rwa",
+      "member": "rwa_adm3_2006_NISR_WGS1984_20181002.dbf",
+      "archiveSha256": "7ac36f57ea3723db2ef773f5ae23657cfa21170919106fcfb82dba10cd423fe0",
+      "sha256": "61bdf393609bea7354d05b6cea333b70b9588442e3aac567d4fa3d19a73dc566",
+      "bytes": 1310466
+    },
+    "rwa-rwa_adm3_2006_NISR_WGS1984_20181002.prj": {
+      "url": "https://data.humdata.org/dataset/2768bdfd-6486-4963-8e3d-e63149478eb4/resource/176eaace-708c-46b3-94e9-d5ba91cca08c/download/rwa_adm_2006_nisr_wgs1984_20181002_shp.zip",
+      "credit": "OCHA Regional Office for Southern and Eastern Africa (ROSEA) / OCHA HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-rwa",
+      "member": "rwa_adm3_2006_NISR_WGS1984_20181002.prj",
+      "archiveSha256": "7ac36f57ea3723db2ef773f5ae23657cfa21170919106fcfb82dba10cd423fe0",
+      "sha256": "a02a27b1d1982c8516d83398e85a3c8b1aef1713c13ef4d84d7bde17430c07c4",
+      "bytes": 145
+    },
+    "rwa-rwa_adm3_2006_NISR_WGS1984_20181002.shp": {
+      "url": "https://data.humdata.org/dataset/2768bdfd-6486-4963-8e3d-e63149478eb4/resource/176eaace-708c-46b3-94e9-d5ba91cca08c/download/rwa_adm_2006_nisr_wgs1984_20181002_shp.zip",
+      "credit": "OCHA Regional Office for Southern and Eastern Africa (ROSEA) / OCHA HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-rwa",
+      "member": "rwa_adm3_2006_NISR_WGS1984_20181002.shp",
+      "archiveSha256": "7ac36f57ea3723db2ef773f5ae23657cfa21170919106fcfb82dba10cd423fe0",
+      "sha256": "29f7a59b7642f1c1046fe3439a19e2c51fa0cac47848e42128b3f4dbf6900f05",
+      "bytes": 9424324
+    },
+    "rwa-rwa_adm3_2006_NISR_WGS1984_20181002.shx": {
+      "url": "https://data.humdata.org/dataset/2768bdfd-6486-4963-8e3d-e63149478eb4/resource/176eaace-708c-46b3-94e9-d5ba91cca08c/download/rwa_adm_2006_nisr_wgs1984_20181002_shp.zip",
+      "credit": "OCHA Regional Office for Southern and Eastern Africa (ROSEA) / OCHA HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-rwa",
+      "member": "rwa_adm3_2006_NISR_WGS1984_20181002.shx",
+      "archiveSha256": "7ac36f57ea3723db2ef773f5ae23657cfa21170919106fcfb82dba10cd423fe0",
+      "sha256": "0feabd5fea15f33873ffd45db345b3b46292e8cedd2d510249c7f977eb5a30a8",
+      "bytes": 3428
+    },
+    "flag-rwa.svg": {
+      "url": "https://flagcdn.com/rw.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT source artwork",
+      "sha256": "21b67e23f19a1bca9b4ad87ff788b4992cebc00a6deeca1eb9c56c16b63c0de8",
+      "bytes": 894
+    },
+    "rwa-population-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-rwa",
+      "sha256": "1edd2d45d3653cf8837ee11d209d2544947782fa1f3dd4a48cfcb6bee501dc7f",
+      "bytes": 29256
+    },
+    "rwa-pop-rwa_admpop_adm0_2023.csv": {
+      "url": "https://data.humdata.org/dataset/94b26815-cd91-4553-b64d-7a6f153400bc/resource/164eee66-f158-41af-81d7-4f240151ff8d/download/rwa_admpop_adm0_2023.csv",
+      "credit": "UNFPA / HDX COD-PS",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ps-rwa",
+      "sha256": "e16295db3e55d5d744926ad4c14171503bba9ce14af741314915289403a6b314",
+      "bytes": 781
+    },
+    "rwa-pop-rwa_admpop_adm1_2023.csv": {
+      "url": "https://data.humdata.org/dataset/94b26815-cd91-4553-b64d-7a6f153400bc/resource/63dfb3b5-7aac-4cdd-9fa5-baac711b2a50/download/rwa_admpop_adm1_2023.csv",
+      "credit": "UNFPA / HDX COD-PS",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ps-rwa",
+      "sha256": "0546705be257783971748cc224a6d5ffff22e0f6fcbd4332e0a8cae4a5d31fa8",
+      "bytes": 2190
+    },
+    "rwa-pop-rwa_admpop_adm2_2023.csv": {
+      "url": "https://data.humdata.org/dataset/94b26815-cd91-4553-b64d-7a6f153400bc/resource/4c88332a-ed41-4220-ac72-d3bddd2a3a05/download/rwa_admpop_adm2_2023.csv",
+      "credit": "UNFPA / HDX COD-PS",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ps-rwa",
+      "sha256": "dc6d1b2b9939ebc8373421b9f5a4e7475ff68f94b1a47a2bd3f8aea8a676df4d",
+      "bytes": 11182
+    },
+    "rwa-pop-rwa_admpop_adm3_2023.csv": {
+      "url": "https://data.humdata.org/dataset/94b26815-cd91-4553-b64d-7a6f153400bc/resource/b07265ad-055e-4ea8-bb95-de3adb1ae0a1/download/rwa_admpop_adm3_2023.csv",
+      "credit": "UNFPA / HDX COD-PS",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ps-rwa",
+      "sha256": "9b160abc6821bfec3849da746872af0134cf3030e9d2a5e8fbff3700425283b2",
+      "bytes": 127971
+    },
+    "rwa-nisr-population.html": {
+      "url": "https://statistics.gov.rw/statistical-publications/population-size-and-population-characteristics",
+      "credit": "National Institute of Statistics of Rwanda",
+      "license": "Official census table; attribution",
+      "page": "https://statistics.gov.rw/statistical-publications/population-size-and-population-characteristics",
+      "sha256": "1d196396007911798a460049ccf95e3b116b709a6829278f71a4a1d2ae37259e",
+      "bytes": 106001
+    }
+  },
+  "numericalReturnsRemoved": 835,
+  "populationCoverage": {
+    "matched": 35,
+    "method": "Only verified source identities and dated observations are assigned. Rwanda uses the NISR 2022 census; the inconsistent COD-PS 2023 provincial totals are not used. No older Burundi province population is transferred to the new five provinces. National GDP is never allocated to subdivisions."
+  }
+}

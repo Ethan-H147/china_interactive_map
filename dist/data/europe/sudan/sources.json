@@ -1,0 +1,78 @@
+{
+  "retrieved": "2026-10-30",
+  "coverage": "Sudan: 19 states & disputed reference area, 189 localities. Dated 2020 boundary reference; source dates and licenses are retained below. The 19 source pieces include disputed Abyei, excluded from the ordinary state quiz. Child areas are reconciled within their displayed parents. Shared land frontiers are owned once; coastlines and maritime boundaries are not stroked. National statistics are not distributed to subdivisions. The Egyptian display reference supplies the joined northern border, with the neutral Bir Tawil reference retained separately. The map does not indicate current control.",
+  "counts": {
+    "1": 19,
+    "2": 189
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "SDN-hdx.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-sdn",
+      "sha256": "e7c506425100d6a134c5b34a2f309b14a00433dc8ab754c0fa4d7eaec5a751a3",
+      "bytes": 38900
+    },
+    "SDN-gb.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/SDN/ADM1/",
+      "sha256": "08258fc59c17c2c9f1014abff2273ca667667e9815f8c0cbc5faaf29deb77f93",
+      "bytes": 1852
+    },
+    "flag-sd.svg": {
+      "url": "https://flagcdn.com/sd.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT distribution",
+      "sha256": "305064d3c23eac774752898e1b3e9ff8ab7ecdfa45495be446dc520de8415727",
+      "bytes": 229
+    },
+    "SDN-adm2.geojson": {
+      "url": "https://data.humdata.org/dataset/a66a4b6c-92de-4507-9546-aa1900474180/resource/018af991-4aa7-4043-a0d5-e429a55851fb/download/sdn_admin_boundaries.geojson.zip",
+      "member": "sdn_admin2.geojson",
+      "archiveSha256": "75330d4e12e53f966df0e5683e04f0919e9964952fbbf827f3729038e603c95e",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-sdn",
+      "sha256": "c13cf1e8515730267d41bd560a1f1a0489552ab2900abb070a9aececacca1bb9",
+      "bytes": 1621077
+    },
+    "SDN-adm1.geojson": {
+      "url": "https://data.humdata.org/dataset/a66a4b6c-92de-4507-9546-aa1900474180/resource/018af991-4aa7-4043-a0d5-e429a55851fb/download/sdn_admin_boundaries.geojson.zip",
+      "member": "sdn_admin1.geojson",
+      "archiveSha256": "75330d4e12e53f966df0e5683e04f0919e9964952fbbf827f3729038e603c95e",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-sdn",
+      "sha256": "06c4ea9d2b2d62aa6a982efa054f828db583420ee42eb8b2760a81d2520699fa",
+      "bytes": 876096
+    },
+    "SDN-adm0.geojson": {
+      "url": "https://data.humdata.org/dataset/a66a4b6c-92de-4507-9546-aa1900474180/resource/018af991-4aa7-4043-a0d5-e429a55851fb/download/sdn_admin_boundaries.geojson.zip",
+      "member": "sdn_admin0.geojson",
+      "archiveSha256": "75330d4e12e53f966df0e5683e04f0919e9964952fbbf827f3729038e603c95e",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-sdn",
+      "sha256": "ce0d571f32be001aa9c73d9a86b869a90c19bd2e671da73afed2cb2f7e7495ec",
+      "bytes": 263182
+    },
+    "naturalEarth": {
+      "url": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+      "license": "Public domain",
+      "credit": "Natural Earth",
+      "method": "Land-frontier guides, lake separation and the neutral Bir Tawil reference; displayed country borders follow reconciled land geometry.",
+      "files": {
+        "ne-borders.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-borders.json.gz",
+          "sha256": "a2c796c19a530964eedaecde02e605150607cc0a0517da68cf013ddeeed8655c"
+        },
+        "ne-countries.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-countries.json.gz",
+          "sha256": "103135920ec1bfdd5ada2f4f7e0ba1e985b28f881d39ef9343a8a43d92b23610"
+        },
+        "ne-lakes.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-lakes.json.gz",
+          "sha256": "1550308007c3457c65e68b2a47d06797d474073cf7fdeb5eaf6ff55164d1903e"
+        }
+      }
+    }
+  }
+}

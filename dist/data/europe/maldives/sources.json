@@ -1,0 +1,119 @@
+{
+  "retrieved": "2026-10-30",
+  "coverage": "All 1,560 OneMap island features are searchable, including resorts, uninhabited and reclaimed islands. The 429 unnamed registry features are searchable by FCODE. Atoll fills dissolve only island land, never lagoons or administrative sea buffers. Government island registry snapshot: May 2024. Local areas are clipped to their displayed parent and residual source gaps are reconciled within that parent. Inland lake water is excluded; coastlines have no border stroke. Population is not inferred by distributing national totals.",
+  "counts": {
+    "1": 21,
+    "2": 1560
+  },
+  "processing": "Retained source bytes are verified by SHA-256. Administrative polygons are cleaned together at 0.00012-degree simplification; Maldives island footprints retain government source resolution. Complete neighboring outline arcs share projected endpoints and previously established junctions. Local areas are clipped individually on a mic degree lattice, with source gaps assigned within their displayed parent. Lake masks preserve the 56 mapped Lake Tana islands. Coastlines have no border stroke. Only selected-parent local geometry loads.",
+  "sources": {
+    "mdv-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-mdv",
+      "sha256": "6b047c3092e3d433854cdb9c5429cd8dab18ec4fe6ee9a3d759d3fe8793a831d",
+      "bytes": 37185
+    },
+    "mdv-source.zip": {
+      "url": "https://data.humdata.org/dataset/a968d227-24c9-49ea-bbce-cee04ee94819/resource/3e277382-c09a-4496-bd46-c1a2a92bb835/download/mdv_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-mdv",
+      "sha256": "054216dd5f312c98427c93e104dde2f64a5f23029a0533763481c24741ceea0b",
+      "bytes": 10094844,
+      "retained": false
+    },
+    "mdv-mdv_admin1.geojson": {
+      "url": "https://data.humdata.org/dataset/a968d227-24c9-49ea-bbce-cee04ee94819/resource/3e277382-c09a-4496-bd46-c1a2a92bb835/download/mdv_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-mdv",
+      "member": "mdv_admin1.geojson",
+      "archiveSha256": "054216dd5f312c98427c93e104dde2f64a5f23029a0533763481c24741ceea0b",
+      "sha256": "89dedb435f648527ea55024459cd2b4807d834781288a33a202267cf196548b2",
+      "bytes": 278274
+    },
+    "mdv-mdv_admin2.geojson": {
+      "url": "https://data.humdata.org/dataset/a968d227-24c9-49ea-bbce-cee04ee94819/resource/3e277382-c09a-4496-bd46-c1a2a92bb835/download/mdv_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-mdv",
+      "member": "mdv_admin2.geojson",
+      "archiveSha256": "054216dd5f312c98427c93e104dde2f64a5f23029a0533763481c24741ceea0b",
+      "sha256": "cf76ddc0f0bab77f8c8576d2e4999b14fb36dbb160afbcf083c9f7e54ec3afb5",
+      "bytes": 17274521
+    },
+    "flag-mdv.svg": {
+      "url": "https://flagcdn.com/mv.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT source artwork",
+      "sha256": "a825c00d340b88c63605d514c9c0e74ef17c0cf10caa0d0e46bb7ebee4788dd5",
+      "bytes": 247
+    },
+    "mdv-island-metadata.json": {
+      "url": "https://services7.arcgis.com/yvCbn3q8PPtPLZIM/arcgis/rest/services/island_20240509/FeatureServer/0?f=pjson",
+      "credit": "Geomatics Department, Maldives",
+      "license": "Data Usage License – Geomatics Department",
+      "page": "https://readme.onemap.mv/",
+      "sha256": "973358dd08335fbeb07acfb6a50b1c2b65b9f3574ee52da158070dac9c26f340",
+      "bytes": 14495
+    },
+    "mdv-island-count.json": {
+      "url": "https://services7.arcgis.com/yvCbn3q8PPtPLZIM/arcgis/rest/services/island_20240509/FeatureServer/0/query?where=1%3D1&returnCountOnly=true&f=json",
+      "sha256": "87824b76ac4a8977ee42ea1ecb63707e5b0f936748e446ba45a6ccef81f79f22",
+      "bytes": 183
+    },
+    "mdv-islands-0.geojson": {
+      "url": "https://services7.arcgis.com/yvCbn3q8PPtPLZIM/arcgis/rest/services/island_20240509/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=true&outSR=4326&orderByFields=OBJECTID&resultOffset=0&resultRecordCount=1000&f=geojson",
+      "credit": "Geomatics Department of Ministry of Infrastructure, Housing and Urban Development, Republic of Maldives",
+      "license": "Data Usage License – Geomatics Department",
+      "licenseUrl": "https://readme.onemap.mv/pdf/Data%20Usage%20License.pdf",
+      "page": "https://readme.onemap.mv/",
+      "sha256": "3436238f2da30842b87a77fce1751758d2a45fc2b954f3252eb64012300afaa6",
+      "bytes": 9739558
+    },
+    "mdv-islands-1000.geojson": {
+      "url": "https://services7.arcgis.com/yvCbn3q8PPtPLZIM/arcgis/rest/services/island_20240509/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=true&outSR=4326&orderByFields=OBJECTID&resultOffset=1000&resultRecordCount=1000&f=geojson",
+      "credit": "Geomatics Department of Ministry of Infrastructure, Housing and Urban Development, Republic of Maldives",
+      "license": "Data Usage License – Geomatics Department",
+      "licenseUrl": "https://readme.onemap.mv/pdf/Data%20Usage%20License.pdf",
+      "page": "https://readme.onemap.mv/",
+      "sha256": "688454ba836689ef879f707ba607d71d220b5b4d2bf67bca283359966a732550",
+      "bytes": 4811743
+    },
+    "mdv-license.pdf": {
+      "url": "https://readme.onemap.mv/pdf/Data%20Usage%20License.pdf",
+      "sha256": "472e6b994f2f84b81e111b11507815b70ef4a857be17af20032e42878dc086dd",
+      "bytes": 72809
+    },
+    "mdv-island-list.csv": {
+      "url": "https://readme.onemap.mv/csv/IslandList_20211101.csv",
+      "sha256": "7b34a9f732627cfbf96819a7662c738d92441802cbfc721922213f5d3675f9c8",
+      "bytes": 191852
+    },
+    "mdv-population-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-mdv",
+      "sha256": "52aa72d77d1415b5ae1ef82d521190900932b011b9aa6a72a3c9c727a11ebbf0",
+      "bytes": 19709
+    },
+    "mdv-pop-mdv_admpop_adm0_2022.csv": {
+      "url": "https://data.humdata.org/dataset/e9c35494-3097-418c-93e6-1496e390a8d9/resource/3ce44124-f312-4434-9785-97911defe923/download/mdv_admpop_adm0_2022.csv",
+      "credit": "UNFPA / HDX COD-PS",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ps-mdv",
+      "sha256": "3f4e2492244dffa229f5e7945061430a4d0268300f6b3e4dba8b508734e8fad9",
+      "bytes": 752
+    },
+    "mdv-pop-mdv_admpop_adm1_2022.csv": {
+      "url": "https://data.humdata.org/dataset/e9c35494-3097-418c-93e6-1496e390a8d9/resource/4ad677e1-7948-47d5-9379-a491675cbf7d/download/mdv_admpop_adm1_2022.csv",
+      "credit": "UNFPA / HDX COD-PS",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ps-mdv",
+      "sha256": "6b380781134ea8f35732ffd3f2b0e269c6996480d44e267472bb23e278d55867",
+      "bytes": 7571
+    }
+  },
+  "numericalReturnsRemoved": 0,
+  "populationCoverage": {
+    "matched": 21,
+    "method": "Only verified source identities and dated observations are assigned. Rwanda uses the NISR 2022 census; the inconsistent COD-PS 2023 provincial totals are not used. No older Burundi province population is transferred to the new five provinces. National GDP is never allocated to subdivisions."
+  }
+}

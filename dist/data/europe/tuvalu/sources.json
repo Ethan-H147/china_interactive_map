@@ -1,0 +1,51 @@
+{
+  "retrieved": "2026-10-30",
+  "coverage": "Tuvalu: 8 island councils. Dated 2017 boundary reference; source dates and licenses are retained below. Child areas are reconciled within their displayed parents. Shared land frontiers are owned once; coastlines and maritime boundaries are not stroked. National statistics are not distributed to subdivisions.",
+  "counts": {
+    "1": 8
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "TUV-gb.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/TUV/ADM1/",
+      "sha256": "d6878f7625da2b7a7e08d7a0c6641f46bcc4d3a3cd25bedd798137d445bc7199",
+      "bytes": 1753
+    },
+    "TUV-adm1.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/TUV/ADM1/geoBoundaries-TUV-ADM1.geojson",
+      "credit": "OpenStreetMap, Wambacher / geoBoundaries",
+      "license": "Open Data Commons Open Database License 1.0",
+      "page": "www.openstreetmap.org/copyright",
+      "year": "2017",
+      "sha256": "3c06779be3173360c9a2927729798eacb5533c745e31313f11940041585030aa",
+      "bytes": 79396
+    },
+    "flag-tv.svg": {
+      "url": "https://flagcdn.com/tv.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT distribution",
+      "sha256": "8596575d86d9ca070a2453f8fdfe7a0168d1df078e1e04ebfee804dff04069ef",
+      "bytes": 1120
+    },
+    "naturalEarth": {
+      "url": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+      "license": "Public domain",
+      "credit": "Natural Earth",
+      "method": "Land-frontier guides, lake separation and the neutral Bir Tawil reference; displayed country borders follow reconciled land geometry.",
+      "files": {
+        "ne-borders.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-borders.json.gz",
+          "sha256": "a2c796c19a530964eedaecde02e605150607cc0a0517da68cf013ddeeed8655c"
+        },
+        "ne-countries.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-countries.json.gz",
+          "sha256": "103135920ec1bfdd5ada2f4f7e0ba1e985b28f881d39ef9343a8a43d92b23610"
+        },
+        "ne-lakes.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-lakes.json.gz",
+          "sha256": "1550308007c3457c65e68b2a47d06797d474073cf7fdeb5eaf6ff55164d1903e"
+        }
+      }
+    }
+  }
+}

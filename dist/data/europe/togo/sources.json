@@ -1,0 +1,88 @@
+{
+  "retrieved": "2026-10-30",
+  "coverage": "Togo: 5 regions, 40 prefectures. Dated 2021 boundary reference; source dates and licenses are retained below. Child areas are reconciled within their displayed parents. Shared land frontiers are owned once; coastlines and maritime boundaries are not stroked. National statistics are not distributed to subdivisions.",
+  "counts": {
+    "1": 5,
+    "2": 40
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "TGO-hdx.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-tgo",
+      "sha256": "721f6d7bbb3b8e7cbd43b0d9c668fed6b22ef041a9b901b7f441c1ad66e9d323",
+      "bytes": 42779
+    },
+    "TGO-gb.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/TGO/ADM1/",
+      "sha256": "d0b2a852158509eed8a4327db30df6ab8d24bb64a826191f57a4092acbb5ea8d",
+      "bytes": 1682
+    },
+    "TGO-adm2.geojson": {
+      "url": "https://data.humdata.org/dataset/e6439952-e487-4682-8251-e9688aac60e1/resource/e08c2ae7-411b-4d83-a61e-2350ba93c924/download/tgo_admin_boundaries.geojson.zip",
+      "member": "tgo_admin2_em.geojson",
+      "archiveSha256": "271c75f6bafea603160a2317b23153bc6d013468886ebf1221af4bf6919dbfa2",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-tgo",
+      "sha256": "e1abc915c7dd4707f4ceab80c8d2226e7e6421b7aa022f917a42dc4bba5bdc2f",
+      "bytes": 764186
+    },
+    "TGO-adm1.geojson": {
+      "url": "https://data.humdata.org/dataset/e6439952-e487-4682-8251-e9688aac60e1/resource/e08c2ae7-411b-4d83-a61e-2350ba93c924/download/tgo_admin_boundaries.geojson.zip",
+      "member": "tgo_admin1.geojson",
+      "archiveSha256": "271c75f6bafea603160a2317b23153bc6d013468886ebf1221af4bf6919dbfa2",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-tgo",
+      "sha256": "a572ea2657b75a52ab1bcfa883253a2b4f57038fbb380c9e02dff01f991b31bb",
+      "bytes": 112219
+    },
+    "flag-tg.svg": {
+      "url": "https://flagcdn.com/tg.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT distribution",
+      "sha256": "8d50a4818de595d967b3cd0d6b0dc91ce0532b1679813af9eea27a560a7662c1",
+      "bytes": 423
+    },
+    "TGO-adm3.geojson": {
+      "url": "https://data.humdata.org/dataset/e6439952-e487-4682-8251-e9688aac60e1/resource/e08c2ae7-411b-4d83-a61e-2350ba93c924/download/tgo_admin_boundaries.geojson.zip",
+      "member": "tgo_admin3.geojson",
+      "archiveSha256": "271c75f6bafea603160a2317b23153bc6d013468886ebf1221af4bf6919dbfa2",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-tgo",
+      "sha256": "d7bccccfd442e4948dda18a47adf74b6bde1766d66d4e9fa113d792129584901",
+      "bytes": 1184619
+    },
+    "TGO-adm0.geojson": {
+      "url": "https://data.humdata.org/dataset/e6439952-e487-4682-8251-e9688aac60e1/resource/e08c2ae7-411b-4d83-a61e-2350ba93c924/download/tgo_admin_boundaries.geojson.zip",
+      "member": "tgo_admin0.geojson",
+      "archiveSha256": "271c75f6bafea603160a2317b23153bc6d013468886ebf1221af4bf6919dbfa2",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-tgo",
+      "sha256": "3395e3e2e75e7858ab1cf1ab8e640ef7326ed7e2113ed42f841e45702bc19c4b",
+      "bytes": 55261
+    },
+    "naturalEarth": {
+      "url": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+      "license": "Public domain",
+      "credit": "Natural Earth",
+      "method": "Land-frontier guides, lake separation and the neutral Bir Tawil reference; displayed country borders follow reconciled land geometry.",
+      "files": {
+        "ne-borders.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-borders.json.gz",
+          "sha256": "a2c796c19a530964eedaecde02e605150607cc0a0517da68cf013ddeeed8655c"
+        },
+        "ne-countries.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-countries.json.gz",
+          "sha256": "103135920ec1bfdd5ada2f4f7e0ba1e985b28f881d39ef9343a8a43d92b23610"
+        },
+        "ne-lakes.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-lakes.json.gz",
+          "sha256": "1550308007c3457c65e68b2a47d06797d474073cf7fdeb5eaf6ff55164d1903e"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "retrieved": "2026-10-30",
+  "coverage": "Cameroon: 10 regions, 58 departments. Dated 2019 boundary reference; source dates and licenses are retained below. Child areas are reconciled within their displayed parents. Shared land frontiers are owned once; coastlines and maritime boundaries are not stroked. National statistics are not distributed to subdivisions.",
+  "counts": {
+    "1": 10,
+    "2": 58
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "CMR-hdx.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-cmr",
+      "sha256": "edb70423278810d25bba423d621f0c4ddc182ae7356278de8c6524825f5475fb",
+      "bytes": 54770
+    },
+    "CMR-gb.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/CMR/ADM1/",
+      "sha256": "ab0dbd814735727b497f607ff69d2ee2bcca5fe6ec6ffbc4e0a1ddc0a6035745",
+      "bytes": 1686
+    },
+    "CMR-adm1.geojson": {
+      "url": "https://data.humdata.org/dataset/b13f08ef-92ee-4446-9b0a-e219f5c25415/resource/2248ac6d-9675-47de-90d3-1e7ce6e601b1/download/cmr_admin_boundaries.geojson.zip",
+      "member": "cmr_admin1_em.geojson",
+      "archiveSha256": "f24a75c41ee2e107448ff1d2b8769ee970dad376d20cd7093da0c9106814ab5a",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-cmr",
+      "sha256": "285dac9e7ecba4471c3c53f76696680fb34f878f248ef0de3a715080c2e005b6",
+      "bytes": 1849181
+    },
+    "CMR-adm2.geojson": {
+      "url": "https://data.humdata.org/dataset/b13f08ef-92ee-4446-9b0a-e219f5c25415/resource/2248ac6d-9675-47de-90d3-1e7ce6e601b1/download/cmr_admin_boundaries.geojson.zip",
+      "member": "cmr_admin2.geojson",
+      "archiveSha256": "f24a75c41ee2e107448ff1d2b8769ee970dad376d20cd7093da0c9106814ab5a",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-cmr",
+      "sha256": "c44bdf8de07b95d3c1789f9f62d453a5821daa6cbfd84ea745125ebabb009b9a",
+      "bytes": 4264408
+    },
+    "flag-cm.svg": {
+      "url": "https://flagcdn.com/cm.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT distribution",
+      "sha256": "e00c6cbb0cb7364bc1b825e145ae6232d611d0e457dfa621b6bfafa3b7c76a7f",
+      "bytes": 266
+    },
+    "CMR-adm3.geojson": {
+      "url": "https://data.humdata.org/dataset/b13f08ef-92ee-4446-9b0a-e219f5c25415/resource/2248ac6d-9675-47de-90d3-1e7ce6e601b1/download/cmr_admin_boundaries.geojson.zip",
+      "member": "cmr_admin3_em.geojson",
+      "archiveSha256": "f24a75c41ee2e107448ff1d2b8769ee970dad376d20cd7093da0c9106814ab5a",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-cmr",
+      "sha256": "7be7331e2c74e38902be3d436ff726b5b9d6f67698cb9b104891c3044e1b6fbc",
+      "bytes": 7572887
+    },
+    "CMR-adm0.geojson": {
+      "url": "https://data.humdata.org/dataset/b13f08ef-92ee-4446-9b0a-e219f5c25415/resource/2248ac6d-9675-47de-90d3-1e7ce6e601b1/download/cmr_admin_boundaries.geojson.zip",
+      "member": "cmr_admin0.geojson",
+      "archiveSha256": "f24a75c41ee2e107448ff1d2b8769ee970dad376d20cd7093da0c9106814ab5a",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-cmr",
+      "sha256": "a962a2eeb0662fe9de1d9dbb8ed0c83f61435d93dbed1f59eb7a25953f9a9637",
+      "bytes": 1074417
+    },
+    "naturalEarth": {
+      "url": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+      "license": "Public domain",
+      "credit": "Natural Earth",
+      "method": "Land-frontier guides, lake separation and the neutral Bir Tawil reference; displayed country borders follow reconciled land geometry.",
+      "files": {
+        "ne-borders.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-borders.json.gz",
+          "sha256": "a2c796c19a530964eedaecde02e605150607cc0a0517da68cf013ddeeed8655c"
+        },
+        "ne-countries.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-countries.json.gz",
+          "sha256": "103135920ec1bfdd5ada2f4f7e0ba1e985b28f881d39ef9343a8a43d92b23610"
+        },
+        "ne-lakes.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-lakes.json.gz",
+          "sha256": "1550308007c3457c65e68b2a47d06797d474073cf7fdeb5eaf6ff55164d1903e"
+        }
+      }
+    }
+  }
+}

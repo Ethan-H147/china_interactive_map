@@ -1,0 +1,78 @@
+{
+  "retrieved": "2026-10-30",
+  "coverage": "Cabo Verde: 22 municipalities, 32 parishes. Dated 2024 boundary reference; source dates and licenses are retained below. Child areas are reconciled within their displayed parents. Shared land frontiers are owned once; coastlines and maritime boundaries are not stroked. National statistics are not distributed to subdivisions.",
+  "counts": {
+    "1": 22,
+    "2": 32
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "CPV-hdx.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-cpv",
+      "sha256": "d1614f6cf085660862d8888493886d15ecaa24d92b5f526029867a7e1d5f4068",
+      "bytes": 35988
+    },
+    "CPV-gb.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/CPV/ADM1/",
+      "sha256": "5d7be88120588e3cb85d1ec9b9114f8c21bd5b4efec6e7691953eb0503f08ae2",
+      "bytes": 1736
+    },
+    "flag-cv.svg": {
+      "url": "https://flagcdn.com/cv.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT distribution",
+      "sha256": "bcbf0add799b13377bdf842e1f380ff630650d3b7dba2d8f1273093cfa6ceb0f",
+      "bytes": 1494
+    },
+    "CPV-adm1.geojson": {
+      "url": "https://data.humdata.org/dataset/ce7df560-f77b-4f55-9175-4719ea21f50b/resource/f809561f-66ea-4f48-b6fb-52e839c74237/download/cpv_admin_boundaries.geojson.zip",
+      "member": "cpv_admin1.geojson",
+      "archiveSha256": "da1ad8732413d0a615c645e0e1c72d1c0f1182c91d2e55fb77817f8999231ff2",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-cpv",
+      "sha256": "4dd84203f5c7e5421713664d9984655388bea048c6123c0284280d8138234af2",
+      "bytes": 14017191
+    },
+    "CPV-adm2.geojson": {
+      "url": "https://data.humdata.org/dataset/ce7df560-f77b-4f55-9175-4719ea21f50b/resource/f809561f-66ea-4f48-b6fb-52e839c74237/download/cpv_admin_boundaries.geojson.zip",
+      "member": "cpv_admin2.geojson",
+      "archiveSha256": "da1ad8732413d0a615c645e0e1c72d1c0f1182c91d2e55fb77817f8999231ff2",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-cpv",
+      "sha256": "953139577c26e99c8d75501f716c609b1fe240ee6f4136d010f50add43b6dc7a",
+      "bytes": 14773499
+    },
+    "CPV-adm0.geojson": {
+      "url": "https://data.humdata.org/dataset/ce7df560-f77b-4f55-9175-4719ea21f50b/resource/f809561f-66ea-4f48-b6fb-52e839c74237/download/cpv_admin_boundaries.geojson.zip",
+      "member": "cpv_admin0.geojson",
+      "archiveSha256": "da1ad8732413d0a615c645e0e1c72d1c0f1182c91d2e55fb77817f8999231ff2",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-cpv",
+      "sha256": "fe44e430a0017020ddf2966b216f4959a73961dcf9a436787d5c32dc06ea7ea8",
+      "bytes": 12316372
+    },
+    "naturalEarth": {
+      "url": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+      "license": "Public domain",
+      "credit": "Natural Earth",
+      "method": "Land-frontier guides, lake separation and the neutral Bir Tawil reference; displayed country borders follow reconciled land geometry.",
+      "files": {
+        "ne-borders.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-borders.json.gz",
+          "sha256": "a2c796c19a530964eedaecde02e605150607cc0a0517da68cf013ddeeed8655c"
+        },
+        "ne-countries.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-countries.json.gz",
+          "sha256": "103135920ec1bfdd5ada2f4f7e0ba1e985b28f881d39ef9343a8a43d92b23610"
+        },
+        "ne-lakes.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-lakes.json.gz",
+          "sha256": "1550308007c3457c65e68b2a47d06797d474073cf7fdeb5eaf6ff55164d1903e"
+        }
+      }
+    }
+  }
+}

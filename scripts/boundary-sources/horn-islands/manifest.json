@@ -1,0 +1,646 @@
+{
+  "retrieved": "2026-10-30",
+  "files": {
+    "som-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-som",
+      "sha256": "041face451d611806b83b056ac6dd7475b1c2216a90533fbaf51e743358ef147",
+      "bytes": 40443
+    },
+    "som-source.zip": {
+      "url": "https://data.humdata.org/dataset/ec140a63-5330-4376-a3df-c7ebf73cfc3c/resource/79f7f826-6028-4650-b8f7-2d5e53032955/download/som_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-som",
+      "sha256": "0d9585793df7de5cde92463155495eb8bb2f419cd458ca7e6227a0de2ebe45bc",
+      "bytes": 2435213,
+      "retained": false
+    },
+    "som-som_admin2_em.geojson": {
+      "url": "https://data.humdata.org/dataset/ec140a63-5330-4376-a3df-c7ebf73cfc3c/resource/79f7f826-6028-4650-b8f7-2d5e53032955/download/som_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-som",
+      "member": "som_admin2_em.geojson",
+      "archiveSha256": "0d9585793df7de5cde92463155495eb8bb2f419cd458ca7e6227a0de2ebe45bc",
+      "sha256": "c2be15227080789979c2cf9daf7ff52942f9604826e408455b7bf180dda21777",
+      "bytes": 674689
+    },
+    "som-som_admin1.geojson": {
+      "url": "https://data.humdata.org/dataset/ec140a63-5330-4376-a3df-c7ebf73cfc3c/resource/79f7f826-6028-4650-b8f7-2d5e53032955/download/som_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-som",
+      "member": "som_admin1.geojson",
+      "archiveSha256": "0d9585793df7de5cde92463155495eb8bb2f419cd458ca7e6227a0de2ebe45bc",
+      "sha256": "c6eecfd9ddde803e75cd26a5e2d66252b05a8cee304d277adb5619364c8559ea",
+      "bytes": 411189
+    },
+    "som-som_admin1_em.geojson": {
+      "url": "https://data.humdata.org/dataset/ec140a63-5330-4376-a3df-c7ebf73cfc3c/resource/79f7f826-6028-4650-b8f7-2d5e53032955/download/som_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-som",
+      "member": "som_admin1_em.geojson",
+      "archiveSha256": "0d9585793df7de5cde92463155495eb8bb2f419cd458ca7e6227a0de2ebe45bc",
+      "sha256": "2e76f94b3fa4bc29ac10638035d6041e70449d9806a86bf92cd17ee30fde9917",
+      "bytes": 488678
+    },
+    "som-som_admin2.geojson": {
+      "url": "https://data.humdata.org/dataset/ec140a63-5330-4376-a3df-c7ebf73cfc3c/resource/79f7f826-6028-4650-b8f7-2d5e53032955/download/som_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-som",
+      "member": "som_admin2.geojson",
+      "archiveSha256": "0d9585793df7de5cde92463155495eb8bb2f419cd458ca7e6227a0de2ebe45bc",
+      "sha256": "eee3a3329086eb52d0e03b08faa6b4fcc6c815b16e0ca47f22e562bc557021fe",
+      "bytes": 592157
+    },
+    "flag-som.svg": {
+      "url": "https://flagcdn.com/so.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT source artwork",
+      "sha256": "3a342342f94f00a74984e10743f4589e7856076df6686f05e3192cd0ee0300e1",
+      "bytes": 274
+    },
+    "eth-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-eth",
+      "sha256": "bb6e337a49eb86652d03a9eb0f95c728925c2c5d7f9c400684a13012287e0c05",
+      "bytes": 54885
+    },
+    "eth-source.zip": {
+      "url": "https://data.humdata.org/dataset/cb58fa1f-687d-4cac-81a7-655ab1efb2d0/resource/0518da1b-42d1-4624-ad64-768cb69f9d40/download/eth_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-eth",
+      "sha256": "62db6c6ef2bb205b430e5ae3406fb8f94b30ac77106db1aec5a1ad5e81244e7a",
+      "bytes": 23754149,
+      "retained": false
+    },
+    "eth-eth_admin1.geojson": {
+      "url": "https://data.humdata.org/dataset/cb58fa1f-687d-4cac-81a7-655ab1efb2d0/resource/0518da1b-42d1-4624-ad64-768cb69f9d40/download/eth_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-eth",
+      "member": "eth_admin1.geojson",
+      "archiveSha256": "62db6c6ef2bb205b430e5ae3406fb8f94b30ac77106db1aec5a1ad5e81244e7a",
+      "sha256": "37ddf46c416c04b3d573bc1f605fe1a10f8456685479f619b1190ddf6a4de3c5",
+      "bytes": 1180689
+    },
+    "eth-eth_admin2.geojson": {
+      "url": "https://data.humdata.org/dataset/cb58fa1f-687d-4cac-81a7-655ab1efb2d0/resource/0518da1b-42d1-4624-ad64-768cb69f9d40/download/eth_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-eth",
+      "member": "eth_admin2.geojson",
+      "archiveSha256": "62db6c6ef2bb205b430e5ae3406fb8f94b30ac77106db1aec5a1ad5e81244e7a",
+      "sha256": "a9e8f4d2265e7222666a0672040a1c9fea78f8144e1e62ea25e6e09aa3271ff4",
+      "bytes": 9767495
+    },
+    "eth-eth_admin3.geojson": {
+      "url": "https://data.humdata.org/dataset/cb58fa1f-687d-4cac-81a7-655ab1efb2d0/resource/0518da1b-42d1-4624-ad64-768cb69f9d40/download/eth_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-eth",
+      "member": "eth_admin3.geojson",
+      "archiveSha256": "62db6c6ef2bb205b430e5ae3406fb8f94b30ac77106db1aec5a1ad5e81244e7a",
+      "sha256": "6ed8c2968316af87ea0e896bed654b0d003d1ba9b231a16596828c7f7fb5fbf7",
+      "bytes": 40866287
+    },
+    "flag-eth.svg": {
+      "url": "https://flagcdn.com/et.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT source artwork",
+      "sha256": "980ec719a0be7227e6769b9bf9198b182b743b9544326f4ef2566ecd3ebfeb94",
+      "bytes": 809
+    },
+    "uga-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-uga",
+      "sha256": "45f9d8abb421fcf066804c3c5e1fefa00c88821648d140d235c7ce7840e395a9",
+      "bytes": 18575
+    },
+    "uga-source.zip": {
+      "url": "https://data.humdata.org/dataset/6d6d1495-196b-49d0-86b9-dc9022cde8e7/resource/4a409743-e1b7-40d7-ad05-e08920f4b099/download/uga_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-uga",
+      "sha256": "5d2cc90a25954dd1d085ef6707782df34f0c5a77d63f7ab7c96a2eec31b7a0d1",
+      "bytes": 37365937,
+      "retained": false
+    },
+    "uga-uga_admin1.geojson": {
+      "url": "https://data.humdata.org/dataset/6d6d1495-196b-49d0-86b9-dc9022cde8e7/resource/4a409743-e1b7-40d7-ad05-e08920f4b099/download/uga_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-uga",
+      "member": "uga_admin1.geojson",
+      "archiveSha256": "5d2cc90a25954dd1d085ef6707782df34f0c5a77d63f7ab7c96a2eec31b7a0d1",
+      "sha256": "3d182ffc5884675e5426a7230334f948f1bcebd859af34053c4042a28db17a44",
+      "bytes": 2567410
+    },
+    "uga-uga_admin2.geojson": {
+      "url": "https://data.humdata.org/dataset/6d6d1495-196b-49d0-86b9-dc9022cde8e7/resource/4a409743-e1b7-40d7-ad05-e08920f4b099/download/uga_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-uga",
+      "member": "uga_admin2.geojson",
+      "archiveSha256": "5d2cc90a25954dd1d085ef6707782df34f0c5a77d63f7ab7c96a2eec31b7a0d1",
+      "sha256": "3d9d34df4f78476d998ba572feeda5b3e4f9f0a2091710edb9100cd8c8042565",
+      "bytes": 16841131
+    },
+    "uga-uga_admin3.geojson": {
+      "url": "https://data.humdata.org/dataset/6d6d1495-196b-49d0-86b9-dc9022cde8e7/resource/4a409743-e1b7-40d7-ad05-e08920f4b099/download/uga_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-uga",
+      "member": "uga_admin3.geojson",
+      "archiveSha256": "5d2cc90a25954dd1d085ef6707782df34f0c5a77d63f7ab7c96a2eec31b7a0d1",
+      "sha256": "3c6c498943359bb5677021cd585f91d6fab97baad2ec934d3c0b322789d02e78",
+      "bytes": 19521991
+    },
+    "flag-uga.svg": {
+      "url": "https://flagcdn.com/ug.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT source artwork",
+      "sha256": "b0d36274f9eac739b04046783a38c18bebd42587a0b0b1cc3d31a32e1ec05374",
+      "bytes": 3616
+    },
+    "bdi-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-bdi",
+      "sha256": "560374134b863833873ae3c4068084e38d46625c2d9a22b0c0e428ecbdd6250e",
+      "bytes": 19583
+    },
+    "bdi-bdi_admin1.geojson": {
+      "url": "https://data.humdata.org/dataset/63148f32-4505-433d-b8ea-1fd8088b4bdf/resource/770dbebc-5b71-43ef-971a-7932645ad439/download/bdi_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-bdi",
+      "member": "bdi_admin1.geojson",
+      "archiveSha256": "5b9799d9f6346e3a36779f4f5721d1e5413b0617c460b95a342a72e5b2eb9c30",
+      "sha256": "44c76479fc00d8a4f84957494d140dc6f6e7d8b93a26f286ef28187a390fe272",
+      "bytes": 19184194
+    },
+    "bdi-bdi_admin2.geojson": {
+      "url": "https://data.humdata.org/dataset/63148f32-4505-433d-b8ea-1fd8088b4bdf/resource/770dbebc-5b71-43ef-971a-7932645ad439/download/bdi_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-bdi",
+      "member": "bdi_admin2.geojson",
+      "archiveSha256": "5b9799d9f6346e3a36779f4f5721d1e5413b0617c460b95a342a72e5b2eb9c30",
+      "sha256": "d203c06cca16a0f8e56c4f528915052e00e63281820010d1ee49103aa1055be1",
+      "bytes": 47361396
+    },
+    "bdi-bdi_admin3.geojson": {
+      "url": "https://data.humdata.org/dataset/63148f32-4505-433d-b8ea-1fd8088b4bdf/resource/770dbebc-5b71-43ef-971a-7932645ad439/download/bdi_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-bdi",
+      "member": "bdi_admin3.geojson",
+      "archiveSha256": "5b9799d9f6346e3a36779f4f5721d1e5413b0617c460b95a342a72e5b2eb9c30",
+      "sha256": "f8c813f56761dad8ff14e922f3f14324ed6953a0e09c43ba2e8415b0845de908",
+      "bytes": 119894633
+    },
+    "flag-bdi.svg": {
+      "url": "https://flagcdn.com/bi.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT source artwork",
+      "sha256": "00f86f0400888d0ecf5a2b9bfa66f176af6095f413d53d622b6c061c1723cfd9",
+      "bytes": 633
+    },
+    "rwa-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-rwa",
+      "sha256": "3ef9e1d8905b73e9e80bf57d9b4aadfe66f807d5929c42f521ee083d9c7ed1b0",
+      "bytes": 11978
+    },
+    "rwa-source.zip": {
+      "url": "https://data.humdata.org/dataset/2768bdfd-6486-4963-8e3d-e63149478eb4/resource/176eaace-708c-46b3-94e9-d5ba91cca08c/download/rwa_adm_2006_nisr_wgs1984_20181002_shp.zip",
+      "credit": "OCHA Regional Office for Southern and Eastern Africa (ROSEA) / OCHA HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-rwa",
+      "sha256": "7ac36f57ea3723db2ef773f5ae23657cfa21170919106fcfb82dba10cd423fe0",
+      "bytes": 15483326,
+      "retained": false
+    },
+    "rwa-rwa_adm1_2006_NISR_WGS1984_20181002.dbf": {
+      "url": "https://data.humdata.org/dataset/2768bdfd-6486-4963-8e3d-e63149478eb4/resource/176eaace-708c-46b3-94e9-d5ba91cca08c/download/rwa_adm_2006_nisr_wgs1984_20181002_shp.zip",
+      "credit": "OCHA Regional Office for Southern and Eastern Africa (ROSEA) / OCHA HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-rwa",
+      "member": "rwa_adm1_2006_NISR_WGS1984_20181002.dbf",
+      "archiveSha256": "7ac36f57ea3723db2ef773f5ae23657cfa21170919106fcfb82dba10cd423fe0",
+      "sha256": "4d3c6b244c3e758cc8e6026f1a96c9c802362c85b332db1a526089509c93865b",
+      "bytes": 11757
+    },
+    "rwa-rwa_adm1_2006_NISR_WGS1984_20181002.prj": {
+      "url": "https://data.humdata.org/dataset/2768bdfd-6486-4963-8e3d-e63149478eb4/resource/176eaace-708c-46b3-94e9-d5ba91cca08c/download/rwa_adm_2006_nisr_wgs1984_20181002_shp.zip",
+      "credit": "OCHA Regional Office for Southern and Eastern Africa (ROSEA) / OCHA HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-rwa",
+      "member": "rwa_adm1_2006_NISR_WGS1984_20181002.prj",
+      "archiveSha256": "7ac36f57ea3723db2ef773f5ae23657cfa21170919106fcfb82dba10cd423fe0",
+      "sha256": "a02a27b1d1982c8516d83398e85a3c8b1aef1713c13ef4d84d7bde17430c07c4",
+      "bytes": 145
+    },
+    "rwa-rwa_adm1_2006_NISR_WGS1984_20181002.shp": {
+      "url": "https://data.humdata.org/dataset/2768bdfd-6486-4963-8e3d-e63149478eb4/resource/176eaace-708c-46b3-94e9-d5ba91cca08c/download/rwa_adm_2006_nisr_wgs1984_20181002_shp.zip",
+      "credit": "OCHA Regional Office for Southern and Eastern Africa (ROSEA) / OCHA HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-rwa",
+      "member": "rwa_adm1_2006_NISR_WGS1984_20181002.shp",
+      "archiveSha256": "7ac36f57ea3723db2ef773f5ae23657cfa21170919106fcfb82dba10cd423fe0",
+      "sha256": "db237dc16b722f70f37693446edf7021bf3b24d633e2eb75fc65b664ab00b11e",
+      "bytes": 1197012
+    },
+    "rwa-rwa_adm1_2006_NISR_WGS1984_20181002.shx": {
+      "url": "https://data.humdata.org/dataset/2768bdfd-6486-4963-8e3d-e63149478eb4/resource/176eaace-708c-46b3-94e9-d5ba91cca08c/download/rwa_adm_2006_nisr_wgs1984_20181002_shp.zip",
+      "credit": "OCHA Regional Office for Southern and Eastern Africa (ROSEA) / OCHA HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-rwa",
+      "member": "rwa_adm1_2006_NISR_WGS1984_20181002.shx",
+      "archiveSha256": "7ac36f57ea3723db2ef773f5ae23657cfa21170919106fcfb82dba10cd423fe0",
+      "sha256": "950a37e0b3f1abcca131be8017be7f83885dac637ae6c037bd5deb2ee2d100c5",
+      "bytes": 140
+    },
+    "rwa-rwa_adm2_2006_NISR_WGS1984_20181002.dbf": {
+      "url": "https://data.humdata.org/dataset/2768bdfd-6486-4963-8e3d-e63149478eb4/resource/176eaace-708c-46b3-94e9-d5ba91cca08c/download/rwa_adm_2006_nisr_wgs1984_20181002_shp.zip",
+      "credit": "OCHA Regional Office for Southern and Eastern Africa (ROSEA) / OCHA HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-rwa",
+      "member": "rwa_adm2_2006_NISR_WGS1984_20181002.dbf",
+      "archiveSha256": "7ac36f57ea3723db2ef773f5ae23657cfa21170919106fcfb82dba10cd423fe0",
+      "sha256": "38b938b084b750bed72063b01a25e74cad2bf1324732612c1ecb4b7964291282",
+      "bytes": 84236
+    },
+    "rwa-rwa_adm2_2006_NISR_WGS1984_20181002.prj": {
+      "url": "https://data.humdata.org/dataset/2768bdfd-6486-4963-8e3d-e63149478eb4/resource/176eaace-708c-46b3-94e9-d5ba91cca08c/download/rwa_adm_2006_nisr_wgs1984_20181002_shp.zip",
+      "credit": "OCHA Regional Office for Southern and Eastern Africa (ROSEA) / OCHA HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-rwa",
+      "member": "rwa_adm2_2006_NISR_WGS1984_20181002.prj",
+      "archiveSha256": "7ac36f57ea3723db2ef773f5ae23657cfa21170919106fcfb82dba10cd423fe0",
+      "sha256": "a02a27b1d1982c8516d83398e85a3c8b1aef1713c13ef4d84d7bde17430c07c4",
+      "bytes": 145
+    },
+    "rwa-rwa_adm2_2006_NISR_WGS1984_20181002.shp": {
+      "url": "https://data.humdata.org/dataset/2768bdfd-6486-4963-8e3d-e63149478eb4/resource/176eaace-708c-46b3-94e9-d5ba91cca08c/download/rwa_adm_2006_nisr_wgs1984_20181002_shp.zip",
+      "credit": "OCHA Regional Office for Southern and Eastern Africa (ROSEA) / OCHA HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-rwa",
+      "member": "rwa_adm2_2006_NISR_WGS1984_20181002.shp",
+      "archiveSha256": "7ac36f57ea3723db2ef773f5ae23657cfa21170919106fcfb82dba10cd423fe0",
+      "sha256": "78a65e65552ab3b07e3cd3ff3335df14cb34d0b4e38110d6effbe9c33032d39d",
+      "bytes": 2913420
+    },
+    "rwa-rwa_adm2_2006_NISR_WGS1984_20181002.shx": {
+      "url": "https://data.humdata.org/dataset/2768bdfd-6486-4963-8e3d-e63149478eb4/resource/176eaace-708c-46b3-94e9-d5ba91cca08c/download/rwa_adm_2006_nisr_wgs1984_20181002_shp.zip",
+      "credit": "OCHA Regional Office for Southern and Eastern Africa (ROSEA) / OCHA HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-rwa",
+      "member": "rwa_adm2_2006_NISR_WGS1984_20181002.shx",
+      "archiveSha256": "7ac36f57ea3723db2ef773f5ae23657cfa21170919106fcfb82dba10cd423fe0",
+      "sha256": "50b14c6d7b8667ef2c06e4ad059695ae2c6c55268cb5c197684595cf7d6d07c6",
+      "bytes": 340
+    },
+    "rwa-rwa_adm3_2006_NISR_WGS1984_20181002.dbf": {
+      "url": "https://data.humdata.org/dataset/2768bdfd-6486-4963-8e3d-e63149478eb4/resource/176eaace-708c-46b3-94e9-d5ba91cca08c/download/rwa_adm_2006_nisr_wgs1984_20181002_shp.zip",
+      "credit": "OCHA Regional Office for Southern and Eastern Africa (ROSEA) / OCHA HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-rwa",
+      "member": "rwa_adm3_2006_NISR_WGS1984_20181002.dbf",
+      "archiveSha256": "7ac36f57ea3723db2ef773f5ae23657cfa21170919106fcfb82dba10cd423fe0",
+      "sha256": "61bdf393609bea7354d05b6cea333b70b9588442e3aac567d4fa3d19a73dc566",
+      "bytes": 1310466
+    },
+    "rwa-rwa_adm3_2006_NISR_WGS1984_20181002.prj": {
+      "url": "https://data.humdata.org/dataset/2768bdfd-6486-4963-8e3d-e63149478eb4/resource/176eaace-708c-46b3-94e9-d5ba91cca08c/download/rwa_adm_2006_nisr_wgs1984_20181002_shp.zip",
+      "credit": "OCHA Regional Office for Southern and Eastern Africa (ROSEA) / OCHA HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-rwa",
+      "member": "rwa_adm3_2006_NISR_WGS1984_20181002.prj",
+      "archiveSha256": "7ac36f57ea3723db2ef773f5ae23657cfa21170919106fcfb82dba10cd423fe0",
+      "sha256": "a02a27b1d1982c8516d83398e85a3c8b1aef1713c13ef4d84d7bde17430c07c4",
+      "bytes": 145
+    },
+    "rwa-rwa_adm3_2006_NISR_WGS1984_20181002.shp": {
+      "url": "https://data.humdata.org/dataset/2768bdfd-6486-4963-8e3d-e63149478eb4/resource/176eaace-708c-46b3-94e9-d5ba91cca08c/download/rwa_adm_2006_nisr_wgs1984_20181002_shp.zip",
+      "credit": "OCHA Regional Office for Southern and Eastern Africa (ROSEA) / OCHA HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-rwa",
+      "member": "rwa_adm3_2006_NISR_WGS1984_20181002.shp",
+      "archiveSha256": "7ac36f57ea3723db2ef773f5ae23657cfa21170919106fcfb82dba10cd423fe0",
+      "sha256": "29f7a59b7642f1c1046fe3439a19e2c51fa0cac47848e42128b3f4dbf6900f05",
+      "bytes": 9424324
+    },
+    "rwa-rwa_adm3_2006_NISR_WGS1984_20181002.shx": {
+      "url": "https://data.humdata.org/dataset/2768bdfd-6486-4963-8e3d-e63149478eb4/resource/176eaace-708c-46b3-94e9-d5ba91cca08c/download/rwa_adm_2006_nisr_wgs1984_20181002_shp.zip",
+      "credit": "OCHA Regional Office for Southern and Eastern Africa (ROSEA) / OCHA HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-rwa",
+      "member": "rwa_adm3_2006_NISR_WGS1984_20181002.shx",
+      "archiveSha256": "7ac36f57ea3723db2ef773f5ae23657cfa21170919106fcfb82dba10cd423fe0",
+      "sha256": "0feabd5fea15f33873ffd45db345b3b46292e8cedd2d510249c7f977eb5a30a8",
+      "bytes": 3428
+    },
+    "flag-rwa.svg": {
+      "url": "https://flagcdn.com/rw.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT source artwork",
+      "sha256": "21b67e23f19a1bca9b4ad87ff788b4992cebc00a6deeca1eb9c56c16b63c0de8",
+      "bytes": 894
+    },
+    "mdv-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-mdv",
+      "sha256": "6b047c3092e3d433854cdb9c5429cd8dab18ec4fe6ee9a3d759d3fe8793a831d",
+      "bytes": 37185
+    },
+    "mdv-source.zip": {
+      "url": "https://data.humdata.org/dataset/a968d227-24c9-49ea-bbce-cee04ee94819/resource/3e277382-c09a-4496-bd46-c1a2a92bb835/download/mdv_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-mdv",
+      "sha256": "054216dd5f312c98427c93e104dde2f64a5f23029a0533763481c24741ceea0b",
+      "bytes": 10094844,
+      "retained": false
+    },
+    "mdv-mdv_admin1.geojson": {
+      "url": "https://data.humdata.org/dataset/a968d227-24c9-49ea-bbce-cee04ee94819/resource/3e277382-c09a-4496-bd46-c1a2a92bb835/download/mdv_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-mdv",
+      "member": "mdv_admin1.geojson",
+      "archiveSha256": "054216dd5f312c98427c93e104dde2f64a5f23029a0533763481c24741ceea0b",
+      "sha256": "89dedb435f648527ea55024459cd2b4807d834781288a33a202267cf196548b2",
+      "bytes": 278274
+    },
+    "mdv-mdv_admin2.geojson": {
+      "url": "https://data.humdata.org/dataset/a968d227-24c9-49ea-bbce-cee04ee94819/resource/3e277382-c09a-4496-bd46-c1a2a92bb835/download/mdv_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-mdv",
+      "member": "mdv_admin2.geojson",
+      "archiveSha256": "054216dd5f312c98427c93e104dde2f64a5f23029a0533763481c24741ceea0b",
+      "sha256": "cf76ddc0f0bab77f8c8576d2e4999b14fb36dbb160afbcf083c9f7e54ec3afb5",
+      "bytes": 17274521
+    },
+    "flag-mdv.svg": {
+      "url": "https://flagcdn.com/mv.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT source artwork",
+      "sha256": "a825c00d340b88c63605d514c9c0e74ef17c0cf10caa0d0e46bb7ebee4788dd5",
+      "bytes": 247
+    },
+    "mdv-island-metadata.json": {
+      "url": "https://services7.arcgis.com/yvCbn3q8PPtPLZIM/arcgis/rest/services/island_20240509/FeatureServer/0?f=pjson",
+      "credit": "Geomatics Department, Maldives",
+      "license": "Data Usage License – Geomatics Department",
+      "page": "https://readme.onemap.mv/",
+      "sha256": "973358dd08335fbeb07acfb6a50b1c2b65b9f3574ee52da158070dac9c26f340",
+      "bytes": 14495
+    },
+    "mdv-island-count.json": {
+      "url": "https://services7.arcgis.com/yvCbn3q8PPtPLZIM/arcgis/rest/services/island_20240509/FeatureServer/0/query?where=1%3D1&returnCountOnly=true&f=json",
+      "sha256": "87824b76ac4a8977ee42ea1ecb63707e5b0f936748e446ba45a6ccef81f79f22",
+      "bytes": 183
+    },
+    "mdv-islands-0.geojson": {
+      "url": "https://services7.arcgis.com/yvCbn3q8PPtPLZIM/arcgis/rest/services/island_20240509/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=true&outSR=4326&orderByFields=OBJECTID&resultOffset=0&resultRecordCount=1000&f=geojson",
+      "credit": "Geomatics Department of Ministry of Infrastructure, Housing and Urban Development, Republic of Maldives",
+      "license": "Data Usage License – Geomatics Department",
+      "licenseUrl": "https://readme.onemap.mv/pdf/Data%20Usage%20License.pdf",
+      "page": "https://readme.onemap.mv/",
+      "sha256": "3436238f2da30842b87a77fce1751758d2a45fc2b954f3252eb64012300afaa6",
+      "bytes": 9739558
+    },
+    "mdv-islands-1000.geojson": {
+      "url": "https://services7.arcgis.com/yvCbn3q8PPtPLZIM/arcgis/rest/services/island_20240509/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=true&outSR=4326&orderByFields=OBJECTID&resultOffset=1000&resultRecordCount=1000&f=geojson",
+      "credit": "Geomatics Department of Ministry of Infrastructure, Housing and Urban Development, Republic of Maldives",
+      "license": "Data Usage License – Geomatics Department",
+      "licenseUrl": "https://readme.onemap.mv/pdf/Data%20Usage%20License.pdf",
+      "page": "https://readme.onemap.mv/",
+      "sha256": "688454ba836689ef879f707ba607d71d220b5b4d2bf67bca283359966a732550",
+      "bytes": 4811743
+    },
+    "mdv-license.pdf": {
+      "url": "https://readme.onemap.mv/pdf/Data%20Usage%20License.pdf",
+      "sha256": "472e6b994f2f84b81e111b11507815b70ef4a857be17af20032e42878dc086dd",
+      "bytes": 72809
+    },
+    "mdv-island-list.csv": {
+      "url": "https://readme.onemap.mv/csv/IslandList_20211101.csv",
+      "sha256": "7b34a9f732627cfbf96819a7662c738d92441802cbfc721922213f5d3675f9c8",
+      "bytes": 191852
+    },
+    "worldbank.json": {
+      "url": "https://api.worldbank.org/v2/country/SOM;ETH;UGA;BDI;RWA;MDV/indicator/SP.POP.TOTL;NY.GDP.MKTP.CD;NY.GDP.PCAP.CD?source=2&date=2020:2025&format=json&per_page=1000",
+      "credit": "World Bank WDI",
+      "license": "CC BY 4.0",
+      "sha256": "4b9703a4f2880406eafdb664aed2ce879d46346b11d0666adb3bb572eb5dee86",
+      "bytes": 22610
+    },
+    "som-population-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-som",
+      "sha256": "40c5e407fc26ec993eaea792b988dbbf99c0e9518b08818209cb9fabe852f954",
+      "bytes": 22543
+    },
+    "som-pop-som_pplp_adm1_v2.csv": {
+      "url": "https://data.humdata.org/dataset/6cac9c64-2716-4809-9e82-440839d421f6/resource/ba86a46c-f922-4f8f-a213-ad9dbd5154c8/download/som_pplp_adm1_v2.csv",
+      "credit": "OCHA Somalia / HDX COD-PS",
+      "license": "Other",
+      "page": "https://data.humdata.org/dataset/cod-ps-som",
+      "sha256": "58d4fe9cccdf3d12e8f152421a8233413b934da45a186aff2b2cc1c47a7dcb70",
+      "bytes": 1408
+    },
+    "som-pop-som_pplp_adm2_v2.csv": {
+      "url": "https://data.humdata.org/dataset/6cac9c64-2716-4809-9e82-440839d421f6/resource/a63d9729-c8fa-4456-a3fd-11034dd2117b/download/som_pplp_adm2_v2.csv",
+      "credit": "OCHA Somalia / HDX COD-PS",
+      "license": "Other",
+      "page": "https://data.humdata.org/dataset/cod-ps-som",
+      "sha256": "b9f43f391100c2a6eb0872e9bf2cb7141cb87528cf741baa175c1bfb04fbbf45",
+      "bytes": 6268
+    },
+    "som-pop-som_pplp_adm0_v2.csv": {
+      "url": "https://data.humdata.org/dataset/6cac9c64-2716-4809-9e82-440839d421f6/resource/2357ee7e-1874-46fe-8875-1a85596b6ab7/download/som_pplp_adm0_v2.csv",
+      "credit": "OCHA Somalia / HDX COD-PS",
+      "license": "Other",
+      "page": "https://data.humdata.org/dataset/cod-ps-som",
+      "sha256": "5e53f86a2d2cc36c9455cb904952c3865a8d176fbb107acbf428aea07edc56e7",
+      "bytes": 148
+    },
+    "eth-population-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-eth",
+      "sha256": "688d413ac699dd54763b3b6c4f24f00730712ee66f23fc1b74c3bdb3acbc7b81",
+      "bytes": 26312
+    },
+    "eth-pop-eth_admpop_adm0_2022_v2.csv": {
+      "url": "https://data.humdata.org/dataset/3d9b037f-5112-4afd-92a7-190a9082bd80/resource/4af389d5-b8db-4fa1-ab7c-b5119fc049df/download/eth_admpop_adm0_2022_v2.csv",
+      "credit": "OCHA Ethiopia / HDX COD-PS",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ps-eth",
+      "sha256": "423a32c312a843a4e5efc055dd4c0933d8593d17739d107635001331367d5848",
+      "bytes": 850
+    },
+    "eth-pop-eth_admpop_adm1_2022_v2.csv": {
+      "url": "https://data.humdata.org/dataset/3d9b037f-5112-4afd-92a7-190a9082bd80/resource/2ec96e53-b38f-4994-9a8c-5bbaa4c49e82/download/eth_admpop_adm1_2022_v2.csv",
+      "credit": "OCHA Ethiopia / HDX COD-PS",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ps-eth",
+      "sha256": "7e8c4af0ecc9aa42ebfe7b1ebb1542ff275a2d08fcc483b0f4ffdbc086991b78",
+      "bytes": 5203
+    },
+    "eth-pop-eth_admpop_adm2_2022_v2.csv": {
+      "url": "https://data.humdata.org/dataset/3d9b037f-5112-4afd-92a7-190a9082bd80/resource/bfb57304-3e22-498f-8a82-a345a8976852/download/eth_admpop_adm2_2022_v2.csv",
+      "credit": "OCHA Ethiopia / HDX COD-PS",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ps-eth",
+      "sha256": "4a9c86f3416016c502b4ec448513cdb47aed2269c4de4d325703789f1f1ce5b9",
+      "bytes": 32264
+    },
+    "eth-pop-eth_admpop_adm3_2022_v2.csv": {
+      "url": "https://data.humdata.org/dataset/3d9b037f-5112-4afd-92a7-190a9082bd80/resource/3f8150d4-6d5d-4659-a0a8-586e4689ae65/download/eth_admpop_adm3_2022_v2.csv",
+      "credit": "OCHA Ethiopia / HDX COD-PS",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ps-eth",
+      "sha256": "56efd8407dab2d8a0de43c5aa126e5bf10694db489299ff694b6b0b9b734eb97",
+      "bytes": 338609
+    },
+    "uga-population-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-uga",
+      "sha256": "2a6b5b6a416c4a2e63ca57b6be724bf09c8c50da3c24fbbc6148ad50d6530e07",
+      "bytes": 21663
+    },
+    "uga-pop-uga_admpop_adm0_2023.csv": {
+      "url": "https://data.humdata.org/dataset/9a997a19-0531-46cc-aa2e-a314d253c40f/resource/2f32712e-3666-4579-98cc-f4d7c75a846d/download/uga_admpop_adm0_2023.csv",
+      "credit": "UNFPA / HDX COD-PS",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ps-uga",
+      "sha256": "eac3e6960d60c127a664cc4228e5f773bc33275506a4f945465065e3e9ad5124",
+      "bytes": 887
+    },
+    "uga-pop-uga_admpop_adm1_2023.csv": {
+      "url": "https://data.humdata.org/dataset/9a997a19-0531-46cc-aa2e-a314d253c40f/resource/869522f7-419c-4bf6-90fb-e9a371e267ae/download/uga_admpop_adm1_2023.csv",
+      "credit": "UNFPA / HDX COD-PS",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ps-uga",
+      "sha256": "05ee20e48ffec9ae710f5a836ffe4f18d26fca25cae88637bfd56798f504f1fe",
+      "bytes": 2102
+    },
+    "uga-pop-uga_admpop_adm2_2023.csv": {
+      "url": "https://data.humdata.org/dataset/9a997a19-0531-46cc-aa2e-a314d253c40f/resource/bbad210a-3867-48a8-bb64-ae4585efd025/download/uga_admpop_adm2_2023.csv",
+      "credit": "UNFPA / HDX COD-PS",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ps-uga",
+      "sha256": "2173ab0fef8353784046311634160fcac66ee86f5bea3fabd7c3aaf697ae41ac",
+      "bytes": 45767
+    },
+    "bdi-population-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-bdi",
+      "sha256": "24115c5f916328393c275a96bb41c3d76378aea46bae27c5c04470aeefe0dba8",
+      "bytes": 13395
+    },
+    "bdi-pop-bdi_admpop_2022_adm0_v3.csv": {
+      "url": "https://data.humdata.org/dataset/61e643bc-e36d-4106-8815-4b952fc40e9c/resource/12224ae8-ff12-4933-8c05-7840b23fa346/download/bdi_admpop_2022_adm0_v3.csv",
+      "credit": "UNFPA / HDX COD-PS",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ps-bdi",
+      "sha256": "983f93ab9b464f41925ca28c027ba14e6397c6f412a839f1887314c0ae6ffb7d",
+      "bytes": 1583
+    },
+    "bdi-pop-bdi_admpop_2022_adm1_v3.csv": {
+      "url": "https://data.humdata.org/dataset/61e643bc-e36d-4106-8815-4b952fc40e9c/resource/094c1e77-8ff0-42d5-94fa-4940a3da08e2/download/bdi_admpop_2022_adm1_v3.csv",
+      "credit": "UNFPA / HDX COD-PS",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ps-bdi",
+      "sha256": "87fafd9016df91887d1038c8debecd9843f1ec71d10ff6e11acc6acc186a8d1c",
+      "bytes": 13168
+    },
+    "bdi-pop-bdi_admpop_2022_adm2_v3.csv": {
+      "url": "https://data.humdata.org/dataset/61e643bc-e36d-4106-8815-4b952fc40e9c/resource/caf569e5-177b-4a6f-abc9-b01e8bf85c43/download/bdi_admpop_2022_adm2_v3.csv",
+      "credit": "UNFPA / HDX COD-PS",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ps-bdi",
+      "sha256": "e1f888541d4e0d1b81be5bcf28dca339ec63ddcfce2624aced9752d919f337be",
+      "bytes": 73458
+    },
+    "rwa-population-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-rwa",
+      "sha256": "1edd2d45d3653cf8837ee11d209d2544947782fa1f3dd4a48cfcb6bee501dc7f",
+      "bytes": 29256
+    },
+    "rwa-pop-rwa_admpop_adm0_2023.csv": {
+      "url": "https://data.humdata.org/dataset/94b26815-cd91-4553-b64d-7a6f153400bc/resource/164eee66-f158-41af-81d7-4f240151ff8d/download/rwa_admpop_adm0_2023.csv",
+      "credit": "UNFPA / HDX COD-PS",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ps-rwa",
+      "sha256": "e16295db3e55d5d744926ad4c14171503bba9ce14af741314915289403a6b314",
+      "bytes": 781
+    },
+    "rwa-pop-rwa_admpop_adm1_2023.csv": {
+      "url": "https://data.humdata.org/dataset/94b26815-cd91-4553-b64d-7a6f153400bc/resource/63dfb3b5-7aac-4cdd-9fa5-baac711b2a50/download/rwa_admpop_adm1_2023.csv",
+      "credit": "UNFPA / HDX COD-PS",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ps-rwa",
+      "sha256": "0546705be257783971748cc224a6d5ffff22e0f6fcbd4332e0a8cae4a5d31fa8",
+      "bytes": 2190
+    },
+    "rwa-pop-rwa_admpop_adm2_2023.csv": {
+      "url": "https://data.humdata.org/dataset/94b26815-cd91-4553-b64d-7a6f153400bc/resource/4c88332a-ed41-4220-ac72-d3bddd2a3a05/download/rwa_admpop_adm2_2023.csv",
+      "credit": "UNFPA / HDX COD-PS",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ps-rwa",
+      "sha256": "dc6d1b2b9939ebc8373421b9f5a4e7475ff68f94b1a47a2bd3f8aea8a676df4d",
+      "bytes": 11182
+    },
+    "rwa-pop-rwa_admpop_adm3_2023.csv": {
+      "url": "https://data.humdata.org/dataset/94b26815-cd91-4553-b64d-7a6f153400bc/resource/b07265ad-055e-4ea8-bb95-de3adb1ae0a1/download/rwa_admpop_adm3_2023.csv",
+      "credit": "UNFPA / HDX COD-PS",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ps-rwa",
+      "sha256": "9b160abc6821bfec3849da746872af0134cf3030e9d2a5e8fbff3700425283b2",
+      "bytes": 127971
+    },
+    "mdv-population-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-mdv",
+      "sha256": "52aa72d77d1415b5ae1ef82d521190900932b011b9aa6a72a3c9c727a11ebbf0",
+      "bytes": 19709
+    },
+    "mdv-pop-mdv_admpop_adm0_2022.csv": {
+      "url": "https://data.humdata.org/dataset/e9c35494-3097-418c-93e6-1496e390a8d9/resource/3ce44124-f312-4434-9785-97911defe923/download/mdv_admpop_adm0_2022.csv",
+      "credit": "UNFPA / HDX COD-PS",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ps-mdv",
+      "sha256": "3f4e2492244dffa229f5e7945061430a4d0268300f6b3e4dba8b508734e8fad9",
+      "bytes": 752
+    },
+    "mdv-pop-mdv_admpop_adm1_2022.csv": {
+      "url": "https://data.humdata.org/dataset/e9c35494-3097-418c-93e6-1496e390a8d9/resource/4ad677e1-7948-47d5-9379-a491675cbf7d/download/mdv_admpop_adm1_2022.csv",
+      "credit": "UNFPA / HDX COD-PS",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ps-mdv",
+      "sha256": "6b380781134ea8f35732ffd3f2b0e269c6996480d44e267472bb23e278d55867",
+      "bytes": 7571
+    },
+    "flag-somaliland.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Flag_of_Somaliland.svg",
+      "credit": "Government of Somaliland / Wikimedia Commons",
+      "license": "Public domain",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Somaliland.svg",
+      "sha256": "8457c77f4b50ed3980ac47fb355034ef8814b347d8bba8051b08b0e40a76b5d9",
+      "bytes": 36748
+    },
+    "lake-tana-osm.json": {
+      "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A120%5D%3Brel%5B%22natural%22%3D%22water%22%5D%5B%22name%3Aen%22%3D%22Lake%20Tana%22%5D%3Bout%20body%3B%3E%3Bout%20skel%20qt%3B",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/",
+      "sha256": "194d439889179d85edc37c6a54373ab8557d93fd3763684568f4a72cf3e90f3f",
+      "bytes": 2153589
+    },
+    "rwa-nisr-population.html": {
+      "url": "https://statistics.gov.rw/statistical-publications/population-size-and-population-characteristics",
+      "credit": "National Institute of Statistics of Rwanda",
+      "license": "Official census table; attribution",
+      "page": "https://statistics.gov.rw/statistical-publications/population-size-and-population-characteristics",
+      "sha256": "1d196396007911798a460049ccf95e3b116b709a6829278f71a4a1d2ae37259e",
+      "bytes": 106001
+    }
+  }
+}

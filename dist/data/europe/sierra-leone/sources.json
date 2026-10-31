@@ -1,0 +1,88 @@
+{
+  "retrieved": "2026-10-30",
+  "coverage": "Sierra Leone: 5 regions, 16 districts. Dated 2023 boundary reference; source dates and licenses are retained below. Child areas are reconciled within their displayed parents. Shared land frontiers are owned once; coastlines and maritime boundaries are not stroked. National statistics are not distributed to subdivisions.",
+  "counts": {
+    "1": 5,
+    "2": 16
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "SLE-hdx.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-sle",
+      "sha256": "c11cc2487326a1637b693a796297501d7b317a74b1b36ad7c64d2b48fc513d1e",
+      "bytes": 40949
+    },
+    "SLE-gb.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/SLE/ADM1/",
+      "sha256": "2ce60454ed4a7e9ff2b71c74ca7749271e6e7c10f8341444bf220459768f86fd",
+      "bytes": 1808
+    },
+    "SLE-adm1.geojson": {
+      "url": "https://data.humdata.org/dataset/a4816317-a913-4619-b1e9-d89e21c056b4/resource/dfd53f5f-9846-4f14-bda7-953d3c767279/download/sle_admin_boundaries.geojson.zip",
+      "member": "sle_admin1.geojson",
+      "archiveSha256": "33f5a966603937437ae39463b1196901ddccc3a10275bb25b7eda75878487816",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-sle",
+      "sha256": "79c3f269e76d173f3b61f8ad8c96e94c774c25f5b12f92264e57b716a2222d2e",
+      "bytes": 1299859
+    },
+    "SLE-adm2.geojson": {
+      "url": "https://data.humdata.org/dataset/a4816317-a913-4619-b1e9-d89e21c056b4/resource/dfd53f5f-9846-4f14-bda7-953d3c767279/download/sle_admin_boundaries.geojson.zip",
+      "member": "sle_admin2.geojson",
+      "archiveSha256": "33f5a966603937437ae39463b1196901ddccc3a10275bb25b7eda75878487816",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-sle",
+      "sha256": "1867aa0e2cb0b13049055ce78fdd39e8ac235ce06d2a8ad7068c2f2bc4fc5cd4",
+      "bytes": 1685101
+    },
+    "flag-sl.svg": {
+      "url": "https://flagcdn.com/sl.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT distribution",
+      "sha256": "21d7e0663d2b8e1d455a0e1456c63dfbb273becdacbf7c1fa0e22d915f136cf4",
+      "bytes": 194
+    },
+    "SLE-adm3.geojson": {
+      "url": "https://data.humdata.org/dataset/a4816317-a913-4619-b1e9-d89e21c056b4/resource/dfd53f5f-9846-4f14-bda7-953d3c767279/download/sle_admin_boundaries.geojson.zip",
+      "member": "sle_admin3.geojson",
+      "archiveSha256": "33f5a966603937437ae39463b1196901ddccc3a10275bb25b7eda75878487816",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-sle",
+      "sha256": "f3622998329a80d96ac50bb35fb109cf432700800218e67540ec3ab73ac4567a",
+      "bytes": 3418653
+    },
+    "SLE-adm0.geojson": {
+      "url": "https://data.humdata.org/dataset/a4816317-a913-4619-b1e9-d89e21c056b4/resource/dfd53f5f-9846-4f14-bda7-953d3c767279/download/sle_admin_boundaries.geojson.zip",
+      "member": "sle_admin0.geojson",
+      "archiveSha256": "33f5a966603937437ae39463b1196901ddccc3a10275bb25b7eda75878487816",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-sle",
+      "sha256": "8ede355b30cf85833cbfb3b4ecd1c6b83fc62e42b55b8ac4debac012867078b1",
+      "bytes": 1043672
+    },
+    "naturalEarth": {
+      "url": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+      "license": "Public domain",
+      "credit": "Natural Earth",
+      "method": "Land-frontier guides, lake separation and the neutral Bir Tawil reference; displayed country borders follow reconciled land geometry.",
+      "files": {
+        "ne-borders.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-borders.json.gz",
+          "sha256": "a2c796c19a530964eedaecde02e605150607cc0a0517da68cf013ddeeed8655c"
+        },
+        "ne-countries.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-countries.json.gz",
+          "sha256": "103135920ec1bfdd5ada2f4f7e0ba1e985b28f881d39ef9343a8a43d92b23610"
+        },
+        "ne-lakes.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-lakes.json.gz",
+          "sha256": "1550308007c3457c65e68b2a47d06797d474073cf7fdeb5eaf6ff55164d1903e"
+        }
+      }
+    }
+  }
+}

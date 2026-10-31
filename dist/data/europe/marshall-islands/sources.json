@@ -1,0 +1,64 @@
+{
+  "retrieved": "2026-10-30",
+  "coverage": "Marshall Islands: 25 municipality reference areas. Dated 2017 boundary reference; source dates and licenses are retained below. Child areas are reconciled within their displayed parents. Shared land frontiers are owned once; coastlines and maritime boundaries are not stroked. National statistics are not distributed to subdivisions. Ordinary quiz pools exclude unassigned offshore reference land; lagoon and sea areas are not land.",
+  "counts": {
+    "1": 25
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "MHL-hdx.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-mhl",
+      "sha256": "e8689d7b7dbbc16f9a69a66af54af1e9cbfedb659e503583e33b946f5f7068c6",
+      "bytes": 11214
+    },
+    "MHL-gb.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/MHL/ADM1/",
+      "sha256": "156c7585b56908b18545ac6cdc34ffd81d3e1ec00737627d59ba8b96c088096a",
+      "bytes": 1766
+    },
+    "MHL-adm1.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/MHL/ADM1/geoBoundaries-MHL-ADM1.geojson",
+      "credit": "OpenStreetMap, Wambacher / geoBoundaries",
+      "license": "Open Data Commons Open Database License 1.0",
+      "page": "www.openstreetmap.org/copyright",
+      "year": "2017",
+      "sha256": "148cca24be2a9c92476d915409bdc5b222812237a89dabe58daf95b5243c9c9b",
+      "bytes": 327376
+    },
+    "flag-mh.svg": {
+      "url": "https://flagcdn.com/mh.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT distribution",
+      "sha256": "4d9431d294c64f7e972d174778186715be741d5941e23db89a32dcffcfbfa2ab",
+      "bytes": 796
+    },
+    "MHL-coast.json": {
+      "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A180%5D%3Brel%5B%22ISO3166-1%22%3D%22MH%22%5D%5B%22boundary%22%3D%22administrative%22%5D%5B%22admin_level%22%3D%222%22%5D%3Bmap_to_area%3Bway(area)%5B%22natural%22%3D%22coastline%22%5D%3Bout%20geom%3B",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/copyright",
+      "sha256": "f825e261b5f459efae15b6f2c1cfd10da32585cfff2ca031290e4d75b745e618",
+      "bytes": 5416535
+    },
+    "naturalEarth": {
+      "url": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+      "license": "Public domain",
+      "credit": "Natural Earth",
+      "method": "Land-frontier guides, lake separation and the neutral Bir Tawil reference; displayed country borders follow reconciled land geometry.",
+      "files": {
+        "ne-borders.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-borders.json.gz",
+          "sha256": "a2c796c19a530964eedaecde02e605150607cc0a0517da68cf013ddeeed8655c"
+        },
+        "ne-countries.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-countries.json.gz",
+          "sha256": "103135920ec1bfdd5ada2f4f7e0ba1e985b28f881d39ef9343a8a43d92b23610"
+        },
+        "ne-lakes.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-lakes.json.gz",
+          "sha256": "1550308007c3457c65e68b2a47d06797d474073cf7fdeb5eaf6ff55164d1903e"
+        }
+      }
+    }
+  }
+}

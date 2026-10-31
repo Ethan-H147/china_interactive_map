@@ -1,0 +1,105 @@
+{
+  "retrieved": "2026-10-30",
+  "coverage": "Fiji: 5 divisions. Dated 2026 boundary reference; source dates and licenses are retained below. Child areas are reconciled within their displayed parents. Shared land frontiers are owned once; coastlines and maritime boundaries are not stroked. National statistics are not distributed to subdivisions. Ordinary quiz pools exclude unassigned offshore reference land; lagoon and sea areas are not land.",
+  "counts": {
+    "1": 5
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "FJI-hdx.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-fji",
+      "sha256": "9491def2c289878a4e1a20acb71f1e2fcd83e27b6304401382eeb0a3075a4c0d",
+      "bytes": 29897
+    },
+    "FJI-gb.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/FJI/ADM1/",
+      "sha256": "9a285e2e5d0b3d7bf342bc5f510e02a3df46adac7e64fb5e125c5273af491f32",
+      "bytes": 1705
+    },
+    "FJI-adm1.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/FJI/ADM1/geoBoundaries-FJI-ADM1.geojson",
+      "credit": "geoBoundaries, Wikimedia Commons / geoBoundaries",
+      "license": "Creative Commons Attribution 2.5 Generic",
+      "page": "en.wikipedia.org/wiki/File",
+      "year": "2006",
+      "sha256": "61b6f3d135dd1de37bc55b78936bf0758fea96ffbcf4337f0c153a30bb564433",
+      "bytes": 40808
+    },
+    "flag-fj.svg": {
+      "url": "https://flagcdn.com/fj.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT distribution",
+      "sha256": "e2c0c872c02b315510c6923a7913d1783accabab0ea1eef103a3f23165af320f",
+      "bytes": 40121
+    },
+    "FJI-coast-part-0.json": {
+      "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A180%5D%3Bway%5B%22natural%22%3D%22coastline%22%5D(-22%2C176%2C-12%2C180)%3Bout%20geom%3B",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "sha256": "ecd36cb5c841e57364c79a7db33fd9c23b1e1859d831839e9ccf043187e832af",
+      "bytes": 9841594
+    },
+    "FJI-coast-part-1.json": {
+      "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A180%5D%3Bway%5B%22natural%22%3D%22coastline%22%5D(-22%2C-180%2C-12%2C-178)%3Bout%20geom%3B",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "sha256": "7c7a2176b87fdd18c24c664aa4519cee9b1f140785101b4e896cf4e69fd25992",
+      "bytes": 2472331
+    },
+    "FJI-coast.json": {
+      "url": "Retained Fiji coastline bounding-box batches",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "sha256": "7c463b1ee37f9132e5f45c8a3140e51a495416384cde3bd42fd94668f85d2571",
+      "bytes": 9374102
+    },
+    "FJI-coast-neighbors.json": {
+      "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A180%5D%3Bway(bn%3A241969312%2C241954699%2C241953141%2C241960766%2C241961397%2C242070251%2C242070269%2C241971297%2C6130221678%2C6130221670)%5B%22natural%22%3D%22coastline%22%5D%3Bout%20geom%3B",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "sha256": "ce07522aabcb6e7d4d992cab2075b79a5e6edabfd551d3ab00c92748e48aaeef",
+      "bytes": 287
+    },
+    "FJI-country-osm.json": {
+      "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A180%5D%3Brel%5B%22ISO3166-1%22%3D%22FJ%22%5D%5B%22admin_level%22%3D%222%22%5D%3Bout%20geom%3B",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "sha256": "96c724908d2d3febb9f4eac3bc43bc450a95146235e09c426afa61636fc63d66",
+      "bytes": 35562
+    },
+    "FJI-admin-osm.json": {
+      "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A180%5D%3Brel%5B%22boundary%22%3D%22administrative%22%5D%5B%22ISO3166-2%22~%22%5EFJ-%5BCENWR%5D%24%22%5D%3Bout%20geom%3B",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "sha256": "ae719f8c10f2f8d354f32f3939aaa32213583a67ac5d0f3b418f6b9fbedc7f17",
+      "bytes": 496869
+    },
+    "FJI-current-adm1.geojson": {
+      "url": "Derived from retained FJI-admin-osm.json administrative relations",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "sha256": "c5160367af75cb29666e04640783cfccfd2ec2b1b7b8e17acd85a1566f951110",
+      "bytes": 232139
+    },
+    "naturalEarth": {
+      "url": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+      "license": "Public domain",
+      "credit": "Natural Earth",
+      "method": "Land-frontier guides, lake separation and the neutral Bir Tawil reference; displayed country borders follow reconciled land geometry.",
+      "files": {
+        "ne-borders.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-borders.json.gz",
+          "sha256": "a2c796c19a530964eedaecde02e605150607cc0a0517da68cf013ddeeed8655c"
+        },
+        "ne-countries.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-countries.json.gz",
+          "sha256": "103135920ec1bfdd5ada2f4f7e0ba1e985b28f881d39ef9343a8a43d92b23610"
+        },
+        "ne-lakes.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-lakes.json.gz",
+          "sha256": "1550308007c3457c65e68b2a47d06797d474073cf7fdeb5eaf6ff55164d1903e"
+        }
+      }
+    }
+  }
+}

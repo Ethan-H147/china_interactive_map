@@ -1,0 +1,88 @@
+{
+  "retrieved": "2026-10-30",
+  "coverage": "The 2026 release reflects the five-province, 42-commune reform. Its third level contains 451 zones and 11 protected-area reference pieces, not 462 administrative zones. Local areas are clipped to their displayed parent and residual source gaps are reconciled within that parent. Inland lake water is excluded; coastlines have no border stroke. Population is not inferred by distributing national totals.",
+  "counts": {
+    "1": 5,
+    "2": 42,
+    "3": 462
+  },
+  "processing": "Retained source bytes are verified by SHA-256. Administrative polygons are cleaned together at 0.00012-degree simplification; Maldives island footprints retain government source resolution. Complete neighboring outline arcs share projected endpoints and previously established junctions. Local areas are clipped individually on a mic degree lattice, with source gaps assigned within their displayed parent. Lake masks preserve the 56 mapped Lake Tana islands. Coastlines have no border stroke. Only selected-parent local geometry loads.",
+  "sources": {
+    "bdi-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-bdi",
+      "sha256": "560374134b863833873ae3c4068084e38d46625c2d9a22b0c0e428ecbdd6250e",
+      "bytes": 19583
+    },
+    "bdi-bdi_admin1.geojson": {
+      "url": "https://data.humdata.org/dataset/63148f32-4505-433d-b8ea-1fd8088b4bdf/resource/770dbebc-5b71-43ef-971a-7932645ad439/download/bdi_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-bdi",
+      "member": "bdi_admin1.geojson",
+      "archiveSha256": "5b9799d9f6346e3a36779f4f5721d1e5413b0617c460b95a342a72e5b2eb9c30",
+      "sha256": "44c76479fc00d8a4f84957494d140dc6f6e7d8b93a26f286ef28187a390fe272",
+      "bytes": 19184194
+    },
+    "bdi-bdi_admin2.geojson": {
+      "url": "https://data.humdata.org/dataset/63148f32-4505-433d-b8ea-1fd8088b4bdf/resource/770dbebc-5b71-43ef-971a-7932645ad439/download/bdi_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-bdi",
+      "member": "bdi_admin2.geojson",
+      "archiveSha256": "5b9799d9f6346e3a36779f4f5721d1e5413b0617c460b95a342a72e5b2eb9c30",
+      "sha256": "d203c06cca16a0f8e56c4f528915052e00e63281820010d1ee49103aa1055be1",
+      "bytes": 47361396
+    },
+    "bdi-bdi_admin3.geojson": {
+      "url": "https://data.humdata.org/dataset/63148f32-4505-433d-b8ea-1fd8088b4bdf/resource/770dbebc-5b71-43ef-971a-7932645ad439/download/bdi_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-bdi",
+      "member": "bdi_admin3.geojson",
+      "archiveSha256": "5b9799d9f6346e3a36779f4f5721d1e5413b0617c460b95a342a72e5b2eb9c30",
+      "sha256": "f8c813f56761dad8ff14e922f3f14324ed6953a0e09c43ba2e8415b0845de908",
+      "bytes": 119894633
+    },
+    "flag-bdi.svg": {
+      "url": "https://flagcdn.com/bi.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT source artwork",
+      "sha256": "00f86f0400888d0ecf5a2b9bfa66f176af6095f413d53d622b6c061c1723cfd9",
+      "bytes": 633
+    },
+    "bdi-population-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-bdi",
+      "sha256": "24115c5f916328393c275a96bb41c3d76378aea46bae27c5c04470aeefe0dba8",
+      "bytes": 13395
+    },
+    "bdi-pop-bdi_admpop_2022_adm0_v3.csv": {
+      "url": "https://data.humdata.org/dataset/61e643bc-e36d-4106-8815-4b952fc40e9c/resource/12224ae8-ff12-4933-8c05-7840b23fa346/download/bdi_admpop_2022_adm0_v3.csv",
+      "credit": "UNFPA / HDX COD-PS",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ps-bdi",
+      "sha256": "983f93ab9b464f41925ca28c027ba14e6397c6f412a839f1887314c0ae6ffb7d",
+      "bytes": 1583
+    },
+    "bdi-pop-bdi_admpop_2022_adm1_v3.csv": {
+      "url": "https://data.humdata.org/dataset/61e643bc-e36d-4106-8815-4b952fc40e9c/resource/094c1e77-8ff0-42d5-94fa-4940a3da08e2/download/bdi_admpop_2022_adm1_v3.csv",
+      "credit": "UNFPA / HDX COD-PS",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ps-bdi",
+      "sha256": "87fafd9016df91887d1038c8debecd9843f1ec71d10ff6e11acc6acc186a8d1c",
+      "bytes": 13168
+    },
+    "bdi-pop-bdi_admpop_2022_adm2_v3.csv": {
+      "url": "https://data.humdata.org/dataset/61e643bc-e36d-4106-8815-4b952fc40e9c/resource/caf569e5-177b-4a6f-abc9-b01e8bf85c43/download/bdi_admpop_2022_adm2_v3.csv",
+      "credit": "UNFPA / HDX COD-PS",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ps-bdi",
+      "sha256": "e1f888541d4e0d1b81be5bcf28dca339ec63ddcfce2624aced9752d919f337be",
+      "bytes": 73458
+    }
+  },
+  "numericalReturnsRemoved": 2733,
+  "populationCoverage": {
+    "matched": 0,
+    "method": "Only verified source identities and dated observations are assigned. Rwanda uses the NISR 2022 census; the inconsistent COD-PS 2023 provincial totals are not used. No older Burundi province population is transferred to the new five provinces. National GDP is never allocated to subdivisions."
+  }
+}

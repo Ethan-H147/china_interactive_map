@@ -1,0 +1,51 @@
+{
+  "retrieved": "2026-10-30",
+  "coverage": "Nauru: 14 districts. Dated 2005 boundary reference; source dates and licenses are retained below. Child areas are reconciled within their displayed parents. Shared land frontiers are owned once; coastlines and maritime boundaries are not stroked. National statistics are not distributed to subdivisions.",
+  "counts": {
+    "1": 14
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "NRU-gb.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/NRU/ADM1/",
+      "sha256": "8ffaa1de84af0f7e3b2f62c2da2017284c06d8ade164c61596377169d29ec49e",
+      "bytes": 1722
+    },
+    "NRU-adm1.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/NRU/ADM1/geoBoundaries-NRU-ADM1.geojson",
+      "credit": "geoBoundaries, FreeMapViewer / geoBoundaries",
+      "license": "Public Domain",
+      "page": "creativecommons.org/share-your-work/public-domain/",
+      "year": "2005",
+      "sha256": "afb3d32bd9c6ec0fc04e5feb4a943cdf0db71a83f7f25d8f0f12b1270d1617fe",
+      "bytes": 152843
+    },
+    "flag-nr.svg": {
+      "url": "https://flagcdn.com/nr.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT distribution",
+      "sha256": "1db6563151cfc25388f8167a967a96b0794cde41f1bcfa3e521bdaa794af2fcc",
+      "bytes": 545
+    },
+    "naturalEarth": {
+      "url": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+      "license": "Public domain",
+      "credit": "Natural Earth",
+      "method": "Land-frontier guides, lake separation and the neutral Bir Tawil reference; displayed country borders follow reconciled land geometry.",
+      "files": {
+        "ne-borders.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-borders.json.gz",
+          "sha256": "a2c796c19a530964eedaecde02e605150607cc0a0517da68cf013ddeeed8655c"
+        },
+        "ne-countries.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-countries.json.gz",
+          "sha256": "103135920ec1bfdd5ada2f4f7e0ba1e985b28f881d39ef9343a8a43d92b23610"
+        },
+        "ne-lakes.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-lakes.json.gz",
+          "sha256": "1550308007c3457c65e68b2a47d06797d474073cf7fdeb5eaf6ff55164d1903e"
+        }
+      }
+    }
+  }
+}

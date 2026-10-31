@@ -1,0 +1,88 @@
+{
+  "retrieved": "2026-10-30",
+  "coverage": "Guinea: 8 regions, 34 prefectures & conakry. Dated 2016 boundary reference; source dates and licenses are retained below. Child areas are reconciled within their displayed parents. Shared land frontiers are owned once; coastlines and maritime boundaries are not stroked. National statistics are not distributed to subdivisions.",
+  "counts": {
+    "1": 8,
+    "2": 34
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "GIN-hdx.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-gin",
+      "sha256": "a16370bee8e69df745ebfd9c5b79f5e10ca53f501af8e75c1501848d4744ae27",
+      "bytes": 38423
+    },
+    "GIN-gb.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/GIN/ADM1/",
+      "sha256": "ea511b699fa3a3c7b85f6b9e19db5dd733f0357aa73edeaa418837acecafdbba",
+      "bytes": 1851
+    },
+    "GIN-adm2.geojson": {
+      "url": "https://data.humdata.org/dataset/f814a950-4d4e-4f46-a880-4da5522f14c4/resource/25ff3310-b84d-46cd-a50f-16e831332193/download/gin_admin_boundaries.geojson.zip",
+      "member": "gin_admin2_em.geojson",
+      "archiveSha256": "d80761c508fc9368ec17111e06680cb90296a512b143b90b81a7c27b5d507677",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-gin",
+      "sha256": "031f62ed90494f4053785c92850a17d4f6c7d9b2aecc15a2ea20d21dc73f33ef",
+      "bytes": 956352
+    },
+    "GIN-adm1.geojson": {
+      "url": "https://data.humdata.org/dataset/f814a950-4d4e-4f46-a880-4da5522f14c4/resource/25ff3310-b84d-46cd-a50f-16e831332193/download/gin_admin_boundaries.geojson.zip",
+      "member": "gin_admin1.geojson",
+      "archiveSha256": "d80761c508fc9368ec17111e06680cb90296a512b143b90b81a7c27b5d507677",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-gin",
+      "sha256": "fab88415a1cb3513e96537705500e35feb2e1c4698244007c9631e6f5a27d920",
+      "bytes": 403767
+    },
+    "flag-gn.svg": {
+      "url": "https://flagcdn.com/gn.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT distribution",
+      "sha256": "4932e18d832d6a781bc00400b69136cc9406234d3800e1e66ea809550a84b423",
+      "bytes": 205
+    },
+    "GIN-adm3.geojson": {
+      "url": "https://data.humdata.org/dataset/f814a950-4d4e-4f46-a880-4da5522f14c4/resource/25ff3310-b84d-46cd-a50f-16e831332193/download/gin_admin_boundaries.geojson.zip",
+      "member": "gin_admin3_em.geojson",
+      "archiveSha256": "d80761c508fc9368ec17111e06680cb90296a512b143b90b81a7c27b5d507677",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-gin",
+      "sha256": "9b07743b8d0fcd013f4331ece311d6997846c18177e5277710d479e75ad0cd41",
+      "bytes": 1609570
+    },
+    "GIN-adm0.geojson": {
+      "url": "https://data.humdata.org/dataset/f814a950-4d4e-4f46-a880-4da5522f14c4/resource/25ff3310-b84d-46cd-a50f-16e831332193/download/gin_admin_boundaries.geojson.zip",
+      "member": "gin_admin0.geojson",
+      "archiveSha256": "d80761c508fc9368ec17111e06680cb90296a512b143b90b81a7c27b5d507677",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-gin",
+      "sha256": "177945899947f89c8f35feca9ebe43a7225ce06faee74226dbf50d27971b6848",
+      "bytes": 281735
+    },
+    "naturalEarth": {
+      "url": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+      "license": "Public domain",
+      "credit": "Natural Earth",
+      "method": "Land-frontier guides, lake separation and the neutral Bir Tawil reference; displayed country borders follow reconciled land geometry.",
+      "files": {
+        "ne-borders.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-borders.json.gz",
+          "sha256": "a2c796c19a530964eedaecde02e605150607cc0a0517da68cf013ddeeed8655c"
+        },
+        "ne-countries.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-countries.json.gz",
+          "sha256": "103135920ec1bfdd5ada2f4f7e0ba1e985b28f881d39ef9343a8a43d92b23610"
+        },
+        "ne-lakes.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-lakes.json.gz",
+          "sha256": "1550308007c3457c65e68b2a47d06797d474073cf7fdeb5eaf6ff55164d1903e"
+        }
+      }
+    }
+  }
+}

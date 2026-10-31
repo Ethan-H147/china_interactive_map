@@ -1,0 +1,18 @@
+{
+  "iso": "SYC",
+  "type": "gb",
+  "layers": [
+    {
+      "level": 1,
+      "file": "SYC-adm1.geojson",
+      "count": 26,
+      "properties": {
+        "shapeName": "Outer Isla",
+        "shapeISO": "",
+        "shapeID": "4304713B25967812410873",
+        "shapeGroup": "SYC",
+        "shapeType": "ADM1"
+      }
+    }
+  ]
+}

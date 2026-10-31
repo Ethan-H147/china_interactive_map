@@ -1,0 +1,88 @@
+{
+  "retrieved": "2026-10-30",
+  "coverage": "Mauritania: 15 regions, 63 departments. Dated 2024 boundary reference; source dates and licenses are retained below. Child areas are reconciled within their displayed parents. Shared land frontiers are owned once; coastlines and maritime boundaries are not stroked. National statistics are not distributed to subdivisions.",
+  "counts": {
+    "1": 15,
+    "2": 63
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "MRT-hdx.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-mrt",
+      "sha256": "88a348eb7116c4f2b1690ace138f3a276e5b5ecbfdcb7577ed1208d95060f957",
+      "bytes": 37706
+    },
+    "MRT-gb.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/MRT/ADM1/",
+      "sha256": "33c1aeb7378339616f8eddb2ce25647a42baa0d6f38d78f11578045e072fe527",
+      "bytes": 1749
+    },
+    "MRT-adm1.geojson": {
+      "url": "https://data.humdata.org/dataset/8d49f50d-92a8-46d9-9462-f821a8058f6d/resource/916850dc-92e3-4c2b-a972-f6964498346e/download/mrt_admin_boundaries.geojson.zip",
+      "member": "mrt_admin1.geojson",
+      "archiveSha256": "ca7751c5dac56b85a7f7807601f1c45ffa30c7fce8881ea406ebb3623cf165ae",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-mrt",
+      "sha256": "5130ce4b910d60f411c3f002fc35ae7df77c857887e12fba19a899bef69c2cab",
+      "bytes": 427387
+    },
+    "MRT-adm2.geojson": {
+      "url": "https://data.humdata.org/dataset/8d49f50d-92a8-46d9-9462-f821a8058f6d/resource/916850dc-92e3-4c2b-a972-f6964498346e/download/mrt_admin_boundaries.geojson.zip",
+      "member": "mrt_admin2.geojson",
+      "archiveSha256": "ca7751c5dac56b85a7f7807601f1c45ffa30c7fce8881ea406ebb3623cf165ae",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-mrt",
+      "sha256": "4b6736bbe7bd876a707ccf1646c090bc589c4b5770bb128144b619f15b72c269",
+      "bytes": 951659
+    },
+    "flag-mr.svg": {
+      "url": "https://flagcdn.com/mr.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT distribution",
+      "sha256": "1655e7ed2d848678e50138df15f3db7b37ed7a9c4f61cdf7e26cfec12d0e7057",
+      "bytes": 333
+    },
+    "MRT-adm3.geojson": {
+      "url": "https://data.humdata.org/dataset/8d49f50d-92a8-46d9-9462-f821a8058f6d/resource/916850dc-92e3-4c2b-a972-f6964498346e/download/mrt_admin_boundaries.geojson.zip",
+      "member": "mrt_admin3_em.geojson",
+      "archiveSha256": "ca7751c5dac56b85a7f7807601f1c45ffa30c7fce8881ea406ebb3623cf165ae",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-mrt",
+      "sha256": "b193fab8b8590404e9c8e69edabaa2188a9a2364a53e8cb9e498d0b6b2176489",
+      "bytes": 1418549
+    },
+    "MRT-adm0.geojson": {
+      "url": "https://data.humdata.org/dataset/8d49f50d-92a8-46d9-9462-f821a8058f6d/resource/916850dc-92e3-4c2b-a972-f6964498346e/download/mrt_admin_boundaries.geojson.zip",
+      "member": "mrt_admin0.geojson",
+      "archiveSha256": "ca7751c5dac56b85a7f7807601f1c45ffa30c7fce8881ea406ebb3623cf165ae",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-mrt",
+      "sha256": "5320bc4bf5d3be1689ffa3a4aeafc032251e39e878fb13134f9282b3cd7b99c4",
+      "bytes": 237937
+    },
+    "naturalEarth": {
+      "url": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+      "license": "Public domain",
+      "credit": "Natural Earth",
+      "method": "Land-frontier guides, lake separation and the neutral Bir Tawil reference; displayed country borders follow reconciled land geometry.",
+      "files": {
+        "ne-borders.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-borders.json.gz",
+          "sha256": "a2c796c19a530964eedaecde02e605150607cc0a0517da68cf013ddeeed8655c"
+        },
+        "ne-countries.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-countries.json.gz",
+          "sha256": "103135920ec1bfdd5ada2f4f7e0ba1e985b28f881d39ef9343a8a43d92b23610"
+        },
+        "ne-lakes.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-lakes.json.gz",
+          "sha256": "1550308007c3457c65e68b2a47d06797d474073cf7fdeb5eaf6ff55164d1903e"
+        }
+      }
+    }
+  }
+}

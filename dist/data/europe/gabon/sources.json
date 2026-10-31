@@ -1,0 +1,78 @@
+{
+  "retrieved": "2026-10-30",
+  "coverage": "Gabon: 9 provinces, 48 departments. Dated 2026 boundary reference; source dates and licenses are retained below. Child areas are reconciled within their displayed parents. Shared land frontiers are owned once; coastlines and maritime boundaries are not stroked. National statistics are not distributed to subdivisions.",
+  "counts": {
+    "1": 9,
+    "2": 48
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "GAB-hdx.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-gab",
+      "sha256": "4c4161ea7286eca72bf56cd0e83933ea153398b7d12f1eaff7425c79e82c36f7",
+      "bytes": 16859
+    },
+    "GAB-gb.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/GAB/ADM1/",
+      "sha256": "8ea43a3f8d85bf5c5ef7af559e6484c6be41adcd3275df464c005d9efc46b15c",
+      "bytes": 1794
+    },
+    "flag-ga.svg": {
+      "url": "https://flagcdn.com/ga.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT distribution",
+      "sha256": "43e2be0bceff86a5e9611d197478256416e2ed1b106b9df24651d553bc87b41f",
+      "bytes": 201
+    },
+    "GAB-adm1.geojson": {
+      "url": "https://data.humdata.org/dataset/d8d992f3-5374-448f-a3d5-bed7c1925a11/resource/72ab3a59-84a4-461f-ac4d-d49bb79574b9/download/gab_admin_boundaries.geojson.zip",
+      "member": "gab_admin1.geojson",
+      "archiveSha256": "c35285c71d6927c1aa126d6bf5354a3f58df8ee2dceb7d3319feabb931a4156b",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-gab",
+      "sha256": "8598685e4c269ebc87d980734ec837b9bdabc9e2ce1fbdac652fa2ddbb0fb6a6",
+      "bytes": 142727
+    },
+    "GAB-adm2.geojson": {
+      "url": "https://data.humdata.org/dataset/d8d992f3-5374-448f-a3d5-bed7c1925a11/resource/72ab3a59-84a4-461f-ac4d-d49bb79574b9/download/gab_admin_boundaries.geojson.zip",
+      "member": "gab_admin2.geojson",
+      "archiveSha256": "c35285c71d6927c1aa126d6bf5354a3f58df8ee2dceb7d3319feabb931a4156b",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-gab",
+      "sha256": "46e67eb10baa5180c9f544dd6c1d0144e62a7176ffe1209a248a6715753eba41",
+      "bytes": 289004
+    },
+    "GAB-adm0.geojson": {
+      "url": "https://data.humdata.org/dataset/d8d992f3-5374-448f-a3d5-bed7c1925a11/resource/72ab3a59-84a4-461f-ac4d-d49bb79574b9/download/gab_admin_boundaries.geojson.zip",
+      "member": "gab_admin0.geojson",
+      "archiveSha256": "c35285c71d6927c1aa126d6bf5354a3f58df8ee2dceb7d3319feabb931a4156b",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-gab",
+      "sha256": "21dc02becae89063a73eddd39f9e8dfabb72c865bfc5bcb197f8410b51ee9bb8",
+      "bytes": 99623
+    },
+    "naturalEarth": {
+      "url": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+      "license": "Public domain",
+      "credit": "Natural Earth",
+      "method": "Land-frontier guides, lake separation and the neutral Bir Tawil reference; displayed country borders follow reconciled land geometry.",
+      "files": {
+        "ne-borders.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-borders.json.gz",
+          "sha256": "a2c796c19a530964eedaecde02e605150607cc0a0517da68cf013ddeeed8655c"
+        },
+        "ne-countries.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-countries.json.gz",
+          "sha256": "103135920ec1bfdd5ada2f4f7e0ba1e985b28f881d39ef9343a8a43d92b23610"
+        },
+        "ne-lakes.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-lakes.json.gz",
+          "sha256": "1550308007c3457c65e68b2a47d06797d474073cf7fdeb5eaf6ff55164d1903e"
+        }
+      }
+    }
+  }
+}

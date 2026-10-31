@@ -1,0 +1,56 @@
+{
+  "retrieved": "2026-10-30",
+  "coverage": "Djibouti: 6 regions. Dated 2021 boundary reference; source dates and licenses are retained below. Child areas are reconciled within their displayed parents. Shared land frontiers are owned once; coastlines and maritime boundaries are not stroked. National statistics are not distributed to subdivisions.",
+  "counts": {
+    "1": 6
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "DJI-hdx.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-dji",
+      "sha256": "4ee877d72c4f83e9af05bbe4861b6987c444e91b29c8572223296aadd7168cb6",
+      "bytes": 10143
+    },
+    "DJI-gb.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/DJI/ADM1/",
+      "sha256": "57e7b82adb2f8bcfbc2f6e3414b0fa26d1a80ffd0c21ca0c75a9545768f3dddd",
+      "bytes": 1703
+    },
+    "DJI-adm1.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/DJI/ADM1/geoBoundaries-DJI-ADM1.geojson",
+      "credit": "Natural Earth / geoBoundaries",
+      "license": "Public Domain",
+      "page": "www.naturalearthdata.com/about/terms-of-use/",
+      "year": "2021",
+      "sha256": "797fdc48fb9176f33134a279e4cac3436ec190af3340c5a76ee887321137235e",
+      "bytes": 15132
+    },
+    "flag-dj.svg": {
+      "url": "https://flagcdn.com/dj.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT distribution",
+      "sha256": "072cd869e9430e51fe7d48b0bd33c882b6365386c9987c03cb76f802597af936",
+      "bytes": 371
+    },
+    "naturalEarth": {
+      "url": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+      "license": "Public domain",
+      "credit": "Natural Earth",
+      "method": "Land-frontier guides, lake separation and the neutral Bir Tawil reference; displayed country borders follow reconciled land geometry.",
+      "files": {
+        "ne-borders.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-borders.json.gz",
+          "sha256": "a2c796c19a530964eedaecde02e605150607cc0a0517da68cf013ddeeed8655c"
+        },
+        "ne-countries.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-countries.json.gz",
+          "sha256": "103135920ec1bfdd5ada2f4f7e0ba1e985b28f881d39ef9343a8a43d92b23610"
+        },
+        "ne-lakes.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-lakes.json.gz",
+          "sha256": "1550308007c3457c65e68b2a47d06797d474073cf7fdeb5eaf6ff55164d1903e"
+        }
+      }
+    }
+  }
+}

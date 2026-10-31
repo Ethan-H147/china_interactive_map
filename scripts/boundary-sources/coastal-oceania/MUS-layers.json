@@ -1,0 +1,18 @@
+{
+  "iso": "MUS",
+  "type": "gb",
+  "layers": [
+    {
+      "level": 1,
+      "file": "MUS-adm1.geojson",
+      "count": 12,
+      "properties": {
+        "shapeName": "Black River",
+        "shapeISO": "MU-BL",
+        "shapeID": "65221844B99203907341133",
+        "shapeGroup": "MUS",
+        "shapeType": "ADM1"
+      }
+    }
+  ]
+}

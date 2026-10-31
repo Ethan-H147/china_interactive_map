@@ -1,0 +1,56 @@
+{
+  "retrieved": "2026-10-30",
+  "coverage": "Federated States of Micronesia: 4 states. Dated 2019 boundary reference; source dates and licenses are retained below. Child areas are reconciled within their displayed parents. Shared land frontiers are owned once; coastlines and maritime boundaries are not stroked. National statistics are not distributed to subdivisions.",
+  "counts": {
+    "1": 4
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "FSM-hdx.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-fsm",
+      "sha256": "d37f55919c2c7084ca9ce7203e860eb027687db853887404d8179d862d42f009",
+      "bytes": 10264
+    },
+    "FSM-gb.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/FSM/ADM1/",
+      "sha256": "78d5a90d6ca5947142b2d70cc01cf22fc275d13439edd70b2488b797e2dfb0c2",
+      "bytes": 1945
+    },
+    "FSM-adm1.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/FSM/ADM1/geoBoundaries-FSM-ADM1.geojson",
+      "credit": "OCHA ROP, Federated States of Micronesia Division of Statistics, 2010 Census of Population and Housing and Secretariat of the Pacific Community, Statistics for Development Division / geoBoundaries",
+      "license": "Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+      "page": "Data https",
+      "year": "2019",
+      "sha256": "a30e5bc26f291a7f286090782361154263ad603e4de451b23a77e346f63327e0",
+      "bytes": 2023931
+    },
+    "flag-fm.svg": {
+      "url": "https://flagcdn.com/fm.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT distribution",
+      "sha256": "d88d4388bd3ecf181378e5f7889b04a5d6ccb10e0b0b73baf8f0149c440ad5af",
+      "bytes": 686
+    },
+    "naturalEarth": {
+      "url": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+      "license": "Public domain",
+      "credit": "Natural Earth",
+      "method": "Land-frontier guides, lake separation and the neutral Bir Tawil reference; displayed country borders follow reconciled land geometry.",
+      "files": {
+        "ne-borders.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-borders.json.gz",
+          "sha256": "a2c796c19a530964eedaecde02e605150607cc0a0517da68cf013ddeeed8655c"
+        },
+        "ne-countries.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-countries.json.gz",
+          "sha256": "103135920ec1bfdd5ada2f4f7e0ba1e985b28f881d39ef9343a8a43d92b23610"
+        },
+        "ne-lakes.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-lakes.json.gz",
+          "sha256": "1550308007c3457c65e68b2a47d06797d474073cf7fdeb5eaf6ff55164d1903e"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "retrieved": "2026-10-30",
+  "coverage": "Somaliland is included within Somalia, with separate-administration notes and flags for Awdal and Woqooyi Galbeed. Eastern northern regions have overlapping claims. The 18 regions and 91 districts are dated operational reference boundaries, not federal states or current control lines. Local areas are clipped to their displayed parent and residual source gaps are reconciled within that parent. Inland lake water is excluded; coastlines have no border stroke. Population is not inferred by distributing national totals.",
+  "counts": {
+    "1": 18,
+    "2": 91
+  },
+  "processing": "Retained source bytes are verified by SHA-256. Administrative polygons are cleaned together at 0.00012-degree simplification; Maldives island footprints retain government source resolution. Complete neighboring outline arcs share projected endpoints and previously established junctions. Local areas are clipped individually on a mic degree lattice, with source gaps assigned within their displayed parent. Lake masks preserve the 56 mapped Lake Tana islands. Coastlines have no border stroke. Only selected-parent local geometry loads.",
+  "sources": {
+    "som-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-som",
+      "sha256": "041face451d611806b83b056ac6dd7475b1c2216a90533fbaf51e743358ef147",
+      "bytes": 40443
+    },
+    "som-source.zip": {
+      "url": "https://data.humdata.org/dataset/ec140a63-5330-4376-a3df-c7ebf73cfc3c/resource/79f7f826-6028-4650-b8f7-2d5e53032955/download/som_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-som",
+      "sha256": "0d9585793df7de5cde92463155495eb8bb2f419cd458ca7e6227a0de2ebe45bc",
+      "bytes": 2435213,
+      "retained": false
+    },
+    "som-som_admin2_em.geojson": {
+      "url": "https://data.humdata.org/dataset/ec140a63-5330-4376-a3df-c7ebf73cfc3c/resource/79f7f826-6028-4650-b8f7-2d5e53032955/download/som_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-som",
+      "member": "som_admin2_em.geojson",
+      "archiveSha256": "0d9585793df7de5cde92463155495eb8bb2f419cd458ca7e6227a0de2ebe45bc",
+      "sha256": "c2be15227080789979c2cf9daf7ff52942f9604826e408455b7bf180dda21777",
+      "bytes": 674689
+    },
+    "som-som_admin1.geojson": {
+      "url": "https://data.humdata.org/dataset/ec140a63-5330-4376-a3df-c7ebf73cfc3c/resource/79f7f826-6028-4650-b8f7-2d5e53032955/download/som_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-som",
+      "member": "som_admin1.geojson",
+      "archiveSha256": "0d9585793df7de5cde92463155495eb8bb2f419cd458ca7e6227a0de2ebe45bc",
+      "sha256": "c6eecfd9ddde803e75cd26a5e2d66252b05a8cee304d277adb5619364c8559ea",
+      "bytes": 411189
+    },
+    "som-som_admin1_em.geojson": {
+      "url": "https://data.humdata.org/dataset/ec140a63-5330-4376-a3df-c7ebf73cfc3c/resource/79f7f826-6028-4650-b8f7-2d5e53032955/download/som_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-som",
+      "member": "som_admin1_em.geojson",
+      "archiveSha256": "0d9585793df7de5cde92463155495eb8bb2f419cd458ca7e6227a0de2ebe45bc",
+      "sha256": "2e76f94b3fa4bc29ac10638035d6041e70449d9806a86bf92cd17ee30fde9917",
+      "bytes": 488678
+    },
+    "som-som_admin2.geojson": {
+      "url": "https://data.humdata.org/dataset/ec140a63-5330-4376-a3df-c7ebf73cfc3c/resource/79f7f826-6028-4650-b8f7-2d5e53032955/download/som_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-som",
+      "member": "som_admin2.geojson",
+      "archiveSha256": "0d9585793df7de5cde92463155495eb8bb2f419cd458ca7e6227a0de2ebe45bc",
+      "sha256": "eee3a3329086eb52d0e03b08faa6b4fcc6c815b16e0ca47f22e562bc557021fe",
+      "bytes": 592157
+    },
+    "flag-som.svg": {
+      "url": "https://flagcdn.com/so.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT source artwork",
+      "sha256": "3a342342f94f00a74984e10743f4589e7856076df6686f05e3192cd0ee0300e1",
+      "bytes": 274
+    },
+    "som-population-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-som",
+      "sha256": "40c5e407fc26ec993eaea792b988dbbf99c0e9518b08818209cb9fabe852f954",
+      "bytes": 22543
+    },
+    "som-pop-som_pplp_adm1_v2.csv": {
+      "url": "https://data.humdata.org/dataset/6cac9c64-2716-4809-9e82-440839d421f6/resource/ba86a46c-f922-4f8f-a213-ad9dbd5154c8/download/som_pplp_adm1_v2.csv",
+      "credit": "OCHA Somalia / HDX COD-PS",
+      "license": "Other",
+      "page": "https://data.humdata.org/dataset/cod-ps-som",
+      "sha256": "58d4fe9cccdf3d12e8f152421a8233413b934da45a186aff2b2cc1c47a7dcb70",
+      "bytes": 1408
+    },
+    "som-pop-som_pplp_adm2_v2.csv": {
+      "url": "https://data.humdata.org/dataset/6cac9c64-2716-4809-9e82-440839d421f6/resource/a63d9729-c8fa-4456-a3fd-11034dd2117b/download/som_pplp_adm2_v2.csv",
+      "credit": "OCHA Somalia / HDX COD-PS",
+      "license": "Other",
+      "page": "https://data.humdata.org/dataset/cod-ps-som",
+      "sha256": "b9f43f391100c2a6eb0872e9bf2cb7141cb87528cf741baa175c1bfb04fbbf45",
+      "bytes": 6268
+    },
+    "som-pop-som_pplp_adm0_v2.csv": {
+      "url": "https://data.humdata.org/dataset/6cac9c64-2716-4809-9e82-440839d421f6/resource/2357ee7e-1874-46fe-8875-1a85596b6ab7/download/som_pplp_adm0_v2.csv",
+      "credit": "OCHA Somalia / HDX COD-PS",
+      "license": "Other",
+      "page": "https://data.humdata.org/dataset/cod-ps-som",
+      "sha256": "5e53f86a2d2cc36c9455cb904952c3865a8d176fbb107acbf428aea07edc56e7",
+      "bytes": 148
+    }
+  },
+  "numericalReturnsRemoved": 38,
+  "populationCoverage": {
+    "matched": 18,
+    "method": "Only verified source identities and dated observations are assigned. Rwanda uses the NISR 2022 census; the inconsistent COD-PS 2023 provincial totals are not used. No older Burundi province population is transferred to the new five provinces. National GDP is never allocated to subdivisions."
+  }
+}

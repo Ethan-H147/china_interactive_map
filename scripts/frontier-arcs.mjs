@@ -21,7 +21,7 @@ export function joinReferencePaths(lines){
  }
  return joined;
 }
-export function selectFrontierArc(outline,reference,{maximumScoreMetres=15000}={}){
+export function selectFrontierArc(outline,reference,{maximumScoreMetres=15000,maximumEndpointMetres=20000}={}){
  let best;
  for(const feature of outline.features)for(const polygon of polygons(feature.geometry)){
   const ring=polygon[0].slice(0,-1);if(ring.length<3)continue;
@@ -33,7 +33,7 @@ export function selectFrontierArc(outline,reference,{maximumScoreMetres=15000}={
   const error=metres(ring[first],reference[0])+metres(ring[last],reference.at(-1));
   if(!best||error<best.error)best={ring,first,last,error};
  }
- if(!best||best.error>20000)throw Error('Reference endpoints do not meet the country outline');
+ if(!best||best.error>maximumEndpointMetres)throw Error('Reference endpoints do not meet the country outline');
  const {ring,first,last}=best;
  const walk=direction=>{const result=[];for(let i=first;;i=(i+direction+ring.length)%ring.length){result.push(ring[i]);if(i===last)break;}return result;};
  const distance=lineIndex([reference]);

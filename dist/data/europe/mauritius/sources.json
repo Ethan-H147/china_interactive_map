@@ -1,0 +1,56 @@
+{
+  "retrieved": "2026-10-30",
+  "coverage": "Mauritius: 12 districts & outer islands. Dated 2017 boundary reference; source dates and licenses are retained below. Child areas are reconciled within their displayed parents. Shared land frontiers are owned once; coastlines and maritime boundaries are not stroked. National statistics are not distributed to subdivisions.",
+  "counts": {
+    "1": 12
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "MUS-hdx.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-mus",
+      "sha256": "2465a4c6b1e405a2b3692b007c10ab5d2f7f06f554d74998931632d6bb0af144",
+      "bytes": 10270
+    },
+    "MUS-gb.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/MUS/ADM1/",
+      "sha256": "6a5183dcc453f662be5552fc89869b76802ce7d07972518317fc4789ec7f6f72",
+      "bytes": 1771
+    },
+    "MUS-adm1.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/MUS/ADM1/geoBoundaries-MUS-ADM1.geojson",
+      "credit": "geoBoundaries, OpenStreetMap / geoBoundaries",
+      "license": "Open Data Commons Open Database License 1.0",
+      "page": "www.openstreetmap.org/copyright",
+      "year": "2017",
+      "sha256": "fd3c09513dba7df021ed0f7bd2b05d187932155c99027b4dcc1c90ef8ee554c3",
+      "bytes": 429365
+    },
+    "flag-mu.svg": {
+      "url": "https://flagcdn.com/mu.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT distribution",
+      "sha256": "c35ef8388abd492cb6ddbb0b46e3be87244ec1088682de208a745c93c4852a80",
+      "bytes": 239
+    },
+    "naturalEarth": {
+      "url": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+      "license": "Public domain",
+      "credit": "Natural Earth",
+      "method": "Land-frontier guides, lake separation and the neutral Bir Tawil reference; displayed country borders follow reconciled land geometry.",
+      "files": {
+        "ne-borders.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-borders.json.gz",
+          "sha256": "a2c796c19a530964eedaecde02e605150607cc0a0517da68cf013ddeeed8655c"
+        },
+        "ne-countries.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-countries.json.gz",
+          "sha256": "103135920ec1bfdd5ada2f4f7e0ba1e985b28f881d39ef9343a8a43d92b23610"
+        },
+        "ne-lakes.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-lakes.json.gz",
+          "sha256": "1550308007c3457c65e68b2a47d06797d474073cf7fdeb5eaf6ff55164d1903e"
+        }
+      }
+    }
+  }
+}

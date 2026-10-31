@@ -1,0 +1,88 @@
+{
+  "retrieved": "2026-10-30",
+  "coverage": "Egypt: 27 governorates, 365 district reference areas. Dated 2017 boundary reference; source dates and licenses are retained below. Child areas are reconciled within their displayed parents. Shared land frontiers are owned once; coastlines and maritime boundaries are not stroked. National statistics are not distributed to subdivisions.",
+  "counts": {
+    "1": 27,
+    "2": 365
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "EGY-hdx.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-egy",
+      "sha256": "9167242dc8cf35dae4cb38be02b525da424d77fc6f1bfc767d2cf63d254340e5",
+      "bytes": 37326
+    },
+    "EGY-gb.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/EGY/ADM1/",
+      "sha256": "965ad93f3b17c56bab170a7d042ba959d1beb9bd5979c7c5ffd4294c6c137077",
+      "bytes": 1748
+    },
+    "flag-eg.svg": {
+      "url": "https://flagcdn.com/eg.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT distribution",
+      "sha256": "07129395f46d9e71844fe9b485e05bf49741bc72a480b567297d6d865f3d8150",
+      "bytes": 18351
+    },
+    "EGY-adm2.geojson": {
+      "url": "https://data.humdata.org/dataset/b90d81ba-7c7a-4283-9899-827480d80a79/resource/2080e95f-51c7-45b6-b5ab-613ff1cfc041/download/egy_admin_boundaries.geojson.zip",
+      "member": "egy_admin2.geojson",
+      "archiveSha256": "259987be0b7c5e367d52eadf3dfea39802c7750cace8498833e3212d61b9dba9",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-egy",
+      "sha256": "d16163eab5d85fa4ec847a3bcdbb29bb2ff6aaca5d1c2bc2c2f4965e4dd0d0c9",
+      "bytes": 9202137
+    },
+    "EGY-adm3.geojson": {
+      "url": "https://data.humdata.org/dataset/b90d81ba-7c7a-4283-9899-827480d80a79/resource/2080e95f-51c7-45b6-b5ab-613ff1cfc041/download/egy_admin_boundaries.geojson.zip",
+      "member": "egy_admin3.geojson",
+      "archiveSha256": "259987be0b7c5e367d52eadf3dfea39802c7750cace8498833e3212d61b9dba9",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-egy",
+      "sha256": "0ea7b88be0b88a4de4fbff7a3973b27f03e3fa5ff5aaa3e08a21ed65963043fb",
+      "bytes": 22555118
+    },
+    "EGY-adm1.geojson": {
+      "url": "https://data.humdata.org/dataset/b90d81ba-7c7a-4283-9899-827480d80a79/resource/2080e95f-51c7-45b6-b5ab-613ff1cfc041/download/egy_admin_boundaries.geojson.zip",
+      "member": "egy_admin1.geojson",
+      "archiveSha256": "259987be0b7c5e367d52eadf3dfea39802c7750cace8498833e3212d61b9dba9",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-egy",
+      "sha256": "d55fe552bb2c426f49e5fcec850b17e541bce684f11508d148988bfc6e7de196",
+      "bytes": 5704231
+    },
+    "EGY-adm0.geojson": {
+      "url": "https://data.humdata.org/dataset/b90d81ba-7c7a-4283-9899-827480d80a79/resource/2080e95f-51c7-45b6-b5ab-613ff1cfc041/download/egy_admin_boundaries.geojson.zip",
+      "member": "egy_admin0.geojson",
+      "archiveSha256": "259987be0b7c5e367d52eadf3dfea39802c7750cace8498833e3212d61b9dba9",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-egy",
+      "sha256": "d6637089dd0e28ef8b5d18c98656afdb0c6d7e6b72e1a0c3bbe69feed83eb06d",
+      "bytes": 5300867
+    },
+    "naturalEarth": {
+      "url": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+      "license": "Public domain",
+      "credit": "Natural Earth",
+      "method": "Land-frontier guides, lake separation and the neutral Bir Tawil reference; displayed country borders follow reconciled land geometry.",
+      "files": {
+        "ne-borders.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-borders.json.gz",
+          "sha256": "a2c796c19a530964eedaecde02e605150607cc0a0517da68cf013ddeeed8655c"
+        },
+        "ne-countries.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-countries.json.gz",
+          "sha256": "103135920ec1bfdd5ada2f4f7e0ba1e985b28f881d39ef9343a8a43d92b23610"
+        },
+        "ne-lakes.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-lakes.json.gz",
+          "sha256": "1550308007c3457c65e68b2a47d06797d474073cf7fdeb5eaf6ff55164d1903e"
+        }
+      }
+    }
+  }
+}

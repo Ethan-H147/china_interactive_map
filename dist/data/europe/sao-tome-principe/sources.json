@@ -1,0 +1,67 @@
+{
+  "retrieved": "2026-10-30",
+  "coverage": "São Tomé and Príncipe: 7 districts & príncipe. Dated 2026 boundary reference; source dates and licenses are retained below. Child areas are reconciled within their displayed parents. Shared land frontiers are owned once; coastlines and maritime boundaries are not stroked. National statistics are not distributed to subdivisions.",
+  "counts": {
+    "1": 7
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "STP-hdx.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-stp",
+      "sha256": "52cf8ba54bbf41ea81f3b5d99945c29e6f0e02f8dcc0a580be24678d468c6938",
+      "bytes": 17306
+    },
+    "STP-gb.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/STP/ADM1/",
+      "sha256": "c9f9e3c881c9fac2d5128601ad3d8c778424e8853f0ac088785a2189bc48aece",
+      "bytes": 1747
+    },
+    "flag-st.svg": {
+      "url": "https://flagcdn.com/st.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT distribution",
+      "sha256": "a95075950bff55641b4274439a909c6bda8005b22c397ef6315839ce9d0dec55",
+      "bytes": 355
+    },
+    "STP-adm1.geojson": {
+      "url": "https://data.humdata.org/dataset/9746c0f7-9ed3-4a3f-890e-88bc19166770/resource/45594be6-9c33-4d55-b70c-2bfaf2bb6d5e/download/stp_admin_boundaries.geojson.zip",
+      "member": "stp_admin1.geojson",
+      "archiveSha256": "fa19b1bed2070cdf9c3061b1366d3780192b00248ac77c05e4bae506d81aff88",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-stp",
+      "sha256": "2803be007271d7ca74215d61fa85ba3373c29f7219a0933a0ccefab9f7e190db",
+      "bytes": 310794
+    },
+    "STP-adm0.geojson": {
+      "url": "https://data.humdata.org/dataset/9746c0f7-9ed3-4a3f-890e-88bc19166770/resource/45594be6-9c33-4d55-b70c-2bfaf2bb6d5e/download/stp_admin_boundaries.geojson.zip",
+      "member": "stp_admin0.geojson",
+      "archiveSha256": "fa19b1bed2070cdf9c3061b1366d3780192b00248ac77c05e4bae506d81aff88",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-stp",
+      "sha256": "fb7dd4262dc81c6034189a5adfbc9e11059b237efb634c8f4c756d637eb829b7",
+      "bytes": 279628
+    },
+    "naturalEarth": {
+      "url": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+      "license": "Public domain",
+      "credit": "Natural Earth",
+      "method": "Land-frontier guides, lake separation and the neutral Bir Tawil reference; displayed country borders follow reconciled land geometry.",
+      "files": {
+        "ne-borders.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-borders.json.gz",
+          "sha256": "a2c796c19a530964eedaecde02e605150607cc0a0517da68cf013ddeeed8655c"
+        },
+        "ne-countries.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-countries.json.gz",
+          "sha256": "103135920ec1bfdd5ada2f4f7e0ba1e985b28f881d39ef9343a8a43d92b23610"
+        },
+        "ne-lakes.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-lakes.json.gz",
+          "sha256": "1550308007c3457c65e68b2a47d06797d474073cf7fdeb5eaf6ff55164d1903e"
+        }
+      }
+    }
+  }
+}

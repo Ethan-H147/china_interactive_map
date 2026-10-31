@@ -1,0 +1,88 @@
+{
+  "retrieved": "2026-10-30",
+  "coverage": "Tunisia: 24 governorates, 264 delegations. Dated 2022 boundary reference; source dates and licenses are retained below. Child areas are reconciled within their displayed parents. Shared land frontiers are owned once; coastlines and maritime boundaries are not stroked. National statistics are not distributed to subdivisions.",
+  "counts": {
+    "1": 24,
+    "2": 264
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "TUN-hdx.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-tun",
+      "sha256": "d9abcf8bb00de149e05cd7a29a65329ff457365e3e99cb0a7a6e3bfbfe7efdfd",
+      "bytes": 39371
+    },
+    "TUN-gb.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/TUN/ADM1/",
+      "sha256": "abcdec6053bcdfb393b4c65c56c71c7385602189920f6213601dd7da4f9129c8",
+      "bytes": 1751
+    },
+    "TUN-adm2.geojson": {
+      "url": "https://data.humdata.org/dataset/e47eda48-8f83-4858-b739-dbffb8a50c47/resource/ebe19593-9438-4d14-8291-e65f811e2671/download/tun_admin_boundaries.geojson.zip",
+      "member": "tun_admin2.geojson",
+      "archiveSha256": "0716809d4b18161c226978b53c39445ae506448e26073b2dcd67d4ba10cdf83e",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-tun",
+      "sha256": "60592248545ab494ee01f58e7d804ac92cee6f013cada920feafc9251db02196",
+      "bytes": 7812100
+    },
+    "TUN-adm1.geojson": {
+      "url": "https://data.humdata.org/dataset/e47eda48-8f83-4858-b739-dbffb8a50c47/resource/ebe19593-9438-4d14-8291-e65f811e2671/download/tun_admin_boundaries.geojson.zip",
+      "member": "tun_admin1.geojson",
+      "archiveSha256": "0716809d4b18161c226978b53c39445ae506448e26073b2dcd67d4ba10cdf83e",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-tun",
+      "sha256": "5bd9b717f1ed73ab4473f32b7737d905d6229ce5209b6cc7a66a54394affab8c",
+      "bytes": 5461055
+    },
+    "flag-tn.svg": {
+      "url": "https://flagcdn.com/tn.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT distribution",
+      "sha256": "b0d8964ee6ff40309779e0a1ea2780926a85edf9f1715c22ecbd04e14a4be9b4",
+      "bytes": 278
+    },
+    "TUN-adm3.geojson": {
+      "url": "https://data.humdata.org/dataset/e47eda48-8f83-4858-b739-dbffb8a50c47/resource/ebe19593-9438-4d14-8291-e65f811e2671/download/tun_admin_boundaries.geojson.zip",
+      "member": "tun_admin3.geojson",
+      "archiveSha256": "0716809d4b18161c226978b53c39445ae506448e26073b2dcd67d4ba10cdf83e",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-tun",
+      "sha256": "ea9d88f0d5ee9c241654244af281c0d9a6908d5a273bcfb8978fbbd97b007fb9",
+      "bytes": 18215971
+    },
+    "TUN-adm0.geojson": {
+      "url": "https://data.humdata.org/dataset/e47eda48-8f83-4858-b739-dbffb8a50c47/resource/ebe19593-9438-4d14-8291-e65f811e2671/download/tun_admin_boundaries.geojson.zip",
+      "member": "tun_admin0.geojson",
+      "archiveSha256": "0716809d4b18161c226978b53c39445ae506448e26073b2dcd67d4ba10cdf83e",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-tun",
+      "sha256": "8c0efa686217e1ebae80017b4a266701510659c40334b1a856ad7a3cbde156a9",
+      "bytes": 4036719
+    },
+    "naturalEarth": {
+      "url": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+      "license": "Public domain",
+      "credit": "Natural Earth",
+      "method": "Land-frontier guides, lake separation and the neutral Bir Tawil reference; displayed country borders follow reconciled land geometry.",
+      "files": {
+        "ne-borders.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-borders.json.gz",
+          "sha256": "a2c796c19a530964eedaecde02e605150607cc0a0517da68cf013ddeeed8655c"
+        },
+        "ne-countries.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-countries.json.gz",
+          "sha256": "103135920ec1bfdd5ada2f4f7e0ba1e985b28f881d39ef9343a8a43d92b23610"
+        },
+        "ne-lakes.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-lakes.json.gz",
+          "sha256": "1550308007c3457c65e68b2a47d06797d474073cf7fdeb5eaf6ff55164d1903e"
+        }
+      }
+    }
+  }
+}

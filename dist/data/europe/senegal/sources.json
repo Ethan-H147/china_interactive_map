@@ -1,0 +1,88 @@
+{
+  "retrieved": "2026-10-30",
+  "coverage": "Senegal: 14 regions, 46 departments. Dated 2024 boundary reference; source dates and licenses are retained below. Child areas are reconciled within their displayed parents. Shared land frontiers are owned once; coastlines and maritime boundaries are not stroked. National statistics are not distributed to subdivisions.",
+  "counts": {
+    "1": 14,
+    "2": 46
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "SEN-hdx.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-sen",
+      "sha256": "6e1d6b8ec2d3ec84f95d0164a2ddbf7ffe070614e138655f19df175128d49d5a",
+      "bytes": 41951
+    },
+    "SEN-gb.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/SEN/ADM1/",
+      "sha256": "46fe731a7efb3b3acd80023171a9160d95df5034109ec4400962ae093e26dcc0",
+      "bytes": 1783
+    },
+    "SEN-adm1.geojson": {
+      "url": "https://data.humdata.org/dataset/bd9bc484-155d-41a3-87cf-064310a94492/resource/02745b5a-88b7-4132-ae11-8bdaf64afff8/download/sen_admin_boundaries.geojson.zip",
+      "member": "sen_admin1.geojson",
+      "archiveSha256": "ab0d33dd71f0af2e53a283f1d3e82b6e889c87ae465c8896a0e242949a80d310",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-sen",
+      "sha256": "1a2e3d9865d9f616c5fc37f8366d6c80be82045c8ccedba05874b54c7d52c742",
+      "bytes": 7059777
+    },
+    "SEN-adm2.geojson": {
+      "url": "https://data.humdata.org/dataset/bd9bc484-155d-41a3-87cf-064310a94492/resource/02745b5a-88b7-4132-ae11-8bdaf64afff8/download/sen_admin_boundaries.geojson.zip",
+      "member": "sen_admin2.geojson",
+      "archiveSha256": "ab0d33dd71f0af2e53a283f1d3e82b6e889c87ae465c8896a0e242949a80d310",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-sen",
+      "sha256": "c3a4f6e597dcfbc38c2c0eac73668459f94a8283987312ff51f0ead391201c54",
+      "bytes": 11179929
+    },
+    "flag-sn.svg": {
+      "url": "https://flagcdn.com/sn.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT distribution",
+      "sha256": "c0593c9c104142eadae2d76bd739b28a37d2218bf1ef4b37bf8fa9655bfab087",
+      "bytes": 228
+    },
+    "SEN-adm3.geojson": {
+      "url": "https://data.humdata.org/dataset/bd9bc484-155d-41a3-87cf-064310a94492/resource/02745b5a-88b7-4132-ae11-8bdaf64afff8/download/sen_admin_boundaries.geojson.zip",
+      "member": "sen_admin3.geojson",
+      "archiveSha256": "ab0d33dd71f0af2e53a283f1d3e82b6e889c87ae465c8896a0e242949a80d310",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-sen",
+      "sha256": "c9fe51405005a831e28e8b0dbb586b7b97aa6fe195355285d3c97f7a9af0576f",
+      "bytes": 14315193
+    },
+    "SEN-adm0.geojson": {
+      "url": "https://data.humdata.org/dataset/bd9bc484-155d-41a3-87cf-064310a94492/resource/02745b5a-88b7-4132-ae11-8bdaf64afff8/download/sen_admin_boundaries.geojson.zip",
+      "member": "sen_admin0.geojson",
+      "archiveSha256": "ab0d33dd71f0af2e53a283f1d3e82b6e889c87ae465c8896a0e242949a80d310",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-sen",
+      "sha256": "292e4e1d0bc1638f8b5547e176044772c7043ff61828860d4ec4a679a7c22ef4",
+      "bytes": 3143223
+    },
+    "naturalEarth": {
+      "url": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+      "license": "Public domain",
+      "credit": "Natural Earth",
+      "method": "Land-frontier guides, lake separation and the neutral Bir Tawil reference; displayed country borders follow reconciled land geometry.",
+      "files": {
+        "ne-borders.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-borders.json.gz",
+          "sha256": "a2c796c19a530964eedaecde02e605150607cc0a0517da68cf013ddeeed8655c"
+        },
+        "ne-countries.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-countries.json.gz",
+          "sha256": "103135920ec1bfdd5ada2f4f7e0ba1e985b28f881d39ef9343a8a43d92b23610"
+        },
+        "ne-lakes.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-lakes.json.gz",
+          "sha256": "1550308007c3457c65e68b2a47d06797d474073cf7fdeb5eaf6ff55164d1903e"
+        }
+      }
+    }
+  }
+}

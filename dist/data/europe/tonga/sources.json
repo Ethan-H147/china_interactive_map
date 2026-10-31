@@ -1,0 +1,56 @@
+{
+  "retrieved": "2026-10-30",
+  "coverage": "Tonga: 5 divisions. Dated 2017 boundary reference; source dates and licenses are retained below. Child areas are reconciled within their displayed parents. Shared land frontiers are owned once; coastlines and maritime boundaries are not stroked. National statistics are not distributed to subdivisions.",
+  "counts": {
+    "1": 5
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "TON-hdx.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-ton",
+      "sha256": "bc039a5f2d7a64ad69a03b66c0b717176968ab4791ad9ed2185aa8f2faf5f33b",
+      "bytes": 22967
+    },
+    "TON-gb.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/TON/ADM1/",
+      "sha256": "59a46b5cee76962f120f03bab1c9cf80a9fa7776d0e7fc3439e4b25016a5eebe",
+      "bytes": 1756
+    },
+    "TON-adm1.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/TON/ADM1/geoBoundaries-TON-ADM1.geojson",
+      "credit": "OpenStreetMap, Wambacher / geoBoundaries",
+      "license": "Open Data Commons Open Database License 1.0",
+      "page": "www.openstreetmap.org/copyright",
+      "year": "2017",
+      "sha256": "c879101306e56a83d5efc5cae56b5c92f02d1e3485ea6ac64bd3f94a67b7e24a",
+      "bytes": 1202782
+    },
+    "flag-to.svg": {
+      "url": "https://flagcdn.com/to.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT distribution",
+      "sha256": "aaf4a1b55742a45ae01330347e723ec9d9da9b15e1e9e05cd7d1910de91eef00",
+      "bytes": 227
+    },
+    "naturalEarth": {
+      "url": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+      "license": "Public domain",
+      "credit": "Natural Earth",
+      "method": "Land-frontier guides, lake separation and the neutral Bir Tawil reference; displayed country borders follow reconciled land geometry.",
+      "files": {
+        "ne-borders.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-borders.json.gz",
+          "sha256": "a2c796c19a530964eedaecde02e605150607cc0a0517da68cf013ddeeed8655c"
+        },
+        "ne-countries.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-countries.json.gz",
+          "sha256": "103135920ec1bfdd5ada2f4f7e0ba1e985b28f881d39ef9343a8a43d92b23610"
+        },
+        "ne-lakes.json.gz": {
+          "path": "scripts/boundary-sources/nordics/ne-lakes.json.gz",
+          "sha256": "1550308007c3457c65e68b2a47d06797d474073cf7fdeb5eaf6ff55164d1903e"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "retrieved": "2026-10-30",
+  "coverage": "The source includes 14 regions and chartered cities plus a contested reference area. The contested area is excluded from the first-level quiz. Local areas are clipped to their displayed parent and residual source gaps are reconciled within that parent. Inland lake water is excluded; coastlines have no border stroke. Population is not inferred by distributing national totals.",
+  "counts": {
+    "1": 15,
+    "2": 107,
+    "3": 1148
+  },
+  "processing": "Retained source bytes are verified by SHA-256. Administrative polygons are cleaned together at 0.00012-degree simplification; Maldives island footprints retain government source resolution. Complete neighboring outline arcs share projected endpoints and previously established junctions. Local areas are clipped individually on a mic degree lattice, with source gaps assigned within their displayed parent. Lake masks preserve the 56 mapped Lake Tana islands. Coastlines have no border stroke. Only selected-parent local geometry loads.",
+  "sources": {
+    "eth-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-eth",
+      "sha256": "bb6e337a49eb86652d03a9eb0f95c728925c2c5d7f9c400684a13012287e0c05",
+      "bytes": 54885
+    },
+    "eth-source.zip": {
+      "url": "https://data.humdata.org/dataset/cb58fa1f-687d-4cac-81a7-655ab1efb2d0/resource/0518da1b-42d1-4624-ad64-768cb69f9d40/download/eth_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-eth",
+      "sha256": "62db6c6ef2bb205b430e5ae3406fb8f94b30ac77106db1aec5a1ad5e81244e7a",
+      "bytes": 23754149,
+      "retained": false
+    },
+    "eth-eth_admin1.geojson": {
+      "url": "https://data.humdata.org/dataset/cb58fa1f-687d-4cac-81a7-655ab1efb2d0/resource/0518da1b-42d1-4624-ad64-768cb69f9d40/download/eth_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-eth",
+      "member": "eth_admin1.geojson",
+      "archiveSha256": "62db6c6ef2bb205b430e5ae3406fb8f94b30ac77106db1aec5a1ad5e81244e7a",
+      "sha256": "37ddf46c416c04b3d573bc1f605fe1a10f8456685479f619b1190ddf6a4de3c5",
+      "bytes": 1180689
+    },
+    "eth-eth_admin2.geojson": {
+      "url": "https://data.humdata.org/dataset/cb58fa1f-687d-4cac-81a7-655ab1efb2d0/resource/0518da1b-42d1-4624-ad64-768cb69f9d40/download/eth_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-eth",
+      "member": "eth_admin2.geojson",
+      "archiveSha256": "62db6c6ef2bb205b430e5ae3406fb8f94b30ac77106db1aec5a1ad5e81244e7a",
+      "sha256": "a9e8f4d2265e7222666a0672040a1c9fea78f8144e1e62ea25e6e09aa3271ff4",
+      "bytes": 9767495
+    },
+    "eth-eth_admin3.geojson": {
+      "url": "https://data.humdata.org/dataset/cb58fa1f-687d-4cac-81a7-655ab1efb2d0/resource/0518da1b-42d1-4624-ad64-768cb69f9d40/download/eth_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) / OCHA HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-eth",
+      "member": "eth_admin3.geojson",
+      "archiveSha256": "62db6c6ef2bb205b430e5ae3406fb8f94b30ac77106db1aec5a1ad5e81244e7a",
+      "sha256": "6ed8c2968316af87ea0e896bed654b0d003d1ba9b231a16596828c7f7fb5fbf7",
+      "bytes": 40866287
+    },
+    "flag-eth.svg": {
+      "url": "https://flagcdn.com/et.svg",
+      "credit": "FlagCDN / flag-icons",
+      "license": "MIT source artwork",
+      "sha256": "980ec719a0be7227e6769b9bf9198b182b743b9544326f4ef2566ecd3ebfeb94",
+      "bytes": 809
+    },
+    "eth-population-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-eth",
+      "sha256": "688d413ac699dd54763b3b6c4f24f00730712ee66f23fc1b74c3bdb3acbc7b81",
+      "bytes": 26312
+    },
+    "eth-pop-eth_admpop_adm0_2022_v2.csv": {
+      "url": "https://data.humdata.org/dataset/3d9b037f-5112-4afd-92a7-190a9082bd80/resource/4af389d5-b8db-4fa1-ab7c-b5119fc049df/download/eth_admpop_adm0_2022_v2.csv",
+      "credit": "OCHA Ethiopia / HDX COD-PS",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ps-eth",
+      "sha256": "423a32c312a843a4e5efc055dd4c0933d8593d17739d107635001331367d5848",
+      "bytes": 850
+    },
+    "eth-pop-eth_admpop_adm1_2022_v2.csv": {
+      "url": "https://data.humdata.org/dataset/3d9b037f-5112-4afd-92a7-190a9082bd80/resource/2ec96e53-b38f-4994-9a8c-5bbaa4c49e82/download/eth_admpop_adm1_2022_v2.csv",
+      "credit": "OCHA Ethiopia / HDX COD-PS",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ps-eth",
+      "sha256": "7e8c4af0ecc9aa42ebfe7b1ebb1542ff275a2d08fcc483b0f4ffdbc086991b78",
+      "bytes": 5203
+    },
+    "eth-pop-eth_admpop_adm2_2022_v2.csv": {
+      "url": "https://data.humdata.org/dataset/3d9b037f-5112-4afd-92a7-190a9082bd80/resource/bfb57304-3e22-498f-8a82-a345a8976852/download/eth_admpop_adm2_2022_v2.csv",
+      "credit": "OCHA Ethiopia / HDX COD-PS",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ps-eth",
+      "sha256": "4a9c86f3416016c502b4ec448513cdb47aed2269c4de4d325703789f1f1ce5b9",
+      "bytes": 32264
+    },
+    "eth-pop-eth_admpop_adm3_2022_v2.csv": {
+      "url": "https://data.humdata.org/dataset/3d9b037f-5112-4afd-92a7-190a9082bd80/resource/3f8150d4-6d5d-4659-a0a8-586e4689ae65/download/eth_admpop_adm3_2022_v2.csv",
+      "credit": "OCHA Ethiopia / HDX COD-PS",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ps-eth",
+      "sha256": "56efd8407dab2d8a0de43c5aa126e5bf10694db489299ff694b6b0b9b734eb97",
+      "bytes": 338609
+    },
+    "lake-tana-osm.json": {
+      "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A120%5D%3Brel%5B%22natural%22%3D%22water%22%5D%5B%22name%3Aen%22%3D%22Lake%20Tana%22%5D%3Bout%20body%3B%3E%3Bout%20skel%20qt%3B",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/",
+      "sha256": "194d439889179d85edc37c6a54373ab8557d93fd3763684568f4a72cf3e90f3f",
+      "bytes": 2153589
+    }
+  },
+  "numericalReturnsRemoved": 413,
+  "populationCoverage": {
+    "matched": 0,
+    "method": "Only verified source identities and dated observations are assigned. Rwanda uses the NISR 2022 census; the inconsistent COD-PS 2023 provincial totals are not used. No older Burundi province population is transferred to the new five provinces. National GDP is never allocated to subdivisions."
+  }
+}
