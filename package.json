@@ -456,6 +456,8 @@
     "test:horn-islands": "node scripts/validate-horn-islands.mjs && node scripts/audit-horn-islands-frontiers.mjs && node scripts/browser/run.mjs horn-islands",
     "fetch:coastal-oceania": "node scripts/fetch-coastal-oceania.mjs",
     "build:coastal-oceania": "node scripts/prepare-coastal-current.mjs && node scripts/coastal-oceania-definitions.mjs --prepare && node scripts/register-coastal-oceania.mjs && node --max-old-space-size=14000 scripts/build-coastal-oceania.mjs && node scripts/register-coastal-oceania.mjs && node --max-old-space-size=14000 scripts/build-coastal-oceania-assets.mjs",
-    "test:coastal-oceania": "node --max-old-space-size=12000 scripts/validate-coastal-oceania.mjs && node scripts/audit-coastal-oceania-frontiers.mjs && node scripts/browser/run.mjs coastal-oceania"
+    "test:coastal-oceania": "node --max-old-space-size=12000 scripts/validate-coastal-oceania.mjs && node scripts/audit-coastal-oceania-frontiers.mjs && node scripts/browser/run.mjs coastal-oceania",
+    "test:national-palettes": "node scripts/validate-national-palettes.mjs",
+    "test:mobile-polish": "npm run test:national-palettes && node scripts/browser/run.mjs mobile-polish"
   }
 }

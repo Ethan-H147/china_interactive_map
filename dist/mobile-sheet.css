@@ -5,22 +5,24 @@
    mobile-sheet.mjs sets --sheet-height and html[data-sheet] (peek | half | full). */
 .sheet-handle { display: none; }
 @media (max-width: 760px) {
-  :root { --sheet-height: 176px; --sheet-gap: 12px; }
-  body { height: 100dvh; overflow: hidden; }
+  :root { --sheet-height: 176px; --sheet-gap: 12px; background: var(--map); }
+  body { height: 100dvh; overflow: hidden; background: transparent; }
 
   .site-header {
-    position: fixed; top: var(--sheet-gap); left: var(--sheet-gap); right: var(--sheet-gap); z-index: 600;
+    position: fixed; top: calc(var(--sheet-gap) + env(safe-area-inset-top, 0px)); left: calc(var(--sheet-gap) + env(safe-area-inset-left, 0px)); right: calc(var(--sheet-gap) + env(safe-area-inset-right, 0px)); z-index: 600;
     height: 48px; padding: 0; gap: 10px; border: 0; background: transparent; pointer-events: none;
   }
   .site-header > * { pointer-events: auto; }
+  .country-menu { left: 0; right: 0; width: auto; max-height: calc(100dvh - var(--country-menu-top, 120px) - env(safe-area-inset-bottom, 0px) - 12px); }
   .site-header h1 {
     flex: 1; min-width: 0; height: 48px; box-sizing: border-box; padding: 0 18px; gap: 10px; align-items: center;
     border: 1px solid var(--line); border-radius: 24px; background: var(--paper); box-shadow: 0 4px 16px rgba(23, 32, 25, .1);
     overflow: hidden; white-space: nowrap;
   }
-  .site-header h1 .country-switch > span { font-size: 21px !important; letter-spacing: normal !important; line-height: 1; }
+  .site-header h1 .country-switch > span { font-size: 21px !important; letter-spacing: normal !important; line-height: 1.4; }
   /* The pill holds one line: Singapore's Malay and Tamil names stay in the full header and the country menu. */
   .site-header .country-switch :is(.title-malay, .title-tamil) { display: none; }
+  .site-header .country-switch-chevron { top: 0; }
   body[data-atlas=singapore] .country-switch-chevron { grid-row: 1; }
   .site-header #atlas-title-local:not(:empty) { display: inline; }
   .site-header .surprise {
@@ -36,7 +38,7 @@
   }
   #map { position: absolute; top: 0; left: 0; right: 0; width: 100%; height: 100dvh; }
   /* Below the header pill wherever it ends (measured by mobile-sheet.mjs). */
-  .map-top { top: calc(var(--header-bottom, 72px) + 8px); left: var(--sheet-gap); right: var(--sheet-gap); }
+  .map-top { top: calc(var(--header-bottom, 72px) + 8px); left: calc(var(--sheet-gap) + env(safe-area-inset-left, 0px)); right: calc(var(--sheet-gap) + env(safe-area-inset-right, 0px)); }
   /* The breadcrumb reads as one solid pill, so map labels never show through it. */
   .map-breadcrumb {
     padding: 3px 12px 3px 3px; border: 1px solid #ded4c3; border-radius: 10px;
@@ -53,11 +55,11 @@
   .map-mode[data-collapsed-levels][data-open] { flex-direction: column; align-items: stretch; gap: 2px; }
   .map-mode[data-collapsed-levels][data-open] button { min-height: 44px; text-align: left; }
   .map-mode[data-collapsed-levels][data-open] #mode-lock { display: none; }
-  .map-side { right: var(--sheet-gap); bottom: 44px; gap: 8px; }
+  .map-side { right: calc(var(--sheet-gap) + env(safe-area-inset-right, 0px)); bottom: 44px; gap: 8px; }
   .map-actions { border-radius: 14px; }
   .globe-toggle { width: 46px; height: 46px; border-radius: 14px; }
   .map-actions button { width: 44px; height: 44px; }
-  .map-bottom { left: var(--sheet-gap); right: 70px; bottom: 14px; }
+  .map-bottom { left: calc(var(--sheet-gap) + env(safe-area-inset-left, 0px)); right: 70px; bottom: 14px; }
   /* Desktop-only: widening the sidebar has no meaning in a full-width sheet. */
   .north, .map-caption, .details-expand { display: none; }
   /* A fully open sheet covers the map; its controls would only sit behind the header. */
@@ -65,6 +67,7 @@
 
   .sidebar:not([hidden]) {
     position: fixed; left: 0; right: 0; bottom: 0; z-index: 550; height: var(--sheet-height); min-height: 0;
+    padding-bottom: env(safe-area-inset-bottom, 0px);
     border: 0; border-radius: 22px 22px 0 0; box-shadow: 0 -6px 24px rgba(23, 32, 25, .14);
     transition: height .28s var(--ease); overscroll-behavior: contain;
   }
@@ -75,15 +78,15 @@
     border: 0; background: transparent; cursor: grab; touch-action: none;
   }
   .sheet-handle::before { content: ""; width: 40px; height: 5px; border-radius: 3px; background: #d6cbb6; }
-  .sidebar-tools { padding: 0 16px; touch-action: none; }
+  .sidebar-tools { padding: 0 calc(16px + env(safe-area-inset-right, 0px)) 0 calc(16px + env(safe-area-inset-left, 0px)); touch-action: none; }
   .sidebar-tools input, .sidebar-tools button { touch-action: manipulation; }
   .panel-tabs { margin-top: 12px; gap: 22px; }
   .panel-tabs button { min-height: 44px; }
-  .sidebar-scroll { padding: 18px 16px 24px; overflow-y: auto; }
+  .sidebar-scroll { padding: 18px calc(16px + env(safe-area-inset-right, 0px)) 24px calc(16px + env(safe-area-inset-left, 0px)); overflow-y: auto; }
   html[data-sheet="peek"] .sidebar-scroll { visibility: hidden; }
   /* Credits and links live at the end of the expanded sheet only. */
   html:not([data-sheet="full"]) .sidebar-footer { display: none; }
-  .sidebar-footer { padding: 12px 16px calc(12px + env(safe-area-inset-bottom)); }
+  .sidebar-footer { padding: 12px calc(16px + env(safe-area-inset-right, 0px)) 12px calc(16px + env(safe-area-inset-left, 0px)); }
   /* MapLibre's own corner controls sit inside the full-height canvas. */
   .maplibregl-ctrl-bottom-right, .maplibregl-ctrl-bottom-left { bottom: var(--sheet-height); transition: bottom .28s var(--ease); }
 }

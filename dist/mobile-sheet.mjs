@@ -10,8 +10,10 @@ let state = 'peek', drag = null;
 const visibleSidebar = () => [...document.querySelectorAll('aside.sidebar')].find(a => !a.hidden && getComputedStyle(a).display !== 'none');
 function heights() {
   const aside = visibleSidebar(), tools = aside?.querySelector('.sidebar-tools'), handle = aside?.querySelector('.sheet-handle');
-  const peek = Math.round((handle?.offsetHeight || 26) + (tools?.offsetHeight ?? 120) + 14);
-  const full = Math.max(peek, innerHeight - 72);
+  const safeBottom = aside ? parseFloat(getComputedStyle(aside).paddingBottom) || 0 : 0;
+  const peek = Math.round((handle?.offsetHeight || 26) + (tools?.offsetHeight ?? 120) + 14 + safeBottom);
+  const headerBottom = document.querySelector('.site-header')?.getBoundingClientRect().bottom ?? 60;
+  const full = Math.max(peek, innerHeight - headerBottom - 12);
   return {peek, half: Math.min(full, Math.max(peek, Math.round(innerHeight * .48))), full};
 }
 function ensureHandle(aside) {
@@ -184,7 +186,8 @@ export function navigationPadding({selection=false}={}) {
   const controls = document.querySelector('.map-top')?.getBoundingClientRect();
   const top = Math.max(header.bottom, controls?.bottom || 0) - map.top + 18;
   const bottom = heights()[selection ? 'half' : 'peek'] + 22;
-  return {left:18, right:18, top:Math.min(top,map.height-bottom-40), bottom:Math.min(bottom,map.height*.6)};
+  const left = Math.max(18, header.left - map.left + 6), right = Math.max(18, map.right - header.right + 6);
+  return {left, right, top:Math.min(top,map.height-bottom-40), bottom:Math.min(bottom,map.height*.6)};
 }
 export function expand(){if(query.matches)apply('half');}
 
