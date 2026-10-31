@@ -13,5 +13,5 @@
   ],
   "processing": "Four exact named source features retained, including their island holes; no replacement outlines drawn.",
   "retained": "scripts/boundary-sources/canada-lakes/lakes.geojson.gz",
-  "policy": "Display water exclusions only; legal jurisdictions and reported statistics are not redefined."
+  "policy": "Permanent sea-colored lake surfaces cover land fills below the original administrative border meshes and selected jurisdiction outlines. Satellite imagery remains visible when enabled. Legal jurisdictions and reported statistics are not redefined."
 }

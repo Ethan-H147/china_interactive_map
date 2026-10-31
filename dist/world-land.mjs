@@ -33,6 +33,11 @@ export async function addWorldLand(map,{deferBorderPreviews=false}={}){
  if(!deferBorderPreviews)await addBorderPreviews(map);
  await overview;
  await addPoleCap(map);
+ // Root-tile globe land can paint over small inland holes when zoomed in.
+ // Keep these four permanent water surfaces above land fills and below all
+ // borders, matching the current sea palette and fading for satellite imagery.
+ await addWorkerSource(map,'canada-lake-water','data/canada-lakes.bin',{type:'geojson',tolerance:0,maxzoom:12,buffer:64},'parts');
+ map.addLayer({id:'canada-lake-water',source:'canada-lake-water',type:'fill',metadata:{atlas:{role:'water',sea:true,satellite:{fill:'fade'}}},paint:{'fill-color':map.getPaintProperty('background','background-color'),'fill-antialias':false}});
  if(await outlines)map.addLayer({id:'world-country-outlines',type:'line',source:'world-country-outlines',metadata:{atlasInternationalBorder:true,atlas:{role:'border'}},layout:{'line-join':'round','line-cap':'round'},paint:internationalBorderPaint()});
  globalThis.addEventListener?.('atlas-developer-change',()=>syncBackgroundLand(map));
  // China's non-atlas land neighbours at the precision of China's outline, in a band along it

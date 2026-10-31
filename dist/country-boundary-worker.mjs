@@ -2,6 +2,7 @@ import {loadCompressed} from './korea-data.mjs';
 import {polygonParts} from './polygon-parts.mjs';
 import {lineData} from './adaptive-lines.mjs';
 import {selectionLineData} from './outline-detail.mjs';
+import {applyOutlineEdits} from './outline-edits.mjs';
 const empty='{"type":"FeatureCollection","features":[]}';
 const encoder=new TextEncoder();
 function indexedRegions(regions){
@@ -27,16 +28,16 @@ self.onmessage=async({data})=>{
    // leaving out an artificial cut such as the flat map's 85°S limit.
    const regions=polygonParts(part.regions),overrides=part.selectionOutlineOverrides,replaced=new Set(overrides?.features.map(f=>f.properties.id));
    const custom=part.selectionOutlines||(overrides&&{...regions,features:[...regions.features.filter(f=>!replaced.has(f.properties.id)),...overrides.features]});
-   const outlineRegions=custom||regions,indexed=data.deferOutlines?indexedRegions(outlineRegions):null;
+   const outlineRegions=part.selectionOutlineEdits?applyOutlineEdits(custom||regions,part.selectionOutlineEdits):custom||regions,indexed=data.deferOutlines?indexedRegions(outlineRegions):null;
    return {
     ...(part.towns?{towns:prepare(part.towns)}:{}),
-    blob:!custom&&indexed?.blob||new Blob([JSON.stringify(regions)],{type:'application/json'}),
+    blob:!custom&&!part.selectionOutlineEdits&&indexed?.blob||new Blob([JSON.stringify(regions)],{type:'application/json'}),
     borders:new Blob([JSON.stringify(lineData(part.boundaries))],{type:'application/json'}),
     hasBorders:part.boundaries.features.length>0,
     // Reuse polygon slices unless the build supplies selection lines that omit
     // permanent water shores. Duplicate IDs retain every island or line part.
     ...(indexed?{outlines:new Blob([empty],{type:'application/json'}),outlineData:indexed.blob,outlineIndex:indexed.outlineIndex}:{
-     outlines:new Blob([JSON.stringify(selectionLineData(custom||part.regions))],{type:'application/json'})
+     outlines:new Blob([JSON.stringify(selectionLineData(part.selectionOutlineEdits?outlineRegions:custom||part.regions))],{type:'application/json'})
     })
    };
   };
