@@ -1,0 +1,34 @@
+{
+  "source": "Retained Natural Earth v5.1.2 1:10 million lake geometries",
+  "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_lakes.geojson",
+  "license": "Public domain",
+  "policy": "Permanent sea-colored surfaces above land fills and below the original administrative borders. Source island holes remain. Existing reported populations and areas are not changed.",
+  "names": [
+    "Lago de Nicaragua",
+    "Lago de Izabal",
+    "Lago de Managua",
+    null,
+    null,
+    null,
+    "Professor Doctor Ingenieur W. J. Van Blommestein Meer"
+  ],
+  "nicaraguaShoreline": {
+    "source": "Retained Nicaragua HDX COD-AB administrative geometry, matching department and municipality shorelines",
+    "url": "https://data.humdata.org/dataset/cod-ab-nic",
+    "geometry": "dist/data/europe/nicaragua/first.bin",
+    "sha256": "fea893b21ab29b7cc8c630fc81ff04e61fa4aca5e281f96102cb94b6aad79dfc",
+    "method": "Use the existing national lake openings, then subtract the unchanged administrative land to retain islands. Only permanent water paint changes; all administrative polygons, outlines, statistics and border strokes stay unchanged.",
+    "lakes": [
+      {
+        "name": "Lago de Nicaragua",
+        "shorelinePoints": 3888,
+        "islandHoles": 150
+      },
+      {
+        "name": "Lago de Managua",
+        "shorelinePoints": 2105,
+        "islandHoles": 3
+      }
+    ]
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "retrieved": "2026-10-31",
+  "coverage": "Guyana administrative reference from the retained licensed source. All hierarchy levels dissolve from the same jointly simplified local partition (0.00008 degree display tolerance, approximately five to nine metres). Source water-only polygons are excluded from administrative units. Shared international arcs use one owner and common junctions; existing neighboring administrative geometry remains fixed. Population observations retain their own year and coverage. Only ten administrative regions are used; the older 27 local reference areas do not establish a current local-government roster. Guyana-administered territory is not reassigned to Venezuela because of a claim. National World Bank GDP and GDP per capita are retained without distributing national output among subdivisions. Country overview pages remain hidden.",
+  "counts": {
+    "1": 10
+  },
+  "processing": "Guyana administrative reference from the retained licensed source. All hierarchy levels dissolve from the same jointly simplified local partition (0.00008 degree display tolerance, approximately five to nine metres). Source water-only polygons are excluded from administrative units. Shared international arcs use one owner and common junctions; existing neighboring administrative geometry remains fixed. Population observations retain their own year and coverage. Only ten administrative regions are used; the older 27 local reference areas do not establish a current local-government roster. Guyana-administered territory is not reassigned to Venezuela because of a claim. National World Bank GDP and GDP per capita are retained without distributing national output among subdivisions. Country overview pages remain hidden.",
+  "sources": {
+    "guy-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-guy",
+      "bytes": 11433,
+      "sha256": "e2cc41203d3876a457a31cbfe3247f2c3a6d4e9582707a0b4231b1db87252fc6"
+    },
+    "guy-adm1-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/GUY/ADM1/",
+      "bytes": 1753,
+      "sha256": "c56fb3611bc33c34728b9d39321c9dfae33f734914a376a18e754e6c99057834"
+    },
+    "guy-adm1.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/GUY/ADM1/geoBoundaries-GUY-ADM1.geojson",
+      "credit": "OpenStreetMap, Wambacher",
+      "license": "Open Data Commons Open Database License 1.0",
+      "year": "2017",
+      "bytes": 477777,
+      "sha256": "695bc45f5f05024d7ccb3336bd6f317a9168598ae4879858566fc4774c718ab6"
+    },
+    "guy-adm2-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/GUY/ADM2/",
+      "bytes": 1855,
+      "sha256": "f0e1090f0fa8ad4c2574010905fa0980e3c977c766e8a1fc7f0ba53b3eadce00"
+    },
+    "guy-adm2.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/GUY/ADM2/geoBoundaries-GUY-ADM2.geojson",
+      "credit": "DEVInfo LAC project, OCHA FISS",
+      "license": "Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+      "year": "2019",
+      "bytes": 228182,
+      "sha256": "85f375f7b6a3e9727e5dc1b10bce8ee6005f041386b5871e085a56cf0ddb98e4"
+    },
+    "guy-ps-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-guy",
+      "bytes": 9342,
+      "sha256": "8efee62e5e1cf9d6eb1ad74f460adf009b22014d171db4e651330490a8401895"
+    },
+    "guy-population-guy_admpop_adm0_2021.csv": {
+      "url": "https://data.humdata.org/dataset/4c628dd9-b96d-49b0-9bd2-1b9babc59f68/resource/ca1cf64c-0f88-4756-9a36-efa444437499/download/guy_admpop_adm0_2021.csv",
+      "credit": "Guyana - Subnational Population Statistics",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 7227,
+      "sha256": "dda48745bc32dd583075a3f8adc5a0790358c53ddd796e657883b4e9eb354112"
+    },
+    "guy-population-guy_admpop_adm1_2021.csv": {
+      "url": "https://data.humdata.org/dataset/4c628dd9-b96d-49b0-9bd2-1b9babc59f68/resource/316741eb-a4ce-4eb4-a976-e92710f7b56d/download/guy_admpop_adm1_2021.csv",
+      "credit": "Guyana - Subnational Population Statistics",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 10345,
+      "sha256": "594092bcde2b57d81cd98bde9ca34df3abf6bcb8e199b5824b0eaeff86041cab"
+    },
+    "flag-gy.svg": {
+      "url": "https://flagcdn.com/gy.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "bytes": 447,
+      "sha256": "910830b8f1f35c778f37eb37d47eea0ea952d1bf04070f7eaeb697d0f8ead948"
+    }
+  },
+  "displaySimplificationDegrees": 0.00008,
+  "sourceCounts": {
+    "1": 10
+  },
+  "waterPlaceholders": [],
+  "statisticalCoverage": {
+    "populationUnits": 10,
+    "missingPopulationUnits": 0,
+    "nationalGdpYear": 2025
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "retrieved": "2026-10-31",
+  "coverage": "Guatemala administrative reference from the retained licensed source. All hierarchy levels dissolve from the same jointly simplified local partition (0.00008 degree display tolerance, approximately five to nine metres). Source water-only polygons are excluded from administrative units. Shared international arcs use one owner and common junctions; existing neighboring administrative geometry remains fixed. Population observations retain their own year and coverage. National World Bank GDP and GDP per capita are retained without distributing national output among subdivisions. Country overview pages remain hidden.",
+  "counts": {
+    "1": 22,
+    "2": 340
+  },
+  "processing": "Guatemala administrative reference from the retained licensed source. All hierarchy levels dissolve from the same jointly simplified local partition (0.00008 degree display tolerance, approximately five to nine metres). Source water-only polygons are excluded from administrative units. Shared international arcs use one owner and common junctions; existing neighboring administrative geometry remains fixed. Population observations retain their own year and coverage. National World Bank GDP and GDP per capita are retained without distributing national output among subdivisions. Country overview pages remain hidden.",
+  "sources": {
+    "gtm-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-gtm",
+      "bytes": 34863,
+      "sha256": "10d2dc3e213254d1809e83c12165254dce9787cb2d689ed5750e9c4010f7fefa"
+    },
+    "gtm.zip": {
+      "url": "https://data.humdata.org/dataset/0b20f310-7d22-479c-b7e2-e1bb9737fa72/resource/77e5e79b-d7b0-497c-aea2-2753768ec5f0/download/gtm_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) / HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 3366983,
+      "sha256": "f178eda98c46329380bdbb43f0637b4c43535bc843de6a0b8b960193b8f4363f"
+    },
+    "gtm-ps-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-gtm",
+      "bytes": 44844,
+      "sha256": "287670fc3b84beff5db04c38d4d616545b76399467bf983536198bb8304c5dde"
+    },
+    "gtm-population-gtm_admpop_adm0_2024.csv": {
+      "url": "https://data.humdata.org/dataset/452f4fe9-6baf-46ef-a50e-7a6b1862d9fb/resource/c35ba3b7-1046-45ca-93b5-d7bce302fdba/download/gtm_admpop_adm0_2024.csv",
+      "credit": "Guatemala - Subnational Population Statistics",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 888,
+      "sha256": "93836a0a5bee8b542dad04df63e498976ef2ce4ddbe6e6b02b7ef07d42118507"
+    },
+    "gtm-population-gtm_admpop_adm1_2024.csv": {
+      "url": "https://data.humdata.org/dataset/452f4fe9-6baf-46ef-a50e-7a6b1862d9fb/resource/a983f193-2cb3-4f7c-af0b-6b889b7201bc/download/gtm_admpop_adm1_2024.csv",
+      "credit": "Guatemala - Subnational Population Statistics",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 7864,
+      "sha256": "890518b32958e31fa3ebd9e412bc7e29098ab3aaef4d5b3492471dbc3f911e61"
+    },
+    "gtm-population-gtm_admpop_adm2_2024.csv": {
+      "url": "https://data.humdata.org/dataset/452f4fe9-6baf-46ef-a50e-7a6b1862d9fb/resource/2dc15d20-568b-4c23-92bc-443eefba8460/download/gtm_admpop_adm2_2024.csv",
+      "credit": "Guatemala - Subnational Population Statistics",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 101557,
+      "sha256": "0f63c1293fc4f3d0ad4a6f796ec89288df9f8811ff51c1a5638027f68d49365e"
+    },
+    "flag-gt.svg": {
+      "url": "https://flagcdn.com/gt.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "bytes": 55531,
+      "sha256": "d59addea6225e7eeb09efaee9a888aacc2b93651e1306a3de84764c6c729f821"
+    }
+  },
+  "displaySimplificationDegrees": 0.00008,
+  "sourceCounts": {
+    "1": 22,
+    "2": 342
+  },
+  "waterPlaceholders": [
+    {
+      "id": "GT0100",
+      "name": "Lago De Amatitlan",
+      "level": 2
+    },
+    {
+      "id": "GT0700",
+      "name": "Lago De Atitlan",
+      "level": 2
+    }
+  ],
+  "statisticalCoverage": {
+    "populationUnits": 362,
+    "missingPopulationUnits": 0,
+    "nationalGdpYear": 2025
+  }
+}

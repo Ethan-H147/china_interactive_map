@@ -1,0 +1,65 @@
+{
+  "retrieved": "2026-10-31",
+  "coverage": "Grenada administrative reference from the retained licensed source. All hierarchy levels dissolve from the same jointly simplified local partition (0.00008 degree display tolerance, approximately five to nine metres). Source water-only polygons are excluded from administrative units. Shared international arcs use one owner and common junctions; existing neighboring administrative geometry remains fixed. Population observations retain their own year and coverage. National World Bank GDP and GDP per capita are retained without distributing national output among subdivisions. Country overview pages remain hidden.",
+  "counts": {
+    "1": 7
+  },
+  "processing": "Grenada administrative reference from the retained licensed source. All hierarchy levels dissolve from the same jointly simplified local partition (0.00008 degree display tolerance, approximately five to nine metres). Source water-only polygons are excluded from administrative units. Shared international arcs use one owner and common junctions; existing neighboring administrative geometry remains fixed. Population observations retain their own year and coverage. National World Bank GDP and GDP per capita are retained without distributing national output among subdivisions. Country overview pages remain hidden.",
+  "sources": {
+    "grd-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-grd",
+      "bytes": 15394,
+      "sha256": "80e316b29738ed9abe45cc22be654e306399f8bc41314345cc5d40e28d4759e3"
+    },
+    "grd.zip": {
+      "url": "https://data.humdata.org/dataset/ffdc3580-45ee-4630-9abf-4dd8a8b002d3/resource/34103afe-cce9-442c-a3b5-12dc228b9dcc/download/grd_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) / HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 1611313,
+      "sha256": "c5b8d97a305eae45657714a2d4fec30800aa190aa2007a7e1286a20cb0dfb873"
+    },
+    "grd-ps-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-grd",
+      "bytes": 9125,
+      "sha256": "92e75ecd29700245cd9223fa87eb018ced4fda4d85336d0e2e39067bce696c61"
+    },
+    "grd-population-grd_admpop_adm0_2011_v2.csv": {
+      "url": "https://data.humdata.org/dataset/fc29f982-6f4e-4ac1-85e4-fb2e17cdcbff/resource/493cde90-7ad3-4338-8f9b-57ef9ff04c2c/download/grd_admpop_adm0_2011_v2.csv",
+      "credit": "Grenada - Subnational Population Statistics",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 619,
+      "sha256": "ca70b9585b3e27af3ce3c1c7d024d8fca7de0a11e6db9cdd0b319a5f7590c98c"
+    },
+    "grd-population-grd_admpop_adm1_2011_v2.csv": {
+      "url": "https://data.humdata.org/dataset/fc29f982-6f4e-4ac1-85e4-fb2e17cdcbff/resource/bf1f9b92-7e69-467d-859b-5a91c44efa68/download/grd_admpop_adm1_2011_v2.csv",
+      "credit": "Grenada - Subnational Population Statistics",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 2244,
+      "sha256": "46ef5c0ecdd832d358f6ab5551675bd0f1d514a9746939552f2938d2ab2d1223"
+    },
+    "flag-gd.svg": {
+      "url": "https://flagcdn.com/gd.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "bytes": 1101,
+      "sha256": "a2068c160dddaf85e5ac16423100c50d1970990a7468f3e81eed2d11426c689a"
+    },
+    "grd-census-2021.pdf": {
+      "url": "https://stats.gov.gd/wp-content/uploads/2025/04/2021-National-Housing-Population-Census-Results-Latest-PRELIMINARY.pdf",
+      "credit": "Grenada Central Statistical Office, 2021 preliminary census, Table 17 and national Table 1",
+      "license": "Government statistical publication; statistical facts, original notice retained",
+      "bytes": 618126,
+      "sha256": "90fe42883b3c9338c8ef0679709a25ae8e532ab8f56e2a31e2358a130554fc6f"
+    }
+  },
+  "displaySimplificationDegrees": 0.00008,
+  "sourceCounts": {
+    "1": 8
+  },
+  "waterPlaceholders": [],
+  "statisticalCoverage": {
+    "populationUnits": 7,
+    "missingPopulationUnits": 0,
+    "nationalGdpYear": 2025
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "retrieved": "2026-10-31",
+  "coverage": "Dated source administrative reference; observation years and coverage retained independently. All hierarchy levels dissolve from one cleaned local partition. New international edges follow a single shared display arc and existing neighbors retain their administrative land. Population dates and coverage are independent of boundary dates. National GDP is not allocated to subdivisions. Country overview pages remain hidden.",
+  "counts": {
+    "1": 6
+  },
+  "processing": "Dated source administrative reference; observation years and coverage retained independently. All hierarchy levels dissolve from one cleaned local partition. New international edges follow a single shared display arc and existing neighbors retain their administrative land. Population dates and coverage are independent of boundary dates. National GDP is not allocated to subdivisions. Country overview pages remain hidden.",
+  "sources": {
+    "kwt-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-kwt",
+      "bytes": 28791,
+      "sha256": "0cc22bcbfcd87bcac2b5b9668850da331b9cea1b5ae9bb810aae2f738127caa2"
+    },
+    "kwt-gb1-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/KWT/ADM1/",
+      "bytes": 1731,
+      "sha256": "cca7f2ed96f02f080b4df3c1ab4e5645a69e2a44f2c7f85782dd8cc4306433d1"
+    },
+    "kwt-gb2-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/KWT/ADM2/",
+      "bytes": 1784,
+      "sha256": "453622f157df56ae3407b60ae6f1c833b0b08781395a5fcb717b0e0abd0b1964"
+    },
+    "flag-kw.svg": {
+      "url": "https://flagcdn.com/kw.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "bytes": 232,
+      "sha256": "ce62298731cb48e5f502af92203342f43bfa9568acfc6d2194c7227760e9184c"
+    },
+    "kwt.zip": {
+      "url": "https://data.humdata.org/dataset/a28f399f-482c-4e62-8dbf-d2c12381674a/resource/89b9c8ee-6ba4-4078-9f46-5796fe566759/download/kwt_admin_boundaries.geojson.zip",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "credit": "National provider / OCHA HDX COD-AB",
+      "bytes": 409136,
+      "sha256": "3ffc66b46b6d208679723a05bacfa9785e102f81de99e106c239d931e1f1d875"
+    }
+  },
+  "displaySimplificationDegrees": 0.00005,
+  "sourceCounts": {
+    "1": 6
+  },
+  "waterPlaceholders": [],
+  "statisticalCoverage": {
+    "populationUnits": 0,
+    "missingPopulationUnits": 6,
+    "nationalGdpYear": 2025
+  },
+  "displayNames": {
+    "note": "Source identities and geometry unchanged; display case and native-language names normalized independently.",
+    "sources": [],
+    "nativeField": "Existing retained localized source attribute; French source capitalization normalized for Chad"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "retrieved": "2026-10-31",
+  "coverage": "Antigua and Barbuda administrative reference from the retained licensed source. All hierarchy levels dissolve from the same jointly simplified local partition (0.00008 degree display tolerance, approximately five to nine metres). Source water-only polygons are excluded from administrative units. Shared international arcs use one owner and common junctions; existing neighboring administrative geometry remains fixed. Population observations retain their own year and coverage. National World Bank GDP and GDP per capita are retained without distributing national output among subdivisions. Country overview pages remain hidden.",
+  "counts": {
+    "1": 8
+  },
+  "processing": "Antigua and Barbuda administrative reference from the retained licensed source. All hierarchy levels dissolve from the same jointly simplified local partition (0.00008 degree display tolerance, approximately five to nine metres). Source water-only polygons are excluded from administrative units. Shared international arcs use one owner and common junctions; existing neighboring administrative geometry remains fixed. Population observations retain their own year and coverage. National World Bank GDP and GDP per capita are retained without distributing national output among subdivisions. Country overview pages remain hidden.",
+  "sources": {
+    "atg-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-atg",
+      "bytes": 14010,
+      "sha256": "f76ba41c9f2e3070628b77c0de23f4afc2c8e3232abbb1af32c50126aa69ced1"
+    },
+    "atg-adm1-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/ATG/ADM1/",
+      "bytes": 1708,
+      "sha256": "f3484f08da09ee155e793d0e9ac85bfe12d9eff188793bc4e47de72bd666cf7f"
+    },
+    "atg-adm1.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/ATG/ADM1/geoBoundaries-ATG-ADM1.geojson",
+      "credit": "geoBoundaries, Wikimedia",
+      "license": "Public Domain",
+      "year": "2009",
+      "bytes": 79247,
+      "sha256": "ae549c3ea440f66d4e2f249f4f2bec14d033f1ba2399374153dfd289d8201718"
+    },
+    "atg-ps-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-atg",
+      "bytes": 13648,
+      "sha256": "c9c97ce2ef2765e86610a0cd022d99fbd04c8ccde6ef3324686d75cdfbbee8ea"
+    },
+    "atg-population-atg_admpop_adm0_2023.csv": {
+      "url": "https://data.humdata.org/dataset/91aeaa9d-35d3-4901-8d66-28bb580e7611/resource/9027195a-d2b6-4018-a6c8-5335c44fb406/download/atg_admpop_adm0_2023.csv",
+      "credit": "Antigua and Barbuda - Subnational Population Statistics",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 764,
+      "sha256": "915c1c9247c556821cd9c27285af61e5d7107337a423abd272a9420a19063e28"
+    },
+    "flag-ag.svg": {
+      "url": "https://flagcdn.com/ag.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "bytes": 483,
+      "sha256": "73f382e91c9e9ba8e786696f20011a04c7e22354e37db61921f2c57645ec7385"
+    },
+    "atg-census-2011.pdf": {
+      "url": "https://statistics.gov.ag/wp-content/uploads/2017/10/Census-2011-Book-of-Statistical-Tables-I.pdf",
+      "credit": "National statistics office; official census publication",
+      "license": "Statistical facts; retain source attribution",
+      "bytes": 7828669,
+      "sha256": "16dec3a7eafcb467b2b360d889210ab02be5514e90739320a3c93f0babce88a0"
+    }
+  },
+  "displaySimplificationDegrees": 0.00008,
+  "sourceCounts": {
+    "1": 8
+  },
+  "waterPlaceholders": [],
+  "statisticalCoverage": {
+    "populationUnits": 7,
+    "missingPopulationUnits": 1,
+    "nationalGdpYear": 2025
+  }
+}

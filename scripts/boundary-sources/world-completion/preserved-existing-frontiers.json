@@ -1,0 +1,140 @@
+{
+  "sourceCommit": "cb41d47034780ebe11a433fd683dba4dff778904",
+  "method": "Original detailed border segments shared with another existing country; new-country arcs excluded. Preserve original coordinates and ownership near new-country junctions.",
+  "countries": {
+    "ethiopia": {
+      "originalFile": "dist/data/europe/ethiopia/international.bin",
+      "originalSha256": "39b8463110a34d597e20348be00d3948747c05c5309c5687808a2ecb5d15fc62",
+      "administrativeSha256": "e86ac7d319b639a796b72732a88d1cedcecfc63984ef5ae8a7b312eaedd3f556",
+      "protectedMetres": 16538.7912175381,
+      "restoredMissingMetres": 16538.7912175381
+    },
+    "syria": {
+      "originalFile": "dist/data/europe/syria/international.bin",
+      "originalSha256": "68e1fb38e0c503b063fa15ee9b945c250d919ca71fee57252841dde719d82515",
+      "administrativeSha256": "0fdb721394b320689724682d5bd30bb4cfb43f7cc5065c5c25da3e4e8285e7fe",
+      "protectedMetres": 10369.205921697921,
+      "restoredMissingMetres": 5726.541978512304
+    },
+    "sudan": {
+      "originalFile": "dist/data/europe/sudan/international.bin",
+      "originalSha256": "7ade90a6242095dd1da011331400eaacbc37082cf04114f124925c86d60e08fd",
+      "administrativeSha256": "dc1773c885bfe86ed31330814fe4ab050112ce261192c96e3b4d15f2f92aa7f0",
+      "protectedMetres": 23555.72054590393,
+      "restoredMissingMetres": 0
+    },
+    "austria": {
+      "originalFile": "dist/data/europe/austria/international.bin",
+      "originalSha256": "6fbbc0bab156410498dcddf04a7cd3ec473f56781d134236701f9aeae2ba9d50",
+      "administrativeSha256": "b2b6abc624e67bc8d51d3b554e9315b72b141d81f9686b4c423cbca3c94bf013",
+      "protectedMetres": 38476.13618200427,
+      "restoredMissingMetres": 54.341072609529675
+    },
+    "senegal": {
+      "originalFile": "dist/data/europe/senegal/international.bin",
+      "originalSha256": "6658009b123f58f25d68ee0124658b9fd278cee67fd896670b04a12a0b3c4b3a",
+      "administrativeSha256": "bb3cd0bc6b25a62215b674b2d09c3dc2180120fe2afc1d1c78aa928297de4781",
+      "protectedMetres": 20370.728184783547,
+      "restoredMissingMetres": 840.1096738797747
+    },
+    "nigeria": {
+      "originalFile": "dist/data/europe/nigeria/international.bin",
+      "originalSha256": "b11015c8794638eb3906b8cf4a08050a28d45885a5b72b1f77f0d1ec04493f85",
+      "administrativeSha256": "515acdbe39303dea609cc28fc0f7c23e4656c35a0cc88c90e3a41d700766586d",
+      "protectedMetres": 29812.969597828167,
+      "restoredMissingMetres": 17233.535552397607
+    },
+    "iraq": {
+      "originalFile": "dist/data/europe/iraq/international.bin",
+      "originalSha256": "ff83cba27cc3725c9d5588d703128f4d1745840367b85eacefa26ffff415ae23",
+      "administrativeSha256": "899d58cb555f2b8f85c912e8b38aab8d3d27444a5381722bbe5adf49ff596782",
+      "protectedMetres": 13305.925375986777,
+      "restoredMissingMetres": 1007.5492849674671
+    },
+    "france": {
+      "originalFile": "dist/data/europe/france/international.bin",
+      "originalSha256": "de106e3ba835deb5d8c9d8b6282a283061a28e59e01738474b9e7487435dfed3",
+      "administrativeSha256": "7ffdbefbe7a2cc5960805848ce6fbcb502f1356541462b80bad81fe682c4c236",
+      "protectedMetres": 40464.91988746122,
+      "restoredMissingMetres": 26338.875933652667
+    },
+    "jordan": {
+      "originalFile": "dist/data/europe/jordan/international.bin",
+      "originalSha256": "60eba6686c54e2cbcaa313293145d3ee1b2733d67d5a73886ad711dfc783b13f",
+      "administrativeSha256": "47f382a64f91d0bf6e062af8075f8fa061cf98571cb9af89e7ca10045d5fbb77",
+      "protectedMetres": 7601.155539761453,
+      "restoredMissingMetres": 7601.155539761453
+    },
+    "cameroon": {
+      "originalFile": "dist/data/europe/cameroon/international.bin",
+      "originalSha256": "9f5a30dd6b2335c65ab11c77fdca5e29165f62ced91419cebc5861b7ffc16bbf",
+      "administrativeSha256": "801ae246480ebe785e677f7ff179583e8ed478ae2883097dd4455c07601336ce",
+      "protectedMetres": 38089.87349906042,
+      "restoredMissingMetres": 0
+    },
+    "benin": {
+      "originalFile": "dist/data/europe/benin/international.bin",
+      "originalSha256": "a5e736766a5c204953af03d2de98b3c177b2f6faa7a468cd0b134fa2685ba6f4",
+      "administrativeSha256": "44df3a33bff2f9297d645aceae416db1e70eaeae3ef04789e69c3160d3693b0c",
+      "protectedMetres": 32802.91815689429,
+      "restoredMissingMetres": 0
+    },
+    "ivory-coast": {
+      "originalFile": "dist/data/europe/ivory-coast/international.bin",
+      "originalSha256": "524ed0e787fcc6860e1137c59651fe0ff71e1516e3c0e4e07f46ddddce671b26",
+      "administrativeSha256": "35195382f2cece36cb212a080d180a8dde65de09c2f3665261b5f529440e116c",
+      "protectedMetres": 16187.885829289778,
+      "restoredMissingMetres": 0
+    },
+    "guinea": {
+      "originalFile": "dist/data/europe/guinea/international.bin",
+      "originalSha256": "78c7e40c64507c356d46f0c57a1848b305df44566f3f28cc46aa198984e78e39",
+      "administrativeSha256": "51676f1fa8d0b33ebc708bec632dc9f6717caf63cad363414c571915b42c291c",
+      "protectedMetres": 23565.751663293682,
+      "restoredMissingMetres": 0
+    },
+    "saudi-arabia": {
+      "originalFile": "dist/data/europe/saudi-arabia/international.bin",
+      "originalSha256": "ddb92611ef7652eeec6db73baabac0669e041d8a87a66aff682318520f53e9d5",
+      "administrativeSha256": "fa588bea784981fcd12d91bb4f794eed14e0021ff8d94f323c2ae838e5c8b98b",
+      "protectedMetres": 1007.5492849674671,
+      "restoredMissingMetres": 1007.5492849674671
+    },
+    "libya": {
+      "originalFile": "dist/data/europe/libya/international.bin",
+      "originalSha256": "a979f1da9d0ec464e983fa7146ebc1ef76fdc143d7169ac8661228180f98213f",
+      "administrativeSha256": "e16d12a7ae224612a6e7257a8a8c8c19cf194033a532d68e23cd96a7a0e41669",
+      "protectedMetres": 4788.617223174326,
+      "restoredMissingMetres": 0
+    },
+    "mauritania": {
+      "originalFile": "dist/data/europe/mauritania/international.bin",
+      "originalSha256": "ac98b84825665098c3a3ae6f9e96e7cfb0974d5c0e7d57ca964cd2c5060dc811",
+      "administrativeSha256": "0db88c1bce1187a5ed988509c8705dd4b59aa4e73f1b647a5581a62410402831",
+      "protectedMetres": 20220.043554275788,
+      "restoredMissingMetres": 3111.9895258811666
+    },
+    "uganda": {
+      "originalFile": "dist/data/europe/uganda/international.bin",
+      "originalSha256": "827b3afeba2e9b83fc18ec26144f1f172cb8bad642733184e8de0f51e09e137e",
+      "administrativeSha256": "0eaeba5620252ac20e893b4a1764a36542daefc627517ea1a6d3feca30ede499",
+      "protectedMetres": 47029.30578415818,
+      "restoredMissingMetres": 0
+    },
+    "togo": {
+      "originalFile": "dist/data/europe/togo/international.bin",
+      "originalSha256": "5d244e31d931d0151793cfb643b33ffb6f64a0826e1e8a8a075808cfe77cf5f1",
+      "administrativeSha256": "dc88d1c03718127f844584ffc0a628a08dc8729e9407f58cf343dba0c82673a8",
+      "protectedMetres": 35375.34430452885,
+      "restoredMissingMetres": 0
+    },
+    "ghana": {
+      "originalFile": "dist/data/europe/ghana/international.bin",
+      "originalSha256": "80ac350f360743c44fcd904ce01427f261636e83312a541d9feaff474b454988",
+      "administrativeSha256": "de2b027c6bddfe660f96672cd6dc78f565b406c607e2e969cb5f50ac75c62200",
+      "protectedMetres": 24255.839068579087,
+      "restoredMissingMetres": 0
+    }
+  },
+  "sha256": "4da294b356303bd381786ef1caf3645c4b961abe3af6b42af663b6d9c326e10f"
+}

@@ -1,0 +1,47 @@
+{
+  "retrieved": "2026-10-31",
+  "coverage": "Dated source administrative reference; observation years and coverage retained independently. All hierarchy levels dissolve from one cleaned local partition. New international edges follow a single shared display arc and existing neighbors retain their administrative land. Population dates and coverage are independent of boundary dates. National GDP is not allocated to subdivisions. Country overview pages remain hidden.",
+  "counts": {
+    "1": 7
+  },
+  "processing": "Dated source administrative reference; observation years and coverage retained independently. All hierarchy levels dissolve from one cleaned local partition. New international edges follow a single shared display arc and existing neighbors retain their administrative land. Population dates and coverage are independent of boundary dates. National GDP is not allocated to subdivisions. Country overview pages remain hidden.",
+  "sources": {
+    "and-gb1-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/AND/ADM1/",
+      "bytes": 1703,
+      "sha256": "408b3f0548dfd49226c9024fccc0ca03a706343035fda05e4c809c5f4e638bb5"
+    },
+    "flag-ad.svg": {
+      "url": "https://flagcdn.com/ad.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "bytes": 54926,
+      "sha256": "e2cf35be958f3b581660085c0d9b768610f476c486a3d23798f62187fffa270f"
+    },
+    "and-adm1.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/AND/ADM1/geoBoundaries-AND-ADM1.geojson",
+      "license": "Public Domain",
+      "credit": "geoBoundaries, Wikimedia Commons",
+      "year": "2007",
+      "bytes": 78218,
+      "sha256": "e9e4fcd28a898ad101ac4562b58c76fed346be738ddc357a017889d9275d72fb"
+    },
+    "and-population-2025.pdf": {
+      "url": "https://www.govern.ad/documents/1898932/0/20260521%2BPresentaci%C3%B3%2BProjecte%2Bde%2Bllei%2Bordenaci%C3%B3%2Bfarmac%C3%A8utica.pdf/2a195030-1cfb-55fc-2edd-fab2fbd70e07?t=1779357501324",
+      "credit": "Govern d’Andorra, Ministry of Health, 2025 territorial population table, page 9",
+      "license": "Government statistical publication; notices retained",
+      "bytes": 194829,
+      "sha256": "070044baeb09f642e3aff7cf8426ae78d0ef4cacfa174c0366c98cfe36ccc67f"
+    }
+  },
+  "displaySimplificationDegrees": 0.00005,
+  "sourceCounts": {
+    "1": 7
+  },
+  "waterPlaceholders": [],
+  "statisticalCoverage": {
+    "populationUnits": 7,
+    "missingPopulationUnits": 0,
+    "nationalGdpYear": 2025
+  }
+}

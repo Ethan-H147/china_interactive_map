@@ -1,0 +1,79 @@
+{
+  "retrieved": "2026-10-31",
+  "coverage": "Dated ten-state / 79-county / 512-payam COD-AB reference; special administrative areas are not separate source polygons. Abyei remains subject to its existing disputed-area display. Abyei is already mapped as a disputed area in the existing Sudan entry and is not duplicated as ordinary South Sudan fill. All hierarchy levels dissolve from one cleaned local partition. New international edges follow a single shared display arc and existing neighbors retain their administrative land. Population dates and coverage are independent of boundary dates. National GDP is not allocated to subdivisions. Country overview pages remain hidden.",
+  "counts": {
+    "1": 10,
+    "2": 78,
+    "3": 511
+  },
+  "processing": "Dated ten-state / 79-county / 512-payam COD-AB reference; special administrative areas are not separate source polygons. Abyei remains subject to its existing disputed-area display. Abyei is already mapped as a disputed area in the existing Sudan entry and is not duplicated as ordinary South Sudan fill. All hierarchy levels dissolve from one cleaned local partition. New international edges follow a single shared display arc and existing neighbors retain their administrative land. Population dates and coverage are independent of boundary dates. National GDP is not allocated to subdivisions. Country overview pages remain hidden.",
+  "sources": {
+    "ssd-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-ssd",
+      "bytes": 17917,
+      "sha256": "1eba5b160cb84e1b3bdf3547a25c5277c032b74d5f8041a192bd9ebfea867112"
+    },
+    "ssd-ps-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-ssd",
+      "bytes": 22529,
+      "sha256": "9d33f26597c31950a288a6a4f0f31ae4a5f3e85e39faf07d508f78b3c6cd8a80"
+    },
+    "ssd-gb1-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/SSD/ADM1/",
+      "bytes": 1881,
+      "sha256": "9e7f505c0ef1aa7b28d396f6747f0d9d961e5438ea311a22d9ec95b655090c92"
+    },
+    "ssd-gb2-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/SSD/ADM2/",
+      "bytes": 1881,
+      "sha256": "c1ab2411a14a8859c227b9cdd0e794137c4924139d55fa59086aa9e03dcc1390"
+    },
+    "flag-ss.svg": {
+      "url": "https://flagcdn.com/ss.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "bytes": 385,
+      "sha256": "0f2a925c6daf8945ff257938e04b0609441f698010d80c9717904c71a54a235e"
+    },
+    "ssd.zip": {
+      "url": "https://data.humdata.org/dataset/cdd62bd9-e442-4eac-9b44-cfee8bf79153/resource/c6bb2f28-6379-4750-b792-15915e9ab320/download/ssd_admin_boundaries.geojson.zip",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "credit": "National provider / OCHA HDX COD-AB",
+      "bytes": 2858097,
+      "sha256": "0d33a25d3ce45e79421baacef4bfce75998960a30d326f99602e3c2afdd915ce"
+    },
+    "ssd-population-ssd_admpop_adm0_2022_v2.csv": {
+      "url": "https://data.humdata.org/dataset/5116cb9f-5db8-4f56-9766-735d88dcbbfa/resource/de6f609b-fba3-4088-8cd4-b870f79a7e01/download/ssd_admpop_adm0_2022_v2.csv",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "credit": "National provider / OCHA HDX COD-PS",
+      "bytes": 271,
+      "sha256": "c9f8286e5659e038a3256fca22be53b6b7627da5301a1ce148695dec6950225d"
+    },
+    "ssd-population-ssd_admpop_adm1_2022_v2.csv": {
+      "url": "https://data.humdata.org/dataset/5116cb9f-5db8-4f56-9766-735d88dcbbfa/resource/7a5243b5-9b54-4453-a30e-044e79417e1f/download/ssd_admpop_adm1_2022_v2.csv",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "credit": "National provider / OCHA HDX COD-PS",
+      "bytes": 1531,
+      "sha256": "1e5ebad007c861357dca5dc6141e4c37d585b05f0ad39f4ba418c612c79b6903"
+    },
+    "ssd-population-ssd_admpop_adm2_2022_v2.csv": {
+      "url": "https://data.humdata.org/dataset/5116cb9f-5db8-4f56-9766-735d88dcbbfa/resource/209b6acb-99d0-4055-878e-e1a68618abe1/download/ssd_admpop_adm2_2022_v2.csv",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "credit": "National provider / OCHA HDX COD-PS",
+      "bytes": 10868,
+      "sha256": "ce4a7a1ac3f2742dcd69bc9e534cebfd26d527ff7b6e9e41c0b808fe631d265a"
+    }
+  },
+  "displaySimplificationDegrees": 0.00005,
+  "sourceCounts": {
+    "1": 11,
+    "2": 79,
+    "3": 512
+  },
+  "waterPlaceholders": [],
+  "statisticalCoverage": {
+    "populationUnits": 88,
+    "missingPopulationUnits": 511,
+    "nationalGdpYear": 2015
+  }
+}

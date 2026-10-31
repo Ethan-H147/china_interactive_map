@@ -1,0 +1,91 @@
+{
+  "retrieved": "2026-10-31",
+  "coverage": "Current twenty-region administrative structure; 2023 official population projections matched to the 2023 reform using INSTAT’s January 2026 directory. All hierarchy levels dissolve from one cleaned local partition. New international edges follow a single shared display arc and existing neighbors retain their administrative land. Population dates and coverage are independent of boundary dates. National GDP is not allocated to subdivisions. Country overview pages remain hidden.",
+  "counts": {
+    "1": 20,
+    "2": 160
+  },
+  "processing": "Current twenty-region administrative structure; 2023 official population projections matched to the 2023 reform using INSTAT’s January 2026 directory. All hierarchy levels dissolve from one cleaned local partition. New international edges follow a single shared display arc and existing neighbors retain their administrative land. Population dates and coverage are independent of boundary dates. National GDP is not allocated to subdivisions. Country overview pages remain hidden.",
+  "sources": {
+    "mli-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-mli",
+      "bytes": 57771,
+      "sha256": "c1523f9d7d7f2595e0068f48a915f82752b61830801bac23f9e57166c518fbe3"
+    },
+    "mli-ps-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-mli",
+      "bytes": 13889,
+      "sha256": "9700f92fc923bc1676638ffd0337cb1d58a6df219e1dddd60d46dbbfba17886a"
+    },
+    "mli-gb1-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/MLI/ADM1/",
+      "bytes": 1879,
+      "sha256": "0ca56dfa5915e2bdb277244f7a9b7d7f4a118611a384eea4afca11cf8e78eda6"
+    },
+    "mli-gb2-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/MLI/ADM2/",
+      "bytes": 2023,
+      "sha256": "abf07152a8373f35263cdb7c401e610c4905beb619fd43c60fdaeeee3fcc0a86"
+    },
+    "flag-ml.svg": {
+      "url": "https://flagcdn.com/ml.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "bytes": 197,
+      "sha256": "ae9516c41b4bb5385e047fc66da8e0e3e3b9360a5850c36d4b5c21950be3853c"
+    },
+    "mli.zip": {
+      "url": "https://data.humdata.org/dataset/d2ec62bb-5a93-436d-8297-88b3ee9b6818/resource/f5502554-402b-405b-8967-8182d306a4d1/download/mli_admin_boundaries.geojson.zip",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "credit": "National provider / OCHA HDX COD-AB",
+      "bytes": 655527,
+      "sha256": "ceee06d56acce9637b15452f4950f5b4c66d85f58b7f5edecec68a7365323229"
+    },
+    "mli-population-mli_pop_adm0_v2.csv": {
+      "url": "https://data.humdata.org/dataset/ce21c7db-d8f0-40f8-adc2-452d2d2d105c/resource/6f243ba2-4d4a-4663-a7c4-e917dbbde73a/download/mli_pop_adm0_v2.csv",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "credit": "National provider / OCHA HDX COD-PS",
+      "bytes": 155,
+      "sha256": "6627076c905804a0f0868e0c1f57b2c294ab81af20a529058aee3dbb218fed6d"
+    },
+    "mli-population-mli_pop_adm1_v2.csv": {
+      "url": "https://data.humdata.org/dataset/ce21c7db-d8f0-40f8-adc2-452d2d2d105c/resource/0bd515ae-613c-400f-a84c-ea203cc529be/download/mli_pop_adm1_v2.csv",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "credit": "National provider / OCHA HDX COD-PS",
+      "bytes": 749,
+      "sha256": "1422abf03d3ba81c52929d3a62a23d6c976bdb1295bea0fe963ea112092003db"
+    },
+    "mli-population-mli_pop_adm2_v2.csv": {
+      "url": "https://data.humdata.org/dataset/ce21c7db-d8f0-40f8-adc2-452d2d2d105c/resource/af0c935f-d507-4252-945c-9d1a6cc1b598/download/mli_pop_adm2_v2.csv",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "credit": "National provider / OCHA HDX COD-PS",
+      "bytes": 4289,
+      "sha256": "ab8790d82e29e44caf45c8fac5605f60acd1dee3ff65317b621c36c707fc623f"
+    },
+    "mli-population-mli_pop_adm3_v2.csv": {
+      "url": "https://data.humdata.org/dataset/ce21c7db-d8f0-40f8-adc2-452d2d2d105c/resource/6a73b827-302d-47be-94a9-580fa73011b5/download/mli_pop_adm3_v2.csv",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "credit": "National provider / OCHA HDX COD-PS",
+      "bytes": 68920,
+      "sha256": "86fcea2d46843b16cb9d19b0b8fa16f973a87d5a7582c2b4b6a8c4d4304cda59"
+    },
+    "mli-directory-2023.pdf": {
+      "url": "https://www.instat-mali.org/laravel-filemanager/files/shares/rgph/repvila-rgph5_rgph.pdf",
+      "credit": "INSTAT Mali, Répertoire des localités 2023, published January 2026",
+      "license": "Government statistical publication; notices retained",
+      "bytes": 8495262,
+      "sha256": "cc248a7dd3b38567345ccd1d04dc3efc08eca02ecfc886e5fbd94062869cb564"
+    }
+  },
+  "displaySimplificationDegrees": 0.00005,
+  "sourceCounts": {
+    "1": 20,
+    "2": 160
+  },
+  "waterPlaceholders": [],
+  "statisticalCoverage": {
+    "populationUnits": 166,
+    "missingPopulationUnits": 14,
+    "nationalGdpYear": 2025
+  }
+}

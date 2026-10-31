@@ -74,5 +74,10 @@
         }
       }
     }
+  },
+  "displayNames": {
+    "note": "Source identities and geometry unchanged; display case and native-language names normalized independently.",
+    "sources": [],
+    "nativeField": "Existing retained localized source attribute; French source capitalization normalized for Chad"
   }
 }

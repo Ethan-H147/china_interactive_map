@@ -38,6 +38,10 @@ export async function addWorldLand(map,{deferBorderPreviews=false}={}){
  // borders, matching the current sea palette and fading for satellite imagery.
  await addWorkerSource(map,'canada-lake-water','data/canada-lakes.bin',{type:'geojson',tolerance:0,maxzoom:12,buffer:64},'parts');
  map.addLayer({id:'canada-lake-water',source:'canada-lake-water',type:'fill',metadata:{atlas:{role:'water',sea:true,satellite:{fill:'fade'}}},paint:{'fill-color':map.getPaintProperty('background','background-color'),'fill-antialias':false}});
+ await addWorkerSource(map,'major-lake-water','data/major-lake-cutouts.bin',{type:'geojson',tolerance:0,maxzoom:16,buffer:128,attribution:'Lake surfaces: Natural Earth (public domain) · <a href="data/major-lake-cutouts-sources.json">Sources</a>'},'parts');
+ map.addLayer({id:'major-lake-water',source:'major-lake-water',type:'fill',metadata:{atlas:{role:'water',sea:true,satellite:{fill:'fade'}}},paint:{'fill-color':map.getPaintProperty('background','background-color'),'fill-antialias':false}});
+ await addWorkerSource(map,'americas-inland-water','data/americas-inland-water.bin',{type:'geojson',tolerance:0,maxzoom:16,buffer:128},'parts');
+ map.addLayer({id:'americas-inland-water',source:'americas-inland-water',type:'fill',metadata:{atlas:{role:'water',sea:true,satellite:{fill:'fade'}}},paint:{'fill-color':map.getPaintProperty('background','background-color'),'fill-antialias':false}});
  if(await outlines)map.addLayer({id:'world-country-outlines',type:'line',source:'world-country-outlines',metadata:{atlasInternationalBorder:true,atlas:{role:'border'}},layout:{'line-join':'round','line-cap':'round'},paint:internationalBorderPaint()});
  globalThis.addEventListener?.('atlas-developer-change',()=>syncBackgroundLand(map));
  // China's non-atlas land neighbours at the precision of China's outline, in a band along it

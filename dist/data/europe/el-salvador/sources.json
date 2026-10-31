@@ -1,0 +1,117 @@
+{
+  "retrieved": "2026-10-31",
+  "coverage": "El Salvador administrative reference from the retained licensed source. All hierarchy levels dissolve from the same jointly simplified local partition (0.00008 degree display tolerance, approximately five to nine metres). Source water-only polygons are excluded from administrative units. Shared international arcs use one owner and common junctions; existing neighboring administrative geometry remains fixed. Population observations retain their own year and coverage. National World Bank GDP and GDP per capita are retained without distributing national output among subdivisions. Country overview pages remain hidden.",
+  "counts": {
+    "1": 14,
+    "2": 44,
+    "3": 262
+  },
+  "processing": "El Salvador administrative reference from the retained licensed source. All hierarchy levels dissolve from the same jointly simplified local partition (0.00008 degree display tolerance, approximately five to nine metres). Source water-only polygons are excluded from administrative units. Shared international arcs use one owner and common junctions; existing neighboring administrative geometry remains fixed. Population observations retain their own year and coverage. National World Bank GDP and GDP per capita are retained without distributing national output among subdivisions. Country overview pages remain hidden.",
+  "sources": {
+    "slv-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-slv",
+      "bytes": 40302,
+      "sha256": "1866704c70254732f9c23475b06460ddd2ee4a5abb4db370e90c7aac0994f538"
+    },
+    "slv.zip": {
+      "url": "https://data.humdata.org/dataset/08bfc7f6-3acc-45df-a69a-b853cf1cff05/resource/1fda0e08-9988-461c-88a4-8ac62c3dcbb1/download/slv_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) / HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 5860652,
+      "sha256": "1d76fcb3a496f25d86d8c278a4b8927bcebc7ad79996b8ccdd02341d1537b777"
+    },
+    "slv-ps-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-slv",
+      "bytes": 45250,
+      "sha256": "29180d277875af9ffcad19e6f455f60428f3697d2944d4c0bbc2ea9cbcf46431"
+    },
+    "slv-population-slv_admpop_adm0_2024.csv": {
+      "url": "https://data.humdata.org/dataset/89127169-6002-456f-adb1-7151d987467f/resource/2a1a61ae-d581-4003-931d-ae482f66acc3/download/slv_admpop_adm0_2024.csv",
+      "credit": "El Salvador - Subnational Population Statistics",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 857,
+      "sha256": "3f68ee6452b2c1f1a2ed9ffdff71034e45acc0a0a689869d957d04da66d928a3"
+    },
+    "slv-population-slv_admpop_adm1_2024.csv": {
+      "url": "https://data.humdata.org/dataset/89127169-6002-456f-adb1-7151d987467f/resource/de772d53-4ae2-4b3f-8686-c8fd622e7472/download/slv_admpop_adm1_2024.csv",
+      "credit": "El Salvador - Subnational Population Statistics",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 5301,
+      "sha256": "2be8552056f46602fe0c2dd3d6c8193c0f363ea2439bd4f7d072217756374561"
+    },
+    "slv-population-slv_admpop_adm2_2024.csv": {
+      "url": "https://data.humdata.org/dataset/89127169-6002-456f-adb1-7151d987467f/resource/1d8a3ccb-3002-4119-866d-5d9473c3f461/download/slv_admpop_adm2_2024.csv",
+      "credit": "El Salvador - Subnational Population Statistics",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 16338,
+      "sha256": "7df45e988bc52341961114f5d2a4e112eb8a9bee10aaddea0542289901cc64de"
+    },
+    "slv-population-slv_admpop_adm3_2024.csv": {
+      "url": "https://data.humdata.org/dataset/89127169-6002-456f-adb1-7151d987467f/resource/0f342730-7bd1-4a82-9d95-4aa65c6e275d/download/slv_admpop_adm3_2024.csv",
+      "credit": "El Salvador - Subnational Population Statistics",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 83282,
+      "sha256": "5f3b149b76bef88f90a91f8671f5c8b2b51456ba53ea95021e6e9dc6378f6fbb"
+    },
+    "flag-sv.svg": {
+      "url": "https://flagcdn.com/sv.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "bytes": 248937,
+      "sha256": "cbd0f1c0170aad674c898a602f0e43fcf330640cbbab0653d6ae4f941f7cd83d"
+    }
+  },
+  "displaySimplificationDegrees": 0.00008,
+  "sourceCounts": {
+    "1": 14,
+    "2": 48,
+    "3": 266
+  },
+  "waterPlaceholders": [
+    {
+      "id": "SV03999",
+      "name": "Embalse Cerron Grande",
+      "level": 2
+    },
+    {
+      "id": "SV10899",
+      "name": "Lago de Llopango",
+      "level": 2
+    },
+    {
+      "id": "SV12998",
+      "name": "Lago de Guija",
+      "level": 2
+    },
+    {
+      "id": "SV12999",
+      "name": "Lago de Coatepeque",
+      "level": 2
+    },
+    {
+      "id": "SV03999001",
+      "name": "Embalse Cerron Grande",
+      "level": 3
+    },
+    {
+      "id": "SV10899001",
+      "name": "Lago de Llopango",
+      "level": 3
+    },
+    {
+      "id": "SV12998001",
+      "name": "Lago de Guija",
+      "level": 3
+    },
+    {
+      "id": "SV12999001",
+      "name": "Lago de Coatepeque",
+      "level": 3
+    }
+  ],
+  "statisticalCoverage": {
+    "populationUnits": 320,
+    "missingPopulationUnits": 0,
+    "nationalGdpYear": 2025
+  }
+}

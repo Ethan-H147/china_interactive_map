@@ -1,0 +1,67 @@
+{
+  "retrieved": "2026-10-31",
+  "coverage": "Nicaragua administrative reference from the retained licensed source. All hierarchy levels dissolve from the same jointly simplified local partition (0.00008 degree display tolerance, approximately five to nine metres). Source water-only polygons are excluded from administrative units. Shared international arcs use one owner and common junctions; existing neighboring administrative geometry remains fixed. Population observations retain their own year and coverage. The COD-PS explicitly declares its municipal table incompatible with the geometry, so municipal populations are unavailable. National World Bank GDP and GDP per capita are retained without distributing national output among subdivisions. Country overview pages remain hidden.",
+  "counts": {
+    "1": 17,
+    "2": 153
+  },
+  "processing": "Nicaragua administrative reference from the retained licensed source. All hierarchy levels dissolve from the same jointly simplified local partition (0.00008 degree display tolerance, approximately five to nine metres). Source water-only polygons are excluded from administrative units. Shared international arcs use one owner and common junctions; existing neighboring administrative geometry remains fixed. Population observations retain their own year and coverage. The COD-PS explicitly declares its municipal table incompatible with the geometry, so municipal populations are unavailable. National World Bank GDP and GDP per capita are retained without distributing national output among subdivisions. Country overview pages remain hidden.",
+  "sources": {
+    "nic-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-nic",
+      "bytes": 38408,
+      "sha256": "7ecb3245a5e2f5e772469c3cc5acc2598193f96c8bf7e6adf7c30cf895436eec"
+    },
+    "nic.zip": {
+      "url": "https://data.humdata.org/dataset/98e9bcfe-6565-4372-8422-f57d5b209448/resource/cc0a560b-ca8e-4abe-9c1f-988f6eea2744/download/nic_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) / HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 31643442,
+      "sha256": "059cadc878ca43591b4496e74e025c016831e7c4efaed658d360741b786a4663"
+    },
+    "nic-ps-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-nic",
+      "bytes": 12505,
+      "sha256": "93168accb479a77459c273db437255e9274d5efbe4aac9135d537cf62d0555d0"
+    },
+    "nic-population-nic_admpop_adm0_2020.csv": {
+      "url": "https://data.humdata.org/dataset/f9522559-8454-4cf8-8834-864f4b696ce1/resource/e8a107cf-c43b-4931-950e-06322ce805f0/download/nic_admpop_adm0_2020.csv",
+      "credit": "Nicaragua - Subnational Population Statistics",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 9014,
+      "sha256": "e30fb47829273a3cc0a100b67eb655d98beef7e35ddcee7f0cf97c8c95f2f401"
+    },
+    "nic-population-nic_admpop_adm1_2020.csv": {
+      "url": "https://data.humdata.org/dataset/f9522559-8454-4cf8-8834-864f4b696ce1/resource/1bb41271-4ee1-44f6-a203-32d11f682e76/download/nic_admpop_adm1_2020.csv",
+      "credit": "Nicaragua - Subnational Population Statistics",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 14775,
+      "sha256": "0e95c2120ea68d1be4ef31a1dc49670115605e1637bf0f3222d8333cca61a8a9"
+    },
+    "nic-population-nic_admpop_adm2_2020.csv": {
+      "url": "https://data.humdata.org/dataset/f9522559-8454-4cf8-8834-864f4b696ce1/resource/207e5894-880f-4f45-bb88-8fb0a66b2f0b/download/nic_admpop_adm2_2020.csv",
+      "credit": "Nicaragua - Subnational Population Statistics",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 46245,
+      "sha256": "144040103f6fa16a76e1b7d61cf774727ea3e8a2f9e03a94f916da7490728ed5"
+    },
+    "flag-ni.svg": {
+      "url": "https://flagcdn.com/ni.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "bytes": 23894,
+      "sha256": "ed4fbc934d1bde93634e8904e0c1aec45587c95a2bbfbd024aa729e9adc956d6"
+    }
+  },
+  "displaySimplificationDegrees": 0.00008,
+  "sourceCounts": {
+    "1": 17,
+    "2": 153
+  },
+  "waterPlaceholders": [],
+  "statisticalCoverage": {
+    "populationUnits": 17,
+    "missingPopulationUnits": 153,
+    "nationalGdpYear": 2025
+  }
+}

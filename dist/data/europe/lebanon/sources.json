@@ -1,0 +1,56 @@
+{
+  "retrieved": "2026-10-31",
+  "coverage": "Nine governorates including Keserwan–Jbeil, built from 26 dated HDX districts; legacy nesting prefixes are not interpreted as parents. All hierarchy levels dissolve from one cleaned local partition. New international edges follow a single shared display arc and existing neighbors retain their administrative land. Population dates and coverage are independent of boundary dates. National GDP is not allocated to subdivisions. Country overview pages remain hidden.",
+  "counts": {
+    "1": 9,
+    "2": 26
+  },
+  "processing": "Nine governorates including Keserwan–Jbeil, built from 26 dated HDX districts; legacy nesting prefixes are not interpreted as parents. All hierarchy levels dissolve from one cleaned local partition. New international edges follow a single shared display arc and existing neighbors retain their administrative land. Population dates and coverage are independent of boundary dates. National GDP is not allocated to subdivisions. Country overview pages remain hidden.",
+  "sources": {
+    "lbn-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-lbn",
+      "bytes": 47706,
+      "sha256": "eaa37036c4bdf0610d3ecfe88458ad53fd7c1237213543710ca023b44e7c64c4"
+    },
+    "lbn-gb1-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/LBN/ADM1/",
+      "bytes": 1727,
+      "sha256": "f2ad4496cc8ddaf5d33f234ed437e09b3bbaa3a1b2cdc7e4e84434f148b9089c"
+    },
+    "lbn-gb2-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/LBN/ADM2/",
+      "bytes": 1734,
+      "sha256": "70ec73ff1e310989983a1fdc45ae9866aac7304592a6efcd15f28db9b45bfa6d"
+    },
+    "flag-lb.svg": {
+      "url": "https://flagcdn.com/lb.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "bytes": 14384,
+      "sha256": "2c69b33a241e21c003113bae58fda58a08113e265a94262f6d0de39277876462"
+    },
+    "lbn.zip": {
+      "url": "https://data.humdata.org/dataset/569beba7-bad7-4951-a19d-468a035461cd/resource/81ca0135-b5c9-46e0-a546-f0bdd6d7fd42/download/lbn_admin_boundaries.geojson.zip",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "credit": "National provider / OCHA HDX COD-AB",
+      "bytes": 21517871,
+      "sha256": "635d0c9ca51be5499e16f4873b99d2624da064a74dbd01f86032321ddaf049d3"
+    }
+  },
+  "displaySimplificationDegrees": 0.00005,
+  "sourceCounts": {
+    "1": 8,
+    "2": 26
+  },
+  "waterPlaceholders": [],
+  "statisticalCoverage": {
+    "populationUnits": 0,
+    "missingPopulationUnits": 35,
+    "nationalGdpYear": 2024
+  },
+  "displayNames": {
+    "note": "Source identities and geometry unchanged; display case and native-language names normalized independently.",
+    "sources": [],
+    "nativeField": "Existing retained localized source attribute; French source capitalization normalized for Chad"
+  }
+}

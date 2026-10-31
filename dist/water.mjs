@@ -1,8 +1,10 @@
 import {adaptiveOpacity} from './adaptive-lines.mjs';
+import {permanentLakeSourceIds} from './major-lake-cutouts.mjs';
+const optionalLakeFilter=['all',['==',['get','kind'],'lake'],['!',['in',['to-string',['coalesce',['get','sourceId'],'']],['literal',permanentLakeSourceIds]]]];
 
 export function addWaterLayers(map,source,ids,{before,adaptive=false}={}){
-    map.addLayer({id:ids[0],metadata:{atlas:{role:'water',satellite:false,motion:'live'}},type:'fill',source,filter:['==',['get','kind'],'lake'],layout:{visibility:'none'},paint:{'fill-color':'#8cb5c4','fill-opacity':adaptive?adaptiveOpacity(.88):.88,'fill-antialias':true}},before);
-    map.addLayer({id:ids[1],metadata:{atlas:{role:'water',satellite:false,motion:'live'}},type:'line',source,filter:['==',['get','kind'],'lake'],layout:{visibility:'none','line-join':'round'},paint:{'line-color':'#608fa3','line-width':['interpolate',['linear'],['zoom'],3,.4,9,.9],'line-opacity':adaptive?adaptiveOpacity(.85):.85}},before);
+    map.addLayer({id:ids[0],metadata:{atlas:{role:'water',satellite:false,motion:'live'}},type:'fill',source,filter:optionalLakeFilter,layout:{visibility:'none'},paint:{'fill-color':'#8cb5c4','fill-opacity':adaptive?adaptiveOpacity(.88):.88,'fill-antialias':true}},before);
+    map.addLayer({id:ids[1],metadata:{atlas:{role:'water',satellite:false,motion:'live'}},type:'line',source,filter:optionalLakeFilter,layout:{visibility:'none','line-join':'round'},paint:{'line-color':'#608fa3','line-width':['interpolate',['linear'],['zoom'],3,.4,9,.9],'line-opacity':adaptive?adaptiveOpacity(.85):.85}},before);
     // Draw above administrative strokes: a coincident boundary river has one
     // blue stroke instead of a brown line stacked over a translucent blue one.
     map.addLayer({id:ids[2],metadata:{atlas:{role:'waterLine',satellite:false,motion:'live'}},type:'line',source,filter:['==',['get','kind'],'river'],layout:{visibility:'none','line-cap':'round','line-join':'round'},paint:{'line-color':'#608fa3','line-width':['interpolate',['linear'],['zoom'],3,['case',['<=',['get','rank'],4],1.1,.8],8,['case',['<=',['get','rank'],4],2.3,1.5],12,2.8],'line-opacity':1}});

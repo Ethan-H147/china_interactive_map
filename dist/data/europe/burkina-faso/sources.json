@@ -1,0 +1,79 @@
+{
+  "retrieved": "2026-10-31",
+  "coverage": "Current seventeen-region, forty-seven-province structure. Older population is joined only through verified unchanged province identities; old regional totals are not assigned to split regions. All hierarchy levels dissolve from one cleaned local partition. New international edges follow a single shared display arc and existing neighbors retain their administrative land. Population dates and coverage are independent of boundary dates. National GDP is not allocated to subdivisions. Country overview pages remain hidden.",
+  "counts": {
+    "1": 17,
+    "2": 47,
+    "3": 351
+  },
+  "processing": "Current seventeen-region, forty-seven-province structure. Older population is joined only through verified unchanged province identities; old regional totals are not assigned to split regions. All hierarchy levels dissolve from one cleaned local partition. New international edges follow a single shared display arc and existing neighbors retain their administrative land. Population dates and coverage are independent of boundary dates. National GDP is not allocated to subdivisions. Country overview pages remain hidden.",
+  "sources": {
+    "bfa-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-bfa",
+      "bytes": 61875,
+      "sha256": "0ed04c0a94585fb83696b43b4e01da40fc76f777811b75777f5cef076ae2f98f"
+    },
+    "bfa-ps-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-bfa",
+      "bytes": 50639,
+      "sha256": "6fe7ac9d3538decd497adaf7545557848d260fd3cafea165ac003b2c753dc835"
+    },
+    "bfa-gb1-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/BFA/ADM1/",
+      "bytes": 1736,
+      "sha256": "f5a39c5527d2b9a8ba069491a2577ad79711036ad5a0fa06edeb4215c669c604"
+    },
+    "bfa-gb2-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/BFA/ADM2/",
+      "bytes": 1739,
+      "sha256": "71b2c4a50d2ad719f1f637c78d4fd507eb181c01ba15b6deb4b7a195d80f45d0"
+    },
+    "flag-bf.svg": {
+      "url": "https://flagcdn.com/bf.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "bytes": 568,
+      "sha256": "4c88dba85dcf8f799607e2ce32f5af58741ccd31f15fb917bf89f58a140f91a4"
+    },
+    "bfa.zip": {
+      "url": "https://data.humdata.org/dataset/2940ed80-4b69-4b98-abaf-af79088852c5/resource/612520fc-1223-4dc2-bf60-a1e9a0e8c42c/download/bfa_admin_boundaries.geojson.zip",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "credit": "National provider / OCHA HDX COD-AB",
+      "bytes": 22911896,
+      "sha256": "d5e37231141f0f1e838c0c7329a621e79639f7b8078aef0f20c1bb5782805893"
+    },
+    "bfa-population-bfa_admpop_adm0_2023_5yr.csv": {
+      "url": "https://data.humdata.org/dataset/a8e69c6c-16fc-4983-92ee-e04e8960b51f/resource/467124d6-3d32-48cc-86cc-ad79d5c59ea5/download/bfa_admpop_adm0_2023_5yr.csv",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "credit": "National provider / OCHA HDX COD-PS",
+      "bytes": 914,
+      "sha256": "c85e88a086dc55adfaf6f865bfc862681a52104a34200527b9b51d8e9cf87bbf"
+    },
+    "bfa-population-bfa_admpop_adm1_2023_5yr.csv": {
+      "url": "https://data.humdata.org/dataset/a8e69c6c-16fc-4983-92ee-e04e8960b51f/resource/a94126ff-109f-4d4b-9b85-d5c71c22a552/download/bfa_admpop_adm1_2023_5yr.csv",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "credit": "National provider / OCHA HDX COD-PS",
+      "bytes": 5321,
+      "sha256": "47911ef8505a89200d4a44b4dc534735552d22fac019d194613aca65c83de554"
+    },
+    "bfa-population-bfa_admpop_adm2_2023_5yr.csv": {
+      "url": "https://data.humdata.org/dataset/a8e69c6c-16fc-4983-92ee-e04e8960b51f/resource/93ce4bbd-ef70-4823-bc2b-30b9b7e8cf22/download/bfa_admpop_adm2_2023_5yr.csv",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "credit": "National provider / OCHA HDX COD-PS",
+      "bytes": 16454,
+      "sha256": "bfb8a8bcd4362f362c64ffb9be5b4285e2394a0d73afc529de4b9082dd012238"
+    }
+  },
+  "displaySimplificationDegrees": 0.00005,
+  "sourceCounts": {
+    "1": 17,
+    "2": 47,
+    "3": 351
+  },
+  "waterPlaceholders": [],
+  "statisticalCoverage": {
+    "populationUnits": 43,
+    "missingPopulationUnits": 372,
+    "nationalGdpYear": 2025
+  }
+}

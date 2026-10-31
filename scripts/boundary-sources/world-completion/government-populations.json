@@ -1,0 +1,764 @@
+{
+  "mali": {
+    "source": "mli-directory-2023.pdf",
+    "year": 2023,
+    "method": "estimate",
+    "label": "2023 official population projection, 2023 administrative structure",
+    "table": "National region table, printed page 4, and regional cercle tables",
+    "population": {
+      "KAYES:KAYES:1": {
+        "value": 1815258,
+        "level": 1
+      },
+      "KOULIKORO:KOULIKORO:1": {
+        "value": 2224418,
+        "level": 1
+      },
+      "SIKASSO:SIKASSO:1": {
+        "value": 1512247,
+        "level": 1
+      },
+      "SÉGOU:SÉGOU:1": {
+        "value": 2421811,
+        "level": 1
+      },
+      "MOPTI:MOPTI:1": {
+        "value": 1087526,
+        "level": 1
+      },
+      "TOMBOUCTOU:TOMBOUCTOU:1": {
+        "value": 1047917,
+        "level": 1
+      },
+      "GAO:GAO:1": {
+        "value": 827614,
+        "level": 1
+      },
+      "KIDAL:KIDAL:1": {
+        "value": 82054,
+        "level": 1
+      },
+      "TAOUDENNI:TAOUDENNI:1": {
+        "value": 98984,
+        "level": 1
+      },
+      "MENAKA:MENAKA:1": {
+        "value": 314518,
+        "level": 1
+      },
+      "NIORO:NIORO:1": {
+        "value": 668831,
+        "level": 1
+      },
+      "KITA:KITA:1": {
+        "value": 672385,
+        "level": 1
+      },
+      "DIOILA:DIOILA:1": {
+        "value": 666756,
+        "level": 1
+      },
+      "NARA:NARA:1": {
+        "value": 303584,
+        "level": 1
+      },
+      "BOUGOUNI:BOUGOUNI:1": {
+        "value": 1549567,
+        "level": 1
+      },
+      "KOUTIALA:KOUTIALA:1": {
+        "value": 1153961,
+        "level": 1
+      },
+      "SAN:SAN:1": {
+        "value": 809615,
+        "level": 1
+      },
+      "DOUENTZA:DOUENTZA:1": {
+        "value": 446179,
+        "level": 1
+      },
+      "BANDIAGARA:BANDIAGARA:1": {
+        "value": 1270224,
+        "level": 1
+      },
+      "BAMAKO:BAMAKO:1": {
+        "value": 4170005,
+        "level": 1
+      },
+      "KAYES:AMBIDEDI:2": {
+        "value": 94079,
+        "level": 2
+      },
+      "KAYES:AOUROU:2": {
+        "value": 113441,
+        "level": 2
+      },
+      "KAYES:BAFOULABE:2": {
+        "value": 165879,
+        "level": 2
+      },
+      "KAYES:DIAMOU:2": {
+        "value": 33642,
+        "level": 2
+      },
+      "KAYES:KAYES:2": {
+        "value": 425221,
+        "level": 2
+      },
+      "KAYES:KENIEBA:2": {
+        "value": 432467,
+        "level": 2
+      },
+      "KAYES:OUSSOUBIDIAGNA:2": {
+        "value": 151396,
+        "level": 2
+      },
+      "KAYES:SADIOLA:2": {
+        "value": 93893,
+        "level": 2
+      },
+      "KAYES:SEGALA:2": {
+        "value": 97436,
+        "level": 2
+      },
+      "KAYES:YELIMANE:2": {
+        "value": 207805,
+        "level": 2
+      },
+      "KOULIKORO:BANAMBA:2": {
+        "value": 267310,
+        "level": 2
+      },
+      "KOULIKORO:KANGABA:2": {
+        "value": 192276,
+        "level": 2
+      },
+      "KOULIKORO:KATI:2": {
+        "value": 901069,
+        "level": 2
+      },
+      "KOULIKORO:KOLOKANI:2": {
+        "value": 353632,
+        "level": 2
+      },
+      "KOULIKORO:KOULIKORO:2": {
+        "value": 247312,
+        "level": 2
+      },
+      "KOULIKORO:NEGUELA:2": {
+        "value": 87858,
+        "level": 2
+      },
+      "KOULIKORO:NYAMINA:2": {
+        "value": 68925,
+        "level": 2
+      },
+      "KOULIKORO:SIBY:2": {
+        "value": 106035,
+        "level": 2
+      },
+      "SIKASSO:DANDERESSO:2": {
+        "value": 67998,
+        "level": 2
+      },
+      "SIKASSO:KADIOLO:2": {
+        "value": 300415,
+        "level": 2
+      },
+      "SIKASSO:KIGNAN:2": {
+        "value": 123053,
+        "level": 2
+      },
+      "SIKASSO:KLELA:2": {
+        "value": 83916,
+        "level": 2
+      },
+      "SIKASSO:LOBOUGOULA:2": {
+        "value": 60038,
+        "level": 2
+      },
+      "SIKASSO:LOULOUNI:2": {
+        "value": 81476,
+        "level": 2
+      },
+      "SIKASSO:NIENA:2": {
+        "value": 167962,
+        "level": 2
+      },
+      "SIKASSO:SIKASSO:2": {
+        "value": 627389,
+        "level": 2
+      },
+      "SÉGOU:BAROUELI:2": {
+        "value": 305127,
+        "level": 2
+      },
+      "SÉGOU:BLA:2": {
+        "value": 284376,
+        "level": 2
+      },
+      "SÉGOU:DIORO:2": {
+        "value": 123847,
+        "level": 2
+      },
+      "SÉGOU:FARAKO:2": {
+        "value": 92362,
+        "level": 2
+      },
+      "SÉGOU:MACINA:2": {
+        "value": 250815,
+        "level": 2
+      },
+      "SÉGOU:MARKALA:2": {
+        "value": 176624,
+        "level": 2
+      },
+      "SÉGOU:NAMPALA:2": {
+        "value": 76447,
+        "level": 2
+      },
+      "SÉGOU:NIONO:2": {
+        "value": 354368,
+        "level": 2
+      },
+      "SÉGOU:SARRO:2": {
+        "value": 76369,
+        "level": 2
+      },
+      "SÉGOU:SÉGOU:2": {
+        "value": 555029,
+        "level": 2
+      },
+      "SÉGOU:SOKOLO:2": {
+        "value": 126448,
+        "level": 2
+      },
+      "MOPTI:DJENNE:2": {
+        "value": 208176,
+        "level": 2
+      },
+      "MOPTI:KONNA:2": {
+        "value": 64434,
+        "level": 2
+      },
+      "MOPTI:KORIENTZE:2": {
+        "value": 39422,
+        "level": 2
+      },
+      "MOPTI:MOPTI:2": {
+        "value": 407795,
+        "level": 2
+      },
+      "MOPTI:SOFARA:2": {
+        "value": 36722,
+        "level": 2
+      },
+      "MOPTI:TENENKOU:2": {
+        "value": 122980,
+        "level": 2
+      },
+      "MOPTI:TOGUERE-COUMBE:2": {
+        "value": 31346,
+        "level": 2
+      },
+      "MOPTI:YOUWAROU:2": {
+        "value": 176651,
+        "level": 2
+      },
+      "TOMBOUCTOU:BAMBARA MAOUDE:2": {
+        "value": 97370,
+        "level": 2
+      },
+      "TOMBOUCTOU:BER:2": {
+        "value": 39162,
+        "level": 2
+      },
+      "TOMBOUCTOU:BINTAGOUNGOU:2": {
+        "value": 28932,
+        "level": 2
+      },
+      "TOMBOUCTOU:DIRE:2": {
+        "value": 199351,
+        "level": 2
+      },
+      "TOMBOUCTOU:GARGANDO:2": {
+        "value": 37266,
+        "level": 2
+      },
+      "TOMBOUCTOU:GOSSI:2": {
+        "value": 65850,
+        "level": 2
+      },
+      "TOMBOUCTOU:GOUNDAM:2": {
+        "value": 87043,
+        "level": 2
+      },
+      "TOMBOUCTOU:GOURMA-RHAROUS:2": {
+        "value": 82124,
+        "level": 2
+      },
+      "TOMBOUCTOU:LERE:2": {
+        "value": 25191,
+        "level": 2
+      },
+      "TOMBOUCTOU:NIAFUNKE:2": {
+        "value": 62525,
+        "level": 2
+      },
+      "TOMBOUCTOU:SARAFERE:2": {
+        "value": 111668,
+        "level": 2
+      },
+      "TOMBOUCTOU:TOMBOUCTOU:2": {
+        "value": 147901,
+        "level": 2
+      },
+      "TOMBOUCTOU:TONKA:2": {
+        "value": 63534,
+        "level": 2
+      },
+      "GAO:ALMOUSTRAT:2": {
+        "value": 42155,
+        "level": 2
+      },
+      "GAO:ANSONGO:2": {
+        "value": 136489,
+        "level": 2
+      },
+      "GAO:BAMBA:2": {
+        "value": 64407,
+        "level": 2
+      },
+      "GAO:BOUREM:2": {
+        "value": 62050,
+        "level": 2
+      },
+      "GAO:DJEBOCK:2": {
+        "value": 53178,
+        "level": 2
+      },
+      "GAO:ERSANE:2": {
+        "value": 1339,
+        "level": 2
+      },
+      "GAO:GABERO:2": {
+        "value": 27437,
+        "level": 2
+      },
+      "GAO:GAO:2": {
+        "value": 193424,
+        "level": 2
+      },
+      "GAO:KASSAMBERE:2": {
+        "value": 2990,
+        "level": 2
+      },
+      "GAO:N'TILLIT:2": {
+        "value": 61141,
+        "level": 2
+      },
+      "GAO:OUATTAGOUNA:2": {
+        "value": 57473,
+        "level": 2
+      },
+      "GAO:SONI ALIBER:2": {
+        "value": 58727,
+        "level": 2
+      },
+      "GAO:TABANKORT:2": {
+        "value": 3640,
+        "level": 2
+      },
+      "GAO:TALATAYE:2": {
+        "value": 17004,
+        "level": 2
+      },
+      "GAO:TESSIT:2": {
+        "value": 20252,
+        "level": 2
+      },
+      "GAO:TIN-AOUKER:2": {
+        "value": 25909,
+        "level": 2
+      },
+      "KIDAL:ABEIBARA:2": {
+        "value": 9784,
+        "level": 2
+      },
+      "KIDAL:ACHIBOGHO:2": {
+        "value": 916,
+        "level": 2
+      },
+      "KIDAL:ADJELHOC:2": {
+        "value": 12830,
+        "level": 2
+      },
+      "KIDAL:ANEFIF:2": {
+        "value": 4654,
+        "level": 2
+      },
+      "KIDAL:KIDAL:2": {
+        "value": 27925,
+        "level": 2
+      },
+      "KIDAL:TAKALOTE:2": {
+        "value": 643,
+        "level": 2
+      },
+      "KIDAL:TESSALIT:2": {
+        "value": 7944,
+        "level": 2
+      },
+      "KIDAL:TIMETRINE:2": {
+        "value": 5057,
+        "level": 2
+      },
+      "KIDAL:TIN-ESSAKO:2": {
+        "value": 12299,
+        "level": 2
+      },
+      "TAOUDENNI:ACHOURATT:2": {
+        "value": 13008,
+        "level": 2
+      },
+      "TAOUDENNI:AL-OURCHE:2": {
+        "value": 21896,
+        "level": 2
+      },
+      "TAOUDENNI:ARAOUANE:2": {
+        "value": 17788,
+        "level": 2
+      },
+      "TAOUDENNI:BOUJBEHA:2": {
+        "value": 15187,
+        "level": 2
+      },
+      "TAOUDENNI:FOUM-ELBA:2": {
+        "value": 15533,
+        "level": 2
+      },
+      "TAOUDENNI:TAOUDENNI:2": {
+        "value": 15572,
+        "level": 2
+      },
+      "MENAKA:ANDERAMBOUKANE:2": {
+        "value": 35509,
+        "level": 2
+      },
+      "MENAKA:ANOUZAGRENE:2": {
+        "value": 10922,
+        "level": 2
+      },
+      "MENAKA:INEKAR:2": {
+        "value": 41338,
+        "level": 2
+      },
+      "MENAKA:INLAMAWANE:2": {
+        "value": 45257,
+        "level": 2
+      },
+      "MENAKA:MENAKA:2": {
+        "value": 117487,
+        "level": 2
+      },
+      "MENAKA:TIDERMENE:2": {
+        "value": 64005,
+        "level": 2
+      },
+      "NIORO:BEMA:2": {
+        "value": 77334,
+        "level": 2
+      },
+      "NIORO:DIANGOUNTE CAMARA:2": {
+        "value": 83433,
+        "level": 2
+      },
+      "NIORO:DIEMA:2": {
+        "value": 118734,
+        "level": 2
+      },
+      "NIORO:NIORO:2": {
+        "value": 231391,
+        "level": 2
+      },
+      "NIORO:SANDARE:2": {
+        "value": 68955,
+        "level": 2
+      },
+      "NIORO:TROUNGOUMBE:2": {
+        "value": 88985,
+        "level": 2
+      },
+      "KITA:KITA:2": {
+        "value": 249011,
+        "level": 2
+      },
+      "KITA:SAGABARI:2": {
+        "value": 144881,
+        "level": 2
+      },
+      "KITA:SÉBÉCORO:2": {
+        "value": 107032,
+        "level": 2
+      },
+      "KITA:SEFETO:2": {
+        "value": 85598,
+        "level": 2
+      },
+      "KITA:SIRAKORO:2": {
+        "value": 42333,
+        "level": 2
+      },
+      "KITA:TOUKOTO:2": {
+        "value": 43529,
+        "level": 2
+      },
+      "DIOILA:BANCO:2": {
+        "value": 66748,
+        "level": 2
+      },
+      "DIOILA:BELEKO:2": {
+        "value": 86609,
+        "level": 2
+      },
+      "DIOILA:DIOILA:2": {
+        "value": 168114,
+        "level": 2
+      },
+      "DIOILA:FANA:2": {
+        "value": 234663,
+        "level": 2
+      },
+      "DIOILA:MASSIGUI:2": {
+        "value": 73266,
+        "level": 2
+      },
+      "DIOILA:MENA:2": {
+        "value": 37356,
+        "level": 2
+      },
+      "NARA:BALLE:2": {
+        "value": 65458,
+        "level": 2
+      },
+      "NARA:DILLY:2": {
+        "value": 67532,
+        "level": 2
+      },
+      "NARA:FALLOU:2": {
+        "value": 35237,
+        "level": 2
+      },
+      "NARA:GUIRE:2": {
+        "value": 18391,
+        "level": 2
+      },
+      "NARA:MOURDIAH:2": {
+        "value": 34478,
+        "level": 2
+      },
+      "NARA:NARA:2": {
+        "value": 82488,
+        "level": 2
+      },
+      "BOUGOUNI:BOUGOUNI:2": {
+        "value": 339574,
+        "level": 2
+      },
+      "BOUGOUNI:DOGO:2": {
+        "value": 74467,
+        "level": 2
+      },
+      "BOUGOUNI:FAKOLA:2": {
+        "value": 75825,
+        "level": 2
+      },
+      "BOUGOUNI:GARALO:2": {
+        "value": 130248,
+        "level": 2
+      },
+      "BOUGOUNI:KADIANA:2": {
+        "value": 68246,
+        "level": 2
+      },
+      "BOUGOUNI:KOLONDIEBA:2": {
+        "value": 171177,
+        "level": 2
+      },
+      "BOUGOUNI:KOUMANTOU:2": {
+        "value": 146709,
+        "level": 2
+      },
+      "BOUGOUNI:OUELESSEBOUGOU:2": {
+        "value": 114236,
+        "level": 2
+      },
+      "BOUGOUNI:SELINGUE:2": {
+        "value": 144782,
+        "level": 2
+      },
+      "BOUGOUNI:YANFOLILA:2": {
+        "value": 284304,
+        "level": 2
+      },
+      "KOUTIALA:KONSEGUELA:2": {
+        "value": 71855,
+        "level": 2
+      },
+      "KOUTIALA:KOUNIANA:2": {
+        "value": 66643,
+        "level": 2
+      },
+      "KOUTIALA:KOURY:2": {
+        "value": 95364,
+        "level": 2
+      },
+      "KOUTIALA:KOUTIALA:2": {
+        "value": 461607,
+        "level": 2
+      },
+      "KOUTIALA:MOLOBALA:2": {
+        "value": 90767,
+        "level": 2
+      },
+      "KOUTIALA:M'PESSOBA:2": {
+        "value": 159120,
+        "level": 2
+      },
+      "KOUTIALA:YOROSSO:2": {
+        "value": 150118,
+        "level": 2
+      },
+      "KOUTIALA:ZANGASSO:2": {
+        "value": 58486,
+        "level": 2
+      },
+      "SAN:FANGASSO:2": {
+        "value": 71722,
+        "level": 2
+      },
+      "SAN:KIMPARANA:2": {
+        "value": 140235,
+        "level": 2
+      },
+      "SAN:MANDIAKUY:2": {
+        "value": 86188,
+        "level": 2
+      },
+      "SAN:SAN:2": {
+        "value": 220441,
+        "level": 2
+      },
+      "SAN:SY:2": {
+        "value": 57253,
+        "level": 2
+      },
+      "SAN:TOMINIAN:2": {
+        "value": 111602,
+        "level": 2
+      },
+      "SAN:YANGASSO:2": {
+        "value": 122174,
+        "level": 2
+      },
+      "DOUENTZA:BONI:2": {
+        "value": 68919,
+        "level": 2
+      },
+      "DOUENTZA:BORE:2": {
+        "value": 34867,
+        "level": 2
+      },
+      "DOUENTZA:DOUENTZA:2": {
+        "value": 158457,
+        "level": 2
+      },
+      "DOUENTZA:HOMBORI:2": {
+        "value": 32777,
+        "level": 2
+      },
+      "DOUENTZA:MONDORO:2": {
+        "value": 89989,
+        "level": 2
+      },
+      "DOUENTZA:N'GOUMA:2": {
+        "value": 61170,
+        "level": 2
+      },
+      "BANDIAGARA:BANDIAGARA:2": {
+        "value": 230093,
+        "level": 2
+      },
+      "BANDIAGARA:BANKASS:2": {
+        "value": 117846,
+        "level": 2
+      },
+      "BANDIAGARA:DIALLASSAGOU:2": {
+        "value": 96516,
+        "level": 2
+      },
+      "BANDIAGARA:KANI:2": {
+        "value": 36755,
+        "level": 2
+      },
+      "BANDIAGARA:KENDIE:2": {
+        "value": 64193,
+        "level": 2
+      },
+      "BANDIAGARA:KORO:2": {
+        "value": 508152,
+        "level": 2
+      },
+      "BANDIAGARA:NINGARI:2": {
+        "value": 68197,
+        "level": 2
+      },
+      "BANDIAGARA:SANGHA:2": {
+        "value": 37810,
+        "level": 2
+      },
+      "BANDIAGARA:SOKOURA:2": {
+        "value": 110662,
+        "level": 2
+      }
+    }
+  },
+  "andorra": {
+    "source": "and-population-2025.pdf",
+    "year": 2025,
+    "method": "estimate",
+    "label": "2025 resident-population estimate",
+    "table": "Ministry of Health presentation, page 9; Encamp includes Pas de la Casa and Andorra la Vella includes Santa Coloma",
+    "population": {
+      "Canillo": 6457,
+      "Encamp": 13520,
+      "Ordino": 5679,
+      "La Massana": 12148,
+      "Andorra la Vella": 24836,
+      "Sant Julia de Loria": 10256,
+      "Escaldes-Engordany": 16162
+    }
+  },
+  "liechtenstein": {
+    "source": "lie-population-2025.xlsx",
+    "year": 2025,
+    "date": "2025-12-31",
+    "method": "estimate",
+    "label": "31 December 2025 provisional permanent-resident population",
+    "table": "Table 1.1, C10:D21",
+    "population": {
+      "Vaduz": 6109,
+      "Triesen": 5786,
+      "Balzers": 4836,
+      "Triesenberg": 2743,
+      "Schaan": 6297,
+      "Planken": 499,
+      "Eschen": 4781,
+      "Mauren": 4668,
+      "Gamprin": 1772,
+      "Ruggell": 2566,
+      "Schellenberg": 1180
+    }
+  }
+}

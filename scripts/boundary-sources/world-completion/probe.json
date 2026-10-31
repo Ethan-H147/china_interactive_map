@@ -1,0 +1,958 @@
+[
+  {
+    "country": "burkina-faso",
+    "iso": "BFA",
+    "prefix": "bf",
+    "en": "Burkina Faso",
+    "lang": "fr",
+    "continent": "Africa",
+    "ab": {
+      "notes": "Burkina Faso administrative level 0-3 boundaries (COD-AB) dataset version 03.  \n  \nThis dataset is structured into 3 levels:  \n- Admin 1: 17 Région  \n- Admin 2: 47 Province  \n- Admin 3: 351 Commune  \n  \n  \nDates associated with this dataset:  \n- 16 December 2025: dataset reviewed for accuracy and completeness  \n- 01 August 2025: valid for use by the humanitarian community  \n- 01 July 2025: last edit to the dataset before publishing  \n- 23 March 2020: boundaries created by the source  \n  \nContributed by [OCHA Burkina Faso](https://data.humdata.org/organization/ocha-burkina).  \nQuality assured, configured, and published by [OCHA Field Information Services (FIS)](https://data.humdata.org/organization/ocha-fiss) and [HDX](https://data.humdata.org/organization/hdx).  \n  \nPart of the dataset: [Global Subnational Administrative Boundaries](https://data.humdata.org/dataset/cod-ab-global)",
+      "resources": [
+        {
+          "id": "042cb48b-0c3c-41cb-b296-fe50ae718510",
+          "name": "bfa_admin_boundaries.gdb.zip",
+          "url": "https://data.humdata.org/dataset/2940ed80-4b69-4b98-abaf-af79088852c5/resource/042cb48b-0c3c-41cb-b296-fe50ae718510/download/bfa_admin_boundaries.gdb.zip",
+          "format": "Geodatabase"
+        },
+        {
+          "id": "c97b4e6e-4c80-4a01-8b15-242a9bc9f998",
+          "name": "bfa_admin_boundaries.shp.zip",
+          "url": "https://data.humdata.org/dataset/2940ed80-4b69-4b98-abaf-af79088852c5/resource/c97b4e6e-4c80-4a01-8b15-242a9bc9f998/download/bfa_admin_boundaries.shp.zip",
+          "format": "SHP"
+        },
+        {
+          "id": "612520fc-1223-4dc2-bf60-a1e9a0e8c42c",
+          "name": "bfa_admin_boundaries.geojson.zip",
+          "url": "https://data.humdata.org/dataset/2940ed80-4b69-4b98-abaf-af79088852c5/resource/612520fc-1223-4dc2-bf60-a1e9a0e8c42c/download/bfa_admin_boundaries.geojson.zip",
+          "format": "GeoJSON"
+        },
+        {
+          "id": "6bf2c812-466f-4fc1-8ba7-6276c6c5deaa",
+          "name": "bfa_admin_boundaries.xlsx",
+          "url": "https://data.humdata.org/dataset/2940ed80-4b69-4b98-abaf-af79088852c5/resource/6bf2c812-466f-4fc1-8ba7-6276c6c5deaa/download/bfa_admin_boundaries.xlsx",
+          "format": "XLSX"
+        }
+      ],
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)"
+    },
+    "ps": {
+      "notes": "Burkina Faso  administrative level 0-2 sex and age disaggregated 2023 projected population statistics (with five-year intervals) and 2020-2035 projected population statistics (with single-year intervals).\r\n\r\nREFERENCE YEAR:  2023\r\n\r\nThe CSV tables are suitable for database or GIS linkage to the administrative level 0-3 [Burkina Faso - Subnational Administrative Boundaries](https://data.humdata.org/dataset/cod-ab-bfa) boundaries using the ADM0, ADM1, and ADM2_PCODE fields.",
+      "resources": [
+        {
+          "id": "1499c75c-25a9-4131-bd52-4f1b3fd3a10c",
+          "name": "bfa_admpop_2024",
+          "url": "https://data.humdata.org/dataset/a8e69c6c-16fc-4983-92ee-e04e8960b51f/resource/1499c75c-25a9-4131-bd52-4f1b3fd3a10c/download/bfa_admpop_2024.xlsx",
+          "format": "XLSX"
+        },
+        {
+          "id": "aedb5460-8531-43d6-a126-4b8ca9e46918",
+          "name": "bfa_admpop_adm2_2024",
+          "url": "https://data.humdata.org/dataset/a8e69c6c-16fc-4983-92ee-e04e8960b51f/resource/aedb5460-8531-43d6-a126-4b8ca9e46918/download/bfa_admpop_adm2_2024.csv",
+          "format": "CSV"
+        },
+        {
+          "id": "c1c62811-1c3d-4453-a65a-27a19a82fdd2",
+          "name": "bfa_admpop_adm1_2024",
+          "url": "https://data.humdata.org/dataset/a8e69c6c-16fc-4983-92ee-e04e8960b51f/resource/c1c62811-1c3d-4453-a65a-27a19a82fdd2/download/bfa_admpop_adm1_2024.csv",
+          "format": "CSV"
+        },
+        {
+          "id": "e40d46f7-1437-4e91-a064-f3f18b603f82",
+          "name": "bfa_admpop_adm0_2024",
+          "url": "https://data.humdata.org/dataset/a8e69c6c-16fc-4983-92ee-e04e8960b51f/resource/e40d46f7-1437-4e91-a064-f3f18b603f82/download/bfa_admpop_adm0_2024.csv",
+          "format": "CSV"
+        },
+        {
+          "id": "c3db0a33-2344-45df-bb85-42459efb8c55",
+          "name": "BFA-COD-PS-2024-Explanatory-Note",
+          "url": "https://data.humdata.org/dataset/a8e69c6c-16fc-4983-92ee-e04e8960b51f/resource/c3db0a33-2344-45df-bb85-42459efb8c55/download/bfa-cod-ps-2024-explanatory-note.pdf",
+          "format": "PDF"
+        },
+        {
+          "id": "e3ab3323-7ca5-454c-8b28-f2bee1315956",
+          "name": "BFA_AdminBoundaries_TabularData.xlsx",
+          "url": "https://data.humdata.org/dataset/a8e69c6c-16fc-4983-92ee-e04e8960b51f/resource/e3ab3323-7ca5-454c-8b28-f2bee1315956/download/bfa_adminboundaries_tabulardata.xlsx",
+          "format": "XLSX"
+        },
+        {
+          "id": "4603731c-0be3-4878-a298-88612a38fb57",
+          "name": "BFA_CODPS_QA_2023.pdf",
+          "url": "https://data.humdata.org/dataset/a8e69c6c-16fc-4983-92ee-e04e8960b51f/resource/4603731c-0be3-4878-a298-88612a38fb57/download/bfa_codps_qa_2023.pdf",
+          "format": "PDF"
+        },
+        {
+          "id": "bb26bac6-c61f-4882-9b53-ac99c4062a1e",
+          "name": "bfa_admpop_2023_5yr.xlsx",
+          "url": "https://data.humdata.org/dataset/a8e69c6c-16fc-4983-92ee-e04e8960b51f/resource/bb26bac6-c61f-4882-9b53-ac99c4062a1e/download/bfa_admpop_2023_5yr.xlsx",
+          "format": "XLSX"
+        },
+        {
+          "id": "467124d6-3d32-48cc-86cc-ad79d5c59ea5",
+          "name": "bfa_admpop_adm0_2023_5yr.csv",
+          "url": "https://data.humdata.org/dataset/a8e69c6c-16fc-4983-92ee-e04e8960b51f/resource/467124d6-3d32-48cc-86cc-ad79d5c59ea5/download/bfa_admpop_adm0_2023_5yr.csv",
+          "format": "CSV"
+        },
+        {
+          "id": "a94126ff-109f-4d4b-9b85-d5c71c22a552",
+          "name": "bfa_admpop_adm1_2023_5yr.csv",
+          "url": "https://data.humdata.org/dataset/a8e69c6c-16fc-4983-92ee-e04e8960b51f/resource/a94126ff-109f-4d4b-9b85-d5c71c22a552/download/bfa_admpop_adm1_2023_5yr.csv",
+          "format": "CSV"
+        },
+        {
+          "id": "93ce4bbd-ef70-4823-bc2b-30b9b7e8cf22",
+          "name": "bfa_admpop_adm2_2023_5yr.csv",
+          "url": "https://data.humdata.org/dataset/a8e69c6c-16fc-4983-92ee-e04e8960b51f/resource/93ce4bbd-ef70-4823-bc2b-30b9b7e8cf22/download/bfa_admpop_adm2_2023_5yr.csv",
+          "format": "CSV"
+        },
+        {
+          "id": "74b218d6-8bf9-4cfe-9378-8fc3753dc674",
+          "name": "bfa_admpop_2023_1yr.xlsx",
+          "url": "https://data.humdata.org/dataset/a8e69c6c-16fc-4983-92ee-e04e8960b51f/resource/74b218d6-8bf9-4cfe-9378-8fc3753dc674/download/bfa_admpop_2023_1yr.xlsx",
+          "format": "XLSX"
+        }
+      ],
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)"
+    },
+    "gb1": {
+      "count": "13",
+      "year": "2017",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/BFA/ADM1/geoBoundaries-BFA-ADM1.geojson",
+      "source": "World Bank",
+      "license": "Creative Commons Attribution 4.0 (CC BY 4.0)"
+    },
+    "gb2": {
+      "count": "45",
+      "year": "2017",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/BFA/ADM2/geoBoundaries-BFA-ADM2.geojson",
+      "source": "World Bank",
+      "license": "Creative Commons Attribution 4.0 (CC BY 4.0)"
+    }
+  },
+  {
+    "country": "chad",
+    "iso": "TCD",
+    "prefix": "td",
+    "en": "Chad",
+    "lang": "fr",
+    "continent": "Africa",
+    "ab": {
+      "notes": "Chad administrative level 0-2 boundaries (COD-AB) dataset version 01.  \n  \nThis dataset is structured into 2 levels:  \n- Admin 1: 23 Province  \n- Admin 2: 70 Departement  \n  \n  \nDates associated with this dataset:  \n- 30 October 2025: dataset reviewed for accuracy and completeness  \n- 12 February 2025: valid for use by the humanitarian community  \n- 04 September 2012: last edit to the dataset before publishing  \n- 04 September 2012: boundaries created by the source  \n  \nQuality assured, configured, and published by [OCHA Field Information Services (FIS)](https://data.humdata.org/organization/ocha-fiss) and [HDX](https://data.humdata.org/organization/hdx).  \n  \nPart of the dataset: [Global Subnational Administrative Boundaries](https://data.humdata.org/dataset/cod-ab-global)",
+      "resources": [
+        {
+          "id": "0e50e9d0-f748-4f04-8704-3967c6a32f95",
+          "name": "tcd_admin_boundaries.gdb.zip",
+          "url": "https://data.humdata.org/dataset/f01c8222-b67d-41ff-954a-731aafd4466b/resource/0e50e9d0-f748-4f04-8704-3967c6a32f95/download/tcd_admin_boundaries.gdb.zip",
+          "format": "Geodatabase"
+        },
+        {
+          "id": "5307927e-9d4f-4b5f-9996-e55c3750a2ab",
+          "name": "tcd_admin_boundaries.shp.zip",
+          "url": "https://data.humdata.org/dataset/f01c8222-b67d-41ff-954a-731aafd4466b/resource/5307927e-9d4f-4b5f-9996-e55c3750a2ab/download/tcd_admin_boundaries.shp.zip",
+          "format": "SHP"
+        },
+        {
+          "id": "575b9fe1-a995-43b8-9e12-de98d4d7d7d1",
+          "name": "tcd_admin_boundaries.geojson.zip",
+          "url": "https://data.humdata.org/dataset/f01c8222-b67d-41ff-954a-731aafd4466b/resource/575b9fe1-a995-43b8-9e12-de98d4d7d7d1/download/tcd_admin_boundaries.geojson.zip",
+          "format": "GeoJSON"
+        },
+        {
+          "id": "124de5ed-a073-4ac9-9d96-e1317206ccf2",
+          "name": "tcd_admin_boundaries.xlsx",
+          "url": "https://data.humdata.org/dataset/f01c8222-b67d-41ff-954a-731aafd4466b/resource/124de5ed-a073-4ac9-9d96-e1317206ccf2/download/tcd_admin_boundaries.xlsx",
+          "format": "XLSX"
+        }
+      ],
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)"
+    },
+    "ps": {
+      "notes": "Chad administrative level 0-1 sex and age disaggregated 2023 projected population statistics\r\n\r\nREFERENCE YEAR:  2023\r\n\r\n\r\nThese table are suitable for database or GIS linkage to the [Chad - Subnational Administrative Boundaries](https://data.humdata.org/dataset/cod-ab-tcd).\r\n",
+      "resources": [
+        {
+          "id": "f7208b61-cc26-42a7-a698-1d32af8d248f",
+          "name": "tcd_admpop_2023.xlsx",
+          "url": "https://data.humdata.org/dataset/5e60290d-0a82-48e2-9454-812b01c7d9d4/resource/f7208b61-cc26-42a7-a698-1d32af8d248f/download/tcd_admpop_2023.xlsx",
+          "format": "XLSX"
+        },
+        {
+          "id": "4eaace66-d2bf-4e4e-a089-ccbd726fe394",
+          "name": "tcd_codps_qa_2023.pdf",
+          "url": "https://data.humdata.org/dataset/5e60290d-0a82-48e2-9454-812b01c7d9d4/resource/4eaace66-d2bf-4e4e-a089-ccbd726fe394/download/tcd_codps_qa_2023.pdf",
+          "format": "PDF"
+        },
+        {
+          "id": "acfd6ed9-4150-4445-8dec-83091d1b65eb",
+          "name": "tcd_admgz.xlsx",
+          "url": "https://data.humdata.org/dataset/5e60290d-0a82-48e2-9454-812b01c7d9d4/resource/acfd6ed9-4150-4445-8dec-83091d1b65eb/download/tcd_admgz.xlsx",
+          "format": "XLSX"
+        },
+        {
+          "id": "ce1b0007-e65c-4b3c-bd48-2cd0e3b9d203",
+          "name": "tcd_admpop_adm0_2023.csv",
+          "url": "https://data.humdata.org/dataset/5e60290d-0a82-48e2-9454-812b01c7d9d4/resource/ce1b0007-e65c-4b3c-bd48-2cd0e3b9d203/download/tcd_admpop_adm0_2023.csv",
+          "format": "CSV"
+        },
+        {
+          "id": "fb3d793e-57c5-4fb9-b361-8d4222fd254e",
+          "name": "tcd_admpop_adm1_2023.csv",
+          "url": "https://data.humdata.org/dataset/5e60290d-0a82-48e2-9454-812b01c7d9d4/resource/fb3d793e-57c5-4fb9-b361-8d4222fd254e/download/tcd_admpop_adm1_2023.csv",
+          "format": "CSV"
+        },
+        {
+          "id": "f026a982-b530-4e49-97a3-f54bbc5bad5d",
+          "name": "Tchad_PopulationDuTchad_20240102.xlsx",
+          "url": "https://data.humdata.org/dataset/5e60290d-0a82-48e2-9454-812b01c7d9d4/resource/f026a982-b530-4e49-97a3-f54bbc5bad5d/download/tchad_populationdutchad_20240102.xlsx",
+          "format": "XLSX"
+        },
+        {
+          "id": "384ea173-1a24-4fc2-9f54-24d9e4b7e1e4",
+          "name": "tcd_admpop_2022.xlsx",
+          "url": "https://data.humdata.org/dataset/5e60290d-0a82-48e2-9454-812b01c7d9d4/resource/384ea173-1a24-4fc2-9f54-24d9e4b7e1e4/download/tcd_data_cod_ps_update_21_09_2022_fin.xlsx",
+          "format": "XLSX"
+        },
+        {
+          "id": "5451d395-5344-4a7c-8cf3-22f08e4a1138",
+          "name": "tcd_admpop_2021.xlsx",
+          "url": "https://data.humdata.org/dataset/5e60290d-0a82-48e2-9454-812b01c7d9d4/resource/5451d395-5344-4a7c-8cf3-22f08e4a1138/download/tcd_admpop_2021.xlsx",
+          "format": "XLSX"
+        }
+      ],
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)"
+    },
+    "gb1": {
+      "count": "23",
+      "year": "2017",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/TCD/ADM1/geoBoundaries-TCD-ADM1.geojson",
+      "source": "OpenStreetMap, Wambacher",
+      "license": "Open Data Commons Open Database License 1.0"
+    },
+    "gb2": {
+      "count": "70",
+      "year": "2019",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/TCD/ADM2/geoBoundaries-TCD-ADM2.geojson",
+      "source": "OCHA Chad, OCHA Chad",
+      "license": "Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)"
+    }
+  },
+  {
+    "country": "central-african-republic",
+    "iso": "CAF",
+    "prefix": "cf",
+    "en": "Central African Republic",
+    "lang": "fr",
+    "continent": "Africa",
+    "ab": {
+      "notes": "Central African Republic administrative level 0-2 boundaries (COD-AB) dataset version 02.  \n  \nThis dataset is structured into 2 levels:  \n- Admin 1: 20 Préfecture  \n- Admin 2: 85 Sous-préfecture  \n  \n  \nDates associated with this dataset:  \n- 06 March 2026: dataset reviewed for accuracy and completeness  \n- 30 May 2024: valid for use by the humanitarian community  \n- 01 January 2023: last edit to the dataset before publishing  \n- 01 January 2003: boundaries created by the source  \n  \nContributed by [OCHA Central African Republic](https://data.humdata.org/organization/ocha-car).  \nQuality assured, configured, and published by [OCHA Field Information Services (FIS)](https://data.humdata.org/organization/ocha-fiss) and [HDX](https://data.humdata.org/organization/hdx).  \n  \nPart of the dataset: [Global Subnational Administrative Boundaries](https://data.humdata.org/dataset/cod-ab-global)",
+      "resources": [
+        {
+          "id": "c50c3842-b5f6-415d-bf94-33ee358b3a19",
+          "name": "caf_admin_boundaries.gdb.zip",
+          "url": "https://data.humdata.org/dataset/78d80f16-b9ff-49cd-8195-d96efcf3b669/resource/c50c3842-b5f6-415d-bf94-33ee358b3a19/download/caf_admin_boundaries.gdb.zip",
+          "format": "Geodatabase"
+        },
+        {
+          "id": "9b6dced8-3691-467e-8865-8635d9e1f8c4",
+          "name": "caf_admin_boundaries.shp.zip",
+          "url": "https://data.humdata.org/dataset/78d80f16-b9ff-49cd-8195-d96efcf3b669/resource/9b6dced8-3691-467e-8865-8635d9e1f8c4/download/caf_admin_boundaries.shp.zip",
+          "format": "SHP"
+        },
+        {
+          "id": "7cc03625-ff62-4bf8-9995-27a3a2db1e87",
+          "name": "caf_admin_boundaries.geojson.zip",
+          "url": "https://data.humdata.org/dataset/78d80f16-b9ff-49cd-8195-d96efcf3b669/resource/7cc03625-ff62-4bf8-9995-27a3a2db1e87/download/caf_admin_boundaries.geojson.zip",
+          "format": "GeoJSON"
+        },
+        {
+          "id": "f73c8714-f00b-4617-b5e8-661600b38187",
+          "name": "caf_admin_boundaries.xlsx",
+          "url": "https://data.humdata.org/dataset/78d80f16-b9ff-49cd-8195-d96efcf3b669/resource/f73c8714-f00b-4617-b5e8-661600b38187/download/caf_admin_boundaries.xlsx",
+          "format": "XLSX"
+        }
+      ],
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)"
+    },
+    "ps": {
+      "notes": "Population projection based on the general census of 2003. Latest projection for 2025.\r\n\r\nSee caveats.\r\nData available for:  2025, 2022, 2021, 2015\r\n",
+      "resources": [
+        {
+          "id": "d2ecb660-f273-433b-9020-e67509cf98db",
+          "name": "Projection population-2025.xlsx",
+          "url": "https://data.humdata.org/dataset/d3600c4b-d93d-4ed0-b7b1-359a060b916a/resource/d2ecb660-f273-433b-9020-e67509cf98db/download/ocha-car-projection-population-2025-icasees.xlsx",
+          "format": "XLSX"
+        },
+        {
+          "id": "21266160-de65-4572-be8c-4ae26358b365",
+          "name": "CAF_AdminBoundaries_TabularData.xlsx",
+          "url": "https://data.humdata.org/dataset/d3600c4b-d93d-4ed0-b7b1-359a060b916a/resource/21266160-de65-4572-be8c-4ae26358b365/download/caf_adminboundaries_tabulardata.xlsx",
+          "format": "XLSX"
+        },
+        {
+          "id": "9d55fa81-e8e1-4853-b59d-a09f6cb853fe",
+          "name": "car_population_2022",
+          "url": "https://data.humdata.org/dataset/d3600c4b-d93d-4ed0-b7b1-359a060b916a/resource/9d55fa81-e8e1-4853-b59d-a09f6cb853fe/download/population-hno-2023-1.xlsx",
+          "format": "XLSX"
+        },
+        {
+          "id": "fb2c7f59-3b51-4218-9049-2eddb61a404b",
+          "name": "icasees_cartocensitaire2021_formatocha_public_V2.xlsx",
+          "url": "https://data.humdata.org/dataset/d3600c4b-d93d-4ed0-b7b1-359a060b916a/resource/fb2c7f59-3b51-4218-9049-2eddb61a404b/download/icasees_cartocensitaire2021_formatocha_public_v2.xlsx",
+          "format": "XLSX"
+        },
+        {
+          "id": "fe8001fd-674b-4347-90b4-63e57824d7c5",
+          "name": "CAR_DATA_160214_POPULATION.xls",
+          "url": "https://data.humdata.org/dataset/d3600c4b-d93d-4ed0-b7b1-359a060b916a/resource/fe8001fd-674b-4347-90b4-63e57824d7c5/download/car_data_160214_population.xls",
+          "format": "XLS"
+        },
+        {
+          "id": "58403047-f30e-4719-94b0-8d6f7e0f6942",
+          "name": "caf_admpop_adm1_2015_v2.csv",
+          "url": "https://data.humdata.org/dataset/d3600c4b-d93d-4ed0-b7b1-359a060b916a/resource/58403047-f30e-4719-94b0-8d6f7e0f6942/download/caf_admpop_adm1_2015_v2.csv",
+          "format": "CSV"
+        },
+        {
+          "id": "2b74b781-c889-4cb9-9624-418577809c1e",
+          "name": "caf_admpop_adm2_2015_v2.csv",
+          "url": "https://data.humdata.org/dataset/d3600c4b-d93d-4ed0-b7b1-359a060b916a/resource/2b74b781-c889-4cb9-9624-418577809c1e/download/caf_admpop_adm2_2015_v2.csv",
+          "format": "CSV"
+        },
+        {
+          "id": "17c5c468-fb12-4114-8286-3feb2069ab0a",
+          "name": "caf_admpop_adm3_2015_v2.csv",
+          "url": "https://data.humdata.org/dataset/d3600c4b-d93d-4ed0-b7b1-359a060b916a/resource/17c5c468-fb12-4114-8286-3feb2069ab0a/download/caf_admpop_adm3_2015_v2.csv",
+          "format": "CSV"
+        }
+      ],
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)"
+    },
+    "gb1": {
+      "count": "17",
+      "year": "2006",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/CAF/ADM1/geoBoundaries-CAF-ADM1.geojson",
+      "source": "geoBoundaries, Wikimedia",
+      "license": "Creative Commons Attribution 2.5 Generic"
+    },
+    "gb2": {
+      "count": "72",
+      "year": "2015",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/CAF/ADM2/geoBoundaries-CAF-ADM2.geojson",
+      "source": "geoBoundaries, UNHCR",
+      "license": "Creative Commons Attribution 3.0 License"
+    }
+  },
+  {
+    "country": "mali",
+    "iso": "MLI",
+    "prefix": "ml",
+    "en": "Mali",
+    "lang": "fr",
+    "continent": "Africa",
+    "ab": {
+      "notes": "Mali administrative level 0-2 boundaries (COD-AB) dataset version 03.  \n  \nThis dataset is structured into 2 levels:  \n- Admin 1: 20 Région  \n- Admin 2: 160 Cercle  \n  \n  \nNote: The normal administrative level 2 feature type(s) are region (20 features) and cercle (160units).  \n  \n  \nDates associated with this dataset:  \n- 10 June 2025: dataset reviewed for accuracy and completeness  \n- 04 September 2025: valid for use by the humanitarian community  \n- 13 May 2025: last edit to the dataset before publishing  \n- 20 February 2025: boundaries created by the source  \n  \nQuality assured, configured, and published by [OCHA Field Information Services (FIS)](https://data.humdata.org/organization/ocha-fiss) and [HDX](https://data.humdata.org/organization/hdx).  \n  \nPart of the dataset: [Global Subnational Administrative Boundaries](https://data.humdata.org/dataset/cod-ab-global)",
+      "resources": [
+        {
+          "id": "78f15074-f58c-45c5-b074-57addf0b457e",
+          "name": "mli_admin_boundaries.gdb.zip",
+          "url": "https://data.humdata.org/dataset/d2ec62bb-5a93-436d-8297-88b3ee9b6818/resource/78f15074-f58c-45c5-b074-57addf0b457e/download/mli_admin_boundaries.gdb.zip",
+          "format": "Geodatabase"
+        },
+        {
+          "id": "dd90570d-e4af-48b1-a56f-ee80ba75afa0",
+          "name": "mli_admin_boundaries.shp.zip",
+          "url": "https://data.humdata.org/dataset/d2ec62bb-5a93-436d-8297-88b3ee9b6818/resource/dd90570d-e4af-48b1-a56f-ee80ba75afa0/download/mli_admin_boundaries.shp.zip",
+          "format": "SHP"
+        },
+        {
+          "id": "f5502554-402b-405b-8967-8182d306a4d1",
+          "name": "mli_admin_boundaries.geojson.zip",
+          "url": "https://data.humdata.org/dataset/d2ec62bb-5a93-436d-8297-88b3ee9b6818/resource/f5502554-402b-405b-8967-8182d306a4d1/download/mli_admin_boundaries.geojson.zip",
+          "format": "GeoJSON"
+        },
+        {
+          "id": "3374291a-7d3b-4fdc-99bb-f3932b45aa41",
+          "name": "mli_admin_boundaries.xlsx",
+          "url": "https://data.humdata.org/dataset/d2ec62bb-5a93-436d-8297-88b3ee9b6818/resource/3374291a-7d3b-4fdc-99bb-f3932b45aa41/download/mli_admin_boundaries.xlsx",
+          "format": "XLSX"
+        }
+      ],
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)"
+    },
+    "ps": {
+      "notes": "Population of Mali 2018, disaggregated by admin 1 to 3 and by gender\r\n\r\nREFERENCE YEAR:  2018\r\n\r\nThese tables are suitable for database or GIS linkage to the [Mali - Subnational Administrative Boundaries](https://data.humdata.org/dataset/cod-ab-mli) layers.\r\n\r\nProjection based on 2009 population census\r\n\r\nUpdate history\r\n\r\n8 August 2019\r\nAddition of CSV files\r\n\r\n7 March 2018\r\nInitial upload\r\n\r\nVersion history:\r\n\r\n7 August 2019\r\nDataset renamed.  Administrative levels 0-2 established.\r\n\r\n10 May 2019\r\nDataset renamed\r\n\r\n7 March 2018\r\nInitial upload",
+      "resources": [
+        {
+          "id": "dfbc914d-ecd6-4642-8e18-01ca6d2e3b5d",
+          "name": "MLI_AdminBoundaries_TabularData.xlsx",
+          "url": "https://data.humdata.org/dataset/ce21c7db-d8f0-40f8-adc2-452d2d2d105c/resource/dfbc914d-ecd6-4642-8e18-01ca6d2e3b5d/download/mli_adminboundaries_tabulardata.xlsx",
+          "format": "XLSX"
+        },
+        {
+          "id": "074b6e23-3241-40a9-bd49-d8fc3d4d959e",
+          "name": "Mali_Population_communes_sexe_2018.xls",
+          "url": "https://data.humdata.org/dataset/ce21c7db-d8f0-40f8-adc2-452d2d2d105c/resource/074b6e23-3241-40a9-bd49-d8fc3d4d959e/download/mali_population_communes_sexe_2018.xls",
+          "format": "XLS"
+        },
+        {
+          "id": "6f243ba2-4d4a-4663-a7c4-e917dbbde73a",
+          "name": "mli_pop_adm0_v2.csv",
+          "url": "https://data.humdata.org/dataset/ce21c7db-d8f0-40f8-adc2-452d2d2d105c/resource/6f243ba2-4d4a-4663-a7c4-e917dbbde73a/download/mli_pop_adm0_v2.csv",
+          "format": "CSV"
+        },
+        {
+          "id": "0bd515ae-613c-400f-a84c-ea203cc529be",
+          "name": "mli_pop_adm1_v2.csv",
+          "url": "https://data.humdata.org/dataset/ce21c7db-d8f0-40f8-adc2-452d2d2d105c/resource/0bd515ae-613c-400f-a84c-ea203cc529be/download/mli_pop_adm1_v2.csv",
+          "format": "CSV"
+        },
+        {
+          "id": "af0c935f-d507-4252-945c-9d1a6cc1b598",
+          "name": "mli_pop_adm2_v2.csv",
+          "url": "https://data.humdata.org/dataset/ce21c7db-d8f0-40f8-adc2-452d2d2d105c/resource/af0c935f-d507-4252-945c-9d1a6cc1b598/download/mli_pop_adm2_v2.csv",
+          "format": "CSV"
+        },
+        {
+          "id": "6a73b827-302d-47be-94a9-580fa73011b5",
+          "name": "mli_pop_adm3_v2.csv",
+          "url": "https://data.humdata.org/dataset/ce21c7db-d8f0-40f8-adc2-452d2d2d105c/resource/6a73b827-302d-47be-94a9-580fa73011b5/download/mli_pop_adm3_v2.csv",
+          "format": "CSV"
+        }
+      ],
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)"
+    },
+    "gb1": {
+      "count": "9",
+      "year": "2021",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/MLI/ADM1/geoBoundaries-MLI-ADM1.geojson",
+      "source": "DNCT - Direction Nationale des Collectivités Territoriales, United Nations Office for the Coordination of Humanitarian Affairs, Mali",
+      "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)"
+    },
+    "gb2": {
+      "count": "50",
+      "year": "2017",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/MLI/ADM2/geoBoundaries-MLI-ADM2.geojson",
+      "source": "DNCT - Direction Nationale des Colelctivités Territorielles, DNP - Direction Nationale de la Population, United Nations Office for the Coordination of Humanitarian Affairs, Mali",
+      "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)"
+    }
+  },
+  {
+    "country": "south-sudan",
+    "iso": "SSD",
+    "prefix": "ss",
+    "en": "South Sudan",
+    "lang": "en",
+    "continent": "Africa",
+    "ab": {
+      "notes": "South Sudan administrative level 0-3 boundaries (COD-AB) dataset version 03.  \n  \nThis dataset is structured into 3 levels:  \n- Admin 1: 10 State  \n- Admin 2: 79 County  \n- Admin 3: 512 Payam  \n  \n  \nDates associated with this dataset:  \n- 09 October 2024: dataset reviewed for accuracy and completeness  \n- 19 December 2022: valid for use by the humanitarian community  \n- 01 November 2020: last edit to the dataset before publishing  \n- 01 November 2020: boundaries created by the source  \n  \nContributed by [OCHA South Sudan](https://data.humdata.org/organization/ocha-south-sudan).  \nQuality assured, configured, and published by [OCHA Field Information Services (FIS)](https://data.humdata.org/organization/ocha-fiss) and [HDX](https://data.humdata.org/organization/hdx).  \n  \nPart of the dataset: [Global Subnational Administrative Boundaries](https://data.humdata.org/dataset/cod-ab-global)",
+      "resources": [
+        {
+          "id": "4a023359-0a23-4130-a987-9e979976919e",
+          "name": "ssd_admin_boundaries.gdb.zip",
+          "url": "https://data.humdata.org/dataset/cdd62bd9-e442-4eac-9b44-cfee8bf79153/resource/4a023359-0a23-4130-a987-9e979976919e/download/ssd_admin_boundaries.gdb.zip",
+          "format": "Geodatabase"
+        },
+        {
+          "id": "47b1ce82-198e-4707-a70d-63c47021d669",
+          "name": "ssd_admin_boundaries.shp.zip",
+          "url": "https://data.humdata.org/dataset/cdd62bd9-e442-4eac-9b44-cfee8bf79153/resource/47b1ce82-198e-4707-a70d-63c47021d669/download/ssd_admin_boundaries.shp.zip",
+          "format": "SHP"
+        },
+        {
+          "id": "c6bb2f28-6379-4750-b792-15915e9ab320",
+          "name": "ssd_admin_boundaries.geojson.zip",
+          "url": "https://data.humdata.org/dataset/cdd62bd9-e442-4eac-9b44-cfee8bf79153/resource/c6bb2f28-6379-4750-b792-15915e9ab320/download/ssd_admin_boundaries.geojson.zip",
+          "format": "GeoJSON"
+        },
+        {
+          "id": "153e2837-ed15-4f4e-95b9-b0700bb9440a",
+          "name": "ssd_admin_boundaries.xlsx",
+          "url": "https://data.humdata.org/dataset/cdd62bd9-e442-4eac-9b44-cfee8bf79153/resource/153e2837-ed15-4f4e-95b9-b0700bb9440a/download/ssd_admin_boundaries.xlsx",
+          "format": "XLSX"
+        }
+      ],
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)"
+    },
+    "ps": {
+      "notes": "South Sudan administrative level 0-2 2023 population estimates.\r\n\r\nSEE CAVEATS\r\n\r\nREFERENCE YEAR:  2023\r\nWaiting for inputs\r\n\r\nREFERENCE YEAR:  2022\r\n\r\nDataset updated by OCHA 2020.\r\n\r\nThis population statistics Common Operational Database (COD-PS) was endorsed the Government and South Sudan National Bureau of Statistics in November 2020.\r\n\r\n\r\nSudan administrative level 0-2 sex and age disaggregated 2025 projected population statistics.\r\n\r\n\r\nThese tables are suitable for database or GIS link to the [South Sudan - Subnational Administrative Boundaries](https://data.humdata.org/dataset/cod-ab-ssd).\r\n",
+      "resources": [
+        {
+          "id": "dfad888d-c594-4795-9b5b-3cbe958a3c18",
+          "name": "SSD_2024_population_estimates_data.xlsx",
+          "url": "https://data.humdata.org/dataset/5116cb9f-5db8-4f56-9766-735d88dcbbfa/resource/dfad888d-c594-4795-9b5b-3cbe958a3c18/download/ssd_2024_population_estimates_data.xlsx",
+          "format": "XLSX"
+        },
+        {
+          "id": "8bd5f105-6fcb-43be-b53f-f3e31c992654",
+          "name": "SSD_2023_Population_Estimates_Data.xlsx",
+          "url": "https://data.humdata.org/dataset/5116cb9f-5db8-4f56-9766-735d88dcbbfa/resource/8bd5f105-6fcb-43be-b53f-f3e31c992654/download/ssd_2023_population_estimates_data.xlsx",
+          "format": "XLSX"
+        },
+        {
+          "id": "75ecc4e4-e128-400d-b7e3-03cb9ac40ccd",
+          "name": "SS_20211210_2022_Population_Estimates_Overview v3.pdf",
+          "url": "https://data.humdata.org/dataset/5116cb9f-5db8-4f56-9766-735d88dcbbfa/resource/75ecc4e4-e128-400d-b7e3-03cb9ac40ccd/download/ss_20211210_2022_population_estimates_overview-v3.pdf",
+          "format": "PDF"
+        },
+        {
+          "id": "48a8f978-8dc7-42c2-8f07-703a56a2af2d",
+          "name": "SSD_AdminBoundaries_TabularData.xlsx",
+          "url": "https://data.humdata.org/dataset/5116cb9f-5db8-4f56-9766-735d88dcbbfa/resource/48a8f978-8dc7-42c2-8f07-703a56a2af2d/download/ssd_adminboundaries_tabulardata.xlsx",
+          "format": "XLSX"
+        },
+        {
+          "id": "d57b3d1a-c297-4a91-a676-b0de55df6af7",
+          "name": "ssd_admpop_2022_v2.xlsx",
+          "url": "https://data.humdata.org/dataset/5116cb9f-5db8-4f56-9766-735d88dcbbfa/resource/d57b3d1a-c297-4a91-a676-b0de55df6af7/download/ssd_admpop_2022_v2.xlsx",
+          "format": "XLSX"
+        },
+        {
+          "id": "de6f609b-fba3-4088-8cd4-b870f79a7e01",
+          "name": "ssd_admpop_adm0_2022_v2.csv",
+          "url": "https://data.humdata.org/dataset/5116cb9f-5db8-4f56-9766-735d88dcbbfa/resource/de6f609b-fba3-4088-8cd4-b870f79a7e01/download/ssd_admpop_adm0_2022_v2.csv",
+          "format": "CSV"
+        },
+        {
+          "id": "7a5243b5-9b54-4453-a30e-044e79417e1f",
+          "name": "ssd_admpop_adm1_2022_v2.csv",
+          "url": "https://data.humdata.org/dataset/5116cb9f-5db8-4f56-9766-735d88dcbbfa/resource/7a5243b5-9b54-4453-a30e-044e79417e1f/download/ssd_admpop_adm1_2022_v2.csv",
+          "format": "CSV"
+        },
+        {
+          "id": "209b6acb-99d0-4055-878e-e1a68618abe1",
+          "name": "ssd_admpop_adm2_2022_v2.csv",
+          "url": "https://data.humdata.org/dataset/5116cb9f-5db8-4f56-9766-735d88dcbbfa/resource/209b6acb-99d0-4055-878e-e1a68618abe1/download/ssd_admpop_adm2_2022_v2.csv",
+          "format": "CSV"
+        }
+      ],
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)"
+    },
+    "gb1": {
+      "count": "10",
+      "year": "2020",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/SSD/ADM1/geoBoundaries-SSD-ADM1.geojson",
+      "source": "South Sudan Information Management Working Group (IMWG), National Bureau of Statistics (NBS), and OCHA, OCHA South Sudan",
+      "license": "Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)"
+    },
+    "gb2": {
+      "count": "78",
+      "year": "2020",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/SSD/ADM2/geoBoundaries-SSD-ADM2.geojson",
+      "source": "South Sudan Information Management Working Group (IMWG), National Bureau of Statistics (NBS), and OCHA, OCHA South Sudan",
+      "license": "Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)"
+    }
+  },
+  {
+    "country": "niger",
+    "iso": "NER",
+    "prefix": "ne",
+    "en": "Niger",
+    "lang": "fr",
+    "continent": "Africa",
+    "ab": {
+      "notes": "Niger administrative level 0-3 boundaries (COD-AB) dataset version 02.  \n  \nThis dataset is structured into 3 levels:  \n- Admin 1: 8 Region (Région)  \n- Admin 2: 67 SD0  \n- Admin 3: 266 Commune  \n  \n  \nDates associated with this dataset:  \n- 30 October 2025: dataset reviewed for accuracy and completeness  \n- 20 July 2023: valid for use by the humanitarian community  \n- 01 January 2006: last edit to the dataset before publishing  \n- 01 January 2006: boundaries created by the source  \n  \nContributed by [OCHA Niger](https://data.humdata.org/organization/ocha-niger).  \nQuality assured, configured, and published by [OCHA Field Information Services (FIS)](https://data.humdata.org/organization/ocha-fiss) and [HDX](https://data.humdata.org/organization/hdx).  \n  \nPart of the dataset: [Global Subnational Administrative Boundaries](https://data.humdata.org/dataset/cod-ab-global)",
+      "resources": [
+        {
+          "id": "daf753dc-3e53-4864-be4b-c78a55235ce4",
+          "name": "ner_admin_boundaries.gdb.zip",
+          "url": "https://data.humdata.org/dataset/c0e0998c-b45a-4aea-ac06-c1de1d94e596/resource/daf753dc-3e53-4864-be4b-c78a55235ce4/download/ner_admin_boundaries.gdb.zip",
+          "format": "Geodatabase"
+        },
+        {
+          "id": "b2a4cf8d-da46-4f52-bed0-865160470dac",
+          "name": "ner_admin_boundaries.shp.zip",
+          "url": "https://data.humdata.org/dataset/c0e0998c-b45a-4aea-ac06-c1de1d94e596/resource/b2a4cf8d-da46-4f52-bed0-865160470dac/download/ner_admin_boundaries.shp.zip",
+          "format": "SHP"
+        },
+        {
+          "id": "52a76bdf-7c22-43d4-9e2d-bad40351007c",
+          "name": "ner_admin_boundaries.geojson.zip",
+          "url": "https://data.humdata.org/dataset/c0e0998c-b45a-4aea-ac06-c1de1d94e596/resource/52a76bdf-7c22-43d4-9e2d-bad40351007c/download/ner_admin_boundaries.geojson.zip",
+          "format": "GeoJSON"
+        },
+        {
+          "id": "b5143bc8-4a17-4cc1-8b3d-d122a17b841b",
+          "name": "ner_admin_boundaries.xlsx",
+          "url": "https://data.humdata.org/dataset/c0e0998c-b45a-4aea-ac06-c1de1d94e596/resource/b5143bc8-4a17-4cc1-8b3d-d122a17b841b/download/ner_admin_boundaries.xlsx",
+          "format": "XLSX"
+        }
+      ],
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)"
+    },
+    "ps": {
+      "notes": "Niger administrative level 0-3 sex disaggregated 2024 population statistics\r\nThis dataset also contains historical data for: 2022, 2023.\r\n\r\nREFERENCE YEAR:  2024\r\n\r\nThese CSV tables are suitable for database or GIS linkage to the [Niger - Subnational Administrative Boundaries](https://data.humdata.org/dataset/cod-ab-ner) using the ADM0, ADM1, and ADM2_PCODE fields.\r\n\r\nNOTE  The COD-AB live geoservices will be updated to be compatible in January 2024.\r\n",
+      "resources": [
+        {
+          "id": "68a7bedf-30ed-499a-b2bd-0471a96c9b92",
+          "name": "ner_admpop_2024.xlsx",
+          "url": "https://data.humdata.org/dataset/d5687df7-7163-42c7-a483-4e6dc0c569b4/resource/68a7bedf-30ed-499a-b2bd-0471a96c9b92/download/ner_admpop_2024.xlsx",
+          "format": "XLSX"
+        },
+        {
+          "id": "c2d75d02-f115-4124-a6c7-12bf5e03c888",
+          "name": "ner_admpop_adm3_2024.csv",
+          "url": "https://data.humdata.org/dataset/d5687df7-7163-42c7-a483-4e6dc0c569b4/resource/c2d75d02-f115-4124-a6c7-12bf5e03c888/download/ner_admpop_adm3_2024.csv",
+          "format": "CSV"
+        },
+        {
+          "id": "b0532577-b660-4e46-bfae-9b552dfde1d7",
+          "name": "ner_admpop_adm2_2024.csv",
+          "url": "https://data.humdata.org/dataset/d5687df7-7163-42c7-a483-4e6dc0c569b4/resource/b0532577-b660-4e46-bfae-9b552dfde1d7/download/ner_admpop_adm2_2024.csv",
+          "format": "CSV"
+        },
+        {
+          "id": "3a8566e1-ebaa-44bc-bc40-1313897fc808",
+          "name": "ner_admpop_adm1_2024.csv",
+          "url": "https://data.humdata.org/dataset/d5687df7-7163-42c7-a483-4e6dc0c569b4/resource/3a8566e1-ebaa-44bc-bc40-1313897fc808/download/ner_admpop_adm1_2024.csv",
+          "format": "CSV"
+        },
+        {
+          "id": "a55ddcc3-38b1-4088-a51e-0b2d2f41d82c",
+          "name": "ner_admpop_adm0_2024.csv",
+          "url": "https://data.humdata.org/dataset/d5687df7-7163-42c7-a483-4e6dc0c569b4/resource/a55ddcc3-38b1-4088-a51e-0b2d2f41d82c/download/ner_admpop_adm0_2024.csv",
+          "format": "CSV"
+        },
+        {
+          "id": "ed7698f0-db39-4f15-9de6-7333bfae1ee4",
+          "name": "NER-COD-PS-2024-Explanatory-Note.pdf",
+          "url": "https://data.humdata.org/dataset/d5687df7-7163-42c7-a483-4e6dc0c569b4/resource/ed7698f0-db39-4f15-9de6-7333bfae1ee4/download/ner-cod-ps-2024-explanatory-note.pdf",
+          "format": "PDF"
+        },
+        {
+          "id": "920ac52c-0789-48a7-8751-a0fb13508601",
+          "name": "NER_CODPS_QA_2023.pdf",
+          "url": "https://data.humdata.org/dataset/d5687df7-7163-42c7-a483-4e6dc0c569b4/resource/920ac52c-0789-48a7-8751-a0fb13508601/download/ner_codps_qa_2023.pdf",
+          "format": "PDF"
+        },
+        {
+          "id": "abdbc26f-7d08-41ef-b74c-797f2ab49f7d",
+          "name": "ner_admgz_IGNN_20230720.xlsx",
+          "url": "https://data.humdata.org/dataset/d5687df7-7163-42c7-a483-4e6dc0c569b4/resource/abdbc26f-7d08-41ef-b74c-797f2ab49f7d/download/ner_admgz_ignn_20230720.xlsx",
+          "format": "XLSX"
+        },
+        {
+          "id": "f538e007-ecc6-4dce-b36b-6d5f80548bc1",
+          "name": "ner_admpop_2023.xlsx",
+          "url": "https://data.humdata.org/dataset/d5687df7-7163-42c7-a483-4e6dc0c569b4/resource/f538e007-ecc6-4dce-b36b-6d5f80548bc1/download/ner_admpop_2023.xlsx",
+          "format": "XLSX"
+        },
+        {
+          "id": "221379fc-b24d-4aaf-88ce-8f5b95ac9fb1",
+          "name": "ner_admpop_adm0_2023.csv",
+          "url": "https://data.humdata.org/dataset/d5687df7-7163-42c7-a483-4e6dc0c569b4/resource/221379fc-b24d-4aaf-88ce-8f5b95ac9fb1/download/ner_admpop_adm0_2023.csv",
+          "format": "CSV"
+        },
+        {
+          "id": "60c3a739-0ec9-4970-b1a2-d1fddd8dc96c",
+          "name": "ner_admpop_adm1_2023.csv",
+          "url": "https://data.humdata.org/dataset/d5687df7-7163-42c7-a483-4e6dc0c569b4/resource/60c3a739-0ec9-4970-b1a2-d1fddd8dc96c/download/ner_admpop_adm1_2023.csv",
+          "format": "CSV"
+        },
+        {
+          "id": "6e291d7c-bacd-43e9-bc2d-109ca0c39267",
+          "name": "ner_admpop_adm2_2023.csv",
+          "url": "https://data.humdata.org/dataset/d5687df7-7163-42c7-a483-4e6dc0c569b4/resource/6e291d7c-bacd-43e9-bc2d-109ca0c39267/download/ner_admpop_adm2_2023.csv",
+          "format": "CSV"
+        },
+        {
+          "id": "2f2b4b15-a707-4282-8c59-644a316e3d03",
+          "name": "ner_admpop_adm3_2023.csv",
+          "url": "https://data.humdata.org/dataset/d5687df7-7163-42c7-a483-4e6dc0c569b4/resource/2f2b4b15-a707-4282-8c59-644a316e3d03/download/ner_admpop_adm3_2023.csv",
+          "format": "CSV"
+        },
+        {
+          "id": "4430b893-58eb-4354-a763-6b4b7c16689f",
+          "name": "ner_admpop_2022.xlsx",
+          "url": "https://data.humdata.org/dataset/d5687df7-7163-42c7-a483-4e6dc0c569b4/resource/4430b893-58eb-4354-a763-6b4b7c16689f/download/ner_admpop_2022.xlsx",
+          "format": "XLSX"
+        }
+      ],
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)"
+    },
+    "gb1": {
+      "count": "6",
+      "year": "2012",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/NER/ADM1/geoBoundaries-NER-ADM1.geojson",
+      "source": "IPUMS DHS",
+      "license": "Open Data Commons Open Database License 1.0"
+    },
+    "gb2": {
+      "count": "67",
+      "year": "2018",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/NER/ADM2/geoBoundaries-NER-ADM2.geojson",
+      "source": "geoBoundaries, City Population",
+      "license": "Creative Commons Attribution 3.0 License"
+    }
+  },
+  {
+    "country": "andorra",
+    "iso": "AND",
+    "prefix": "ad",
+    "en": "Andorra",
+    "lang": "ca",
+    "continent": "Europe",
+    "abError": "and-ab-metadata.json HTTP 404",
+    "psError": "and-ps-metadata.json HTTP 404",
+    "gb1": {
+      "count": "7",
+      "year": "2007",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/AND/ADM1/geoBoundaries-AND-ADM1.geojson",
+      "source": "geoBoundaries, Wikimedia Commons",
+      "license": "Public Domain"
+    },
+    "gb2Error": "and-gb2-metadata.json HTTP 404"
+  },
+  {
+    "country": "liechtenstein",
+    "iso": "LIE",
+    "prefix": "li",
+    "en": "Liechtenstein",
+    "lang": "de",
+    "continent": "Europe",
+    "abError": "lie-ab-metadata.json HTTP 404",
+    "psError": "lie-ps-metadata.json HTTP 404",
+    "gb1": {
+      "count": "11",
+      "year": "2017",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/LIE/ADM1/geoBoundaries-LIE-ADM1.geojson",
+      "source": "OpenStreetMap, Wambacher",
+      "license": "Open Data Commons Open Database License 1.0"
+    },
+    "gb2Error": "lie-gb2-metadata.json HTTP 404"
+  },
+  {
+    "country": "malta",
+    "iso": "MLT",
+    "prefix": "mt",
+    "en": "Malta",
+    "lang": "mt",
+    "continent": "Europe",
+    "abError": "mlt-ab-metadata.json HTTP 404",
+    "psError": "mlt-ps-metadata.json HTTP 404",
+    "gb1": {
+      "count": "68",
+      "year": "2022",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/MLT/ADM1/geoBoundaries-MLT-ADM1.geojson",
+      "source": "geoBoundaries, d-maps.com",
+      "license": "Public Domain"
+    },
+    "gb2Error": "mlt-gb2-metadata.json HTTP 404"
+  },
+  {
+    "country": "israel",
+    "iso": "ISR",
+    "prefix": "il",
+    "en": "Israel",
+    "lang": "he",
+    "continent": "Asia",
+    "abError": "isr-ab-metadata.json HTTP 404",
+    "psError": "isr-ps-metadata.json HTTP 404",
+    "gb1": {
+      "count": "6",
+      "year": "2006",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/ISR/ADM1/geoBoundaries-ISR-ADM1.geojson",
+      "source": "geoBoundaries, Wikimedia",
+      "license": "Public Domain"
+    },
+    "gb2": {
+      "count": "15",
+      "year": "2021",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/ISR/ADM2/geoBoundaries-ISR-ADM2.geojson",
+      "source": "geoBoundaries, Wikimedia Commons",
+      "license": "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication"
+    }
+  },
+  {
+    "country": "kuwait",
+    "iso": "KWT",
+    "prefix": "kw",
+    "en": "Kuwait",
+    "lang": "ar",
+    "continent": "Asia",
+    "ab": {
+      "notes": "Kuwait administrative level 0-1 boundaries (COD-AB) dataset version 01.  \n  \nThis dataset is structured into 1 level:  \n- Admin 1: 6   \n  \n  \nDates associated with this dataset:  \n- 19 December 2024: dataset reviewed for accuracy and completeness  \n- 01 February 2022: valid for use by the humanitarian community  \n- 30 November 2015: last edit to the dataset before publishing  \n- 30 November 2015: boundaries created by the source  \n  \nContributed by [OCHA Middle East and North Africa (ROMENA)](https://data.humdata.org/organization/ocha-romena).  \nQuality assured, configured, and published by [OCHA Field Information Services (FIS)](https://data.humdata.org/organization/ocha-fiss) and [HDX](https://data.humdata.org/organization/hdx).  \n  \nPart of the dataset: [Global Subnational Administrative Boundaries](https://data.humdata.org/dataset/cod-ab-global)",
+      "resources": [
+        {
+          "id": "efd0fa18-3f57-4306-b837-846dcb4d5b23",
+          "name": "kwt_admin_boundaries.gdb.zip",
+          "url": "https://data.humdata.org/dataset/a28f399f-482c-4e62-8dbf-d2c12381674a/resource/efd0fa18-3f57-4306-b837-846dcb4d5b23/download/kwt_admin_boundaries.gdb.zip",
+          "format": "Geodatabase"
+        },
+        {
+          "id": "9c9ccd7e-7ffb-4005-a301-db7d39127b61",
+          "name": "kwt_admin_boundaries.shp.zip",
+          "url": "https://data.humdata.org/dataset/a28f399f-482c-4e62-8dbf-d2c12381674a/resource/9c9ccd7e-7ffb-4005-a301-db7d39127b61/download/kwt_admin_boundaries.shp.zip",
+          "format": "SHP"
+        },
+        {
+          "id": "89b9c8ee-6ba4-4078-9f46-5796fe566759",
+          "name": "kwt_admin_boundaries.geojson.zip",
+          "url": "https://data.humdata.org/dataset/a28f399f-482c-4e62-8dbf-d2c12381674a/resource/89b9c8ee-6ba4-4078-9f46-5796fe566759/download/kwt_admin_boundaries.geojson.zip",
+          "format": "GeoJSON"
+        },
+        {
+          "id": "30b6053a-8fde-4e3c-b319-d2a3dd402c97",
+          "name": "kwt_admin_boundaries.xlsx",
+          "url": "https://data.humdata.org/dataset/a28f399f-482c-4e62-8dbf-d2c12381674a/resource/30b6053a-8fde-4e3c-b319-d2a3dd402c97/download/kwt_admin_boundaries.xlsx",
+          "format": "XLSX"
+        }
+      ],
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)"
+    },
+    "psError": "kwt-ps-metadata.json HTTP 404",
+    "gb1": {
+      "count": "6",
+      "year": "2017",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/KWT/ADM1/geoBoundaries-KWT-ADM1.geojson",
+      "source": "OpenStreetMap, Wambacher",
+      "license": "Open Data Commons Open Database License 1.0"
+    },
+    "gb2": {
+      "count": "138",
+      "year": "2011",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/KWT/ADM2/geoBoundaries-KWT-ADM2.geojson",
+      "source": "OpenStreetMap, Wambacher",
+      "license": "Open Data Commons Open Database License 1.0"
+    }
+  },
+  {
+    "country": "lebanon",
+    "iso": "LBN",
+    "prefix": "lb",
+    "en": "Lebanon",
+    "lang": "ar",
+    "continent": "Asia",
+    "ab": {
+      "notes": "Lebanon administrative level 0-3 boundaries (COD-AB) dataset version 02.  \n  \nThis dataset is structured into 3 levels:  \n- Admin 1: 8 Governorate (Mouhafaza)  \n- Admin 2: 26 District (Kaza)  \n- Admin 3: 1627 Cadaster (Manatek Ikaria)  \n  \n  \nDates associated with this dataset:  \n- 30 October 2025: dataset reviewed for accuracy and completeness  \n- 13 November 2024: valid for use by the humanitarian community  \n- 02 May 2014: last edit to the dataset before publishing  \n- 02 May 2014: boundaries created by the source  \n  \nQuality assured, configured, and published by [OCHA Field Information Services (FIS)](https://data.humdata.org/organization/ocha-fiss) and [HDX](https://data.humdata.org/organization/hdx).  \n  \nPart of the dataset: [Global Subnational Administrative Boundaries](https://data.humdata.org/dataset/cod-ab-global)",
+      "resources": [
+        {
+          "id": "e3857d04-7e82-4740-8573-0e40e9ee25f7",
+          "name": "lbn_admin_boundaries.gdb.zip",
+          "url": "https://data.humdata.org/dataset/569beba7-bad7-4951-a19d-468a035461cd/resource/e3857d04-7e82-4740-8573-0e40e9ee25f7/download/lbn_admin_boundaries.gdb.zip",
+          "format": "Geodatabase"
+        },
+        {
+          "id": "1d8198d3-8f50-405a-9534-6c131fe3d6d2",
+          "name": "lbn_admin_boundaries.shp.zip",
+          "url": "https://data.humdata.org/dataset/569beba7-bad7-4951-a19d-468a035461cd/resource/1d8198d3-8f50-405a-9534-6c131fe3d6d2/download/lbn_admin_boundaries.shp.zip",
+          "format": "SHP"
+        },
+        {
+          "id": "81ca0135-b5c9-46e0-a546-f0bdd6d7fd42",
+          "name": "lbn_admin_boundaries.geojson.zip",
+          "url": "https://data.humdata.org/dataset/569beba7-bad7-4951-a19d-468a035461cd/resource/81ca0135-b5c9-46e0-a546-f0bdd6d7fd42/download/lbn_admin_boundaries.geojson.zip",
+          "format": "GeoJSON"
+        },
+        {
+          "id": "83dae3aa-1047-4019-9ca2-a5709810ad21",
+          "name": "lbn_admin_boundaries.xlsx",
+          "url": "https://data.humdata.org/dataset/569beba7-bad7-4951-a19d-468a035461cd/resource/83dae3aa-1047-4019-9ca2-a5709810ad21/download/lbn_admin_boundaries.xlsx",
+          "format": "XLSX"
+        }
+      ],
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)"
+    },
+    "psError": "lbn-ps-metadata.json HTTP 404",
+    "gb1": {
+      "count": "9",
+      "year": "2017",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/LBN/ADM1/geoBoundaries-LBN-ADM1.geojson",
+      "source": "geoBoundaries, Wikimedia Commons",
+      "license": "Public Domain"
+    },
+    "gb2": {
+      "count": "26",
+      "year": "2021",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/LBN/ADM2/geoBoundaries-LBN-ADM2.geojson",
+      "source": "geoBoundaries, Wikipedia",
+      "license": "Public Domain"
+    }
+  },
+  {
+    "country": "palestine",
+    "iso": "PSE",
+    "prefix": "ps",
+    "en": "Palestine",
+    "lang": "ar",
+    "continent": "Asia",
+    "ab": {
+      "notes": "State of Palestine administrative level 0-2 boundaries (COD-AB) dataset version 01.  \n  \nThis dataset is structured into 2 levels:  \n- Admin 1: 2 Territory or Region?  \n- Admin 2: 16 Governorate  \n  \n  \nDates associated with this dataset:  \n- 24 December 2024: dataset reviewed for accuracy and completeness  \n- 19 October 2023: valid for use by the humanitarian community  \n- 28 September 1995: last edit to the dataset before publishing  \n- 28 September 1995: boundaries created by the source  \n  \nContributed by [OCHA occupied Palestinian territory (oPt)](https://data.humdata.org/organization/ocha-opt).  \nQuality assured, configured, and published by [OCHA Field Information Services (FIS)](https://data.humdata.org/organization/ocha-fiss) and [HDX](https://data.humdata.org/organization/hdx).  \n  \nPart of the dataset: [Global Subnational Administrative Boundaries](https://data.humdata.org/dataset/cod-ab-global)",
+      "resources": [
+        {
+          "id": "c607b125-4527-4929-a77a-6f4123417975",
+          "name": "pse_admin_boundaries.gdb.zip",
+          "url": "https://data.humdata.org/dataset/2caf8373-816f-458c-9913-71bddb9cab7c/resource/c607b125-4527-4929-a77a-6f4123417975/download/pse_admin_boundaries.gdb.zip",
+          "format": "Geodatabase"
+        },
+        {
+          "id": "ebf1cc7b-45e0-43bb-bec5-2464cd2d26fc",
+          "name": "pse_admin_boundaries.shp.zip",
+          "url": "https://data.humdata.org/dataset/2caf8373-816f-458c-9913-71bddb9cab7c/resource/ebf1cc7b-45e0-43bb-bec5-2464cd2d26fc/download/pse_admin_boundaries.shp.zip",
+          "format": "SHP"
+        },
+        {
+          "id": "ca372385-4c79-4378-abf1-cb506fb98023",
+          "name": "pse_admin_boundaries.geojson.zip",
+          "url": "https://data.humdata.org/dataset/2caf8373-816f-458c-9913-71bddb9cab7c/resource/ca372385-4c79-4378-abf1-cb506fb98023/download/pse_admin_boundaries.geojson.zip",
+          "format": "GeoJSON"
+        },
+        {
+          "id": "8734a2c3-793d-43ec-ae5a-66d6bfee96b1",
+          "name": "pse_admin_boundaries.xlsx",
+          "url": "https://data.humdata.org/dataset/2caf8373-816f-458c-9913-71bddb9cab7c/resource/8734a2c3-793d-43ec-ae5a-66d6bfee96b1/download/pse_admin_boundaries.xlsx",
+          "format": "XLSX"
+        }
+      ],
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)"
+    },
+    "ps": {
+      "notes": "State of Palestine administrative level 0-1 sex and age disaggregated 2023 population statistics\r\n\r\nREFERENCE YEAR: 2023\r\n\r\nThese tables are suitable for database or GIS linkage to the [State of Palestine - Subnational Administrative Boundaries](https://data.humdata.org/dataset/cod-ab-pse).",
+      "resources": [
+        {
+          "id": "807a1426-5665-417a-b981-f64b676058bd",
+          "name": "PSE_CODPS_QA_2023.pdf",
+          "url": "https://data.humdata.org/dataset/36271e9b-9ec2-4c1c-bfff-82848eba0b2f/resource/807a1426-5665-417a-b981-f64b676058bd/download/pse_codps_qa_2023.pdf",
+          "format": "PDF"
+        },
+        {
+          "id": "951b3bb1-2f07-4f99-a995-428f6a5c3ecd",
+          "name": "PSE_AdminBoundaries_TabularData.xlsx",
+          "url": "https://data.humdata.org/dataset/36271e9b-9ec2-4c1c-bfff-82848eba0b2f/resource/951b3bb1-2f07-4f99-a995-428f6a5c3ecd/download/pse_adminboundaries_tabulardata.xlsx",
+          "format": "XLSX"
+        },
+        {
+          "id": "c02280d9-e385-4ec5-8bfc-cb6061511bc1",
+          "name": "pse_admpop_2023.xlsx",
+          "url": "https://data.humdata.org/dataset/36271e9b-9ec2-4c1c-bfff-82848eba0b2f/resource/c02280d9-e385-4ec5-8bfc-cb6061511bc1/download/pse_admpop_2023.xlsx",
+          "format": "XLSX"
+        },
+        {
+          "id": "632a784f-482a-4425-af24-01f068d250f6",
+          "name": "pse_admpop_adm0_2023.csv",
+          "url": "https://data.humdata.org/dataset/36271e9b-9ec2-4c1c-bfff-82848eba0b2f/resource/632a784f-482a-4425-af24-01f068d250f6/download/pse_admpop_adm0_2023.csv",
+          "format": "CSV"
+        },
+        {
+          "id": "f7e802cb-9701-4624-a348-13e52103e27f",
+          "name": "pse_admpop_adm1_2023.csv",
+          "url": "https://data.humdata.org/dataset/36271e9b-9ec2-4c1c-bfff-82848eba0b2f/resource/f7e802cb-9701-4624-a348-13e52103e27f/download/pse_admpop_adm1_2023.csv",
+          "format": "CSV"
+        }
+      ],
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)"
+    },
+    "gb1": {
+      "count": "2",
+      "year": "2021",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/PSE/ADM1/geoBoundaries-PSE-ADM1.geojson",
+      "source": "geoBoundaries, Open Data Watch",
+      "license": "Creative Commons Attribution 4.0 (CC BY 4.0)"
+    },
+    "gb2": {
+      "count": "16",
+      "year": "2017",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/PSE/ADM2/geoBoundaries-PSE-ADM2.geojson",
+      "source": "Open Data Watch",
+      "license": "Creative Commons Attribution 4.0 (CC BY 4.0)"
+    }
+  }
+]

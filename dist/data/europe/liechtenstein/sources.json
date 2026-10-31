@@ -1,0 +1,54 @@
+{
+  "retrieved": "2026-10-31",
+  "coverage": "Dated source administrative reference; observation years and coverage retained independently. All hierarchy levels dissolve from one cleaned local partition. New international edges follow a single shared display arc and existing neighbors retain their administrative land. Population dates and coverage are independent of boundary dates. National GDP is not allocated to subdivisions. Country overview pages remain hidden.",
+  "counts": {
+    "1": 11
+  },
+  "processing": "Dated source administrative reference; observation years and coverage retained independently. All hierarchy levels dissolve from one cleaned local partition. New international edges follow a single shared display arc and existing neighbors retain their administrative land. Population dates and coverage are independent of boundary dates. National GDP is not allocated to subdivisions. Country overview pages remain hidden.",
+  "sources": {
+    "lie-gb1-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/LIE/ADM1/",
+      "bytes": 1737,
+      "sha256": "10621deac86e1e0d4df955c61642b74935af429a5feb8cf3bc75fc863d65e5b8"
+    },
+    "flag-li.svg": {
+      "url": "https://flagcdn.com/li.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "bytes": 12408,
+      "sha256": "308d212c6046d523637598a5034bdc6132706c7c3c33c5d042748226da61e8c3"
+    },
+    "lie-adm1.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/LIE/ADM1/geoBoundaries-LIE-ADM1.geojson",
+      "license": "Open Data Commons Open Database License 1.0",
+      "credit": "OpenStreetMap, Wambacher",
+      "year": "2017",
+      "bytes": 184567,
+      "sha256": "326cc1da31d15c85ada8e6afc7f049290a728de42f7b48e05191673974e53afd"
+    },
+    "lie-population-2025.pdf": {
+      "url": "https://www.statistikportal.li/de/publikation/bevoelkerungsstand-vorlaeufige-ergebnisse-31-dezember-2025/2025/02/v-1/p42384/pdf",
+      "credit": "Liechtenstein Amt für Statistik",
+      "license": "Government statistical publication; notices retained",
+      "bytes": 401865,
+      "sha256": "7b6c9528dfc94158f2bd306ca7512213ed23222c92a21e0a6805581e8ad5b215"
+    },
+    "lie-population-2025.xlsx": {
+      "url": "https://www.statistikportal.li/statistikportal/publications/211-bevoelkerungsstand/2025/02/1/211.2025.02.1_01_bevoelkerungsstand-vorlaeufige-dezember-2025-tabellen.xlsx",
+      "credit": "Amt für Statistik Liechtenstein",
+      "license": "Official statistical facts; original publication notices retained",
+      "bytes": 47467,
+      "sha256": "b773d4177f5f08628b6d3e5b867ae39de92ae125371ba10493c6b3c178112a42"
+    }
+  },
+  "displaySimplificationDegrees": 0.00005,
+  "sourceCounts": {
+    "1": 11
+  },
+  "waterPlaceholders": [],
+  "statisticalCoverage": {
+    "populationUnits": 11,
+    "missingPopulationUnits": 0,
+    "nationalGdpYear": 2024
+  }
+}

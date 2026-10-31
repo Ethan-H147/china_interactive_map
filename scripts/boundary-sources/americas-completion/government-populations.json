@@ -1,0 +1,106 @@
+{
+  "barbados": {
+    "source": "brb-census-2021.pdf",
+    "table": "Table C, printed page 23 (PDF page 26)",
+    "year": 2021,
+    "date": "2021-08-01",
+    "method": "estimate",
+    "label": "2021 census resident-population estimate",
+    "note": "Estimated resident population, including the census undercount adjustment and institutional residents; not the incomplete tabulated count.",
+    "population": {
+      "Saint Michael": 77394,
+      "Christ Church": 51184,
+      "Saint George": 21939,
+      "Saint Philip": 32130,
+      "Saint John": 10417,
+      "Saint James": 24819,
+      "Saint Thomas": 14130,
+      "Saint Joseph": 6697,
+      "Saint Andrew": 5677,
+      "Saint Peter": 13565,
+      "Saint Lucy": 11136
+    }
+  },
+  "saint-kitts-and-nevis": {
+    "source": "kna-census-2022.pdf",
+    "table": "Table 2, printed page 7",
+    "year": 2022,
+    "method": "census",
+    "label": "2022 census, private-household residents",
+    "note": "The published 2022 census summary excludes institutional residents. Same scope applies to every parish.",
+    "population": {
+      "Saint George Basseterre": 13652,
+      "Saint Paul Capisterre": 2468,
+      "Saint Anne Sandy Point": 2969,
+      "Saint Thomas Middle Island": 2657,
+      "Trinity Palmetto Point": 2348,
+      "Christ Church Nichola Town": 2064,
+      "Saint John Capisterre": 2972,
+      "Saint Mary Cayon": 3341,
+      "Saint Peter Basseterre": 5667,
+      "Saint Paul Charlestown": 1888,
+      "Saint John Figtree": 4416,
+      "Saint George Gingerland": 2323,
+      "Saint Thomas Lowland": 2265,
+      "Saint James Windward": 2290
+    }
+  },
+  "dominica": {
+    "source": "dma-population.html",
+    "table": "Population by sex and parish, 2011 and 2001; use whole-parish rows",
+    "year": 2011,
+    "method": "census",
+    "label": "2011 census",
+    "population": {
+      "Saint George": 20791,
+      "Saint John": 6422,
+      "Saint Peter": 1371,
+      "Saint Joseph": 5434,
+      "Saint Paul": 9531,
+      "Saint Luke": 1565,
+      "Saint Mark": 1767,
+      "Saint Patrick": 7361,
+      "Saint David": 5899,
+      "Saint Andrew": 9184
+    }
+  },
+  "antigua-and-barbuda": {
+    "source": "atg-census-2011.pdf",
+    "table": "Table 5.1, printed page 57, resident population including institutional population",
+    "year": 2011,
+    "method": "census",
+    "label": "2011 census resident population",
+    "note": "Saint John combines the published City and Rural rows; uses Table 5.1 including institutional residents.",
+    "population": {
+      "Saint John": 51737,
+      "Saint George": 8055,
+      "Saint Peter": 5325,
+      "Saint Philip": 3347,
+      "Saint Paul": 8128,
+      "Saint Mary": 7341,
+      "Barbuda": 1634
+    }
+  },
+  "grenada": {
+    "source": "grd-census-2021.pdf",
+    "table": "Table 17, printed page 16 / PDF page 20; national Table 1, printed page 1 / PDF page 5",
+    "year": 2021,
+    "method": "census",
+    "label": "2021 preliminary census, private dwellings",
+    "note": "Preliminary census population in private dwellings; institutional and homeless residents are excluded from the parish table. Saint George combines the town and the rest of the parish.",
+    "nationalPopulation": {
+      "value": 109021,
+      "periodLabel": "2021 preliminary census",
+      "coverageNote": "All residents: 108,279 in private dwellings, 690 institutional residents and 52 homeless residents. The separately published parish table covers private dwellings only."
+    },
+    "population": {
+      "St. George": 44777,
+      "St. John": 7773,
+      "St. Mark": 3938,
+      "St. Patrick": 7846,
+      "St. Andrew": 24755,
+      "St. David": 14443,
+      "Carriacou and Petite Martinique": 4747
+    }
+  }
+}

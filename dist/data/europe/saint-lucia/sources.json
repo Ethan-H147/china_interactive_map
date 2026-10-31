@@ -1,0 +1,77 @@
+{
+  "retrieved": "2026-10-31",
+  "coverage": "Saint Lucia administrative reference from the retained licensed source. All hierarchy levels dissolve from the same jointly simplified local partition (0.00008 degree display tolerance, approximately five to nine metres). Source water-only polygons are excluded from administrative units. Shared international arcs use one owner and common junctions; existing neighboring administrative geometry remains fixed. Population observations retain their own year and coverage. Only the ten district areas are administrative quiz units; the separately published 547 named communities are not treated as another government tier. National World Bank GDP and GDP per capita are retained without distributing national output among subdivisions. Country overview pages remain hidden.",
+  "counts": {
+    "1": 10
+  },
+  "processing": "Saint Lucia administrative reference from the retained licensed source. All hierarchy levels dissolve from the same jointly simplified local partition (0.00008 degree display tolerance, approximately five to nine metres). Source water-only polygons are excluded from administrative units. Shared international arcs use one owner and common junctions; existing neighboring administrative geometry remains fixed. Population observations retain their own year and coverage. Only the ten district areas are administrative quiz units; the separately published 547 named communities are not treated as another government tier. National World Bank GDP and GDP per capita are retained without distributing national output among subdivisions. Country overview pages remain hidden.",
+  "sources": {
+    "lca-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-lca",
+      "bytes": 14828,
+      "sha256": "d03866a66301f1ba6c4845e79b21fbcb6ca83b7901105f41de6058001f5b78b4"
+    },
+    "lca-adm1-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/LCA/ADM1/",
+      "bytes": 1783,
+      "sha256": "b447482e6007a1d783f0e675218fa329e48fcf16c77d7a972b4ae781620586f6"
+    },
+    "lca-adm1.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/LCA/ADM1/geoBoundaries-LCA-ADM1.geojson",
+      "credit": "Wikimedia Commons, Wikimedia Commons",
+      "license": "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
+      "year": "2015",
+      "bytes": 281310,
+      "sha256": "9bd23d92377980a8d740d7c490f6d3578ca7f4ee07e31f2911f59be9ace33bc3"
+    },
+    "lca-adm2-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/LCA/ADM2/",
+      "bytes": 1782,
+      "sha256": "8cfc025e7b07ef1fe2f0e6e83db81053653c2b9d21fab867d85f8104cf76690f"
+    },
+    "lca-adm2.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/LCA/ADM2/geoBoundaries-LCA-ADM2.geojson",
+      "credit": "Department of Physical Planning, Saint Lucia Open Data",
+      "license": "Creative Commons Attribution 4.0 (CC BY 4.0)",
+      "year": "2019",
+      "bytes": 10958005,
+      "sha256": "603ae3d14d34ace4516af313b175b54fcbe0857c524822905edfd79d7be4a8c6"
+    },
+    "lca-ps-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-lca",
+      "bytes": 14445,
+      "sha256": "f1cda90588df81a5fda07979655528bc554bf97b32b22bc7181742876558d740"
+    },
+    "lca-population-lca_pop_adm0_v2.csv": {
+      "url": "https://data.humdata.org/dataset/c75ed1fb-52a6-4e97-80e0-20d66d2a79e4/resource/07c73570-9afd-4390-94f5-89f50ec868a8/download/lca_pop_adm0_v2.csv",
+      "credit": "Saint Lucia - Subnational Population Statistics",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 748,
+      "sha256": "60060440e1e94557551a9912fc9e9cc87f924adf9dce5ab56ef5c9e83957adba"
+    },
+    "lca-population-lca_pop_adm1_v2.csv": {
+      "url": "https://data.humdata.org/dataset/c75ed1fb-52a6-4e97-80e0-20d66d2a79e4/resource/c803a782-f19f-4bc5-9857-f09dc76712b6/download/lca_pop_adm1_v2.csv",
+      "credit": "Saint Lucia - Subnational Population Statistics",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 2994,
+      "sha256": "e3ab64577b593bc37eb87d0853af71eee62b599bd47bf5b6fba52f32fa42e91c"
+    },
+    "flag-lc.svg": {
+      "url": "https://flagcdn.com/lc.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "bytes": 254,
+      "sha256": "13f4f19e5d3a4a590ba7698e0b19df13d1dd817e4928c20fb4ba949ed8737daf"
+    }
+  },
+  "displaySimplificationDegrees": 0.00008,
+  "sourceCounts": {
+    "1": 10
+  },
+  "waterPlaceholders": [],
+  "statisticalCoverage": {
+    "populationUnits": 10,
+    "missingPopulationUnits": 0,
+    "nationalGdpYear": 2025
+  }
+}

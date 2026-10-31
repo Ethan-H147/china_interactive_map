@@ -1,0 +1,93 @@
+{
+  "retrieved": "2026-10-31",
+  "coverage": "Suriname administrative reference from the retained licensed source. All hierarchy levels dissolve from the same jointly simplified local partition (0.00008 degree display tolerance, approximately five to nine metres). Source water-only polygons are excluded from administrative units. Shared international arcs use one owner and common junctions; existing neighboring administrative geometry remains fixed. Population observations retain their own year and coverage. National World Bank GDP and GDP per capita are retained without distributing national output among subdivisions. Country overview pages remain hidden.",
+  "counts": {
+    "1": 10,
+    "2": 62
+  },
+  "processing": "Suriname administrative reference from the retained licensed source. All hierarchy levels dissolve from the same jointly simplified local partition (0.00008 degree display tolerance, approximately five to nine metres). Source water-only polygons are excluded from administrative units. Shared international arcs use one owner and common junctions; existing neighboring administrative geometry remains fixed. Population observations retain their own year and coverage. National World Bank GDP and GDP per capita are retained without distributing national output among subdivisions. Country overview pages remain hidden.",
+  "sources": {
+    "sur-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-sur",
+      "bytes": 10078,
+      "sha256": "79bdc7cdbda77d6f79a0b21be7527dff5489b2249f857ce00c0e537a27db5564"
+    },
+    "sur-adm1-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/SUR/ADM1/",
+      "bytes": 1770,
+      "sha256": "dc4993337f4e674c2f9cc6ed12dc3f2fb9e431899b1e879e6c3a86a4b320d25e"
+    },
+    "sur-adm1.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/SUR/ADM1/geoBoundaries-SUR-ADM1.geojson",
+      "credit": "OpenStreetMap, Wambacher",
+      "license": "Open Data Commons Open Database License 1.0",
+      "year": "2017",
+      "bytes": 197974,
+      "sha256": "8ebe64b2587d5f0f13edfb49ac91bb132800a837f8b6ff00b3ee2dd33d557c75"
+    },
+    "sur-adm2-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/SUR/ADM2/",
+      "bytes": 1706,
+      "sha256": "5c5b2a4c7be354a3e0d23cf02874ddd8240531f666cfc4bc2e5dab6d33ef4a51"
+    },
+    "sur-adm2.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/SUR/ADM2/geoBoundaries-SUR-ADM2.geojson",
+      "credit": "geoBoundaries, Wikimedia Commons",
+      "license": "Public Domain",
+      "year": "2021",
+      "bytes": 321272,
+      "sha256": "d4a4797378c39b82cfaf8c6a11a60aaa0072db890cc4b72861f1561633765753"
+    },
+    "sur-ps-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-sur",
+      "bytes": 14565,
+      "sha256": "3e36ac69cc529c79255dd5e7dece4d6a0f0013c5a2df15249b4a0640e2560f44"
+    },
+    "sur-population-sur_admpop_adm0_v2.csv": {
+      "url": "https://data.humdata.org/dataset/9d2ed08a-0a56-467f-a318-b58e28561b6d/resource/b81c460f-64da-48e4-9361-f2ba24ed1d20/download/sur_admpop_adm0_v2.csv",
+      "credit": "Suriname - Subnational Population Statistics",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 721,
+      "sha256": "d851daa9fd6e119d7891bf60819a7d5a2bf927b40d034e194b48bf389bd36189"
+    },
+    "sur-population-sur_admpop_adm1_v2.csv": {
+      "url": "https://data.humdata.org/dataset/9d2ed08a-0a56-467f-a318-b58e28561b6d/resource/794f57e2-0a43-4205-9614-c43fcc09d931/download/sur_admpop_adm1_v2.csv",
+      "credit": "Suriname - Subnational Population Statistics",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 2931,
+      "sha256": "2e9ed390f92b96502d7307a19d8e7b45a063ca050c8852142481ceeaf7f92c54"
+    },
+    "sur-population-sur_admpop_adm2_v2.csv": {
+      "url": "https://data.humdata.org/dataset/9d2ed08a-0a56-467f-a318-b58e28561b6d/resource/f5e6a11c-ab0c-4e06-90e9-1434d2da1a7f/download/sur_admpop_adm2_v2.csv",
+      "credit": "Suriname - Subnational Population Statistics",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 15735,
+      "sha256": "ea8db436aa441ab9e7c7e132dc88bd598af3abf9fb6b8c3f872ee4641ddf4b6e"
+    },
+    "flag-sr.svg": {
+      "url": "https://flagcdn.com/sr.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "bytes": 307,
+      "sha256": "098067b9dd5a6aac668c8883f9b96fe68865dc20a6f88a8859146900e389dd63"
+    },
+    "sur.zip": {
+      "url": "https://data.humdata.org/dataset/ab35e673-76f2-43e5-a6a4-a5b81f9e093c/resource/fd31ebfd-bf77-4b7d-902f-3ea3a9c2d7a2/download/sur_adm_2017_shp.zip",
+      "credit": "OCHA Field Information Services Section (FISS) / HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 682279,
+      "sha256": "c740c395f498d047c5672acbd438a58fd10c508ac637c4c66b1861bb44e473cb"
+    }
+  },
+  "displaySimplificationDegrees": 0.00008,
+  "sourceCounts": {
+    "1": 10,
+    "2": 62
+  },
+  "waterPlaceholders": [],
+  "statisticalCoverage": {
+    "populationUnits": 72,
+    "missingPopulationUnits": 0,
+    "nationalGdpYear": 2025
+  }
+}

@@ -1,0 +1,619 @@
+{
+  "retrieved": "2026-10-31",
+  "files": {
+    "tcd-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-tcd",
+      "bytes": 42341,
+      "sha256": "1211f58c153675946a193a68670bfc7164b6be213f0c815a3c0d0aeec003eb47"
+    },
+    "caf-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-caf",
+      "bytes": 67745,
+      "sha256": "fedd452912f621488b3508a02b7e544c4922ac91ff8e652805e723f14894fe2f"
+    },
+    "bfa-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-bfa",
+      "bytes": 61875,
+      "sha256": "0ed04c0a94585fb83696b43b4e01da40fc76f777811b75777f5cef076ae2f98f"
+    },
+    "tcd-ps-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-tcd",
+      "bytes": 26944,
+      "sha256": "0ee04a460193dfeddb284a4d7a543df636cbe6ec7a63514fec1c00062ed1705b"
+    },
+    "bfa-ps-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-bfa",
+      "bytes": 50639,
+      "sha256": "6fe7ac9d3538decd497adaf7545557848d260fd3cafea165ac003b2c753dc835"
+    },
+    "caf-ps-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-caf",
+      "bytes": 22708,
+      "sha256": "74c5209e7c7f9f59c25a5b4252e48426016702be7b8992997ee1465a69eed32d"
+    },
+    "tcd-gb1-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/TCD/ADM1/",
+      "bytes": 1720,
+      "sha256": "9f33162da2086eb51d423142710ac83f2644d350c00e2610a3b87c8519f4afb7"
+    },
+    "bfa-gb1-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/BFA/ADM1/",
+      "bytes": 1736,
+      "sha256": "f5a39c5527d2b9a8ba069491a2577ad79711036ad5a0fa06edeb4215c669c604"
+    },
+    "caf-gb1-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/CAF/ADM1/",
+      "bytes": 1707,
+      "sha256": "a50650dd5d182cf4194048505875d78566a7aa12ffc92cf19a7a6909a7cb1539"
+    },
+    "bfa-gb2-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/BFA/ADM2/",
+      "bytes": 1739,
+      "sha256": "71b2c4a50d2ad719f1f637c78d4fd507eb181c01ba15b6deb4b7a195d80f45d0"
+    },
+    "caf-gb2-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/CAF/ADM2/",
+      "bytes": 1720,
+      "sha256": "2573d85a086f3a3e8c0ed8915e474f2b094c6e84398697c962508aff7caa6685"
+    },
+    "tcd-gb2-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/TCD/ADM2/",
+      "bytes": 1783,
+      "sha256": "5abed3e7988689c0ded5f705b388e13ff03b0d77b23a6d3c92ec56019a1cea28"
+    },
+    "flag-bf.svg": {
+      "url": "https://flagcdn.com/bf.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "bytes": 568,
+      "sha256": "4c88dba85dcf8f799607e2ce32f5af58741ccd31f15fb917bf89f58a140f91a4"
+    },
+    "flag-td.svg": {
+      "url": "https://flagcdn.com/td.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "bytes": 197,
+      "sha256": "46d9a786225c476c021be32564d43497ec48d654694379969ac86d4aec8cf8a0"
+    },
+    "flag-cf.svg": {
+      "url": "https://flagcdn.com/cf.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "bytes": 331,
+      "sha256": "f36cc981bf26cff6c9111be3edf29aa565164e713f9704e22d98116ac80816aa"
+    },
+    "mli-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-mli",
+      "bytes": 57771,
+      "sha256": "c1523f9d7d7f2595e0068f48a915f82752b61830801bac23f9e57166c518fbe3"
+    },
+    "ssd-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-ssd",
+      "bytes": 17917,
+      "sha256": "1eba5b160cb84e1b3bdf3547a25c5277c032b74d5f8041a192bd9ebfea867112"
+    },
+    "ner-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-ner",
+      "bytes": 45919,
+      "sha256": "a84f0e86e2f4529f479adf62b263cc38adb2ea1aad63a91d2ada318a2dd02ffb"
+    },
+    "mli-ps-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-mli",
+      "bytes": 13889,
+      "sha256": "9700f92fc923bc1676638ffd0337cb1d58a6df219e1dddd60d46dbbfba17886a"
+    },
+    "ssd-ps-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-ssd",
+      "bytes": 22529,
+      "sha256": "9d33f26597c31950a288a6a4f0f31ae4a5f3e85e39faf07d508f78b3c6cd8a80"
+    },
+    "mli-gb1-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/MLI/ADM1/",
+      "bytes": 1879,
+      "sha256": "0ca56dfa5915e2bdb277244f7a9b7d7f4a118611a384eea4afca11cf8e78eda6"
+    },
+    "ner-ps-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-ner",
+      "bytes": 52894,
+      "sha256": "92283b7a8c932b00bacd9c946991446da3320ae5951a54231b21888b7c47922d"
+    },
+    "mli-gb2-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/MLI/ADM2/",
+      "bytes": 2023,
+      "sha256": "abf07152a8373f35263cdb7c401e610c4905beb619fd43c60fdaeeee3fcc0a86"
+    },
+    "ssd-gb1-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/SSD/ADM1/",
+      "bytes": 1881,
+      "sha256": "9e7f505c0ef1aa7b28d396f6747f0d9d961e5438ea311a22d9ec95b655090c92"
+    },
+    "flag-ml.svg": {
+      "url": "https://flagcdn.com/ml.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "bytes": 197,
+      "sha256": "ae9516c41b4bb5385e047fc66da8e0e3e3b9360a5850c36d4b5c21950be3853c"
+    },
+    "ner-gb1-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/NER/ADM1/",
+      "bytes": 1698,
+      "sha256": "6a32ec8359d59c7f771c8db72fe8af3892085866af20829df4e1616397208fbc"
+    },
+    "ssd-gb2-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/SSD/ADM2/",
+      "bytes": 1881,
+      "sha256": "c1ab2411a14a8859c227b9cdd0e794137c4924139d55fa59086aa9e03dcc1390"
+    },
+    "flag-ss.svg": {
+      "url": "https://flagcdn.com/ss.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "bytes": 385,
+      "sha256": "0f2a925c6daf8945ff257938e04b0609441f698010d80c9717904c71a54a235e"
+    },
+    "ner-gb2-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/NER/ADM2/",
+      "bytes": 1767,
+      "sha256": "c84669112a60b3d7a9533fc08a7ae0d59430e536ee60ff8fb8a0a5bbc83f5e2b"
+    },
+    "flag-ne.svg": {
+      "url": "https://flagcdn.com/ne.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "bytes": 243,
+      "sha256": "286098862efda02108b4a8fe0c7f75b1275685be841c62a283d55412155781d9"
+    },
+    "and-gb1-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/AND/ADM1/",
+      "bytes": 1703,
+      "sha256": "408b3f0548dfd49226c9024fccc0ca03a706343035fda05e4c809c5f4e638bb5"
+    },
+    "lie-gb1-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/LIE/ADM1/",
+      "bytes": 1737,
+      "sha256": "10621deac86e1e0d4df955c61642b74935af429a5feb8cf3bc75fc863d65e5b8"
+    },
+    "flag-ad.svg": {
+      "url": "https://flagcdn.com/ad.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "bytes": 54926,
+      "sha256": "e2cf35be958f3b581660085c0d9b768610f476c486a3d23798f62187fffa270f"
+    },
+    "mlt-gb1-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/MLT/ADM1/",
+      "bytes": 1750,
+      "sha256": "44a26f93e960dca7adf40a6f7f92d1f67c0066dd29df2f2d471bbd3ac4eadd5b"
+    },
+    "flag-li.svg": {
+      "url": "https://flagcdn.com/li.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "bytes": 12408,
+      "sha256": "308d212c6046d523637598a5034bdc6132706c7c3c33c5d042748226da61e8c3"
+    },
+    "flag-mt.svg": {
+      "url": "https://flagcdn.com/mt.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "bytes": 15284,
+      "sha256": "708f8eef0bca92371fd77cdf0f567bb432f292e0fea202b97e181b011bddf3cb"
+    },
+    "isr-gb1-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/ISR/ADM1/",
+      "bytes": 1662,
+      "sha256": "bacb0175df47ba950ea47a0a7303799dba17e1b2857fd5a28a054aebaae7af2c"
+    },
+    "kwt-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-kwt",
+      "bytes": 28791,
+      "sha256": "0cc22bcbfcd87bcac2b5b9668850da331b9cea1b5ae9bb810aae2f738127caa2"
+    },
+    "lbn-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-lbn",
+      "bytes": 47706,
+      "sha256": "eaa37036c4bdf0610d3ecfe88458ad53fd7c1237213543710ca023b44e7c64c4"
+    },
+    "isr-gb2-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/ISR/ADM2/",
+      "bytes": 1731,
+      "sha256": "bc189b981677fc9c90ec0df8be34b4d8f450236d1945b81b4de65bc9a3005ee4"
+    },
+    "flag-il.svg": {
+      "url": "https://flagcdn.com/il.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "bytes": 309,
+      "sha256": "9e884f0c6d1001f8de2b478d3de9582f93fbbd9badcb31e3f52fefa3974ebc75"
+    },
+    "kwt-gb1-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/KWT/ADM1/",
+      "bytes": 1731,
+      "sha256": "cca7f2ed96f02f080b4df3c1ab4e5645a69e2a44f2c7f85782dd8cc4306433d1"
+    },
+    "lbn-gb1-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/LBN/ADM1/",
+      "bytes": 1727,
+      "sha256": "f2ad4496cc8ddaf5d33f234ed437e09b3bbaa3a1b2cdc7e4e84434f148b9089c"
+    },
+    "kwt-gb2-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/KWT/ADM2/",
+      "bytes": 1784,
+      "sha256": "453622f157df56ae3407b60ae6f1c833b0b08781395a5fcb717b0e0abd0b1964"
+    },
+    "pse-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-pse",
+      "bytes": 39005,
+      "sha256": "749024f61305a6673aea33eac9889862514015ce0ca6dc51d9535f9ed525b6e0"
+    },
+    "flag-kw.svg": {
+      "url": "https://flagcdn.com/kw.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "bytes": 232,
+      "sha256": "ce62298731cb48e5f502af92203342f43bfa9568acfc6d2194c7227760e9184c"
+    },
+    "lbn-gb2-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/LBN/ADM2/",
+      "bytes": 1734,
+      "sha256": "70ec73ff1e310989983a1fdc45ae9866aac7304592a6efcd15f28db9b45bfa6d"
+    },
+    "flag-lb.svg": {
+      "url": "https://flagcdn.com/lb.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "bytes": 14384,
+      "sha256": "2c69b33a241e21c003113bae58fda58a08113e265a94262f6d0de39277876462"
+    },
+    "pse-ps-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-pse",
+      "bytes": 17786,
+      "sha256": "262e669973d2009200ad48465033c641415670dffcedf213991e110903ffb995"
+    },
+    "pse-gb1-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/PSE/ADM1/",
+      "bytes": 1766,
+      "sha256": "5e11b482b0782630e1e6fd97489708266197cb781667825d61bfedaf294f754d"
+    },
+    "pse-gb2-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/PSE/ADM2/",
+      "bytes": 1755,
+      "sha256": "63c3f8f66026b785977524f73f8103e73c2aeefc9038bb55b7c2b43e3d247dd8"
+    },
+    "flag-ps.svg": {
+      "url": "https://flagcdn.com/ps.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "bytes": 228,
+      "sha256": "6ccd9cbaff9c67f772dfa2154c5e178fdd7a78f07e7177a3cea431116a98afdc"
+    },
+    "worldbank.json": {
+      "url": "https://api.worldbank.org/v2/country/BFA;CAF;TCD;MLI;NER;SSD;AND;LIE;MLT;ISR;KWT;LBN;PSE/indicator/SP.POP.TOTL;NY.GDP.MKTP.CD;NY.GDP.PCAP.CD?source=2&date=2010:2025&format=json&per_page=2000",
+      "credit": "World Bank World Development Indicators",
+      "license": "CC BY 4.0",
+      "bytes": 130405,
+      "sha256": "a2e5a0561d626a20dee5be23e068fdf0f4453a60d7b00ffb88e930bc2a9d8cc6"
+    },
+    "caf-adm1.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/CAF/ADM1/geoBoundaries-CAF-ADM1.geojson",
+      "license": "Creative Commons Attribution 2.5 Generic",
+      "credit": "geoBoundaries, Wikimedia",
+      "year": "2006",
+      "bytes": 123350,
+      "sha256": "547d0c8fb9689eb902d7d2b48ecb739bdcbc44621bb5fcc1b60c6f25795462c7"
+    },
+    "caf-adm2.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/CAF/ADM2/geoBoundaries-CAF-ADM2.geojson",
+      "license": "Creative Commons Attribution 3.0 License",
+      "credit": "geoBoundaries, UNHCR",
+      "year": "2015",
+      "bytes": 1546806,
+      "sha256": "21b8d8983dac49f5f947e5d648c8fb93185547bbba4ce3360f1ffe4d2c7add91"
+    },
+    "tcd.zip": {
+      "url": "https://data.humdata.org/dataset/f01c8222-b67d-41ff-954a-731aafd4466b/resource/575b9fe1-a995-43b8-9e12-de98d4d7d7d1/download/tcd_admin_boundaries.geojson.zip",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "credit": "National provider / OCHA HDX COD-AB",
+      "bytes": 148527,
+      "sha256": "7e31c4dacca1966467de3c6948f4cb11a3dd97049904fd710a66032cade240e9"
+    },
+    "caf-population-caf_admpop_adm1_2015_v2.csv": {
+      "url": "https://data.humdata.org/dataset/d3600c4b-d93d-4ed0-b7b1-359a060b916a/resource/58403047-f30e-4719-94b0-8d6f7e0f6942/download/caf_admpop_adm1_2015_v2.csv",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "credit": "National provider / OCHA HDX COD-PS",
+      "bytes": 1320,
+      "sha256": "0d5e1f0d171f0a779b76ffee17feb567e976ba163b4f9a251b232337262d8379"
+    },
+    "tcd-population-tcd_admpop_adm0_2023.csv": {
+      "url": "https://data.humdata.org/dataset/5e60290d-0a82-48e2-9454-812b01c7d9d4/resource/ce1b0007-e65c-4b3c-bd48-2cd0e3b9d203/download/tcd_admpop_adm0_2023.csv",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "credit": "National provider / OCHA HDX COD-PS",
+      "bytes": 879,
+      "sha256": "36637a806dd1a013cccfdf47a9e734926e5c14ab14d8ca32cdba0c8da3b5f0bc"
+    },
+    "caf-population-caf_admpop_adm2_2015_v2.csv": {
+      "url": "https://data.humdata.org/dataset/d3600c4b-d93d-4ed0-b7b1-359a060b916a/resource/2b74b781-c889-4cb9-9624-418577809c1e/download/caf_admpop_adm2_2015_v2.csv",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "credit": "National provider / OCHA HDX COD-PS",
+      "bytes": 4794,
+      "sha256": "bcd6a66931f18a6561668801711b1a56189406ac1f1d78c316552ffebcb2cb55"
+    },
+    "tcd-population-tcd_admpop_adm1_2023.csv": {
+      "url": "https://data.humdata.org/dataset/5e60290d-0a82-48e2-9454-812b01c7d9d4/resource/fb3d793e-57c5-4fb9-b361-8d4222fd254e/download/tcd_admpop_adm1_2023.csv",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "credit": "National provider / OCHA HDX COD-PS",
+      "bytes": 8425,
+      "sha256": "a00c6055992d2c3a32e12de507917396f8c51380dee445c21ab3c6bc4b60e369"
+    },
+    "caf-population-caf_admpop_adm3_2015_v2.csv": {
+      "url": "https://data.humdata.org/dataset/d3600c4b-d93d-4ed0-b7b1-359a060b916a/resource/17c5c468-fb12-4114-8286-3feb2069ab0a/download/caf_admpop_adm3_2015_v2.csv",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "credit": "National provider / OCHA HDX COD-PS",
+      "bytes": 14072,
+      "sha256": "84d0e30e5e0174f99c16ea344e7aab8efd714b23d2e144cdaa17131866157e27"
+    },
+    "mli.zip": {
+      "url": "https://data.humdata.org/dataset/d2ec62bb-5a93-436d-8297-88b3ee9b6818/resource/f5502554-402b-405b-8967-8182d306a4d1/download/mli_admin_boundaries.geojson.zip",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "credit": "National provider / OCHA HDX COD-AB",
+      "bytes": 655527,
+      "sha256": "ceee06d56acce9637b15452f4950f5b4c66d85f58b7f5edecec68a7365323229"
+    },
+    "bfa.zip": {
+      "url": "https://data.humdata.org/dataset/2940ed80-4b69-4b98-abaf-af79088852c5/resource/612520fc-1223-4dc2-bf60-a1e9a0e8c42c/download/bfa_admin_boundaries.geojson.zip",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "credit": "National provider / OCHA HDX COD-AB",
+      "bytes": 22911896,
+      "sha256": "d5e37231141f0f1e838c0c7329a621e79639f7b8078aef0f20c1bb5782805893"
+    },
+    "ssd.zip": {
+      "url": "https://data.humdata.org/dataset/cdd62bd9-e442-4eac-9b44-cfee8bf79153/resource/c6bb2f28-6379-4750-b792-15915e9ab320/download/ssd_admin_boundaries.geojson.zip",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "credit": "National provider / OCHA HDX COD-AB",
+      "bytes": 2858097,
+      "sha256": "0d33a25d3ce45e79421baacef4bfce75998960a30d326f99602e3c2afdd915ce"
+    },
+    "mli-population-mli_pop_adm0_v2.csv": {
+      "url": "https://data.humdata.org/dataset/ce21c7db-d8f0-40f8-adc2-452d2d2d105c/resource/6f243ba2-4d4a-4663-a7c4-e917dbbde73a/download/mli_pop_adm0_v2.csv",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "credit": "National provider / OCHA HDX COD-PS",
+      "bytes": 155,
+      "sha256": "6627076c905804a0f0868e0c1f57b2c294ab81af20a529058aee3dbb218fed6d"
+    },
+    "ssd-population-ssd_admpop_adm0_2022_v2.csv": {
+      "url": "https://data.humdata.org/dataset/5116cb9f-5db8-4f56-9766-735d88dcbbfa/resource/de6f609b-fba3-4088-8cd4-b870f79a7e01/download/ssd_admpop_adm0_2022_v2.csv",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "credit": "National provider / OCHA HDX COD-PS",
+      "bytes": 271,
+      "sha256": "c9f8286e5659e038a3256fca22be53b6b7627da5301a1ce148695dec6950225d"
+    },
+    "ssd-population-ssd_admpop_adm1_2022_v2.csv": {
+      "url": "https://data.humdata.org/dataset/5116cb9f-5db8-4f56-9766-735d88dcbbfa/resource/7a5243b5-9b54-4453-a30e-044e79417e1f/download/ssd_admpop_adm1_2022_v2.csv",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "credit": "National provider / OCHA HDX COD-PS",
+      "bytes": 1531,
+      "sha256": "1e5ebad007c861357dca5dc6141e4c37d585b05f0ad39f4ba418c612c79b6903"
+    },
+    "bfa-population-bfa_admpop_adm0_2023_5yr.csv": {
+      "url": "https://data.humdata.org/dataset/a8e69c6c-16fc-4983-92ee-e04e8960b51f/resource/467124d6-3d32-48cc-86cc-ad79d5c59ea5/download/bfa_admpop_adm0_2023_5yr.csv",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "credit": "National provider / OCHA HDX COD-PS",
+      "bytes": 914,
+      "sha256": "c85e88a086dc55adfaf6f865bfc862681a52104a34200527b9b51d8e9cf87bbf"
+    },
+    "mli-population-mli_pop_adm1_v2.csv": {
+      "url": "https://data.humdata.org/dataset/ce21c7db-d8f0-40f8-adc2-452d2d2d105c/resource/0bd515ae-613c-400f-a84c-ea203cc529be/download/mli_pop_adm1_v2.csv",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "credit": "National provider / OCHA HDX COD-PS",
+      "bytes": 749,
+      "sha256": "1422abf03d3ba81c52929d3a62a23d6c976bdb1295bea0fe963ea112092003db"
+    },
+    "ssd-population-ssd_admpop_adm2_2022_v2.csv": {
+      "url": "https://data.humdata.org/dataset/5116cb9f-5db8-4f56-9766-735d88dcbbfa/resource/209b6acb-99d0-4055-878e-e1a68618abe1/download/ssd_admpop_adm2_2022_v2.csv",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "credit": "National provider / OCHA HDX COD-PS",
+      "bytes": 10868,
+      "sha256": "ce4a7a1ac3f2742dcd69bc9e534cebfd26d527ff7b6e9e41c0b808fe631d265a"
+    },
+    "bfa-population-bfa_admpop_adm1_2023_5yr.csv": {
+      "url": "https://data.humdata.org/dataset/a8e69c6c-16fc-4983-92ee-e04e8960b51f/resource/a94126ff-109f-4d4b-9b85-d5c71c22a552/download/bfa_admpop_adm1_2023_5yr.csv",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "credit": "National provider / OCHA HDX COD-PS",
+      "bytes": 5321,
+      "sha256": "47911ef8505a89200d4a44b4dc534735552d22fac019d194613aca65c83de554"
+    },
+    "mli-population-mli_pop_adm2_v2.csv": {
+      "url": "https://data.humdata.org/dataset/ce21c7db-d8f0-40f8-adc2-452d2d2d105c/resource/af0c935f-d507-4252-945c-9d1a6cc1b598/download/mli_pop_adm2_v2.csv",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "credit": "National provider / OCHA HDX COD-PS",
+      "bytes": 4289,
+      "sha256": "ab8790d82e29e44caf45c8fac5605f60acd1dee3ff65317b621c36c707fc623f"
+    },
+    "ner.zip": {
+      "url": "https://data.humdata.org/dataset/c0e0998c-b45a-4aea-ac06-c1de1d94e596/resource/52a76bdf-7c22-43d4-9e2d-bad40351007c/download/ner_admin_boundaries.geojson.zip",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "credit": "National provider / OCHA HDX COD-AB",
+      "bytes": 1645764,
+      "sha256": "f506d8bc0eb32b730efd78cc6be8c5a0666eba799bce8fd6a4ae218c1b0c3b77"
+    },
+    "bfa-population-bfa_admpop_adm2_2023_5yr.csv": {
+      "url": "https://data.humdata.org/dataset/a8e69c6c-16fc-4983-92ee-e04e8960b51f/resource/93ce4bbd-ef70-4823-bc2b-30b9b7e8cf22/download/bfa_admpop_adm2_2023_5yr.csv",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "credit": "National provider / OCHA HDX COD-PS",
+      "bytes": 16454,
+      "sha256": "bfb8a8bcd4362f362c64ffb9be5b4285e2394a0d73afc529de4b9082dd012238"
+    },
+    "mli-population-mli_pop_adm3_v2.csv": {
+      "url": "https://data.humdata.org/dataset/ce21c7db-d8f0-40f8-adc2-452d2d2d105c/resource/6a73b827-302d-47be-94a9-580fa73011b5/download/mli_pop_adm3_v2.csv",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "credit": "National provider / OCHA HDX COD-PS",
+      "bytes": 68920,
+      "sha256": "86fcea2d46843b16cb9d19b0b8fa16f973a87d5a7582c2b4b6a8c4d4304cda59"
+    },
+    "and-adm1.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/AND/ADM1/geoBoundaries-AND-ADM1.geojson",
+      "license": "Public Domain",
+      "credit": "geoBoundaries, Wikimedia Commons",
+      "year": "2007",
+      "bytes": 78218,
+      "sha256": "e9e4fcd28a898ad101ac4562b58c76fed346be738ddc357a017889d9275d72fb"
+    },
+    "lie-adm1.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/LIE/ADM1/geoBoundaries-LIE-ADM1.geojson",
+      "license": "Open Data Commons Open Database License 1.0",
+      "credit": "OpenStreetMap, Wambacher",
+      "year": "2017",
+      "bytes": 184567,
+      "sha256": "326cc1da31d15c85ada8e6afc7f049290a728de42f7b48e05191673974e53afd"
+    },
+    "mlt-adm1.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/MLT/ADM1/geoBoundaries-MLT-ADM1.geojson",
+      "license": "Public Domain",
+      "credit": "geoBoundaries, d-maps.com",
+      "year": "2022",
+      "bytes": 313611,
+      "sha256": "7d7f4853b270c3afbbef522b54fc3ea1bcedf27e3912a33574024b5cdd304fe3"
+    },
+    "isr-adm1.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/ISR/ADM1/geoBoundaries-ISR-ADM1.geojson",
+      "license": "Public Domain",
+      "credit": "geoBoundaries, Wikimedia",
+      "year": "2006",
+      "bytes": 111139,
+      "sha256": "1ddf8523ef2074d658fd4a696fbb7ff82b73b77a0d69e620ed564f9a1b8c85d3"
+    },
+    "isr-adm2.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/ISR/ADM2/geoBoundaries-ISR-ADM2.geojson",
+      "license": "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
+      "credit": "geoBoundaries, Wikimedia Commons",
+      "year": "2021",
+      "bytes": 322281,
+      "sha256": "32079c9747279aa5f7a060b4cce241814ea46c45ae4081f3b713c0ddf7b05100"
+    },
+    "ner-population-ner_admpop_adm3_2024.csv": {
+      "url": "https://data.humdata.org/dataset/d5687df7-7163-42c7-a483-4e6dc0c569b4/resource/c2d75d02-f115-4124-a6c7-12bf5e03c888/download/ner_admpop_adm3_2024.csv",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "credit": "National provider / OCHA HDX COD-PS",
+      "bytes": 94681,
+      "sha256": "d2398a66482058c001ef9672cf6887e816ebe0d3483414d8fce6134760b0b5f6"
+    },
+    "kwt.zip": {
+      "url": "https://data.humdata.org/dataset/a28f399f-482c-4e62-8dbf-d2c12381674a/resource/89b9c8ee-6ba4-4078-9f46-5796fe566759/download/kwt_admin_boundaries.geojson.zip",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "credit": "National provider / OCHA HDX COD-AB",
+      "bytes": 409136,
+      "sha256": "3ffc66b46b6d208679723a05bacfa9785e102f81de99e106c239d931e1f1d875"
+    },
+    "ner-population-ner_admpop_adm2_2024.csv": {
+      "url": "https://data.humdata.org/dataset/d5687df7-7163-42c7-a483-4e6dc0c569b4/resource/b0532577-b660-4e46-bfae-9b552dfde1d7/download/ner_admpop_adm2_2024.csv",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "credit": "National provider / OCHA HDX COD-PS",
+      "bytes": 24632,
+      "sha256": "5257125c01bf815017f9106f18da0f72df862059565a24cd1b0029a0f867df43"
+    },
+    "pse.zip": {
+      "url": "https://data.humdata.org/dataset/2caf8373-816f-458c-9913-71bddb9cab7c/resource/ca372385-4c79-4378-abf1-cb506fb98023/download/pse_admin_boundaries.geojson.zip",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "credit": "National provider / OCHA HDX COD-AB",
+      "bytes": 1620963,
+      "sha256": "b2fb9ea8d2919aa645fae115519e3ec732f8e17a6fdb0b6e3e34a59fdc3b6b1d"
+    },
+    "pse-population-pse_admpop_adm0_2023.csv": {
+      "url": "https://data.humdata.org/dataset/36271e9b-9ec2-4c1c-bfff-82848eba0b2f/resource/632a784f-482a-4425-af24-01f068d250f6/download/pse_admpop_adm0_2023.csv",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "credit": "National provider / OCHA HDX COD-PS",
+      "bytes": 854,
+      "sha256": "d3413aa332a0e8e0e44caa7047153a4b7c2175432aaa5ded91c556f30e48cd2f"
+    },
+    "ner-population-ner_admpop_adm1_2024.csv": {
+      "url": "https://data.humdata.org/dataset/d5687df7-7163-42c7-a483-4e6dc0c569b4/resource/3a8566e1-ebaa-44bc-bc40-1313897fc808/download/ner_admpop_adm1_2024.csv",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "credit": "National provider / OCHA HDX COD-PS",
+      "bytes": 3696,
+      "sha256": "0a22be9fb93fe5ea25f0a70fe26a5a1185a1ba00c6ccb9485594c927ca788111"
+    },
+    "ner-population-ner_admpop_adm0_2024.csv": {
+      "url": "https://data.humdata.org/dataset/d5687df7-7163-42c7-a483-4e6dc0c569b4/resource/a55ddcc3-38b1-4088-a51e-0b2d2f41d82c/download/ner_admpop_adm0_2024.csv",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "credit": "National provider / OCHA HDX COD-PS",
+      "bytes": 999,
+      "sha256": "63b97642d81eba302d231f5fcd5a177e247a9936af0739aa9607adbfe157ac45"
+    },
+    "pse-population-pse_admpop_adm1_2023.csv": {
+      "url": "https://data.humdata.org/dataset/36271e9b-9ec2-4c1c-bfff-82848eba0b2f/resource/f7e802cb-9701-4624-a348-13e52103e27f/download/pse_admpop_adm1_2023.csv",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "credit": "National provider / OCHA HDX COD-PS",
+      "bytes": 1267,
+      "sha256": "0e63130f3cb6730f104edc774a6e8af356651e189fbc73d6873483fde0360b2f"
+    },
+    "lbn.zip": {
+      "url": "https://data.humdata.org/dataset/569beba7-bad7-4951-a19d-468a035461cd/resource/81ca0135-b5c9-46e0-a546-f0bdd6d7fd42/download/lbn_admin_boundaries.geojson.zip",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "credit": "National provider / OCHA HDX COD-AB",
+      "bytes": 21517871,
+      "sha256": "635d0c9ca51be5499e16f4873b99d2624da064a74dbd01f86032321ddaf049d3"
+    },
+    "lie-population-2025.pdf": {
+      "url": "https://www.statistikportal.li/de/publikation/bevoelkerungsstand-vorlaeufige-ergebnisse-31-dezember-2025/2025/02/v-1/p42384/pdf",
+      "credit": "Liechtenstein Amt für Statistik",
+      "license": "Government statistical publication; notices retained",
+      "bytes": 401865,
+      "sha256": "7b6c9528dfc94158f2bd306ca7512213ed23222c92a21e0a6805581e8ad5b215"
+    },
+    "mli-directory-2023.pdf": {
+      "url": "https://www.instat-mali.org/laravel-filemanager/files/shares/rgph/repvila-rgph5_rgph.pdf",
+      "credit": "INSTAT Mali, Répertoire des localités 2023, published January 2026",
+      "license": "Government statistical publication; notices retained",
+      "bytes": 8495262,
+      "sha256": "cc248a7dd3b38567345ccd1d04dc3efc08eca02ecfc886e5fbd94062869cb564"
+    },
+    "and-population-2025.pdf": {
+      "url": "https://www.govern.ad/documents/1898932/0/20260521%2BPresentaci%C3%B3%2BProjecte%2Bde%2Bllei%2Bordenaci%C3%B3%2Bfarmac%C3%A8utica.pdf/2a195030-1cfb-55fc-2edd-fab2fbd70e07?t=1779357501324",
+      "credit": "Govern d’Andorra, Ministry of Health, 2025 territorial population table, page 9",
+      "license": "Government statistical publication; notices retained",
+      "bytes": 194829,
+      "sha256": "070044baeb09f642e3aff7cf8426ae78d0ef4cacfa174c0366c98cfe36ccc67f"
+    },
+    "lie-population-2025.xlsx": {
+      "url": "https://www.statistikportal.li/statistikportal/publications/211-bevoelkerungsstand/2025/02/1/211.2025.02.1_01_bevoelkerungsstand-vorlaeufige-dezember-2025-tabellen.xlsx",
+      "credit": "Amt für Statistik Liechtenstein",
+      "license": "Official statistical facts; original publication notices retained",
+      "bytes": 47467,
+      "sha256": "b773d4177f5f08628b6d3e5b867ae39de92ae125371ba10493c6b3c178112a42"
+    },
+    "mlt-map-app.json": {
+      "url": "https://www.arcgis.com/sharing/rest/content/items/57c7860810c144f6a5aafa9559d48dc7/data?f=json",
+      "credit": "Malta NSO published population map",
+      "license": "Official statistical publication",
+      "bytes": 4783,
+      "sha256": "04cd383ecbb206b0a714378d55145ae0557a74e02fad86671dbffffb5ef7587d"
+    },
+    "mlt-map-webmap.json": {
+      "url": "https://www.arcgis.com/sharing/rest/content/items/5ff0163d779841bcb974b1d5e69264b1/data?f=json",
+      "credit": "Malta NSO published population map",
+      "license": "Official statistical publication",
+      "bytes": 4565,
+      "sha256": "93b2c5e832e5372cdbf14c3710819ea963f2367bafe6a684a4595eb090a1d7a4"
+    },
+    "mlt-population-map-layer.json": {
+      "url": "https://services3.arcgis.com/Bw0SiEzK3K2cBe4w/arcgis/rest/services/Population_Density_2025/FeatureServer/0?f=json",
+      "credit": "Malta NSO population map",
+      "license": "Public official statistical data; layer license retained",
+      "bytes": 9144,
+      "sha256": "01d85ae59aebaa9917c09423d27155698b69aa5691357d496c2cd394525749a5"
+    },
+    "mlt-population-map-features.json": {
+      "url": "https://services3.arcgis.com/Bw0SiEzK3K2cBe4w/arcgis/rest/services/Population_Density_2025/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=false&f=json",
+      "credit": "Malta NSO 2025 population-density publication",
+      "license": "Official statistical facts",
+      "bytes": 15645,
+      "sha256": "c93dc49a8180a0064d4ff09c2a27faff92421b4ff05351341f1c0e4cbe5d7b28"
+    },
+    "government-populations.json": {
+      "url": "Local transcription of the retained official Andorra, Liechtenstein and Mali publications",
+      "license": "Source-specific government publication terms; citations retained in each record",
+      "bytes": 15836,
+      "sha256": "3260c790fd7ec58abb85cddf723f6dac08e4c609109c018b17dad0802bb0a84e"
+    }
+  }
+}

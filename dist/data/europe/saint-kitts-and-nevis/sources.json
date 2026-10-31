@@ -1,0 +1,57 @@
+{
+  "retrieved": "2026-10-31",
+  "coverage": "Saint Kitts and Nevis administrative reference from the retained licensed source. All hierarchy levels dissolve from the same jointly simplified local partition (0.00008 degree display tolerance, approximately five to nine metres). Source water-only polygons are excluded from administrative units. Shared international arcs use one owner and common junctions; existing neighboring administrative geometry remains fixed. Population observations retain their own year and coverage. National World Bank GDP and GDP per capita are retained without distributing national output among subdivisions. Country overview pages remain hidden.",
+  "counts": {
+    "1": 14
+  },
+  "processing": "Saint Kitts and Nevis administrative reference from the retained licensed source. All hierarchy levels dissolve from the same jointly simplified local partition (0.00008 degree display tolerance, approximately five to nine metres). Source water-only polygons are excluded from administrative units. Shared international arcs use one owner and common junctions; existing neighboring administrative geometry remains fixed. Population observations retain their own year and coverage. National World Bank GDP and GDP per capita are retained without distributing national output among subdivisions. Country overview pages remain hidden.",
+  "sources": {
+    "kna-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-kna",
+      "bytes": 15218,
+      "sha256": "c6c005036ffe35b6bf85b484ebf20291ef03120ec0cbb75e41e96eddab139a43"
+    },
+    "kna-adm1-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/KNA/ADM1/",
+      "bytes": 1705,
+      "sha256": "220372bf61c692a4ab49ed56f15916a0c432ff3b13c7c01836eb9a2a6f9b4379"
+    },
+    "kna-adm1.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/KNA/ADM1/geoBoundaries-KNA-ADM1.geojson",
+      "credit": "OpenStreetMap",
+      "license": "Creative Commons Attribution-ShareAlike 2.0",
+      "year": "2021",
+      "bytes": 134741,
+      "sha256": "bb3994877109054300d7247655d5e4299274778c6f9e3dc19854df9679b61731"
+    },
+    "kna-ps-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-kna",
+      "bytes": 7649,
+      "sha256": "8a3e7d3559ac890ddee60fe7a4bb4b58fff07d79c3a6c26956b92e891cb2804b"
+    },
+    "flag-kn.svg": {
+      "url": "https://flagcdn.com/kn.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "bytes": 539,
+      "sha256": "5274df62085604bfd3586bc890842e0ea27a1c3dd3069571179e3eed381ed036"
+    },
+    "kna-census-2022.pdf": {
+      "url": "https://statistics.caricom.org/wp-content/uploads/2025/11/SKN-Census-Report-2021-2022.pdf",
+      "credit": "National statistics office; official census publication",
+      "license": "Statistical facts; retain source attribution",
+      "bytes": 1066354,
+      "sha256": "1af230ddb524cedda6ead3bfd3835454754bbcc82e31be65e0dd30fbe2c86010"
+    }
+  },
+  "displaySimplificationDegrees": 0.00008,
+  "sourceCounts": {
+    "1": 14
+  },
+  "waterPlaceholders": [],
+  "statisticalCoverage": {
+    "populationUnits": 14,
+    "missingPopulationUnits": 0,
+    "nationalGdpYear": 2025
+  }
+}

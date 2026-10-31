@@ -1,0 +1,65 @@
+{
+  "retrieved": "2026-10-31",
+  "coverage": "Belize administrative reference from the retained licensed source. All hierarchy levels dissolve from the same jointly simplified local partition (0.00008 degree display tolerance, approximately five to nine metres). Source water-only polygons are excluded from administrative units. Shared international arcs use one owner and common junctions; existing neighboring administrative geometry remains fixed. Population observations retain their own year and coverage. National World Bank GDP and GDP per capita are retained without distributing national output among subdivisions. Country overview pages remain hidden.",
+  "counts": {
+    "1": 6
+  },
+  "processing": "Belize administrative reference from the retained licensed source. All hierarchy levels dissolve from the same jointly simplified local partition (0.00008 degree display tolerance, approximately five to nine metres). Source water-only polygons are excluded from administrative units. Shared international arcs use one owner and common junctions; existing neighboring administrative geometry remains fixed. Population observations retain their own year and coverage. National World Bank GDP and GDP per capita are retained without distributing national output among subdivisions. Country overview pages remain hidden.",
+  "sources": {
+    "blz-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-blz",
+      "bytes": 32758,
+      "sha256": "d3617e3362008a1ebe6c23658b05edbf6a499a32ff645d1013a06cd807bf1481"
+    },
+    "blz.zip": {
+      "url": "https://data.humdata.org/dataset/8b2c9a50-82d5-4c31-9b4d-9f7bec2934c6/resource/050c21b8-a215-4942-891d-3bf44ac75494/download/blz_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) / HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 767062,
+      "sha256": "fee35de2cd1e9a231bd5a5c6555d1708078b425b03a6db718177a0a8f4d1a297"
+    },
+    "blz-ps-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-blz",
+      "bytes": 14547,
+      "sha256": "7e88e6f8ed0a31606041cd1b2300e14438b9b3697d347e1fa2b324ce69305f44"
+    },
+    "blz-population-blz_adm0_pop_v2.csv": {
+      "url": "https://data.humdata.org/dataset/5c23364e-8e2c-4927-a357-16a83228fb43/resource/791ece93-6dc4-46af-b96e-493db1830cb2/download/blz_adm0_pop_v2.csv",
+      "credit": "Belize - Subnational Population Statistics",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 644,
+      "sha256": "90a912eade56c4ca1ddaf17f8cdab4f449f3666df70f3c223103c973fd01a56e"
+    },
+    "blz-population-blz_adm1_pop_v2.csv": {
+      "url": "https://data.humdata.org/dataset/5c23364e-8e2c-4927-a357-16a83228fb43/resource/5236a4e1-130a-4aef-994a-d6f9c302042b/download/blz_adm1_pop_v2.csv",
+      "credit": "Belize - Subnational Population Statistics",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 1855,
+      "sha256": "5ace397b51e72b516a2a7ad641bda7b41f28202695b05de440de68047e3fc714"
+    },
+    "blz-population-blz_adm2_pop_v2.csv": {
+      "url": "https://data.humdata.org/dataset/5c23364e-8e2c-4927-a357-16a83228fb43/resource/74c80cee-019e-43e0-a2f2-d1d58b375a04/download/blz_adm2_pop_v2.csv",
+      "credit": "Belize - Subnational Population Statistics",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 16943,
+      "sha256": "3f45720a152ec20b747ccd66389d6d4401bbc22de7a5ebfa44e4c11fad1582c0"
+    },
+    "flag-bz.svg": {
+      "url": "https://flagcdn.com/bz.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "bytes": 80883,
+      "sha256": "99ff3a88d1493f5e00c8a4dd9f7eb379a004961f4503eb3e5598e388c911b583"
+    }
+  },
+  "displaySimplificationDegrees": 0.00008,
+  "sourceCounts": {
+    "1": 6
+  },
+  "waterPlaceholders": [],
+  "statisticalCoverage": {
+    "populationUnits": 6,
+    "missingPopulationUnits": 0,
+    "nationalGdpYear": 2025
+  }
+}

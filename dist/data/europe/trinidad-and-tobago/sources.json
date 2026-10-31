@@ -1,0 +1,71 @@
+{
+  "retrieved": "2026-10-31",
+  "coverage": "Trinidad and Tobago administrative reference from the retained licensed source. All hierarchy levels dissolve from the same jointly simplified local partition (0.00008 degree display tolerance, approximately five to nine metres). Source water-only polygons are excluded from administrative units. Shared international arcs use one owner and common junctions; existing neighboring administrative geometry remains fixed. Population observations retain their own year and coverage. National World Bank GDP and GDP per capita are retained without distributing national output among subdivisions. Country overview pages remain hidden.",
+  "counts": {
+    "1": 15
+  },
+  "processing": "Trinidad and Tobago administrative reference from the retained licensed source. All hierarchy levels dissolve from the same jointly simplified local partition (0.00008 degree display tolerance, approximately five to nine metres). Source water-only polygons are excluded from administrative units. Shared international arcs use one owner and common junctions; existing neighboring administrative geometry remains fixed. Population observations retain their own year and coverage. National World Bank GDP and GDP per capita are retained without distributing national output among subdivisions. Country overview pages remain hidden.",
+  "sources": {
+    "tto-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-tto",
+      "bytes": 37177,
+      "sha256": "3e98c90fdeb52115cce668caa9d00d3fdbdc77a4486df594eb3340b69c7348b8"
+    },
+    "tto-adm1-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/TTO/ADM1/",
+      "bytes": 1769,
+      "sha256": "409778dab0427ccc74b83a97be22d1b354c1896669dcca9057d837ce2e34527e"
+    },
+    "tto-adm1.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/TTO/ADM1/geoBoundaries-TTO-ADM1.geojson",
+      "credit": "OpenStreetMap, Wambacher",
+      "license": "Open Data Commons Open Database License 1.0",
+      "year": "2017",
+      "bytes": 370643,
+      "sha256": "2d2b9dcfb313985b9ab0daf02ba362c43fbfaebbee5e478ad86e6c40beff41e9"
+    },
+    "tto-ps-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-tto",
+      "bytes": 13725,
+      "sha256": "e98a563a802fc344ab87ce4b641f2f44e5f617b5e0548ca2c1449ab8ed0fd647"
+    },
+    "tto-population-tto_admpop_adm0_2011_v2.csv": {
+      "url": "https://data.humdata.org/dataset/fa86e763-aa12-4270-890c-6cea033d5174/resource/1998d3cc-f247-444b-81b1-88dcbc47e964/download/tto_admpop_adm0_2011_v2.csv",
+      "credit": "Trinidad and Tobago - Subnational Population Statistics",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 729,
+      "sha256": "084866f4eb913fc5018f56152081fddac975d693655d933b175c444210fd884a"
+    },
+    "tto-population-tto_admpop_adm1_2011_v2.csv": {
+      "url": "https://data.humdata.org/dataset/fa86e763-aa12-4270-890c-6cea033d5174/resource/e4c80b8f-6689-4954-8b17-d429611b2197/download/tto_admpop_adm1_2011_v2.csv",
+      "credit": "Trinidad and Tobago - Subnational Population Statistics",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 4608,
+      "sha256": "7cbc287620e37f26132efd1065db3d5ab88822672377d031619a8762f6184228"
+    },
+    "flag-tt.svg": {
+      "url": "https://flagcdn.com/tt.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "bytes": 225,
+      "sha256": "89fa29d1f4a553154be8ae34b5f6a31e4baf6197fee40d9103ada5b80de7e31b"
+    },
+    "tto.zip": {
+      "url": "https://data.humdata.org/dataset/eed55f95-183c-48f7-adef-23dff31ec972/resource/218b72d0-35fb-4026-b8a6-152d87acea0d/download/tto_adm1_v2.zip",
+      "credit": "OCHA Field Information Services Section (FISS) / HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 93384,
+      "sha256": "f2f6939a884ba743089b862ed7d92e9d41fde7b8c3fcdce69add51eefc1f1ca4"
+    }
+  },
+  "displaySimplificationDegrees": 0.00008,
+  "sourceCounts": {
+    "1": 15
+  },
+  "waterPlaceholders": [],
+  "statisticalCoverage": {
+    "populationUnits": 15,
+    "missingPopulationUnits": 0,
+    "nationalGdpYear": 2025
+  }
+}

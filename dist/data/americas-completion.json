@@ -1,0 +1,388 @@
+{
+  "retrieved": "2026-10-31",
+  "countries": {
+    "belize": {
+      "iso": "BLZ",
+      "counts": {
+        "1": 6
+      },
+      "population": {
+        "populationUnits": 6,
+        "missingPopulationUnits": 0,
+        "nationalGdpYear": 2025
+      },
+      "bounds": [
+        [
+          -89.225793,
+          15.886184
+        ],
+        [
+          -87.485969,
+          18.496658
+        ]
+      ],
+      "labelCenter": [
+        -88.707255,
+        17.201229
+      ]
+    },
+    "guatemala": {
+      "iso": "GTM",
+      "counts": {
+        "1": 22,
+        "2": 340
+      },
+      "population": {
+        "populationUnits": 362,
+        "missingPopulationUnits": 0,
+        "nationalGdpYear": 2025
+      },
+      "bounds": [
+        [
+          -92.243818,
+          13.739443
+        ],
+        [
+          -88.221497,
+          17.816618
+        ]
+      ],
+      "labelCenter": [
+        -90.285394,
+        15.33408
+      ]
+    },
+    "el-salvador": {
+      "iso": "SLV",
+      "counts": {
+        "1": 14,
+        "2": 44,
+        "3": 262
+      },
+      "population": {
+        "populationUnits": 320,
+        "missingPopulationUnits": 0,
+        "nationalGdpYear": 2025
+      },
+      "bounds": [
+        [
+          -90.124863,
+          13.15264
+        ],
+        [
+          -87.683746,
+          14.450484
+        ]
+      ],
+      "labelCenter": [
+        -88.342352,
+        13.551975
+      ]
+    },
+    "honduras": {
+      "iso": "HND",
+      "counts": {
+        "1": 18,
+        "2": 298
+      },
+      "population": {
+        "populationUnits": 316,
+        "missingPopulationUnits": 0,
+        "nationalGdpYear": 2025
+      },
+      "bounds": [
+        [
+          -89.358472,
+          12.983062
+        ],
+        [
+          -83.149657,
+          16.516793
+        ]
+      ],
+      "labelCenter": [
+        -86.625277,
+        14.817152
+      ]
+    },
+    "nicaragua": {
+      "iso": "NIC",
+      "counts": {
+        "1": 17,
+        "2": 153
+      },
+      "population": {
+        "populationUnits": 17,
+        "missingPopulationUnits": 153,
+        "nationalGdpYear": 2025
+      },
+      "bounds": [
+        [
+          -87.692121,
+          10.707487
+        ],
+        [
+          -82.744467,
+          15.028808
+        ]
+      ],
+      "labelCenter": [
+        -84.983314,
+        12.938117
+      ]
+    },
+    "antigua-and-barbuda": {
+      "iso": "ATG",
+      "counts": {
+        "1": 8
+      },
+      "population": {
+        "populationUnits": 7,
+        "missingPopulationUnits": 1,
+        "nationalGdpYear": 2025
+      },
+      "bounds": [
+        [
+          -62.348159,
+          16.9322926
+        ],
+        [
+          -61.6571748,
+          17.7288623
+        ]
+      ],
+      "labelCenter": [
+        -61.804016,
+        17.06958
+      ]
+    },
+    "barbados": {
+      "iso": "BRB",
+      "counts": {
+        "1": 11
+      },
+      "population": {
+        "populationUnits": 11,
+        "missingPopulationUnits": 0,
+        "nationalGdpYear": 2025
+      },
+      "bounds": [
+        [
+          -59.6507074,
+          13.0450576
+        ],
+        [
+          -59.4203442,
+          13.3346488
+        ]
+      ],
+      "labelCenter": [
+        -59.566634,
+        13.159876
+      ]
+    },
+    "dominica": {
+      "iso": "DMA",
+      "counts": {
+        "1": 10
+      },
+      "population": {
+        "populationUnits": 10,
+        "missingPopulationUnits": 0,
+        "nationalGdpYear": 2025
+      },
+      "bounds": [
+        [
+          -61.479888,
+          15.2077258
+        ],
+        [
+          -61.2404772,
+          15.6394317
+        ]
+      ],
+      "labelCenter": [
+        -61.34627,
+        15.436648
+      ]
+    },
+    "grenada": {
+      "iso": "GRD",
+      "counts": {
+        "1": 7
+      },
+      "population": {
+        "populationUnits": 7,
+        "missingPopulationUnits": 0,
+        "nationalGdpYear": 2025
+      },
+      "bounds": [
+        [
+          -61.802476,
+          11.986954
+        ],
+        [
+          -61.378115,
+          12.530054
+        ]
+      ],
+      "labelCenter": [
+        -61.683675,
+        12.114425
+      ]
+    },
+    "saint-kitts-and-nevis": {
+      "iso": "KNA",
+      "counts": {
+        "1": 14
+      },
+      "population": {
+        "populationUnits": 14,
+        "missingPopulationUnits": 0,
+        "nationalGdpYear": 2025
+      },
+      "bounds": [
+        [
+          -62.8641438,
+          17.0941723
+        ],
+        [
+          -62.5396345,
+          17.4180222
+        ]
+      ],
+      "labelCenter": [
+        -62.765654,
+        17.339818
+      ]
+    },
+    "saint-lucia": {
+      "iso": "LCA",
+      "counts": {
+        "1": 10
+      },
+      "population": {
+        "populationUnits": 10,
+        "missingPopulationUnits": 0,
+        "nationalGdpYear": 2025
+      },
+      "bounds": [
+        [
+          -61.0805711,
+          13.7076916
+        ],
+        [
+          -60.8735089,
+          14.1095178
+        ]
+      ],
+      "labelCenter": [
+        -60.968996,
+        13.898598
+      ]
+    },
+    "saint-vincent-and-the-grenadines": {
+      "iso": "VCT",
+      "counts": {
+        "1": 6
+      },
+      "population": {
+        "populationUnits": 0,
+        "missingPopulationUnits": 6,
+        "nationalGdpYear": 2025
+      },
+      "bounds": [
+        [
+          -61.4609718,
+          12.5787487
+        ],
+        [
+          -61.1140289,
+          13.3834734
+        ]
+      ],
+      "labelCenter": [
+        -61.188614,
+        13.250992
+      ]
+    },
+    "trinidad-and-tobago": {
+      "iso": "TTO",
+      "counts": {
+        "1": 15
+      },
+      "population": {
+        "populationUnits": 15,
+        "missingPopulationUnits": 0,
+        "nationalGdpYear": 2025
+      },
+      "bounds": [
+        [
+          -61.9301376,
+          10.0429173
+        ],
+        [
+          -60.4920845,
+          11.3595848
+        ]
+      ],
+      "labelCenter": [
+        -61.275312,
+        10.429149
+      ]
+    },
+    "guyana": {
+      "iso": "GUY",
+      "counts": {
+        "1": 10
+      },
+      "population": {
+        "populationUnits": 10,
+        "missingPopulationUnits": 0,
+        "nationalGdpYear": 2025
+      },
+      "bounds": [
+        [
+          -61.389604,
+          1.170937
+        ],
+        [
+          -56.469685,
+          8.554257
+        ]
+      ],
+      "labelCenter": [
+        -58.918829,
+        5.176244
+      ]
+    },
+    "suriname": {
+      "iso": "SUR",
+      "counts": {
+        "1": 10,
+        "2": 62
+      },
+      "population": {
+        "populationUnits": 72,
+        "missingPopulationUnits": 0,
+        "nationalGdpYear": 2025
+      },
+      "bounds": [
+        [
+          -58.070833,
+          1.836139
+        ],
+        [
+          -53.980023,
+          6.015139
+        ]
+      ],
+      "labelCenter": [
+        -55.910647,
+        4.137718
+      ]
+    }
+  },
+  "frontiers": "scripts/boundary-sources/americas-completion/frontiers.bin",
+  "policy": "All 35 sovereign countries in the Americas are represented. Existing overseas territories remain with their existing country pages. National GDP is not allocated to subdivisions."
+}

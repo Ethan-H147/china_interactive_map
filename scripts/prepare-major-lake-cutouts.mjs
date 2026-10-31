@@ -1,0 +1,13 @@
+import fs from 'node:fs';import {gzipSync} from 'node:zlib';import {createHash} from 'node:crypto';
+import {readNordic} from './fetch-nordics.mjs';
+const entries=[
+ ['Lake Baikal','russia'],['Lake Taymyr','russia'],['Iliamna Lake','united-states'],['Qinghai Hu','china'],['Lake Van','turkey'],
+ ['Reindeer Lake','canada'],['Lake Winnipegosis','canada'],['Lake Manitoba','canada'],['Wollaston Lake','canada'],['Southern Indian Lake','canada'],['Churchill Lake','canada'],['Nueltin Lake','canada'],['Cedar Lake','canada']
+];
+const root='scripts/boundary-sources/major-lake-cutouts/',sha=b=>createHash('sha256').update(b).digest('hex'),source=readNordic('ne-lakes.json'),all=JSON.parse(source);
+const features=entries.map(([name,country])=>{const matches=all.features.filter(f=>f.properties.name===name);if(matches.length!==1)throw Error('Expected one exact lake source: '+name);const f=matches[0];return {...f,properties:{name,country,sourceId:String(f.properties.ne_id),ne_id:f.properties.ne_id,wikidataid:f.properties.wikidataid}};});
+const text=JSON.stringify({type:'FeatureCollection',features}),metadata={source:'Natural Earth v5.1.2, 1:10 million lakes',url:'https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_lakes.geojson',license:'Public domain',upstreamSha256:sha(source),sha256:sha(text),names:entries.map(([name])=>name),processing:'Exact named source geometries retained, including their island holes. Permanent sea-colored surfaces cover land fills below existing borders; no administrative, shared, selected or international boundary data is edited. Cedar Lake includes its reservoir extent. This is generalized display hydrography, not current water levels.'};
+function write(file,bytes){if(fs.existsSync(file)&&fs.readFileSync(file).equals(Buffer.from(bytes)))return;fs.mkdirSync(file.slice(0,file.lastIndexOf('/')),{recursive:true});fs.writeFileSync(file,bytes);}
+const packed=gzipSync(text,{level:9});write(root+'lakes.geojson.gz',packed);write(root+'source.json',JSON.stringify(metadata,null,2)+'\n');write('dist/data/major-lake-cutouts.bin',packed);write('dist/data/major-lake-cutouts-sources.json',JSON.stringify({...metadata,retained:root+'lakes.geojson.gz'},null,2)+'\n');
+write('dist/major-lake-cutouts.mjs','// Generated from the retained Natural Earth lake identities.\n// Optional hydrography must not recolor these permanent sea-colored surfaces.\nexport const permanentLakeSourceIds=Object.freeze('+JSON.stringify(features.map(f=>f.properties.sourceId))+');\n');
+console.log('Permanent lake surfaces:',features.length,'lakes,',packed.length,'bytes; existing boundary files untouched.');

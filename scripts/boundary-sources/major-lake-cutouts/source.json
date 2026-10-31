@@ -1,0 +1,23 @@
+{
+  "source": "Natural Earth v5.1.2, 1:10 million lakes",
+  "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_lakes.geojson",
+  "license": "Public domain",
+  "upstreamSha256": "2d036f53dedec578001c5c30c2959ee7d4eebc1306900fa4367c49929ec8f2d9",
+  "sha256": "090a6b4a321b0c7f73f2f59280df8b30bda00ddcd9a776c96486886322ebd6c2",
+  "names": [
+    "Lake Baikal",
+    "Lake Taymyr",
+    "Iliamna Lake",
+    "Qinghai Hu",
+    "Lake Van",
+    "Reindeer Lake",
+    "Lake Winnipegosis",
+    "Lake Manitoba",
+    "Wollaston Lake",
+    "Southern Indian Lake",
+    "Churchill Lake",
+    "Nueltin Lake",
+    "Cedar Lake"
+  ],
+  "processing": "Exact named source geometries retained, including their island holes. Permanent sea-colored surfaces cover land fills below existing borders; no administrative, shared, selected or international boundary data is edited. Cedar Lake includes its reservoir extent. This is generalized display hydrography, not current water levels."
+}

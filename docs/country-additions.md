@@ -181,3 +181,27 @@ See [Caribbean additions](caribbean.md) for boundary vintages, mapped coverage, 
 | 2026-10-29 | Mozambique | Local only | 11 province/city units, 161 districts and 457 posts; reviewed province population crosswalk. |
 
 Sources, scope and local verification: [Indian Ocean additions](indian-ocean.md).
+
+| Added | Country | Status | Coverage |
+| --- | --- | --- | --- |
+| 2026-10-31 | Belize | Local only | 6 districts; 2010 census. |
+| 2026-10-31 | Guatemala | Local only | 22 departments; 340 municipalities; 2024 projections. |
+| 2026-10-31 | El Salvador | Local only | 14 departments; 44 municipalities; 262 districts; 2024 projections. |
+| 2026-10-31 | Honduras | Local only | 18 departments; 298 municipalities; 2024 projections. |
+| 2026-10-31 | Nicaragua | Local only | 17 departments/autonomous regions; 153 municipalities; 2020 first-level projections; municipal data unavailable. |
+| 2026-10-31 | Antigua and Barbuda | Local only | 6 parishes; Barbuda and Redonda dependencies; 2011 census; Redonda unavailable. |
+| 2026-10-31 | Barbados | Local only | 11 parishes; 2021 estimated resident population. |
+| 2026-10-31 | Dominica | Local only | 10 parishes; 2011 final census. |
+| 2026-10-31 | Grenada | Local only | 6 parishes; Carriacou and Petite Martinique dependency; 2021 preliminary census, private dwellings. |
+| 2026-10-31 | Saint Kitts and Nevis | Local only | 14 parishes; 2022 private-household census population. |
+| 2026-10-31 | Saint Lucia | Local only | 10 districts; 2010 census. |
+| 2026-10-31 | Saint Vincent and the Grenadines | Local only | 6 parishes; Parish population unavailable. |
+| 2026-10-31 | Trinidad and Tobago | Local only | 15 corporations/municipalities and Tobago; 2011 census. |
+| 2026-10-31 | Guyana | Local only | 10 regions; 2021 estimates. |
+| 2026-10-31 | Suriname | Local only | 10 districts; 62 resorts; 2012 census. |
+
+Sources, border reconciliation, unavailable statistics and checks: [Americas completion](americas-completion.md).
+
+## Final country coverage additions
+
+31 October 2026: Burkina Faso, Central African Republic, Chad, Mali, Niger, South Sudan, Andorra, Liechtenstein, Malta, Israel, Kuwait, Lebanon and Palestine. Administrative levels, dated statistics, flags and full custom colors are described in [world-completion.md](world-completion.md).

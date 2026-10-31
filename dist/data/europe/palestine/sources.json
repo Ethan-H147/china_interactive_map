@@ -1,0 +1,84 @@
+{
+  "retrieved": "2026-10-31",
+  "coverage": "Dated source administrative reference; observation years and coverage retained independently. All hierarchy levels dissolve from one cleaned local partition. New international edges follow a single shared display arc and existing neighbors retain their administrative land. Population dates and coverage are independent of boundary dates. National GDP is not allocated to subdivisions. Country overview pages remain hidden.",
+  "counts": {
+    "1": 2,
+    "2": 16
+  },
+  "processing": "Dated source administrative reference; observation years and coverage retained independently. All hierarchy levels dissolve from one cleaned local partition. New international edges follow a single shared display arc and existing neighbors retain their administrative land. Population dates and coverage are independent of boundary dates. National GDP is not allocated to subdivisions. Country overview pages remain hidden.",
+  "sources": {
+    "pse-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-pse",
+      "bytes": 39005,
+      "sha256": "749024f61305a6673aea33eac9889862514015ce0ca6dc51d9535f9ed525b6e0"
+    },
+    "pse-ps-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-pse",
+      "bytes": 17786,
+      "sha256": "262e669973d2009200ad48465033c641415670dffcedf213991e110903ffb995"
+    },
+    "pse-gb1-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/PSE/ADM1/",
+      "bytes": 1766,
+      "sha256": "5e11b482b0782630e1e6fd97489708266197cb781667825d61bfedaf294f754d"
+    },
+    "pse-gb2-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/PSE/ADM2/",
+      "bytes": 1755,
+      "sha256": "63c3f8f66026b785977524f73f8103e73c2aeefc9038bb55b7c2b43e3d247dd8"
+    },
+    "flag-ps.svg": {
+      "url": "https://flagcdn.com/ps.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "bytes": 228,
+      "sha256": "6ccd9cbaff9c67f772dfa2154c5e178fdd7a78f07e7177a3cea431116a98afdc"
+    },
+    "pse.zip": {
+      "url": "https://data.humdata.org/dataset/2caf8373-816f-458c-9913-71bddb9cab7c/resource/ca372385-4c79-4378-abf1-cb506fb98023/download/pse_admin_boundaries.geojson.zip",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "credit": "National provider / OCHA HDX COD-AB",
+      "bytes": 1620963,
+      "sha256": "b2fb9ea8d2919aa645fae115519e3ec732f8e17a6fdb0b6e3e34a59fdc3b6b1d"
+    },
+    "pse-population-pse_admpop_adm0_2023.csv": {
+      "url": "https://data.humdata.org/dataset/36271e9b-9ec2-4c1c-bfff-82848eba0b2f/resource/632a784f-482a-4425-af24-01f068d250f6/download/pse_admpop_adm0_2023.csv",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "credit": "National provider / OCHA HDX COD-PS",
+      "bytes": 854,
+      "sha256": "d3413aa332a0e8e0e44caa7047153a4b7c2175432aaa5ded91c556f30e48cd2f"
+    },
+    "pse-population-pse_admpop_adm1_2023.csv": {
+      "url": "https://data.humdata.org/dataset/36271e9b-9ec2-4c1c-bfff-82848eba0b2f/resource/f7e802cb-9701-4624-a348-13e52103e27f/download/pse_admpop_adm1_2023.csv",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "credit": "National provider / OCHA HDX COD-PS",
+      "bytes": 1267,
+      "sha256": "0e63130f3cb6730f104edc774a6e8af356651e189fbc73d6873483fde0360b2f"
+    }
+  },
+  "displaySimplificationDegrees": 0.00005,
+  "sourceCounts": {
+    "1": 2,
+    "2": 16
+  },
+  "waterPlaceholders": [],
+  "statisticalCoverage": {
+    "populationUnits": 2,
+    "missingPopulationUnits": 16,
+    "nationalGdpYear": 2025
+  },
+  "displayNames": {
+    "note": "Source identities and geometry unchanged; display case and native-language names normalized independently.",
+    "sources": [
+      {
+        "title": "Palestinian government bilingual governorate register",
+        "url": "https://www.zinnar.gov.ps/EntitiesMainTables/Details/3"
+      },
+      {
+        "title": "PCBS governorate definitions",
+        "url": "https://microdata.pcbs.gov.ps/PCBS-Metadata-ar-v5.2/index.php/catalog/638/variable/F3/V26?name=Gov"
+      }
+    ],
+    "nativeField": "Verified native-language name table"
+  }
+}

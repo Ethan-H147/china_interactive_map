@@ -2110,6 +2110,370 @@
           "scripts/build-coastal-oceania.mjs"
         ]
       }
+    },
+    {
+      "country": "belize",
+      "name": "Belize",
+      "addedOn": "2026-10-31",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced Americas administrative maps, dated population and economic statistics, palettes, shared frontiers and quizzes.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-americas-completion.mjs"
+        ]
+      }
+    },
+    {
+      "country": "guatemala",
+      "name": "Guatemala",
+      "addedOn": "2026-10-31",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced Americas administrative maps, dated population and economic statistics, palettes, shared frontiers and quizzes.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-americas-completion.mjs"
+        ]
+      }
+    },
+    {
+      "country": "el-salvador",
+      "name": "El Salvador",
+      "addedOn": "2026-10-31",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced Americas administrative maps, dated population and economic statistics, palettes, shared frontiers and quizzes.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-americas-completion.mjs"
+        ]
+      }
+    },
+    {
+      "country": "honduras",
+      "name": "Honduras",
+      "addedOn": "2026-10-31",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced Americas administrative maps, dated population and economic statistics, palettes, shared frontiers and quizzes.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-americas-completion.mjs"
+        ]
+      }
+    },
+    {
+      "country": "nicaragua",
+      "name": "Nicaragua",
+      "addedOn": "2026-10-31",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced Americas administrative maps, dated population and economic statistics, palettes, shared frontiers and quizzes.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-americas-completion.mjs"
+        ]
+      }
+    },
+    {
+      "country": "antigua-and-barbuda",
+      "name": "Antigua and Barbuda",
+      "addedOn": "2026-10-31",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced Americas administrative maps, dated population and economic statistics, palettes, shared frontiers and quizzes.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-americas-completion.mjs"
+        ]
+      }
+    },
+    {
+      "country": "barbados",
+      "name": "Barbados",
+      "addedOn": "2026-10-31",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced Americas administrative maps, dated population and economic statistics, palettes, shared frontiers and quizzes.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-americas-completion.mjs"
+        ]
+      }
+    },
+    {
+      "country": "dominica",
+      "name": "Dominica",
+      "addedOn": "2026-10-31",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced Americas administrative maps, dated population and economic statistics, palettes, shared frontiers and quizzes.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-americas-completion.mjs"
+        ]
+      }
+    },
+    {
+      "country": "grenada",
+      "name": "Grenada",
+      "addedOn": "2026-10-31",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced Americas administrative maps, dated population and economic statistics, palettes, shared frontiers and quizzes.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-americas-completion.mjs"
+        ]
+      }
+    },
+    {
+      "country": "saint-kitts-and-nevis",
+      "name": "Saint Kitts and Nevis",
+      "addedOn": "2026-10-31",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced Americas administrative maps, dated population and economic statistics, palettes, shared frontiers and quizzes.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-americas-completion.mjs"
+        ]
+      }
+    },
+    {
+      "country": "saint-lucia",
+      "name": "Saint Lucia",
+      "addedOn": "2026-10-31",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced Americas administrative maps, dated population and economic statistics, palettes, shared frontiers and quizzes.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-americas-completion.mjs"
+        ]
+      }
+    },
+    {
+      "country": "saint-vincent-and-the-grenadines",
+      "name": "Saint Vincent and the Grenadines",
+      "addedOn": "2026-10-31",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced Americas administrative maps, dated population and economic statistics, palettes, shared frontiers and quizzes.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-americas-completion.mjs"
+        ]
+      }
+    },
+    {
+      "country": "trinidad-and-tobago",
+      "name": "Trinidad and Tobago",
+      "addedOn": "2026-10-31",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced Americas administrative maps, dated population and economic statistics, palettes, shared frontiers and quizzes.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-americas-completion.mjs"
+        ]
+      }
+    },
+    {
+      "country": "guyana",
+      "name": "Guyana",
+      "addedOn": "2026-10-31",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced Americas administrative maps, dated population and economic statistics, palettes, shared frontiers and quizzes.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-americas-completion.mjs"
+        ]
+      }
+    },
+    {
+      "country": "suriname",
+      "name": "Suriname",
+      "addedOn": "2026-10-31",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced Americas administrative maps, dated population and economic statistics, palettes, shared frontiers and quizzes.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-americas-completion.mjs"
+        ]
+      }
+    },
+    {
+      "country": "burkina-faso",
+      "name": "Burkina Faso",
+      "addedOn": "2026-10-31",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced Americas administrative maps, dated population and economic statistics, palettes, shared frontiers and quizzes.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-world-completion.mjs"
+        ]
+      }
+    },
+    {
+      "country": "central-african-republic",
+      "name": "Central African Republic",
+      "addedOn": "2026-10-31",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced Americas administrative maps, dated population and economic statistics, palettes, shared frontiers and quizzes.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-world-completion.mjs"
+        ]
+      }
+    },
+    {
+      "country": "chad",
+      "name": "Chad",
+      "addedOn": "2026-10-31",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced Americas administrative maps, dated population and economic statistics, palettes, shared frontiers and quizzes.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-world-completion.mjs"
+        ]
+      }
+    },
+    {
+      "country": "mali",
+      "name": "Mali",
+      "addedOn": "2026-10-31",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced Americas administrative maps, dated population and economic statistics, palettes, shared frontiers and quizzes.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-world-completion.mjs"
+        ]
+      }
+    },
+    {
+      "country": "niger",
+      "name": "Niger",
+      "addedOn": "2026-10-31",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced Americas administrative maps, dated population and economic statistics, palettes, shared frontiers and quizzes.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-world-completion.mjs"
+        ]
+      }
+    },
+    {
+      "country": "south-sudan",
+      "name": "South Sudan",
+      "addedOn": "2026-10-31",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced Americas administrative maps, dated population and economic statistics, palettes, shared frontiers and quizzes.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-world-completion.mjs"
+        ]
+      }
+    },
+    {
+      "country": "andorra",
+      "name": "Andorra",
+      "addedOn": "2026-10-31",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced Americas administrative maps, dated population and economic statistics, palettes, shared frontiers and quizzes.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-world-completion.mjs"
+        ]
+      }
+    },
+    {
+      "country": "liechtenstein",
+      "name": "Liechtenstein",
+      "addedOn": "2026-10-31",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced Americas administrative maps, dated population and economic statistics, palettes, shared frontiers and quizzes.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-world-completion.mjs"
+        ]
+      }
+    },
+    {
+      "country": "malta",
+      "name": "Malta",
+      "addedOn": "2026-10-31",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced Americas administrative maps, dated population and economic statistics, palettes, shared frontiers and quizzes.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-world-completion.mjs"
+        ]
+      }
+    },
+    {
+      "country": "israel",
+      "name": "Israel",
+      "addedOn": "2026-10-31",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced Americas administrative maps, dated population and economic statistics, palettes, shared frontiers and quizzes.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-world-completion.mjs"
+        ]
+      }
+    },
+    {
+      "country": "kuwait",
+      "name": "Kuwait",
+      "addedOn": "2026-10-31",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced Americas administrative maps, dated population and economic statistics, palettes, shared frontiers and quizzes.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-world-completion.mjs"
+        ]
+      }
+    },
+    {
+      "country": "lebanon",
+      "name": "Lebanon",
+      "addedOn": "2026-10-31",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced Americas administrative maps, dated population and economic statistics, palettes, shared frontiers and quizzes.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-world-completion.mjs"
+        ]
+      }
+    },
+    {
+      "country": "palestine",
+      "name": "Palestine",
+      "addedOn": "2026-10-31",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced Americas administrative maps, dated population and economic statistics, palettes, shared frontiers and quizzes.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-world-completion.mjs"
+        ]
+      }
     }
   ]
 }

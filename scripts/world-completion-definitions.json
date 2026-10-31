@@ -1,0 +1,119 @@
+[
+  {
+    "country": "burkina-faso",
+    "iso": "BFA",
+    "prefix": "bf",
+    "en": "Burkina Faso",
+    "lang": "fr",
+    "continent": "Africa",
+    "local": ""
+  },
+  {
+    "country": "central-african-republic",
+    "iso": "CAF",
+    "prefix": "cf",
+    "en": "Central African Republic",
+    "lang": "fr",
+    "continent": "Africa",
+    "local": "République centrafricaine"
+  },
+  {
+    "country": "chad",
+    "iso": "TCD",
+    "prefix": "td",
+    "en": "Chad",
+    "lang": "fr",
+    "continent": "Africa",
+    "local": "Tchad"
+  },
+  {
+    "country": "mali",
+    "iso": "MLI",
+    "prefix": "ml",
+    "en": "Mali",
+    "lang": "fr",
+    "continent": "Africa",
+    "local": ""
+  },
+  {
+    "country": "niger",
+    "iso": "NER",
+    "prefix": "ne",
+    "en": "Niger",
+    "lang": "fr",
+    "continent": "Africa",
+    "local": ""
+  },
+  {
+    "country": "south-sudan",
+    "iso": "SSD",
+    "prefix": "ss",
+    "en": "South Sudan",
+    "lang": "en",
+    "continent": "Africa",
+    "local": ""
+  },
+  {
+    "country": "andorra",
+    "iso": "AND",
+    "prefix": "ad",
+    "en": "Andorra",
+    "lang": "ca",
+    "continent": "Europe",
+    "local": ""
+  },
+  {
+    "country": "liechtenstein",
+    "iso": "LIE",
+    "prefix": "li",
+    "en": "Liechtenstein",
+    "lang": "de",
+    "continent": "Europe",
+    "local": ""
+  },
+  {
+    "country": "malta",
+    "iso": "MLT",
+    "prefix": "mt",
+    "en": "Malta",
+    "lang": "mt",
+    "continent": "Europe",
+    "local": ""
+  },
+  {
+    "country": "israel",
+    "iso": "ISR",
+    "prefix": "il",
+    "en": "Israel",
+    "lang": "he",
+    "continent": "Asia",
+    "local": "ישראל"
+  },
+  {
+    "country": "kuwait",
+    "iso": "KWT",
+    "prefix": "kw",
+    "en": "Kuwait",
+    "lang": "ar",
+    "continent": "Asia",
+    "local": "الكويت"
+  },
+  {
+    "country": "lebanon",
+    "iso": "LBN",
+    "prefix": "lb",
+    "en": "Lebanon",
+    "lang": "ar",
+    "continent": "Asia",
+    "local": "لبنان"
+  },
+  {
+    "country": "palestine",
+    "iso": "PSE",
+    "prefix": "ps",
+    "en": "Palestine",
+    "lang": "ar",
+    "continent": "Asia",
+    "local": "فلسطين"
+  }
+]

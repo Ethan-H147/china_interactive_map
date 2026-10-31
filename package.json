@@ -475,6 +475,18 @@
     "build:canada-shared-pages": "node scripts/prepare-canada-shared-pages.mjs",
     "build:canada-lakes": "node scripts/prepare-canada-lake-source.mjs && node --max-old-space-size=8000 scripts/canada-lakes.mjs",
     "test:canada-shared-pages": "node scripts/validate-canada-shared-pages.mjs && node scripts/browser/run.mjs canada-shared-pages",
-    "test:canada-lakes": "node scripts/validate-canada-lakes.mjs && node scripts/browser/run.mjs canada-lakes"
+    "test:canada-lakes": "node scripts/validate-canada-lakes.mjs && node scripts/browser/run.mjs canada-lakes",
+    "build:major-lake-cutouts": "node scripts/prepare-major-lake-cutouts.mjs",
+    "test:major-lake-cutouts": "node scripts/validate-major-lake-cutouts.mjs && node scripts/browser/run.mjs major-lake-cutouts",
+    "fetch:americas-completion": "node scripts/fetch-americas-completion.mjs",
+    "build:americas-completion": "npm run fetch:americas-completion && node --max-old-space-size=10000 scripts/build-americas-completion.mjs && node --max-old-space-size=10000 scripts/build-americas-completion-assets.mjs",
+    "test:americas-completion": "node scripts/validate-americas-completion.mjs && node scripts/browser/run.mjs americas-completion americas-frontiers",
+    "test:nicaragua-lake-fill": "node scripts/validate-nicaragua-lake-fill.mjs && node scripts/browser/run.mjs nicaragua-lake-fill",
+    "build:americas-palettes": "node scripts/register-americas-palettes.mjs",
+    "test:americas-palettes": "node scripts/validate-national-palettes.mjs && node scripts/browser/run.mjs americas-palettes",
+    "build:world-completion": "node --max-old-space-size=10000 scripts/build-world-completion.mjs && node --max-old-space-size=10000 scripts/build-world-completion-assets.mjs",
+    "test:world-completion": "node --max-old-space-size=10000 scripts/validate-world-completion.mjs && npm run test:national-palettes && node scripts/browser/run.mjs world-completion world-palettes world-frontiers",
+    "fetch:world-completion": "node scripts/probe-world-completion.mjs && node scripts/download-world-completion.mjs",
+    "test:world-display-fixes": "node --max-old-space-size=10000 scripts/validate-world-display-fixes.mjs && node scripts/browser/run.mjs world-display-fixes"
   }
 }

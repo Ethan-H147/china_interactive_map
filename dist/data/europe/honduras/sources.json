@@ -1,0 +1,67 @@
+{
+  "retrieved": "2026-10-31",
+  "coverage": "Honduras administrative reference from the retained licensed source. All hierarchy levels dissolve from the same jointly simplified local partition (0.00008 degree display tolerance, approximately five to nine metres). Source water-only polygons are excluded from administrative units. Shared international arcs use one owner and common junctions; existing neighboring administrative geometry remains fixed. Population observations retain their own year and coverage. National World Bank GDP and GDP per capita are retained without distributing national output among subdivisions. Country overview pages remain hidden.",
+  "counts": {
+    "1": 18,
+    "2": 298
+  },
+  "processing": "Honduras administrative reference from the retained licensed source. All hierarchy levels dissolve from the same jointly simplified local partition (0.00008 degree display tolerance, approximately five to nine metres). Source water-only polygons are excluded from administrative units. Shared international arcs use one owner and common junctions; existing neighboring administrative geometry remains fixed. Population observations retain their own year and coverage. National World Bank GDP and GDP per capita are retained without distributing national output among subdivisions. Country overview pages remain hidden.",
+  "sources": {
+    "hnd-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-hnd",
+      "bytes": 29455,
+      "sha256": "68f2d1b810c7e380ebf45d7925303fae7873fa12a24487e03c116a96ed0d9d38"
+    },
+    "hnd.zip": {
+      "url": "https://data.humdata.org/dataset/bd62fb53-64d3-478f-9ca8-38e4a2de19c0/resource/2425575d-6808-45f3-90cb-55557a5d234b/download/hnd_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) / HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 79323023,
+      "sha256": "d2e906544487425046312404aa0b765565eaccec71cd7a8852a6ea3d8ee934e9"
+    },
+    "hnd-ps-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-hnd",
+      "bytes": 25422,
+      "sha256": "65320a25a118e1ce567f979bd12010513c7182bfa33e9d59cd644eb3ed560b37"
+    },
+    "hnd-population-hnd_admpop_adm0_2024.csv": {
+      "url": "https://data.humdata.org/dataset/6203b8df-ef66-4e55-baba-6d8547438a77/resource/83925f2d-174e-4fef-ac89-fc4c882270a9/download/hnd_admpop_adm0_2024.csv",
+      "credit": "Honduras - Subnational Population Statistics",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 855,
+      "sha256": "7e9e4360e0a0124e1b49815ca311f6d7e1c07ac0520c5fbd58f8c8c62eeac952"
+    },
+    "hnd-population-hnd_admpop_adm1_2024.csv": {
+      "url": "https://data.humdata.org/dataset/6203b8df-ef66-4e55-baba-6d8547438a77/resource/6fb7fbab-b923-46b2-9645-152051371b7b/download/hnd_admpop_adm1_2024.csv",
+      "credit": "Honduras - Subnational Population Statistics",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 6620,
+      "sha256": "34403d0f72973a244f902621b1ead414b5dcc11ab3bef70370c45edf906df5fc"
+    },
+    "hnd-population-hnd_admpop_adm2_2024.csv": {
+      "url": "https://data.humdata.org/dataset/6203b8df-ef66-4e55-baba-6d8547438a77/resource/bbc79d8a-71c1-48e3-9436-f2aab6055168/download/hnd_admpop_adm2_2024.csv",
+      "credit": "Honduras - Subnational Population Statistics",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 85008,
+      "sha256": "3b46e62ed8effbb24b99c19ab37a4c76891d3e73c74467a312c02db84cf0262c"
+    },
+    "flag-hn.svg": {
+      "url": "https://flagcdn.com/hn.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "bytes": 401,
+      "sha256": "d2dd47a43f01a52ffff72cc88bd0e4fc9b503dee57250d22f870c36346079c5d"
+    }
+  },
+  "displaySimplificationDegrees": 0.00008,
+  "sourceCounts": {
+    "1": 18,
+    "2": 298
+  },
+  "waterPlaceholders": [],
+  "statisticalCoverage": {
+    "populationUnits": 316,
+    "missingPopulationUnits": 0,
+    "nationalGdpYear": 2025
+  }
+}

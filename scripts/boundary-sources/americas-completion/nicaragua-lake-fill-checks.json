@@ -1,0 +1,75 @@
+{
+  "fixtures": [
+    {
+      "id": "NI65",
+      "name": "Chontales",
+      "land": [
+        -85.2961612,
+        11.8282518
+      ],
+      "lake": [
+        -85.3380683,
+        11.8643628
+      ],
+      "bounds": [
+        [
+          -85.6758,
+          11.638654
+        ],
+        [
+          -84.525072,
+          12.624838
+        ]
+      ]
+    },
+    {
+      "id": "NI85",
+      "name": "Río San Juan",
+      "land": [
+        -84.7829542,
+        11.1381472
+      ],
+      "lake": [
+        -84.7826116,
+        11.0751761
+      ],
+      "bounds": [
+        [
+          -85.189615,
+          10.707487
+        ],
+        [
+          -83.660629,
+          11.881748
+        ]
+      ]
+    }
+  ],
+  "island": [
+    -85.609485,
+    11.5346733
+  ],
+  "unchangedAdministrativeFiles": {
+    "dist/data/europe/nicaragua/first.bin": "fea893b21ab29b7cc8c630fc81ff04e61fa4aca5e281f96102cb94b6aad79dfc",
+    "dist/data/europe/nicaragua/catalogue.bin": "d91a4ff6a94a35ba7967c9479eea124b140a1bc9e9d33601b422c29395bc8837",
+    "dist/data/europe/nicaragua/statistics.json": "c99e690c5b77f29bb5ae86f5a3bb8140ec9b2f161dbf173c29d3a30fde8e9995",
+    "dist/data/europe/nicaragua/international.bin": "86c964552e977ccbddd958b005107159749b3f4aa8d499bee01bf3feccde9885",
+    "dist/data/europe/nicaragua/second/NI55.bin": "205bbc2c94dc6e4f637002a1da34e752cba92e3347281a1ce0f252c4b9a2f8e5",
+    "dist/data/europe/nicaragua/second/NI35.bin": "af98934f24dd1b0eb4f2d7a7fbf811518834ea3d8bf5f3de4751af01d54b6725",
+    "dist/data/europe/nicaragua/second/NI80.bin": "508ba8f9319f612a34f022b422a1403f702ca02270fff75eb4fb9a231e87c085",
+    "dist/data/europe/nicaragua/second/NI91.bin": "29186b9a351928c00a07057b0e035c0b7d0a8cb650abe4d3bd13ebbdfd69d725",
+    "dist/data/europe/nicaragua/second/NI40.bin": "0f0e62e444b6394fe956adbde8cca1516b1b4435b72ccda9362be7d68a043fcb",
+    "dist/data/europe/nicaragua/second/NI30.bin": "f5c4e65e12e121e7a10ed1d187cf9da5c5b392fb5d858fb13280290d30e9eb5c",
+    "dist/data/europe/nicaragua/second/NI75.bin": "76298dce78892ddf1b8c85156d1f569a6b3e58b9757831aa0dcc0435d7f85f10",
+    "dist/data/europe/nicaragua/second/NI05.bin": "c6be0670f32537f78ec19ee9b351bb99591bd480fa3e775e38b281a38e6a9f10",
+    "dist/data/europe/nicaragua/second/NI85.bin": "19e2c4bc430ee3e2a1f354aae17eca34bbcfa4cda0e19fe216a405871a9caee0",
+    "dist/data/europe/nicaragua/second/NI20.bin": "2c8c531902c1c1c1f3696dddf5541067c36d2405fe4c9a3be987af5e9594cfad",
+    "dist/data/europe/nicaragua/second/NI70.bin": "72172565ae6c6861b1e4282ed5893a11857820098d199ad6d6b72624a1dbad49",
+    "dist/data/europe/nicaragua/second/NI93.bin": "26f582fa8698f8e44d0cdb8d1e8c5656e8cbd6c0f8ac6b47bfeb4e7053bc8a32",
+    "dist/data/europe/nicaragua/second/NI10.bin": "fde0e23a38421c2962b85a24294724e7326777a497b7d0af92eff26d670d3402",
+    "dist/data/europe/nicaragua/second/NI60.bin": "364715f10b1f2ba2103c9f3023dc8fa318b3d101ad061c1fa16206bd00334316",
+    "dist/data/europe/nicaragua/second/NI50.bin": "122fd94d1b7ff0766f9d5835fd776fc60f784bf992f91690bc1b73251c270eca",
+    "dist/data/europe/nicaragua/second/NI65.bin": "336dd9a9a26eae9dccd241ec1d484c676b13721dc33b224c5fa3b682505da487",
+    "dist/data/europe/nicaragua/second/NI25.bin": "670ef0e99bad900bc8375435e7c8fc25d63f0bbe741a183eb186b21478e87140"
+  }
+}

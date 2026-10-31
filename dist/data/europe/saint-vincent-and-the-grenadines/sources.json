@@ -1,0 +1,44 @@
+{
+  "retrieved": "2026-10-31",
+  "coverage": "Saint Vincent and the Grenadines administrative reference from the retained licensed source. All hierarchy levels dissolve from the same jointly simplified local partition (0.00008 degree display tolerance, approximately five to nine metres). Source water-only polygons are excluded from administrative units. Shared international arcs use one owner and common junctions; existing neighboring administrative geometry remains fixed. Population observations retain their own year and coverage. Published census divisions do not match the six parishes; parish populations are unavailable rather than allocated. National World Bank GDP and GDP per capita are retained without distributing national output among subdivisions. Country overview pages remain hidden.",
+  "counts": {
+    "1": 6
+  },
+  "processing": "Saint Vincent and the Grenadines administrative reference from the retained licensed source. All hierarchy levels dissolve from the same jointly simplified local partition (0.00008 degree display tolerance, approximately five to nine metres). Source water-only polygons are excluded from administrative units. Shared international arcs use one owner and common junctions; existing neighboring administrative geometry remains fixed. Population observations retain their own year and coverage. Published census divisions do not match the six parishes; parish populations are unavailable rather than allocated. National World Bank GDP and GDP per capita are retained without distributing national output among subdivisions. Country overview pages remain hidden.",
+  "sources": {
+    "vct-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-vct",
+      "bytes": 25793,
+      "sha256": "e620d09bc7f514496e2e043a224d407d1b7c90886010decab7c78ce6a2693731"
+    },
+    "vct.zip": {
+      "url": "https://data.humdata.org/dataset/726c2a10-c0b9-469a-9cba-cc58c3f68911/resource/9f62c3b3-0e31-47a0-9fb4-79e36b1b497b/download/vct_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) / HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 133541,
+      "sha256": "0815012a95d85c596d2fc319fee4fbbc38ef0f3f7765783fff6a75a7e604f5bb"
+    },
+    "vct-ps-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-vct",
+      "bytes": 7677,
+      "sha256": "225cd4f1b0f59e6267ae406fb3c38d9ecad8faf64fdb9f55d1a1f03abf60596c"
+    },
+    "flag-vc.svg": {
+      "url": "https://flagcdn.com/vc.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "bytes": 339,
+      "sha256": "c2a36b00c4c8c637b6847ed2dafb6d90b879ea298ab57d062f6ab968027e1766"
+    }
+  },
+  "displaySimplificationDegrees": 0.00008,
+  "sourceCounts": {
+    "1": 6
+  },
+  "waterPlaceholders": [],
+  "statisticalCoverage": {
+    "populationUnits": 0,
+    "missingPopulationUnits": 6,
+    "nationalGdpYear": 2025
+  }
+}

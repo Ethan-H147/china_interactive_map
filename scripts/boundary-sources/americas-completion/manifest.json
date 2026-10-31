@@ -1,0 +1,718 @@
+{
+  "retrieved": "2026-10-31",
+  "files": {
+    "blz-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-blz",
+      "bytes": 32758,
+      "sha256": "d3617e3362008a1ebe6c23658b05edbf6a499a32ff645d1013a06cd807bf1481"
+    },
+    "blz.zip": {
+      "url": "https://data.humdata.org/dataset/8b2c9a50-82d5-4c31-9b4d-9f7bec2934c6/resource/050c21b8-a215-4942-891d-3bf44ac75494/download/blz_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) / HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 767062,
+      "sha256": "fee35de2cd1e9a231bd5a5c6555d1708078b425b03a6db718177a0a8f4d1a297"
+    },
+    "blz-ps-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-blz",
+      "bytes": 14547,
+      "sha256": "7e88e6f8ed0a31606041cd1b2300e14438b9b3697d347e1fa2b324ce69305f44"
+    },
+    "blz-population-blz_adm0_pop_v2.csv": {
+      "url": "https://data.humdata.org/dataset/5c23364e-8e2c-4927-a357-16a83228fb43/resource/791ece93-6dc4-46af-b96e-493db1830cb2/download/blz_adm0_pop_v2.csv",
+      "credit": "Belize - Subnational Population Statistics",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 644,
+      "sha256": "90a912eade56c4ca1ddaf17f8cdab4f449f3666df70f3c223103c973fd01a56e"
+    },
+    "blz-population-blz_adm1_pop_v2.csv": {
+      "url": "https://data.humdata.org/dataset/5c23364e-8e2c-4927-a357-16a83228fb43/resource/5236a4e1-130a-4aef-994a-d6f9c302042b/download/blz_adm1_pop_v2.csv",
+      "credit": "Belize - Subnational Population Statistics",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 1855,
+      "sha256": "5ace397b51e72b516a2a7ad641bda7b41f28202695b05de440de68047e3fc714"
+    },
+    "blz-population-blz_adm2_pop_v2.csv": {
+      "url": "https://data.humdata.org/dataset/5c23364e-8e2c-4927-a357-16a83228fb43/resource/74c80cee-019e-43e0-a2f2-d1d58b375a04/download/blz_adm2_pop_v2.csv",
+      "credit": "Belize - Subnational Population Statistics",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 16943,
+      "sha256": "3f45720a152ec20b747ccd66389d6d4401bbc22de7a5ebfa44e4c11fad1582c0"
+    },
+    "flag-bz.svg": {
+      "url": "https://flagcdn.com/bz.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "bytes": 80883,
+      "sha256": "99ff3a88d1493f5e00c8a4dd9f7eb379a004961f4503eb3e5598e388c911b583"
+    },
+    "gtm-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-gtm",
+      "bytes": 34863,
+      "sha256": "10d2dc3e213254d1809e83c12165254dce9787cb2d689ed5750e9c4010f7fefa"
+    },
+    "gtm.zip": {
+      "url": "https://data.humdata.org/dataset/0b20f310-7d22-479c-b7e2-e1bb9737fa72/resource/77e5e79b-d7b0-497c-aea2-2753768ec5f0/download/gtm_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) / HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 3366983,
+      "sha256": "f178eda98c46329380bdbb43f0637b4c43535bc843de6a0b8b960193b8f4363f"
+    },
+    "gtm-ps-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-gtm",
+      "bytes": 44844,
+      "sha256": "287670fc3b84beff5db04c38d4d616545b76399467bf983536198bb8304c5dde"
+    },
+    "gtm-population-gtm_admpop_adm0_2024.csv": {
+      "url": "https://data.humdata.org/dataset/452f4fe9-6baf-46ef-a50e-7a6b1862d9fb/resource/c35ba3b7-1046-45ca-93b5-d7bce302fdba/download/gtm_admpop_adm0_2024.csv",
+      "credit": "Guatemala - Subnational Population Statistics",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 888,
+      "sha256": "93836a0a5bee8b542dad04df63e498976ef2ce4ddbe6e6b02b7ef07d42118507"
+    },
+    "gtm-population-gtm_admpop_adm1_2024.csv": {
+      "url": "https://data.humdata.org/dataset/452f4fe9-6baf-46ef-a50e-7a6b1862d9fb/resource/a983f193-2cb3-4f7c-af0b-6b889b7201bc/download/gtm_admpop_adm1_2024.csv",
+      "credit": "Guatemala - Subnational Population Statistics",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 7864,
+      "sha256": "890518b32958e31fa3ebd9e412bc7e29098ab3aaef4d5b3492471dbc3f911e61"
+    },
+    "gtm-population-gtm_admpop_adm2_2024.csv": {
+      "url": "https://data.humdata.org/dataset/452f4fe9-6baf-46ef-a50e-7a6b1862d9fb/resource/2dc15d20-568b-4c23-92bc-443eefba8460/download/gtm_admpop_adm2_2024.csv",
+      "credit": "Guatemala - Subnational Population Statistics",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 101557,
+      "sha256": "0f63c1293fc4f3d0ad4a6f796ec89288df9f8811ff51c1a5638027f68d49365e"
+    },
+    "flag-gt.svg": {
+      "url": "https://flagcdn.com/gt.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "bytes": 55531,
+      "sha256": "d59addea6225e7eeb09efaee9a888aacc2b93651e1306a3de84764c6c729f821"
+    },
+    "slv-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-slv",
+      "bytes": 40302,
+      "sha256": "1866704c70254732f9c23475b06460ddd2ee4a5abb4db370e90c7aac0994f538"
+    },
+    "slv.zip": {
+      "url": "https://data.humdata.org/dataset/08bfc7f6-3acc-45df-a69a-b853cf1cff05/resource/1fda0e08-9988-461c-88a4-8ac62c3dcbb1/download/slv_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) / HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 5860652,
+      "sha256": "1d76fcb3a496f25d86d8c278a4b8927bcebc7ad79996b8ccdd02341d1537b777"
+    },
+    "slv-ps-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-slv",
+      "bytes": 45250,
+      "sha256": "29180d277875af9ffcad19e6f455f60428f3697d2944d4c0bbc2ea9cbcf46431"
+    },
+    "slv-population-slv_admpop_adm0_2024.csv": {
+      "url": "https://data.humdata.org/dataset/89127169-6002-456f-adb1-7151d987467f/resource/2a1a61ae-d581-4003-931d-ae482f66acc3/download/slv_admpop_adm0_2024.csv",
+      "credit": "El Salvador - Subnational Population Statistics",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 857,
+      "sha256": "3f68ee6452b2c1f1a2ed9ffdff71034e45acc0a0a689869d957d04da66d928a3"
+    },
+    "slv-population-slv_admpop_adm1_2024.csv": {
+      "url": "https://data.humdata.org/dataset/89127169-6002-456f-adb1-7151d987467f/resource/de772d53-4ae2-4b3f-8686-c8fd622e7472/download/slv_admpop_adm1_2024.csv",
+      "credit": "El Salvador - Subnational Population Statistics",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 5301,
+      "sha256": "2be8552056f46602fe0c2dd3d6c8193c0f363ea2439bd4f7d072217756374561"
+    },
+    "slv-population-slv_admpop_adm2_2024.csv": {
+      "url": "https://data.humdata.org/dataset/89127169-6002-456f-adb1-7151d987467f/resource/1d8a3ccb-3002-4119-866d-5d9473c3f461/download/slv_admpop_adm2_2024.csv",
+      "credit": "El Salvador - Subnational Population Statistics",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 16338,
+      "sha256": "7df45e988bc52341961114f5d2a4e112eb8a9bee10aaddea0542289901cc64de"
+    },
+    "slv-population-slv_admpop_adm3_2024.csv": {
+      "url": "https://data.humdata.org/dataset/89127169-6002-456f-adb1-7151d987467f/resource/0f342730-7bd1-4a82-9d95-4aa65c6e275d/download/slv_admpop_adm3_2024.csv",
+      "credit": "El Salvador - Subnational Population Statistics",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 83282,
+      "sha256": "5f3b149b76bef88f90a91f8671f5c8b2b51456ba53ea95021e6e9dc6378f6fbb"
+    },
+    "flag-sv.svg": {
+      "url": "https://flagcdn.com/sv.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "bytes": 248937,
+      "sha256": "cbd0f1c0170aad674c898a602f0e43fcf330640cbbab0653d6ae4f941f7cd83d"
+    },
+    "hnd-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-hnd",
+      "bytes": 29455,
+      "sha256": "68f2d1b810c7e380ebf45d7925303fae7873fa12a24487e03c116a96ed0d9d38"
+    },
+    "hnd.zip": {
+      "url": "https://data.humdata.org/dataset/bd62fb53-64d3-478f-9ca8-38e4a2de19c0/resource/2425575d-6808-45f3-90cb-55557a5d234b/download/hnd_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) / HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 79323023,
+      "sha256": "d2e906544487425046312404aa0b765565eaccec71cd7a8852a6ea3d8ee934e9"
+    },
+    "hnd-ps-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-hnd",
+      "bytes": 25422,
+      "sha256": "65320a25a118e1ce567f979bd12010513c7182bfa33e9d59cd644eb3ed560b37"
+    },
+    "hnd-population-hnd_admpop_adm0_2024.csv": {
+      "url": "https://data.humdata.org/dataset/6203b8df-ef66-4e55-baba-6d8547438a77/resource/83925f2d-174e-4fef-ac89-fc4c882270a9/download/hnd_admpop_adm0_2024.csv",
+      "credit": "Honduras - Subnational Population Statistics",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 855,
+      "sha256": "7e9e4360e0a0124e1b49815ca311f6d7e1c07ac0520c5fbd58f8c8c62eeac952"
+    },
+    "hnd-population-hnd_admpop_adm1_2024.csv": {
+      "url": "https://data.humdata.org/dataset/6203b8df-ef66-4e55-baba-6d8547438a77/resource/6fb7fbab-b923-46b2-9645-152051371b7b/download/hnd_admpop_adm1_2024.csv",
+      "credit": "Honduras - Subnational Population Statistics",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 6620,
+      "sha256": "34403d0f72973a244f902621b1ead414b5dcc11ab3bef70370c45edf906df5fc"
+    },
+    "hnd-population-hnd_admpop_adm2_2024.csv": {
+      "url": "https://data.humdata.org/dataset/6203b8df-ef66-4e55-baba-6d8547438a77/resource/bbc79d8a-71c1-48e3-9436-f2aab6055168/download/hnd_admpop_adm2_2024.csv",
+      "credit": "Honduras - Subnational Population Statistics",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 85008,
+      "sha256": "3b46e62ed8effbb24b99c19ab37a4c76891d3e73c74467a312c02db84cf0262c"
+    },
+    "flag-hn.svg": {
+      "url": "https://flagcdn.com/hn.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "bytes": 401,
+      "sha256": "d2dd47a43f01a52ffff72cc88bd0e4fc9b503dee57250d22f870c36346079c5d"
+    },
+    "nic-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-nic",
+      "bytes": 38408,
+      "sha256": "7ecb3245a5e2f5e772469c3cc5acc2598193f96c8bf7e6adf7c30cf895436eec"
+    },
+    "nic.zip": {
+      "url": "https://data.humdata.org/dataset/98e9bcfe-6565-4372-8422-f57d5b209448/resource/cc0a560b-ca8e-4abe-9c1f-988f6eea2744/download/nic_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) / HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 31643442,
+      "sha256": "059cadc878ca43591b4496e74e025c016831e7c4efaed658d360741b786a4663"
+    },
+    "nic-ps-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-nic",
+      "bytes": 12505,
+      "sha256": "93168accb479a77459c273db437255e9274d5efbe4aac9135d537cf62d0555d0"
+    },
+    "nic-population-nic_admpop_adm0_2020.csv": {
+      "url": "https://data.humdata.org/dataset/f9522559-8454-4cf8-8834-864f4b696ce1/resource/e8a107cf-c43b-4931-950e-06322ce805f0/download/nic_admpop_adm0_2020.csv",
+      "credit": "Nicaragua - Subnational Population Statistics",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 9014,
+      "sha256": "e30fb47829273a3cc0a100b67eb655d98beef7e35ddcee7f0cf97c8c95f2f401"
+    },
+    "nic-population-nic_admpop_adm1_2020.csv": {
+      "url": "https://data.humdata.org/dataset/f9522559-8454-4cf8-8834-864f4b696ce1/resource/1bb41271-4ee1-44f6-a203-32d11f682e76/download/nic_admpop_adm1_2020.csv",
+      "credit": "Nicaragua - Subnational Population Statistics",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 14775,
+      "sha256": "0e95c2120ea68d1be4ef31a1dc49670115605e1637bf0f3222d8333cca61a8a9"
+    },
+    "nic-population-nic_admpop_adm2_2020.csv": {
+      "url": "https://data.humdata.org/dataset/f9522559-8454-4cf8-8834-864f4b696ce1/resource/207e5894-880f-4f45-bb88-8fb0a66b2f0b/download/nic_admpop_adm2_2020.csv",
+      "credit": "Nicaragua - Subnational Population Statistics",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 46245,
+      "sha256": "144040103f6fa16a76e1b7d61cf774727ea3e8a2f9e03a94f916da7490728ed5"
+    },
+    "flag-ni.svg": {
+      "url": "https://flagcdn.com/ni.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "bytes": 23894,
+      "sha256": "ed4fbc934d1bde93634e8904e0c1aec45587c95a2bbfbd024aa729e9adc956d6"
+    },
+    "atg-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-atg",
+      "bytes": 14010,
+      "sha256": "f76ba41c9f2e3070628b77c0de23f4afc2c8e3232abbb1af32c50126aa69ced1"
+    },
+    "atg-adm1-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/ATG/ADM1/",
+      "bytes": 1708,
+      "sha256": "f3484f08da09ee155e793d0e9ac85bfe12d9eff188793bc4e47de72bd666cf7f"
+    },
+    "atg-adm1.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/ATG/ADM1/geoBoundaries-ATG-ADM1.geojson",
+      "credit": "geoBoundaries, Wikimedia",
+      "license": "Public Domain",
+      "year": "2009",
+      "bytes": 79247,
+      "sha256": "ae549c3ea440f66d4e2f249f4f2bec14d033f1ba2399374153dfd289d8201718"
+    },
+    "atg-ps-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-atg",
+      "bytes": 13648,
+      "sha256": "c9c97ce2ef2765e86610a0cd022d99fbd04c8ccde6ef3324686d75cdfbbee8ea"
+    },
+    "atg-population-atg_admpop_adm0_2023.csv": {
+      "url": "https://data.humdata.org/dataset/91aeaa9d-35d3-4901-8d66-28bb580e7611/resource/9027195a-d2b6-4018-a6c8-5335c44fb406/download/atg_admpop_adm0_2023.csv",
+      "credit": "Antigua and Barbuda - Subnational Population Statistics",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 764,
+      "sha256": "915c1c9247c556821cd9c27285af61e5d7107337a423abd272a9420a19063e28"
+    },
+    "flag-ag.svg": {
+      "url": "https://flagcdn.com/ag.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "bytes": 483,
+      "sha256": "73f382e91c9e9ba8e786696f20011a04c7e22354e37db61921f2c57645ec7385"
+    },
+    "brb-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-brb",
+      "bytes": 24330,
+      "sha256": "6bdb93d8318100e15c9951025e55f880df7645b65076a398fce6cee7d115cb46"
+    },
+    "brb-adm1-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/BRB/ADM1/",
+      "bytes": 1708,
+      "sha256": "8065e71423d2c43b04a0a4ea5b2a13406d0b21f925a2a27ac4a69b7a27b91141"
+    },
+    "brb-adm1.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/BRB/ADM1/geoBoundaries-BRB-ADM1.geojson",
+      "credit": "geoBoundaries, Wikimedia",
+      "license": "Creative Commons Attribution 2.5 Generic",
+      "year": "2005",
+      "bytes": 47860,
+      "sha256": "b51cbd344b87ffa332e6ca2003ea9b77d5ff43d00d37eec951665f5c08b31b8f"
+    },
+    "brb-ps-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-brb",
+      "bytes": 8021,
+      "sha256": "d3787492f311dd7acbd14be15ecd6915c7a55de312bc4f20981c6766844af29c"
+    },
+    "brb-population-brb_admpop_adm0_2010_v2.csv": {
+      "url": "https://data.humdata.org/dataset/81fb3abf-2aca-404a-b1f0-84ce9441bac8/resource/b001b93f-f700-46f4-ac1a-2d6d2050e346/download/brb_admpop_adm0_2010_v2.csv",
+      "credit": "Barbados - Subnational Population Statistics",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 633,
+      "sha256": "121eb842dad019a8797324e71828c5e7c6906c715812f6c56e61d332dc0b777b"
+    },
+    "flag-bb.svg": {
+      "url": "https://flagcdn.com/bb.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "bytes": 606,
+      "sha256": "b38fe14e1e967ea658331d386e8028c5a02d2de70c8376b06deda6ea77a4938b"
+    },
+    "dma-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-dma",
+      "bytes": 30798,
+      "sha256": "a1129681350dd2e7795e223c2defdd8dd7ed4287b40dc138dcc84210c60afd50"
+    },
+    "dma-adm1-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/DMA/ADM1/",
+      "bytes": 1725,
+      "sha256": "24494333efe962c1b697b44f4a3df4eaeb156cece30185f7acafa2860ecc2530"
+    },
+    "kna-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-kna",
+      "bytes": 15218,
+      "sha256": "c6c005036ffe35b6bf85b484ebf20291ef03120ec0cbb75e41e96eddab139a43"
+    },
+    "grd-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-grd",
+      "bytes": 15394,
+      "sha256": "80e316b29738ed9abe45cc22be654e306399f8bc41314345cc5d40e28d4759e3"
+    },
+    "kna-adm1-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/KNA/ADM1/",
+      "bytes": 1705,
+      "sha256": "220372bf61c692a4ab49ed56f15916a0c432ff3b13c7c01836eb9a2a6f9b4379"
+    },
+    "dma-adm1.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/DMA/ADM1/geoBoundaries-DMA-ADM1.geojson",
+      "credit": "geoBoundaries, Wikimedia Commons",
+      "license": "Creative Commons Attribution 2.5 Generic",
+      "year": "2005",
+      "bytes": 108616,
+      "sha256": "0aa346d89500214422d46c5344b62005ca15ae9edbbf00f2fd304e307726cecd"
+    },
+    "kna-adm1.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/KNA/ADM1/geoBoundaries-KNA-ADM1.geojson",
+      "credit": "OpenStreetMap",
+      "license": "Creative Commons Attribution-ShareAlike 2.0",
+      "year": "2021",
+      "bytes": 134741,
+      "sha256": "bb3994877109054300d7247655d5e4299274778c6f9e3dc19854df9679b61731"
+    },
+    "dma-ps-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-dma",
+      "bytes": 8711,
+      "sha256": "aaad5c570db207687960ceab6477492ae633a74cf68a2b82b3384ed3d6d7ac6e"
+    },
+    "flag-dm.svg": {
+      "url": "https://flagcdn.com/dm.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "bytes": 4810,
+      "sha256": "b4371e4737d00b0391dbfc43db8136f9976dfc2d348c6b9cecf598e154319edc"
+    },
+    "lca-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-lca",
+      "bytes": 14828,
+      "sha256": "d03866a66301f1ba6c4845e79b21fbcb6ca83b7901105f41de6058001f5b78b4"
+    },
+    "kna-ps-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-kna",
+      "bytes": 7649,
+      "sha256": "8a3e7d3559ac890ddee60fe7a4bb4b58fff07d79c3a6c26956b92e891cb2804b"
+    },
+    "lca-adm1-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/LCA/ADM1/",
+      "bytes": 1783,
+      "sha256": "b447482e6007a1d783f0e675218fa329e48fcf16c77d7a972b4ae781620586f6"
+    },
+    "flag-kn.svg": {
+      "url": "https://flagcdn.com/kn.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "bytes": 539,
+      "sha256": "5274df62085604bfd3586bc890842e0ea27a1c3dd3069571179e3eed381ed036"
+    },
+    "vct-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-vct",
+      "bytes": 25793,
+      "sha256": "e620d09bc7f514496e2e043a224d407d1b7c90886010decab7c78ce6a2693731"
+    },
+    "lca-adm1.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/LCA/ADM1/geoBoundaries-LCA-ADM1.geojson",
+      "credit": "Wikimedia Commons, Wikimedia Commons",
+      "license": "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
+      "year": "2015",
+      "bytes": 281310,
+      "sha256": "9bd23d92377980a8d740d7c490f6d3578ca7f4ee07e31f2911f59be9ace33bc3"
+    },
+    "lca-adm2-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/LCA/ADM2/",
+      "bytes": 1782,
+      "sha256": "8cfc025e7b07ef1fe2f0e6e83db81053653c2b9d21fab867d85f8104cf76690f"
+    },
+    "grd.zip": {
+      "url": "https://data.humdata.org/dataset/ffdc3580-45ee-4630-9abf-4dd8a8b002d3/resource/34103afe-cce9-442c-a3b5-12dc228b9dcc/download/grd_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) / HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 1611313,
+      "sha256": "c5b8d97a305eae45657714a2d4fec30800aa190aa2007a7e1286a20cb0dfb873"
+    },
+    "grd-ps-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-grd",
+      "bytes": 9125,
+      "sha256": "92e75ecd29700245cd9223fa87eb018ced4fda4d85336d0e2e39067bce696c61"
+    },
+    "vct.zip": {
+      "url": "https://data.humdata.org/dataset/726c2a10-c0b9-469a-9cba-cc58c3f68911/resource/9f62c3b3-0e31-47a0-9fb4-79e36b1b497b/download/vct_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) / HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 133541,
+      "sha256": "0815012a95d85c596d2fc319fee4fbbc38ef0f3f7765783fff6a75a7e604f5bb"
+    },
+    "vct-ps-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-vct",
+      "bytes": 7677,
+      "sha256": "225cd4f1b0f59e6267ae406fb3c38d9ecad8faf64fdb9f55d1a1f03abf60596c"
+    },
+    "flag-vc.svg": {
+      "url": "https://flagcdn.com/vc.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "bytes": 339,
+      "sha256": "c2a36b00c4c8c637b6847ed2dafb6d90b879ea298ab57d062f6ab968027e1766"
+    },
+    "tto-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-tto",
+      "bytes": 37177,
+      "sha256": "3e98c90fdeb52115cce668caa9d00d3fdbdc77a4486df594eb3340b69c7348b8"
+    },
+    "tto-adm1-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/TTO/ADM1/",
+      "bytes": 1769,
+      "sha256": "409778dab0427ccc74b83a97be22d1b354c1896669dcca9057d837ce2e34527e"
+    },
+    "grd-population-grd_admpop_adm0_2011_v2.csv": {
+      "url": "https://data.humdata.org/dataset/fc29f982-6f4e-4ac1-85e4-fb2e17cdcbff/resource/493cde90-7ad3-4338-8f9b-57ef9ff04c2c/download/grd_admpop_adm0_2011_v2.csv",
+      "credit": "Grenada - Subnational Population Statistics",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 619,
+      "sha256": "ca70b9585b3e27af3ce3c1c7d024d8fca7de0a11e6db9cdd0b319a5f7590c98c"
+    },
+    "tto-adm1.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/TTO/ADM1/geoBoundaries-TTO-ADM1.geojson",
+      "credit": "OpenStreetMap, Wambacher",
+      "license": "Open Data Commons Open Database License 1.0",
+      "year": "2017",
+      "bytes": 370643,
+      "sha256": "2d2b9dcfb313985b9ab0daf02ba362c43fbfaebbee5e478ad86e6c40beff41e9"
+    },
+    "tto-ps-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-tto",
+      "bytes": 13725,
+      "sha256": "e98a563a802fc344ab87ce4b641f2f44e5f617b5e0548ca2c1449ab8ed0fd647"
+    },
+    "grd-population-grd_admpop_adm1_2011_v2.csv": {
+      "url": "https://data.humdata.org/dataset/fc29f982-6f4e-4ac1-85e4-fb2e17cdcbff/resource/bf1f9b92-7e69-467d-859b-5a91c44efa68/download/grd_admpop_adm1_2011_v2.csv",
+      "credit": "Grenada - Subnational Population Statistics",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 2244,
+      "sha256": "46ef5c0ecdd832d358f6ab5551675bd0f1d514a9746939552f2938d2ab2d1223"
+    },
+    "flag-gd.svg": {
+      "url": "https://flagcdn.com/gd.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "bytes": 1101,
+      "sha256": "a2068c160dddaf85e5ac16423100c50d1970990a7468f3e81eed2d11426c689a"
+    },
+    "guy-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-guy",
+      "bytes": 11433,
+      "sha256": "e2cc41203d3876a457a31cbfe3247f2c3a6d4e9582707a0b4231b1db87252fc6"
+    },
+    "guy-adm1-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/GUY/ADM1/",
+      "bytes": 1753,
+      "sha256": "c56fb3611bc33c34728b9d39321c9dfae33f734914a376a18e754e6c99057834"
+    },
+    "tto-population-tto_admpop_adm0_2011_v2.csv": {
+      "url": "https://data.humdata.org/dataset/fa86e763-aa12-4270-890c-6cea033d5174/resource/1998d3cc-f247-444b-81b1-88dcbc47e964/download/tto_admpop_adm0_2011_v2.csv",
+      "credit": "Trinidad and Tobago - Subnational Population Statistics",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 729,
+      "sha256": "084866f4eb913fc5018f56152081fddac975d693655d933b175c444210fd884a"
+    },
+    "guy-adm1.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/GUY/ADM1/geoBoundaries-GUY-ADM1.geojson",
+      "credit": "OpenStreetMap, Wambacher",
+      "license": "Open Data Commons Open Database License 1.0",
+      "year": "2017",
+      "bytes": 477777,
+      "sha256": "695bc45f5f05024d7ccb3336bd6f317a9168598ae4879858566fc4774c718ab6"
+    },
+    "guy-adm2-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/GUY/ADM2/",
+      "bytes": 1855,
+      "sha256": "f0e1090f0fa8ad4c2574010905fa0980e3c977c766e8a1fc7f0ba53b3eadce00"
+    },
+    "tto-population-tto_admpop_adm1_2011_v2.csv": {
+      "url": "https://data.humdata.org/dataset/fa86e763-aa12-4270-890c-6cea033d5174/resource/e4c80b8f-6689-4954-8b17-d429611b2197/download/tto_admpop_adm1_2011_v2.csv",
+      "credit": "Trinidad and Tobago - Subnational Population Statistics",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 4608,
+      "sha256": "7cbc287620e37f26132efd1065db3d5ab88822672377d031619a8762f6184228"
+    },
+    "flag-tt.svg": {
+      "url": "https://flagcdn.com/tt.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "bytes": 225,
+      "sha256": "89fa29d1f4a553154be8ae34b5f6a31e4baf6197fee40d9103ada5b80de7e31b"
+    },
+    "lca-adm2.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/LCA/ADM2/geoBoundaries-LCA-ADM2.geojson",
+      "credit": "Department of Physical Planning, Saint Lucia Open Data",
+      "license": "Creative Commons Attribution 4.0 (CC BY 4.0)",
+      "year": "2019",
+      "bytes": 10958005,
+      "sha256": "603ae3d14d34ace4516af313b175b54fcbe0857c524822905edfd79d7be4a8c6"
+    },
+    "sur-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-sur",
+      "bytes": 10078,
+      "sha256": "79bdc7cdbda77d6f79a0b21be7527dff5489b2249f857ce00c0e537a27db5564"
+    },
+    "guy-adm2.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/GUY/ADM2/geoBoundaries-GUY-ADM2.geojson",
+      "credit": "DEVInfo LAC project, OCHA FISS",
+      "license": "Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+      "year": "2019",
+      "bytes": 228182,
+      "sha256": "85f375f7b6a3e9727e5dc1b10bce8ee6005f041386b5871e085a56cf0ddb98e4"
+    },
+    "sur-adm1-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/SUR/ADM1/",
+      "bytes": 1770,
+      "sha256": "dc4993337f4e674c2f9cc6ed12dc3f2fb9e431899b1e879e6c3a86a4b320d25e"
+    },
+    "lca-ps-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-lca",
+      "bytes": 14445,
+      "sha256": "f1cda90588df81a5fda07979655528bc554bf97b32b22bc7181742876558d740"
+    },
+    "guy-ps-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-guy",
+      "bytes": 9342,
+      "sha256": "8efee62e5e1cf9d6eb1ad74f460adf009b22014d171db4e651330490a8401895"
+    },
+    "sur-adm1.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/SUR/ADM1/geoBoundaries-SUR-ADM1.geojson",
+      "credit": "OpenStreetMap, Wambacher",
+      "license": "Open Data Commons Open Database License 1.0",
+      "year": "2017",
+      "bytes": 197974,
+      "sha256": "8ebe64b2587d5f0f13edfb49ac91bb132800a837f8b6ff00b3ee2dd33d557c75"
+    },
+    "sur-adm2-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/SUR/ADM2/",
+      "bytes": 1706,
+      "sha256": "5c5b2a4c7be354a3e0d23cf02874ddd8240531f666cfc4bc2e5dab6d33ef4a51"
+    },
+    "sur-adm2.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/SUR/ADM2/geoBoundaries-SUR-ADM2.geojson",
+      "credit": "geoBoundaries, Wikimedia Commons",
+      "license": "Public Domain",
+      "year": "2021",
+      "bytes": 321272,
+      "sha256": "d4a4797378c39b82cfaf8c6a11a60aaa0072db890cc4b72861f1561633765753"
+    },
+    "lca-population-lca_pop_adm0_v2.csv": {
+      "url": "https://data.humdata.org/dataset/c75ed1fb-52a6-4e97-80e0-20d66d2a79e4/resource/07c73570-9afd-4390-94f5-89f50ec868a8/download/lca_pop_adm0_v2.csv",
+      "credit": "Saint Lucia - Subnational Population Statistics",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 748,
+      "sha256": "60060440e1e94557551a9912fc9e9cc87f924adf9dce5ab56ef5c9e83957adba"
+    },
+    "sur-ps-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-sur",
+      "bytes": 14565,
+      "sha256": "3e36ac69cc529c79255dd5e7dece4d6a0f0013c5a2df15249b4a0640e2560f44"
+    },
+    "guy-population-guy_admpop_adm0_2021.csv": {
+      "url": "https://data.humdata.org/dataset/4c628dd9-b96d-49b0-9bd2-1b9babc59f68/resource/ca1cf64c-0f88-4756-9a36-efa444437499/download/guy_admpop_adm0_2021.csv",
+      "credit": "Guyana - Subnational Population Statistics",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 7227,
+      "sha256": "dda48745bc32dd583075a3f8adc5a0790358c53ddd796e657883b4e9eb354112"
+    },
+    "lca-population-lca_pop_adm1_v2.csv": {
+      "url": "https://data.humdata.org/dataset/c75ed1fb-52a6-4e97-80e0-20d66d2a79e4/resource/c803a782-f19f-4bc5-9857-f09dc76712b6/download/lca_pop_adm1_v2.csv",
+      "credit": "Saint Lucia - Subnational Population Statistics",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 2994,
+      "sha256": "e3ab64577b593bc37eb87d0853af71eee62b599bd47bf5b6fba52f32fa42e91c"
+    },
+    "flag-lc.svg": {
+      "url": "https://flagcdn.com/lc.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "bytes": 254,
+      "sha256": "13f4f19e5d3a4a590ba7698e0b19df13d1dd817e4928c20fb4ba949ed8737daf"
+    },
+    "guy-population-guy_admpop_adm1_2021.csv": {
+      "url": "https://data.humdata.org/dataset/4c628dd9-b96d-49b0-9bd2-1b9babc59f68/resource/316741eb-a4ce-4eb4-a976-e92710f7b56d/download/guy_admpop_adm1_2021.csv",
+      "credit": "Guyana - Subnational Population Statistics",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 10345,
+      "sha256": "594092bcde2b57d81cd98bde9ca34df3abf6bcb8e199b5824b0eaeff86041cab"
+    },
+    "flag-gy.svg": {
+      "url": "https://flagcdn.com/gy.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "bytes": 447,
+      "sha256": "910830b8f1f35c778f37eb37d47eea0ea952d1bf04070f7eaeb697d0f8ead948"
+    },
+    "sur-population-sur_admpop_adm0_v2.csv": {
+      "url": "https://data.humdata.org/dataset/9d2ed08a-0a56-467f-a318-b58e28561b6d/resource/b81c460f-64da-48e4-9361-f2ba24ed1d20/download/sur_admpop_adm0_v2.csv",
+      "credit": "Suriname - Subnational Population Statistics",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 721,
+      "sha256": "d851daa9fd6e119d7891bf60819a7d5a2bf927b40d034e194b48bf389bd36189"
+    },
+    "sur-population-sur_admpop_adm1_v2.csv": {
+      "url": "https://data.humdata.org/dataset/9d2ed08a-0a56-467f-a318-b58e28561b6d/resource/794f57e2-0a43-4205-9614-c43fcc09d931/download/sur_admpop_adm1_v2.csv",
+      "credit": "Suriname - Subnational Population Statistics",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 2931,
+      "sha256": "2e9ed390f92b96502d7307a19d8e7b45a063ca050c8852142481ceeaf7f92c54"
+    },
+    "sur-population-sur_admpop_adm2_v2.csv": {
+      "url": "https://data.humdata.org/dataset/9d2ed08a-0a56-467f-a318-b58e28561b6d/resource/f5e6a11c-ab0c-4e06-90e9-1434d2da1a7f/download/sur_admpop_adm2_v2.csv",
+      "credit": "Suriname - Subnational Population Statistics",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 15735,
+      "sha256": "ea8db436aa441ab9e7c7e132dc88bd598af3abf9fb6b8c3f872ee4641ddf4b6e"
+    },
+    "flag-sr.svg": {
+      "url": "https://flagcdn.com/sr.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "bytes": 307,
+      "sha256": "098067b9dd5a6aac668c8883f9b96fe68865dc20a6f88a8859146900e389dd63"
+    },
+    "worldbank.json": {
+      "url": "https://api.worldbank.org/v2/country/BLZ;GTM;SLV;HND;NIC;ATG;BRB;DMA;GRD;KNA;LCA;VCT;TTO;GUY;SUR/indicator/SP.POP.TOTL;NY.GDP.MKTP.CD;NY.GDP.PCAP.CD?source=2&date=2010:2025&format=json&per_page=2000",
+      "credit": "World Bank World Development Indicators",
+      "license": "CC BY 4.0",
+      "bytes": 151802,
+      "sha256": "fca6d86bc3e559c08b5d4f3217cb40df8e5c4ed1d0c33e5c15da5acb5e07daa0"
+    },
+    "kna-census-2022.pdf": {
+      "url": "https://statistics.caricom.org/wp-content/uploads/2025/11/SKN-Census-Report-2021-2022.pdf",
+      "credit": "National statistics office; official census publication",
+      "license": "Statistical facts; retain source attribution",
+      "bytes": 1066354,
+      "sha256": "1af230ddb524cedda6ead3bfd3835454754bbcc82e31be65e0dd30fbe2c86010"
+    },
+    "dma-population.html": {
+      "url": "https://stats.gov.dm/subjects/demographic-statistics/population-by-sex-and-parish-2001-and-2011/",
+      "credit": "National statistics office; official census publication",
+      "license": "Statistical facts; retain source attribution",
+      "bytes": 167527,
+      "sha256": "39685dfb220815c79d3a855aaa49934b5ce8bf231eae5bf979d6d905be596436"
+    },
+    "atg-census-2011.pdf": {
+      "url": "https://statistics.gov.ag/wp-content/uploads/2017/10/Census-2011-Book-of-Statistical-Tables-I.pdf",
+      "credit": "National statistics office; official census publication",
+      "license": "Statistical facts; retain source attribution",
+      "bytes": 7828669,
+      "sha256": "16dec3a7eafcb467b2b360d889210ab02be5514e90739320a3c93f0babce88a0"
+    },
+    "brb-census-2021.pdf": {
+      "url": "https://www.stats.gov.bb/wp-content/uploads/2024/02/2021-Population-and-Housing-Census.pdf",
+      "credit": "National statistics office; official census publication",
+      "license": "Statistical facts; retain source attribution",
+      "bytes": 2141565,
+      "sha256": "f4f6f5faa539c834635a1454c6733d34cd81754ea597976e2d3d863f52089bd5"
+    },
+    "sur.zip": {
+      "url": "https://data.humdata.org/dataset/ab35e673-76f2-43e5-a6a4-a5b81f9e093c/resource/fd31ebfd-bf77-4b7d-902f-3ea3a9c2d7a2/download/sur_adm_2017_shp.zip",
+      "credit": "OCHA Field Information Services Section (FISS) / HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 682279,
+      "sha256": "c740c395f498d047c5672acbd438a58fd10c508ac637c4c66b1861bb44e473cb"
+    },
+    "tto.zip": {
+      "url": "https://data.humdata.org/dataset/eed55f95-183c-48f7-adef-23dff31ec972/resource/218b72d0-35fb-4026-b8a6-152d87acea0d/download/tto_adm1_v2.zip",
+      "credit": "OCHA Field Information Services Section (FISS) / HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 93384,
+      "sha256": "f2f6939a884ba743089b862ed7d92e9d41fde7b8c3fcdce69add51eefc1f1ca4"
+    },
+    "government-populations.json": {
+      "url": "./government-populations.json",
+      "credit": "Verified transcription from the retained national statistical office publications; table and page references retained",
+      "license": "Statistical facts; source publication notices retained",
+      "bytes": 3698,
+      "sha256": "01b56087f0f6a1867562f5bd4b06a62d67acfacf3d2403a20f65e549d6333bd1"
+    },
+    "grd-census-2021.pdf": {
+      "url": "https://stats.gov.gd/wp-content/uploads/2025/04/2021-National-Housing-Population-Census-Results-Latest-PRELIMINARY.pdf",
+      "credit": "Grenada Central Statistical Office, 2021 preliminary census, Table 17 and national Table 1",
+      "license": "Government statistical publication; statistical facts, original notice retained",
+      "bytes": 618126,
+      "sha256": "90fe42883b3c9338c8ef0679709a25ae8e532ab8f56e2a31e2358a130554fc6f"
+    }
+  }
+}

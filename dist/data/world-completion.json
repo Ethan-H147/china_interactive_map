@@ -1,0 +1,343 @@
+{
+  "retrieved": "2026-10-31",
+  "countries": {
+    "burkina-faso": {
+      "iso": "BFA",
+      "counts": {
+        "1": 17,
+        "2": 47,
+        "3": 351
+      },
+      "population": {
+        "populationUnits": 43,
+        "missingPopulationUnits": 372,
+        "nationalGdpYear": 2025
+      },
+      "bounds": [
+        [
+          -5.519548,
+          9.408219
+        ],
+        [
+          2.4052781,
+          15.083105
+        ]
+      ],
+      "labelCenter": [
+        -1.677091,
+        12.621008
+      ]
+    },
+    "central-african-republic": {
+      "iso": "CAF",
+      "counts": {
+        "1": 17
+      },
+      "population": {
+        "populationUnits": 16,
+        "missingPopulationUnits": 1,
+        "nationalGdpYear": 2025
+      },
+      "bounds": [
+        [
+          14.412511,
+          2.221855
+        ],
+        [
+          27.438231,
+          11.001839
+        ]
+      ],
+      "labelCenter": [
+        21.046215,
+        6.9871
+      ]
+    },
+    "chad": {
+      "iso": "TCD",
+      "counts": {
+        "1": 23,
+        "2": 70
+      },
+      "population": {
+        "populationUnits": 23,
+        "missingPopulationUnits": 70,
+        "nationalGdpYear": 2025
+      },
+      "bounds": [
+        [
+          13.470106,
+          7.458309
+        ],
+        [
+          24.003563,
+          23.450369
+        ]
+      ],
+      "labelCenter": [
+        18.783686,
+        15.345018
+      ]
+    },
+    "mali": {
+      "iso": "MLI",
+      "counts": {
+        "1": 20,
+        "2": 160
+      },
+      "population": {
+        "populationUnits": 166,
+        "missingPopulationUnits": 14,
+        "nationalGdpYear": 2025
+      },
+      "bounds": [
+        [
+          -12.237827,
+          10.146993
+        ],
+        [
+          4.24467,
+          24.999897
+        ]
+      ],
+      "labelCenter": [
+        -2.338671,
+        18.104619
+      ]
+    },
+    "niger": {
+      "iso": "NER",
+      "counts": {
+        "1": 8,
+        "2": 67,
+        "3": 266
+      },
+      "population": {
+        "populationUnits": 341,
+        "missingPopulationUnits": 0,
+        "nationalGdpYear": 2025
+      },
+      "bounds": [
+        [
+          0.161694,
+          11.710485
+        ],
+        [
+          15.996053,
+          23.516024
+        ]
+      ],
+      "labelCenter": [
+        9.415448,
+        17.422457
+      ]
+    },
+    "south-sudan": {
+      "iso": "SSD",
+      "counts": {
+        "1": 10,
+        "2": 78,
+        "3": 511
+      },
+      "population": {
+        "populationUnits": 88,
+        "missingPopulationUnits": 511,
+        "nationalGdpYear": 2015
+      },
+      "bounds": [
+        [
+          24.158,
+          3.481
+        ],
+        [
+          35.2927,
+          12.236845
+        ]
+      ],
+      "labelCenter": [
+        30.26508,
+        7.309388
+      ]
+    },
+    "andorra": {
+      "iso": "AND",
+      "counts": {
+        "1": 7
+      },
+      "population": {
+        "populationUnits": 7,
+        "missingPopulationUnits": 0,
+        "nationalGdpYear": 2025
+      },
+      "bounds": [
+        [
+          1.413638,
+          42.428731
+        ],
+        [
+          1.78656,
+          42.65588
+        ]
+      ],
+      "labelCenter": [
+        1.575699,
+        42.545583
+      ]
+    },
+    "liechtenstein": {
+      "iso": "LIE",
+      "counts": {
+        "1": 11
+      },
+      "population": {
+        "populationUnits": 11,
+        "missingPopulationUnits": 0,
+        "nationalGdpYear": 2024
+      },
+      "bounds": [
+        [
+          9.471786,
+          47.048514
+        ],
+        [
+          9.6357,
+          47.270648
+        ]
+      ],
+      "labelCenter": [
+        9.561769,
+        47.123788
+      ]
+    },
+    "malta": {
+      "iso": "MLT",
+      "counts": {
+        "1": 68
+      },
+      "population": {
+        "populationUnits": 0,
+        "missingPopulationUnits": 68,
+        "nationalGdpYear": 2025
+      },
+      "bounds": [
+        [
+          14.183534,
+          35.806052
+        ],
+        [
+          14.576407,
+          36.083023
+        ]
+      ],
+      "labelCenter": [
+        14.440752,
+        35.888432
+      ]
+    },
+    "israel": {
+      "iso": "ISR",
+      "counts": {
+        "1": 6,
+        "2": 14
+      },
+      "population": {
+        "populationUnits": 0,
+        "missingPopulationUnits": 20,
+        "nationalGdpYear": 2025
+      },
+      "bounds": [
+        [
+          34.270617,
+          29.488974
+        ],
+        [
+          35.684603,
+          33.289623
+        ]
+      ],
+      "labelCenter": [
+        34.877398,
+        30.903083
+      ]
+    },
+    "kuwait": {
+      "iso": "KWT",
+      "counts": {
+        "1": 6
+      },
+      "population": {
+        "populationUnits": 0,
+        "missingPopulationUnits": 6,
+        "nationalGdpYear": 2025
+      },
+      "bounds": [
+        [
+          46.547361,
+          28.524614
+        ],
+        [
+          48.654026,
+          30.096123
+        ]
+      ],
+      "labelCenter": [
+        47.344301,
+        29.373793
+      ]
+    },
+    "lebanon": {
+      "iso": "LBN",
+      "counts": {
+        "1": 9,
+        "2": 26
+      },
+      "population": {
+        "populationUnits": 0,
+        "missingPopulationUnits": 35,
+        "nationalGdpYear": 2024
+      },
+      "bounds": [
+        [
+          35.103487,
+          33.053151
+        ],
+        [
+          36.62536,
+          34.684862
+        ]
+      ],
+      "labelCenter": [
+        35.952064,
+        34.096872
+      ]
+    },
+    "palestine": {
+      "iso": "PSE",
+      "counts": {
+        "1": 2,
+        "2": 16
+      },
+      "population": {
+        "populationUnits": 2,
+        "missingPopulationUnits": 16,
+        "nationalGdpYear": 2025
+      },
+      "bounds": [
+        [
+          34.21864,
+          31.222175
+        ],
+        [
+          35.588185,
+          32.552394
+        ]
+      ],
+      "labelCenter": [
+        35.27099,
+        32.031417
+      ]
+    }
+  },
+  "frontiers": "scripts/boundary-sources/world-completion/frontiers.bin",
+  "policy": "All 193 UN member states and both UN observer states are represented, including existing combined Congo and Korea entries. Source dates and special territorial scope are retained. National GDP is not allocated to subdivisions."
+}

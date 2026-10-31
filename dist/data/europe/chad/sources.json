@@ -1,0 +1,75 @@
+{
+  "retrieved": "2026-10-31",
+  "coverage": "Dated source administrative reference; observation years and coverage retained independently. All hierarchy levels dissolve from one cleaned local partition. New international edges follow a single shared display arc and existing neighbors retain their administrative land. Population dates and coverage are independent of boundary dates. National GDP is not allocated to subdivisions. Country overview pages remain hidden.",
+  "counts": {
+    "1": 23,
+    "2": 70
+  },
+  "processing": "Dated source administrative reference; observation years and coverage retained independently. All hierarchy levels dissolve from one cleaned local partition. New international edges follow a single shared display arc and existing neighbors retain their administrative land. Population dates and coverage are independent of boundary dates. National GDP is not allocated to subdivisions. Country overview pages remain hidden.",
+  "sources": {
+    "tcd-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-tcd",
+      "bytes": 42341,
+      "sha256": "1211f58c153675946a193a68670bfc7164b6be213f0c815a3c0d0aeec003eb47"
+    },
+    "tcd-ps-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-tcd",
+      "bytes": 26944,
+      "sha256": "0ee04a460193dfeddb284a4d7a543df636cbe6ec7a63514fec1c00062ed1705b"
+    },
+    "tcd-gb1-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/TCD/ADM1/",
+      "bytes": 1720,
+      "sha256": "9f33162da2086eb51d423142710ac83f2644d350c00e2610a3b87c8519f4afb7"
+    },
+    "tcd-gb2-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/TCD/ADM2/",
+      "bytes": 1783,
+      "sha256": "5abed3e7988689c0ded5f705b388e13ff03b0d77b23a6d3c92ec56019a1cea28"
+    },
+    "flag-td.svg": {
+      "url": "https://flagcdn.com/td.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "bytes": 197,
+      "sha256": "46d9a786225c476c021be32564d43497ec48d654694379969ac86d4aec8cf8a0"
+    },
+    "tcd.zip": {
+      "url": "https://data.humdata.org/dataset/f01c8222-b67d-41ff-954a-731aafd4466b/resource/575b9fe1-a995-43b8-9e12-de98d4d7d7d1/download/tcd_admin_boundaries.geojson.zip",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "credit": "National provider / OCHA HDX COD-AB",
+      "bytes": 148527,
+      "sha256": "7e31c4dacca1966467de3c6948f4cb11a3dd97049904fd710a66032cade240e9"
+    },
+    "tcd-population-tcd_admpop_adm0_2023.csv": {
+      "url": "https://data.humdata.org/dataset/5e60290d-0a82-48e2-9454-812b01c7d9d4/resource/ce1b0007-e65c-4b3c-bd48-2cd0e3b9d203/download/tcd_admpop_adm0_2023.csv",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "credit": "National provider / OCHA HDX COD-PS",
+      "bytes": 879,
+      "sha256": "36637a806dd1a013cccfdf47a9e734926e5c14ab14d8ca32cdba0c8da3b5f0bc"
+    },
+    "tcd-population-tcd_admpop_adm1_2023.csv": {
+      "url": "https://data.humdata.org/dataset/5e60290d-0a82-48e2-9454-812b01c7d9d4/resource/fb3d793e-57c5-4fb9-b361-8d4222fd254e/download/tcd_admpop_adm1_2023.csv",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "credit": "National provider / OCHA HDX COD-PS",
+      "bytes": 8425,
+      "sha256": "a00c6055992d2c3a32e12de507917396f8c51380dee445c21ab3c6bc4b60e369"
+    }
+  },
+  "displaySimplificationDegrees": 0.00005,
+  "sourceCounts": {
+    "1": 23,
+    "2": 70
+  },
+  "waterPlaceholders": [],
+  "statisticalCoverage": {
+    "populationUnits": 23,
+    "missingPopulationUnits": 70,
+    "nationalGdpYear": 2025
+  },
+  "displayNames": {
+    "note": "Source identities and geometry unchanged; display case and native-language names normalized independently.",
+    "sources": [],
+    "nativeField": "Existing retained localized source attribute; French source capitalization normalized for Chad"
+  }
+}

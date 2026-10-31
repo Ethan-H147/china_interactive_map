@@ -1,0 +1,86 @@
+{
+  "retrieved": "2026-10-31",
+  "coverage": "Dated source administrative reference; observation years and coverage retained independently. All hierarchy levels dissolve from one cleaned local partition. New international edges follow a single shared display arc and existing neighbors retain their administrative land. Population dates and coverage are independent of boundary dates. National GDP is not allocated to subdivisions. Country overview pages remain hidden.",
+  "counts": {
+    "1": 8,
+    "2": 67,
+    "3": 266
+  },
+  "processing": "Dated source administrative reference; observation years and coverage retained independently. All hierarchy levels dissolve from one cleaned local partition. New international edges follow a single shared display arc and existing neighbors retain their administrative land. Population dates and coverage are independent of boundary dates. National GDP is not allocated to subdivisions. Country overview pages remain hidden.",
+  "sources": {
+    "ner-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-ner",
+      "bytes": 45919,
+      "sha256": "a84f0e86e2f4529f479adf62b263cc38adb2ea1aad63a91d2ada318a2dd02ffb"
+    },
+    "ner-ps-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-ner",
+      "bytes": 52894,
+      "sha256": "92283b7a8c932b00bacd9c946991446da3320ae5951a54231b21888b7c47922d"
+    },
+    "ner-gb1-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/NER/ADM1/",
+      "bytes": 1698,
+      "sha256": "6a32ec8359d59c7f771c8db72fe8af3892085866af20829df4e1616397208fbc"
+    },
+    "ner-gb2-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/NER/ADM2/",
+      "bytes": 1767,
+      "sha256": "c84669112a60b3d7a9533fc08a7ae0d59430e536ee60ff8fb8a0a5bbc83f5e2b"
+    },
+    "flag-ne.svg": {
+      "url": "https://flagcdn.com/ne.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "bytes": 243,
+      "sha256": "286098862efda02108b4a8fe0c7f75b1275685be841c62a283d55412155781d9"
+    },
+    "ner.zip": {
+      "url": "https://data.humdata.org/dataset/c0e0998c-b45a-4aea-ac06-c1de1d94e596/resource/52a76bdf-7c22-43d4-9e2d-bad40351007c/download/ner_admin_boundaries.geojson.zip",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "credit": "National provider / OCHA HDX COD-AB",
+      "bytes": 1645764,
+      "sha256": "f506d8bc0eb32b730efd78cc6be8c5a0666eba799bce8fd6a4ae218c1b0c3b77"
+    },
+    "ner-population-ner_admpop_adm3_2024.csv": {
+      "url": "https://data.humdata.org/dataset/d5687df7-7163-42c7-a483-4e6dc0c569b4/resource/c2d75d02-f115-4124-a6c7-12bf5e03c888/download/ner_admpop_adm3_2024.csv",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "credit": "National provider / OCHA HDX COD-PS",
+      "bytes": 94681,
+      "sha256": "d2398a66482058c001ef9672cf6887e816ebe0d3483414d8fce6134760b0b5f6"
+    },
+    "ner-population-ner_admpop_adm2_2024.csv": {
+      "url": "https://data.humdata.org/dataset/d5687df7-7163-42c7-a483-4e6dc0c569b4/resource/b0532577-b660-4e46-bfae-9b552dfde1d7/download/ner_admpop_adm2_2024.csv",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "credit": "National provider / OCHA HDX COD-PS",
+      "bytes": 24632,
+      "sha256": "5257125c01bf815017f9106f18da0f72df862059565a24cd1b0029a0f867df43"
+    },
+    "ner-population-ner_admpop_adm1_2024.csv": {
+      "url": "https://data.humdata.org/dataset/d5687df7-7163-42c7-a483-4e6dc0c569b4/resource/3a8566e1-ebaa-44bc-bc40-1313897fc808/download/ner_admpop_adm1_2024.csv",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "credit": "National provider / OCHA HDX COD-PS",
+      "bytes": 3696,
+      "sha256": "0a22be9fb93fe5ea25f0a70fe26a5a1185a1ba00c6ccb9485594c927ca788111"
+    },
+    "ner-population-ner_admpop_adm0_2024.csv": {
+      "url": "https://data.humdata.org/dataset/d5687df7-7163-42c7-a483-4e6dc0c569b4/resource/a55ddcc3-38b1-4088-a51e-0b2d2f41d82c/download/ner_admpop_adm0_2024.csv",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "credit": "National provider / OCHA HDX COD-PS",
+      "bytes": 999,
+      "sha256": "63b97642d81eba302d231f5fcd5a177e247a9936af0739aa9607adbfe157ac45"
+    }
+  },
+  "displaySimplificationDegrees": 0.00005,
+  "sourceCounts": {
+    "1": 8,
+    "2": 67,
+    "3": 266
+  },
+  "waterPlaceholders": [],
+  "statisticalCoverage": {
+    "populationUnits": 341,
+    "missingPopulationUnits": 0,
+    "nationalGdpYear": 2025
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "retrieved": "2026-10-31",
+  "coverage": "Barbados administrative reference from the retained licensed source. All hierarchy levels dissolve from the same jointly simplified local partition (0.00008 degree display tolerance, approximately five to nine metres). Source water-only polygons are excluded from administrative units. Shared international arcs use one owner and common junctions; existing neighboring administrative geometry remains fixed. Population observations retain their own year and coverage. National World Bank GDP and GDP per capita are retained without distributing national output among subdivisions. Country overview pages remain hidden.",
+  "counts": {
+    "1": 11
+  },
+  "processing": "Barbados administrative reference from the retained licensed source. All hierarchy levels dissolve from the same jointly simplified local partition (0.00008 degree display tolerance, approximately five to nine metres). Source water-only polygons are excluded from administrative units. Shared international arcs use one owner and common junctions; existing neighboring administrative geometry remains fixed. Population observations retain their own year and coverage. National World Bank GDP and GDP per capita are retained without distributing national output among subdivisions. Country overview pages remain hidden.",
+  "sources": {
+    "brb-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-brb",
+      "bytes": 24330,
+      "sha256": "6bdb93d8318100e15c9951025e55f880df7645b65076a398fce6cee7d115cb46"
+    },
+    "brb-adm1-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/BRB/ADM1/",
+      "bytes": 1708,
+      "sha256": "8065e71423d2c43b04a0a4ea5b2a13406d0b21f925a2a27ac4a69b7a27b91141"
+    },
+    "brb-adm1.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/BRB/ADM1/geoBoundaries-BRB-ADM1.geojson",
+      "credit": "geoBoundaries, Wikimedia",
+      "license": "Creative Commons Attribution 2.5 Generic",
+      "year": "2005",
+      "bytes": 47860,
+      "sha256": "b51cbd344b87ffa332e6ca2003ea9b77d5ff43d00d37eec951665f5c08b31b8f"
+    },
+    "brb-ps-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-brb",
+      "bytes": 8021,
+      "sha256": "d3787492f311dd7acbd14be15ecd6915c7a55de312bc4f20981c6766844af29c"
+    },
+    "brb-population-brb_admpop_adm0_2010_v2.csv": {
+      "url": "https://data.humdata.org/dataset/81fb3abf-2aca-404a-b1f0-84ce9441bac8/resource/b001b93f-f700-46f4-ac1a-2d6d2050e346/download/brb_admpop_adm0_2010_v2.csv",
+      "credit": "Barbados - Subnational Population Statistics",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "bytes": 633,
+      "sha256": "121eb842dad019a8797324e71828c5e7c6906c715812f6c56e61d332dc0b777b"
+    },
+    "flag-bb.svg": {
+      "url": "https://flagcdn.com/bb.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "bytes": 606,
+      "sha256": "b38fe14e1e967ea658331d386e8028c5a02d2de70c8376b06deda6ea77a4938b"
+    },
+    "brb-census-2021.pdf": {
+      "url": "https://www.stats.gov.bb/wp-content/uploads/2024/02/2021-Population-and-Housing-Census.pdf",
+      "credit": "National statistics office; official census publication",
+      "license": "Statistical facts; retain source attribution",
+      "bytes": 2141565,
+      "sha256": "f4f6f5faa539c834635a1454c6733d34cd81754ea597976e2d3d863f52089bd5"
+    }
+  },
+  "displaySimplificationDegrees": 0.00008,
+  "sourceCounts": {
+    "1": 11
+  },
+  "waterPlaceholders": [],
+  "statisticalCoverage": {
+    "populationUnits": 11,
+    "missingPopulationUnits": 0,
+    "nationalGdpYear": 2025
+  }
+}

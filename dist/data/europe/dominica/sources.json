@@ -1,0 +1,57 @@
+{
+  "retrieved": "2026-10-31",
+  "coverage": "Dominica administrative reference from the retained licensed source. All hierarchy levels dissolve from the same jointly simplified local partition (0.00008 degree display tolerance, approximately five to nine metres). Source water-only polygons are excluded from administrative units. Shared international arcs use one owner and common junctions; existing neighboring administrative geometry remains fixed. Population observations retain their own year and coverage. National World Bank GDP and GDP per capita are retained without distributing national output among subdivisions. Country overview pages remain hidden.",
+  "counts": {
+    "1": 10
+  },
+  "processing": "Dominica administrative reference from the retained licensed source. All hierarchy levels dissolve from the same jointly simplified local partition (0.00008 degree display tolerance, approximately five to nine metres). Source water-only polygons are excluded from administrative units. Shared international arcs use one owner and common junctions; existing neighboring administrative geometry remains fixed. Population observations retain their own year and coverage. National World Bank GDP and GDP per capita are retained without distributing national output among subdivisions. Country overview pages remain hidden.",
+  "sources": {
+    "dma-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-dma",
+      "bytes": 30798,
+      "sha256": "a1129681350dd2e7795e223c2defdd8dd7ed4287b40dc138dcc84210c60afd50"
+    },
+    "dma-adm1-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/DMA/ADM1/",
+      "bytes": 1725,
+      "sha256": "24494333efe962c1b697b44f4a3df4eaeb156cece30185f7acafa2860ecc2530"
+    },
+    "dma-adm1.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/DMA/ADM1/geoBoundaries-DMA-ADM1.geojson",
+      "credit": "geoBoundaries, Wikimedia Commons",
+      "license": "Creative Commons Attribution 2.5 Generic",
+      "year": "2005",
+      "bytes": 108616,
+      "sha256": "0aa346d89500214422d46c5344b62005ca15ae9edbbf00f2fd304e307726cecd"
+    },
+    "dma-ps-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-dma",
+      "bytes": 8711,
+      "sha256": "aaad5c570db207687960ceab6477492ae633a74cf68a2b82b3384ed3d6d7ac6e"
+    },
+    "flag-dm.svg": {
+      "url": "https://flagcdn.com/dm.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "bytes": 4810,
+      "sha256": "b4371e4737d00b0391dbfc43db8136f9976dfc2d348c6b9cecf598e154319edc"
+    },
+    "dma-population.html": {
+      "url": "https://stats.gov.dm/subjects/demographic-statistics/population-by-sex-and-parish-2001-and-2011/",
+      "credit": "National statistics office; official census publication",
+      "license": "Statistical facts; retain source attribution",
+      "bytes": 167527,
+      "sha256": "39685dfb220815c79d3a855aaa49934b5ce8bf231eae5bf979d6d905be596436"
+    }
+  },
+  "displaySimplificationDegrees": 0.00008,
+  "sourceCounts": {
+    "1": 10
+  },
+  "waterPlaceholders": [],
+  "statisticalCoverage": {
+    "populationUnits": 10,
+    "missingPopulationUnits": 0,
+    "nationalGdpYear": 2025
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "retrieved": "2026-10-31",
+  "coverage": "Six-district / fifteen-subdistrict source reference, clipped against the separately retained Palestine polygons and existing Syrian display. Population totals with a different territorial coverage are not allocated to subdivisions. All hierarchy levels dissolve from one cleaned local partition. New international edges follow a single shared display arc and existing neighbors retain their administrative land. Population dates and coverage are independent of boundary dates. National GDP is not allocated to subdivisions. Country overview pages remain hidden.",
+  "counts": {
+    "1": 6,
+    "2": 14
+  },
+  "processing": "Six-district / fifteen-subdistrict source reference, clipped against the separately retained Palestine polygons and existing Syrian display. Population totals with a different territorial coverage are not allocated to subdivisions. All hierarchy levels dissolve from one cleaned local partition. New international edges follow a single shared display arc and existing neighbors retain their administrative land. Population dates and coverage are independent of boundary dates. National GDP is not allocated to subdivisions. Country overview pages remain hidden.",
+  "sources": {
+    "isr-gb1-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/ISR/ADM1/",
+      "bytes": 1662,
+      "sha256": "bacb0175df47ba950ea47a0a7303799dba17e1b2857fd5a28a054aebaae7af2c"
+    },
+    "isr-gb2-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/ISR/ADM2/",
+      "bytes": 1731,
+      "sha256": "bc189b981677fc9c90ec0df8be34b4d8f450236d1945b81b4de65bc9a3005ee4"
+    },
+    "flag-il.svg": {
+      "url": "https://flagcdn.com/il.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "bytes": 309,
+      "sha256": "9e884f0c6d1001f8de2b478d3de9582f93fbbd9badcb31e3f52fefa3974ebc75"
+    },
+    "isr-adm1.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/ISR/ADM1/geoBoundaries-ISR-ADM1.geojson",
+      "license": "Public Domain",
+      "credit": "geoBoundaries, Wikimedia",
+      "year": "2006",
+      "bytes": 111139,
+      "sha256": "1ddf8523ef2074d658fd4a696fbb7ff82b73b77a0d69e620ed564f9a1b8c85d3"
+    },
+    "isr-adm2.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/ISR/ADM2/geoBoundaries-ISR-ADM2.geojson",
+      "license": "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
+      "credit": "geoBoundaries, Wikimedia Commons",
+      "year": "2021",
+      "bytes": 322281,
+      "sha256": "32079c9747279aa5f7a060b4cce241814ea46c45ae4081f3b713c0ddf7b05100"
+    }
+  },
+  "displaySimplificationDegrees": 0.00005,
+  "sourceCounts": {
+    "1": 6,
+    "2": 14
+  },
+  "waterPlaceholders": [],
+  "statisticalCoverage": {
+    "populationUnits": 0,
+    "missingPopulationUnits": 20,
+    "nationalGdpYear": 2025
+  },
+  "displayNames": {
+    "note": "Source identities and geometry unchanged; display case and native-language names normalized independently.",
+    "sources": [
+      {
+        "title": "Israel Central Bureau of Statistics: districts and subdistricts",
+        "url": "https://www.cbs.gov.il/he/publications/doclib/2021/1.shnatongeography/st01_01.pdf"
+      }
+    ],
+    "nativeField": "Verified native-language name table"
+  }
+}

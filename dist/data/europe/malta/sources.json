@@ -1,0 +1,68 @@
+{
+  "retrieved": "2026-10-31",
+  "coverage": "Dated source administrative reference; observation years and coverage retained independently. All hierarchy levels dissolve from one cleaned local partition. New international edges follow a single shared display arc and existing neighbors retain their administrative land. Population dates and coverage are independent of boundary dates. National GDP is not allocated to subdivisions. Country overview pages remain hidden.",
+  "counts": {
+    "1": 68
+  },
+  "processing": "Dated source administrative reference; observation years and coverage retained independently. All hierarchy levels dissolve from one cleaned local partition. New international edges follow a single shared display arc and existing neighbors retain their administrative land. Population dates and coverage are independent of boundary dates. National GDP is not allocated to subdivisions. Country overview pages remain hidden.",
+  "sources": {
+    "mlt-gb1-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/MLT/ADM1/",
+      "bytes": 1750,
+      "sha256": "44a26f93e960dca7adf40a6f7f92d1f67c0066dd29df2f2d471bbd3ac4eadd5b"
+    },
+    "flag-mt.svg": {
+      "url": "https://flagcdn.com/mt.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "bytes": 15284,
+      "sha256": "708f8eef0bca92371fd77cdf0f567bb432f292e0fea202b97e181b011bddf3cb"
+    },
+    "mlt-adm1.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/MLT/ADM1/geoBoundaries-MLT-ADM1.geojson",
+      "license": "Public Domain",
+      "credit": "geoBoundaries, d-maps.com",
+      "year": "2022",
+      "bytes": 313611,
+      "sha256": "7d7f4853b270c3afbbef522b54fc3ea1bcedf27e3912a33574024b5cdd304fe3"
+    },
+    "mlt-map-app.json": {
+      "url": "https://www.arcgis.com/sharing/rest/content/items/57c7860810c144f6a5aafa9559d48dc7/data?f=json",
+      "credit": "Malta NSO published population map",
+      "license": "Official statistical publication",
+      "bytes": 4783,
+      "sha256": "04cd383ecbb206b0a714378d55145ae0557a74e02fad86671dbffffb5ef7587d"
+    },
+    "mlt-map-webmap.json": {
+      "url": "https://www.arcgis.com/sharing/rest/content/items/5ff0163d779841bcb974b1d5e69264b1/data?f=json",
+      "credit": "Malta NSO published population map",
+      "license": "Official statistical publication",
+      "bytes": 4565,
+      "sha256": "93b2c5e832e5372cdbf14c3710819ea963f2367bafe6a684a4595eb090a1d7a4"
+    },
+    "mlt-population-map-layer.json": {
+      "url": "https://services3.arcgis.com/Bw0SiEzK3K2cBe4w/arcgis/rest/services/Population_Density_2025/FeatureServer/0?f=json",
+      "credit": "Malta NSO population map",
+      "license": "Public official statistical data; layer license retained",
+      "bytes": 9144,
+      "sha256": "01d85ae59aebaa9917c09423d27155698b69aa5691357d496c2cd394525749a5"
+    },
+    "mlt-population-map-features.json": {
+      "url": "https://services3.arcgis.com/Bw0SiEzK3K2cBe4w/arcgis/rest/services/Population_Density_2025/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=false&f=json",
+      "credit": "Malta NSO 2025 population-density publication",
+      "license": "Official statistical facts",
+      "bytes": 15645,
+      "sha256": "c93dc49a8180a0064d4ff09c2a27faff92421b4ff05351341f1c0e4cbe5d7b28"
+    }
+  },
+  "displaySimplificationDegrees": 0.00005,
+  "sourceCounts": {
+    "1": 68
+  },
+  "waterPlaceholders": [],
+  "statisticalCoverage": {
+    "populationUnits": 0,
+    "missingPopulationUnits": 68,
+    "nationalGdpYear": 2025
+  }
+}

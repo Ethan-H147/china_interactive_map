@@ -1,0 +1,84 @@
+{
+  "retrieved": "2026-10-31",
+  "coverage": "Open geoBoundaries 2006 prefecture reference (17 units), not the later 20-prefecture structure. The restricted humanitarian-only COD-AB geometry is not used. All hierarchy levels dissolve from one cleaned local partition. New international edges follow a single shared display arc and existing neighbors retain their administrative land. Population dates and coverage are independent of boundary dates. National GDP is not allocated to subdivisions. Country overview pages remain hidden.",
+  "counts": {
+    "1": 17
+  },
+  "processing": "Open geoBoundaries 2006 prefecture reference (17 units), not the later 20-prefecture structure. The restricted humanitarian-only COD-AB geometry is not used. All hierarchy levels dissolve from one cleaned local partition. New international edges follow a single shared display arc and existing neighbors retain their administrative land. Population dates and coverage are independent of boundary dates. National GDP is not allocated to subdivisions. Country overview pages remain hidden.",
+  "sources": {
+    "caf-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-caf",
+      "bytes": 67745,
+      "sha256": "fedd452912f621488b3508a02b7e544c4922ac91ff8e652805e723f14894fe2f"
+    },
+    "caf-ps-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-caf",
+      "bytes": 22708,
+      "sha256": "74c5209e7c7f9f59c25a5b4252e48426016702be7b8992997ee1465a69eed32d"
+    },
+    "caf-gb1-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/CAF/ADM1/",
+      "bytes": 1707,
+      "sha256": "a50650dd5d182cf4194048505875d78566a7aa12ffc92cf19a7a6909a7cb1539"
+    },
+    "caf-gb2-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/CAF/ADM2/",
+      "bytes": 1720,
+      "sha256": "2573d85a086f3a3e8c0ed8915e474f2b094c6e84398697c962508aff7caa6685"
+    },
+    "flag-cf.svg": {
+      "url": "https://flagcdn.com/cf.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "bytes": 331,
+      "sha256": "f36cc981bf26cff6c9111be3edf29aa565164e713f9704e22d98116ac80816aa"
+    },
+    "caf-adm1.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/CAF/ADM1/geoBoundaries-CAF-ADM1.geojson",
+      "license": "Creative Commons Attribution 2.5 Generic",
+      "credit": "geoBoundaries, Wikimedia",
+      "year": "2006",
+      "bytes": 123350,
+      "sha256": "547d0c8fb9689eb902d7d2b48ecb739bdcbc44621bb5fcc1b60c6f25795462c7"
+    },
+    "caf-adm2.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/CAF/ADM2/geoBoundaries-CAF-ADM2.geojson",
+      "license": "Creative Commons Attribution 3.0 License",
+      "credit": "geoBoundaries, UNHCR",
+      "year": "2015",
+      "bytes": 1546806,
+      "sha256": "21b8d8983dac49f5f947e5d648c8fb93185547bbba4ce3360f1ffe4d2c7add91"
+    },
+    "caf-population-caf_admpop_adm1_2015_v2.csv": {
+      "url": "https://data.humdata.org/dataset/d3600c4b-d93d-4ed0-b7b1-359a060b916a/resource/58403047-f30e-4719-94b0-8d6f7e0f6942/download/caf_admpop_adm1_2015_v2.csv",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "credit": "National provider / OCHA HDX COD-PS",
+      "bytes": 1320,
+      "sha256": "0d5e1f0d171f0a779b76ffee17feb567e976ba163b4f9a251b232337262d8379"
+    },
+    "caf-population-caf_admpop_adm2_2015_v2.csv": {
+      "url": "https://data.humdata.org/dataset/d3600c4b-d93d-4ed0-b7b1-359a060b916a/resource/2b74b781-c889-4cb9-9624-418577809c1e/download/caf_admpop_adm2_2015_v2.csv",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "credit": "National provider / OCHA HDX COD-PS",
+      "bytes": 4794,
+      "sha256": "bcd6a66931f18a6561668801711b1a56189406ac1f1d78c316552ffebcb2cb55"
+    },
+    "caf-population-caf_admpop_adm3_2015_v2.csv": {
+      "url": "https://data.humdata.org/dataset/d3600c4b-d93d-4ed0-b7b1-359a060b916a/resource/17c5c468-fb12-4114-8286-3feb2069ab0a/download/caf_admpop_adm3_2015_v2.csv",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "credit": "National provider / OCHA HDX COD-PS",
+      "bytes": 14072,
+      "sha256": "84d0e30e5e0174f99c16ea344e7aab8efd714b23d2e144cdaa17131866157e27"
+    }
+  },
+  "displaySimplificationDegrees": 0.00005,
+  "sourceCounts": {
+    "1": 17
+  },
+  "waterPlaceholders": [],
+  "statisticalCoverage": {
+    "populationUnits": 16,
+    "missingPopulationUnits": 1,
+    "nationalGdpYear": 2025
+  }
+}

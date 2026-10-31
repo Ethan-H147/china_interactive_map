@@ -1,0 +1,613 @@
+{
+  "fixtures": [
+    {
+      "name": "Lake Baikal",
+      "country": "russia",
+      "point": [
+        106.08462572,
+        52.250541
+      ],
+      "land": [
+        109.57027962500001,
+        53.721867375
+      ],
+      "bounds": [
+        [
+          103.708754,
+          51.473508
+        ],
+        [
+          109.961048,
+          55.790358
+        ]
+      ],
+      "levels": [
+        {
+          "id": "RU-BU",
+          "level": 1
+        },
+        {
+          "id": "RU-D-52589060558115",
+          "level": 2
+        }
+      ],
+      "borderPoints": [
+        [
+          104.62107214999999,
+          51.5030267
+        ],
+        [
+          106.14822133333334,
+          52.33902966666667
+        ],
+        [
+          108.017117,
+          53.23871666666667
+        ]
+      ]
+    },
+    {
+      "name": "Lake Taymyr",
+      "country": "russia",
+      "point": [
+        101.65791924,
+        74.5020555
+      ],
+      "land": [
+        102.31909791666666,
+        74.3057024375
+      ],
+      "bounds": [
+        [
+          99.124327,
+          73.828845
+        ],
+        [
+          105.791675,
+          75.175266
+        ]
+      ],
+      "levels": [
+        {
+          "id": "RU-KYA",
+          "level": 1
+        },
+        {
+          "id": "RU-D-66849950652275",
+          "level": 2
+        }
+      ],
+      "borderPoints": []
+    },
+    {
+      "name": "Iliamna Lake",
+      "country": "united-states",
+      "point": [
+        -155.56119946,
+        59.4850223
+      ],
+      "land": [
+        -153.9271809375,
+        59.512157020833335
+      ],
+      "bounds": [
+        [
+          -155.929237,
+          59.319784
+        ],
+        [
+          -153.884584,
+          59.805779
+        ]
+      ],
+      "levels": [
+        {
+          "id": "US-AK",
+          "level": 1
+        },
+        {
+          "id": "US-COUNTY-02164",
+          "level": 2
+        }
+      ],
+      "borderPoints": []
+    },
+    {
+      "name": "Qinghai Hu",
+      "country": "china",
+      "point": [
+        100.00810876,
+        36.911850539999996
+      ],
+      "bounds": [
+        [
+          99.617682,
+          36.541005
+        ],
+        [
+          100.765996,
+          37.227756
+        ]
+      ],
+      "levels": [],
+      "borderPoints": []
+    },
+    {
+      "name": "Lake Van",
+      "country": "turkey",
+      "point": [
+        42.7074999,
+        38.602936799999995
+      ],
+      "land": [
+        42.894413687500005,
+        38.987274416666665
+      ],
+      "bounds": [
+        [
+          42.299688,
+          38.314254
+        ],
+        [
+          43.659061,
+          39.001594
+        ]
+      ],
+      "levels": [
+        {
+          "id": "TR-R-TRB",
+          "level": 1
+        },
+        {
+          "id": "TR-P-13",
+          "level": 2
+        },
+        {
+          "id": "TR-D-013007",
+          "level": 3
+        }
+      ],
+      "borderPoints": []
+    },
+    {
+      "name": "Reindeer Lake",
+      "country": "canada",
+      "point": [
+        -102.27564378,
+        57.66807742
+      ],
+      "land": [
+        -102.60885818749999,
+        56.3058081875
+      ],
+      "bounds": [
+        [
+          -103.325043,
+          56.266345
+        ],
+        [
+          -101.515734,
+          58.160578
+        ]
+      ],
+      "levels": [
+        {
+          "id": "CA-SK",
+          "level": 1
+        },
+        {
+          "id": "CA-CD-4718",
+          "level": 2
+        },
+        {
+          "id": "CA-CSD-4718090",
+          "level": 3
+        }
+      ],
+      "borderPoints": [
+        [
+          -102.00604468250951,
+          58.12533965969582
+        ],
+        [
+          -102.00575950000001,
+          57.7805645
+        ],
+        [
+          -102.00558591064639,
+          57.57070135931559
+        ]
+      ]
+    },
+    {
+      "name": "Lake Winnipegosis",
+      "country": "canada",
+      "point": [
+        -99.87648474,
+        52.69874
+      ],
+      "land": [
+        -101.08306097916666,
+        52.61185720833333
+      ],
+      "bounds": [
+        [
+          -101.114515,
+          51.575947
+        ],
+        [
+          -99.604722,
+          53.179937
+        ]
+      ],
+      "levels": [
+        {
+          "id": "CA-MB",
+          "level": 1
+        },
+        {
+          "id": "CA-CD-4619",
+          "level": 2
+        },
+        {
+          "id": "CA-CSD-4619045",
+          "level": 3
+        }
+      ],
+      "borderPoints": []
+    },
+    {
+      "name": "Lake Manitoba",
+      "country": "canada",
+      "point": [
+        -98.35566091999999,
+        50.41408022
+      ],
+      "land": [
+        -98.78083020833333,
+        50.4235484375
+      ],
+      "bounds": [
+        [
+          -99.561892,
+          50.186843
+        ],
+        [
+          -97.93185,
+          51.809966
+        ]
+      ],
+      "levels": [
+        {
+          "id": "CA-MB",
+          "level": 1
+        },
+        {
+          "id": "CA-CD-4618",
+          "level": 2
+        },
+        {
+          "id": "CA-CSD-4618093",
+          "level": 3
+        }
+      ],
+      "borderPoints": []
+    },
+    {
+      "name": "Wollaston Lake",
+      "country": "canada",
+      "point": [
+        -103.36042814,
+        58.26493576
+      ],
+      "land": [
+        -103.84346360416666,
+        58.289803625
+      ],
+      "bounds": [
+        [
+          -103.866378,
+          57.668107
+        ],
+        [
+          -102.766487,
+          58.572393
+        ]
+      ],
+      "levels": [
+        {
+          "id": "CA-SK",
+          "level": 1
+        },
+        {
+          "id": "CA-CD-4718",
+          "level": 2
+        },
+        {
+          "id": "CA-CSD-4718090",
+          "level": 3
+        }
+      ],
+      "borderPoints": []
+    },
+    {
+      "name": "Southern Indian Lake",
+      "country": "canada",
+      "point": [
+        -98.3025812,
+        57.28218376
+      ],
+      "land": [
+        -99.55918366666667,
+        57.09104275
+      ],
+      "bounds": [
+        [
+          -99.742042,
+          56.632828
+        ],
+        [
+          -97.986602,
+          57.680176
+        ]
+      ],
+      "levels": [
+        {
+          "id": "CA-MB",
+          "level": 1
+        },
+        {
+          "id": "CA-CD-4623",
+          "level": 2
+        },
+        {
+          "id": "CA-CSD-4623062",
+          "level": 3
+        }
+      ],
+      "borderPoints": []
+    },
+    {
+      "name": "Churchill Lake",
+      "country": "canada",
+      "point": [
+        -108.94956438,
+        56.014610319999996
+      ],
+      "land": [
+        -108.8902789375,
+        55.60441175
+      ],
+      "bounds": [
+        [
+          -109.206144,
+          55.523664
+        ],
+        [
+          -108.039873,
+          56.815628
+        ]
+      ],
+      "levels": [
+        {
+          "id": "CA-SK",
+          "level": 1
+        },
+        {
+          "id": "CA-CD-4718",
+          "level": 2
+        },
+        {
+          "id": "CA-CSD-4718090",
+          "level": 3
+        }
+      ],
+      "borderPoints": []
+    },
+    {
+      "name": "Nueltin Lake",
+      "country": "canada",
+      "point": [
+        -99.72377413999999,
+        60.07247276
+      ],
+      "land": [
+        -99.63651897916667,
+        60.794547875
+      ],
+      "bounds": [
+        [
+          -100.255119,
+          59.580296
+        ],
+        [
+          -98.69234,
+          60.875498
+        ]
+      ],
+      "levels": [
+        {
+          "id": "CA-NU",
+          "level": 1
+        },
+        {
+          "id": "CA-CD-6205",
+          "level": 2
+        },
+        {
+          "id": "CA-CSD-6205033",
+          "level": 3
+        }
+      ],
+      "borderPoints": [
+        [
+          -99.64180050626305,
+          60
+        ],
+        [
+          -99.76158206784969,
+          60
+        ],
+        [
+          -99.88136362943632,
+          60
+        ]
+      ]
+    },
+    {
+      "name": "Cedar Lake",
+      "country": "canada",
+      "point": [
+        -100.38696800000001,
+        53.4543136
+      ],
+      "land": [
+        -100.69780941666667,
+        53.10475725
+      ],
+      "bounds": [
+        [
+          -100.931274,
+          53.043646
+        ],
+        [
+          -99.330374,
+          53.630314
+        ]
+      ],
+      "levels": [
+        {
+          "id": "CA-MB",
+          "level": 1
+        },
+        {
+          "id": "CA-CD-4621",
+          "level": 2
+        },
+        {
+          "id": "CA-CSD-4621078",
+          "level": 3
+        }
+      ],
+      "borderPoints": []
+    }
+  ],
+  "boundaryReference": [
+    {
+      "file": "dist/data/atlas-frontiers.bin",
+      "sha256": "7fd50649b546b5aa16dcaa84b1c33d3cd7b8f9a3786eb9d948f7a509413e17e2",
+      "baselineNote": "Aggregate border mesh updated by the separately authorized Americas country additions on 2026-10-31. Lake cutouts remain paint-only; all original administrative geometry reference hashes are retained."
+    },
+    {
+      "file": "dist/data/china-mobile/province-boundaries.bin",
+      "sha256": "212d606bd5ab1f9d4d95dbcab38475604951360775e95fd346c39f1447bfe332"
+    },
+    {
+      "file": "dist/data/display-boundaries.00.bin",
+      "sha256": "041da6e9a6e69b4ae46240ab11f99c13f17a28996f0c42b94095ac70aa40c780"
+    },
+    {
+      "file": "dist/data/display-boundaries.01.bin",
+      "sha256": "cf82bccf056f48089f3be1438e20570eacab5d61cc743bb5f2b45dc7cb3401d6"
+    },
+    {
+      "file": "dist/data/display-boundaries.02.bin",
+      "sha256": "97cece944eb93e1d889b2fb5bbf9e42e7fdb3a2cba647f12435abb9280924192"
+    },
+    {
+      "file": "dist/data/display-boundaries.03.bin",
+      "sha256": "19cc504b28e4c558615b03ef1263e259944c2d2fc7fdd2778ca355d3d5e40a69"
+    },
+    {
+      "file": "dist/data/display-boundaries.04.bin",
+      "sha256": "addfe583ed0ba0a24a540aa43216b25a6a061de93dcf70c66e50dec54aaf61b1"
+    },
+    {
+      "file": "dist/data/display-boundaries.05.bin",
+      "sha256": "bca88880f02304d9533b8f96fa4098b3ed92ad682e45973f087ea090e08dce4d"
+    },
+    {
+      "file": "dist/data/europe/canada/first.bin",
+      "sha256": "d8b5522c99d474eab4cf1a0f97f5a7cda17e8ff7a68017a107d88ae3d1ef93fc"
+    },
+    {
+      "file": "dist/data/europe/canada/second/CA-MB.bin",
+      "sha256": "b6776cd889137fca68288a6269adb376a88f6fac58b04c54e5e11af5b959692f"
+    },
+    {
+      "file": "dist/data/europe/canada/second/CA-NU.bin",
+      "sha256": "4d07f886c4ad26c6a3c059410f2e2716c13fa896042f272bfedfff4564512a00"
+    },
+    {
+      "file": "dist/data/europe/canada/second/CA-SK.bin",
+      "sha256": "eac4861f03671d1bfd231b6bfff23a6820aeafbf727e326de34930999e7a440e"
+    },
+    {
+      "file": "dist/data/europe/canada/third/CA-CD-4618.bin",
+      "sha256": "0fe340b13253a887b34578f1775915cc1d5b17cbce7fdb93616462dfea190582"
+    },
+    {
+      "file": "dist/data/europe/canada/third/CA-CD-4619.bin",
+      "sha256": "323ebbb481ef0c22852e05b3be8d1cf6c5f741a7a6c3c7e31575ed598bfca811"
+    },
+    {
+      "file": "dist/data/europe/canada/third/CA-CD-4621.bin",
+      "sha256": "bd3e4e919743fa41d4e7f29c7bbc883bfb8067047abbecd7665298a115f60c6b"
+    },
+    {
+      "file": "dist/data/europe/canada/third/CA-CD-4623.bin",
+      "sha256": "1fef8986d1b73df52c713a3f47215668ed7f31f75f84c9283ded558be10f60fd"
+    },
+    {
+      "file": "dist/data/europe/canada/third/CA-CD-4718.bin",
+      "sha256": "fc1874f8aaeef7463f5384fef3ff2f9ff6d6d6d6f8d1741b64875f8ba17b97d1"
+    },
+    {
+      "file": "dist/data/europe/canada/third/CA-CD-6205.bin",
+      "sha256": "fa03e21e7010fb7fc2ecffb7b07b2166314edbaea38deaaaa26346f16c996e4b"
+    },
+    {
+      "file": "dist/data/europe/turkey/first.bin",
+      "sha256": "01e1d1d0ff78b481c301e13c5c7a47a03f3e2ae5f5b37f712a571f781475d281"
+    },
+    {
+      "file": "dist/data/europe/turkey/second/TR-R-TRB.bin",
+      "sha256": "436c5b7847c75974aba9a1bcc01d0976152626fffb492951331cea3a9aaf2725"
+    },
+    {
+      "file": "dist/data/europe/turkey/third/TR-P-13.bin",
+      "sha256": "b7bcf03dc45d3e720a47e0cb3cd84f0d8b6cca97ac3052b87e42175481d0b4ed"
+    },
+    {
+      "file": "dist/data/europe/united-states/first.bin",
+      "sha256": "2c552f8a52cd7da2491082172ffb120f75255b3eb0a176a0e7bc439101d67cdc"
+    },
+    {
+      "file": "dist/data/europe/united-states/second/US-AK.bin",
+      "sha256": "b76d3e121c89590b5c9ffa8e04bcca4d1f00fc75bb2df4ed8246c801bd042389"
+    },
+    {
+      "file": "dist/data/globe-overview-borders.bin",
+      "sha256": "c2e61ee37427b7b42b5b25ed41d5a7368fda6e25bda08ddabbc8847c3c319595",
+      "baselineNote": "Aggregate border mesh updated by the separately authorized Americas country additions on 2026-10-31. Lake cutouts remain paint-only; all original administrative geometry reference hashes are retained."
+    },
+    {
+      "file": "dist/data/russia/first.bin",
+      "sha256": "74b537afabe55b588e503583227f2a5317bb27d7e8d0ade0c6276332d09dd40b"
+    },
+    {
+      "file": "dist/data/russia/second/RU-BU.bin",
+      "sha256": "59f5e3da0ad24ed4f9b80141d231840e01e2bcbbe7c7484cf79c56ac000a8b5b"
+    },
+    {
+      "file": "dist/data/russia/second/RU-KYA.bin",
+      "sha256": "86732e4179ddf464995331f62ec0b04a910d9c80947d4c8ff8de024eb2d82e61"
+    },
+    {
+      "file": "dist/data/world-country-outlines.bin",
+      "sha256": "cbaa5f002696c8929b60378aa210f6edb74ad47fd9783b79d103c00b802d4d2e",
+      "baselineNote": "Aggregate border mesh updated by the separately authorized Americas country additions on 2026-10-31. Lake cutouts remain paint-only; all original administrative geometry reference hashes are retained."
+    }
+  ],
+  "baselineNote": "Global border aggregates include authorized world additions and restored original international borders. Existing administrative geometry remains unchanged."
+}
