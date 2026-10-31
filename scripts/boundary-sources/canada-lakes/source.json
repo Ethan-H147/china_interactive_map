@@ -1,0 +1,15 @@
+{
+  "source": "Natural Earth v5.1.2, 1:10 million lakes",
+  "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_lakes.geojson",
+  "reference": "https://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-lakes/",
+  "license": "Public domain",
+  "upstreamSha256": "2d036f53dedec578001c5c30c2959ee7d4eebc1306900fa4367c49929ec8f2d9",
+  "sha256": "a1b8bec65934d33f22e1d7e271e579dd21f935fbe466ee1cb9cbfff5b18c0477",
+  "names": [
+    "Great Bear Lake",
+    "Great Slave Lake",
+    "Lake Winnipeg",
+    "Lake Athabasca"
+  ],
+  "processing": "Four exact named source features retained, including their island holes; no replacement outlines drawn."
+}

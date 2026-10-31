@@ -9,7 +9,7 @@ const value=async(p,id)=>{await p.waitFor('document.querySelector("#canada-sideb
 export default [
  {name:'Canadian municipal population, hierarchy and flags use the selected government',options:{width:1280,height:820},async run(p,base){
   await p.open(base,'#canada');await ready(p);assert(!p.requests.some(u=>/canada\/(?:second|third)\//.test(u)),'No detail download at national entry');assert(!p.requests.some(u=>u.includes('canada-municipal-flags/')));
-  await choose(p,'Toronto ON','Toronto');await value(p,'CA-CSD-3520005');assert.equal(await p.evaluate('currentAtlas().getSelection()'),'CA-CSD-3520005');
+  await choose(p,'Toronto ON','Toronto');await value(p,'CA-CSD-3520005');assert.equal(await p.evaluate('currentAtlas().getSelection()'),'CA-CD-3520');
   assert(await p.evaluate('document.querySelector("#canada-sidebar .archipelago-population").textContent.includes("1 July 2025")'));
   await p.waitFor('document.getElementById("ca-detail-flag").complete&&document.getElementById("ca-detail-flag").naturalWidth>0');
   await p.tap('#ca-detail-flag-source');await p.waitFor('document.getElementById("flag-viewer").open');assert.equal(await p.evaluate('document.getElementById("flag-viewer-image").getAttribute("src")'),facts.records['CA-CSD-3520005'].flag.full);await p.key('Escape');
@@ -19,7 +19,7 @@ export default [
  }},
  {name:'Canadian search changes one province and one division of detail at a time',options:{width:1280,height:820},async run(p,base){
   await p.open(base,'#canada');await choose(p,'Vancouver BC','Vancouver');await value(p,'CA-CSD-5915022');
-  await choose(p,'Ottawa Ontario','Ottawa');await value(p,'CA-CSD-3506008');
+  await choose(p,'Ottawa Ontario','Ottawa');await value(p,'CA-CSD-3506008');await p.evaluate('currentAtlas().setMode(3)');await ready(p);
   const sources=await p.evaluate('Object.keys(map.getStyle().sources).filter(s=>/^canada-(second|third)$/.test(s))');assert.deepEqual(sources.sort(),['canada-second','canada-third']);
   assert(!await p.evaluate('!!map.getSource("canada-third-outlines")&&map.getSource("canada-third-outlines")._data?.features?.length>10'),'Only the selected municipal outline is indexed');
   for(const [q,kind,id]of [['Langley District municipality BC','District municipality','CA-CSD-5915001'],['Langley City BC','City','CA-CSD-5915002']]){

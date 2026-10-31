@@ -477,7 +477,7 @@
     "balkans": "Detailed Balkan land frontiers supersede residual generalized shoreline segments within 200 metres. Existing atlas borders are retained; Croatia–Montenegro stops at the verified shared-way coastal endpoint.",
     "balkanFallbackRefresh": "Country fallback land refreshed from the six final reconciled contexts, preserving all other atlas and foreign geometry."
   },
-  "bytes": 21300166,
+  "bytes": 21332461,
   "fallbackSimplificationDegrees": 0.018,
   "outlineBytes": 76769,
   "titicacaShoreline": {
@@ -3043,5 +3043,15 @@
       "morocco"
     ],
     "method": "Replace the remaining coastal African and Pacific background silhouettes; join adjacent foreign land to the new country frontiers, remove lake surfaces, and derive shared background strokes from the resulting geometry."
+  },
+  "canadaLakes": {
+    "source": "data/canada-lakes-sources.json",
+    "names": [
+      "Great Bear Lake",
+      "Great Slave Lake",
+      "Lake Winnipeg",
+      "Lake Athabasca"
+    ],
+    "method": "Permanent lake exclusions matching Canadian administrative fills."
   }
 }

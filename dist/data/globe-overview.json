@@ -1,7 +1,7 @@
 {
   "version": 1,
   "source": "Existing reconciled atlas land, claims and international frontiers; no external basemap.",
-  "landBytes": 4725404,
+  "landBytes": 4759115,
   "borderBytes": 650534,
   "countries": [
     "afghanistan",
@@ -174,5 +174,6 @@
   ],
   "simplificationDegrees": 0.006,
   "sourceZoom": 0,
-  "reparseOverscaled": false
+  "reparseOverscaled": false,
+  "canadaLakes": "data/canada-lakes-sources.json"
 }

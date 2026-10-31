@@ -1,0 +1,179 @@
+{
+  "vintage": 2021,
+  "populationDate": "2025-07-01",
+  "policy": "Share a page only when the official classification contains exactly one municipal census subdivision and the retained land areas, extents and population totals match. Statistical divisions containing reserves or other municipalities remain separate. Geometry identifiers and published statistics are retained.",
+  "sources": {
+    "classification": {
+      "title": "Statistics Canada, Standard Geographical Classification 2021",
+      "url": "https://www.statcan.gc.ca/en/subjects/standard/sgc/2021/index",
+      "structure": "https://www.statcan.gc.ca/eng/statistical-programs/document/sgc-cgt-2021-structure-eng.csv",
+      "retained": "scripts/boundary-sources/canada-shared-pages/sgc-2021.csv.gz",
+      "sha256": "55f6eb915415b4aa911c6fce3cbaced641c4ed9af023bebc414b2929721a62d2"
+    }
+  },
+  "pages": [
+    {
+      "id": "CA-CD-2425",
+      "municipality": "CA-CSD-2425213",
+      "name": "Lévis",
+      "local": "Lévis",
+      "parent": "CA-QB",
+      "type": "city-census-division",
+      "kind": "City and census division",
+      "note": "This city and census division cover the same area and share one page.",
+      "source": "classification",
+      "landAreaKm2": 448.07
+    },
+    {
+      "id": "CA-CD-2436",
+      "municipality": "CA-CSD-2436033",
+      "name": "Shawinigan",
+      "local": "Shawinigan",
+      "parent": "CA-QB",
+      "type": "city-census-division",
+      "kind": "City and census division",
+      "note": "This city and census division cover the same area and share one page.",
+      "source": "classification",
+      "landAreaKm2": 729.98
+    },
+    {
+      "id": "CA-CD-2443",
+      "municipality": "CA-CSD-2443027",
+      "name": "Sherbrooke",
+      "local": "Sherbrooke",
+      "parent": "CA-QB",
+      "type": "city-census-division",
+      "kind": "City and census division",
+      "note": "This city and census division cover the same area and share one page.",
+      "source": "classification",
+      "landAreaKm2": 353.4
+    },
+    {
+      "id": "CA-CD-2465",
+      "municipality": "CA-CSD-2465005",
+      "name": "Laval",
+      "local": "Laval",
+      "parent": "CA-QB",
+      "type": "city-census-division",
+      "kind": "City and census division",
+      "note": "This city and census division cover the same area and share one page.",
+      "source": "classification",
+      "landAreaKm2": 246.13
+    },
+    {
+      "id": "CA-CD-2474",
+      "municipality": "CA-CSD-2474005",
+      "name": "Mirabel",
+      "local": "Mirabel",
+      "parent": "CA-QB",
+      "type": "city-census-division",
+      "kind": "City and census division",
+      "note": "This city and census division cover the same area and share one page.",
+      "source": "classification",
+      "landAreaKm2": 484.09
+    },
+    {
+      "id": "CA-CD-2481",
+      "municipality": "CA-CSD-2481017",
+      "name": "Gatineau",
+      "local": "Gatineau",
+      "parent": "CA-QB",
+      "type": "city-census-division",
+      "kind": "City and census division",
+      "note": "This city and census division cover the same area and share one page.",
+      "source": "classification",
+      "landAreaKm2": 341.84
+    },
+    {
+      "id": "CA-CD-2486",
+      "municipality": "CA-CSD-2486042",
+      "name": "Rouyn-Noranda",
+      "local": "Rouyn-Noranda",
+      "parent": "CA-QB",
+      "type": "city-census-division",
+      "kind": "City and census division",
+      "note": "This city and census division cover the same area and share one page.",
+      "source": "classification",
+      "landAreaKm2": 5963.57
+    },
+    {
+      "id": "CA-CD-3506",
+      "municipality": "CA-CSD-3506008",
+      "name": "Ottawa",
+      "local": "Ottawa",
+      "parent": "CA-ON",
+      "type": "city-census-division",
+      "kind": "City and census division",
+      "note": "This city and census division cover the same area and share one page.",
+      "source": "classification",
+      "landAreaKm2": 2788.2
+    },
+    {
+      "id": "CA-CD-3513",
+      "municipality": "CA-CSD-3513020",
+      "name": "Prince Edward County",
+      "local": "Prince Edward County",
+      "parent": "CA-ON",
+      "type": "city-census-division",
+      "kind": "City and census division",
+      "note": "This city and census division cover the same area and share one page.",
+      "source": "classification",
+      "landAreaKm2": 1052.61
+    },
+    {
+      "id": "CA-CD-3516",
+      "municipality": "CA-CSD-3516010",
+      "name": "Kawartha Lakes",
+      "local": "Kawartha Lakes",
+      "parent": "CA-ON",
+      "type": "city-census-division",
+      "kind": "City and census division",
+      "note": "This city and census division cover the same area and share one page.",
+      "source": "classification",
+      "landAreaKm2": 3033.66
+    },
+    {
+      "id": "CA-CD-3520",
+      "municipality": "CA-CSD-3520005",
+      "name": "Toronto",
+      "local": "Toronto",
+      "parent": "CA-ON",
+      "type": "city-census-division",
+      "kind": "City and census division",
+      "note": "This city and census division cover the same area and share one page.",
+      "source": "classification",
+      "landAreaKm2": 631.1
+    },
+    {
+      "id": "CA-CD-3525",
+      "municipality": "CA-CSD-3525005",
+      "name": "Hamilton",
+      "local": "Hamilton",
+      "parent": "CA-ON",
+      "type": "city-census-division",
+      "kind": "City and census division",
+      "note": "This city and census division cover the same area and share one page.",
+      "source": "classification",
+      "landAreaKm2": 1118.31
+    }
+  ],
+  "exclusions": [
+    {
+      "division": "CA-CD-2466",
+      "municipality": "CA-CSD-2466023",
+      "reason": "Montréal census division contains 16 municipalities; it is not the City of Montréal."
+    },
+    {
+      "division": "CA-CD-3553",
+      "municipality": "CA-CSD-3553005",
+      "separateUnit": "CA-CSD-3553040",
+      "reason": "Greater Sudbury census division includes the city and Wahnapitei 11. They have different population and geographic coverage."
+    },
+    {
+      "division": "CA-CD-3536",
+      "municipality": "CA-CSD-3536020",
+      "separateUnit": "CA-CSD-3536029",
+      "reason": "Chatham-Kent census division includes the municipality and Moravian 47."
+    }
+  ]
+}

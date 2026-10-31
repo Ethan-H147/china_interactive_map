@@ -1,0 +1,6 @@
+{
+  "source": "Statistics Canada 2021 source-derived shared province mesh, before lake exclusions",
+  "license": "Statistics Canada Open Licence",
+  "sha256": "bbd1587e793fe5321d579bf4c33d83161c8a8c39133776962eb5dd3064ff391e",
+  "retained": "scripts/boundary-sources/canada-lakes/alberta-saskatchewan-border.json.gz"
+}

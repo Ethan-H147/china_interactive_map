@@ -3,9 +3,9 @@ export function applySharedPlacePages(records,definitions){
  const byId=new Map(records.map(r=>[r.id,r]));
  for(const page of definitions.pages){
   const county=byId.get(page.id),city=byId.get(page.municipality);
-  if(!county||!city||county.parent!==city.parent||county.level!==2||city.level!==3)throw Error('Invalid shared place: '+page.id);
+  if(!county||!city||!(county.parent===city.parent||city.parent===county.id&&city.province===county.parent)||county.level!==2||city.level!==3)throw Error('Invalid shared place: '+page.id);
   const aliases=[...new Set([county.en,city.en,county.code,city.code,...county.aliases||[],...city.aliases||[]])].sort();
-  const shared={en:page.name,local:page.name,kind:page.kind,sharedPageId:page.id,sharedGeometryIds:{2:county.id,3:city.id}};
+  const shared={en:page.name,local:page.local??page.name,kind:page.kind,sharedPageId:page.id,sharedGeometryIds:{2:county.id,3:city.id}};
   Object.assign(county,shared,{aliases,statusNote:page.note,statusSource:definitions.sources[page.source].url,statusSourceLabel:' Source',...(city.flag?{flag:city.flag}:{})});
   Object.assign(city,shared);
  }

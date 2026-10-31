@@ -72,3 +72,6 @@ const finalMetadata=load('dist/data/world-land-sources.json');if(isoToCountry.AU
 console.log('World outline topology built:',meta.topology.referenceCountries,'source countries/dependencies;',meta.topology.backgroundCountries,'background countries;',meta.topology.outlineGroups,'outline parts;',fs.statSync('dist/data/world-land.bin').size,'land bytes;',meta.outlineBytes,'outline bytes');
 
 await (await import('./antarctic-claims.mjs')).preserveAntarctica();
+
+// Canadian lake exclusions also survive the world fallback rebuild.
+await (await import('./canada-lakes.mjs')).maskCanadaLakes({worldOnly:true});

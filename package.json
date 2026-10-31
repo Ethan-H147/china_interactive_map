@@ -142,7 +142,7 @@
     "build:us-municipal-facts": "node scripts/prepare-us-municipal-facts.mjs && node scripts/prepare-flag-images.mjs && node scripts/prepare-region-colors.mjs",
     "test:us-municipal-facts": "node scripts/validate-us-municipal-assets.mjs && node scripts/validate-us-municipal-facts.mjs",
     "fetch:us-municipal-flags": "node scripts/fetch-us-municipal-flags.mjs && npm run build:us-municipal-facts",
-    "build:canada-local": "node scripts/fetch-canada-local.mjs && node scripts/prepare-canada-statistics.mjs && node --expose-gc --max-old-space-size=7000 scripts/build-canada-local.mjs && npm run build:canada-municipal-facts",
+    "build:canada-local": "node scripts/fetch-canada-local.mjs && node scripts/prepare-canada-statistics.mjs && node --expose-gc --max-old-space-size=7000 scripts/build-canada-local.mjs && npm run build:canada-municipal-facts && npm run build:canada-lakes",
     "build:canada-municipal-facts": "node scripts/prepare-canada-municipal-facts.mjs && node scripts/prepare-flag-images.mjs && node scripts/prepare-region-colors.mjs",
     "fetch:canada-municipal-flags": "node scripts/fetch-canada-municipal-flags.mjs && node scripts/fetch-canada-municipal-fotw-flags.mjs && npm run build:canada-municipal-facts",
     "test:canada-local": "node scripts/validate-canada-source-rings.mjs && node scripts/validate-canada-local.mjs",
@@ -329,7 +329,7 @@
     "fetch:north-andes": "node scripts/fetch-north-andes.mjs && node --max-old-space-size=12000 scripts/prepare-north-andes-sources.mjs",
     "build:north-andes": "node --max-old-space-size=12000 scripts/build-north-andes.mjs && node scripts/prepare-region-colors.mjs ecuador venezuela colombia",
     "test:north-andes": "node scripts/validate-north-andes.mjs",
-    "build:canada-area-codes": "node --max-old-space-size=6500 scripts/build-canada-area-codes.mjs",
+    "build:canada-area-codes": "node --max-old-space-size=6500 scripts/build-canada-area-codes.mjs && node scripts/canada-lakes.mjs --area-codes",
     "test:canada-area-codes": "node --check dist/area-code-card.mjs && node --check dist/regional-country.mjs && node scripts/validate-canada-area-codes.mjs",
     "test:canada-area-codes-browser": "node scripts/browser/run.mjs canada-area-codes",
     "build:mexico-municipalities": "node --max-old-space-size=6500 scripts/build-mexico-municipalities.mjs && npm run build:us-mexico-frontier",
@@ -471,6 +471,10 @@
     "test:china-census": "node scripts/validate-china-census.mjs",
     "audit:china-population": "node scripts/audit-china-population.mjs",
     "fetch:major-city-flags": "node scripts/fetch-major-city-flags.mjs",
-    "test:major-city-flags": "node scripts/validate-major-city-flags.mjs && node scripts/browser/run.mjs major-city-flags"
+    "test:major-city-flags": "node scripts/validate-major-city-flags.mjs && node scripts/browser/run.mjs major-city-flags",
+    "build:canada-shared-pages": "node scripts/prepare-canada-shared-pages.mjs",
+    "build:canada-lakes": "node scripts/prepare-canada-lake-source.mjs && node --max-old-space-size=8000 scripts/canada-lakes.mjs",
+    "test:canada-shared-pages": "node scripts/validate-canada-shared-pages.mjs && node scripts/browser/run.mjs canada-shared-pages",
+    "test:canada-lakes": "node scripts/validate-canada-lakes.mjs && node scripts/browser/run.mjs canada-lakes"
   }
 }

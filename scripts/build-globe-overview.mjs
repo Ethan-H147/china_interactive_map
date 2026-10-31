@@ -29,3 +29,6 @@ const strokes=fc(borders.flatMap(f=>linesOf(fc([f])).map(path=>({...f,geometry:{
 const write=(file,data)=>{const bytes=gzipSync(JSON.stringify(data),{level:9});fs.writeFileSync('dist/data/'+file,bytes);return bytes.length;};
 overview.features=overview.features.filter(f=>f.geometry);const metadata={version:1,source:'Existing reconciled atlas land, claims and international frontiers; no external basemap.',landBytes:write('globe-overview-land.bin',overview),borderBytes:write('globe-overview-borders.bin',strokes),countries:[...new Set(overview.features.map(f=>f.properties.country).filter(Boolean))].sort(),simplificationDegrees:.006,sourceZoom:0,reparseOverscaled:false};
 fs.writeFileSync('dist/data/globe-overview.json',JSON.stringify(metadata,null,2)+'\n');console.log(JSON.stringify(metadata));
+
+// Keep the four Canadian lake holes exact after overview simplification.
+await (await import('./canada-lakes.mjs')).maskCanadaLakes({worldOnly:true});
