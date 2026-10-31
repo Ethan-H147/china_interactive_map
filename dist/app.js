@@ -128,20 +128,24 @@ function renderRegionNames(p){
 }
 function renderPopulation(p){
   const panel=$('population'),provinceRecord=p.level==='province'?provincePopulation.china[p.adcode]:null,record=provinceRecord||regionPopulation.regions[p.adcode];
-  $('population-breakdown').hidden=!!provinceRecord;$('population-boundaries').hidden=!!provinceRecord;
-  $('population-scope').textContent=provinceRecord?.measure||'Entire administrative region';
-  $('population-source').textContent=provinceRecord?.sourceLabel||'Wikipedia: population data';
+  $('population-boundaries').hidden=!!provinceRecord;
+  $('population-source').textContent=provinceRecord?.sourceLabel||record?.sourceLabel||'Wikipedia: population data';
   panel.hidden=!record;
   if(!record)return;
-  const format=value=>value===null?'Not reported':value.toLocaleString('en-US');
-  $('population-total').textContent=format(record.total);
-  $('population-towns').textContent=provinceRecord?'':format(record.towns);
-  $('population-core').textContent=provinceRecord?'':format(record.urbanCore);
+  window.AtlasChinaPage.renderPopulationMetrics(record,{province:!!provinceRecord,scope:provinceRecord?.measure});
   const dates={'2020-11-01':'1 November 2020','2020年底':'End of 2020','2020第四季度':'Fourth quarter of 2020'};
   $('population-date').textContent=provinceRecord?.dateLabel||dates[record.date]||record.date;window.AtlasTypography.splitMetadata($('population-date'));
-  $('population-source').href=provinceRecord?.sourceUrl||regionPopulation.source.revisionUrl;
-  $('population-source').title=provinceRecord?.sourceLabel||'Wikipedia: '+record.name;
-  $('population-quality').hidden=!record.inconsistent;
+  $('population-source').href=provinceRecord?.sourceUrl||record.sourceUrl||regionPopulation.source.revisionUrl;
+  $('population-source').title=provinceRecord?.sourceLabel||record.sourceLabel||'Wikipedia: '+record.name;
+  const census=provinceRecord?regionPopulation.census?.provinces[p.adcode]:record.census,differences=census?.differences||[],labels={total:'Total',towns:'Cities and towns',urbanCore:'Urban core'};
+  const quality=[];
+  if(record.inconsistent)quality.push('The source’s population figures are inconsistent.');
+  if(differences.length)quality.push('Differs from the supplied 2020 census workbook: '+differences.map(d=>labels[d.field]+' '+d.website.toLocaleString('en-US')+' on website; '+d.workbook.toLocaleString('en-US')+' in workbook ('+d.cell+')').join('. ')+'.');
+  if(record.scopeNote)quality.push(record.scopeNote);
+  $('population-quality').textContent=quality.join(' ');$('population-quality').hidden=!quality.length;
+  const censusRows=census?.components?.map(c=>c.row).join(', ')||census?.row;
+  $('population-quality').title=census?'Workbook: '+census.workbook+'; '+census.sheet+' row '+censusRows+'; PDF pages '+census.pdfPages.join('–'):'';
+  $('population-source').title+=(record.sourceLabel==='2020 census: Table 1'&&census?' — '+census.sheet+' row '+censusRows+'; PDF pages '+census.pdfPages.join('–'):'');
 }
 function isPrefectureLevel(p){return window.AtlasChinaLevels.isPrefectureLevel(p);}
 function kind(p){

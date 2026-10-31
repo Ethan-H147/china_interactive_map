@@ -1,0 +1,578 @@
+{
+  "aliases": [
+    {
+      "row": 554,
+      "sourceName": "风城市",
+      "adcode": 210682,
+      "mapName": "凤城市",
+      "parent": 210600,
+      "reason": "Explicit source spelling/character variant matched within its parent; original workbook label retained"
+    },
+    {
+      "row": 610,
+      "sourceName": "南鼎区",
+      "adcode": 211404,
+      "mapName": "南票区",
+      "parent": 211400,
+      "reason": "Explicit source spelling/character variant matched within its parent; original workbook label retained"
+    },
+    {
+      "row": 1161,
+      "sourceName": "风阳县",
+      "adcode": 341126,
+      "mapName": "凤阳县",
+      "parent": 341100,
+      "reason": "Explicit source spelling/character variant matched within its parent; original workbook label retained"
+    },
+    {
+      "row": 1254,
+      "sourceName": "埋城区",
+      "adcode": 350502,
+      "mapName": "鲤城区",
+      "parent": 350500,
+      "reason": "Explicit source spelling/character variant matched within its parent; original workbook label retained"
+    },
+    {
+      "row": 1337,
+      "sourceName": "湖门县",
+      "adcode": 360429,
+      "mapName": "湖口县",
+      "parent": 360400,
+      "reason": "Explicit source spelling/character variant matched within its parent; original workbook label retained"
+    },
+    {
+      "row": 1446,
+      "sourceName": "湖川区",
+      "adcode": 370302,
+      "mapName": "淄川区",
+      "parent": 370300,
+      "reason": "Explicit source spelling/character variant matched within its parent; original workbook label retained"
+    },
+    {
+      "row": 1671,
+      "sourceName": "延",
+      "adcode": 410726,
+      "mapName": "延津县",
+      "parent": 410700,
+      "reason": "Explicit source spelling/character variant matched within its parent; original workbook label retained"
+    },
+    {
+      "row": 1769,
+      "sourceName": "沈厅县",
+      "adcode": 411624,
+      "mapName": "沈丘县",
+      "parent": 411600,
+      "reason": "Explicit source spelling/character variant matched within its parent; original workbook label retained"
+    },
+    {
+      "row": 1885,
+      "sourceName": "成安区",
+      "adcode": 421202,
+      "mapName": "咸安区",
+      "parent": 421200,
+      "reason": "Explicit source spelling/character variant matched within its parent; original workbook label retained"
+    },
+    {
+      "row": 1930,
+      "sourceName": "酸陵市",
+      "adcode": 430281,
+      "mapName": "醴陵市",
+      "parent": 430200,
+      "reason": "Explicit source spelling/character variant matched within its parent; original workbook label retained"
+    },
+    {
+      "row": 2040,
+      "sourceName": "新见侗族自治县",
+      "adcode": 431227,
+      "mapName": "新晃侗族自治县",
+      "parent": 431200,
+      "reason": "Explicit source spelling/character variant matched within its parent; original workbook label retained"
+    },
+    {
+      "row": 2183,
+      "sourceName": "连山北族瑶族自治县",
+      "adcode": 441825,
+      "mapName": "连山壮族瑶族自治县",
+      "parent": 441800,
+      "reason": "Explicit source spelling/character variant matched within its parent; original workbook label retained"
+    },
+    {
+      "row": 2193,
+      "sourceName": "湖安区",
+      "adcode": 445103,
+      "mapName": "潮安区",
+      "parent": 445100,
+      "reason": "Explicit source spelling/character variant matched within its parent; original workbook label retained"
+    },
+    {
+      "row": 2290,
+      "sourceName": "川东县",
+      "adcode": 451022,
+      "mapName": "田东县",
+      "parent": 451000,
+      "reason": "Explicit source spelling/character variant matched within its parent; original workbook label retained"
+    },
+    {
+      "row": 2323,
+      "sourceName": "金秀瑞族自治县",
+      "adcode": 451324,
+      "mapName": "金秀瑶族自治县",
+      "parent": 451300,
+      "reason": "Explicit source spelling/character variant matched within its parent; original workbook label retained"
+    },
+    {
+      "row": 2389,
+      "sourceName": "流南区",
+      "adcode": 500152,
+      "mapName": "潼南区",
+      "reason": "Explicit source spelling/character variant matched within its parent; original workbook label retained"
+    },
+    {
+      "row": 2417,
+      "sourceName": "温汇区",
+      "adcode": 510115,
+      "mapName": "温江区",
+      "parent": 510100,
+      "reason": "Explicit source spelling/character variant matched within its parent; original workbook label retained"
+    },
+    {
+      "row": 2498,
+      "sourceName": "马边外族自治县",
+      "adcode": 511133,
+      "mapName": "马边彝族自治县",
+      "parent": 511100,
+      "reason": "Explicit source spelling/character variant matched within its parent; original workbook label retained"
+    },
+    {
+      "row": 2530,
+      "sourceName": "前律区",
+      "adcode": 511603,
+      "mapName": "前锋区",
+      "parent": 511600,
+      "reason": "Explicit source spelling/character variant matched within its parent; original workbook label retained"
+    },
+    {
+      "row": 2534,
+      "sourceName": "华鉴市",
+      "adcode": 511681,
+      "mapName": "华蓥市",
+      "parent": 511600,
+      "reason": "Explicit source spelling/character variant matched within its parent; original workbook label retained"
+    },
+    {
+      "row": 2578,
+      "sourceName": "甘孜族自治州",
+      "adcode": 513300,
+      "mapName": "甘孜藏族自治州",
+      "reason": "Explicit source spelling/character variant matched within its parent; original workbook label retained"
+    },
+    {
+      "row": 2639,
+      "sourceName": "道真伦佬族苗族自治县",
+      "adcode": 520325,
+      "mapName": "道真仡佬族苗族自治县",
+      "parent": 520300,
+      "reason": "Explicit source spelling/character variant matched within its parent; original workbook label retained"
+    },
+    {
+      "row": 2661,
+      "sourceName": "威宁作族回族苗族自治县",
+      "adcode": 520526,
+      "mapName": "威宁彝族回族苗族自治县",
+      "parent": 520500,
+      "reason": "Explicit source spelling/character variant matched within its parent; original workbook label retained"
+    },
+    {
+      "row": 2783,
+      "sourceName": "西盟优族自治县",
+      "adcode": 530829,
+      "mapName": "西盟佤族自治县",
+      "parent": 530800,
+      "reason": "Explicit source spelling/character variant matched within its parent; original workbook label retained"
+    },
+    {
+      "row": 2816,
+      "sourceName": "绿养县",
+      "adcode": 532531,
+      "mapName": "绿春县",
+      "parent": 532500,
+      "reason": "Explicit source spelling/character variant matched within its parent; original workbook label retained"
+    },
+    {
+      "row": 2987,
+      "sourceName": "句邑县",
+      "adcode": 610429,
+      "mapName": "旬邑县",
+      "parent": 610400,
+      "reason": "Explicit source spelling/character variant matched within its parent; original workbook label retained"
+    },
+    {
+      "row": 3019,
+      "sourceName": "议台区",
+      "adcode": 610702,
+      "mapName": "汉台区",
+      "parent": 610700,
+      "reason": "Explicit source spelling/character variant matched within its parent; original workbook label retained"
+    },
+    {
+      "row": 3101,
+      "sourceName": "临洋县",
+      "adcode": 620723,
+      "mapName": "临泽县",
+      "parent": 620700,
+      "reason": "Explicit source spelling/character variant matched within its parent; original workbook label retained"
+    },
+    {
+      "row": 3186,
+      "sourceName": "黃南藏族自治州",
+      "adcode": 632300,
+      "mapName": "黄南藏族自治州",
+      "reason": "Explicit source spelling/character variant matched within its parent; original workbook label retained"
+    },
+    {
+      "row": 3190,
+      "sourceName": "河南蒙占族自治县",
+      "adcode": 632324,
+      "mapName": "河南蒙古族自治县",
+      "parent": 632300,
+      "reason": "Explicit source spelling/character variant matched within its parent; original workbook label retained"
+    },
+    {
+      "row": 3262,
+      "sourceName": "吐魯番市",
+      "adcode": 650400,
+      "mapName": "吐鲁番市",
+      "reason": "Explicit source spelling/character variant matched within its parent; original workbook label retained"
+    },
+    {
+      "row": 3283,
+      "sourceName": "巴音郫楞蒙古自治州",
+      "adcode": 652800,
+      "mapName": "巴音郭楞蒙古自治州",
+      "reason": "Explicit source spelling/character variant matched within its parent; original workbook label retained"
+    },
+    {
+      "row": 3312,
+      "sourceName": "英青沙县",
+      "adcode": 653123,
+      "mapName": "英吉沙县",
+      "parent": 653100,
+      "reason": "Explicit source spelling/character variant matched within its parent; original workbook label retained"
+    },
+    {
+      "row": 910,
+      "sourceName": "海门市",
+      "adcode": 320614,
+      "mapName": "海门区",
+      "parent": 320600,
+      "reason": "Historical census name matched to its mapped successor; values retain the 2020 source geography"
+    },
+    {
+      "row": 1094,
+      "sourceName": "芜湖县",
+      "adcode": 340210,
+      "mapName": "湾沚区",
+      "parent": 340200,
+      "reason": "Historical census name matched to its mapped successor; values retain the 2020 source geography"
+    },
+    {
+      "row": 1095,
+      "sourceName": "繁昌县",
+      "adcode": 340212,
+      "mapName": "繁昌区",
+      "parent": 340200,
+      "reason": "Historical census name matched to its mapped successor; values retain the 2020 source geography"
+    },
+    {
+      "row": 1248,
+      "sourceName": "沙县",
+      "adcode": 350405,
+      "mapName": "沙县区",
+      "parent": 350400,
+      "reason": "Historical census name matched to its mapped successor; values retain the 2020 source geography"
+    },
+    {
+      "row": 1271,
+      "sourceName": "长泰县",
+      "adcode": 350605,
+      "mapName": "长泰区",
+      "parent": 350600,
+      "reason": "Historical census name matched to its mapped successor; values retain the 2020 source geography"
+    },
+    {
+      "row": 1276,
+      "sourceName": "龙海市",
+      "adcode": 350604,
+      "mapName": "龙海区",
+      "parent": 350600,
+      "reason": "Historical census name matched to its mapped successor; values retain the 2020 source geography"
+    },
+    {
+      "row": 1631,
+      "sourceName": "偃师市",
+      "adcode": 410307,
+      "mapName": "偃师区",
+      "parent": 410300,
+      "reason": "Historical census name matched to its mapped successor; values retain the 2020 source geography"
+    },
+    {
+      "row": 1866,
+      "sourceName": "监利县",
+      "adcode": 421088,
+      "mapName": "监利市",
+      "parent": 421000,
+      "reason": "Historical census name matched to its mapped successor; values retain the 2020 source geography"
+    },
+    {
+      "row": 2020,
+      "sourceName": "祁阳县",
+      "adcode": 431181,
+      "mapName": "祁阳市",
+      "parent": 431100,
+      "reason": "Historical census name matched to its mapped successor; values retain the 2020 source geography"
+    },
+    {
+      "row": 2220,
+      "sourceName": "横县",
+      "adcode": 450181,
+      "mapName": "横州市",
+      "parent": 450100,
+      "reason": "Historical census name matched to its mapped successor; values retain the 2020 source geography"
+    },
+    {
+      "row": 2346,
+      "sourceName": "南沙群島",
+      "adcode": 460303,
+      "mapName": "南沙区",
+      "parent": 460300,
+      "reason": "Historical census name matched to its mapped successor; values retain the 2020 source geography"
+    },
+    {
+      "row": 2602,
+      "sourceName": "会理县",
+      "adcode": 513402,
+      "mapName": "会理市",
+      "parent": 513400,
+      "reason": "Historical census name matched to its mapped successor; values retain the 2020 source geography"
+    },
+    {
+      "row": 2630,
+      "sourceName": "水城县",
+      "adcode": 520204,
+      "mapName": "水城区",
+      "parent": 520200,
+      "reason": "Historical census name matched to its mapped successor; values retain the 2020 source geography"
+    },
+    {
+      "row": 2657,
+      "sourceName": "黔西县",
+      "adcode": 520581,
+      "mapName": "黔西市",
+      "parent": 520500,
+      "reason": "Historical census name matched to its mapped successor; values retain the 2020 source geography"
+    },
+    {
+      "row": 2803,
+      "sourceName": "禄丰县",
+      "adcode": 532302,
+      "mapName": "禄丰市",
+      "parent": 532300,
+      "reason": "Historical census name matched to its mapped successor; values retain the 2020 source geography"
+    },
+    {
+      "row": 2906,
+      "sourceName": "米林县",
+      "adcode": 540481,
+      "mapName": "米林市",
+      "parent": 540400,
+      "reason": "Historical census name matched to its mapped successor; values retain the 2020 source geography"
+    },
+    {
+      "row": 2922,
+      "sourceName": "错那县",
+      "adcode": 540581,
+      "mapName": "错那市",
+      "parent": 540500,
+      "reason": "Historical census name matched to its mapped successor; values retain the 2020 source geography"
+    },
+    {
+      "row": 2968,
+      "sourceName": "凤翔县",
+      "adcode": 610305,
+      "mapName": "凤翔区",
+      "parent": 610300,
+      "reason": "Historical census name matched to its mapped successor; values retain the 2020 source geography"
+    },
+    {
+      "row": 3052,
+      "sourceName": "旬阳县",
+      "adcode": 610981,
+      "mapName": "旬阳市",
+      "parent": 610900,
+      "reason": "Historical census name matched to its mapped successor; values retain the 2020 source geography"
+    },
+    {
+      "row": 3187,
+      "sourceName": "同仁县",
+      "adcode": 632301,
+      "mapName": "同仁市",
+      "parent": 632300,
+      "reason": "Historical census name matched to its mapped successor; values retain the 2020 source geography"
+    },
+    {
+      "row": 3346,
+      "sourceName": "沙湾县",
+      "adcode": 654203,
+      "mapName": "沙湾市",
+      "parent": 654200,
+      "reason": "Historical census name matched to its mapped successor; values retain the 2020 source geography"
+    },
+    {
+      "row": 826,
+      "sourceName": "海伦市",
+      "adcode": 232701,
+      "mapName": "漠河市",
+      "parent": 232700,
+      "reason": "Source row repeats Hailun after the Daxing’anling heading. Scoped match to Mohe, independently corroborated by Mohe government census total 54,036.",
+      "sourceUrl": "https://www.mohe.gov.cn/mohe/c101200/mhgk.shtml"
+    }
+  ],
+  "scopeNotes": {
+    "330102": "The workbook figure is for the historical 2020 census area. Its boundary differs from the current mapped division; no population was redistributed or estimated.",
+    "330109": "The workbook figure is for the historical 2020 census area. Its boundary differs from the current mapped division; no population was redistributed or estimated.",
+    "330110": "The workbook figure is for the historical 2020 census area. Its boundary differs from the current mapped division; no population was redistributed or estimated.",
+    "520201": "The workbook figure is for the historical 2020 census area. Its boundary differs from the current mapped division; no population was redistributed or estimated.",
+    "520204": "The workbook figure is for the historical 2020 census area. Its boundary differs from the current mapped division; no population was redistributed or estimated."
+  },
+  "missingNotes": {
+    "330113": "Linping was split from 2020 Yuhang; this sheet has no street-level breakdown to isolate it.",
+    "330114": "Qiantang combines parts of 2020 Jianggan and Xiaoshan; this sheet has no street-level breakdown to isolate it.",
+    "410308": "Mengjin combines 2020 Mengjin County and Jili District; no single row for the present district. Separate source rows retained.",
+    "460302": "Current Xisha includes administration of Zhongsha; source has separate island-group rows. Retained without assigning one partial total.",
+    "460303": "Source uses the historical Nansha island-group name; no district row. Source row retained for review.",
+    "659011": "Xinxing was established after the census; no standalone row in this workbook.",
+    "659012": "Baiyang was established after the census; no standalone row in this workbook."
+  },
+  "references": [
+    {
+      "url": "https://zh.wikipedia.org/wiki/2020年中华人民共和国县级以上行政区划变更列表",
+      "use": "Historical administrative names and known boundary changes; not a source for imported figures"
+    },
+    {
+      "url": "https://zh.wikipedia.org/wiki/2021年中华人民共和国县级以上行政区划变更列表",
+      "use": "Historical administrative names and known boundary changes; not a source for imported figures"
+    },
+    {
+      "url": "https://www.bomi.gov.cn/bmx/c100228/202304/736d2f9b15d94ba7a455359366c6c5a6.shtml",
+      "use": "Milin and Cona county-to-city changes"
+    },
+    {
+      "url": "https://www.mohe.gov.cn/mohe/c101200/mhgk.shtml",
+      "use": "Corroborates the 54,036 total and the identity of mislabeled source row 826"
+    }
+  ],
+  "aggregates": [
+    {
+      "adcode": 320613,
+      "mapName": "崇川区",
+      "parent": 320600,
+      "province": "江苏省",
+      "rows": [
+        {
+          "row": 903,
+          "name": "崇川区"
+        },
+        {
+          "row": 904,
+          "name": "港闸区"
+        }
+      ],
+      "sourceUrl": "https://zh.wikipedia.org/wiki/2020年中华人民共和国县级以上行政区划变更列表"
+    },
+    {
+      "adcode": 330105,
+      "mapName": "拱墅区",
+      "parent": 330100,
+      "province": "浙江省",
+      "rows": [
+        {
+          "row": 975,
+          "name": "下城区"
+        },
+        {
+          "row": 977,
+          "name": "拱墅区"
+        }
+      ],
+      "sourceUrl": "https://zh.wikipedia.org/wiki/2021年中华人民共和国县级以上行政区划变更列表"
+    },
+    {
+      "adcode": 340209,
+      "mapName": "弋江区",
+      "parent": 340200,
+      "province": "安徽省",
+      "rows": [
+        {
+          "row": 1091,
+          "name": "弋江区"
+        },
+        {
+          "row": 1093,
+          "name": "三山区"
+        }
+      ],
+      "sourceUrl": "https://zh.wikipedia.org/wiki/2020年中华人民共和国县级以上行政区划变更列表"
+    },
+    {
+      "adcode": 350404,
+      "mapName": "三元区",
+      "parent": 350400,
+      "province": "福建省",
+      "rows": [
+        {
+          "row": 1241,
+          "name": "梅列区"
+        },
+        {
+          "row": 1242,
+          "name": "三元区"
+        }
+      ],
+      "sourceUrl": "https://zh.wikipedia.org/wiki/2021年中华人民共和国县级以上行政区划变更列表"
+    },
+    {
+      "adcode": 410308,
+      "mapName": "孟津区",
+      "parent": 410300,
+      "province": "河南省",
+      "rows": [
+        {
+          "row": 1620,
+          "name": "吉利区"
+        },
+        {
+          "row": 1622,
+          "name": "孟津县"
+        }
+      ],
+      "sourceUrl": "https://oss.ly.gov.cn/upload-file/files/20251218/b40ce6e1eee9457397ae7d1273a19346.pdf"
+    },
+    {
+      "adcode": 460302,
+      "mapName": "西沙区",
+      "parent": 460300,
+      "province": "海南省",
+      "rows": [
+        {
+          "row": 2345,
+          "name": "西沙群岛"
+        },
+        {
+          "row": 2347,
+          "name": "中沙群岛的岛礁及其海域"
+        }
+      ],
+      "sourceUrl": "https://www.mod.gov.cn/gfbw/qwfb/4863771.html?big=fan"
+    }
+  ]
+}

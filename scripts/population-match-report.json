@@ -1836,46 +1836,5 @@
       "name": "阿拉山口市"
     }
   ],
-  "flagged": [
-    {
-      "adcode": "371400",
-      "name": "德州市",
-      "total": 561194,
-      "towns": 2990953,
-      "urbanCore": 658512,
-      "date": "2020-11-01",
-      "sourceRow": 85,
-      "inconsistent": true
-    },
-    {
-      "adcode": "621100",
-      "name": "定西市",
-      "total": 425627,
-      "towns": 969084,
-      "urbanCore": 196987,
-      "date": "2020-11-01",
-      "sourceRow": 253,
-      "inconsistent": true
-    },
-    {
-      "adcode": "640300",
-      "name": "吴忠市",
-      "total": 751389,
-      "towns": 771119,
-      "urbanCore": 372737,
-      "date": "2020-11-01",
-      "sourceRow": 290,
-      "inconsistent": true
-    },
-    {
-      "adcode": "650200",
-      "name": "克拉玛依市",
-      "total": 390348,
-      "towns": 481249,
-      "urbanCore": 453669,
-      "date": "2020-11-01",
-      "sourceRow": 380,
-      "inconsistent": true
-    }
-  ]
+  "flagged": []
 }

@@ -1,3 +1,4 @@
+import {reconcileLangfangFeatures} from './langfang-seams.mjs';
 import {reconcileInnerMongoliaFeatures} from './inner-mongolia-seams.mjs';
 import {reconcileWesternProvinceFeatures,westernJunction} from './western-province-seams.mjs';
 import fs from 'node:fs';
@@ -92,6 +93,8 @@ const western=await reconcileWesternProvinceFeatures(features);features=western.
 fs.writeFileSync(new URL('western-province-seams.json',root),JSON.stringify({method:'Full shared province arcs reconciled before province unions and boundary meshes are built.',junction:westernJunction,arcs:western.reports},null,2)+'\n');
 const innerMongolia=await reconcileInnerMongoliaFeatures(features);features=innerMongolia.features;
 fs.writeFileSync(new URL('inner-mongolia-seams.json',root),JSON.stringify({method:'Full Inner Mongolia border reconciliation before province unions and shared meshes.',arcs:innerMongolia.reports,junctionCollars:innerMongolia.collars,secondaryArcs:innerMongolia.secondaryArcs},null,2)+'\n');
+const langfang=await reconcileLangfangFeatures(features);features=langfang.features;
+fs.writeFileSync(new URL('langfang-seams.json',root),JSON.stringify({method:'Full shared Langfang/Beijing/Tianjin arc reconciliation before province unions and shared meshes.',arcs:langfang.reports},null,2)+'\n');
 const topo=topology({regions:{type:'FeatureCollection',features}});
 const regions=topo.objects.regions;
 const provinces={type:'FeatureCollection',features:manifest.coverage.map(entry=>({

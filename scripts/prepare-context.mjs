@@ -8,7 +8,7 @@ const codes=new Set(china.features.map(f=>f.properties.adcode));
 if(codes.size!==34||!codes.has(220000))throw Error('Incomplete China context');
 for(const [country,key] of [['china','provinces'],['korea','korea-portal'],['mongolia','mongolia-portal']])fs.writeFileSync('dist/data/'+country+'-context.bin',gzipSync(JSON.stringify(country==='china'?china:data[key])));
 
-await (await import('./khanka-water.mjs')).maskKhankaWorld();
+if(!process.argv.includes('--retain-lake-sources'))await (await import('./khanka-water.mjs')).maskKhankaWorld();
 await (await import('./korean-frontiers.mjs')).repairKoreanContexts();
 
 for(const country of ['china','korea','mongolia']){

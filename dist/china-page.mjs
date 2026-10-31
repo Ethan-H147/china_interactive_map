@@ -1,3 +1,4 @@
+export {renderPopulationMetrics} from './china-population.mjs';
 import {createCountryPage} from './country-page.mjs';
 import {chinaInfoPanel,chinaRomanizationDialog,wireChinaInfo} from './china-info.mjs';
 export {applyChinaSearchAliases,normalizeChinaSearch} from './china-search-aliases.mjs';
@@ -26,10 +27,12 @@ export function mountChinaPage(){
 },
  cards:`<div id="selection-meta" class="country-card-anchor" hidden></div><section id="population" class="population" aria-labelledby="population-heading" hidden>
   <h3 id="population-heading">Population</h3>
-  <p class="population-total" id="population-total"></p>
-  <p class="population-scope" id="population-scope">Entire administrative region</p>
-  <p class="population-period"><span id="population-date"></span><span id="population-boundaries"><span class="meta-divider" aria-hidden="true"> </span>2020 boundaries</span></p>
-  <dl class="population-breakdown" id="population-breakdown"><dt title="Residents in cities and towns (城镇人口)">Cities and towns</dt><dd id="population-towns"></dd><dt title="Residents in the urban core area (城区人口)">Urban core</dt><dd id="population-core"></dd></dl>
+  <div id="population-metrics" class="population-metrics" aria-label="Population measure">
+   <button type="button" class="population-metric" data-population-measure="total"><span class="population-metric-label">Entire administrative region</span><span class="population-metric-value" id="population-total"></span></button>
+   <p class="population-period"><span id="population-date"></span><span id="population-boundaries"><span class="meta-divider" aria-hidden="true"> </span>2020 boundaries</span></p>
+   <button type="button" class="population-metric" data-population-measure="towns" title="Residents in cities and towns (城镇人口)"><span class="population-metric-label">Cities and towns</span><span class="population-metric-value" id="population-towns"></span></button>
+   <button type="button" class="population-metric" data-population-measure="urbanCore" title="Residents in the urban core area (城区人口)"><span class="population-metric-label">Urban core</span><span class="population-metric-value" id="population-core"></span></button>
+  </div>
   <p id="population-quality" class="population-quality" hidden>The source’s population figures are inconsistent.</p>
   <a id="population-source" target="_blank" rel="noopener">Wikipedia: population data</a>
 </section><section id="division-note" class="division-note" aria-label="Administrative details" hidden></section><article id="story" class="story" hidden><h3 id="story-title"></h3><p id="story-text"></p><a id="story-source" target="_blank" rel="noopener">UNESCO: site details</a></article>`,

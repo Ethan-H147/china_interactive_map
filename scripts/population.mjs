@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import {createHash} from 'node:crypto';
 import {fileURLToPath} from 'node:url';
 import {readData} from './read-data.mjs';
+import {censusFeatures,readCensus,aliasesPath,supplementCensus} from './china-census.mjs';
 
 export const articleUrl='https://zh.wikipedia.org/wiki/中華人民共和國城市人口排名';
 const decode=text=>text.replace(/&(#x[\da-f]+|#\d+|amp|lt|gt|quot|apos|nbsp);/gi,(_,entity)=>{
@@ -54,6 +55,24 @@ export function matchRows(rows,features){
   return {regions,unmatched};
 }
 
+// Keep the retained Wikipedia snapshot intact; apply only explicitly verified corrections.
+export function applyPopulationCorrections(regions,corrections){
+ for(const [id,entry] of Object.entries(corrections)){
+  const edits=Array.isArray(entry)?entry:[entry];
+  for(const correction of edits){
+  const record=regions[id],{field,previous,value}=correction;
+  if(!record||record.name!==correction.name||record.date!==correction.date||!['total','towns','urbanCore'].includes(field)||!Number.isSafeInteger(value)||value<0)throw Error('Invalid population correction: '+id);
+  if(record[field]!==previous&&record[field]!==value)throw Error('Source population changed; review correction: '+id);
+  record[field]=value;record.sourceUrl=correction.sourceUrl;record.sourceLabel=correction.sourceLabel;
+  }
+  regions[id].corrections=edits;
+  const r=regions[id];
+  if(r.total!==null&&((r.towns!==null&&r.towns>r.total)||(r.urbanCore!==null&&r.urbanCore>r.total))||r.towns!==null&&r.urbanCore!==null&&r.urbanCore>r.towns)r.inconsistent=true;
+  else delete r.inconsistent;
+ }
+ return regions;
+}
+
 if(process.argv[1]===fileURLToPath(import.meta.url)){
   const input=process.argv[2];
   const sourcePath=new URL('population-source.json',import.meta.url);
@@ -66,8 +85,12 @@ if(process.argv[1]===fileURLToPath(import.meta.url)){
   }else source=JSON.parse(fs.readFileSync(sourcePath,'utf8'));
   const display=readData('display-boundaries.json'),features=[...display.provinces.features,...display.subdivisions.features];
   const {regions,unmatched}=matchRows(source.rows,features),{rows,...metadata}=source;
-  const result={source:metadata,coverage:{sourceRows:rows.length,matchedRegions:Object.keys(regions).length,unmatchedRows:unmatched.length},regions};
+  applyPopulationCorrections(regions,JSON.parse(fs.readFileSync(new URL('population-corrections.json',import.meta.url))));
+  const censusSource=readCensus(),censusReport=supplementCensus(regions,censusSource,censusFeatures(),JSON.parse(fs.readFileSync(aliasesPath)),JSON.parse(fs.readFileSync(new URL('../dist/data/province-population.json',import.meta.url))));
+  const {rows:censusRows,...censusMetadata}=censusSource;
+  const result={census:{source:censusMetadata,summary:censusReport.summary,provinces:censusReport.provinceComparisons},source:metadata,coverage:{sourceRows:rows.length,matchedRegions:rows.length-unmatched.length,unmatchedRows:unmatched.length},regions};
   fs.writeFileSync(new URL('../dist/data/region-population.json',import.meta.url),JSON.stringify(result)+'\n');
   fs.writeFileSync(new URL('population-match-report.json',import.meta.url),JSON.stringify({coverage:result.coverage,unmatched,flagged:Object.entries(regions).filter(([,r])=>r.inconsistent).map(([adcode,r])=>({adcode,...r}))},null,2)+'\n');
-  console.log(JSON.stringify({coverage:result.coverage,dates:[...new Set(rows.map(r=>r.date))],flagged:Object.entries(regions).filter(([,r])=>r.inconsistent).map(([adcode,r])=>({adcode,...r})),sar:{hk:regions[810000],mo:regions[820000]}}));
+  fs.writeFileSync(new URL('boundary-sources/china-population/census-comparison.json',import.meta.url),JSON.stringify(censusReport,null,2)+'\n');
+  console.log(JSON.stringify({census:censusReport.summary,coverage:result.coverage,dates:[...new Set(rows.map(r=>r.date))],flagged:Object.entries(regions).filter(([,r])=>r.inconsistent).map(([adcode,r])=>({adcode,...r})),sar:{hk:regions[810000],mo:regions[820000]}}));
 }

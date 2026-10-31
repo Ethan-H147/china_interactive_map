@@ -44,3 +44,17 @@
 
 .population-note{font-size:14px;line-height:1.5;margin:10px 0;color:var(--ink)}
 #status .status-retry{pointer-events:auto;margin-left:4px;padding:0;border:0;background:none;color:var(--red);font:inherit;text-decoration:underline;cursor:pointer}
+/* China population measures share stable text nodes so their positions and size
+   can move together when a different figure is promoted. */
+#population-metrics{display:flex;flex-direction:column;gap:8px;margin-bottom:16px}
+#population-metrics .population-metric{display:flex;align-items:baseline;justify-content:space-between;gap:12px;min-width:0;width:100%;padding:0;border:0;border-radius:4px;background:transparent;color:var(--ink);text-align:left;font:inherit;font-size:14px;line-height:1.5;cursor:pointer}
+#population-metrics .population-metric[hidden]{display:none}
+#population-metrics .population-metric:disabled{cursor:default;opacity:1}
+#population-metrics .population-metric-label{color:var(--muted);transform-origin:top left}
+#population-metrics .population-metric-value{display:block;flex-shrink:0;font-variant-numeric:tabular-nums;transform-origin:top left}
+#population-metrics .population-metric.is-primary{flex-direction:column-reverse;align-items:flex-start;gap:5px}
+#population-metrics .is-primary .population-metric-value{font-size:28px;font-weight:500;line-height:1.2}
+#population-metrics .population-period{margin:0 0 12px}
+#population-metrics .population-metric:focus-visible{outline:2px solid var(--red);outline-offset:5px}
+@media(hover:hover){#population-metrics .population-metric:not(:disabled):hover .population-metric-label{color:var(--ink)}}
+#population-metrics{grid-column:1/-1;max-width:480px}

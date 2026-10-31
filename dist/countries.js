@@ -374,6 +374,7 @@
  };
  for(const [id,c] of Object.entries(countries)){
   c.id=id;
+  if(['palau','micronesia','papua-new-guinea','solomon-islands','romania','bulgaria'].includes(id))c.flagSet??='regional-flags';
   c.labelPoints??=[{id,en:c.en,local:c.local,center:c.labelCenter||c.map?.center}];
   if(['czechia','slovakia','poland','estonia','latvia','lithuania','cambodia','ukraine','angola','luxembourg','san-marino','china','mexico','united-states','canada','spain','france','germany','italy','malaysia','india','morocco','bolivia','timor-leste','brunei','pakistan','kazakhstan','greece','cyprus','afghanistan','kyrgyzstan','myanmar','laos','norway','sweden','finland','nepal','bhutan','bangladesh'].includes(id))c.quiz={level:1,...(id==='spain'?{exclude:['ES-A-20'],bounds:c.map.bounds,insets:['ES-A-05']}: {}),...(id==='united-states'?{bounds:c.map.bounds,insets:['US-AK','US-HI']}: {}),...(id==='norway'?{bounds:c.map.bounds,insets:['NO-SJ','NO-JM','NO-BV','NO-PI']}: {})};
   if(!c.snapshot&&!c.noQuiz&&!['monaco','vatican-city'].includes(id))c.quiz={level:1,...c.quiz,...quizOverrides[id]};

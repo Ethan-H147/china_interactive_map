@@ -1,0 +1,38 @@
+{
+  "revision": 95346898,
+  "sourceUrl": "https://zh.wikipedia.org/w/index.php?title=%E4%B8%AD%E8%8F%AF%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9C%8B%E5%9F%8E%E5%B8%82%E4%BA%BA%E5%8F%A3%E6%8E%92%E5%90%8D&oldid=95346898",
+  "retrieved": "2026-10-31",
+  "parsedHtmlSha256": "486ef3b6d8195925e87c0a4fdb67e58a94e069a0b43333f1f3f597feca0e13a4",
+  "rows": [
+    {
+      "id": "441400",
+      "province": "广东",
+      "name": "梅州市",
+      "type": "地级市",
+      "total": 3873239,
+      "towns": 1997795,
+      "urbanCore": 658380,
+      "date": "2020-11-01"
+    },
+    {
+      "id": "440800",
+      "province": "广东",
+      "name": "湛江市",
+      "type": "地级市",
+      "total": 6981236,
+      "towns": 3173464,
+      "urbanCore": 1231581,
+      "date": "2020-11-01"
+    },
+    {
+      "id": "150200",
+      "province": "内蒙古",
+      "name": "包头市",
+      "type": "地级市",
+      "total": 2709378,
+      "towns": 2334393,
+      "urbanCore": 1897779,
+      "date": "2020-11-01"
+    }
+  ]
+}

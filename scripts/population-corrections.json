@@ -1,0 +1,121 @@
+{
+  "140600": {
+    "name": "朔州市",
+    "date": "2020-11-01",
+    "field": "urbanCore",
+    "previous": 41807,
+    "value": 417807,
+    "sourceLabel": "2020 census: Table 1",
+    "sourceUrl": "https://www.stats.gov.cn/zs/tjwh/tjkw/tjzl/202302/t20230220_1913738.html",
+    "publication": "中国人口普查分县资料—2020",
+    "table": "表1 人口基本状况（全部数据）",
+    "printedPages": [
+      10,
+      11
+    ],
+    "pdfPages": [
+      15,
+      16
+    ],
+    "verifiedOn": "2026-10-30",
+    "note": "Original scanned row visually checked before this correction; the Wikipedia-derived urban-core figure omitted a digit."
+  },
+  "150200": {
+    "name": "包头市",
+    "date": "2020-11-01",
+    "field": "urbanCore",
+    "previous": 189779,
+    "value": 1897779,
+    "sourceLabel": "Wikipedia: population data",
+    "sourceUrl": "https://zh.wikipedia.org/w/index.php?title=%E4%B8%AD%E8%8F%AF%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9C%8B%E5%9F%8E%E5%B8%82%E4%BA%BA%E5%8F%A3%E6%8E%92%E5%90%8D&oldid=95346898",
+    "revision": 95346898,
+    "reviewedOn": "2026-10-31",
+    "note": "User reviewed and corrected this Wikipedia row; imported from the pinned revision."
+  },
+  "371400": {
+    "name": "德州市",
+    "date": "2020-11-01",
+    "field": "total",
+    "previous": 561194,
+    "value": 5611194,
+    "sourceLabel": "Wikipedia: population data",
+    "sourceUrl": "https://zh.wikipedia.org/w/index.php?title=%E4%B8%AD%E8%8F%AF%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9C%8B%E5%9F%8E%E5%B8%82%E4%BA%BA%E5%8F%A3%E6%8E%92%E5%90%8D&oldid=95347066",
+    "revision": 95347066,
+    "reviewedOn": "2026-10-31",
+    "note": "User reviewed and corrected this Wikipedia row; imported from the pinned revision."
+  },
+  "440800": [
+    {
+      "name": "湛江市",
+      "date": "2020-11-01",
+      "field": "towns",
+      "previous": 251742,
+      "value": 3173464,
+      "sourceLabel": "Wikipedia: population data",
+      "sourceUrl": "https://zh.wikipedia.org/w/index.php?title=%E4%B8%AD%E8%8F%AF%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9C%8B%E5%9F%8E%E5%B8%82%E4%BA%BA%E5%8F%A3%E6%8E%92%E5%90%8D&oldid=95346898",
+      "revision": 95346898,
+      "reviewedOn": "2026-10-31",
+      "note": "User reviewed and corrected this Wikipedia row; imported from the pinned revision."
+    },
+    {
+      "name": "湛江市",
+      "date": "2020-11-01",
+      "field": "urbanCore",
+      "previous": 196122,
+      "value": 1231581,
+      "sourceLabel": "Wikipedia: population data",
+      "sourceUrl": "https://zh.wikipedia.org/w/index.php?title=%E4%B8%AD%E8%8F%AF%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9C%8B%E5%9F%8E%E5%B8%82%E4%BA%BA%E5%8F%A3%E6%8E%92%E5%90%8D&oldid=95346898",
+      "revision": 95346898,
+      "reviewedOn": "2026-10-31",
+      "note": "User reviewed and corrected this Wikipedia row; imported from the pinned revision."
+    }
+  ],
+  "441400": {
+    "name": "梅州市",
+    "date": "2020-11-01",
+    "field": "urbanCore",
+    "previous": 65380,
+    "value": 658380,
+    "sourceLabel": "Wikipedia: population data",
+    "sourceUrl": "https://zh.wikipedia.org/w/index.php?title=%E4%B8%AD%E8%8F%AF%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9C%8B%E5%9F%8E%E5%B8%82%E4%BA%BA%E5%8F%A3%E6%8E%92%E5%90%8D&oldid=95346898",
+    "revision": 95346898,
+    "reviewedOn": "2026-10-31",
+    "note": "User reviewed and corrected this Wikipedia row; imported from the pinned revision."
+  },
+  "621100": {
+    "name": "定西市",
+    "date": "2020-11-01",
+    "field": "total",
+    "previous": 425627,
+    "value": 2524097,
+    "sourceLabel": "Wikipedia: population data",
+    "sourceUrl": "https://zh.wikipedia.org/w/index.php?title=%E4%B8%AD%E8%8F%AF%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9C%8B%E5%9F%8E%E5%B8%82%E4%BA%BA%E5%8F%A3%E6%8E%92%E5%90%8D&oldid=95347066",
+    "revision": 95347066,
+    "reviewedOn": "2026-10-31",
+    "note": "User reviewed and corrected this Wikipedia row; imported from the pinned revision."
+  },
+  "640300": {
+    "name": "吴忠市",
+    "date": "2020-11-01",
+    "field": "total",
+    "previous": 751389,
+    "value": 1382713,
+    "sourceLabel": "Wikipedia: population data",
+    "sourceUrl": "https://zh.wikipedia.org/w/index.php?title=%E4%B8%AD%E8%8F%AF%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9C%8B%E5%9F%8E%E5%B8%82%E4%BA%BA%E5%8F%A3%E6%8E%92%E5%90%8D&oldid=95347066",
+    "revision": 95347066,
+    "reviewedOn": "2026-10-31",
+    "note": "User reviewed and corrected this Wikipedia row; imported from the pinned revision."
+  },
+  "650200": {
+    "name": "克拉玛依市",
+    "date": "2020-11-01",
+    "field": "total",
+    "previous": 390348,
+    "value": 490348,
+    "sourceLabel": "Wikipedia: population data",
+    "sourceUrl": "https://zh.wikipedia.org/w/index.php?title=%E4%B8%AD%E8%8F%AF%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9C%8B%E5%9F%8E%E5%B8%82%E4%BA%BA%E5%8F%A3%E6%8E%92%E5%90%8D&oldid=95347066",
+    "revision": 95347066,
+    "reviewedOn": "2026-10-31",
+    "note": "User reviewed and corrected this Wikipedia row; imported from the pinned revision."
+  }
+}

@@ -1,0 +1,41 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+const data=JSON.parse(fs.readFileSync('dist/data/region-population.json')).regions;
+async function select(p,id){
+ await p.evaluate(`(async()=>{await loadChinaCounties();const layer=regionByCode.get(${id});if(!layer)throw Error('Missing census region ${id}');await selectRegion(layer,layer.feature.properties.provinceCode,false);})()`);
+ await p.settle();
+ assert.equal(await p.evaluate('document.getElementById("population").hidden'),false);
+ assert.equal(await p.evaluate('document.getElementById("population-total").textContent'),data[id].total.toLocaleString('en-US'));
+}
+export default [false,true].map(mobile=>({name:'Census prefectures districts county measures and differences '+(mobile?'phone':'desktop'),options:{width:mobile?390:1280,height:900,mobile},async run(p,base){
+ await p.open(base,'#china');await p.evaluate("AtlasSettings.setSettings({motion:'reduce'})");
+ await select(p,652300);
+ assert.equal(await p.evaluate('document.getElementById("population-source").textContent'),'2020 census: Table 1');
+ assert.equal(await p.evaluate('document.getElementById("population-quality").hidden'),true);
+ await select(p,110101);
+ assert.equal(await p.evaluate('document.getElementById("population-core").textContent'),'Not reported');
+ await p.evaluate('document.querySelector("[data-population-measure=towns]").click()');
+ assert.equal(await p.evaluate('document.getElementById("population-metrics").dataset.measure'),'towns');
+ await select(p,510104);
+ assert.equal(await p.evaluate('document.getElementById("population-metrics").dataset.measure'),'towns','Measure preference follows county selection');
+ assert.equal(await p.evaluate('document.getElementById("population-core").textContent'),'Not reported');
+ await p.evaluate('document.getElementById("population").scrollIntoView({block:"center"})');
+ assert(await p.evaluate('document.documentElement.scrollWidth<=innerWidth'),'County figures fit the viewport');
+ await p.screenshot('china-census-county-'+(mobile?'phone':'desktop'));
+ await select(p,410308);
+ assert.match(await p.evaluate('document.getElementById("population-quality").textContent'),/孟津县/);
+ assert.match(await p.evaluate('document.getElementById("population-source").title'),/1620, 1622/);
+ await select(p,640200);
+ assert.equal(await p.evaluate('document.getElementById("population-quality").hidden'),false);
+ const warning=await p.evaluate('document.getElementById("population-quality").textContent');
+ assert.match(warning,/2,859,074 on website/);assert.match(warning,/751,389 in workbook \(C3227\)/);
+ await p.evaluate('document.getElementById("population").scrollIntoView({block:"center"})');
+ assert(await p.evaluate('document.documentElement.scrollWidth<=innerWidth'),'Discrepancy fits the viewport');
+ await p.screenshot('china-census-difference-'+(mobile?'phone':'desktop'));
+ await select(p,371400);
+ assert.equal(await p.evaluate('document.getElementById("population-quality").hidden'),true,'Warning clears after moving to an agreeing row');
+ await select(p,330102);
+ assert.match(await p.evaluate('document.getElementById("population-quality").textContent'),/historical 2020 census area/);
+ await p.evaluate('selectRegion(regionByCode.get(330113),330000,false)');
+ assert.equal(await p.evaluate('document.getElementById("population").hidden'),true,'A new district never inherits a predecessor population');
+}}));

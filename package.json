@@ -229,6 +229,9 @@
     "build:western-province-seams": "node scripts/reconcile-western-provinces.mjs && node scripts/reconcile-western-counties.mjs && npm run build:china-pack && npm run build:motion && npm run build:compact",
     "test:western-province-seams": "node scripts/validate-western-province-seams.mjs",
     "test:browser:western-province-seams": "node scripts/browser/run.mjs western-province-seams",
+    "build:langfang-seams": "node scripts/reconcile-langfang.mjs && node --max-old-space-size=8000 scripts/pack-china-boundaries.mjs --retain-lake-sources && node scripts/prepare-motion.mjs && node scripts/prepare-context.mjs --retain-lake-sources && node scripts/prepare-shared-context.mjs && node scripts/compact-china-context.mjs",
+    "test:langfang-seams": "node scripts/validate-langfang-seams.mjs",
+    "test:browser:langfang-seams": "node scripts/browser/run.mjs langfang-seams",
     "build:inner-mongolia-seams": "node scripts/reconcile-inner-mongolia.mjs && node scripts/reconcile-inner-mongolia-counties.mjs && npm run build:fills && npm run build:compact",
     "test:inner-mongolia-seams": "node scripts/validate-inner-mongolia-seams.mjs",
     "test:browser:inner-mongolia-seams": "node scripts/browser/run.mjs inner-mongolia-seams",
@@ -462,6 +465,10 @@
     "fetch:liberia-flags": "node scripts/fetch-liberia-flags.mjs",
     "test:liberia-flags": "node scripts/validate-liberia-flags.mjs && node scripts/browser/run.mjs liberia-flags",
     "fetch:regional-flags": "node scripts/fetch-regional-flags.mjs",
-    "test:regional-flag-expansion": "node scripts/validate-regional-flag-expansion.mjs && node scripts/browser/run.mjs regional-flag-expansion lower-austria-flag"
+    "test:regional-flag-expansion": "node scripts/validate-regional-flag-expansion.mjs && node scripts/browser/run.mjs regional-flag-expansion lower-austria-flag",
+    "test:china-population": "node --check dist/china-population.mjs && node scripts/validate-population.mjs && node scripts/validate-china-census.mjs && node scripts/browser/run.mjs china-population china-census",
+    "build:china-population": "node scripts/population.mjs && npm run audit:china-population",
+    "test:china-census": "node scripts/validate-china-census.mjs",
+    "audit:china-population": "node scripts/audit-china-population.mjs"
   }
 }
