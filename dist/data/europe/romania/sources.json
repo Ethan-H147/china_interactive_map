@@ -24,6 +24,10 @@
       "extraction": "Croatia, Romania and Bosnia and Herzegovina only",
       "sha256": "2c83ffed5c7bc79a1aaf725f586bb21e09ed825e5de8b5e5440fc96ffb1b3378",
       "bytes": 3370768
+    },
+    "regionalFlags": {
+      "title": "Regional and municipal flags, adoption evidence and artwork credits",
+      "url": "data/regional-flag-sources.json"
     }
   }
 }

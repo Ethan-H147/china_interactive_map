@@ -65,6 +65,10 @@
       "page": "https://flagcdn.com/",
       "sha256": "d98adee3bf8945b389144b04bc49824c85711e1d473236971ac8a48939328064",
       "bytes": 2969
+    },
+    "regionalFlags": {
+      "title": "Regional and municipal flags, adoption evidence and artwork credits",
+      "url": "data/regional-flag-sources.json"
     }
   }
 }

@@ -1,0 +1,682 @@
+[
+  {
+    "country": "palau",
+    "id": "PW-002",
+    "name": "Aimeliik",
+    "level": 1,
+    "file": "Flag of Aimeliik.svg",
+    "reference": "https://commons.wikimedia.org/wiki/Flags_of_states_of_Palau",
+    "evidence": "https://commons.wikimedia.org/wiki/Flags_of_states_of_Palau",
+    "adoption": "Recognized state/province flag in the territorial flag register."
+  },
+  {
+    "country": "palau",
+    "id": "PW-004",
+    "name": "Airai",
+    "level": 1,
+    "file": "Flag of Airai State.png",
+    "reference": "https://commons.wikimedia.org/wiki/Flags_of_states_of_Palau",
+    "evidence": "https://commons.wikimedia.org/wiki/Flags_of_states_of_Palau",
+    "adoption": "Recognized state/province flag in the territorial flag register."
+  },
+  {
+    "country": "palau",
+    "id": "PW-010",
+    "name": "Angaur",
+    "level": 1,
+    "file": "Flag of Angaur State.svg",
+    "reference": "https://commons.wikimedia.org/wiki/Flags_of_states_of_Palau",
+    "evidence": "https://commons.wikimedia.org/wiki/Flags_of_states_of_Palau",
+    "adoption": "Recognized state/province flag in the territorial flag register."
+  },
+  {
+    "country": "palau",
+    "id": "PW-050",
+    "name": "Hatohobei",
+    "level": 1,
+    "file": "Flag of Hatohobei.svg",
+    "reference": "https://commons.wikimedia.org/wiki/Flags_of_states_of_Palau",
+    "evidence": "https://commons.wikimedia.org/wiki/Flags_of_states_of_Palau",
+    "adoption": "Recognized state/province flag in the territorial flag register."
+  },
+  {
+    "country": "palau",
+    "id": "PW-150",
+    "name": "Koror",
+    "level": 1,
+    "file": "Flag of Koror State.png",
+    "reference": "https://commons.wikimedia.org/wiki/Flags_of_states_of_Palau",
+    "evidence": "https://commons.wikimedia.org/wiki/Flags_of_states_of_Palau",
+    "adoption": "Recognized state/province flag in the territorial flag register."
+  },
+  {
+    "country": "palau",
+    "id": "PW-212",
+    "name": "Melekeok",
+    "level": 1,
+    "file": "Flag of Melekeok.svg",
+    "reference": "https://commons.wikimedia.org/wiki/Flags_of_states_of_Palau",
+    "evidence": "https://commons.wikimedia.org/wiki/Flags_of_states_of_Palau",
+    "adoption": "Recognized state/province flag in the territorial flag register."
+  },
+  {
+    "country": "palau",
+    "id": "PW-214",
+    "name": "Ngaraard",
+    "level": 1,
+    "file": "Flag of Ngaraard State.svg",
+    "reference": "https://commons.wikimedia.org/wiki/Flags_of_states_of_Palau",
+    "evidence": "https://commons.wikimedia.org/wiki/Flags_of_states_of_Palau",
+    "adoption": "Recognized state/province flag in the territorial flag register."
+  },
+  {
+    "country": "palau",
+    "id": "PW-218",
+    "name": "Ngarchelong",
+    "level": 1,
+    "file": "Flag of Ngarchelong.svg",
+    "reference": "https://commons.wikimedia.org/wiki/Flags_of_states_of_Palau",
+    "evidence": "https://commons.wikimedia.org/wiki/Flags_of_states_of_Palau",
+    "adoption": "Recognized state/province flag in the territorial flag register."
+  },
+  {
+    "country": "palau",
+    "id": "PW-222",
+    "name": "Ngardmau",
+    "level": 1,
+    "file": "Flag of Ngardmau State.svg",
+    "reference": "https://commons.wikimedia.org/wiki/Flags_of_states_of_Palau",
+    "evidence": "https://commons.wikimedia.org/wiki/Flags_of_states_of_Palau",
+    "adoption": "Recognized state/province flag in the territorial flag register."
+  },
+  {
+    "country": "palau",
+    "id": "PW-227",
+    "name": "Ngeremlengui",
+    "level": 1,
+    "file": "Flag of Ngeremlengui State, Palau.svg",
+    "reference": "https://commons.wikimedia.org/wiki/Flags_of_states_of_Palau",
+    "evidence": "https://commons.wikimedia.org/wiki/Flags_of_states_of_Palau",
+    "adoption": "Recognized state/province flag in the territorial flag register."
+  },
+  {
+    "country": "palau",
+    "id": "PW-224",
+    "name": "Ngatpang",
+    "level": 1,
+    "file": "Flag of Ngatpang.svg",
+    "reference": "https://commons.wikimedia.org/wiki/Flags_of_states_of_Palau",
+    "evidence": "https://commons.wikimedia.org/wiki/Flags_of_states_of_Palau",
+    "adoption": "Recognized state/province flag in the territorial flag register."
+  },
+  {
+    "country": "palau",
+    "id": "PW-226",
+    "name": "Ngchesar",
+    "level": 1,
+    "file": "Flag of Ngchesar State, Palau.svg",
+    "reference": "https://commons.wikimedia.org/wiki/Flags_of_states_of_Palau",
+    "evidence": "https://commons.wikimedia.org/wiki/Flags_of_states_of_Palau",
+    "adoption": "Recognized state/province flag in the territorial flag register."
+  },
+  {
+    "country": "palau",
+    "id": "PW-228",
+    "name": "Ngiwal",
+    "level": 1,
+    "file": "Flag of Ngiwal.png",
+    "reference": "https://commons.wikimedia.org/wiki/Flags_of_states_of_Palau",
+    "evidence": "https://commons.wikimedia.org/wiki/Flags_of_states_of_Palau",
+    "adoption": "Recognized state/province flag in the territorial flag register."
+  },
+  {
+    "country": "palau",
+    "id": "PW-350",
+    "name": "Peleliu",
+    "level": 1,
+    "file": "Flag of Peleliu.svg",
+    "reference": "https://commons.wikimedia.org/wiki/Flags_of_states_of_Palau",
+    "evidence": "https://commons.wikimedia.org/wiki/Flags_of_states_of_Palau",
+    "adoption": "Recognized state/province flag in the territorial flag register."
+  },
+  {
+    "country": "palau",
+    "id": "PW-370",
+    "name": "Sonsorol",
+    "level": 1,
+    "file": "Flag of Sonsorol.svg",
+    "reference": "https://commons.wikimedia.org/wiki/Flags_of_states_of_Palau",
+    "evidence": "https://commons.wikimedia.org/wiki/Flags_of_states_of_Palau",
+    "adoption": "Recognized state/province flag in the territorial flag register."
+  },
+  {
+    "country": "palau",
+    "id": "PW-100",
+    "name": "Kayangel",
+    "level": 1,
+    "file": "Flag of Kayangel.svg",
+    "reference": "https://commons.wikimedia.org/wiki/Flags_of_states_of_Palau",
+    "evidence": "https://commons.wikimedia.org/wiki/Flags_of_states_of_Palau",
+    "adoption": "Recognized state/province flag in the territorial flag register."
+  },
+  {
+    "country": "micronesia",
+    "id": "FM-YAP",
+    "name": "Yap",
+    "level": 1,
+    "file": "Flag of Yap.svg",
+    "reference": "https://commons.wikimedia.org/wiki/Flags_of_states_of_the_Federated_States_of_Micronesia",
+    "evidence": "https://commons.wikimedia.org/wiki/Flags_of_states_of_the_Federated_States_of_Micronesia",
+    "adoption": "Recognized state/province flag in the territorial flag register."
+  },
+  {
+    "country": "micronesia",
+    "id": "FM-TRK",
+    "name": "Chuuk",
+    "level": 1,
+    "file": "Flag of Chuuk.svg",
+    "reference": "https://commons.wikimedia.org/wiki/Flags_of_states_of_the_Federated_States_of_Micronesia",
+    "evidence": "https://commons.wikimedia.org/wiki/Flags_of_states_of_the_Federated_States_of_Micronesia",
+    "adoption": "Recognized state/province flag in the territorial flag register."
+  },
+  {
+    "country": "micronesia",
+    "id": "FM-PNI",
+    "name": "Pohnpei",
+    "level": 1,
+    "file": "Flag of Pohnpei.svg",
+    "reference": "https://commons.wikimedia.org/wiki/Flags_of_states_of_the_Federated_States_of_Micronesia",
+    "evidence": "https://commons.wikimedia.org/wiki/Flags_of_states_of_the_Federated_States_of_Micronesia",
+    "adoption": "Recognized state/province flag in the territorial flag register."
+  },
+  {
+    "country": "micronesia",
+    "id": "FM-KSA",
+    "name": "Kosrae",
+    "level": 1,
+    "file": "Flag of Kosrae.svg",
+    "reference": "https://commons.wikimedia.org/wiki/Flags_of_states_of_the_Federated_States_of_Micronesia",
+    "evidence": "https://commons.wikimedia.org/wiki/Flags_of_states_of_the_Federated_States_of_Micronesia",
+    "adoption": "Recognized state/province flag in the territorial flag register."
+  },
+  {
+    "country": "papua-new-guinea",
+    "id": "PG06",
+    "name": "Northern (Oro)",
+    "level": 1,
+    "file": "Flag of Flag Oro new.png",
+    "reference": "https://commons.wikimedia.org/wiki/Flags_of_provinces_of_Papua_New_Guinea",
+    "evidence": "https://commons.wikimedia.org/wiki/Flags_of_provinces_of_Papua_New_Guinea",
+    "adoption": "Recognized state/province flag in the territorial flag register."
+  },
+  {
+    "country": "papua-new-guinea",
+    "id": "PG11",
+    "name": "Eastern Highlands",
+    "level": 1,
+    "file": "Flag of Eastern Highlands.svg",
+    "reference": "https://commons.wikimedia.org/wiki/Flags_of_provinces_of_Papua_New_Guinea",
+    "evidence": "https://commons.wikimedia.org/wiki/Flags_of_provinces_of_Papua_New_Guinea",
+    "adoption": "Recognized state/province flag in the territorial flag register."
+  },
+  {
+    "country": "papua-new-guinea",
+    "id": "PG12",
+    "name": "Morobe",
+    "level": 1,
+    "file": "Flag of Morobe.png",
+    "reference": "https://commons.wikimedia.org/wiki/Flags_of_provinces_of_Papua_New_Guinea",
+    "evidence": "https://commons.wikimedia.org/wiki/Flags_of_provinces_of_Papua_New_Guinea",
+    "adoption": "Recognized state/province flag in the territorial flag register."
+  },
+  {
+    "country": "papua-new-guinea",
+    "id": "PG07",
+    "name": "Southern Highlands",
+    "level": 1,
+    "file": "Flag of Southern Highlands Province (Papua New Guinea).svg",
+    "reference": "https://commons.wikimedia.org/wiki/Flags_of_provinces_of_Papua_New_Guinea",
+    "evidence": "https://commons.wikimedia.org/wiki/Flags_of_provinces_of_Papua_New_Guinea",
+    "adoption": "Recognized state/province flag in the territorial flag register."
+  },
+  {
+    "country": "papua-new-guinea",
+    "id": "PG14",
+    "name": "East Sepik",
+    "level": 1,
+    "file": "Flag of East Sepik.png",
+    "reference": "https://commons.wikimedia.org/wiki/Flags_of_provinces_of_Papua_New_Guinea",
+    "evidence": "https://commons.wikimedia.org/wiki/Flags_of_provinces_of_Papua_New_Guinea",
+    "adoption": "Recognized state/province flag in the territorial flag register."
+  },
+  {
+    "country": "papua-new-guinea",
+    "id": "PG13",
+    "name": "Madang",
+    "level": 1,
+    "file": "Flag of Madang.svg",
+    "reference": "https://commons.wikimedia.org/wiki/Flags_of_provinces_of_Papua_New_Guinea",
+    "evidence": "https://commons.wikimedia.org/wiki/Flags_of_provinces_of_Papua_New_Guinea",
+    "adoption": "Recognized state/province flag in the territorial flag register."
+  },
+  {
+    "country": "papua-new-guinea",
+    "id": "PG05",
+    "name": "Milne Bay",
+    "level": 1,
+    "file": "Flag of Milne Bay.svg",
+    "reference": "https://commons.wikimedia.org/wiki/Flags_of_provinces_of_Papua_New_Guinea",
+    "evidence": "https://commons.wikimedia.org/wiki/Flags_of_provinces_of_Papua_New_Guinea",
+    "adoption": "Recognized state/province flag in the territorial flag register."
+  },
+  {
+    "country": "papua-new-guinea",
+    "id": "PG15",
+    "name": "West Sepik (Sandaun)",
+    "level": 1,
+    "file": "Flag of Sandaun.svg",
+    "reference": "https://commons.wikimedia.org/wiki/Flags_of_provinces_of_Papua_New_Guinea",
+    "evidence": "https://commons.wikimedia.org/wiki/Flags_of_provinces_of_Papua_New_Guinea",
+    "adoption": "Recognized state/province flag in the territorial flag register."
+  },
+  {
+    "country": "papua-new-guinea",
+    "id": "PG03",
+    "name": "Central",
+    "level": 1,
+    "file": "Flag of Central Province, Papua New Guinea.svg",
+    "reference": "https://commons.wikimedia.org/wiki/Flags_of_provinces_of_Papua_New_Guinea",
+    "evidence": "https://commons.wikimedia.org/wiki/Flags_of_provinces_of_Papua_New_Guinea",
+    "adoption": "Recognized state/province flag in the territorial flag register."
+  },
+  {
+    "country": "papua-new-guinea",
+    "id": "PG08",
+    "name": "Enga",
+    "level": 1,
+    "file": "Flag of Enga.png",
+    "reference": "https://commons.wikimedia.org/wiki/Flags_of_provinces_of_Papua_New_Guinea",
+    "evidence": "https://commons.wikimedia.org/wiki/Flags_of_provinces_of_Papua_New_Guinea",
+    "adoption": "Recognized state/province flag in the territorial flag register."
+  },
+  {
+    "country": "papua-new-guinea",
+    "id": "PG22",
+    "name": "Jiwaka",
+    "level": 1,
+    "file": "Flag of Jiwaka.svg",
+    "reference": "https://commons.wikimedia.org/wiki/Flags_of_provinces_of_Papua_New_Guinea",
+    "evidence": "https://commons.wikimedia.org/wiki/Flags_of_provinces_of_Papua_New_Guinea",
+    "adoption": "Recognized state/province flag in the territorial flag register."
+  },
+  {
+    "country": "papua-new-guinea",
+    "id": "PG20",
+    "name": "Bougainville",
+    "level": 1,
+    "file": "Flag of Bougainville.svg",
+    "reference": "https://commons.wikimedia.org/wiki/Flags_of_provinces_of_Papua_New_Guinea",
+    "evidence": "https://commons.wikimedia.org/wiki/Flags_of_provinces_of_Papua_New_Guinea",
+    "adoption": "Recognized state/province flag in the territorial flag register."
+  },
+  {
+    "country": "papua-new-guinea",
+    "id": "PG16",
+    "name": "Manus",
+    "level": 1,
+    "file": "Flag of Manus.svg",
+    "reference": "https://commons.wikimedia.org/wiki/Flags_of_provinces_of_Papua_New_Guinea",
+    "evidence": "https://commons.wikimedia.org/wiki/Flags_of_provinces_of_Papua_New_Guinea",
+    "adoption": "Recognized state/province flag in the territorial flag register."
+  },
+  {
+    "country": "papua-new-guinea",
+    "id": "PG21",
+    "name": "Hela",
+    "level": 1,
+    "file": "Flag of Hela.svg",
+    "reference": "https://commons.wikimedia.org/wiki/Flags_of_provinces_of_Papua_New_Guinea",
+    "evidence": "https://commons.wikimedia.org/wiki/Flags_of_provinces_of_Papua_New_Guinea",
+    "adoption": "Recognized state/province flag in the territorial flag register."
+  },
+  {
+    "country": "papua-new-guinea",
+    "id": "PG02",
+    "name": "Gulf",
+    "level": 1,
+    "file": "Flag of Gulf Province.png",
+    "reference": "https://commons.wikimedia.org/wiki/Flags_of_provinces_of_Papua_New_Guinea",
+    "evidence": "https://commons.wikimedia.org/wiki/Flags_of_provinces_of_Papua_New_Guinea",
+    "adoption": "Recognized state/province flag in the territorial flag register."
+  },
+  {
+    "country": "papua-new-guinea",
+    "id": "PG09",
+    "name": "Western Highlands",
+    "level": 1,
+    "file": "Flag of Western Highlands.svg",
+    "reference": "https://commons.wikimedia.org/wiki/Flags_of_provinces_of_Papua_New_Guinea",
+    "evidence": "https://commons.wikimedia.org/wiki/Flags_of_provinces_of_Papua_New_Guinea",
+    "adoption": "Recognized state/province flag in the territorial flag register."
+  },
+  {
+    "country": "papua-new-guinea",
+    "id": "PG18",
+    "name": "East New Britain",
+    "level": 1,
+    "file": "Flag of East New Britain.svg",
+    "reference": "https://commons.wikimedia.org/wiki/Flags_of_provinces_of_Papua_New_Guinea",
+    "evidence": "https://commons.wikimedia.org/wiki/Flags_of_provinces_of_Papua_New_Guinea",
+    "adoption": "Recognized state/province flag in the territorial flag register."
+  },
+  {
+    "country": "papua-new-guinea",
+    "id": "PG19",
+    "name": "West New Britain",
+    "level": 1,
+    "file": "Flag of West New Britain.svg",
+    "reference": "https://commons.wikimedia.org/wiki/Flags_of_provinces_of_Papua_New_Guinea",
+    "evidence": "https://commons.wikimedia.org/wiki/Flags_of_provinces_of_Papua_New_Guinea",
+    "adoption": "Recognized state/province flag in the territorial flag register."
+  },
+  {
+    "country": "papua-new-guinea",
+    "id": "PG01",
+    "name": "Western",
+    "level": 1,
+    "file": "Flag of Western Highlands.svg",
+    "reference": "https://commons.wikimedia.org/wiki/Flags_of_provinces_of_Papua_New_Guinea",
+    "evidence": "https://commons.wikimedia.org/wiki/Flags_of_provinces_of_Papua_New_Guinea",
+    "adoption": "Recognized state/province flag in the territorial flag register."
+  },
+  {
+    "country": "papua-new-guinea",
+    "id": "PG10",
+    "name": "Chimbu (Simbu)",
+    "level": 1,
+    "file": "Flag of Chimbu.svg",
+    "reference": "https://commons.wikimedia.org/wiki/Flags_of_provinces_of_Papua_New_Guinea",
+    "evidence": "https://commons.wikimedia.org/wiki/Flags_of_provinces_of_Papua_New_Guinea",
+    "adoption": "Recognized state/province flag in the territorial flag register."
+  },
+  {
+    "country": "papua-new-guinea",
+    "id": "PG17",
+    "name": "New Ireland",
+    "level": 1,
+    "file": "Flag of New Ireland.svg",
+    "reference": "https://commons.wikimedia.org/wiki/Flags_of_provinces_of_Papua_New_Guinea",
+    "evidence": "https://commons.wikimedia.org/wiki/Flags_of_provinces_of_Papua_New_Guinea",
+    "adoption": "Recognized state/province flag in the territorial flag register."
+  },
+  {
+    "country": "papua-new-guinea",
+    "id": "PG04",
+    "name": "National Capital District",
+    "level": 1,
+    "file": "Flag of NCD.svg",
+    "reference": "https://commons.wikimedia.org/wiki/Flags_of_provinces_of_Papua_New_Guinea",
+    "evidence": "https://commons.wikimedia.org/wiki/Flags_of_provinces_of_Papua_New_Guinea",
+    "adoption": "Recognized state/province flag in the territorial flag register."
+  },
+  {
+    "country": "solomon-islands",
+    "id": "SB10",
+    "name": "Honiara",
+    "level": 1,
+    "file": "Flag of Honiara.svg",
+    "reference": "https://commons.wikimedia.org/wiki/Flags_of_provinces_of_the_Solomon_Islands",
+    "evidence": "https://commons.wikimedia.org/wiki/Flags_of_provinces_of_the_Solomon_Islands",
+    "adoption": "Recognized state/province flag in the territorial flag register."
+  },
+  {
+    "country": "solomon-islands",
+    "id": "SB01",
+    "name": "Choiseul",
+    "level": 1,
+    "file": "Flag of Choiseul.png",
+    "reference": "https://commons.wikimedia.org/wiki/Flags_of_provinces_of_the_Solomon_Islands",
+    "evidence": "https://commons.wikimedia.org/wiki/Flags_of_provinces_of_the_Solomon_Islands",
+    "adoption": "Recognized state/province flag in the territorial flag register."
+  },
+  {
+    "country": "solomon-islands",
+    "id": "SB02",
+    "name": "Western",
+    "level": 1,
+    "file": "Flag of Western Province Solomon Islands.png",
+    "reference": "https://commons.wikimedia.org/wiki/Flags_of_provinces_of_the_Solomon_Islands",
+    "evidence": "https://commons.wikimedia.org/wiki/Flags_of_provinces_of_the_Solomon_Islands",
+    "adoption": "Recognized state/province flag in the territorial flag register."
+  },
+  {
+    "country": "solomon-islands",
+    "id": "SB03",
+    "name": "Isabel",
+    "level": 1,
+    "file": "Flag of Isabel Province Solomon Islands.png",
+    "reference": "https://commons.wikimedia.org/wiki/Flags_of_provinces_of_the_Solomon_Islands",
+    "evidence": "https://commons.wikimedia.org/wiki/Flags_of_provinces_of_the_Solomon_Islands",
+    "adoption": "Recognized state/province flag in the territorial flag register."
+  },
+  {
+    "country": "solomon-islands",
+    "id": "SB04",
+    "name": "Central",
+    "level": 1,
+    "file": "Flag of Central Province Solomon Islands.png",
+    "reference": "https://commons.wikimedia.org/wiki/Flags_of_provinces_of_the_Solomon_Islands",
+    "evidence": "https://commons.wikimedia.org/wiki/Flags_of_provinces_of_the_Solomon_Islands",
+    "adoption": "Recognized state/province flag in the territorial flag register."
+  },
+  {
+    "country": "solomon-islands",
+    "id": "SB05",
+    "name": "Rennell and Bellona",
+    "level": 1,
+    "file": "Flag of Rennell and Bellona Province.svg",
+    "reference": "https://commons.wikimedia.org/wiki/Flags_of_provinces_of_the_Solomon_Islands",
+    "evidence": "https://commons.wikimedia.org/wiki/Flags_of_provinces_of_the_Solomon_Islands",
+    "adoption": "Recognized state/province flag in the territorial flag register."
+  },
+  {
+    "country": "solomon-islands",
+    "id": "SB06",
+    "name": "Guadalcanal",
+    "level": 1,
+    "file": "Flag of Guadalcanal.svg",
+    "reference": "https://commons.wikimedia.org/wiki/Flags_of_provinces_of_the_Solomon_Islands",
+    "evidence": "https://commons.wikimedia.org/wiki/Flags_of_provinces_of_the_Solomon_Islands",
+    "adoption": "Recognized state/province flag in the territorial flag register."
+  },
+  {
+    "country": "solomon-islands",
+    "id": "SB07",
+    "name": "Malaita",
+    "level": 1,
+    "file": "Flag of Malaita.svg",
+    "reference": "https://commons.wikimedia.org/wiki/Flags_of_provinces_of_the_Solomon_Islands",
+    "evidence": "https://commons.wikimedia.org/wiki/Flags_of_provinces_of_the_Solomon_Islands",
+    "adoption": "Recognized state/province flag in the territorial flag register."
+  },
+  {
+    "country": "solomon-islands",
+    "id": "SB08",
+    "name": "Makira-Ulawa",
+    "level": 1,
+    "file": "Flag Makira and Ulawa.png",
+    "reference": "https://commons.wikimedia.org/wiki/Flags_of_provinces_of_the_Solomon_Islands",
+    "evidence": "https://commons.wikimedia.org/wiki/Flags_of_provinces_of_the_Solomon_Islands",
+    "adoption": "Recognized state/province flag in the territorial flag register."
+  },
+  {
+    "country": "solomon-islands",
+    "id": "SB09",
+    "name": "Temotu",
+    "level": 1,
+    "file": "Temotu province flag.svg",
+    "reference": "https://commons.wikimedia.org/wiki/Flags_of_provinces_of_the_Solomon_Islands",
+    "evidence": "https://commons.wikimedia.org/wiki/Flags_of_provinces_of_the_Solomon_Islands",
+    "adoption": "Recognized state/province flag in the territorial flag register."
+  },
+  {
+    "country": "bulgaria",
+    "id": "BG_BGS04",
+    "name": "Burgas",
+    "level": 2,
+    "file": "Bandera de Burgas, Bulgaria.svg",
+    "reference": "https://en.wikipedia.org/wiki/Burgas",
+    "evidence": "https://www.flaginstitute.org/wp/wp-content/uploads/2022/11/ICV27-D3-Antonov.pdf",
+    "adoption": "Adopted municipal flag documented in Stoyan Antonov’s municipal flag survey (ICV27, 2017); not a province flag."
+  },
+  {
+    "country": "bulgaria",
+    "id": "BG_PDV22",
+    "name": "Plovdiv",
+    "level": 2,
+    "file": "Plovdiv flag.svg",
+    "reference": "https://en.wikipedia.org/wiki/Plovdiv",
+    "evidence": "https://www.flaginstitute.org/wp/wp-content/uploads/2022/11/ICV27-D3-Antonov.pdf",
+    "adoption": "Adopted municipal flag documented in Stoyan Antonov’s municipal flag survey (ICV27, 2017); not a province flag."
+  },
+  {
+    "country": "bulgaria",
+    "id": "BG_VTR04",
+    "name": "Veliko Tarnovo",
+    "level": 2,
+    "file": "Flag of Veliko Tarnovo.svg",
+    "reference": "https://en.wikipedia.org/wiki/Veliko_Tarnovo",
+    "evidence": "https://www.flaginstitute.org/wp/wp-content/uploads/2022/11/ICV27-D3-Antonov.pdf",
+    "adoption": "Adopted municipal flag documented in Stoyan Antonov’s municipal flag survey (ICV27, 2017); not a province flag."
+  },
+  {
+    "country": "bulgaria",
+    "id": "BG_DOB28",
+    "name": "Dobrich",
+    "level": 2,
+    "file": "Flag of Dobrich.svg",
+    "reference": "https://en.wikipedia.org/wiki/Dobrich",
+    "evidence": "https://www.flaginstitute.org/wp/wp-content/uploads/2022/11/ICV27-D3-Antonov.pdf",
+    "adoption": "Adopted municipal flag documented in Stoyan Antonov’s municipal flag survey (ICV27, 2017); not a province flag."
+  },
+  {
+    "country": "bulgaria",
+    "id": "BG_SLV20",
+    "name": "Sliven",
+    "level": 2,
+    "file": "Flag of Sliven.svg",
+    "reference": "https://en.wikipedia.org/wiki/Sliven",
+    "evidence": "https://www.flaginstitute.org/wp/wp-content/uploads/2022/11/ICV27-D3-Antonov.pdf",
+    "adoption": "Adopted municipal flag documented in Stoyan Antonov’s municipal flag survey (ICV27, 2017); not a province flag."
+  },
+  {
+    "country": "bulgaria",
+    "id": "BG_PVN24",
+    "name": "Pleven",
+    "level": 2,
+    "file": "Flag of Pleven.svg",
+    "reference": "https://en.wikipedia.org/wiki/Pleven",
+    "evidence": "https://www.flaginstitute.org/wp/wp-content/uploads/2022/11/ICV27-D3-Antonov.pdf",
+    "adoption": "Adopted municipal flag documented in Stoyan Antonov’s municipal flag survey (ICV27, 2017); not a province flag."
+  },
+  {
+    "country": "bulgaria",
+    "id": "BG_GAB05",
+    "name": "Gabrovo",
+    "level": 2,
+    "file": "BG Gabrovo flag.svg",
+    "reference": "https://en.wikipedia.org/wiki/Gabrovo",
+    "evidence": "https://www.flaginstitute.org/wp/wp-content/uploads/2022/11/ICV27-D3-Antonov.pdf",
+    "adoption": "Adopted municipal flag documented in Stoyan Antonov’s municipal flag survey (ICV27, 2017); not a province flag."
+  },
+  {
+    "country": "bulgaria",
+    "id": "BG_SZR31",
+    "name": "Stara Zagora",
+    "level": 2,
+    "file": "Flag of Stara Zagora (obverse).svg",
+    "reference": "https://en.wikipedia.org/wiki/Stara_Zagora",
+    "evidence": "https://www.flaginstitute.org/wp/wp-content/uploads/2022/11/ICV27-D3-Antonov.pdf",
+    "adoption": "Adopted municipal flag documented in Stoyan Antonov’s municipal flag survey (ICV27, 2017); not a province flag."
+  },
+  {
+    "country": "bulgaria",
+    "id": "BG_SHU30",
+    "name": "Shumen",
+    "level": 2,
+    "file": "Flag of Shumen.svg",
+    "reference": "https://en.wikipedia.org/wiki/Shumen",
+    "evidence": "https://www.flaginstitute.org/wp/wp-content/uploads/2022/11/ICV27-D3-Antonov.pdf",
+    "adoption": "Adopted municipal flag documented in Stoyan Antonov’s municipal flag survey (ICV27, 2017); not a province flag."
+  },
+  {
+    "country": "bulgaria",
+    "id": "BG_JAM26",
+    "name": "Yambol",
+    "level": 2,
+    "file": "Ямбол - знаме.svg",
+    "reference": "https://en.wikipedia.org/wiki/Yambol",
+    "evidence": "https://www.flaginstitute.org/wp/wp-content/uploads/2022/11/ICV27-D3-Antonov.pdf",
+    "adoption": "Adopted municipal flag documented in Stoyan Antonov’s municipal flag survey (ICV27, 2017); not a province flag."
+  },
+  {
+    "country": "bulgaria",
+    "id": "BG_PER32",
+    "name": "Pernik",
+    "level": 2,
+    "file": "Flag of Pernik.svg",
+    "reference": "https://en.wikipedia.org/wiki/Pernik",
+    "evidence": "https://www.flaginstitute.org/wp/wp-content/uploads/2022/11/ICV27-D3-Antonov.pdf",
+    "adoption": "Adopted municipal flag documented in Stoyan Antonov’s municipal flag survey (ICV27, 2017); not a province flag."
+  },
+  {
+    "country": "bulgaria",
+    "id": "BG411",
+    "level": 1,
+    "name": "Sofia City",
+    "file": "BG Sofia flag.svg",
+    "reference": "https://commons.wikimedia.org/wiki/File:BG_Sofia_flag.svg",
+    "evidence": "https://www.flaginstitute.org/wp/wp-content/uploads/2022/11/ICV27-D3-Antonov.pdf",
+    "adoption": "Sofia municipal flag; capital province and municipality cover the same territory."
+  },
+  {
+    "country": "bulgaria",
+    "id": "BG_SOF46",
+    "level": 2,
+    "name": "Stolichna",
+    "file": "BG Sofia flag.svg",
+    "reference": "https://commons.wikimedia.org/wiki/File:BG_Sofia_flag.svg",
+    "evidence": "https://www.flaginstitute.org/wp/wp-content/uploads/2022/11/ICV27-D3-Antonov.pdf",
+    "adoption": "Sofia municipal flag; capital province and municipality cover the same territory."
+  },
+  {
+    "country": "romania",
+    "id": "RO322",
+    "level": 1,
+    "name": "Ilfov",
+    "file": "Ilfov flag.webp",
+    "evidence": "https://legislatie.just.ro/public/DetaliiDocument/224382",
+    "reference": "https://legislatie.just.ro/public/DetaliiDocument/224382",
+    "adoption": "Government Decision 197/2020, approved county flag."
+  },
+  {
+    "country": "romania",
+    "id": "RO_136483",
+    "level": 2,
+    "name": "Municipiul Satu Mare",
+    "file": "ROU SM Satu Mare Flag.png",
+    "evidence": "https://legislatie.just.ro/Public/DetaliiDocument/248604",
+    "reference": "https://legislatie.just.ro/Public/DetaliiDocument/248604",
+    "adoption": "Government Decision 1210/2021, approved municipal flag."
+  },
+  {
+    "country": "romania",
+    "id": "RO_40198",
+    "level": 2,
+    "name": "Municipiul Brașov",
+    "file": "Drapelul Municipiului Brașov 2024.png",
+    "reference": "https://commons.wikimedia.org/wiki/File:Drapelul_Municipiului_Brașov_2024.png",
+    "evidence": "https://hcl.usr.ro/brasov/2001/h410",
+    "adoption": "Brașov Local Council Decision 410/2001 establishing the municipal flag; rendering uses the coat of arms approved in Government Decision 902/2024."
+  }
+]

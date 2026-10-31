@@ -458,6 +458,10 @@
     "build:coastal-oceania": "node scripts/prepare-coastal-current.mjs && node scripts/coastal-oceania-definitions.mjs --prepare && node scripts/register-coastal-oceania.mjs && node --max-old-space-size=14000 scripts/build-coastal-oceania.mjs && node scripts/register-coastal-oceania.mjs && node --max-old-space-size=14000 scripts/build-coastal-oceania-assets.mjs",
     "test:coastal-oceania": "node --max-old-space-size=12000 scripts/validate-coastal-oceania.mjs && node scripts/audit-coastal-oceania-frontiers.mjs && node scripts/browser/run.mjs coastal-oceania",
     "test:national-palettes": "node scripts/validate-national-palettes.mjs",
-    "test:mobile-polish": "npm run test:national-palettes && node scripts/browser/run.mjs mobile-polish"
+    "test:mobile-polish": "npm run test:national-palettes && node scripts/browser/run.mjs mobile-polish",
+    "fetch:liberia-flags": "node scripts/fetch-liberia-flags.mjs",
+    "test:liberia-flags": "node scripts/validate-liberia-flags.mjs && node scripts/browser/run.mjs liberia-flags",
+    "fetch:regional-flags": "node scripts/fetch-regional-flags.mjs",
+    "test:regional-flag-expansion": "node scripts/validate-regional-flag-expansion.mjs && node scripts/browser/run.mjs regional-flag-expansion lower-austria-flag"
   }
 }

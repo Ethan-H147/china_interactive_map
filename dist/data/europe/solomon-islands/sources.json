@@ -81,6 +81,10 @@
       "page": "https://data.humdata.org/dataset/cod-ab-slb",
       "sha256": "f85ac4946d5b52593d3f87009b32e2e32e495a3cbe14d1d3c1173f901f64e855",
       "bytes": 2364550
+    },
+    "regionalFlags": {
+      "title": "Regional and municipal flags, adoption evidence and artwork credits",
+      "url": "data/regional-flag-sources.json"
     }
   }
 }

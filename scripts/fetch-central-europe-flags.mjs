@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import {createHash} from 'node:crypto';
 import sharp from 'sharp';
+import {flagThumbnail} from './flag-thumbnail.mjs';
 import {gunzipSync} from 'node:zlib';
 const reviewed={
  'AT-B-1':['austria','Flag of Burgenland.svg'],'AT-B-2':['austria','Flag of Carinthia.svg'],'AT-B-3':['austria','Flag of Lower Austria.svg'],'AT-B-4':['austria','Flag of Upper Austria.svg'],'AT-B-5':['austria','Flag of Salzburg (state).svg'],'AT-B-6':['austria','Flag of Styria.svg'],'AT-B-7':['austria','Flag of Tirol (state).svg'],'AT-B-8':['austria','Flag of Vorarlberg.svg'],'AT-B-9':['austria','Flag of Vienna.svg'],
@@ -19,7 +20,9 @@ for(const [id,[country,file]]of Object.entries(reviewed)){
  const m=metadata[file],ext=file.toLowerCase().split('.').at(-1),full='vendor/central-europe-flags/'+id+'.'+ext,shown='vendor/central-europe-flags/'+id+'.webp';let bytes;if(process.argv.includes('--retained-only')&&!fs.existsSync('dist/'+full))continue;
  if(fs.existsSync('dist/'+full))bytes=fs.readFileSync('dist/'+full);else{let r;for(let attempt=0;attempt<6;attempt++){r=await fetch(m.url,{headers:{'User-Agent':'BoundaryAtlas/1.0 (local geographic reference)'},signal:AbortSignal.timeout(90000)});if(r.ok)break;if(r.status===429&&Number(r.headers.get('retry-after'))>30)throw Error('Commons requests a cooldown of '+r.headers.get('retry-after')+' seconds; originals already retained remain available');if(![429,502,503,504].includes(r.status))throw Error(file+' HTTP '+r.status);await new Promise(resolve=>setTimeout(resolve,Math.min(15000,2500*(attempt+1))));}if(!r.ok)throw Error(file+' HTTP '+r.status);bytes=Buffer.from(await r.arrayBuffer());await new Promise(resolve=>setTimeout(resolve,6000));fs.writeFileSync('dist/'+full,bytes);}
  if(createHash('sha1').update(bytes).digest('hex')!==m.sha1)throw Error('Commons artwork checksum '+id);
- await sharp(bytes).resize({width:160,height:120,fit:'inside',withoutEnlargement:true}).webp({lossless:true}).toFile('dist/'+shown);
+ const intrinsic=await sharp(bytes).metadata();
+ if(ext==='svg'&&intrinsic.height<120)fs.writeFileSync('dist/'+shown,await flagThumbnail(bytes,intrinsic));
+ else await sharp(bytes).resize({width:160,height:120,fit:'inside',withoutEnlargement:true}).webp({lossless:true}).toFile('dist/'+shown);
  const r=catalogue[country].find(r=>r.id===id),flag={file:shown,full,name:r?.en||id,width:m.width,height:m.height,page:m.descriptionurl,source:m.url,credit:plain(m.extmetadata?.Artist?.value)||'Wikimedia Commons',license:plain(m.extmetadata?.LicenseShortName?.value)||'See source',licenseUrl:m.extmetadata?.LicenseUrl?.value,sha256:createHash('sha256').update(bytes).digest('hex'),commonsFile:file};records[id]={country,...flag};module[country][id.includes('-B-')||id.includes('-C-')?'firstFlags':'detailFlags'][id]=flag;console.log('Flag',id,file);
 }
 module.austria.detailFlags['AT-M-90001']=module.austria.firstFlags['AT-B-9'];module.hungary.detailFlags['HU-M-13578']=module.hungary.firstFlags['HU-C-01'];

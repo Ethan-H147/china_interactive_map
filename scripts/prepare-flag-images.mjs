@@ -44,6 +44,12 @@ const soviet='dist/data/soviet-flag-sources.json';
 if(fs.existsSync(soviet))Object.values(read(soviet).flags).forEach(add);
 const centralEurope='dist/data/central-europe-flag-sources.json';
 if(fs.existsSync(centralEurope))Object.values(read(centralEurope).flags).forEach(add);
+// Administration artwork remains local to its country adapter.
+if(fs.existsSync('dist/horn-islands-flags.mjs')){const {hornIslandsFlags}=await import('../dist/horn-islands-flags.mjs');for(const set of Object.values(hornIslandsFlags))for(const flag of Object.values({...set.firstFlags,...set.detailFlags}))images[flag.file]=flag;}
+const regional='dist/data/regional-flag-sources.json';
+if(fs.existsSync(regional))Object.values(read(regional).flags).forEach(add);
+const liberia='dist/data/liberia-flag-sources.json';
+if(fs.existsSync(liberia))Object.values(read(liberia).flags).forEach(add);
 const expansion='dist/data/europe-expansion-flag-sources.json';
 if(fs.existsSync(expansion))Object.values(read(expansion).flags).forEach(add);
 // The UK thumbnail uses separate 3:5 artwork; the viewer keeps its 1:2 original.

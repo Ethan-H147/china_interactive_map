@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {createHash} from 'node:crypto';
 import {nationalFlagImages} from '../dist/national-flags.mjs';
+import {hornIslandsFlags} from '../dist/horn-islands-flags.mjs';
 import {flagImageSize,createFlagViewer} from '../dist/flag-viewer.mjs';
 
 for(const [w,h] of [[3,2],[2,1],[1,1],[1,2]])for(const [vw,vh] of [[1280,720],[390,844],[844,390]]){
@@ -46,9 +47,13 @@ viewer.dialog.handlers.click({target:viewer.dialog,clientX:40,clientY:40});asser
 listeners.click(event(city));await flush();probes.at(-1).reject(Error('offline'));await flush();assert.equal(image.src,city.src,'The cached official flag survives an unavailable original');viewer.close();
 assert.equal(requests,1,'Repeated flag views reuse the source catalogue');
 const catalogue=JSON.parse(fs.readFileSync('dist/data/flag-images.json'));
+const localArtwork=Object.fromEntries(Object.values(hornIslandsFlags).flatMap(set=>Object.values({...set.firstFlags,...set.detailFlags})).map(flag=>[flag.file,flag]));
 const nationalAssets=fs.readdirSync('dist/vendor').filter(name=>/^flag-.*\.(svg|webp)$/.test(name));
 for(const name of nationalAssets){
- const src='vendor/'+name,record=nationalFlagImages[src];assert(record,'Every national thumbnail has an original: '+name);
+ const src='vendor/'+name,record=nationalFlagImages[src];
+ // Local administration artwork can share this directory without being a national flag.
+ if(localArtwork[src]){const local=localArtwork[src];assert.equal(catalogue[src]?.full,local.full);assert.equal(createHash('sha256').update(fs.readFileSync('dist/'+local.full)).digest('hex'),local.sha256,'Local artwork is unmodified');continue;}
+ assert(record,'Every national thumbnail has an original: '+name);
  const bytes=fs.readFileSync('dist/'+record.full);assert.equal(createHash('sha256').update(bytes).digest('hex'),record.sha256,'National artwork is unmodified');
  assert.deepEqual(catalogue[src],record,'Catalogue generation preserves the original mapping');
  const flag=new Element('img');flag.alt='Flag of '+name;flag.src=src;flag.naturalWidth=40;flag.naturalHeight=30;body.append(flag);

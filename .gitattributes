@@ -68,3 +68,6 @@ scripts/us-sports-sources/**/venue-review.json -text whitespace=cr-at-eol
 
 # Retained logo originals are byte-for-byte checksum inputs.
 scripts/us-college-sources/institutional/marks/* binary
+# Retained county and regional flag originals are byte-for-byte checksum inputs.
+dist/vendor/liberia-flags/*.svg binary
+dist/vendor/regional-flags/* binary

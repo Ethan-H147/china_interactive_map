@@ -159,6 +159,10 @@
       "query": "[out:json][timeout:120];relation[\"ISO3166-1\"=\"HR\"][\"admin_level\"=\"2\"];out body;",
       "sha256": "ab29d334eb121bfcad4017cc0ac87d9f532fe0497d23956a21c1a041dbdfd532",
       "bytes": 87640
+    },
+    "regionalFlags": {
+      "title": "Regional and municipal flags, adoption evidence and artwork credits",
+      "url": "data/regional-flag-sources.json"
     }
   }
 }

@@ -51,6 +51,10 @@
           "sha256": "1550308007c3457c65e68b2a47d06797d474073cf7fdeb5eaf6ff55164d1903e"
         }
       }
+    },
+    "regionalFlags": {
+      "title": "Regional and municipal flags, adoption evidence and artwork credits",
+      "url": "data/regional-flag-sources.json"
     }
   }
 }

@@ -73,6 +73,11 @@
           "sha256": "1550308007c3457c65e68b2a47d06797d474073cf7fdeb5eaf6ff55164d1903e"
         }
       }
+    },
+    "countyFlags": {
+      "title": "County flags and original artwork credits",
+      "url": "data/liberia-flag-sources.json",
+      "reference": "https://commons.wikimedia.org/wiki/Flags_of_counties_of_Liberia"
     }
   }
 }
