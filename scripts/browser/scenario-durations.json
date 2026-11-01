@@ -502,7 +502,7 @@
     "us-performance › one boundary job loads both levels and indexes only selected outlines": 18800,
     "us-performance › rapid cross-state searches cancel obsolete batches and keep one state": 59900,
     "us-quiz-insets › mainland framing, Alaska and Hawaii answers, fit, name round and exit cleanup": 30400,
-    "us-quiz-insets › phone inset touch targets stay above the prompt and use normal quiz scoring": 30000,
+    "us-quiz-insets › phone inset touch targets stay above the sheet and use normal quiz scoring": 30000,
     "us-selection-lock › municipality lock rejects underlying counties and states 1280": 38500,
     "us-selection-lock › municipality lock rejects underlying counties and states 390": 42100,
     "us-territories › US home frames the mainland and Alaska remains selectable": 16900,

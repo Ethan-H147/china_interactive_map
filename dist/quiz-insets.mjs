@@ -1,6 +1,6 @@
 import {quizInsetShapes} from './quiz-inset-shapes.mjs';
 // Quiz-only SVG views share the round's IDs and state; they add no map contexts or geometry workers.
-export function createQuizInsets(ids,prompt,choose){
+export function createQuizInsets(ids,choose){
  if(!ids?.length)return;
  const shell=document.getElementById('map-shell'),root=document.createElement('div'),items=new Map();
  root.className='quiz-insets';root.setAttribute('role','group');root.setAttribute('aria-label','Inset maps');
@@ -12,8 +12,6 @@ export function createQuizInsets(ids,prompt,choose){
   caption.className='quiz-inset-name';caption.setAttribute('aria-hidden','true');button.append(caption);button.onclick=()=>choose(id);box.append(button);root.append(box);items.set(id,{box,button,caption,index});
  }
  shell.append(root);
- const position=()=>{const phone=matchMedia('(max-width:760px)').matches;root.style.bottom=phone&&!prompt.hidden?(shell.getBoundingClientRect().bottom-prompt.getBoundingClientRect().top+12)+'px':'';};
- const observer=new ResizeObserver(position);observer.observe(prompt);observer.observe(shell);position();
  return{
   has:id=>items.has(id),
   update({records,solved,review,wrong,missed,target,canAnswer}){
@@ -21,9 +19,8 @@ export function createQuizInsets(ids,prompt,choose){
     box.dataset.status=correct?'correct':bad?'incorrect':target===id?'target':'unanswered';box.dataset.review=String(review?.id===id);button.disabled=!canAnswer||correct;
     caption.textContent=known?record.en:'';button.setAttribute('aria-label',known?record.en+(correct?' · correct':' · incorrect'):'Select place in inset '+(index+1));
    }
-   position();
   },
   focus(id){items.get(id)?.box.focus({preventScroll:true});},
-  remove(){observer.disconnect();root.remove();}
+  remove(){root.remove();}
  };
 }

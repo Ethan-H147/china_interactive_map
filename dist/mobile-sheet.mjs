@@ -8,13 +8,29 @@ const states = ['peek', 'half', 'full'];
 let state = 'peek', drag = null;
 
 const visibleSidebar = () => [...document.querySelectorAll('aside.sidebar')].find(a => !a.hidden && getComputedStyle(a).display !== 'none');
+// During a round, the tucked-away sheet still shows the question, answer box and its buttons.
+const quizParts = '.quiz-progress, .quiz-question-heading, .name-entry, .quiz-feedback, .quiz-round-actions';
+function quizPeek(aside) {
+  const scroll = aside?.dataset.quiz === 'true' && aside.querySelector('.sidebar-scroll');
+  const parts = scroll ? [...scroll.querySelectorAll(quizParts)].filter(el => el.getClientRects().length) : [];
+  if (!parts.length) return 0;
+  const top = scroll.getBoundingClientRect().top - scroll.scrollTop;
+  return Math.max(...parts.map(el => el.getBoundingClientRect().bottom)) - top + 16;
+}
+const quizResize = new ResizeObserver(() => { if (!drag) apply(state); }), quizWatched = new WeakSet();
+// The layout viewport: unlike the visual viewport, it keeps its height while a keyboard is open.
+const screenHeight = () => root.clientHeight || innerHeight;
+let keyboard = 0, quizShown = false;
 function heights() {
   const aside = visibleSidebar(), tools = aside?.querySelector('.sidebar-tools'), handle = aside?.querySelector('.sheet-handle');
   const safeBottom = aside ? parseFloat(getComputedStyle(aside).paddingBottom) || 0 : 0;
-  const peek = Math.round((handle?.offsetHeight || 26) + (tools?.offsetHeight ?? 120) + 14 + safeBottom);
-  const headerBottom = document.querySelector('.site-header')?.getBoundingClientRect().bottom ?? 60;
-  const full = Math.max(peek, innerHeight - headerBottom - 12);
-  return {peek, half: Math.min(full, Math.max(peek, Math.round(innerHeight * .48))), full};
+  const quiz = quizPeek(aside);
+  aside?.toggleAttribute('data-quiz-peek', quiz > 0);
+  const peek = Math.round((handle?.offsetHeight || 26) + (quiz || (tools?.offsetHeight ?? 120) + 14) + safeBottom);
+  // An open keyboard takes the bottom of the screen; the sheet sits on top of it.
+  const room = screenHeight() - keyboard, headerBottom = document.querySelector('.site-header')?.getBoundingClientRect().bottom ?? 60;
+  const full = Math.max(80, room - headerBottom - 12);
+  return {peek: Math.min(peek, full), half: Math.min(full, Math.max(peek, Math.round(room * .48))), full};
 }
 function ensureHandle(aside) {
   if (!aside || aside.querySelector(':scope > .sheet-handle')) return;
@@ -22,13 +38,35 @@ function ensureHandle(aside) {
   handle.type = 'button'; handle.className = 'sheet-handle';
   aside.prepend(handle);
 }
+// The globe and zoom stack sits above the sheet. Where the map is too short for it below the
+// header row, it drops the lock and fit buttons, then hides, rather than slide under the header.
+function fitControls(sheet) {
+  const side = document.querySelector('.map-side'), top = document.querySelector('.map-top');
+  delete root.dataset.controls;
+  if (!side || !query.matches) return;
+  const room = screenHeight() - keyboard - sheet - (parseFloat(getComputedStyle(side).bottom) || 0) - (top?.getBoundingClientRect().bottom ?? 0) - 8;
+  if (side.offsetHeight <= room) return;
+  root.dataset.controls = 'compact';
+  if (side.offsetHeight > room) root.dataset.controls = 'none';
+}
 function apply(next, px) {
   if (!query.matches) return;
-  state = next;
   placeHistoricalControl();
   document.querySelectorAll('aside.sidebar').forEach(ensureHandle);
+  const h = heights(), quiz = !!visibleSidebar()?.hasAttribute('data-quiz-peek');
+  // A round opens on the compact question view, leaving the map in sight.
+  if (px === undefined && quiz && !quizShown) next = 'peek';
+  quizShown = quiz;
+  state = next;
   root.dataset.sheet = next;
-  root.style.setProperty('--sheet-height', (px ?? heights()[next]) + 'px');
+  const sheet = px ?? h[next];
+  root.style.setProperty('--sheet-height', sheet + 'px');
+  fitControls(sheet);
+  if (next === 'peek' && px === undefined) visibleSidebar()?.querySelector('.sidebar[data-quiz-peek] .sidebar-scroll')?.scrollTo(0, 0);
+  // A question that wraps differently, or feedback appearing, resizes the tucked sheet.
+  for (const el of visibleSidebar()?.querySelectorAll(`.sidebar-scroll :is(${quizParts})`) || []) {
+    if (!quizWatched.has(el)) { quizWatched.add(el); quizResize.observe(el); }
+  }
   for (const handle of document.querySelectorAll('.sheet-handle')) {
     handle.setAttribute('aria-expanded', String(next !== 'peek'));
     handle.setAttribute('aria-label', next === 'full' ? 'Collapse panel' : 'Expand panel');
@@ -170,9 +208,27 @@ query.addEventListener('change', syncLevels);
 syncLevels();
 
 addEventListener('resize', () => { placeBelowHeader(); apply(state); });
+
+// The on-screen keyboard lifts only the sheet. The browser would otherwise scroll the whole
+// page up to reveal the focused field, taking the header and map with it.
+const viewport = globalThis.visualViewport;
+function fitKeyboard() {
+  const next = query.matches && viewport ? Math.max(0, Math.round(screenHeight() - viewport.height)) : 0;
+  // Small differences are browser toolbars settling, not a keyboard.
+  const open = next > 120 ? next : 0;
+  if (scrollX || scrollY) scrollTo(0, 0);
+  if (open === keyboard) return;
+  keyboard = open;
+  root.style.setProperty('--keyboard-inset', open + 'px');
+  root.toggleAttribute('data-keyboard', open > 0);
+  apply(state);
+}
+viewport?.addEventListener('resize', fitKeyboard);
+viewport?.addEventListener('scroll', fitKeyboard);
+addEventListener('scroll', () => { if (query.matches && (scrollX || scrollY)) scrollTo(0, 0); });
 query.addEventListener('change', () => {
   if (query.matches) apply(state);
-  else { delete root.dataset.sheet; root.style.removeProperty('--sheet-height'); placeHistoricalControl(); }
+  else { delete root.dataset.sheet; delete root.dataset.controls; root.style.removeProperty('--sheet-height'); placeHistoricalControl(); }
 });
 if (query.matches) apply('peek');
 
