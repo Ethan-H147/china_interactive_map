@@ -10,9 +10,6 @@ for(const adapter of ['europe','southern-africa'])for(const country of registry.
  const data=load(`dist/data/${adapter}/${country}/international.bin`);
  for(const feature of data.features)features.push({...feature,properties:{...feature.properties,previewLayer:country+'-international'}});
 }
-const flight=load('dist/data/flight-context.bin');
-for(const [key,layer] of [['landBorders','south-land-boundaries'],['riverBorders','south-river-boundaries']])
- for(const feature of flight[key]?.features||[])features.push({...feature,properties:{...feature.properties,previewLayer:layer}});
 const bytes=gzipSync(encodeGeo({type:'FeatureCollection',features}),{level:9});
 fs.writeFileSync('dist/data/country-border-previews.bin',bytes);
 console.log('Detailed border previews:',features.length,'features,',bytes.length,'bytes');

@@ -1,0 +1,15 @@
+{
+  "renderer": "regional-country.mjs",
+  "method": "Metadata adapter; original geometry retained without simplification or coordinate edits",
+  "original": "../../south-america/uruguay-sources.json",
+  "inputs": [
+    {
+      "file": "../../south-america/uruguay-first.bin",
+      "sha256": "c8f5136b4fe5f6086e563a6e55c4f70c0e41d3fd9ccf424fa0393b6604d051ad"
+    },
+    {
+      "file": "../../south-america/uruguay-local/index.bin",
+      "sha256": "d4ad5cac4784e56cea29709261a19b1b7eaea8727e7913e7c60769307084979c"
+    }
+  ]
+}

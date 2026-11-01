@@ -25,7 +25,7 @@ export default [
  }},
  {name:'South America is detailed before it is opened',options:{width:1100,height:760},async run(page,base){
   await page.open(base,'#japan');
-  await page.waitFor(`!!map.getLayer('south-america-fill')&&map.isSourceLoaded('flight-context')&&map.getLayoutProperty('south-land-boundaries','visibility')==='visible'`,{label:"South America's shapes and borders"});
+  await page.waitFor(`['brazil','argentina','uruguay'].every(id=>map.getLayer(id+'-portal-fill')&&map.isSourceLoaded(id+'-portal'))&&!!map.getLayer('atlas-frontiers')`,{label:"South America's shapes and borders"});
  }},
  {name:'a country drawing its own frontier hides the shared copy while open',options:{width:1100,height:760},async run(page,base){
   await page.open(base,'#indonesia');

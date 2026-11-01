@@ -48,7 +48,7 @@ for(const country of ['brazil','uruguay']){
 }
 const html=fs.readFileSync('dist/index.html','utf8');assert(html.indexOf('src="atlas-entry.js"')<html.indexOf('rel="stylesheet"'),'Select the theme before the first styled paint');assert(!html.includes('moving-dot'));assert(!html.includes('country-nav'));assert(!html.includes('country-welcome'));assert(!html.includes('country-open'));// The country name opens the country menu (country-menu.js), a button inside the heading.
 assert(/<h1><button id="country-switch"[^>]*aria-haspopup="menu"[^>]*aria-controls="country-menu"/.test(html),'The country name is the country menu button');assert(html.includes('<div id="country-menu" class="country-menu" role="menu"'));
-assert(!fs.readFileSync('dist/south-america.mjs','utf8').includes('continent-flight'),'No continent flight buttons are created');
+assert(!fs.readFileSync('dist/south-america-regional.mjs','utf8').includes('continent-flight'),'No continent flight buttons are created');
 const symbolContext=withRegistry({window:{}});vm.runInContext(fs.readFileSync('dist/country-symbols.js','utf8'),symbolContext);
 const symbols=symbolContext.window.AtlasSymbols;
 const a=symbols.markup('mongolia'),b=symbols.markup('mongolia');assert.notEqual(a.match(/id="([^"]+)/)[1],b.match(/id="([^"]+)/)[1],'Repeated Soyombos use separate masks');

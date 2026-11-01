@@ -5,7 +5,7 @@ import {execFileSync} from 'node:child_process';
 import {gunzipSync} from 'node:zlib';
 import sharp from 'sharp';
 import {brazilFlags} from '../dist/brazil-flags.mjs';
-import {stateStatisticsKey} from '../dist/south-america.mjs';
+import {stateStatisticsKey} from '../dist/south-america-regional.mjs';
 const dir='scripts/statistics-sources/brazil/',file='dist/data/south-america/brazil-statistics.json',before=fs.readFileSync(file,'utf8');
 execFileSync(process.execPath,['scripts/prepare-brazil-statistics.mjs']);assert.equal(fs.readFileSync(file,'utf8'),before);
 const bundle=JSON.parse(before),raw=JSON.parse(fs.readFileSync(dir+'state-tables.json'));
@@ -44,6 +44,7 @@ class Node{
  after(node){const parent=this.parentElement;if(node.parentElement){const old=node.parentElement.children;old.splice(old.indexOf(node),1);}node.parentElement=parent;parent.children.splice(parent.children.indexOf(this)+1,0,node);}
  setAttribute(){}
  querySelector(selector){const name=selector.split('.').at(-1);return this.children.find(n=>n.className?.split(' ').includes(name));}
+ querySelectorAll(selector){const matches=n=>selector.startsWith('.')?n.className?.split(' ').includes(selector.slice(1)):n.tag===selector;return this.children.flatMap(n=>[...(matches(n)?[n]:[]),...n.querySelectorAll(selector)]);}
  get text(){return this.textContent+' '+this.children.map(n=>n.text).join(' ');}
 }
 globalThis.document={createElement:tag=>new Node(tag),createTextNode:text=>new Node('#text',text)};

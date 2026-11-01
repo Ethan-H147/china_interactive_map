@@ -1,0 +1,19 @@
+{
+  "renderer": "regional-country.mjs",
+  "method": "Metadata adapter; original geometry retained without simplification or coordinate edits",
+  "original": "../../south-america/argentina-sources.json",
+  "inputs": [
+    {
+      "file": "../../south-america/argentina-first.bin",
+      "sha256": "d9ff6cc9fa121397945fbe1a1af56afdf577c9b7ce6b3b41276e20bd519c12ad"
+    },
+    {
+      "file": "../../south-america/argentina-local/index.bin",
+      "sha256": "b73811999ca7a9c467c72da2ca79db35a58b764cdac6883acf365ee144ff912d"
+    },
+    {
+      "file": "../../south-america/argentina-cities/index.bin",
+      "sha256": "cd048d61cc3a9fd1434a7c470478dcc5df87097b8955feb93ca182b82044014f"
+    }
+  ]
+}

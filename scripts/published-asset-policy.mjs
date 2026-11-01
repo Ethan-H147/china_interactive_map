@@ -12,7 +12,7 @@ for(const [id,c] of Object.entries(configurations)){
 }
 // These retained inputs have been replaced by per-source/per-parent runtime files.
 // Keep the original data in GitHub for rebuilds; publish only the data the app uses.
-const buildOnly=new Set(['data/china-counties.bin','data/china-boundaries.pack.bin','data/china-overview.pack.bin','data/china-counties.pack.bin','data/china-motion.bin','data/korea-motion.bin','data/mongolia-motion.bin']);
+const buildOnly=new Set(['data/flight-context.bin','data/china-counties.bin','data/china-boundaries.pack.bin','data/china-overview.pack.bin','data/china-counties.pack.bin','data/china-motion.bin','data/korea-motion.bin','data/mongolia-motion.bin']);
 // Runtime requests for these originals are redirected to verified compact copies.
 for(const file of compactFiles)buildOnly.add('data/'+file);
 // Settlement builders retain readable/full inputs alongside the runtime files.

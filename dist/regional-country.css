@@ -99,3 +99,11 @@ body[data-atlas=vatican-city] .region-color-control,body[data-atlas=vatican-city
 body[data-atlas=morocco],.country-option[data-atlas=morocco]{--accent-soft:#a34b3d14;--surface-soft:#f7efea;--title-accent:#a34b3d;--header-stripe:linear-gradient(90deg,#a34b3d 0 76%,#2b704c 76%)}
 
 :root[data-atlas=bolivia],body[data-atlas=bolivia],.country-option[data-atlas=bolivia]{--ink:#3a3424;--muted:#81775e;--red:#8b702e;--red-dark:#69531f;--gold:#c8a24a;--line:#e7dfc5;--paper:#fffdf6;--map:#f6f3e6;--surface-soft:#f4efd9;--title-accent:#8b702e;--header-stripe:linear-gradient(90deg,#d52b1e 0 33.333%,#f9e300 33.333% 66.667%,#007934 66.667%)}
+
+/* Country palettes retained from the retired South America adapter. */
+:root[data-atlas=brazil],.country-option[data-atlas=brazil]{--red:#34713e;--red-dark:#23522c;--paper:#fdfefb;--map:#eef3e9;--line:#dce5d7}
+:root:is([data-atlas=uruguay],[data-atlas=argentina]),.country-option:is([data-atlas=uruguay],[data-atlas=argentina]){--red:#3979a3;--red-dark:#285775;--paper:#fcfeff;--map:#edf3f7;--line:#dae5ed}
+/* Header stripes in each flag's colours, as every country's header has. */
+body[data-atlas=brazil],.country-option[data-atlas=brazil]{--header-stripe:linear-gradient(90deg,#34713e 0 40%,#e2bf3c 40% 60%,#2b4a86 60%)}
+body[data-atlas=argentina],.country-option[data-atlas=argentina]{--header-stripe:linear-gradient(90deg,#75aadb 0 38%,#fff 38% 46%,#e0b53d 46% 54%,#fff 54% 62%,#75aadb 62%)}
+body[data-atlas=uruguay],.country-option[data-atlas=uruguay]{--header-stripe:linear-gradient(90deg,#3a6ea8 0 45%,#fff 45% 70%,#e0b53d 70%)}

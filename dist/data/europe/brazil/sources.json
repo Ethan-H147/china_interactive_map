@@ -1,0 +1,15 @@
+{
+  "renderer": "regional-country.mjs",
+  "method": "Metadata adapter; original geometry retained without simplification or coordinate edits",
+  "original": "../../south-america/brazil-sources.json",
+  "inputs": [
+    {
+      "file": "../../south-america/brazil-first.bin",
+      "sha256": "20c1a45ff1323b8ffe3992d4432e5cc4ede10c9acead23cc847aa0e744a708de"
+    },
+    {
+      "file": "../../south-america/brazil-local/index.bin",
+      "sha256": "b18a8a5f70c8fb26adeb29dc60ef90112b413b45239e1e451722d91825885200"
+    }
+  ]
+}

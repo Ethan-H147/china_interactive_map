@@ -11,7 +11,7 @@ import '../dist/countries.js';
 // compactUrl(). Each copy records the SHA-256 of its source so test:compact catches a stale one.
 export const compactSources=[
  ...globalThis.AtlasCountries.ids.flatMap(id=>globalThis.AtlasCountries.countries[id].contextFile||[]),
- 'world-land.bin','world-country-outlines.bin','china-context.bin','china-neighbours.bin','shared-context-borders.bin','atlas-frontiers.bin','flight-context.bin',
+ 'world-land.bin','world-country-outlines.bin','china-context.bin','china-neighbours.bin','shared-context-borders.bin','atlas-frontiers.bin',
  'korea-context.bin','mongolia-context.bin','japan-context.bin',
  'archipelago/philippines-context.bin','archipelago/indonesia-context.bin',
  'southeast-asia/malaysia-context.bin','southeast-asia/singapore-context.bin',

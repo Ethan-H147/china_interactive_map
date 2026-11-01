@@ -6,7 +6,7 @@ export default [1280,390].map(width=>({name:'Selected outlines share one zoom pr
  await p.open(base,'#brazil');await p.evaluate('currentAtlas().restore("BR-43")');await p.settle();assert.equal(await p.evaluate('currentAtlas().getSelection()'),'BR-43');
  for(const zoom of [4.5,6,9]){await p.evaluate('void map.jumpTo({center:[-53.2,-29.75],zoom:'+zoom+'})');await p.settle();await check(p,'Brazil at zoom '+zoom);}
  await p.evaluate('void map.jumpTo({center:[-53.2,-29.75],zoom:6})');await p.settle();await p.screenshot('shared-selection-brazil-'+width);
- const brazilWidth=await p.evaluate('map.style._layers["south-brazil-selection"].paint.get("line-width").constantOr(-1)');assert(Math.abs(brazilWidth-1.1)<1e-6,'Brazil renders the shared width in CSS pixels');
+ const brazilWidth=await p.evaluate('map.style._layers["brazil-first-selected"].paint.get("line-width").constantOr(-1)');assert(Math.abs(brazilWidth-1.1)<1e-6,'Brazil renders the shared width in CSS pixels');
  await p.evaluate('currentAtlas().restore("BR-4314902")');await p.settle();assert.equal(await p.evaluate('currentAtlas().getSelection()'),'BR-4314902');
  await p.evaluate('void map.jumpTo({center:[-51.17,-30.1],zoom:10})');await p.settle();await check(p,'Brazil municipality');
  await p.evaluate('void changeAtlas("united-states",false)');await p.settle();await p.evaluate('currentAtlas().restore("US-ND")');await p.settle();assert.equal(await p.evaluate('currentAtlas().getSelection()'),'US-ND');

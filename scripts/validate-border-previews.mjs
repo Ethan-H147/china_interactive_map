@@ -13,8 +13,6 @@ for(const adapter of ['europe','southern-africa'])for(const country of AtlasCoun
  if(AtlasCountries.countries[country].snapshot)continue;
  for(const f of load(`dist/data/${adapter}/${country}/international.bin`).features)expected.push({...f,properties:{...f.properties,previewLayer:country+'-international'}});
 }
-const flight=load('dist/data/flight-context.bin');
-for(const [key,layer] of [['landBorders','south-land-boundaries'],['riverBorders','south-river-boundaries']])for(const f of flight[key]?.features||[])expected.push({...f,properties:{...f.properties,previewLayer:layer}});
 assert.deepEqual(data,decodeGeo(encodeGeo({type:'FeatureCollection',features:expected})),'Every precise border and its claims survive packaging');
 assert(fs.statSync('dist/data/country-border-previews.bin').size<3e6,'Border-only package stays small');
 const map=testMap(),scene=createMapScene(map);

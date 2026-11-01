@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {createCityDots} from '../dist/argentina-city-dots.mjs';
-import {cityDescription,argentinaMapLabel} from '../dist/south-america.mjs';
+import {cityDescription,argentinaMapLabel} from '../dist/south-america-regional.mjs';
 import {labelLines} from '../dist/labels.mjs';
 for(const record of [{id:'AR-02'},{cityRank:1}])for(const language of ['en','local','both']){const label=argentinaMapLabel(record);assert.deepEqual(labelLines(label.en,label.local,language),['Buenos Aires (CABA)'],'CABA has one consistent map label');}
 assert.equal(cityDescription({en:'Banfield',boundaryName:'Lomas de Zamora',boundaryAvailable:true}),'City · Municipality: Lomas de Zamora');
@@ -22,5 +22,5 @@ enabled=false;dots.sync();assert.equal(layers.get('argentina-city-dots').layout.
 enabled=true;dots.sync();assert.equal(layers.get('argentina-city-dots').layout.visibility,'visible');assert.equal(dots.hit({x:105,y:105}).id,'b');
 active=false;dots.sync();assert.equal(layers.get('argentina-city-dots').layout.visibility,'none');assert.equal(dots.hit({x:105,y:105}),undefined);
 dots.clear();assert.equal(sources.size,0);assert.equal(layers.size,0);assert.equal(canvas.title,'');
-const source=fs.readFileSync('dist/south-america.mjs','utf8');assert.ok(!source.includes('south-detail-view'));assert.ok(!source.includes('south-city-picker'));assert.ok(source.indexOf('const dot=cityDots.hit')<source.indexOf('const hit=argentina.hit'),'Dots are picked before underlying departments');
+const source=fs.readFileSync('dist/regional-country.mjs','utf8');assert.ok(source.indexOf('referencePoints?.hit(point)')<source.indexOf('map.queryRenderedFeatures(point'),'City dots are picked before underlying departments');
 console.log('Subtle GPU city points, nearest-dot picking, hover identification, selected-dot feedback, developer gating, cleanup and removed dropdowns passed.');

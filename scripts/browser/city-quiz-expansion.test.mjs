@@ -50,7 +50,7 @@ export default [
     await p.evaluate('(()=>{const input=document.getElementById('+JSON.stringify(prefix+'-quiz-answer')+');input.value='+JSON.stringify(name)+';document.querySelector('+JSON.stringify(panel+' [data-q=form]')+').requestSubmit()})()');
    }
    await p.waitFor('document.querySelector('+JSON.stringify(panel+' [data-q=feedback]')+').dataset.status==="correct"');
-   assert.equal(await p.evaluate('map.getLayoutProperty('+JSON.stringify(country==='canada'?'canada-first-fill':'south-argentina-fill')+',"visibility")'),'visible');
+   assert.equal(await p.evaluate('map.getLayoutProperty('+JSON.stringify(country==='canada'?'canada-first-fill':'argentina-first-fill')+',"visibility")'),'visible');
    await p.tap('#home');await p.settle();assert.deepEqual(await p.evaluate('({id:currentAtlas().getSelection(),mode:currentAtlas().getMode?.(),scope:currentAtlas().getScope?.()})'),saved);
    await openCities(p,country);
   }

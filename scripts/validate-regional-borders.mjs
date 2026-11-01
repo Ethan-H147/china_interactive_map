@@ -83,7 +83,7 @@ for(const id of ['south-land-boundaries','korea-countries-lines'])addInternation
 for(const layer of layers)assert.deepEqual(layer.paint,internationalBorderPaint(),'Every renderer uses the same normal paint');
 map.addLayer({id:'later-country-fill',type:'fill'});
 assert.equal(layers[0].id,'later-country-fill','Late fills stay below international strokes without a style-event repair');
-for(const file of ['dist/regional-country.mjs','dist/south-america.mjs','dist/korea.js','dist/app.js'])assert(fs.readFileSync(file,'utf8').includes('addInternationalBorder('),file+' uses the universal border renderer');
+for(const file of ['dist/regional-country.mjs','dist/korea.js','dist/app.js'])assert(fs.readFileSync(file,'utf8').includes('addInternationalBorder('),file+' uses the universal border renderer');
 assert(!fs.readFileSync('dist/mongolia.mjs','utf8').includes("['second','first','countries']"),'Mongolia has no duplicate exterior stroke');
 assert.match(fs.readFileSync('dist/motion.mjs','utf8'),/if\(layer\.metadata\?\.atlasInternationalBorder(?:\|\|[^)]*)?\)continue/,'Camera movement retains exact international geometry');
 for(const country of ['lesotho','eswatini']){

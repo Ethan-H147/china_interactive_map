@@ -4,7 +4,7 @@ import {gzipSync,gunzipSync} from 'node:zlib';
 import {createHash} from 'node:crypto';
 import {execFileSync} from 'node:child_process';
 import {createPlaceSearch} from '../dist/place-search.mjs';
-import {stateStatisticsKey} from '../dist/south-america.mjs';
+import {stateStatisticsKey} from '../dist/south-america-regional.mjs';
 const base='dist/data/south-america/uruguay-local/',read=file=>JSON.parse(gunzipSync(fs.readFileSync(file))),index=read(base+'index.bin'),first=read('dist/data/south-america/uruguay-first.bin'),metadata=JSON.parse(fs.readFileSync(base+'sources.json'));
 const pointInRing=(p,ring)=>{let inside=false;for(let i=0,j=ring.length-1;i<ring.length;j=i++){const a=ring[i],b=ring[j];if((a[1]>p[1])!==(b[1]>p[1])&&p[0]<(b[0]-a[0])*(p[1]-a[1])/(b[1]-a[1])+a[0])inside=!inside;}return inside;};
 const inside=(p,g)=>(g.type==='Polygon'?[g.coordinates]:g.coordinates).some(poly=>pointInRing(p,poly[0])&&!poly.slice(1).some(r=>pointInRing(p,r)));
@@ -28,6 +28,7 @@ class Node{
  replaceChildren(...nodes){this.children=[];this.append(...nodes);}
  after(node){const parent=this.parentElement;if(node.parentElement){const old=node.parentElement.children;old.splice(old.indexOf(node),1);}node.parentElement=parent;parent.children.splice(parent.children.indexOf(this)+1,0,node);}
  setAttribute(){}querySelector(selector){const name=selector.split('.').at(-1);return this.children.find(n=>n.className?.split(' ').includes(name));}
+ querySelectorAll(selector){const matches=n=>selector.startsWith('.')?n.className?.split(' ').includes(selector.slice(1)):n.tag===selector;return this.children.flatMap(n=>[...(matches(n)?[n]:[]),...n.querySelectorAll(selector)]);}
  get text(){return this.textContent+' '+this.children.map(n=>n.text).join(' ');}
 }
 globalThis.document={createElement:tag=>new Node(tag),createTextNode:text=>new Node('#text',text)};

@@ -19,7 +19,7 @@ function adapter(file,context){
 pages.push(['japan',adapter('japan.mjs',{})]);
 for(const [country,prefix,name,first,second] of [['philippines','ph','Philippines','Regions','Provinces'],['indonesia','id','Indonesia','Provinces','Regencies & cities']])pages.push([country,adapter('archipelago.mjs',{country,prefix,name,config:{first,second}})]);
 for(const [country,prefix,name] of [['malaysia','my','Malaysia'],['singapore','sg','Singapore']])pages.push([country,adapter('southeast-asia.mjs',{country,prefix,c:{name},isMalaysia:country==='malaysia',base:'data/southeast-asia/'})]);
-for(const country of ['brazil','argentina','uruguay'])pages.push([country,adapter('south-america.mjs',{})]);
+for(const [country,prefix]of [['brazil','br'],['argentina','ar'],['uruguay','uy']])pages.push([country,adapter('regional-country.mjs',{maxLevel:2,country,prefix,base:'data/europe/'+country+'/',c:{name:country,firstLabel:country==='uruguay'?'Departments':'States & provinces',secondLabel:'Municipalities',lang:country==='brazil'?'pt':'es',nationalFlag:'vendor/flag-'+prefix+'.svg'}})]);
 
 pages.push(['russia',adapter('regional-country.mjs',{maxLevel:2,country:'russia',prefix:'ru',base:'data/russia/',c:{name:'Russia',lang:'ru',nationalFlag:'vendor/flag-ru.svg',secondLabel:'Districts'}})]);
 for(const [country,prefix,name,firstLabel,secondLabel,thirdLabel] of [['south-africa','za','South Africa','Provinces','Districts & metros','Municipalities'],['eswatini','sz','Eswatini','Regions','Tinkhundla'],['lesotho','ls','Lesotho','Districts','Councils']])pages.push([country,adapter('regional-country.mjs',{maxLevel:thirdLabel?3:2,country,prefix,base:`data/southern-africa/${country}/`,c:{name,lang:'en',nationalFlag:`vendor/flag-${prefix}.svg`,firstLabel,secondLabel,thirdLabel}})]);

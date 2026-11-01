@@ -4,17 +4,17 @@ export default [{name:'Brazil native map restores selected states and DDD views 
  await p.open(base,'#brazil');
  for(const [selection,scope]of [['BR-35','states'],['BR-DDD-11','ddd']]){
   await p.evaluate('currentAtlas().restore('+JSON.stringify(selection)+','+JSON.stringify(scope)+')');await p.settle();
-  const saved=await p.evaluate('currentAtlas().quizMap.capture()');assert.equal(saved.id,selection);assert.equal(saved.scope,scope);
-  await p.tap('#quiz-brazil-tab-quiz');await p.evaluate('currentAtlas().quiz.open()');await p.waitFor('!document.querySelector("#quiz-brazil-quiz-panel [data-q=start]").disabled');
-  await p.tap('#quiz-brazil-quiz-panel [data-q=start]');await p.waitFor('currentAtlas().quiz.active');await p.settle();
-  assert.equal(await p.evaluate('map.getLayoutProperty("south-brazil-fill","visibility")'),'visible');
+  const saved=await p.evaluate('currentAtlas().quizMap.capture()');assert.equal(saved.id,selection);assert.equal(saved.theme,scope==='states'?'':scope);
+  await p.tap('#br-tab-quiz');await p.evaluate('currentAtlas().quiz.open()');await p.waitFor('!document.querySelector("#br-quiz-panel [data-q=start]").disabled');
+  await p.tap('#br-quiz-panel [data-q=start]');await p.waitFor('currentAtlas().quiz.active');await p.settle();
+  assert.equal(await p.evaluate('map.getLayoutProperty("brazil-first-fill","visibility")'),'visible');
   await p.tap('#home');await p.settle();assert.deepEqual(await p.evaluate('currentAtlas().quizMap.capture()'),saved);
-  await p.tap('#quiz-brazil-tab-quiz');
-  await p.evaluate('(()=>{const s=document.getElementById("quiz-brazil-quiz-panel-divisions");s.value="3";s.dispatchEvent(new Event("change"))})()');
+  await p.tap('#br-tab-quiz');
+  await p.evaluate('(()=>{const s=document.getElementById("br-quiz-panel-divisions");s.value="3";s.dispatchEvent(new Event("change"))})()');
   await p.waitFor('!document.querySelector("#brazil-cities-quiz-panel [data-q=start]").disabled');
   await p.tap('#brazil-cities-quiz-panel [data-q=start]');await p.waitFor('currentAtlas().cityQuiz.active');await p.settle();
-  assert.equal(await p.evaluate('map.getLayoutProperty("south-brazil-fill","visibility")'),'visible');
-  assert.equal(await p.evaluate('map.getLayoutProperty("south-brazil-borders","visibility")'),'visible');
+  assert.equal(await p.evaluate('map.getLayoutProperty("brazil-first-fill","visibility")'),'visible');
+  assert.equal(await p.evaluate('map.getLayoutProperty("brazil-first-lines","visibility")'),'visible');
   const point=await p.evaluate('(async()=>{const q=document.querySelector("#brazil-cities-quiz-panel [data-q=question]").textContent,data=await(await fetch("data/quiz/brazil-cities.json")).json(),r=data.records.find(r=>r.en===q),p=map.project(r.center),b=map.getCanvas().getBoundingClientRect();return[b.x+p.x,b.y+p.y]})()');await p.tap(point);
   await p.waitFor('document.querySelector("#brazil-cities-quiz-panel [data-q=feedback]").dataset.status==="correct"');
   await p.tap('#home');await p.settle();assert.deepEqual(await p.evaluate('currentAtlas().quizMap.capture()'),saved);

@@ -4,7 +4,7 @@ export default [1280,390].map(width=>({name:'Existing outlines draw throughout p
  await fixtureImagery(p);await p.open(base,'#japan');
  await p.waitFor('AtlasRenderPipeline.snapshot().phase==="ready"');
  await p.evaluate('(()=>{window.outlineMotion={active:false,draws:{}};let layer;const painter=map.painter,render=painter.renderLayer;painter.renderLayer=function(...args){const previous=layer;layer=args[2];try{return render.apply(this,args);}finally{layer=previous;}};const gl=painter.context.gl;for(const method of ["drawElements","drawArrays","drawElementsInstanced","drawArraysInstanced"]){if(!gl[method])continue;const original=gl[method].bind(gl);gl[method]=(...args)=>{if(outlineMotion.active&&map.isMoving()&&layer?.type==="line")outlineMotion.draws[layer.id]=(outlineMotion.draws[layer.id]||0)+1;return original(...args);};}})()');
- for(const [country,outline] of [['japan','japan-first-lines'],['brazil','south-brazil-borders'],['argentina','south-argentina-borders'],['canada','canada-first-lines']]){
+ for(const [country,outline] of [['japan','japan-first-lines'],['brazil','brazil-first-lines'],['argentina','argentina-first-lines'],['canada','canada-first-lines']]){
   if(country!=='japan'){assert(await p.evaluate('changeAtlas('+JSON.stringify(country)+',true)'));await p.settle();}
   await p.waitFor('AtlasRenderPipeline.snapshot().phase==="ready"');
   assert.equal(await p.evaluate('map.getLayoutProperty('+JSON.stringify(outline)+',"visibility")'),'visible',country+' outline enabled');

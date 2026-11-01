@@ -19,19 +19,19 @@ Only rendered center dots belong here. A string that is split into CSS divider n
 | 22 | Recent-round time · hints · answers shown | `dist/quiz-dashboard.mjs` |
 | 23 | Trophy and medal mode results, earned status, tooltips | `dist/quiz-trophies.mjs`, `dist/medal-cabinet.mjs` |
 | 24 | Sync status: Saved on this device · sync pending or sync will retry | `dist/settings.mjs`, `dist/quiz-dashboard.mjs` |
-| 26 | Search and place-list context: kind · parent region; special map-label context | `dist/app.js`, `dist/regional-country.mjs`, `dist/korea.js`, `dist/mongolia.mjs`, `dist/archipelago.mjs`, `dist/south-america.mjs` |
+| 26 | Search and place-list context: kind · parent region; special map-label context | `dist/app.js`, `dist/regional-country.mjs`, `dist/korea.js`, `dist/mongolia.mjs`, `dist/archipelago.mjs` |
 | 28 | Regional-language annotation: language · romanized | `dist/regional-names.mjs` |
-| 31 | Boundary availability and coverage labels: City · Municipal boundary pending; counts and coverage qualifications | `dist/south-america.mjs`, `dist/app.js`, `dist/japan.mjs`, `dist/regional-country.mjs` |
+| 31 | Boundary availability and coverage labels: City · Municipal boundary pending; counts and coverage qualifications | `dist/app.js`, `dist/japan.mjs`, `dist/regional-country.mjs` |
 | 32 | Historical notice: year · Historical snapshot | `dist/regional-country.mjs`, `dist/countries.js` |
 | 33 | Flag caption: name · scope · status · year | `dist/regional-country.mjs`, `dist/national-flags.mjs`, `dist/flag-viewer.mjs` |
-| 34 | Flag credits, classification and licenses, including retained credit text | `dist/flag-viewer.mjs`, `dist/regional-country.mjs`, `dist/south-america.mjs`, flag data modules |
+| 34 | Flag credits, classification and licenses, including retained credit text | `dist/flag-viewer.mjs`, `dist/regional-country.mjs`, flag data modules |
 | 35 | Collections of source links and source/coverage notes | Country modules, `dist/index.html`, `dist/korea.html` |
 | 36 | Map and satellite attribution | Map source modules, `dist/satellite.mjs`, `dist/app.js` |
 | 37 | Article labels: Wikipedia · English or Search; source article qualifications | `dist/japan.mjs`, `dist/archipelago.mjs` |
 | 38 | Photo author · license · source · original image | `dist/explore.mjs` |
 | 39 | Photo resolution · conversion details | `dist/explore.mjs` |
 | 40 | Trophy material descriptions | `dist/quiz-trophies-core.mjs` |
-| 41 | Telephone listings: code · region/service · date; mapped-place counts and code search context | `dist/telephone-areas.mjs`, `dist/regional-country.mjs`, `dist/south-america.mjs` |
+| 41 | Telephone listings: code · region/service · date; mapped-place counts and code search context | `dist/telephone-areas.mjs`, `dist/regional-country.mjs` |
 | 42 | Antarctic latitude · longitude | `dist/antarctica.mjs` |
 | 43 | Antarctic operators, dated status labels and source notes | `dist/antarctica.mjs` |
 | 44 | Separate Pinyin pronunciation examples | `dist/china-info.mjs` |

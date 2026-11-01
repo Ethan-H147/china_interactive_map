@@ -33,14 +33,14 @@ export default [
  {name:'statistical colors and motion share normal paint beneath imagery',options:{width:1100,height:760},async run(page,base){
   await imagery(page);await page.open(base,'#brazil');await page.tap('#satellite-layer');
   await page.waitFor('satelliteDisplay.state.hasTile',{label:'imagery tile'});
-  const before=await page.evaluate("map.getPaintProperty('south-brazil-fill','fill-opacity')");
+  const before=await page.evaluate("map.getPaintProperty('brazil-first-fill','fill-opacity')");
   await page.evaluate("AtlasRegionColorController.setMetric('population');0");await page.settle();
-  assert.deepEqual(await page.evaluate("map.getPaintProperty('south-brazil-fill','fill-opacity')"),before,'Shading never treats rendered satellite opacity as normal opacity');
+  assert.deepEqual(await page.evaluate("map.getPaintProperty('brazil-first-fill','fill-opacity')"),before,'Shading never treats rendered satellite opacity as normal opacity');
   await page.tap('#zoom-in');await page.settle();await checkScene(page);
   await page.tap('#satellite-layer');
-  assert.equal(await page.evaluate("map.getPaintProperty('south-brazil-fill','fill-opacity')"),1);
+  assert.equal(await page.evaluate("map.getPaintProperty('brazil-first-fill','fill-opacity')"),1);
   await page.evaluate("AtlasRegionColorController.setMetric('none');0");await page.settle();
-  assert.equal(await page.evaluate("map.getPaintProperty('south-brazil-fill','fill-opacity')"),1);
+  assert.equal(await page.evaluate("map.getPaintProperty('brazil-first-fill','fill-opacity')"),1);
  }},
  {name:'every public country inherits satellite and layer-order rules',options:{width:1100,height:760},async run(page,base){
   await imagery(page);await page.open(base,'#brazil');await page.tap('#satellite-layer');

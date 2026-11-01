@@ -32,8 +32,8 @@ self.onmessage=async({data})=>{
    return {
     ...(part.towns?{towns:prepare(part.towns)}:{}),
     blob:!custom&&!part.selectionOutlineEdits&&indexed?.blob||new Blob([JSON.stringify(regions)],{type:'application/json'}),
-    borders:new Blob([JSON.stringify(lineData(part.boundaries))],{type:'application/json'}),
-    hasBorders:part.boundaries.features.length>0,
+    borders:new Blob([JSON.stringify(lineData(part.boundaries||part.lines))],{type:'application/json'}),
+    hasBorders:(part.boundaries||part.lines).features.length>0,
     // Reuse polygon slices unless the build supplies selection lines that omit
     // permanent water shores. Duplicate IDs retain every island or line part.
     ...(indexed?{outlines:new Blob([empty],{type:'application/json'}),outlineData:indexed.blob,outlineIndex:indexed.outlineIndex}:{

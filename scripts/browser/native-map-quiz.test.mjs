@@ -5,7 +5,7 @@ export default Object.entries(counts).map(([country,count])=>({
  name:country+' native map answers, naming, context, and restoration',options:{width:1280,height:900,developer:true},
  async run(p,base){
   await p.open(base,'#'+country);
-  const prefix='quiz-'+country,panel='#'+prefix+'-quiz-panel';
+  const prefix=await p.evaluate('currentAtlas().quiz.panel.id.replace(/-quiz-panel$/,"")'),panel='#'+prefix+'-quiz-panel';
   await p.waitFor('!!currentAtlas().quiz');
   const before=await p.evaluate('({id:currentAtlas().getSelection?.(),mode:currentAtlas().getMode?.(),scope:currentAtlas().getScope?.()})');
   await p.tap('#'+prefix+'-tab-quiz');
@@ -30,16 +30,16 @@ export default Object.entries(counts).map(([country,count])=>({
   await p.tap(panel+' [data-q=start]');await p.waitFor('currentAtlas().quiz.active');await p.settle();
   const name=await p.evaluate('(()=>{const d=AtlasCountries.countries['+JSON.stringify(country)+'],scope=d.quiz.scopes?.[0]?.id;return currentAtlas().quizMap.records().find(r=>r.level===d.quiz.level&&!r.special&&r.quizEligible!==false&&(!scope||r.country===scope||r.parent===scope||r.id.startsWith(scope+"-"))).en})()');
   await p.tap('#'+prefix+'-quiz-answer');await p.type(name);await p.key('Enter');
-  assert((await p.evaluate('document.querySelector('+JSON.stringify(panel+' [data-q=feedback]')+').textContent')).includes('correct'));
+  assert(await p.evaluate('(()=>{const feedback=document.querySelector('+JSON.stringify(panel+' [data-q=feedback]')+');return feedback.dataset.status==="correct"||feedback.textContent.includes("correct")})()'),'The naming answer is accepted');
   await p.tap('#home');await p.settle();
   if(country==='brazil'){
    await p.tap('#'+prefix+'-tab-quiz');
-   await p.evaluate('(()=>{const s=document.getElementById("quiz-brazil-quiz-panel-divisions");s.value="3";s.dispatchEvent(new Event("change"))})()');
+   await p.evaluate('(()=>{const s=document.getElementById("br-quiz-panel-divisions");s.value="3";s.dispatchEvent(new Event("change"))})()');
    await p.waitFor('!document.querySelector("#brazil-cities-quiz-panel [data-q=start]").disabled');
    await p.tap('#brazil-cities-quiz-panel [data-q=start]');await p.settle();
    assert(await p.evaluate('currentAtlas().cityQuiz.active'));
-   assert.equal(await p.evaluate('map.getLayoutProperty("south-brazil-fill","visibility")'),'visible');
-   assert.equal(await p.evaluate('map.getLayoutProperty("south-brazil-borders","visibility")'),'visible');
+   assert.equal(await p.evaluate('map.getLayoutProperty("brazil-first-fill","visibility")'),'visible');
+   assert.equal(await p.evaluate('map.getLayoutProperty("brazil-first-lines","visibility")'),'visible');
    assert(await p.evaluate('!!map.getLayer("quiz-brazil-cities-dots")'));
    await p.screenshot('brazil-native-city-quiz');await p.tap('#home');await p.settle();
   }

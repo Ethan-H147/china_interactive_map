@@ -34,6 +34,7 @@ class Node{
  after(node){const parent=this.parentElement;if(node.parentElement){const old=node.parentElement.children;old.splice(old.indexOf(node),1);}node.parentElement=parent;parent.children.splice(parent.children.indexOf(this)+1,0,node);}
  setAttribute(){}
  querySelector(selector){const name=selector.split('.').at(-1);return this.children.find(n=>n.className?.split(' ').includes(name));}
+ querySelectorAll(selector){const matches=n=>selector.startsWith('.')?n.className?.split(' ').includes(selector.slice(1)):n.tag===selector;return this.children.flatMap(n=>[...(matches(n)?[n]:[]),...n.querySelectorAll(selector)]);}
  get text(){return this.textContent+' '+this.children.map(n=>n.text).join(' ');}
 }
 globalThis.document={createElement:tag=>new Node(tag),createTextNode:text=>new Node('#text',text)};
@@ -52,6 +53,6 @@ const gdpEconomy=panel.children.find(n=>n.className==='statistics-economy');asse
 module.clearStatistics(anchor);assert(parent.children[1].hidden&&panel.hidden);
 const delayedModule=await import('../dist/statistics.mjs?argentina-cancel');const delayed=delayedModule.renderStatistics(anchor,'argentina:AR-06');delayedModule.clearStatistics(anchor);deferred.get(requests[0])({ok:true,json:async()=>data});await delayed;assert(parent.children[1].hidden&&panel.hidden,'Selecting a subdivision or leaving cancels late statistics');
 const retryModule=await import('../dist/statistics.mjs?argentina-retry');const failed=retryModule.renderStatistics(anchor,'argentina:AR-02');deferred.get(requests[0])({ok:false});await failed;assert.match(panel.text,/Retry/);const retry=panel.children.find(n=>n.tag==='button').onclick();deferred.get(requests[0])({ok:true,json:async()=>data});await retry;assert.match(parent.text,/3,065,991/);
-const {stateStatisticsKey}=await import('../dist/south-america.mjs');assert.equal(stateStatisticsKey('argentina',{id:'AR-02',level:1}),'argentina:AR-02');assert.equal(stateStatisticsKey('argentina',{id:'AR-02001',level:2}),'');
-const portal=fs.readFileSync('dist/south-america.mjs','utf8');assert.match(portal,/leave\(\)\{clearStatistics/);
+const {stateStatisticsKey}=await import('../dist/south-america-regional.mjs');assert.equal(stateStatisticsKey('argentina',{id:'AR-02',level:1}),'argentina:AR-02');assert.equal(stateStatisticsKey('argentina',{id:'AR-02001',level:2}),'');
+const portal=fs.readFileSync('dist/regional-country.mjs','utf8');assert.match(portal,/leave\(\)\{[\s\S]*clearStatistics/);
 console.log('24 Argentine jurisdictions: identity, projections, reported area, real/nominal distinction, same-year USD/per capita, sources, reproducibility, demand loading, population order, cancellation and retry passed.');
