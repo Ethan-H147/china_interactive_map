@@ -20,8 +20,11 @@ export function addPoleCap(map){if(!caps.has(map))caps.set(map,addAntarcticCap(m
 export async function addWorldLand(map,{deferBorderPreviews=false}={}){
  const overview=addOverview(map);
  const outlines=addWorkerSource(map,'world-country-outlines','data/world-country-outlines.bin',{...internationalLineSourceOptions,attribution:'Country outlines: <a href="https://www.naturalearthdata.com/">Natural Earth</a> · reconciled atlas display edges'}).then(()=>true,error=>{console.warn('World country outlines',error);return false;});
+ // Tiles at maxzoom always keep full detail, so tolerance only thins sub-pixel points below it.
+ // At 0 every lower zoom keeps all 4.2M points: about 2.4 GB in the map worker, which a phone
+ // browser cannot hold. 0.375 px (MapLibre's default) keeps it near 240 MB on phones.
  await addWorkerSource(map,'world-land','data/world-land.bin',{
-  type:'geojson',tolerance:0,buffer:64,maxzoom:8,
+  type:'geojson',tolerance:globalThis.AtlasEntry?.lowMemory?.375:0,buffer:64,maxzoom:8,
   attribution:'World land: <a href="https://www.naturalearthdata.com/">Natural Earth</a> (public domain) · <a href="data/world-land-sources.json">Atlas sources &amp; licenses</a> · © OpenStreetMap contributors'
  });
  // Background land and country outlines come from one shared topology.
