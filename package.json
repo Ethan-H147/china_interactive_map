@@ -491,6 +491,7 @@
     "audit:world-outlines": "node --max-old-space-size=10000 scripts/audit-world-outline-coverage.mjs",
     "test:shanxi-seams": "node --max-old-space-size=10000 scripts/validate-shanxi-seams.mjs && node scripts/browser/run.mjs border-outline-audit",
     "build:shanxi-seams": "node scripts/build-shanxi-seam-assets.mjs",
-    "test:country-render-pipeline": "node scripts/validate-country-render-pipeline.mjs && node scripts/browser/run.mjs country-render-pipeline pan-outline-continuity"
+    "test:country-render-pipeline": "node scripts/validate-country-render-pipeline.mjs && node scripts/browser/run.mjs country-render-pipeline pan-outline-continuity",
+    "test:cloudflare-assets": "node scripts/validate-cloudflare-assets.mjs"
   }
 }

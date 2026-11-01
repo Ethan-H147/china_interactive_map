@@ -1,3 +1,5 @@
+import {cloudflareAssetPlan} from './cloudflare-asset-plan.mjs';
+import {assetIgnoreText,auditCloudflareAssets} from './cloudflare-assets.mjs';
 import fs from 'node:fs';
 import {execFileSync} from 'node:child_process';
 
@@ -8,5 +10,7 @@ if(!/^[a-f0-9]{40}$/.test(version)||version!==checkout)throw Error('Cloudflare s
 const config=JSON.parse(fs.readFileSync('wrangler.jsonc','utf8'));
 if(config.name!=='china-interactive-map'||config.assets?.directory!=='./dist')throw Error('Unexpected Cloudflare target');
 for(const file of ['index.html','app.js','city-quiz.mjs','satellite.mjs','quiz-supabase.mjs'])if(!fs.existsSync('dist/'+file))throw Error('Missing runtime file: '+file);
+const {omitted,redirectText}=cloudflareAssetPlan('dist',version),assetReport=auditCloudflareAssets('dist',omitted);
+if(!process.argv.includes('--check')){fs.writeFileSync('dist/.assetsignore',assetIgnoreText(omitted));fs.writeFileSync('dist/_redirects',redirectText);}
 if(!process.argv.includes('--check'))fs.writeFileSync('dist/version.json',JSON.stringify({version})+'\n');
-console.log(JSON.stringify({worker:config.name,version,assets:config.assets.directory,checkOnly:process.argv.includes('--check')}));
+console.log(JSON.stringify({worker:config.name,version,assets:config.assets.directory,checkOnly:process.argv.includes('--check'),assetReport}));

@@ -4,6 +4,8 @@ The Cloudflare Worker is china-interactive-map at https://china-interactive-map.
 
 In Cloudflare Settings > Builds, use root /, leave the build command empty (Wrangler runs the repository build hook), and set the deploy command to npm run deploy:cloudflare. The root wrangler.jsonc selects the correct Worker and dist/ assets. Its build hook runs focused checks and stamps version.json with the exact checked-out commit. Pushing main should create a fresh production build; retrying an old build is unnecessary. Verify the deployed /version.json matches the GitHub commit after rollout. Do not use --name boundary-atlas: that selects a different Worker.
 
+The Cloudflare build generates dist/.assetsignore and dist/_redirects. Retained build inputs stay in GitHub; their URLs redirect to the exact source commit. Byte-identical runtime assets share one local copy, preserving their original URLs through same-origin redirects. The build checks the Free-plan limits of 20,000 assets and 25 MiB per file. Run npm run test:cloudflare-assets and npx wrangler@4.152.0 deploy --dry-run to verify packaging without publishing. With a local Wrangler preview running, node scripts/browser/smoke-cloudflare-assets.mjs verifies compact world data, map loading and identical flag artwork on desktop and phone.
+
 Quiz storage is Supabase with per-user RLS; Cloudflare has no database binding requirement. The configuration does not modify Supabase data or browser queues.
 
 The following describes the separate legacy ChatGPT Site adapter. Its immutable source pin and separate repository are not used for the Cloudflare static-assets deployment.
