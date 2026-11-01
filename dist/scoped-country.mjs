@@ -1,4 +1,4 @@
-import {createLatestScope} from './interaction-policy.mjs';
+import {createLatestScope,cameraSettled} from './interaction-policy.mjs';
 import {loadCompressed} from './korea-data.mjs';
 const empty=()=>({type:'FeatureCollection',features:[]});
 
@@ -11,10 +11,12 @@ export async function prepareScopedCountry(country){
 }
 
 // Keep one area in the renderer. Serial replacements bound memory use and prevent
-// a slower previous selection from replacing the most recent one.
-export function createSubdivisionScope(map,country,{changed=()=>{}}={}){
+// a slower previous selection from replacing the most recent one. The selected area's districts
+// are uploaded once the camera has settled (cameraSettled).
+export function createSubdivisionScope(map,country,{changed=()=>{},isMoving}={}){
  const suffixes=['','-edges','-selection-edges'];
  return createLatestScope(async(parent,current)=>{
+  if(!await cameraSettled(map,{isMoving,current}))return;
   for(const suffix of suffixes){if(!current())return;
    const id=country+'-second'+suffix,url=new URL('data/scoped/'+country+'/second/'+parent+suffix+'.bin',import.meta.url);
    await map.getSource(id)?.setData('atlas-data://'+id+'?url='+encodeURIComponent(url.href)+(suffix==='-selection-edges'?'&transform=selection-outline':''));

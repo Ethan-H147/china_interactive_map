@@ -500,31 +500,38 @@
     },
     {
       "file": "dist/data/china-mobile/province-boundaries.bin",
-      "sha256": "212d606bd5ab1f9d4d95dbcab38475604951360775e95fd346c39f1447bfe332"
+      "sha256": "9ee5bbef932d7ccfc9160d585800b5381215af9dc814a860b47ae051d7febabb",
+      "baselineNote": "Updated by the separately authorized Shanxi–Shaanxi/Henan seam repair. Retained Shanxi source, no outer land loss; lake masks remain paint-only."
     },
     {
       "file": "dist/data/display-boundaries.00.bin",
-      "sha256": "041da6e9a6e69b4ae46240ab11f99c13f17a28996f0c42b94095ac70aa40c780"
+      "sha256": "d1cf0d76695863c49b89425932e224266152b0b2206f3e7e85598e1a45ebff13",
+      "baselineNote": "Updated by the separately authorized Shanxi–Shaanxi/Henan seam repair. Retained Shanxi source, no outer land loss; lake masks remain paint-only."
     },
     {
       "file": "dist/data/display-boundaries.01.bin",
-      "sha256": "cf82bccf056f48089f3be1438e20570eacab5d61cc743bb5f2b45dc7cb3401d6"
+      "sha256": "527912dfd64cd0e6270bca9022302fb4d640e70544e928291303973b2122504b",
+      "baselineNote": "Updated by the separately authorized Shanxi–Shaanxi/Henan seam repair. Retained Shanxi source, no outer land loss; lake masks remain paint-only."
     },
     {
       "file": "dist/data/display-boundaries.02.bin",
-      "sha256": "97cece944eb93e1d889b2fb5bbf9e42e7fdb3a2cba647f12435abb9280924192"
+      "sha256": "659201a82d72107d253eb09a3cbea8a84af146f00ef96e857a5e0ff882675eb3",
+      "baselineNote": "Updated by the separately authorized Shanxi–Shaanxi/Henan seam repair. Retained Shanxi source, no outer land loss; lake masks remain paint-only."
     },
     {
       "file": "dist/data/display-boundaries.03.bin",
-      "sha256": "19cc504b28e4c558615b03ef1263e259944c2d2fc7fdd2778ca355d3d5e40a69"
+      "sha256": "19cc504b28e4c558615b03ef1263e259944c2d2fc7fdd2778ca355d3d5e40a69",
+      "baselineNote": "Updated by the separately authorized Shanxi–Shaanxi/Henan seam repair. Retained Shanxi source, no outer land loss; lake masks remain paint-only."
     },
     {
       "file": "dist/data/display-boundaries.04.bin",
-      "sha256": "addfe583ed0ba0a24a540aa43216b25a6a061de93dcf70c66e50dec54aaf61b1"
+      "sha256": "addfe583ed0ba0a24a540aa43216b25a6a061de93dcf70c66e50dec54aaf61b1",
+      "baselineNote": "Updated by the separately authorized Shanxi–Shaanxi/Henan seam repair. Retained Shanxi source, no outer land loss; lake masks remain paint-only."
     },
     {
       "file": "dist/data/display-boundaries.05.bin",
-      "sha256": "bca88880f02304d9533b8f96fa4098b3ed92ad682e45973f087ea090e08dce4d"
+      "sha256": "bca88880f02304d9533b8f96fa4098b3ed92ad682e45973f087ea090e08dce4d",
+      "baselineNote": "Updated by the separately authorized Shanxi–Shaanxi/Henan seam repair. Retained Shanxi source, no outer land loss; lake masks remain paint-only."
     },
     {
       "file": "dist/data/europe/canada/first.bin",
@@ -588,7 +595,7 @@
     },
     {
       "file": "dist/data/globe-overview-borders.bin",
-      "sha256": "c2e61ee37427b7b42b5b25ed41d5a7368fda6e25bda08ddabbc8847c3c319595",
+      "sha256": "a23064b2151c45888d2a611cdf0f6ec3be2875942a660458b4835d5f34cf6e5d",
       "baselineNote": "Aggregate border mesh updated by the separately authorized Americas country additions on 2026-10-31. Lake cutouts remain paint-only; all original administrative geometry reference hashes are retained."
     },
     {
@@ -609,5 +616,5 @@
       "baselineNote": "Aggregate border mesh updated by the separately authorized Americas country additions on 2026-10-31. Lake cutouts remain paint-only; all original administrative geometry reference hashes are retained."
     }
   ],
-  "baselineNote": "Global border aggregates include authorized world additions and restored original international borders. Existing administrative geometry remains unchanged."
+  "baselineNote": "Global aggregates include world additions and restored existing frontiers. China references include the separately verified Shanxi seam repair; lake cutouts do not modify administrative boundaries."
 }

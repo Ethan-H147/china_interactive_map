@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import {createLatestScope,selectedOpacity,SEARCH_LIMIT,LABEL_CANDIDATE_LIMIT,cameraOptions} from '../dist/interaction-policy.mjs';
+import {createLatestScope,selectedOpacity,SEARCH_LIMIT,LABEL_CANDIDATE_LIMIT,cameraOptions,cameraSettled} from '../dist/interaction-policy.mjs';
 import {createMapScene} from '../dist/map-scene.mjs';
 import {testMap} from './test-map.mjs';
 import {createPlaceSearch} from '../dist/place-search.mjs';
@@ -36,4 +36,8 @@ const loader=createLatestScope(async(scope,current)=>{if(scope==='a')await new P
 const first=loader.ensure('a');while(!release)await new Promise(resolve=>setTimeout(resolve,0));const second=loader.ensure('b');loader.ensure('c');release();await first;await second;
 assert.deepEqual(committed,['c']);assert.equal(loader.loaded,'c');await loader.clear();assert.equal(loader.loaded,null);assert(clearCount>=3);await loader.dispose();await loader.ensure('d');assert.equal(loader.loaded,null);
 let fail=true;const retry=createLatestScope(async()=>{if(fail)throw Error('offline');});await assert.rejects(retry.ensure('a'));fail=false;await retry.ensure('a');assert.equal(retry.loaded,'a');await retry.dispose();
-console.log('Shared interactions: feature-state highlights, logical picking, valid zoom expressions, camera units, search/label limits, stale scope cancellation, clear, disposal and retry passed.');
+// Subdivision detail waits for the camera: through a flight, then a short still moment.
+{let moving=true;const camera={isMoving:()=>false},started=Date.now(),wait=cameraSettled(camera,{isMoving:()=>moving,delay:40});setTimeout(()=>moving=false,120);assert.equal(await wait,true);assert(Date.now()-started>=150,'Waits for the flight and the still moment');
+ let current=true;const stale=cameraSettled(camera,{current:()=>current,delay:40});current=false;assert.equal(await stale,false,'A newer selection cancels the wait');
+ assert.equal(await cameraSettled({},{isMoving:()=>true,delay:0,limit:60}),true,'A camera that never settles cannot hold detail back');}
+console.log('Shared interactions: feature-state highlights, logical picking, valid zoom expressions, camera units, search/label limits, stale scope cancellation, camera-settled detail, clear, disposal and retry passed.');

@@ -1,6 +1,7 @@
 import {loadCompressed} from './korea-data.mjs';
 import {createPlaceSearch} from './place-search.mjs';
 import {lineSourceOptions,adaptiveOpacity} from './adaptive-lines.mjs';
+import {cameraSettled} from './interaction-policy.mjs';
 
 export function createArgentinaLocal(map,host,config={}){
  let index,indexJob,search,worker,rejectPending,epoch=0,entry,scope=null,mode=1,wait,loadJob;
@@ -33,6 +34,7 @@ export function createArgentinaLocal(map,host,config={}){
   if(entry?.scope===scope){sync();return;}
   release();const token=epoch,requested=scope;
   host.status('');
+  if(!await cameraSettled(map,{isMoving:()=>host.isMoving?.(),current:()=>token===epoch&&host.active()}))return;
   let staged;
   try{
    const payload=await new Promise((resolve,reject)=>{

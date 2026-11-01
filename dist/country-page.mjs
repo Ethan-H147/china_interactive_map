@@ -1,3 +1,4 @@
+import {communityFooter} from './feedback.mjs';
 import {bilingualText} from './inline-typography.mjs';
 // Country adapters supply content and controls; this module owns the page layout.
 const escape=value=>String(value||'').replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
@@ -22,7 +23,7 @@ export function countryPageMarkup({prefix='',search='',settings='',heading='',ca
     <div class="country-place-actions">${actions}</div>
    </section>
   </section>${extraPanels}${afterPanels}
- </div><footer class="sidebar-footer">${footer}</footer>`;
+ </div><footer class="sidebar-footer">${footer}${communityFooter}</footer>`;
 }
 export function createCountryPage({id,label,classes='sidebar',hidden=true,...content}){
  const page=document.createElement('aside');page.id=id;page.className=classes;page.hidden=hidden;page.setAttribute('aria-label',label);page.dataset.countryPage='';page.innerHTML=countryPageMarkup(content);return page;

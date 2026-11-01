@@ -1,3 +1,4 @@
+import {sceneLayers} from './map-scene.mjs';
 import './countries.js';
 
 // Country previews and their coarse fallback land must share a color from the first frame.
@@ -8,5 +9,5 @@ export function backgroundLandColor(allows=id=>globalThis.AtlasDev?.allows(id)??
 }
 export function syncBackgroundLand(map){
  const color=backgroundLandColor();
- for(const layer of map.getStyle()?.layers||[])if(layer.metadata?.atlas?.landPalette)map.setPaintProperty(layer.id,'fill-color',color);
+ for(const layer of sceneLayers(map))if(layer.metadata?.atlas?.landPalette)map.setPaintProperty(layer.id,'fill-color',color);
 }

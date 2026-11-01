@@ -1,0 +1,5 @@
+{
+  "source": "Existing detailed DataV/AreaCity prefecture geometry in WGS84. Shanxi is the retained reference; Shaanxi and Henan use the same complete shared edges.",
+  "sha256": "f1ae0ea5eea56e782b4d0e1bf0281672d7473fe97600671494e1666557ccb5ec",
+  "countySha256": "2d45a80255d59776cae893c76f128946ef739b5fb91a5df2ed442853b7a04071"
+}

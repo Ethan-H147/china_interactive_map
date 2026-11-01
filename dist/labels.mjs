@@ -24,7 +24,7 @@ function textWidth(font,text){const key=font+'|'+text;let width=widths.get(key);
 export function getLanguage(){return language;}
 export function setLanguage(value){language=['en','local','both'].includes(value)?value:'both';document.querySelectorAll('[data-label-language]').forEach(el=>el.value=language);}
 export function render(map,candidates,className){
- if(globalThis.AtlasPerformanceController?.labelsSuppressed)return [];
+ if(globalThis.AtlasPerformanceController?.labelsSuppressed||globalThis.AtlasRenderPipeline&&!globalThis.AtlasRenderPipeline.labelsReady)return [];
  const settings=getSettings(),large=settings.labelSize==='large';candidates=candidates.filter(item=>item.countryLabel?settings.countryNames:settings.placeNames);
  measure??=document.createElement('canvas').getContext('2d');
  // On the globe, places on the far side, or near its edge where they project poorly, are left out.
@@ -46,7 +46,10 @@ export function render(map,candidates,className){
   const el=document.createElement('div');el.dataset.atlasPlace=String(item.id);el.className=item.className||className;if(item.onClick){el.setAttribute('role','button');el.tabIndex=0;el.onclick=e=>{e.stopPropagation();item.onClick();};el.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();item.onClick();}};}el.classList.toggle('selected-label',!!item.selected);el.textContent=item.lines[0];
   if(item.lang)el.lang=item.lang;
   for(const line of item.lines.slice(1)){const small=document.createElement('small');small.textContent=line;el.append(small);}
-  return new window.maplibregl.Marker({element:el,anchor:'center'}).setLngLat(item.center).addTo(map);
+  const marker=new window.maplibregl.Marker({element:el,anchor:'center'}).setLngLat(item.center),pipeline=globalThis.AtlasRenderPipeline;
+  if(!pipeline)return marker.addTo(map);
+  const cancel=pipeline.enqueueLabel(()=>marker.addTo(map)),remove=marker.remove.bind(marker);
+  marker.remove=()=>{cancel();return remove();};return marker;
  });
 }
 

@@ -3900,6 +3900,7 @@
       "source": "scripts/boundary-sources/world-completion/preserved-existing-frontiers.json",
       "countries": [
         "ethiopia",
+        "kenya",
         "syria",
         "sudan",
         "austria",

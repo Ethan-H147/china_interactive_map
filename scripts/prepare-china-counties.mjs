@@ -111,3 +111,5 @@ const dataset={regions:fc(features),boundaries:fc(lines)};
 fs.writeFileSync('dist/data/china-counties.bin',gzipSync(JSON.stringify(dataset),{level:9}));
 fs.writeFileSync('dist/data/china-county-sources.json',JSON.stringify({provider:'AreaCity / Amap (GCJ-02, converted to WGS84); the five refined city overlays from city-district-sources.json',release:'https://github.com/xiangyuecn/AreaCity-JsSpider-StatsGov/releases/tag/2025.251231.260403',archive:'ok_geo.csv.7z',archiveSHA256,license:'MIT',processing:'Simplified to about 60 m as one layer, clipped to each displayed prefecture; uncovered prefecture land joins the county sharing most of its edge, or the nearest county for an island.',counties:features.length,prefectures:report},null,1)+'\n');
 console.log('China counties:',features.length,'in',report.filter(r=>r.counties).length,'prefectures;',(fs.statSync('dist/data/china-counties.bin').size/1048576).toFixed(2),'MB');
+
+if(fs.existsSync('dist/data/shanxi-province-seams.json'))await import('./reconcile-shanxi-counties.mjs');

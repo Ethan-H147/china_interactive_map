@@ -40,11 +40,14 @@ export function provinceOpacity(visible,opacity=1){
  ['boolean',['feature-state','hover'],false],.35-.2*amount,1-amount];
 }
 export const getMapScene=map=>scenes.get(map);
+export const sceneLayers=map=>scenes.get(map)?.layerInventory()||map.getStyle()?.layers||[];
 export function createMapScene(map,{version=globalThis.maplibregl?.getVersion?.()}={}){
  if(scenes.has(map))return scenes.get(map);
  const native=Object.fromEntries(['addLayer','moveLayer','removeLayer','setPaintProperty','setLayoutProperty','addSource','setFilter','getFilter','queryRenderedFeatures'].map(key=>[key,map[key]?.bind(map)]));
  const entries=new Map(),sourceIds=new Map(),selectionDrawSources=new Set();
- let warmPainter,warmRender,selectionDrawCulling=true;
+ let warmPainter,warmRender,selectionDrawCulling=true,detailStage=null,detailBaseline=null,skippedDetailDraws=0;
+ const detailTypes=new Set(['line','circle','symbol']);
+ const detailBlocked=(id,entry)=>!!warmRender&&detailStage!==null&&detailTypes.has(entry?.type)&&detailBaseline?.get(id)!==entry&&!detailStage.has(id);
  function attachWarmRenderer(){
   const painter=map.painter;
   if(version!=='6.11.2'||typeof painter?.renderLayer!=='function'||warmPainter===painter&&painter.renderLayer===warmRender)return;
@@ -54,7 +57,7 @@ export function createMapScene(map,{version=globalThis.maplibregl?.getVersion?.(
    return nativeRender.call(this,style,...args);
   };
   warmRender=function(renderer,source,layer,coordinates,options){
-   const entry=entries.get(layer?.id);if(entry?.warming)return;
+   const entry=entries.get(layer?.id);if(entry?.warming)return;if(detailBlocked(layer?.id,entry)){skippedDetailDraws++;return;}
    if(selectionDrawCulling&&entry?.selectionDraw&&entry.visibleStates)source=selectedOutlineSource(source,layer,selectionVisibility.ids(entry.source,entry.visibleStates));
    return renderLayer.call(this,renderer,source,layer,coordinates,options);
   };
@@ -74,7 +77,10 @@ export function createMapScene(map,{version=globalThis.maplibregl?.getVersion?.(
  let globe=globeView();
  const offscreen=file=>outsideView(file,view)||(horizonCulling&&globe&&behindGlobe(file,globe.center,globe.minimumFacing));
  const selectionVisibility=createSelectionVisibility(map,source=>{for(const [id,entry]of entries)if(entry.source===source&&entry.visibleStates)native.setLayoutProperty(id,'visibility',visibility(id,entry));});
- const layers=()=>map.getStyle()?.layers||[];
+ // Reading getStyle serializes every GeoJSON source. Layer order and metadata
+ // do not need a copy of the world's geometry on each add, recolor or flight.
+ const layers=()=>version==='6.11.2'&&Array.isArray(map.style?._order)?map.style._order.map(id=>{const l=map.getLayer(id);return {id,type:l.type,source:l.source,metadata:l.metadata};}):map.getStyle()?.layers||[];
+ const inventory=()=>layers().map(layer=>{const e=entries.get(layer.id);return e?{...layer,layout:{visibility:map.getLayoutProperty(layer.id,'visibility')||'visible'},paint:e.rendered}:layer;});
  const describe=layer=>{
   const atlas=layer.metadata?.atlas||{},role=atlas.role||defaults[layer.type];
   if(!(role in layerBands))throw Error('Declare an atlas layer role for '+layer.id);
@@ -143,10 +149,20 @@ export function createMapScene(map,{version=globalThis.maplibregl?.getVersion?.(
   render(id,entry);return map;
  };
  map.setLayoutProperty=function(id,key,value,...options){const entry=entries.get(id);if(key==='visibility'&&entry){entry.visibility=value||'visible';return native.setLayoutProperty(id,key,visibility(id,entry),...options);}return native.setLayoutProperty(id,key,value,...options);};
- if(native.setFilter)map.setFilter=function(id,filter,...options){const entry=entries.get(id);if(entry){const gated=!!entry.gate;if(configureGate(id,entry,filter)){if(!gated)native.setFilter(id,null,...options);render(id,entry);native.setLayoutProperty(id,'visibility',visibility(id,entry));return map;}if(gated){const gate=entry.gate;if(gate.id!==null&&gate.id!=='')map.setFeatureState({source:entry.source,id:gate.id},{[gate.key]:false});delete entry.gate;delete entry.filter;entry.visibleStates=entry.gateStates;render(id,entry);native.setLayoutProperty(id,'visibility',visibility(id,entry));}}return native.setFilter(id,filter,...options);};
+ if(native.setFilter)map.setFilter=function(id,filter,...options){
+  // Filters come from tested adapter expressions. Revalidating each dynamic
+  // country ID serializes the whole world style; compile them in regression
+  // checks instead. Explicit validation remains available to callers.
+  if(same(map.getFilter(id)??null,filter??null))return map;
+  options=[{validate:false,...options[0]}];const entry=entries.get(id);if(entry){const gated=!!entry.gate;if(configureGate(id,entry,filter)){if(!gated)native.setFilter(id,null,...options);render(id,entry);native.setLayoutProperty(id,'visibility',visibility(id,entry));return map;}if(gated){const gate=entry.gate;if(gate.id!==null&&gate.id!=='')map.setFeatureState({source:entry.source,id:gate.id},{[gate.key]:false});delete entry.gate;delete entry.filter;entry.visibleStates=entry.gateStates;render(id,entry);native.setLayoutProperty(id,'visibility',visibility(id,entry));}}return native.setFilter(id,filter,...options);};
  if(native.getFilter)map.getFilter=id=>entries.get(id)?.gate?clone(entries.get(id).filter):native.getFilter(id);
- if(native.queryRenderedFeatures)map.queryRenderedFeatures=(...args)=>native.queryRenderedFeatures(...args).filter(feature=>{const entry=entries.get(feature.layer?.id);return !entry?.warming&&(!entry?.gate||String(feature.properties?.[entry.gate.property])===String(entry.gate.id));});
+ if(native.queryRenderedFeatures)map.queryRenderedFeatures=(...args)=>native.queryRenderedFeatures(...args).filter(feature=>{const entry=entries.get(feature.layer?.id);return !entry?.warming&&!detailBlocked(feature.layer?.id,entry)&&(!entry?.gate||String(feature.properties?.[entry.gate.property])===String(entry.gate.id));});
  const scene={
+  layerInventory:inventory,sourceInventory:()=>[...sourceIds.keys()],
+  beginDetailStage(){detailBaseline=new Map(entries);detailStage=new Set();map.triggerRepaint?.();},
+  setDetailStage(ids){if(ids===null){detailStage=null;detailBaseline=null;}else{detailBaseline??=new Map(entries);detailStage=new Set(ids);}map.triggerRepaint?.();},
+  pendingDetailLayers(){return [...entries].filter(([id,e])=>detailBlocked(id,e)&&!e.warming&&visibility(id,e)!=='none').map(([id])=>id);},
+  detailStageStats:()=>({active:detailStage!==null,allowed:detailStage?.size||0,skippedDraws:skippedDetailDraws}),
   get canWarmLayers(){return warmPainter===map.painter&&!!warmRender&&map.painter?.renderLayer===warmRender;},
   setLayerWarming(id,value){const entry=entries.get(id);if(!entry)return;entry.warming=!!value;render(id,entry);},
   setOverview(value){value=!!value;if(overview===value)return;overview=value;for(const [id,entry]of entries)if(entry.replaceInOverview)native.setLayoutProperty(id,'visibility',visibility(id,entry));},

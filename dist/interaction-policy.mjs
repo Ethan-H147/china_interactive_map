@@ -27,3 +27,15 @@ export function createLatestScope(load,{clear=async()=>{},changed=()=>{}}={}){
  function schedule(){if(!running&&!disposed&&(dirty||loaded!==wanted))running=Promise.resolve().then(drain).finally(()=>{running=null;});return running||Promise.resolve();}
  return{get loaded(){return loaded;},ensure(scope){scope=scope||null;if(scope!==wanted){wanted=scope;epoch++;}return schedule();},clear(){epoch++;wanted=loaded=null;dirty=true;changed();return schedule();},async dispose(){disposed=true;epoch++;wanted=null;await running?.catch(()=>{});loaded=null;}};
 }
+// Japan's selection timing, shared by every country whose subdivisions appear when a region is
+// selected (China draws all its prefectures at once): the camera flies first and place names follow
+// as it stops; the new subdivisions are prepared and uploaded only once the camera has been still
+// for `delay` ms, so the flight never shares frames with geometry indexing and tile uploads.
+// Resolves false if `current()` turns false; never waits longer than `limit` ms.
+export function cameraSettled(map,{isMoving=()=>false,current=()=>true,delay=180,limit=5000}={}){
+ const moving=()=>isMoving()||!!map.isMoving?.(),started=Date.now();
+ return new Promise(resolve=>{
+  const check=()=>{if(!current())return resolve(false);if(Date.now()-started>limit)return resolve(true);if(moving())return setTimeout(check,50);setTimeout(()=>{if(!current())resolve(false);else if(moving())check();else resolve(true);},delay);};
+  check();
+ });
+}

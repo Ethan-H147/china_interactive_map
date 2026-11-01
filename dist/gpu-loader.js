@@ -10,6 +10,7 @@ try{
   modules.AtlasTypography='inline-typography.mjs';
   modules.AtlasSettings='settings.mjs';
   modules.AtlasPerformance='map-performance.mjs';
+  modules.AtlasCountryRenderPipeline='country-render-pipeline.mjs';
   modules.AtlasGlobeRenderer='globe-renderer.mjs';
   modules.AtlasGlobeNavigation='globe-navigation.mjs';
   modules.AtlasInput='map-interaction.mjs';
@@ -24,6 +25,7 @@ try{
   modules.AtlasMapSources='map-sources.mjs';
   modules.AtlasChinaPage='china-page.mjs';
   modules.AtlasCountryPage='country-page.mjs';
+  modules.AtlasFeedback='feedback.mjs';
   modules.AtlasFlagViewer='flag-viewer.mjs';
   modules.AtlasRegionColors='region-colors.mjs';
   modules.AtlasSouthernAfrica='southern-africa.mjs';

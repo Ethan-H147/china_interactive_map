@@ -487,6 +487,10 @@
     "build:world-completion": "node --max-old-space-size=10000 scripts/build-world-completion.mjs && node --max-old-space-size=10000 scripts/build-world-completion-assets.mjs",
     "test:world-completion": "node --max-old-space-size=10000 scripts/validate-world-completion.mjs && npm run test:national-palettes && node scripts/browser/run.mjs world-completion world-palettes world-frontiers",
     "fetch:world-completion": "node scripts/probe-world-completion.mjs && node scripts/download-world-completion.mjs",
-    "test:world-display-fixes": "node --max-old-space-size=10000 scripts/validate-world-display-fixes.mjs && node scripts/browser/run.mjs world-display-fixes"
+    "test:world-display-fixes": "node --max-old-space-size=10000 scripts/validate-world-display-fixes.mjs && node scripts/browser/run.mjs world-display-fixes",
+    "audit:world-outlines": "node --max-old-space-size=10000 scripts/audit-world-outline-coverage.mjs",
+    "test:shanxi-seams": "node --max-old-space-size=10000 scripts/validate-shanxi-seams.mjs && node scripts/browser/run.mjs border-outline-audit",
+    "build:shanxi-seams": "node scripts/build-shanxi-seam-assets.mjs",
+    "test:country-render-pipeline": "node scripts/validate-country-render-pipeline.mjs && node scripts/browser/run.mjs country-render-pipeline pan-outline-continuity"
   }
 }

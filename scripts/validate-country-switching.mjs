@@ -23,7 +23,7 @@ let releaseKorea,releaseMongolia;
 const koreaWait=new Promise(r=>releaseKorea=r),mongoliaWait=new Promise(r=>releaseMongolia=r);
 const atlas=wait=>({warm:()=>wait,leave(){},context(){},enter:async()=>{},ready:true});
 // Residency and motion-worker ownership have separate tests; this fixture supplies prepared motion data.
-const env=vm.createContext({lowMemory:false,phoneCameraQuery:{matches:false},syncGlobe(){},mapScene:{setSnapshot(){}},provincePopulation:{},AbortController,setTimeout,clearTimeout,allReady:true,quiz:{active:false},registry,atlasesReady:true,atlases:{korea:atlas(koreaWait),mongolia:atlas(mongoliaWait),japan:atlas(Promise.resolve())},provinceFeatures:[],window:{AtlasSettings:{countryFill:()=>"#ddd"},AtlasChinaPage:{closeChinaInfo(){}},AtlasCountryLoader:{createCountryResidency:()=>({ensure:async(id,load)=>load(),activate(){},snapshot:()=>({countries:[]})})},AtlasTheme:{applyAtlasTheme(){}},AtlasEntry:{countries:{china:{en:'China'},korea:{en:'Korea'},mongolia:{en:'Mongolia'},japan:{en:'Japan'}},remember:country=>remembered.push(country)}},AtlasSymbols:{markup:c=>c},document:{getElementById:element,createElement:tag=>({tag}),documentElement:{dataset:{}}},$:element,map:{getBearing:()=>0,getLayer:()=>true,setPaintProperty(){},setFilter(){},getStyle:()=>({sources:Object.fromEntries(sources)}),getSource:id=>sources.has(id)?{}:undefined,isSourceLoaded:id=>sources.get(id),on(type,fn){if(!handlers.has(type))handlers.set(type,new Set());handlers.get(type).add(fn);},off(type,fn){handlers.get(type)?.delete(fn);}},homeBounds:[[73,17],[135,54]],navigateBounds:async()=>{moved.push(remembered.at(-1));return true;},motionRenderer:{end:async()=>{},loadCountry:async()=>{}},loadChina:async()=>{},saveView(){},controls(){env.syncMapActivity();},cancelNavigation(){},clearHover(){},clearSelection(){},clearSearch(){},syncCountryFills(){},syncLayers(){},updateLabels(){},setMode(){},showPanel(){},refreshStatus(){},saveViewSoon(){},unlockCamera(){env.syncMapActivity();},fitHome:async()=>{},console});
+const env=vm.createContext({pauseMapLabels(){},renderLabels(){},lowMemory:false,phoneCameraQuery:{matches:false},syncGlobe(){},mapScene:{setSnapshot(){},sourceInventory:()=>[...sources.keys()]},provincePopulation:{},AbortController,setTimeout,clearTimeout,allReady:true,quiz:{active:false},registry,atlasesReady:true,atlases:{korea:atlas(koreaWait),mongolia:atlas(mongoliaWait),japan:atlas(Promise.resolve())},provinceFeatures:[],window:{AtlasCountryRenderPipeline:{createCountryRenderPipeline:()=>({beginCountry:()=>1,finishCountry(){},paintFill:async()=>true})},AtlasSettings:{countryFill:()=>"#ddd"},AtlasChinaPage:{closeChinaInfo(){}},AtlasCountryLoader:{createCountryResidency:()=>({ensure:async(id,load)=>load(),activate(){},snapshot:()=>({countries:[]})})},AtlasTheme:{applyAtlasTheme(){}},AtlasEntry:{countries:{china:{en:'China'},korea:{en:'Korea'},mongolia:{en:'Mongolia'},japan:{en:'Japan'}},remember:country=>remembered.push(country)}},AtlasSymbols:{markup:c=>c},document:{getElementById:element,createElement:tag=>({tag}),documentElement:{dataset:{}}},$:element,map:{getBearing:()=>0,getLayer:()=>true,setPaintProperty(){},setFilter(){},getStyle:()=>({sources:Object.fromEntries(sources)}),getSource:id=>sources.has(id)?{}:undefined,isSourceLoaded:id=>sources.get(id),on(type,fn){if(!handlers.has(type))handlers.set(type,new Set());handlers.get(type).add(fn);},off(type,fn){handlers.get(type)?.delete(fn);}},homeBounds:[[73,17],[135,54]],navigateBounds:async()=>{moved.push(remembered.at(-1));return true;},motionRenderer:{end:async()=>{},loadCountry:async()=>{}},loadChina:async()=>{},saveView(){},controls(){env.syncMapActivity();},cancelNavigation(){},clearHover(){},clearSelection(){},clearSearch(){},syncCountryFills(){},syncLayers(){},updateLabels(){},setMode(){},showPanel(){},refreshStatus(){},saveViewSoon(){},unlockCamera(){env.syncMapActivity();},fitHome:async()=>{},console});
 vm.runInContext("let failedCountry=null,recoveringCountry=false,atlasStarting=false,cameraBusy=false,atlasMode='china',countrySwitching=false,countryEpoch=0,requestedCountry,countryPreparation,countryLoadFailed=false,activeCode,southAmerica,southernAfrica,europe,portalLoader,labels=[];"+source.slice(source.indexOf('function waitForCountrySources('),source.indexOf('function regionZoom(')),env);
 vm.runInContext(source.slice(source.indexOf('function syncMapActivity('),source.indexOf('function controls(')),env);
 vm.runInContext(source.slice(source.indexOf('function showLoadFailure('),source.indexOf('function refreshStatus(')),env);
@@ -34,7 +34,7 @@ assert.equal(element('map-activity-label').textContent,'Loading Korea map');
 const mongolia=env.changeAtlas('mongolia');
 assert.equal(element('moving-indicator').hidden,false);
 assert.equal(element('map-activity-label').textContent,'Loading Mongolia map','A superseding destination updates the accessible loading label');
-await flush();assert.equal(moved.length,0,'Country preparation must complete before the camera starts');
+await flush();assert.deepEqual(moved,['mongolia'],'The newest color silhouette can fly while detailed boundaries prepare');
 releaseMongolia();assert.equal(await mongolia,true);assert.deepEqual(moved,['mongolia']);assert.equal(remembered.at(-1),'mongolia');assert.equal(element('moving-indicator').hidden,true,'Hide the symbol after the active switch completes');assert.equal(element('map-shell')['aria-busy'],'false');releaseKorea();assert.equal(await korea,false);assert.equal(remembered.at(-1),'mongolia','Slower earlier requests cannot replace the latest country');
 assert.equal(await env.changeAtlas('china'),true,'Prepared motion data permits switching');
 assert.equal(remembered.at(-1),'china');
@@ -58,14 +58,14 @@ env.window.AtlasDev.allows=()=>true;
 assert.equal(await env.changeAtlas('brazil',true,true),true,'Flight enters the new country through the existing switching lifecycle');
 for(const country of ['uruguay','argentina']){assert.equal(await env.changeAtlas(country),true);assert.equal(remembered.at(-1),country);}
 
-// First visits wait for both boundary preparation and source indexing, not a fixed delay.
+// First visits fly on the silhouette, then wait for indexed detail before activation.
 let releaseCold;
 const cold=new Promise(resolve=>releaseCold=resolve);
 env.atlases.japan={...atlas(cold),warm:async()=>{await cold;sources.set('japan-first',false);}};
 const beforeCold=moved.length,coldSwitch=env.changeAtlas('japan');
-await flush();assert.equal(moved.length,beforeCold);
+await flush();assert.equal(moved.length,beforeCold+1,'The fill flight precedes cold detail loading');
 assert.equal(element('moving-indicator').hidden,false,'Keep the symbol visible while downloading cold boundaries');
-releaseCold();await flush();assert.equal(element('moving-indicator').hidden,false,'Keep the symbol visible while indexing boundary sources');assert.equal(moved.length,beforeCold,'Registering a source is insufficient until the renderer has indexed it');
+releaseCold();await flush();assert.equal(element('moving-indicator').hidden,false,'Keep the symbol visible while indexing boundary sources');assert.equal(moved.length,beforeCold+1,'No second flight occurs while detail sources index');
 sources.set('japan-first',true);emit('sourcedata',{sourceId:'japan-first'});
 assert.equal(await coldSwitch,true);assert.equal(moved.at(-1),'japan');
 assert.equal(handlers.get('sourcedata').size,0,'Readiness listeners are cleaned after success');
@@ -73,9 +73,9 @@ assert.equal(handlers.get('sourcedata').size,0,'Readiness listeners are cleaned 
 // A new destination interrupts source warm-up without waiting for its timeout.
 env.atlases.korea={...atlas(Promise.resolve()),warm:async()=>sources.set('korea-new',false)};
 const beforeCancelled=moved.length,cancelledSwitch=env.changeAtlas('korea');await flush();
-assert.equal(moved.length,beforeCancelled);const replacement=env.changeAtlas('mongolia');
+assert.equal(moved.length,beforeCancelled+1);const replacement=env.changeAtlas('mongolia');
 assert.equal(await cancelledSwitch,false);assert.equal(await replacement,true);
-assert.equal(moved.at(-1),'mongolia');assert.equal(moved.length,beforeCancelled+1);
+assert.equal(moved.at(-1),'mongolia');assert.equal(moved.length,beforeCancelled+2);
 assert.equal(handlers.get('sourcedata').size,0,'Superseding a destination immediately removes its source listeners');
 
 // A source failure returns the visitor to the country they were on and offers a Retry button.
@@ -83,11 +83,11 @@ env.atlases.japan={...atlas(Promise.resolve()),warm:async()=>sources.set('japan-
 const previousCountry=vm.runInContext('atlasMode',env),beforeFailed=moved.length,failedSwitch=env.changeAtlas('japan');await flush();
 emit('error',{sourceId:'japan-failed'});assert.equal(await failedSwitch,false);
 assert.equal(vm.runInContext('atlasMode',env),previousCountry,'The previous country is restored');assert.equal(remembered.at(-1),previousCountry,'Its link is restored');
-assert(moved.slice(beforeFailed).every(country=>country===previousCountry),'The camera never moves to the failed country');
+assert.equal(moved.at(-1),previousCountry,'A failed detail load returns from its silhouette to the previous country');
 assert.equal(element('moving-indicator').hidden,true,'Failed loads clear the symbol so the user can retry');assert.equal(element('map-shell')['aria-busy'],'false');
 assert.equal(element('status').textContent,'Japan could not load. Retry');assert.equal(element('status').hidden,false);
 env.atlases.japan.warm=async()=>{};
-const beforeRetry=moved.length,retrySwitch=env.changeAtlas('japan');await flush();assert.equal(moved.length,beforeRetry,'Retry waits for the existing failed source instead of treating it as a ready country');
+const beforeRetry=moved.length,retrySwitch=env.changeAtlas('japan');await flush();assert.equal(moved.length,beforeRetry+1,'Retry flies on its silhouette while waiting for the existing failed source');
 sources.set('japan-failed',true);emit('sourcedata',{sourceId:'japan-failed'});assert.equal(await retrySwitch,true);assert.equal(moved.at(-1),'japan');
 assert.equal(handlers.get('sourcedata').size,0);assert.equal(handlers.get('error').size,0);
 
@@ -96,7 +96,7 @@ sources.set('korea-new',true);
 env.atlases.korea={...atlas(Promise.resolve()),warm:async()=>{sources.set('korea-preview-motion',false);sources.set('japan-unrelated',false);}};
 assert.equal(await env.changeAtlas('korea'),true);assert.equal(moved.at(-1),'korea');
 const cachedCount=moved.length;assert.equal(await env.changeAtlas('korea'),true);assert.equal(moved.length,cachedCount);
-console.log('First-visit source preparation precedes movement; stale warm-ups cancel immediately; failed sources preserve the camera; cached countries and optional previews remain fast.');
+console.log('First-visit silhouette flights precede detailed activation; stale warm-ups cancel immediately; failed sources restore the previous view; cached countries and optional previews remain fast.');
 
 // China also waits for its detailed district source, whose name is plural.
 const chinaSources=['provinces','prefectures','others','city-districts','city-district-boundaries'];

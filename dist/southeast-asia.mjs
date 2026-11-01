@@ -6,6 +6,7 @@ import {createPlaceSearch} from './place-search.mjs';
 import {setLayerVisible,lineSourceOptions,adaptiveOpacity} from './adaptive-lines.mjs';
 import {malaysiaFlags} from './malaysia-flags.mjs';
 import {renderStatistics,clearStatistics} from './statistics.mjs';
+import {cameraSettled} from './interaction-policy.mjs';
 import {legacyStylingActive} from './settings.mjs';
 import {singaporeLabel,readSingaporeLanguage,singaporeLanguages} from './singapore-languages.mjs';
 
@@ -39,7 +40,7 @@ export async function addCountryPortal(map,host,country){
  cards:`<div id="${prefix}-selection-meta" class="country-card-anchor" hidden></div>`,
  subdivisions:`<details id="${prefix}-subdivisions" hidden><summary id="${prefix}-child-summary">${isMalaysia?'Districts':'Planning areas'}</summary><div id="${prefix}-children" class="archipelago-children"></div></details>`,
 
- footer:`<a href="${base+country}-sources.json" target="_blank" rel="noopener">Sources & coverage</a><span>Created by Ethan Hu</span>`,
+ footer:`<a href="${base+country}-sources.json" target="_blank" rel="noopener">Sources & coverage</a>`,
  extraPanels:``,
  afterPanels:`<p id="${prefix}-detail-status" role="status" hidden></p><button id="${prefix}-retry" class="quiet-button" hidden>Retry boundaries</button>`
 });
@@ -83,13 +84,15 @@ export async function addCountryPortal(map,host,country){
   for(const {layers,level,borders} of installed.values()){const detail=level===2,show=active&&(!detail||mode===2&&scope===detailScope);visible(layers[0],show);visible(layers[1],show&&(detail?$('second-layer').checked:$('province-layer').checked));visible(layers[2],show);const id=selected?.level===level?selected.id:'';map.setFilter(layers[2],['==',['get','id'],id]);map.setPaintProperty(layers[0],'fill-color',['case',['==',['get','id'],selected?.id||''],tone().selected,tone().fill]);}
   visible(country+'-portal-fill',window.AtlasDev.allows(country)&&!active);host.syncAppearance?.();updateLabels();
  }
- function updateLabels(){if(firstQuiz?.active){clearLabels();firstQuiz.labels();return;}if(!active||!ready||host.isMoving?.()||map.isMoving())return;clearLabels();if(!$('label-layer').checked)return;const b=map.getBounds(),list=catalogue.records.filter(r=>(r.level===1&&!(mode===2&&r.id===scope)||mode===2&&r.parent===scope&&r.level===2)&&r.center[0]>=b.getWest()&&r.center[0]<=b.getEast()&&r.center[1]>=b.getSouth()&&r.center[1]<=b.getNorth());labels=window.AtlasLabels.render(map,list.map(r=>({...r,selected:r===selected,...(!isMalaysia?{lines:[name(r)],lang:language}:{})})),'korea-marker');}
+ function updateLabels(){
+  if(globalThis.AtlasRenderPipeline&&!globalThis.AtlasRenderPipeline.labelsReady)return;if(firstQuiz?.active){clearLabels();firstQuiz.labels();return;}if(!active||!ready||host.isMoving?.()||map.isMoving())return;clearLabels();if(!$('label-layer').checked)return;const b=map.getBounds(),list=catalogue.records.filter(r=>(r.level===1&&!(mode===2&&r.id===scope)||mode===2&&r.parent===scope&&r.level===2)&&r.center[0]>=b.getWest()&&r.center[0]<=b.getEast()&&r.center[1]>=b.getSouth()&&r.center[1]<=b.getNorth());labels=window.AtlasLabels.render(map,list.map(r=>({...r,selected:r===selected,...(!isMalaysia?{lines:[name(r)],lang:language}:{})})),'korea-marker');}
  function setMode(value=mode,automatic=false){if(automatic&&document.getElementById('mode-lock').getAttribute('aria-pressed')==='true')value=mode;mode=value===2?2:1;for(const [id,text] of [['mode-province',isMalaysia?'States':'Regions'],['mode-prefecture',isMalaysia?'Districts':'Planning areas']]){document.getElementById(id).textContent=text;document.getElementById(id).hidden=false;}document.getElementById('mode-lock').hidden=false;document.getElementById('mode-province').setAttribute('aria-pressed',String(mode===1));document.getElementById('mode-prefecture').setAttribute('aria-pressed',String(mode===2));document.getElementById('map-hint').textContent=mode===2&&scope?'Select a '+(isMalaysia?'district':'planning area'):'Select a '+(isMalaysia?'state or federal territory':'region');sync();if(mode===2&&scope)return loadDetail();}
  function message(text,retry=false){$('detail-status').textContent=text;$('detail-status').hidden=!text;$('retry').hidden=!retry;}
  async function loadDetail(){
   if(!active||mode!==2||!scope||detailScope===scope)return;
   const chunk=catalogue.chunks[scope],token=++detailEpoch,target=scope;cancel();remove(country+'-second');detailScope=null;
   if(!chunk){message('');sync();return;}
+  if(!await cameraSettled(map,{isMoving:()=>host.isMoving?.(),current:()=>active&&token===detailEpoch&&scope===target}))return;
   message('Loading '+(isMalaysia?'district':'planning-area')+' boundaries…');
   try{const blob=await prepare(chunk.file);if(!active||token!==detailEpoch||scope!==target||mode!==2)return;install(country+'-second',blob,2);if(!await indexed(country+'-second',token)){if(!active||token!==detailEpoch)return;remove(country+'-second');throw Error('District rendering failed');}detailScope=target;message('');sync();}
   catch(error){if(error.name!=='AbortError'&&active&&token===detailEpoch)message((isMalaysia?'District':'Planning-area')+' boundaries could not load.',true);}
@@ -102,7 +105,7 @@ export async function addCountryPortal(map,host,country){
   if(isMalaysia){$('province').value=scope;const flag=malaysiaFlags[scope];$('flag-source').hidden=!flag;if(flag){$('flag-source').href=flag.page;$('flag-source').title=flag.credit+' · '+flag.license;$('division-flag').src=flag.file;$('division-flag').alt='Flag of '+index.get(scope).en;}$('subdivisions').hidden=!children.length;setSubdivisionHeading($('child-summary'),'Districts',children.length);$('children').replaceChildren();for(const child of children){const button=document.createElement('button');button.type='button';button.className='search-result';button.textContent=child.en;button.onclick=()=>select(child);$('children').append(button);}}
   if(!isMalaysia){$('province').value=scope;$('subdivisions').hidden=!children.length;setSubdivisionHeading($('child-summary'),'Planning areas',children.length);$('children').replaceChildren();for(const child of children){const button=document.createElement('button');button.type='button';button.className='search-result';button.dataset.region=child.id;button.textContent=name(child);button.onclick=()=>select(child);$('children').append(button);}}
   $('tab-explore').hidden=false;panel('explore');sidebar.querySelector('.sidebar-scroll').scrollTop=0;setRegionBreadcrumb(record,r=>{const p=index.get(r.parent);return p?.level>0?p:null;},name,select);document.getElementById('map-shell').dataset.selected='true';if(!isMalaysia)selectionNames();
-  await setMode(catalogue.chunks[scope]?2:1,true);if(epoch!==selectionEpoch||!active)return;if(fit)await host.fit(record.bounds,record.level===2?13:12,camera);
+  const moving=fit?host.fit(record.bounds,record.level===2?13:12,camera):null;await setMode(catalogue.chunks[scope]?2:1,true);if(epoch!==selectionEpoch||!active)return;await moving;
  }
  async function reset(fit=true,camera={}){clearStatistics($('selection-meta'));selected=null;scope=null;selectionEpoch++;detailEpoch++;cancel();remove(country+'-second');detailScope=null;message('');$('province').value='';$('tab-explore').hidden=true;panel('layers');document.getElementById('breadcrumb-region').hidden=true;document.getElementById('map-shell').dataset.selected='false';setMode(1,true);if(fit)await host.fit(c.bounds,isMalaysia?8:12,camera);}
  async function warm(){if(ready)return;if(warming)return warming;const token=generation;const job=(async()=>{catalogue??=await loadCompressed(base+country+'-catalogue.bin');if(token!==generation)throw new DOMException('Country changed','AbortError');index.clear();catalogue.records.forEach(r=>index.set(r.id,r));search??=createPlaceSearch(catalogue.records);populateRegions();const blob=await prepare(country+'-first.bin');if(token!==generation)throw new DOMException('Country changed','AbortError');install(country+'-first',blob,1);ready=true;})().finally(()=>{if(warming===job)warming=null;});warming=job;return job;}

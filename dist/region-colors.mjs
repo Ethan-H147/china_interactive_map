@@ -1,6 +1,6 @@
 import {metadata} from './inline-typography.mjs';
 import {onMapHover} from './pointer-performance.mjs';
-import {getMapScene} from './map-scene.mjs';
+import {getMapScene,sceneLayers} from './map-scene.mjs';
 import {countryColorData,colorMetrics,colorLabels,colorLayerProfile} from './region-color-data.mjs';
 export const shadePalette=['#e3eee9','#c7e2d8','#a5d2c8','#7bb9b1','#529ca4','#367b8d','#285675'];
 export const missingColor='#d6d5cf';
@@ -78,7 +78,7 @@ export function createRegionColors(map,host={}){
   for(const url of urls.keys()){const a=el('a',new URL(url,location.href).hostname);a.href=url;a.target='_blank';a.rel='noopener';notes.append(a);}
  }
  function sync(){
-  scheduled=false;const layers=map.getStyle()?.layers||[];refreshScale(layers);const enabled=!suspended&&key!=='none'&&scale;
+  scheduled=false;const layers=sceneLayers(map);refreshScale(layers);const enabled=!suspended&&key!=='none'&&scale;
   hoverProfiles=new Map(enabled?layers.filter(l=>colorLayerProfile(l,country)&&l.layout?.visibility!=='none').map(l=>[l.id,colorLayerProfile(l,country)]):[]);
   const primary=layers.find(l=>colorLayerProfile(l,country)?.primary&&!l.id.endsWith('-motion'));
   const primaryEntry=primary&&styles.get(primary.id),primaryCurrent=primary&&((getMapScene(map)?.basePaint(primary.id,'fill-opacity')??map.getPaintProperty(primary.id,'fill-opacity'))??1);

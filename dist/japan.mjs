@@ -39,7 +39,7 @@ export async function addJapanPortal(map,host){
  cards:`<div id="j-selection-meta" class="country-card-anchor" hidden></div><section id="j-population" class="population"><h3>Population</h3><p id="j-population-total" class="population-total"></p><p id="j-population-scope" class="population-scope"></p><p id="j-population-period" class="population-period"></p><a id="j-population-source" target="_blank" rel="noopener">Population source</a></section><p id="j-boundary-note" class="coverage-note" hidden></p><section id="j-capital-card" hidden><h3>Capital</h3><p id="j-capital"></p></section>`,
  subdivisions:`<details id="j-subdivisions" hidden><summary id="j-subdivision-summary">Municipalities</summary><label class="sr-only" for="j-child-filter">Filter local places</label><input id="j-child-filter" type="search" placeholder="Filter local places"><div id="j-children"></div><button id="j-children-more" class="quiet-button" hidden>Show more</button></details>`,
  actions:`<button id="j-compare-place" type="button" class="quiet-button">Compare this region</button><nav class="region-articles"><a id="j-article" target="_blank" rel="noopener">Wikipedia · English</a><a id="j-article-local" target="_blank" rel="noopener">日本語</a></nav>`,
- footer:`<button id="j-compare-open" type="button">Compare regions</button><a href="data/japan-local-source.json" target="_blank" rel="noopener">Sources & coverage</a><span>Created by Ethan Hu</span>`,
+ footer:`<button id="j-compare-open" type="button">Compare regions</button><a href="data/japan-local-source.json" target="_blank" rel="noopener">Sources & coverage</a>`,
  extraPanels:``,
  afterPanels:`<p id="j-detail-status" role="status" hidden></p><button id="j-retry" class="quiet-button" hidden>Retry boundaries</button>`
 });
@@ -55,6 +55,7 @@ export async function addJapanPortal(map,host){
  const detailMessage=(text,retry=false)=>{$('detail-status').textContent=text;$('detail-status').hidden=!text;$('retry').hidden=!retry;};
  const wardScope=()=>selected?.level===3?selected.parent:selected?.kind==='Designated city'?selected.id:null;
  function updateLabels(){
+  if(globalThis.AtlasRenderPipeline&&!globalThis.AtlasRenderPipeline.labelsReady)return;
   if(!active||!ready||host.isMoving?.()||map.isMoving())return;clearLabels();if(!$('label-layer').checked)return;
   const b=map.getBounds(),inside=p=>p.center[0]>=b.getWest()&&p.center[0]<=b.getEast()&&p.center[1]>=b.getSouth()&&p.center[1]<=b.getNorth(),city=wardScope();
   let candidates=[...index.values()].filter(p=>mode===2&&scope?p.level===2&&p.parent===scope&&p.id!==city||p.level===3&&p.parent===city:p.level===1).filter(inside);

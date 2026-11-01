@@ -2000,5 +2000,26 @@
  "innerMongoliaSeams": {
   "source": "inner-mongolia-seams.json",
   "method": "Affected counties follow their reconciled prefecture outlines, with original internal shared edges retained and small residual border gaps assigned to the nearest adjacent county."
+ },
+ "shanxiProvinceSeams": {
+  "source": "shanxi-province-seams.json",
+  "method": "Affected counties clipped to the reconciled prefecture, with residual local gaps assigned to adjoining counties. Original names, identifiers, population values and unaffected geometry retained.",
+  "parents": [
+   610500,
+   610600,
+   610800,
+   410300,
+   410500,
+   410700,
+   410800,
+   411200,
+   140400,
+   140500,
+   140800,
+   140900,
+   141000,
+   141100
+  ],
+  "counties": 162
  }
 }

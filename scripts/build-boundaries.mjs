@@ -1,3 +1,4 @@
+import {reconcileShanxiFeatures} from './shanxi-seams.mjs';
 import {reconcileRemainingFeatures} from './remaining-seams.mjs';
 import {reconcileLangfangFeatures} from './langfang-seams.mjs';
 import {reconcileInnerMongoliaFeatures} from './inner-mongolia-seams.mjs';
@@ -95,6 +96,7 @@ fs.writeFileSync(new URL('western-province-seams.json',root),JSON.stringify({met
 const innerMongolia=await reconcileInnerMongoliaFeatures(features);features=innerMongolia.features;
 fs.writeFileSync(new URL('inner-mongolia-seams.json',root),JSON.stringify({method:'Full Inner Mongolia border reconciliation before province unions and shared meshes.',arcs:innerMongolia.reports,junctionCollars:innerMongolia.collars,secondaryArcs:innerMongolia.secondaryArcs},null,2)+'\n');
 const langfang=await reconcileLangfangFeatures(features);features=(await reconcileRemainingFeatures(langfang.features)).features;
+const shanxi=await reconcileShanxiFeatures(features);features=shanxi.features;fs.writeFileSync(new URL('shanxi-province-seams.json',root),JSON.stringify({method:'Complete shared Shanxi–Shaanxi and Shanxi–Henan edges; all layers share the same reference.',source:'scripts/boundary-sources/shanxi-seams/manifest.json',arcs:shanxi.reports},null,2)+'\n');
 fs.writeFileSync(new URL('langfang-seams.json',root),JSON.stringify({method:'Full shared Langfang/Beijing/Tianjin arc reconciliation before province unions and shared meshes.',arcs:langfang.reports},null,2)+'\n');
 const topo=topology({regions:{type:'FeatureCollection',features}});
 const regions=topo.objects.regions;

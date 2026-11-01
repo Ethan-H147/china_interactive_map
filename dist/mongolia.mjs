@@ -17,7 +17,7 @@ export async function addMongoliaPortal(map,host){
  document.querySelector('.workspace').insertBefore(sidebar,document.getElementById('map-shell'));document.body.append(dialog);
  const $=id=>document.getElementById('m-'+id),index=new Map(),layerIds=[],urls=[];
  let data,ready=false,active=false,loading,selected=null,hovered=null,mode=1,labels=[],portalClick=null;
- const subdivisionScope=createSubdivisionScope(map,'mongolia',{changed(){if(ready){if(selected)state(selected,{selected:true});sync();}}});
+ const subdivisionScope=createSubdivisionScope(map,'mongolia',{isMoving:()=>host.isMoving?.(),changed(){if(ready){if(selected)state(selected,{selected:true});sync();}}});
   const name=p=>p.en+(p.mn?' · '+p.mn:'');
  function show(id,visible){setLayerVisible(map,id,visible);}
  function state(f,value){if(!f)return;const source='mongolia-'+(f.properties.level===1?'first':'second');for(const id of [source,source+'-selection-edges'])window.AtlasMotion.setFeatureState(map,{source:id,id:f.properties.id},value);}
@@ -52,6 +52,7 @@ export async function addMongoliaPortal(map,host){
  function viewParent(camera={}){return selected?.properties.level===2?select(index.get(selected.properties.parent),true,camera):reset(camera);}
  let labelFrame;
 function updateLabels(){
+  if(globalThis.AtlasRenderPipeline&&!globalThis.AtlasRenderPipeline.labelsReady)return;
  if(labelFrame!==undefined)return;
  labelFrame=requestAnimationFrame(()=>{labelFrame=undefined;renderLabels();});
 }

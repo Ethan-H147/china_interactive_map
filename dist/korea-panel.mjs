@@ -21,7 +21,7 @@ export const koreaPanel=`<aside id="korea-sidebar" class="sidebar korea-sidebar"
  cards:`<div id="k-selection-meta" class="country-card-anchor" hidden></div>`,
  subdivisions:`<details id="k-subdivisions" open><summary id="k-subdivisions-title">Subdivisions</summary><div id="k-region-list"></div></details>`,
  actions:`<button id="k-compare-place" class="quiet-button" type="button">Compare this region</button>`,
- footer:`<button id="k-compare-open" type="button">Compare regions</button><button id="k-about-open">Sources &amp; coverage</button><span class="creator-credit">Created by Ethan Hu</span>`,
+ footer:`<button id="k-compare-open" type="button">Compare regions</button><button id="k-about-open">Sources &amp; coverage</button>`,
  extraTabs:`<button id="k-tab-extra" type="button" aria-pressed="false" aria-controls="k-extra-panel">Extra info</button>`,
  extraPanels:koreaInfoPanel,
  afterPanels:``,

@@ -18,7 +18,7 @@ export function createKoreaAtlas(map,host){
  const $=id=>document.getElementById('k-'+id)||document.getElementById(id);
 let data,ready=false,active=false,loading=null,selected=null,hovered=null,mode=1,scope='',labels=[];
 const index=new Map();
- const subdivisionScope=createSubdivisionScope(map,'korea',{changed(){if(ready){if(selected)state(selected,{selected:true});syncLayers();}}});
+ const subdivisionScope=createSubdivisionScope(map,'korea',{isMoving:()=>host.isMoving?.(),changed(){if(ready){if(selected)state(selected,{selected:true});syncLayers();}}});
 const sourceUrls=[];
 function showLayer(id,visible){setLayerVisible(map,id,visible);}
 const nativeName=p=>p.ko+(p.hanja?' · '+p.hanja:'');
@@ -62,6 +62,7 @@ function syncLayers(){
 }
 let labelFrame;
 function updateLabels(){
+  if(globalThis.AtlasRenderPipeline&&!globalThis.AtlasRenderPipeline.labelsReady)return;
  if(labelFrame!==undefined)return;
  labelFrame=requestAnimationFrame(()=>{labelFrame=undefined;renderLabels();});
 }
