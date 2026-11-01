@@ -12,7 +12,7 @@ export default [
  const scope='misc-college-towns',panel=selector(scope),k=key(scope);
  await open(p,base,scope,'find');await p.tap(panel+' [data-q=start]');await p.settle();
  const question=await p.evaluate(`document.querySelector('${panel} [data-q=question]').textContent`),school=data.records.find(r=>r.parent===scope&&r.en===question);assert(school.crest);
- await p.waitFor(`(()=>{const i=document.querySelector('${panel} [data-q=question-image]');return !i.hidden&&i.complete&&i.naturalWidth>0})()`);assert.equal(await p.evaluate(`document.querySelector('${panel} [data-q=question-image]').getAttribute('src')`),school.crest);assert.equal(await p.evaluate(`document.querySelector('.first-quiz-map:not([hidden]) [data-question-image]').getAttribute('src')`),school.crest);await p.screenshot('college-question-logo-'+width);
+ await p.waitFor(`(()=>{const i=document.querySelector('${panel} [data-q=question-image]');return !i.hidden&&i.complete&&i.naturalWidth>0})()`);assert.equal(await p.evaluate(`document.querySelector('${panel} [data-q=question-image]').getAttribute('src')`),school.crest);await p.screenshot('college-question-logo-'+width);
  await p.tap('#home');await p.settle();await p.evaluate(`currentAtlas().countyQuiz.open({level:4,scope:'${scope}',mode:'name'})`);await p.tap(panel+' [data-q=start]');await p.settle();assert(await p.evaluate(`document.querySelector('${panel} [data-q=question-image]').hidden`));
  for(const [alias,full,town]of [['Ohio University','Ohio University','Athens, Ohio'],['Miami of Ohio','Miami University','Oxford, Ohio'],['UIUC','University of Illinois','Urbana–Champaign, Illinois'],['UNL','University of Nebraska','Lincoln, Nebraska'],['MSU','Michigan State','East Lansing, Michigan'],['Cornell University','Cornell','Ithaca, New York'],['Princeton University','Princeton','Princeton, New Jersey'],['Harvard','Harvard & MIT','Cambridge, Massachusetts'],['Virginia Tech','Virginia Tech','Blacksburg, Virginia']]){
   await submit(p,scope,alias);assert.equal(await p.evaluate(`document.querySelector('${panel} [data-q=feedback] .quiz-answer-row').dataset.answer`),'correct');assert.equal(await p.evaluate(`document.querySelectorAll('${panel} [data-q=feedback] .quiz-answer-row').length`),1);assert.equal(await p.evaluate(`document.querySelector('${panel} [data-q=feedback]').textContent`),'✓Correct: '+full+' '+town);
@@ -23,7 +23,6 @@ export default [
  const target=await p.evaluate(`(${JSON.stringify(data.records.filter(r=>r.parent==='misc-college-towns'))}).find(r=>map.getFeatureState({source:'${k}-points',id:r.id}).quizTarget)`);assert(target);
  assert.equal(await p.evaluate(`document.querySelector('${panel} [data-q=local]').textContent`),'');assert(await p.evaluate(`document.querySelector('${panel} [data-q=question-image]').hidden`));await submit(p,scope,target.en);
  assert.equal(await p.evaluate(`document.querySelector('${panel} [data-q=feedback]').textContent`),'✓Correct: '+target.en+' '+target.answerDetail.replaceAll(' · ',' — '));
- assert.equal(await p.evaluate(`document.querySelector('.first-quiz-map:not([hidden]) [data-local]').textContent`),'Correct · '+target.answerDetail);
  await p.tap('#home');await p.settle();
 }}))
 

@@ -49,10 +49,15 @@
   .map-breadcrumb:has(#breadcrumb-region[hidden]) { padding-right: 3px; }
   /* Three or more levels: show the current one; the full list opens vertically. */
   .map-mode[data-collapsed-levels]:not([data-open]) button[aria-pressed="false"]:not(#mode-lock) { display: none; }
-  .map-mode[data-collapsed-levels]:not([data-open]) button[aria-pressed="true"]::after {
+  .map-mode[data-collapsed-levels]:not([data-open]) button[aria-pressed="true"]:not(#mode-lock)::after {
     content: ""; display: inline-block; width: 6px; height: 6px; margin-left: 9px;
     border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: translateY(-3px) rotate(45deg);
   }
+  /* An invisible system picker over the current level opens the native list on a tap
+     (mobile-sheet.mjs places it). 16px text keeps Safari from zooming in. */
+  .map-mode[data-collapsed-levels] { position: relative; }
+  .level-picker { position: absolute; z-index: 1; margin: 0; padding: 0; border: 0; opacity: 0; font-size: 16px; appearance: none; cursor: pointer; }
+  .level-picker[hidden] { display: none; }
   .map-mode[data-collapsed-levels][data-open] { flex-direction: column; align-items: stretch; gap: 2px; }
   .map-mode[data-collapsed-levels][data-open] button { min-height: 44px; text-align: left; }
   .map-mode[data-collapsed-levels][data-open] #mode-lock { display: none; }
@@ -62,7 +67,7 @@
   .map-actions button { width: 44px; height: 44px; }
   /* Liquid glass: the header pill, its round buttons, the globe circle and the zoom pill
      blur and brighten the map beneath them, with a light rim and a top highlight. */
-  html body .site-header :is(h1, .surprise, .settings-open, .account-open), html body .globe-toggle, html body .map-actions {
+  html body .site-header :is(h1, .surprise, .settings-open, .account-open), html body .globe-toggle, html body .map-actions, html body .map-shell[data-quiz=true] #home {
     border: 1px solid rgba(255, 255, 255, .7);
     background: linear-gradient(180deg, rgba(255, 255, 255, .16), rgba(255, 255, 255, .02) 50%, rgba(255, 255, 255, .08));
     box-shadow: inset 0 1px 1px rgba(255, 255, 255, .95), inset 0 -1px 1px rgba(255, 255, 255, .45), inset 0 0 10px rgba(255, 255, 255, .25), 0 0 0 .5px rgba(48, 44, 39, .1), 0 6px 18px rgba(23, 32, 25, .1);
@@ -94,6 +99,17 @@
   html[data-sheet="peek"] .sidebar[data-quiz-peek] .sidebar-scroll { visibility: visible; }
   /* With no prompt over the map, the controls keep their usual place during a quiz. */
   .map-shell[data-quiz=true] .map-side { bottom: 44px; }
+  /* During a quiz the header gives way to one round close button where it stood. */
+  body:has(.map-shell[data-quiz=true]) .site-header { display: none; }
+  .map-shell[data-quiz=true] .map-top { top: max(8px, calc(env(safe-area-inset-top, 0px) + 2px)); }
+  html[data-sheet="full"] .map-shell[data-quiz=true] .map-top { visibility: visible; }
+  .map-shell[data-quiz=true] .map-breadcrumb { padding: 0; border: 0; background: none; box-shadow: none; }
+  .map-shell[data-quiz=true] #home { position: relative; width: 48px; height: 48px; padding: 0; border-radius: 50%; font-size: 0; color: var(--ink); }
+  .map-shell[data-quiz=true] #home::before, .map-shell[data-quiz=true] #home::after {
+    content: ""; position: absolute; left: 50%; top: 50%; width: 18px; height: 2px; border-radius: 1px; background: currentColor;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  .map-shell[data-quiz=true] #home::after { transform: translate(-50%, -50%) rotate(-45deg); }
   /* A map too short for the whole stack (set by mobile-sheet.mjs). */
   html[data-controls] .map-actions :is(#zoom-lock, #fit-map) { display: none; }
   html[data-controls="none"] .map-side { display: none; }

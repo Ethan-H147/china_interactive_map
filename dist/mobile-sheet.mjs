@@ -28,7 +28,9 @@ function heights() {
   aside?.toggleAttribute('data-quiz-peek', quiz > 0);
   const peek = Math.round((handle?.offsetHeight || 26) + (quiz || (tools?.offsetHeight ?? 120) + 14) + safeBottom);
   // An open keyboard takes the bottom of the screen; the sheet sits on top of it.
-  const room = screenHeight() - keyboard, headerBottom = document.querySelector('.site-header')?.getBoundingClientRect().bottom ?? 60;
+  // A quiz hides the header; its close button then marks the top of the free space.
+  const header = document.querySelector('.site-header'), top = header?.getClientRects().length ? header : document.querySelector('.map-top');
+  const room = screenHeight() - keyboard, headerBottom = top?.getBoundingClientRect().bottom ?? 60;
   const full = Math.max(80, room - headerBottom - 12);
   return {peek: Math.min(peek, full), half: Math.min(full, Math.max(peek, Math.round(room * .48))), full};
 }
@@ -186,14 +188,35 @@ function placeBelowHeader() {
 }
 new ResizeObserver(placeBelowHeader).observe(document.querySelector('.site-header'));
 // Three or more levels do not fit beside the breadcrumb on a phone: the toggle shows
-// the current level, tapping it lists every level vertically, and a choice closes it.
+// the current level, and tapping it opens the system picker over that button. (Keyboard
+// focus on the button itself still lists every level vertically.)
 const levelToggle = document.querySelector('.map-mode');
 const levels = () => [...levelToggle.querySelectorAll('button')].filter(b => b.id !== 'mode-lock' && !b.hidden);
+const levelPicker = document.createElement('select');
+levelPicker.className = 'level-picker'; levelPicker.tabIndex = -1; levelPicker.setAttribute('aria-hidden', 'true');
+levelPicker.addEventListener('change', () => {
+  const button = document.getElementById(levelPicker.value);
+  if (!button || button.getAttribute('aria-pressed') === 'true') return;
+  // An open list lets the click through to the level's own handler.
+  levelToggle.setAttribute('data-open', ''); button.click();
+});
+let pickerKey = '';
 function syncLevels() {
   if (!levelToggle) return;
   const collapse = query.matches && (levels().length > 2 || !document.getElementById('map-view')?.hidden && levels().length > 1);
   levelToggle.toggleAttribute('data-collapsed-levels', collapse);
-  if (!collapse) levelToggle.removeAttribute('data-open');
+  if (!collapse) { levelToggle.removeAttribute('data-open'); levelPicker.remove(); pickerKey = ''; return; }
+  const list = levels(), current = list.find(b => b.getAttribute('aria-pressed') === 'true');
+  // Rebuilding only on a real change keeps the picker's own edits from re-triggering the observer.
+  const key = list.map(b => b.id + '=' + b.textContent.trim()).join('|');
+  if (key !== pickerKey) { pickerKey = key; levelPicker.replaceChildren(...list.map(b => new Option(b.textContent.trim(), b.id))); }
+  if (levelPicker.parentElement !== levelToggle) levelToggle.append(levelPicker);
+  if (current) {
+    levelPicker.value = current.id;
+    Object.assign(levelPicker.style, {left: current.offsetLeft + 'px', top: current.offsetTop + 'px', width: current.offsetWidth + 'px', height: current.offsetHeight + 'px'});
+  }
+  const hide = !current || levelToggle.hasAttribute('data-open');
+  if (levelPicker.hidden !== hide) levelPicker.hidden = hide;
 }
 document.addEventListener('click', event => {
   const button = event.target.closest?.('.map-mode[data-collapsed-levels] button');
@@ -203,7 +226,7 @@ document.addEventListener('click', event => {
   levelToggle.setAttribute('data-open', '');
 }, true);
 document.addEventListener('pointerdown', event => { if (levelToggle?.hasAttribute('data-open') && !event.target.closest('.map-mode')) levelToggle.removeAttribute('data-open'); });
-if (levelToggle) new MutationObserver(syncLevels).observe(document.getElementById('map-selection')||levelToggle, {subtree: true, attributes: true, attributeFilter: ['hidden']});
+if (levelToggle) new MutationObserver(syncLevels).observe(document.getElementById('map-selection')||levelToggle, {subtree: true, childList: true, characterData: true, attributes: true, attributeFilter: ['hidden', 'aria-pressed', 'data-open']});
 query.addEventListener('change', syncLevels);
 syncLevels();
 
@@ -222,6 +245,7 @@ function fitKeyboard() {
   root.style.setProperty('--keyboard-inset', open + 'px');
   root.toggleAttribute('data-keyboard', open > 0);
   apply(state);
+  dispatchEvent(new CustomEvent('atlas-keyboard', {detail: {open: open > 0}}));
 }
 viewport?.addEventListener('resize', fitKeyboard);
 viewport?.addEventListener('scroll', fitKeyboard);
@@ -238,14 +262,21 @@ export function navigationInset() { return query.matches ? heights().half + 16 :
 export function navigationPadding({selection=false}={}) {
   if (!query.matches) return null;
   const map = document.getElementById('map').getBoundingClientRect();
-  const header = document.querySelector('.site-header').getBoundingClientRect();
+  const header = document.querySelector('.site-header').getBoundingClientRect(); // empty while a quiz hides it
   const controls = document.querySelector('.map-top')?.getBoundingClientRect();
   const top = Math.max(header.bottom, controls?.bottom || 0) - map.top + 18;
   const bottom = heights()[selection ? 'half' : 'peek'] + 22;
-  const left = Math.max(18, header.left - map.left + 6), right = Math.max(18, map.right - header.right + 6);
+  const left = header.width ? Math.max(18, header.left - map.left + 6) : 18, right = header.width ? Math.max(18, map.right - header.right + 6) : 18;
   return {left, right, top:Math.min(top,map.height-bottom-40), bottom:Math.min(bottom,map.height*.6)};
 }
 export function expand(){if(query.matches)apply('half');}
+// The strip of map left between the top controls and the sheet (with any keyboard under it),
+// as top and bottom insets of the full-screen map.
+export function mapArea(){
+ if(!query.matches)return null;
+ const header=document.querySelector('.site-header'),top=header?.getClientRects().length?header:document.querySelector('.map-top');
+ return {top:Math.round((top?.getBoundingClientRect().bottom??0)+8),bottom:Math.round(keyboard+parseFloat(root.style.getPropertyValue('--sheet-height')||0))};
+}
 
 // A map quiz can make room for its inset maps while its question stays over the map.
 export async function collapse(){
