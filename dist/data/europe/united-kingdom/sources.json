@@ -423,7 +423,7 @@
       "bytes": 565922
     }
   ],
-  "settlementCoverage": "All Ordnance Survey Open Names cities, towns, villages, hamlets and other settlements in Great Britain, supplemented by OSNI towns/villages and GeoNames populated places in Northern Ireland. No population cutoff for named places; suburban-area-only names, historical/deserted places and individual properties are excluded. Census populations remain attached to their whole statistical areas; newly added named places have no inferred population.",
+  "settlementCoverage": "All Ordnance Survey Open Names cities, towns, villages, hamlets and other settlements in Great Britain, supplemented by OSNI towns/villages and GeoNames populated places in Northern Ireland. No population cutoff for named places; suburban-area-only names, historical/deserted places and individual properties are excluded. Census populations remain attached to their whole statistical areas. Named places take the census count of a smaller official settlement of the same name within 3 km (ONS 2022 built-up areas, NRS 2022 and NISRA settlements), or of a namesake parish or Welsh community without any built-up area within 5 km; other named places have no inferred population.",
   "settlementSources": [
     {
       "id": "os-open-names",
@@ -449,6 +449,19 @@
       "url": "https://download.geonames.org/export/dump/GB.zip",
       "license": "CC BY 4.0",
       "credit": "GeoNames geographical database. No population values imported."
+    },
+    {
+      "id": "ons-small-place-census2021",
+      "title": "ONS Census 2021 usual residents (TS001) by output area, with the OA21 to BUA22 and OA21 to PAR22 best-fit lookups",
+      "url": "https://www.nomisweb.co.uk/datasets/c2021ts001",
+      "lookups": [
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA21_BUA22_LAD22_RGN22_EW_LU",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OAs_2021_to_Civil_Parish_and_Non_Civil_Parished_Areas_to_LTLA_to_UTLA_to_Re_2022",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/Parishes_and_Non_Civil_Parished_Areas_December_2022_EW_BSC_V3"
+      ],
+      "license": "Open Government Licence v3.0",
+      "credit": "Source: Office for National Statistics licensed under the Open Government Licence v3.0. Contains OS data © Crown copyright and database right 2022.",
+      "description": "Counts for built-up areas omitted from the towns tables and for parishes and Welsh communities. Smaller NRS and NISRA settlements reuse the retained statistical sources."
     }
   ]
 }

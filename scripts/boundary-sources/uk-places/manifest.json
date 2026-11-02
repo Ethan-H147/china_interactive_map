@@ -26,6 +26,19 @@
       "url": "https://download.geonames.org/export/dump/GB.zip",
       "license": "CC BY 4.0",
       "credit": "GeoNames geographical database. No population values imported."
+    },
+    {
+      "id": "ons-small-place-census2021",
+      "title": "ONS Census 2021 usual residents (TS001) by output area, with the OA21 to BUA22 and OA21 to PAR22 best-fit lookups",
+      "url": "https://www.nomisweb.co.uk/datasets/c2021ts001",
+      "lookups": [
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OA21_BUA22_LAD22_RGN22_EW_LU",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/OAs_2021_to_Civil_Parish_and_Non_Civil_Parished_Areas_to_LTLA_to_UTLA_to_Re_2022",
+        "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/Parishes_and_Non_Civil_Parished_Areas_December_2022_EW_BSC_V3"
+      ],
+      "license": "Open Government Licence v3.0",
+      "credit": "Source: Office for National Statistics licensed under the Open Government Licence v3.0. Contains OS data © Crown copyright and database right 2022.",
+      "description": "Counts for built-up areas omitted from the towns tables and for parishes and Welsh communities. Smaller NRS and NISRA settlements reuse the retained statistical sources."
     }
   ],
   "files": {
@@ -40,6 +53,9 @@
     },
     "statistical-base.json.gz": {
       "sha256": "475ebc22b08115620038a96648f88527fc50354919a2d6c6ee50346ce8ce3672"
+    },
+    "small-place-census.json.gz": {
+      "sha256": "e8945972741c72938edb38ed3bc3e098cc7fd8e4c782575fe300a12965056235"
     }
   },
   "coordinateTransform": "OSGB36 British National Grid to WGS84 using the standard seven-parameter Helmert transform. Gazetteer dot positions are approximate to a few metres; they are not survey control."

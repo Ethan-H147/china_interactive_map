@@ -359,6 +359,7 @@
     "build:london": "node scripts/build-london-settlement.mjs",
     "test:london": "node scripts/validate-london.mjs && node scripts/browser/run.mjs london-overview",
     "build:uk-places": "node --max-old-space-size=6000 scripts/prepare-uk-places.mjs",
+    "fetch:uk-small-places": "node --max-old-space-size=3000 scripts/fetch-uk-small-place-census.mjs",
     "build:india-districts": "node --max-old-space-size=8000 scripts/build-india-districts.mjs",
     "test:ladakh": "node --check scripts/india-district-coverage.mjs && node --check scripts/repair-ladakh-district-coverage.mjs && node scripts/validate-ladakh-district-coverage.mjs",
     "test:expanded-coverage": "npm run test:ladakh && node scripts/validate-expanded-coverage.mjs && node scripts/validate-london.mjs && node scripts/validate-india-names.mjs && node scripts/validate-turkey-names.mjs && node scripts/browser/run.mjs expanded-coverage",
