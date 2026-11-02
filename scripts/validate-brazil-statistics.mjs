@@ -11,7 +11,7 @@ execFileSync(process.execPath,['scripts/prepare-brazil-statistics.mjs']);assert.
 const bundle=JSON.parse(before),raw=JSON.parse(fs.readFileSync(dir+'state-tables.json'));
 const records=JSON.parse(gunzipSync(fs.readFileSync('dist/data/south-america/brazil-first.bin'))).records;
 const population=JSON.parse(fs.readFileSync(dir+'population-2026.json')).slice(1),gdp=JSON.parse(fs.readFileSync(dir+'gdp-2023.json')).slice(1);
-assert.equal(Object.keys(bundle.regions).length,27);assert.equal(Object.keys(brazilFlags).length,27);
+assert.equal(Object.keys(bundle.regions).length,5598);assert.equal(Object.keys(brazilFlags).length,27);
 for(const f of JSON.parse(fs.readFileSync(dir+'manifest.json')).files)assert.equal(createHash('sha256').update(fs.readFileSync(dir+f.name)).digest('hex'),f.sha256);
 const flagSources=JSON.parse(fs.readFileSync('dist/data/brazil-flag-sources.json'));
 let bytes=0;
@@ -27,10 +27,10 @@ for(const r of records){
  const original=fs.readFileSync(f.originalFile),image=fs.readFileSync('dist/'+f.file);assert.equal(createHash('sha256').update(original).digest('hex'),f.originalSha256);assert.equal(createHash('sha256').update(image).digest('hex'),f.sha256);
  const src=await sharp(original).metadata(),out=await sharp(image).metadata();assert.equal(out.width,320);assert(Math.abs(out.height/out.width-src.height/src.width)<.005);bytes+=image.length;
 }
-const all=Object.values(bundle.regions);assert.equal(all.reduce((n,r)=>n+r.population.value,0),214211951);assert(Math.abs(all.reduce((n,r)=>n+r.area.value,0)-8509360.85)<.005);assert(Math.abs(all.reduce((n,r)=>n+r.gdp.value,0)-raw.nationalGdp)<14000);
+const all=Object.values(bundle.regions).filter(r=>r.level===1);assert.equal(all.reduce((n,r)=>n+r.population.value,0),214211951);assert(Math.abs(all.reduce((n,r)=>n+r.area.value,0)-8509360.85)<.005);assert(Math.abs(all.reduce((n,r)=>n+r.gdp.value,0)-raw.nationalGdp)<14000);
 assert.equal(bundle.regions['brazil:BR-53'].gdpPerCapita.value,129790);assert.equal(bundle.regions['brazil:BR-35'].gdp.value,3444814033000);
 assert.equal(flagSources.flags['BR-13'].designYear,2026);assert.equal((fs.readFileSync(flagSources.flags['BR-13'].originalFile,'utf8').match(/<path/g)||[]).length,65,'Amazonas: 3 fields and 62 stars, current July 2026 design');assert(bytes<160000);
-assert(!Object.keys(bundle.regions).some(k=>k.length>12),'No municipality statistics or inherited totals');
+assert.equal(Object.values(bundle.regions).filter(r=>r.level===2).length,5571);assert(Object.values(bundle.regions).filter(r=>r.level===2).every(r=>r.population&&!r.gdp&&!r.gdpPerCapita),'Municipal population does not inherit state GDP');
 assert.equal(stateStatisticsKey('brazil',{id:'BR-53',level:1}),'brazil:BR-53');
 assert.equal(stateStatisticsKey('brazil',{id:'BR-5300108',level:2}),'');
 assert.equal(stateStatisticsKey('brazil',{id:'BR-DDD-61',level:1},'ddd'),'');

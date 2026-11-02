@@ -1,3 +1,4 @@
+import {applyPopulationExpansion} from './population-expansion.mjs';
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import {gunzipSync} from 'node:zlib';
@@ -25,5 +26,5 @@ for(const r of records){
  };
 }
 assert.equal(Object.keys(regions).length,27);
-fs.writeFileSync('dist/data/south-america/brazil-statistics.json',JSON.stringify({version:1,retrieved:raw.retrieved,country:'brazil',sources,regions}));
+const output={version:1,retrieved:raw.retrieved,country:'brazil',sources,regions};applyPopulationExpansion('brazil',output);fs.writeFileSync('dist/data/south-america/brazil-statistics.json',JSON.stringify(output));
 console.log('Brazil: statistics for all 26 states and Distrito Federal, with matching-year USD estimates.');

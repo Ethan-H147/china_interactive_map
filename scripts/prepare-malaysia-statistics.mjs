@@ -1,3 +1,4 @@
+import {applyPopulationExpansion} from './population-expansion.mjs';
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import {gunzipSync} from 'node:zlib';
@@ -33,5 +34,5 @@ for(const record of catalogue.records.filter(r=>r.level===1)){
   note:'Population, area and economic output have separate reference years. These statistics cover the entire state or federal territory; districts do not inherit these totals.'
  };
 }
-fs.writeFileSync('dist/data/southeast-asia/malaysia-statistics.json',JSON.stringify({version:1,retrieved:'2026-10-08',country:'malaysia',sources,regions}));
+const output={version:1,retrieved:'2026-10-08',country:'malaysia',sources,regions};applyPopulationExpansion('malaysia',output);fs.writeFileSync('dist/data/southeast-asia/malaysia-statistics.json',JSON.stringify(output));
 console.log('Malaysia: '+Object.keys(regions).length+' states and federal territories, '+populationDate.slice(0,4)+' population, 2024 land area, '+gdpDate.slice(0,4)+' real GDP.');

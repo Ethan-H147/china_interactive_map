@@ -23,19 +23,26 @@ export function clearStatistics(anchor){
 }
 function renderPopulation(panel,record,data,onRelatedPlace){
  const metric=record.population;panel.replaceChildren();panel.hidden=!metric;if(!metric)return;
- panel.append(element('h3',metric.label||'Population'),element('p',metric.displayValue||new Intl.NumberFormat('en-US').format(metric.value),'population-total'));
+ const heading=element('h3',metric.label||'Population');
+ if(metric.infoNotes&&(metric.scopeNote||metric.coverageNote)){
+  const row=element('div',null,'population-heading'),details=element('details',null,'population-info'),summary=element('summary','i'),body=element('div',null,'population-info-body');
+  summary.setAttribute('aria-label','About this population figure');body.setAttribute('role','note');
+  for(const text of [metric.scopeNote,metric.coverageNote].filter(Boolean))body.append(element('p',text));
+  details.append(summary,body);details.addEventListener('keydown',event=>{if(event.key==='Escape'){details.open=false;summary.focus();event.stopPropagation();}});row.append(heading,details);panel.append(row);
+ }else panel.append(heading);
+ panel.append(element('p',metric.displayValue||new Intl.NumberFormat('en-US').format(metric.value),'population-total'));
  panel.append(element('p',metric.periodLabel||metric.year+(metric.method==='projection'?' midyear projection':metric.method==='estimate'?' midyear estimate':' census'),'population-scope'));
- if(metric.scopeNote)panel.append(element('p',metric.scopeNote,'population-note'));
+ if(metric.scopeNote&&!metric.infoNotes)panel.append(element('p',metric.scopeNote,'population-note'));
  if(metric.relatedPlace&&onRelatedPlace){const button=element('button',metric.relatedPlace.label,'quiet-button');button.type='button';button.onclick=()=>onRelatedPlace(metric.relatedPlace.id);panel.append(button);}
- if(metric.coverageNote)panel.append(element('p',metric.coverageNote,'population-note'));
+ if(metric.coverageNote&&!metric.infoNotes)panel.append(element('p',metric.coverageNote,'population-note'));
  const meta=element('p',null,'population-period');
  if(metric.date){const full=metric.date.length===7?metric.date+'-01':metric.date;meta.append(document.createTextNode(new Intl.DateTimeFormat('en-GB',{...(metric.date.length===10?{day:'numeric'}:{}),month:'long',year:'numeric',timeZone:'UTC'}).format(new Date(full+'T00:00:00Z'))+' · '));}
  meta.append(link(data.sources[metric.source],'Source'));splitMetadata(meta);panel.append(meta);
 }
-export async function renderStatistics(anchor,key,provided,{onRelatedPlace}={}){
+export async function renderStatistics(anchor,key,provided,{onRelatedPlace,populationCard=false}={}){
  if(!anchor?.parentElement)return;
  let population;
- if(statisticsUrl(key.split(':')[0])!==baseStatistics){
+ if(populationCard||statisticsUrl(key.split(':')[0])!==baseStatistics){
   population=anchor.parentElement.querySelector(':scope > .archipelago-population');
   if(!population){population=element('section',null,'population archipelago-population');population.setAttribute('aria-label','Population');insertInfoCard(anchor,population);}
   population.hidden=true;
@@ -70,7 +77,7 @@ export async function renderStatistics(anchor,key,provided,{onRelatedPlace}={}){
    for(const note of dd.querySelectorAll('.statistics-usd'))splitMetadata(note);if(metric.scopeNote)dd.append(element('span',metric.scopeNote,'statistics-usd'));
    const meta=element('small');meta.append(document.createTextNode((metric.period||metric.year||'Date not specified')+(metric.status?' · '+metric.status:'')+(metric.method==='calculated'?' · calculated':'')+' · '),link(data.sources[metric.source],'Source'));splitMetadata(meta);dd.append(meta);
   }
-  if(countries[key.split(':')[0]]?.regionalStatistics&&record.population?.value>=0&&record.area?.value>0){const dd=element('dd');dd.append(element('strong',new Intl.NumberFormat('en-US',{maximumFractionDigits:1}).format(record.population.value/record.area.value)+' people/km²'),element('small',record.population.year+' · calculated from population and area'));for(const note of dd.querySelectorAll('small'))splitMetadata(note);areaValues.append(element('dt','Population density'),dd);}
+  if(countries[key.split(':')[0]]?.regionalStatistics&&record.population?.value>=0&&record.population.areaComparable!==false&&record.area?.value>0){const dd=element('dd');dd.append(element('strong',new Intl.NumberFormat('en-US',{maximumFractionDigits:1}).format(record.population.value/record.area.value)+' people/km²'),element('small',record.population.year+' · calculated from population and area'));for(const note of dd.querySelectorAll('small'))splitMetadata(note);areaValues.append(element('dt','Population density'),dd);}
   if(record.facts?.length){const section=element('section',null,'statistics-facts'),values=element('dl',null,'statistics-values');section.append(element('h3','More figures'),values);for(const fact of record.facts){const dd=element('dd'),meta=element('small');dd.append(element('strong',new Intl.NumberFormat('en-US',{maximumFractionDigits:2}).format(fact.value)+(fact.unit||'')));meta.append(document.createTextNode(fact.year+' · '),link(data.sources[fact.source],'Source'));splitMetadata(meta);dd.append(meta);if(fact.note)dd.append(element('span',fact.note,'statistics-usd'));values.append(element('dt',fact.label),dd);}panel.append(section);}
   const notes=element('details',null,'statistics-details');notes.append(element('summary',argentina?'About these figures & sources':'Dates, sources & definitions'));
   if(argentina)notes.append(element('p','PBG is Argentina’s term for regional GDP. GDP per capita divides the economy’s output by its population; it is not a person’s salary. ARS means Argentine pesos. Inflation-adjusted economic output uses gross value added (GVA), a related measure with different tax treatment. Its 2004 reference prices remove inflation; the data year is shown beside the figure.'));

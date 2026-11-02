@@ -57,7 +57,10 @@ export function createMapScene(map,{version=globalThis.maplibregl?.getVersion?.(
    return nativeRender.call(this,style,...args);
   };
   warmRender=function(renderer,source,layer,coordinates,options){
-   const entry=entries.get(layer?.id);if(entry?.warming)return;if(detailBlocked(layer?.id,entry)){skippedDetailDraws++;return;}
+   const entry=entries.get(layer?.id);if(entry?.warming)return;
+   // Keep selection-fill buckets resident; skip empty draws without changing layout visibility.
+   if(entry?.stableSelectionFill&&entry.visibleStates&&!selectionVisibility.active(entry.source,entry.visibleStates))return;
+   if(detailBlocked(layer?.id,entry)){skippedDetailDraws++;return;}
    if(selectionDrawCulling&&entry?.selectionDraw&&entry.visibleStates)source=selectedOutlineSource(source,layer,selectionVisibility.ids(entry.source,entry.visibleStates));
    return renderLayer.call(this,renderer,source,layer,coordinates,options);
   };
@@ -89,7 +92,7 @@ export function createMapScene(map,{version=globalThis.maplibregl?.getVersion?.(
   const basePaint=clone(layer.paint||{});if(layer.type==='fill'){if(atlas.selection)basePaint['fill-opacity']=1;else if(!atlas.preserveSelectionOpacity&&basePaint['fill-opacity'])basePaint['fill-opacity']=selectedOpacity(basePaint['fill-opacity']);}
   if(layer.type==='line'&&role==='selection'){basePaint['line-width']=regionalLineWidth(1,true);basePaint['line-opacity']=outlineOpacity(layer.source,basePaint['line-opacity']??1);}
   const file=sourceFile(map,layer.source),context=['context','land'].includes(role)||layer.metadata?.atlasInternationalBorder;
-  return {selectionDraw:!!atlas.selectionDraw,preserveSelectionOpacity:!!atlas.preserveSelectionOpacity,selection:!!atlas.selection,detailedBorder:!atlas.overview&&!!layer.metadata?.atlasInternationalBorder,replaceInOverview:!atlas.overview&&(['land','context'].includes(role)||!!layer.metadata?.atlasInternationalBorder),source:layer.source,visibleStates:atlas.visibleStates||(role==='selection'&&JSON.stringify(basePaint).includes('"feature-state"')?selectionStates:null),file:context?file:null,culled:!!(culling&&context&&offscreen(file)),type:layer.type,role,contextCountry:atlas.contextCountry,paint:basePaint,satellite:atlas.satellite??{},rendered:{},visibility:layer.layout?.visibility||'visible'};
+  return {stableSelectionFill:!!atlas.stableSelectionFill,selectionDraw:!!atlas.selectionDraw,preserveSelectionOpacity:!!atlas.preserveSelectionOpacity,selection:!!atlas.selection,detailedBorder:!atlas.overview&&!!layer.metadata?.atlasInternationalBorder,replaceInOverview:!atlas.overview&&(['land','context'].includes(role)||!!layer.metadata?.atlasInternationalBorder),source:layer.source,visibleStates:atlas.visibleStates||(role==='selection'&&JSON.stringify(basePaint).includes('"feature-state"')?selectionStates:null),file:context?file:null,culled:!!(culling&&context&&offscreen(file)),type:layer.type,role,contextCountry:atlas.contextCountry,paint:basePaint,satellite:atlas.satellite??{},rendered:{},visibility:layer.layout?.visibility||'visible'};
  };
  const rank=layer=>layerBands[entries.get(layer.id)?.role||layer.metadata?.atlas?.role||defaults[layer.type]];
  function anchor(id,role,before){
@@ -114,7 +117,7 @@ export function createMapScene(map,{version=globalThis.maplibregl?.getVersion?.(
   }
   return gatePaint(entry,out);
  }
- const emptySelection=entry=>!entry.warming&&selectionCulling&&entry.visibleStates&&!selectionVisibility.active(entry.source,entry.visibleStates);
+ const emptySelection=entry=>!entry.stableSelectionFill&&!entry.warming&&selectionCulling&&entry.visibleStates&&!selectionVisibility.active(entry.source,entry.visibleStates);
  const visibility=(id,entry)=>{
   return entry.culled||emptySelection(entry)||overview&&entry.replaceInOverview&&!(snapshot&&id.startsWith(snapshot+'-'))&&!(borderPreparation&&entry.detailedBorder)?'none':snapshot&&!id.startsWith(snapshot+'-')&&(['line','circle','symbol'].includes(entry.type)||['water','selection'].includes(entry.role)||snapshotContexts.includes(entry.contextCountry))?'none':entry.visibility;
  };

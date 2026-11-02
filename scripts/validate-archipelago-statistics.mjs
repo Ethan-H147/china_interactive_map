@@ -10,7 +10,7 @@ files.forEach((f,i)=>assert.equal(fs.readFileSync(f,'utf8'),before[i],'Official 
 const bundles=Object.fromEntries(names.map((n,i)=>[n,JSON.parse(before[i])]));
 for(const [country,count,level,currency] of [['indonesia',38,1,'IDR'],['philippines',82,2,'PHP']]){
  const data=bundles[country],records=JSON.parse(gunzipSync(fs.readFileSync('dist/data/archipelago/'+country+'-catalogue.bin'))).records.filter(r=>r.level===level&&!r.special);
- assert.equal(Object.values(data.regions).filter(r=>r.level===level).length,count);assert.equal(Object.keys(data.regions).length,count+(country==='philippines'?1:0));assert(before[names.indexOf(country)].length<160000,'Country facts remain small and load independently');
+ assert.equal(Object.values(data.regions).filter(r=>r.level===level).length,count);assert.equal(Object.keys(data.regions).length,count+(country==='philippines'?1:514));assert(before[names.indexOf(country)].length<(country==='indonesia'?500000:160000),'Country facts remain small and load independently');
  for(const division of records){const r=data.regions[country+':'+division.id];assert.equal(r.name,division.en);assert(r.population.value>0&&r.area.value>0);assert.equal(r.area.unit,'km²');assert.equal(r.population.method,country==='indonesia'?'projection':'census');
   for(const field of ['population','area','gdp','gdpPerCapita']){const m=r[field];assert(m&&Number.isFinite(m.value)&&m.value>0);assert(data.sources[m.source]?.url);}
   for(const field of ['gdp','gdpPerCapita']){const m=r[field];assert.equal(m.year,2025);assert.equal(m.currency,currency);assert(Math.abs(m.value/m.exchangeRate-m.usd)<1e-5);assert(data.sources[m.exchangeSource]);}
@@ -31,6 +31,7 @@ class Node{
  after(node){const parent=this.parentElement;if(node.parentElement){const old=node.parentElement.children;old.splice(old.indexOf(node),1);}node.parentElement=parent;parent.children.splice(parent.children.indexOf(this)+1,0,node);}
  setAttribute(){}
  querySelector(selector){const name=selector.split('.').at(-1);return this.children.find(n=>n.className?.split(' ').includes(name));}
+ querySelectorAll(selector){const matches=n=>selector.startsWith('.')?n.className?.split(' ').includes(selector.slice(1)):n.tag===selector;return this.children.flatMap(n=>[...(matches(n)?[n]:[]),...n.querySelectorAll(selector)]);}
  get text(){return this.textContent+' '+this.children.map(n=>n.text).join(' ');}
 }
 globalThis.document={createElement:tag=>new Node(tag),createTextNode:text=>new Node('#text',text)};

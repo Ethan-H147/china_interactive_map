@@ -1,0 +1,127 @@
+{
+  "montenegro": [
+    {
+      "name": "Montenegro",
+      "population": 623633
+    },
+    {
+      "name": "Andrijevica",
+      "population": 3910
+    },
+    {
+      "name": "Bar",
+      "population": 45812
+    },
+    {
+      "name": "Berane",
+      "population": 24645
+    },
+    {
+      "name": "Bijelo Polje",
+      "population": 38662
+    },
+    {
+      "name": "Budva",
+      "population": 27445
+    },
+    {
+      "name": "Cetinje",
+      "population": 14494
+    },
+    {
+      "name": "Danilovgrad",
+      "population": 18617
+    },
+    {
+      "name": "Gusinje",
+      "population": 3933
+    },
+    {
+      "name": "Herceg Novi",
+      "population": 30824
+    },
+    {
+      "name": "Kolasin",
+      "population": 6700
+    },
+    {
+      "name": "Kotor",
+      "population": 22746
+    },
+    {
+      "name": "Mojkovac",
+      "population": 6728
+    },
+    {
+      "name": "Niksic",
+      "population": 65705
+    },
+    {
+      "name": "Petnjica",
+      "population": 4957
+    },
+    {
+      "name": "Plav",
+      "population": 9050
+    },
+    {
+      "name": "Pljevlja",
+      "population": 24134
+    },
+    {
+      "name": "Pluzine",
+      "population": 2177
+    },
+    {
+      "name": "Podgorica",
+      "population": 179505
+    },
+    {
+      "name": "Rozaje",
+      "population": 23184
+    },
+    {
+      "name": "Savnik",
+      "population": 1569
+    },
+    {
+      "name": "Tivat",
+      "population": 16338
+    },
+    {
+      "name": "Tuzi",
+      "population": 12979
+    },
+    {
+      "name": "Ulcinj",
+      "population": 20507
+    },
+    {
+      "name": "Zabljak",
+      "population": 2941
+    },
+    {
+      "name": "Zeta",
+      "population": 16071
+    }
+  ],
+  "mauritius": [
+    {
+      "name": "REPUBLIC OF MAURITIUS",
+      "population": 1233097
+    },
+    {
+      "name": "ISLAND OF MAURITIUS",
+      "population": 1189493
+    },
+    {
+      "name": "ISLAND OF RODRIGUES",
+      "population": 43604
+    },
+    {
+      "name": "REPUBLIC OF MAURITIUS",
+      "population": 1233097
+    }
+  ],
+  "malta-table-index": 13
+}

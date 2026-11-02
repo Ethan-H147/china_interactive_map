@@ -1,3 +1,4 @@
+import {applyPopulationExpansion} from './population-expansion.mjs';
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import {gunzipSync} from 'node:zlib';
@@ -8,7 +9,7 @@ const norm=s=>s.toLowerCase().replace(/^[. ]+|\*|\d+\//g,'').replace(/\s+\d+\*?$
 const fx=read('exchange-rates.json')[1];
 const exchange={title:'World Bank / IMF IFS: annual average official exchange rate',url:'https://data.worldbank.org/indicator/PA.NUS.FCRF',retrieved:'2026-10-06'};
 function money(value,currency,year,source,note){const country=currency==='IDR'?'IDN':'PHL',rate=fx.find(r=>r.countryiso3code===country&&Number(r.date)===year)?.value;assert(rate>0,'Same-year exchange rate required');return{value,currency,year,source,note,usd:value/rate,exchangeRate:rate,exchangeSource:'worldbank-fx'};}
-function write(country,regions,sources){const out={version:1,retrieved:'2026-10-06',country,sources:{...sources,'worldbank-fx':exchange},regions};fs.writeFileSync('dist/data/archipelago/'+country+'-statistics.json',JSON.stringify(out));console.log(country,Object.keys(regions).length+' divisions',Object.values(regions).filter(r=>r.gdp).length+' GDP records',fs.statSync('dist/data/archipelago/'+country+'-statistics.json').size+' bytes');}
+function write(country,regions,sources){const out={version:1,retrieved:'2026-10-06',country,sources:{...sources,'worldbank-fx':exchange},regions};applyPopulationExpansion(country,out);fs.writeFileSync('dist/data/archipelago/'+country+'-statistics.json',JSON.stringify(out));console.log(country,Object.keys(regions).length+' divisions',Object.values(regions).filter(r=>r.gdp).length+' GDP records',fs.statSync('dist/data/archipelago/'+country+'-statistics.json').size+' bytes');}
 const book='https://www.bps.go.id/id/publication/2026/02/27/a43f03f45543dc4e9942f44c/statistik-indonesia-2026.html';
 const pages=read('bps-yearbook-2026.tables.json');
 const gdpPages=read('bps-gdp-2026.tables.json');

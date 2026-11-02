@@ -1,0 +1,314 @@
+[
+  {
+    "name": "Year",
+    "population": 2021
+  },
+  {
+    "name": "Total",
+    "population": 519562
+  },
+  {
+    "name": "Malta",
+    "population": 480275
+  },
+  {
+    "name": "Gozo and Comino",
+    "population": 39287
+  },
+  {
+    "name": "Southern Harbour",
+    "population": 86009
+  },
+  {
+    "name": "Cospicua",
+    "population": 4654
+  },
+  {
+    "name": "Fgura",
+    "population": 13066
+  },
+  {
+    "name": "Floriana",
+    "population": 1985
+  },
+  {
+    "name": "Ħal Luqa",
+    "population": 7249
+  },
+  {
+    "name": "Ħal Tarxien",
+    "population": 9464
+  },
+  {
+    "name": "Ħaż‐Żabbar",
+    "population": 17148
+  },
+  {
+    "name": "Kalkara",
+    "population": 3105
+  },
+  {
+    "name": "Marsa",
+    "population": 5468
+  },
+  {
+    "name": "Paola",
+    "population": 9339
+  },
+  {
+    "name": "Santa Luċija",
+    "population": 2617
+  },
+  {
+    "name": "Senglea",
+    "population": 2304
+  },
+  {
+    "name": "Valletta",
+    "population": 5157
+  },
+  {
+    "name": "Vittoriosa",
+    "population": 2261
+  },
+  {
+    "name": "Xgħajra",
+    "population": 2192
+  },
+  {
+    "name": "Northern Harbour",
+    "population": 157297
+  },
+  {
+    "name": "Birkirkara",
+    "population": 25807
+  },
+  {
+    "name": "Gżira",
+    "population": 10331
+  },
+  {
+    "name": "Ħal Qormi",
+    "population": 18099
+  },
+  {
+    "name": "Ħamrun",
+    "population": 10514
+  },
+  {
+    "name": "Msida",
+    "population": 13587
+  },
+  {
+    "name": "Pembroke",
+    "population": 3545
+  },
+  {
+    "name": "San Ġwann",
+    "population": 14244
+  },
+  {
+    "name": "Santa Venera",
+    "population": 8834
+  },
+  {
+    "name": "St Julian's",
+    "population": 11653
+  },
+  {
+    "name": "Swieqi",
+    "population": 13044
+  },
+  {
+    "name": "Ta' Xbiex",
+    "population": 2092
+  },
+  {
+    "name": "Tal‐Pietà",
+    "population": 5892
+  },
+  {
+    "name": "Tas‐Sliema",
+    "population": 19655
+  },
+  {
+    "name": "South Eastern",
+    "population": 77948
+  },
+  {
+    "name": "Birżebbuġa",
+    "population": 11844
+  },
+  {
+    "name": "Gudja",
+    "population": 3229
+  },
+  {
+    "name": "Ħal Għaxaq",
+    "population": 5538
+  },
+  {
+    "name": "Ħal Kirkop",
+    "population": 2527
+  },
+  {
+    "name": "Ħal Safi",
+    "population": 2641
+  },
+  {
+    "name": "Marsaskala",
+    "population": 16804
+  },
+  {
+    "name": "Marsaxlokk",
+    "population": 3988
+  },
+  {
+    "name": "Mqabba",
+    "population": 3525
+  },
+  {
+    "name": "Qrendi",
+    "population": 3148
+  },
+  {
+    "name": "Żejtun",
+    "population": 12409
+  },
+  {
+    "name": "Żurrieq",
+    "population": 12295
+  },
+  {
+    "name": "Western",
+    "population": 65266
+  },
+  {
+    "name": "Ħ'Attard",
+    "population": 12268
+  },
+  {
+    "name": "Ħad‐Dingli",
+    "population": 3865
+  },
+  {
+    "name": "Ħal Balzan",
+    "population": 4774
+  },
+  {
+    "name": "Ħal Lija",
+    "population": 3162
+  },
+  {
+    "name": "Ħaż‐Żebbuġ",
+    "population": 13785
+  },
+  {
+    "name": "Iklin",
+    "population": 3399
+  },
+  {
+    "name": "Mdina",
+    "population": 193
+  },
+  {
+    "name": "Mtarfa",
+    "population": 2566
+  },
+  {
+    "name": "Rabat",
+    "population": 11936
+  },
+  {
+    "name": "Siġġiewi",
+    "population": 9318
+  },
+  {
+    "name": "Northern",
+    "population": 93755
+  },
+  {
+    "name": "Ħal Għargħur",
+    "population": 3741
+  },
+  {
+    "name": "Mellieħa",
+    "population": 12738
+  },
+  {
+    "name": "Mġarr",
+    "population": 4840
+  },
+  {
+    "name": "Mosta",
+    "population": 23482
+  },
+  {
+    "name": "Naxxar",
+    "population": 16912
+  },
+  {
+    "name": "St Paul's Bay",
+    "population": 32042
+  },
+  {
+    "name": "Gozo and Comino",
+    "population": 39287
+  },
+  {
+    "name": "Fontana",
+    "population": 1042
+  },
+  {
+    "name": "Għajnsielem",
+    "population": 3523
+  },
+  {
+    "name": "Għarb",
+    "population": 1549
+  },
+  {
+    "name": "Għasri",
+    "population": 518
+  },
+  {
+    "name": "Munxar",
+    "population": 1707
+  },
+  {
+    "name": "Nadur",
+    "population": 1707
+  },
+  {
+    "name": "Qala",
+    "population": 2300
+  },
+  {
+    "name": "San Lawrenz",
+    "population": 772
+  },
+  {
+    "name": "Ta' Kerċem",
+    "population": 1881
+  },
+  {
+    "name": "Ta' Sannat",
+    "population": 2186
+  },
+  {
+    "name": "Victoria",
+    "population": 7242
+  },
+  {
+    "name": "Xagħra",
+    "population": 5161
+  },
+  {
+    "name": "Xewkija",
+    "population": 3555
+  },
+  {
+    "name": "Żebbuġ",
+    "population": 3303
+  }
+]

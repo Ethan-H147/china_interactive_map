@@ -1,0 +1,345 @@
+{
+  "brazil-2022.json": {
+    "url": "https://apisidra.ibge.gov.br/values/t/4714/n6/all/v/93/p/2022?formato=json",
+    "sha256": "bc464f32f97bbedfb5c986e58be0d2cdeb759b014fcbeb0de2facd62e34a50be",
+    "retrieved": "2026-11-02",
+    "bytes": 973522,
+    "retained": "brazil-2022.json.gz"
+  },
+  "brazil-2025.json": {
+    "url": "https://apisidra.ibge.gov.br/values/t/6579/n6/all/v/9324/p/2025?formato=json",
+    "sha256": "321710963df3d6e8ad63121f16d3444d79fe5d5d58ab41500af635fb208dcc86",
+    "retrieved": "2026-11-02",
+    "bytes": 1035032,
+    "retained": "brazil-2025.json.gz"
+  },
+  "montenegro.pdf": {
+    "url": "https://www.monstat.org/uploads/files/popis%202021/saopstenja/SAOPSTENJE_Popis%20stanovnistva%202023%20I_ENG.pdf",
+    "sha256": "64b2bad69f81955b05a835be469bb9acb04c3392f2a3ff8ef034c70c46995daf",
+    "retrieved": "2026-11-02",
+    "bytes": 600815,
+    "retained": "montenegro.pdf"
+  },
+  "mauritius.pdf": {
+    "url": "https://statsmauritius.govmu.org/Documents/Census_and_Surveys/Census2022/HPC_TR_Vol2_Demography_Yr22.pdf",
+    "sha256": "f21d1dc6543694352c92acc1e41d632c1af7822c4a44d0d19122f6046babe1d5",
+    "retrieved": "2026-11-02",
+    "bytes": 3966585,
+    "retained": "mauritius.pdf"
+  },
+  "ghana-census.xlsx": {
+    "url": "https://data.humdata.org/dataset/d618e616-dfbc-4993-9eac-0b484b5cd2b4/resource/b1a5e74b-7b32-4ed6-8f35-eac067ceb871/download/gha_admpop_2021.xlsx",
+    "sha256": "f06fe48b87ae97970f08bef8fea9a83ea047c490403b74c8169f9c0d6feb5631",
+    "retrieved": "2026-11-02",
+    "bytes": 1093655,
+    "retained": "ghana-census.xlsx"
+  },
+  "malaysia.csv": {
+    "url": "https://storage.dosm.gov.my/population/population_district.csv",
+    "sha256": "2c7caf2fc4bda1f58f12db6cc2d6d5f39148fbeaaa0516017eb59fb8e23784e0",
+    "retrieved": "2026-11-02",
+    "bytes": 24637855,
+    "retained": "malaysia.csv.gz"
+  },
+  "israel-table.pdf": {
+    "url": "https://www.cbs.gov.il/he/publications/doclib/2024/2.shnatonpopulation/st02_16x.pdf",
+    "sha256": "60f53c280621d1da9784dce340bedd3de230c10fcc7db9546e7eb5aaf3e384a9",
+    "retrieved": "2026-11-02",
+    "bytes": 155512,
+    "retained": "israel-table.pdf"
+  },
+  "malta-demographics.html": {
+    "url": "https://en.wikipedia.org/wiki/Demographics_of_Malta",
+    "sha256": "cf838524d63b8badf2d3fbc0a2ab857e2591a744beab29758fbf7211dc39cc97",
+    "retrieved": "2026-11-02",
+    "bytes": 688309,
+    "retained": "malta-demographics.html.gz"
+  },
+  "bps-1.json": {
+    "url": "https://sensus.bps.go.id/topik/tabular/sp2020/5/1/3",
+    "sha256": "04e31bca791b4a4c33b61799ff7d4f349457ba615eabc466a84da96ab0b04cd4",
+    "retrieved": "2026-11-02",
+    "bytes": 275867,
+    "retained": "bps-1.json.gz"
+  },
+  "bps-2.json": {
+    "url": "https://sensus.bps.go.id/topik/tabular/sp2020/5/2/3",
+    "sha256": "184f372a901ea21cd59ce2dd76baf817e145ef15c33d81f9943472ee631d7e3b",
+    "retrieved": "2026-11-02",
+    "bytes": 188745,
+    "retained": "bps-2.json.gz"
+  },
+  "bps-3.json": {
+    "url": "https://sensus.bps.go.id/topik/tabular/sp2020/5/3/3",
+    "sha256": "ffd7759d0aeadc950e0463224c20898c223c9ec58c1e65f0a4d5b5628e74c5bc",
+    "retrieved": "2026-11-02",
+    "bytes": 268040,
+    "retained": "bps-3.json.gz"
+  },
+  "bps-4.json": {
+    "url": "https://sensus.bps.go.id/topik/tabular/sp2020/5/4/3",
+    "sha256": "277f4b36e5464b65b5cad9c22a93db772212f9aee9e163141e2f65de4cebd599",
+    "retrieved": "2026-11-02",
+    "bytes": 157514,
+    "retained": "bps-4.json.gz"
+  },
+  "bps-5.json": {
+    "url": "https://sensus.bps.go.id/topik/tabular/sp2020/5/5/3",
+    "sha256": "6637e06b16f7db4e5e24c567cea4e227f6ed0307aa9280c65f0fde66c0dea33d",
+    "retrieved": "2026-11-02",
+    "bytes": 102416,
+    "retained": "bps-5.json.gz"
+  },
+  "bps-6.json": {
+    "url": "https://sensus.bps.go.id/topik/tabular/sp2020/5/6/3",
+    "sha256": "87147cd881486bcdde2a31ab8afcd8881c2a904adf0d9216c417f20f7addcbe5",
+    "retrieved": "2026-11-02",
+    "bytes": 94463,
+    "retained": "bps-6.json"
+  },
+  "bps-7.json": {
+    "url": "https://sensus.bps.go.id/topik/tabular/sp2020/5/7/3",
+    "sha256": "2f7464a66088a8b2d99783a5a9f7c336da5afacb2003a054971dff2b026b41cd",
+    "retrieved": "2026-11-02",
+    "bytes": 142331,
+    "retained": "bps-7.json.gz"
+  },
+  "bps-8.json": {
+    "url": "https://sensus.bps.go.id/topik/tabular/sp2020/5/8/3",
+    "sha256": "dfa45e7397b44f213fe00b6fe1a028962bf889ea771461cc2c2d4ca5edc4e760",
+    "retrieved": "2026-11-02",
+    "bytes": 86544,
+    "retained": "bps-8.json"
+  },
+  "bps-9.json": {
+    "url": "https://sensus.bps.go.id/topik/tabular/sp2020/5/9/3",
+    "sha256": "a7474246b778b96e323da0d916af037d7d1bcd0b0322cc2e497b9b79a2a04bde",
+    "retrieved": "2026-11-02",
+    "bytes": 126145,
+    "retained": "bps-9.json.gz"
+  },
+  "bps-10.json": {
+    "url": "https://sensus.bps.go.id/topik/tabular/sp2020/5/10/3",
+    "sha256": "cc04fa6172c5874d16301f2700eb9a3f3629c5e8dfd71e5d21bbd0d596439fcf",
+    "retrieved": "2026-11-02",
+    "bytes": 63212,
+    "retained": "bps-10.json"
+  },
+  "bps-11.json": {
+    "url": "https://sensus.bps.go.id/topik/tabular/sp2020/5/11/3",
+    "sha256": "3ebfc46f671ad75438f854378ede67bcf9a810f916d95d61a22b347228e3e615",
+    "retrieved": "2026-11-02",
+    "bytes": 62974,
+    "retained": "bps-11.json"
+  },
+  "bps-12.json": {
+    "url": "https://sensus.bps.go.id/topik/tabular/sp2020/5/12/3",
+    "sha256": "9c8d50b080078e3bbaf3b8b0eda7473ca273a8c8af6b02bb05e2d285a4d3eff7",
+    "retrieved": "2026-11-02",
+    "bytes": 55387,
+    "retained": "bps-12.json"
+  },
+  "bps-13.json": {
+    "url": "https://sensus.bps.go.id/topik/tabular/sp2020/5/13/3",
+    "sha256": "15af8754a24f78fff1c869107fac32aae8b03e24452c803a423551d75c34c4fe",
+    "retrieved": "2026-11-02",
+    "bytes": 219929,
+    "retained": "bps-13.json.gz"
+  },
+  "bps-14.json": {
+    "url": "https://sensus.bps.go.id/topik/tabular/sp2020/5/14/3",
+    "sha256": "83a68a5e66c87648da761d7d3c0ab4f75a2c21c63d2e737c0ea0c485f17134b9",
+    "retrieved": "2026-11-02",
+    "bytes": 282624,
+    "retained": "bps-14.json.gz"
+  },
+  "bps-15.json": {
+    "url": "https://sensus.bps.go.id/topik/tabular/sp2020/5/15/3",
+    "sha256": "c262e30917b9b13ead199cb2443e21f15315b239f938da2de8a7f2c2222ba6f5",
+    "retrieved": "2026-11-02",
+    "bytes": 47263,
+    "retained": "bps-15.json"
+  },
+  "bps-16.json": {
+    "url": "https://sensus.bps.go.id/topik/tabular/sp2020/5/16/3",
+    "sha256": "3a97de1f49f613668012a997815455825ee5202b716e37fdc46d2c8c0156345b",
+    "retrieved": "2026-11-02",
+    "bytes": 306184,
+    "retained": "bps-16.json.gz"
+  },
+  "bps-17.json": {
+    "url": "https://sensus.bps.go.id/topik/tabular/sp2020/5/17/3",
+    "sha256": "77293c230503970377f6690bf4f24978a05fe611e8d82a8e025493a19d1b4d88",
+    "retrieved": "2026-11-02",
+    "bytes": 70776,
+    "retained": "bps-17.json"
+  },
+  "bps-18.json": {
+    "url": "https://sensus.bps.go.id/topik/tabular/sp2020/5/18/3",
+    "sha256": "1ae1706b1bd00d25931a751966ec9c3931e01302a3c6429285b772eab06a24ef",
+    "retrieved": "2026-11-02",
+    "bytes": 78508,
+    "retained": "bps-18.json"
+  },
+  "bps-19.json": {
+    "url": "https://sensus.bps.go.id/topik/tabular/sp2020/5/19/3",
+    "sha256": "e071aa3050e12355e4edcccc02e2c821380171f28491a50c88e3e52e4a2e470e",
+    "retrieved": "2026-11-02",
+    "bytes": 86592,
+    "retained": "bps-19.json"
+  },
+  "bps-20.json": {
+    "url": "https://sensus.bps.go.id/topik/tabular/sp2020/5/20/3",
+    "sha256": "670827953f6d7021a52b58eb164121c2baafa158906b6f3d003b6c4912bd4d34",
+    "retrieved": "2026-11-02",
+    "bytes": 181007,
+    "retained": "bps-20.json.gz"
+  },
+  "bps-21.json": {
+    "url": "https://sensus.bps.go.id/topik/tabular/sp2020/5/21/3",
+    "sha256": "88a928f2802a9e8b6764d30e8b357516ba858cadbf948c82488c0d9bd79c7f01",
+    "retrieved": "2026-11-02",
+    "bytes": 117917,
+    "retained": "bps-21.json.gz"
+  },
+  "bps-22.json": {
+    "url": "https://sensus.bps.go.id/topik/tabular/sp2020/5/22/3",
+    "sha256": "0c640257a2fc38e9e0806729ea2a4d854678a080d34a607fcfb91f1e6bb42d34",
+    "retrieved": "2026-11-02",
+    "bytes": 118249,
+    "retained": "bps-22.json.gz"
+  },
+  "bps-23.json": {
+    "url": "https://sensus.bps.go.id/topik/tabular/sp2020/5/23/3",
+    "sha256": "1597e44c66041fcff70b09b251a4faf0f6b8f0f0a311f652fe93330c289a77a6",
+    "retrieved": "2026-11-02",
+    "bytes": 110411,
+    "retained": "bps-23.json.gz"
+  },
+  "bps-24.json": {
+    "url": "https://sensus.bps.go.id/topik/tabular/sp2020/5/24/3",
+    "sha256": "b68c3e366aca97abfdfd22275fbfd2c3fe80f1b434b5cff53d7816cee76fa032",
+    "retrieved": "2026-11-02",
+    "bytes": 86706,
+    "retained": "bps-24.json"
+  },
+  "bps-25.json": {
+    "url": "https://sensus.bps.go.id/topik/tabular/sp2020/5/25/3",
+    "sha256": "eb51ff7b4b83ca1c48a76bb5245f7c71a67d760c8adc54458e2f54576ca1e1db",
+    "retrieved": "2026-11-02",
+    "bytes": 47202,
+    "retained": "bps-25.json"
+  },
+  "bps-26.json": {
+    "url": "https://sensus.bps.go.id/topik/tabular/sp2020/5/26/3",
+    "sha256": "e343a0c036ec1c10d7a3643ab4cccb8a88ee161ebea661d5e11ca64d7a1d326e",
+    "retrieved": "2026-11-02",
+    "bytes": 126622,
+    "retained": "bps-26.json.gz"
+  },
+  "bps-27.json": {
+    "url": "https://sensus.bps.go.id/topik/tabular/sp2020/5/27/3",
+    "sha256": "a7c1d9dac7a5f8004bca69189993bd12d40ca3b7765e6fc7c61bf28db1f06f01",
+    "retrieved": "2026-11-02",
+    "bytes": 110114,
+    "retained": "bps-27.json.gz"
+  },
+  "bps-28.json": {
+    "url": "https://sensus.bps.go.id/topik/tabular/sp2020/5/28/3",
+    "sha256": "1343ac54bbe3b2c8ae06378526dd2043fb8d468037887b2f5424d8784a8fa7d3",
+    "retrieved": "2026-11-02",
+    "bytes": 196546,
+    "retained": "bps-28.json.gz"
+  },
+  "bps-29.json": {
+    "url": "https://sensus.bps.go.id/topik/tabular/sp2020/5/29/3",
+    "sha256": "9d1d61eb8d1eaea6524e5832c98e0a7c1e44be35c2273a1fc1df8c2e05c798bb",
+    "retrieved": "2026-11-02",
+    "bytes": 141600,
+    "retained": "bps-29.json.gz"
+  },
+  "bps-30.json": {
+    "url": "https://sensus.bps.go.id/topik/tabular/sp2020/5/30/3",
+    "sha256": "3aa4c331bdbe313f712c662d0332e88f10edb77ee6e545f424dd8f1fd13d4b14",
+    "retrieved": "2026-11-02",
+    "bytes": 55097,
+    "retained": "bps-30.json"
+  },
+  "bps-31.json": {
+    "url": "https://sensus.bps.go.id/topik/tabular/sp2020/5/31/3",
+    "sha256": "2e97779fbf249cd74f95a0af8bf7ab917ae34054e6bef8d2bb5ed2f5c18b3595",
+    "retrieved": "2026-11-02",
+    "bytes": 55120,
+    "retained": "bps-31.json"
+  },
+  "bps-32.json": {
+    "url": "https://sensus.bps.go.id/topik/tabular/sp2020/5/32/3",
+    "sha256": "8aae9dd1fcf5aa69c6d9e623f30ff4eebe527b040d2fc566e37ceedd48150a44",
+    "retrieved": "2026-11-02",
+    "bytes": 94630,
+    "retained": "bps-32.json"
+  },
+  "bps-33.json": {
+    "url": "https://sensus.bps.go.id/topik/tabular/sp2020/5/33/3",
+    "sha256": "c98a19dfff54835be9fdfd0f651727db4022968121868602a6d8219d77ae2611",
+    "retrieved": "2026-11-02",
+    "bytes": 86943,
+    "retained": "bps-33.json"
+  },
+  "bps-34.json": {
+    "url": "https://sensus.bps.go.id/topik/tabular/sp2020/5/34/3",
+    "sha256": "bc2468fe7ecce04b3524896edfa3735d02950337dea8b5a5cb8b746c0608cf47",
+    "retrieved": "2026-11-02",
+    "bytes": 110147,
+    "retained": "bps-34.json.gz"
+  },
+  "bps-35.json": {
+    "url": "https://sensus.bps.go.id/topik/tabular/sp2020/5/35/3",
+    "sha256": "e4d81d7bc05e48963f3e14c08aa26e19b249216fce39217216001d20ebae3470",
+    "retrieved": "2026-11-02",
+    "bytes": 235513,
+    "retained": "bps-35.json.gz"
+  },
+  "normalized-small.json": {
+    "from": "montenegro.pdf",
+    "selection": "Final census Table 1, 25 municipalities.",
+    "sha256": "05b9502ea47ddfbb06189a2257ab856a3d9e36bc291fa5330632dfb53a78f76d",
+    "bytes": 2170,
+    "retained": "normalized-small.json"
+  },
+  "mauritius-districts.json": {
+    "from": "mauritius.pdf",
+    "selection": "Detailed demographic tables D1/D2, permanent resident population.",
+    "sha256": "1c5b788a4c66893ae485379e11df0f0eaacdf020bc4c4997ebc9d7f0d5ed5e1e",
+    "bytes": 828,
+    "retained": "mauritius-districts.json"
+  },
+  "gha_admpop_adm2_2021.json": {
+    "from": "ghana-census.xlsx",
+    "selection": "Sheet gha_admpop_adm2_2021; ADM2_PCODE and T_TL.",
+    "sha256": "0cde4cd0e3338264bf51c21d3afbd99f09fdd2392bf6403bc6925641e61c4ff1",
+    "bytes": 280046,
+    "retained": "gha_admpop_adm2_2021.json.gz"
+  },
+  "malaysia-rows.json": {
+    "from": "malaysia.csv",
+    "selection": "Latest 2026-01-01 year label; sex=both, age=overall, ethnicity=overall.",
+    "sha256": "962e9f84e504b6b0450e14046aa183f358b0c9d4a3aedb3b9d39c8213bc5e08a",
+    "bytes": 21855,
+    "retained": "malaysia-rows.json"
+  },
+  "malta-rows.json": {
+    "from": "malta-demographics.html",
+    "selection": "2021 locality column. Nadur corrected to 4548 from NSO Table 3/4 in match script.",
+    "sha256": "1df183100f256ee7b7e87c8beee54c380a925349669c39fb8a1b4ed6334773fe",
+    "bytes": 4780,
+    "retained": "malta-rows.json"
+  },
+  "ghana-hdx.json": {
+    "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-gha",
+    "sha256": "4dbe279581ce0e7c9a18ef07de3a52fba462d9fa40df9aa2a0075b23d1c9fd2c",
+    "retrieved": "2026-11-02",
+    "bytes": 25568,
+    "retained": "ghana-hdx.json"
+  }
+}

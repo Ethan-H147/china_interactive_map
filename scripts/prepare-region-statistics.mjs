@@ -1,4 +1,5 @@
 import fs from 'node:fs';
+import {applyKoreaPopulation} from './korea-population.mjs';
 import {gunzipSync} from 'node:zlib';
 import {readData} from './read-data.mjs';
 const root=new URL('../',import.meta.url),sourcesRoot=new URL('./statistics-sources/',import.meta.url);
@@ -103,6 +104,7 @@ for(const [key,r] of Object.entries(records)){
 const japan=JSON.parse(fs.readFileSync(new URL('scripts/japan-sources/statistics.json',root)));Object.assign(records,japan.regions);Object.assign(sources,japan.sources);
 const coverage={};for(const [key,r] of Object.entries(records)){const k=key.split(':')[0],c=coverage[k]??={regions:0,reportedArea:0,mappedArea:0,gdp:0,gdpPerCapita:0};c.regions++;c[r.area.method==='mapped'?'mappedArea':'reportedArea']++;if(r.gdp)c.gdp++;if(r.gdpPerCapita)c.gdpPerCapita++;}
 const output={schemaVersion:1,checked:'2026-10-05',policy:'Latest verified annual value in the retained sources for each metric; availability and years vary. Nominal GDP/GRDP at current prices. USD uses same-year annual average exchange rates, not PPP. Missing values are never zero.',coverage,sources,regions:records};
+applyKoreaPopulation(output);
 fs.writeFileSync(new URL('dist/data/region-statistics.json',root),JSON.stringify(output));
 fs.writeFileSync(new URL('statistics-unmatched.json',sourcesRoot),JSON.stringify(unmatched,null,2));
 console.log(JSON.stringify(coverage,null,2));console.log('Unmatched prefecture rows:',unmatched.length);

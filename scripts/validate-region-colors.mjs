@@ -15,6 +15,7 @@ Object.assign(counts,{belize:6,guatemala:22,'el-salvador':14,honduras:18,nicarag
 // Expected comparison coverage for the countries added before the rendering pass.
 Object.assign(counts,{palestine:2,liechtenstein:11,andorra:7,'south-sudan':10,niger:8,mali:20,chad:23,'central-african-republic':17,maldives:21,rwanda:5,uganda:4,somalia:18});
 for(const country of ['lebanon','kuwait','israel','malta','burkina-faso','micronesia','marshall-islands','palau','nauru','kiribati','tuvalu','tonga','samoa','fiji','seychelles','mauritius','comoros','sao-tome-principe','cabo-verde','gabon','equatorial-guinea','cameroon','benin','togo','ghana','ivory-coast','liberia','sierra-leone','guinea','guinea-bissau','gambia','senegal','mauritania','algeria','tunisia','libya','sudan','djibouti','eritrea','egypt','burundi','ethiopia'])counts[country]=0;
+Object.assign(counts,{israel:6,malta:68,mauritius:12,ghana:16,montenegro:25});
 for(const [country,data]of Object.entries(datasets)){
  assert.equal(comparisonRecords(data,1).length,counts[country],country+' first-level comparison units');assert.equal(new Set(data.records.map(r=>r.id)).size,data.records.length);
  for(const r of data.records)for(const [key,m]of Object.entries(r.metrics)){assert(Number.isFinite(m.value)&&m.value>=0,country+' '+r.id+' '+key);assert(m.sourceUrl,'Traceable metric source');if(key.startsWith('gdp'))assert.equal(m.unit,'USD','Economic values must share a currency');}

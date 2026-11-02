@@ -5,7 +5,7 @@ import {execFileSync} from 'node:child_process';
 import {gunzipSync} from 'node:zlib';
 const path='dist/data/southeast-asia/malaysia-statistics.json',before=fs.readFileSync(path,'utf8');
 execFileSync(process.execPath,['scripts/prepare-malaysia-statistics.mjs']);assert.equal(fs.readFileSync(path,'utf8'),before);
-const bundle=JSON.parse(before),records=Object.values(bundle.regions),catalogue=JSON.parse(gunzipSync(fs.readFileSync('dist/data/southeast-asia/malaysia-catalogue.bin')));
+const bundle=JSON.parse(before),records=Object.values(bundle.regions).filter(r=>r.level===1),catalogue=JSON.parse(gunzipSync(fs.readFileSync('dist/data/southeast-asia/malaysia-catalogue.bin')));
 assert.equal(records.length,16);assert.equal(records.reduce((sum,r)=>sum+r.area.value,0),330803);
 for(const r of catalogue.records.filter(r=>r.level===1)){
  const stat=bundle.regions['malaysia:'+r.id];assert.equal(stat.name,r.en);
@@ -26,6 +26,7 @@ class Node{
  after(node){const parent=this.parentElement;if(node.parentElement){const old=node.parentElement.children;old.splice(old.indexOf(node),1);}node.parentElement=parent;parent.children.splice(parent.children.indexOf(this)+1,0,node);}
  setAttribute(){}
  querySelector(selector){const name=selector.split('.').at(-1);return this.children.find(n=>n.className?.split(' ').includes(name));}
+ querySelectorAll(selector){const matches=n=>selector.startsWith('.')?n.className?.split(' ').includes(selector.slice(1)):n.tag===selector;return this.children.flatMap(n=>[...(matches(n)?[n]:[]),...n.querySelectorAll(selector)]);}
  get text(){return this.textContent+' '+this.children.map(n=>n.text).join(' ');}
 }
 globalThis.document={createElement:tag=>new Node(tag),createTextNode:text=>new Node('#text',text)};

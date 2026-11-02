@@ -21,7 +21,7 @@ export function configureSouthAmericanCountry(country,config){
  if(!(country in southAmericanFlags))return;
  config.deferChildren=true;
  if(country==='argentina')config.selectedOnlyLevel=3;
- config.hasStatistics=record=>!!stateStatisticsKey(country,record,record.thematic||'states');
+ config.hasStatistics=record=>!!stateStatisticsKey(country,record,record.thematic||'states')||(country==='brazil'&&record.level===2&&/^BR-\d{7}$/.test(record.id)&&(!record.thematic||record.thematic==='states'));
  config.names=record=>({...record,...record.id==='AR-02'?{en:'Buenos Aires City'}:{},...(record.cityRank?{kind:record.boundaryAvailable?'City / municipality':'City (municipal boundary pending)'}:{})});
  if(country==='brazil'){
   config.hideInheritedDetailFlag=true;
