@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import {sleep} from './harness.mjs';
 const points=[[-3,55],[2,48],[15,52],[30,57],[20,0],[25,-15],[100,35],[80,24],[134,-25],[-100,40],[-60,-15],[114,0]];
 export default [1280,390].map(width=>({name:'Prepared world stays complete through delayed tiles, zoom reversals and gestures '+width,options:{width,height:960,mobile:width===390},async run(p,base){
- await p.send('Page.addScriptToEvaluateOnNewDocument',{source:"localStorage.setItem('boundary-atlas-globe-v1','true');"});
+ await p.send('Page.addScriptToEvaluateOnNewDocument',{source:"localStorage.setItem('boundary-atlas-globe-v1','true');localStorage.setItem('boundary-atlas-rendering-v1',JSON.stringify({quality:'full'}));"});
  await p.open(base,'#finland');await p.waitFor('AtlasGlobeOverviewController.snapshot().ready');
  await p.evaluate('void map.jumpTo({center:[25,62],zoom:15})');await p.settle();
  // Delay all detail work. Camera changes must reuse the already prepared world.

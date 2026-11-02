@@ -303,12 +303,15 @@ function waitForCountrySources(ids,signal){
  if(!ids.length)return Promise.resolve(!signal.aborted);
  return new Promise((resolve,reject)=>{
   let timer;
-  const cleanup=()=>{clearTimeout(timer);map.off('sourcedata',check);map.off('error',failed);signal.removeEventListener('abort',aborted);};
+  const cleanup=()=>{clearTimeout(timer);map.off('sourcedata',check);map.off('render',check);map.off('error',failed);signal.removeEventListener('abort',aborted);};
   const finish=error=>{cleanup();error?reject(error):resolve(!signal.aborted);};
   const check=()=>{if(ids.every(id=>map.getSource(id)&&map.isSourceLoaded(id)))finish();};
   const failed=event=>{if(ids.includes(event.sourceId))finish(Error('Country boundary source failed'));};
   const aborted=()=>finish();
-  map.on('sourcedata',check);map.on('error',failed);signal.addEventListener('abort',aborted,{once:true});
+  // Source events can precede the tile manager's final readiness update. Hidden
+  // or cached sources may then emit no further source event. Recheck after the
+  // native frame update so a ready country never waits for the fallback timer.
+  map.on('sourcedata',check);map.on('render',check);map.on('error',failed);signal.addEventListener('abort',aborted,{once:true});
   // Slow devices can take longer to index a large country. Waiting is only for a smooth
   // first flight, so after 15 s the switch continues while indexing finishes; only a
   // source error fails it.

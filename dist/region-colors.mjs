@@ -4,7 +4,15 @@ import {getMapScene,sceneLayers} from './map-scene.mjs';
 import {countryColorData,colorMetrics,colorLabels,colorLayerProfile} from './region-color-data.mjs';
 export const shadePalette=['#e3eee9','#c7e2d8','#a5d2c8','#7bb9b1','#529ca4','#367b8d','#285675'];
 export const missingColor='#d6d5cf';
-export function comparisonRecords(data,level=1){return data.records.filter(r=>(r.level||1)===level||level===3&&r.level===2&&r.leaf);}
+const metricTextFields=['unit','sourceUrl','areaSourceUrl','exchangeSourceUrl','note'],expandedMetricData=new WeakSet();
+export function expandMetricTexts(data){
+ if(!data.metricTexts||expandedMetricData.has(data))return data;
+ for(const r of data.records)for(const m of Object.values(r.metrics))for(const field of metricTextFields)if(Number.isInteger(m[field])){
+  const value=data.metricTexts[m[field]];if(typeof value!=='string')throw Error('Invalid color metric text reference');m[field]=value;
+ }
+ expandedMetricData.add(data);return data;
+}
+export function comparisonRecords(data,level=1){expandMetricTexts(data);return data.records.filter(r=>(r.level||1)===level||level===3&&r.level===2&&r.leaf);}
 export function metricScale(data,key,level=1){
  const records=comparisonRecords(data,level),index=new Map(data.records.map(r=>[r.id,r])),units=new Map(records.map(r=>[r.id,r]));
  const resolve=(id,parent)=>{id=String(id);const seen=new Set();while(id&&!seen.has(id)){if(units.has(id))return units.get(id);seen.add(id);id=data.parents?.[id]||index.get(id)?.parent;}return parent&&!seen.has(String(parent))?resolve(String(parent)):undefined;};
@@ -22,6 +30,19 @@ export function metricScale(data,key,level=1){
 }
 export function shadeExpression(data,scale,profile){
  const id=['to-string',['coalesce',['get','regionId'],['get',profile.id],'']],parent=['to-string',['coalesce',['get',profile.parent],'']];
+ // US sources load one state at a time. Nationwide quantiles still set the
+ // scale, but each source only needs its own IDs and direct parent fallbacks.
+ if(data.country==='united-states'){
+  const own=[],parents=[];
+  for(const r of data.records){
+   if(profile.scope&&r.id!==profile.scope&&r.parent!==profile.scope)continue;
+   const unit=scale.resolve(r.id),value=unit&&scale.metric(unit)?.value;if(!Number.isFinite(value))continue;
+   if(r.level===profile.level)own.push(r.id,scale.color(value));
+   else if(r.level<profile.level)parents.push(r.id,scale.color(value));
+  }
+  const match=(input,entries,fallback)=>entries.length?['match',input,...entries,fallback]:fallback;
+  return match(id,own,match(parent,parents,missingColor));
+ }
  const entries=data.records.flatMap(r=>{const unit=scale.resolve(r.id);return [r.id,scale.color(unit&&scale.metric(unit)?.value)];});
  const match=(input,fallback)=>entries.length?['match',input,...entries,fallback]:fallback;
  return match(id,match(parent,missingColor));
@@ -96,7 +117,7 @@ export function createRegionColors(map,host={}){
    }
    if(signature(current)!==entry.writtenColor)entry.color=current;
    if(signature(opacity)!==entry.writtenOpacity)entry.opacity=opacity;
-   const expressionId=profile&&JSON.stringify([profile.id,profile.parent]);
+   const expressionId=profile&&JSON.stringify([profile.id,profile.parent,profile.scope,country==='united-states'?profile.level:null]);
    if(profile&&!expressions.has(expressionId))expressions.set(expressionId,shadeExpression(data,scale,profile));
    const color=profile?['case',['any',['boolean',['feature-state','quizActive'],false],['boolean',['feature-state','quizCorrect'],false],['boolean',['feature-state','quizWrong'],false]],entry.color,expressions.get(expressionId)]:entry.color;
    // A deeper unsupported layer retains hit targets; the actual comparison level stays visible.

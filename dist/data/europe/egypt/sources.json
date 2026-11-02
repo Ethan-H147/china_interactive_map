@@ -84,5 +84,22 @@
         }
       }
     }
+  },
+  "nileDisplay": {
+    "version": 1,
+    "channelAreaKm2": 770.7838795517048,
+    "before": {
+      "parts": 888,
+      "holes": 11,
+      "vertices": 112777
+    },
+    "after": {
+      "parts": 318,
+      "holes": 13,
+      "vertices": 69612
+    },
+    "districtChunks": 16,
+    "policy": "Display-only fill of the Nile channel between Aswan and its two delta mouth cross-sections. Existing lakes, reservoir surfaces, sea coast and international frontiers are preserved. Shared subdivision borders continue across the filled channel, partitioned between adjacent banks. Source administrative identities, population and land-area statistics are unchanged; the display extension is not a cadastral boundary source.",
+    "builder": "scripts/egypt-nile.mjs"
   }
 }

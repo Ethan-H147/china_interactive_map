@@ -1,4 +1,5 @@
 import {applyPopulationExpansion} from './population-expansion.mjs';
+import {applyIrishDistrictPopulation} from './us-ireland-statistics.mjs';
 import {geographicAreaKm2} from './geographic-area.mjs';
 import fs from 'node:fs';import assert from 'node:assert/strict';import {createRequire} from 'node:module';import {gzipSync} from 'node:zlib';import {polygons} from './geo-index.mjs';import {lineData,visibleSegments} from '../dist/adaptive-lines.mjs';import {countryContext} from './country-context.mjs';
 const require=createRequire(import.meta.url),mapshaper=require('mapshaper'),{topology}=require('topojson-server'),{mesh}=require('topojson-client');
@@ -21,7 +22,7 @@ export async function buildRegionalDataset({country,units,byLevel,sources,covera
  for(const r of records){delete r.reportedArea;delete r.population;}
  write('catalogue.bin',{rendering:{fillTolerance:.25},records,chunks,counts,levels:levels||Object.keys(byLevel).map((_,i)=>i?'Local government':'Region or territory')});
  const stats={};for(const r of records){const u=units.get(r.id);stats[country+':'+r.id]={name:r.en,level:r.level,parent:r.parent,area:{value:r.areaKm2,unit:'km²',year:u.areaYear||year,source:'boundaryArea',method:u.reportedArea?'reported':'mapped',label:areaLabel||(u.reportedArea?'Land area':'Mapped land area')},...(u.population?{population:u.population}:{}),...(u.note?{note:u.note}:{}),...(statistics[r.id]||{})};}
- const output={version:1,country,retrieved,sources:{boundaryArea:{title:'Official boundary land area, or area calculated from the retained land geometry',url:'data/europe/'+country+'/sources.json'},...statisticsSources},regions:stats};applyPopulationExpansion(country,output);fs.writeFileSync(dir+'/statistics.json',JSON.stringify(output));
+ const output={version:1,country,retrieved,sources:{boundaryArea:{title:'Official boundary land area, or area calculated from the retained land geometry',url:'data/europe/'+country+'/sources.json'},...statisticsSources},regions:stats};applyPopulationExpansion(country,output);if(country==='ireland')applyIrishDistrictPopulation(output,records);fs.writeFileSync(dir+'/statistics.json',JSON.stringify(output));
  fs.writeFileSync(dir+'/sources.json',JSON.stringify({retrieved,coverage,counts,processing:'Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.',sources},null,2)+'\n');console.log('Built',country,counts,'chunks',Object.keys(chunks).length);return {records,counts};
 }
 

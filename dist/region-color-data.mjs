@@ -13,5 +13,5 @@ export function colorLayerProfile(layer,country){
  if(!layers.test(id)||/(?:city|settlement)-(?:hit|fill)$/.test(id))return null;
  const primary=(c.primary||new RegExp('^'+country+'-(?:.*-)?first(?:-coastal)?-fill$')).test(id);
  const level=primary?1:/city-district|third|wards/.test(id)?3:2;
- return {...(c.geography||{id:'id',parent:'parent'}),...(id.startsWith('city-district')?{parent:'parentCity'}:{}),primary,level,inheritOpacity:country==='china'||id==='japan-local-wards-fill'};
+ return {...(c.geography||{id:'id',parent:'parent'}),...(id.startsWith('city-district')?{parent:'parentCity'}:{}),primary,level,...(country==='united-states'&&layer.metadata?.atlas?.statisticsParent?{scope:layer.metadata.atlas.statisticsParent}:{}),inheritOpacity:country==='china'||id==='japan-local-wards-fill'};
 }

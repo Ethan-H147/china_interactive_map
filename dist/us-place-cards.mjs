@@ -13,9 +13,10 @@ export function renderZipCodeCard(anchor,record,data){
  const link=paragraph(anchor,'Sources & coverage','a');link.href='data/europe/united-states/zip-codes/sources.json';link.target='_blank';link.rel='noopener';link.style.display='block';link.style.marginTop='12px';
 }
 export function renderMunicipalCard(anchor,record){
- anchor.replaceChildren();anchor.hidden=record?.incorporated===undefined||!!record?.municipalRank;if(anchor.hidden)return;
+ anchor.replaceChildren();anchor.hidden=record?.incorporated===undefined||!!record?.municipalRank||!!record?.municipalPopulation&&record.incorporated&&record.governmentStatus!=='F';if(anchor.hidden)return;
  paragraph(anchor,record.governmentStatus==='F'?'Statistical city balance':record.sourceType==='cousub'||record.sourceType==='concity'?record.kind:record.incorporated?'Incorporated '+record.kind.toLowerCase():'Unincorporated community','h3');
  if(record.governmentStatus==='F')paragraph(anchor,'A Census statistical remainder, excluding separately incorporated places within the consolidated government.');else if(!record.incorporated)paragraph(anchor,'A Census-designated place, not an incorporated municipal government.');
+ if(record.municipalPopulation)return;
  paragraph(anchor,'Land area: '+record.areaKm2.toLocaleString('en-US',{maximumFractionDigits:2})+' km²');
  paragraph(anchor,'Census '+record.boundaryYear+' · generalized cartographic boundary','small');
 }

@@ -1,0 +1,113 @@
+{
+  "retrieved": "2026-11-02",
+  "sources": {
+    "bea-county-gdp-2024.zip": {
+      "url": "https://apps.bea.gov/regional/zip/CAGDP1.zip",
+      "provider": "US Bureau of Economic Analysis · CAGDP1, current-dollar county GDP, February 2026 release",
+      "license": "Public domain",
+      "retrieved": "2026-11-02",
+      "sha256": "95b49283df20772ded04ea53e1142955b8ade5e7f93047c0a3dfaf403b166fe1",
+      "bytes": 1928241,
+      "retained": "scripts/statistics-sources/us-ireland/bea-county-gdp-2024.zip.gz"
+    },
+    "ireland-fy108.json": {
+      "url": "https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/FY108/JSON-stat/2.0/en",
+      "provider": "Central Statistics Office · Census 2022, population of statutory 2019 local electoral areas",
+      "license": "CC BY 4.0",
+      "retrieved": "2026-11-02",
+      "sha256": "786cd49f60b709c64838a3715a554ab06e4a311d0bfcc3fd8743d92e85ea0e99",
+      "bytes": 20696,
+      "retained": "scripts/statistics-sources/us-ireland/ireland-fy108.json.gz"
+    },
+    "ireland-statutory-lea.geojson": {
+      "url": "https://ws.cso.ie/public/api.static/PxStat.Data.GeoMap_API.Read/f381d63507530cfc61df96fa5f766e31",
+      "provider": "CSO · statutory 2019 LEA geometries linked by FY108",
+      "license": "CC BY 4.0",
+      "retrieved": "2026-11-02",
+      "sha256": "59e339b53e0d99edf9af352cba5ba77a106c80e0b7371ef1a42616d95dbc95c9",
+      "bytes": 2854488,
+      "retained": "scripts/statistics-sources/us-ireland/ireland-statutory-lea.geojson.gz"
+    },
+    "us-census2020-20.json": {
+      "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/Census2020/tigerWMS_Census2020/MapServer/20/query?f=json&where=1%3D1&outFields=GEOID%2CNAME%2CPOP100%2CAREALAND&returnGeometry=false&orderByFields=OBJECTID&resultRecordCount=100000",
+      "provider": "US Census Bureau · Census 2020 TIGERweb, POP100 whole-area census population",
+      "license": "Public domain",
+      "retrieved": "2026-11-02",
+      "sha256": "2ffa41c742d9207722e7619d22c04b86a59c73c2ec4c60fbada1e710083ed4c8",
+      "bytes": 3568790,
+      "retained": "scripts/statistics-sources/us-ireland/us-census2020-20.json.gz",
+      "layer": 20
+    },
+    "us-census2020-26.json": {
+      "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/Census2020/tigerWMS_Census2020/MapServer/26/query?f=json&where=1%3D1&outFields=GEOID%2CNAME%2CPOP100%2CAREALAND&returnGeometry=false&orderByFields=OBJECTID&resultRecordCount=100000",
+      "provider": "US Census Bureau · Census 2020 TIGERweb, POP100 whole-area census population",
+      "license": "Public domain",
+      "retrieved": "2026-11-02",
+      "sha256": "9932ba37854e6b4fc9ab738b3d8f85c51481f61223cc97f1176469785dc3b9c4",
+      "bytes": 1819671,
+      "retained": "scripts/statistics-sources/us-ireland/us-census2020-26.json.gz",
+      "layer": 26
+    },
+    "us-census2020-28.json": {
+      "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/Census2020/tigerWMS_Census2020/MapServer/28/query?f=json&where=1%3D1&outFields=GEOID%2CNAME%2CPOP100%2CAREALAND&returnGeometry=false&orderByFields=OBJECTID&resultRecordCount=100000",
+      "provider": "US Census Bureau · Census 2020 TIGERweb, POP100 whole-area census population",
+      "license": "Public domain",
+      "retrieved": "2026-11-02",
+      "sha256": "133a55b7eea99a23b8ea0e3e6e0889efe515ed47f835e0b066fea54fc08af966",
+      "bytes": 1142288,
+      "retained": "scripts/statistics-sources/us-ireland/us-census2020-28.json.gz",
+      "layer": 28
+    },
+    "us-municipal-population-2025": {
+      "url": "https://www2.census.gov/programs-surveys/popest/datasets/2020-2025/cities/totals/sub-est2025.csv",
+      "provider": "US Census Bureau · Vintage 2025 subcounty estimates, released May 2026",
+      "date": "2025-07-01",
+      "retrieved": "2026-10-17",
+      "sha256": "e3508f5201465913476d4ddf91740f191f7977c9f2614a2a7e30b5fd22027934",
+      "bytes": 7464556,
+      "retained": "scripts/statistics-sources/united-states/municipal-population-2025.csv.gz",
+      "license": "Public domain"
+    },
+    "us-county-population.csv": {
+      "url": "https://www2.census.gov/programs-surveys/popest/datasets/2020-2025/counties/totals/co-est2025-alldata.csv",
+      "provider": "US Census Bureau · 1 July 2025 county population estimates",
+      "license": "Public domain",
+      "retrieved": "2026-11-02",
+      "sha256": "4f5a499d851e2cb48fd7a5405e5a9235453a8a66933657aacd10df0e264f35d5",
+      "bytes": 2071735,
+      "retained": "scripts/statistics-sources/us-ireland/us-county-population.csv.gz"
+    },
+    "ie-galway-md-order.html": {
+      "url": "https://www.irishstatutebook.ie/eli/2018/si/618/made/en/print",
+      "provider": "Irish Statute Book · official municipal-district membership of electoral areas",
+      "license": "Irish public-sector information reuse",
+      "retrieved": "2026-11-02",
+      "sha256": "03fd32894b7ea6bee714ba6b0909749cc3b54c690c99d7bcf5347728da21ba17",
+      "bytes": 40276,
+      "retained": "scripts/statistics-sources/us-ireland/ie-galway-md-order.html.gz"
+    },
+    "ie-louth-md-order.html": {
+      "url": "https://www.irishstatutebook.ie/eli/2018/si/626/made/en/print",
+      "provider": "Irish Statute Book · official municipal-district membership of electoral areas",
+      "license": "Irish public-sector information reuse",
+      "retrieved": "2026-11-02",
+      "sha256": "1e61a0557927b8420862781211fc88e4c6fd020580eea68bcfc2532507ea3a63",
+      "bytes": 39180,
+      "retained": "scripts/statistics-sources/us-ireland/ie-louth-md-order.html.gz"
+    },
+    "ie-westmeath-md-order.html": {
+      "url": "https://www.irishstatutebook.ie/eli/2018/si/636/made/en/print",
+      "provider": "Irish Statute Book · official municipal-district membership of electoral areas",
+      "license": "Irish public-sector information reuse",
+      "retrieved": "2026-11-02",
+      "sha256": "26d8271ad22955dd743849123d4afd94bb175e7f873a6e7cd185eee5a0a1824a",
+      "bytes": 36493,
+      "retained": "scripts/statistics-sources/us-ireland/ie-westmeath-md-order.html.gz"
+    }
+  },
+  "normalized": {
+    "file": "scripts/statistics-sources/us-ireland/normalized.json.gz",
+    "sha256": "4f99db10a5da1295d4c52e8d90083527bcc7051392d61ee59d56a6cfb85900a3",
+    "bytes": 2676918
+  }
+}

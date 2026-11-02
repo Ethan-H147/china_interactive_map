@@ -44,7 +44,8 @@ export const sceneLayers=map=>scenes.get(map)?.layerInventory()||map.getStyle()?
 export function createMapScene(map,{version=globalThis.maplibregl?.getVersion?.()}={}){
  if(scenes.has(map))return scenes.get(map);
  const native=Object.fromEntries(['addLayer','moveLayer','removeLayer','setPaintProperty','setLayoutProperty','addSource','setFilter','getFilter','queryRenderedFeatures'].map(key=>[key,map[key]?.bind(map)]));
- const entries=new Map(),sourceIds=new Map(),selectionDrawSources=new Set();
+ const entries=new Map(),sourceIds=new Map(),selectionDrawSources=new Set(),borderProviders=new Map();
+ let borderOwnership=false;
  let warmPainter,warmRender,selectionDrawCulling=true,detailStage=null,detailBaseline=null,skippedDetailDraws=0;
  const detailTypes=new Set(['line','circle','symbol']);
  const detailBlocked=(id,entry)=>!!warmRender&&detailStage!==null&&detailTypes.has(entry?.type)&&detailBaseline?.get(id)!==entry&&!detailStage.has(id);
@@ -91,7 +92,7 @@ export function createMapScene(map,{version=globalThis.maplibregl?.getVersion?.(
   // level and motion copy, including older fixed-width country definitions.
   const basePaint=clone(layer.paint||{});if(layer.type==='fill'){if(atlas.selection)basePaint['fill-opacity']=1;else if(!atlas.preserveSelectionOpacity&&basePaint['fill-opacity'])basePaint['fill-opacity']=selectedOpacity(basePaint['fill-opacity']);}
   if(layer.type==='line'&&role==='selection'){basePaint['line-width']=regionalLineWidth(1,true);basePaint['line-opacity']=outlineOpacity(layer.source,basePaint['line-opacity']??1);}
-  const file=sourceFile(map,layer.source),context=['context','land'].includes(role)||layer.metadata?.atlasInternationalBorder;
+  const file=sourceFile(map,layer.source),context=['context','land','water','waterLine'].includes(role)||layer.metadata?.atlasInternationalBorder;
   return {stableSelectionFill:!!atlas.stableSelectionFill,selectionDraw:!!atlas.selectionDraw,preserveSelectionOpacity:!!atlas.preserveSelectionOpacity,selection:!!atlas.selection,detailedBorder:!atlas.overview&&!!layer.metadata?.atlasInternationalBorder,replaceInOverview:!atlas.overview&&(['land','context'].includes(role)||!!layer.metadata?.atlasInternationalBorder),source:layer.source,visibleStates:atlas.visibleStates||(role==='selection'&&JSON.stringify(basePaint).includes('"feature-state"')?selectionStates:null),file:context?file:null,culled:!!(culling&&context&&offscreen(file)),type:layer.type,role,contextCountry:atlas.contextCountry,paint:basePaint,satellite:atlas.satellite??{},rendered:{},visibility:layer.layout?.visibility||'visible'};
  };
  const rank=layer=>layerBands[entries.get(layer.id)?.role||layer.metadata?.atlas?.role||defaults[layer.type]];
@@ -118,8 +119,17 @@ export function createMapScene(map,{version=globalThis.maplibregl?.getVersion?.(
   return gatePaint(entry,out);
  }
  const emptySelection=entry=>!entry.stableSelectionFill&&!entry.warming&&selectionCulling&&entry.visibleStates&&!selectionVisibility.active(entry.source,entry.visibleStates);
+ // A canonical border provider carries the same geometry and claims as its
+ // adapter copies. Keeping copies natively hidden also avoids worker reloads,
+ // tile uploads and cache eviction for borders the frame handoff never draws.
+ function coveredBorder(id,entry){
+  if(!borderOwnership||!entry.detailedBorder||snapshot)return false;
+  for(const {entry:provider,owners}of borderProviders.values())if(owners.has(id)&&!provider.culled&&provider.visibility!=='none')return true;
+  return false;
+ }
+ const refreshBorderOwnership=()=>{for(const [id,entry]of entries)if(entry.detailedBorder)native.setLayoutProperty(id,'visibility',visibility(id,entry));};
  const visibility=(id,entry)=>{
-  return entry.culled||emptySelection(entry)||overview&&entry.replaceInOverview&&!(snapshot&&id.startsWith(snapshot+'-'))&&!(borderPreparation&&entry.detailedBorder)?'none':snapshot&&!id.startsWith(snapshot+'-')&&(['line','circle','symbol'].includes(entry.type)||['water','selection'].includes(entry.role)||snapshotContexts.includes(entry.contextCountry))?'none':entry.visibility;
+  return coveredBorder(id,entry)||entry.culled||emptySelection(entry)||overview&&entry.replaceInOverview&&!(snapshot&&id.startsWith(snapshot+'-'))&&!(borderPreparation&&entry.detailedBorder)?'none':snapshot&&!id.startsWith(snapshot+'-')&&(['line','circle','symbol'].includes(entry.type)||['water','selection'].includes(entry.role)||snapshotContexts.includes(entry.contextCountry))?'none':entry.visibility;
  };
  function render(id,entry){
   for(const [key,value] of Object.entries(paint(entry)))if(!same(entry.rendered[key],value)){native.setPaintProperty(id,key,value);entry.rendered[key]=clone(value);}
@@ -136,13 +146,15 @@ export function createMapScene(map,{version=globalThis.maplibregl?.getVersion?.(
   const entry=describe(definition);configureGate(definition.id,entry,definition.filter);const rendered=paint(entry);
   const {filter,...unfiltered}=definition;
   native.addLayer({...entry.gate?unfiltered:definition,layout:{...definition.layout,visibility:visibility(definition.id,entry)},paint:rendered},anchor(definition.id,entry.role,before));
-  entries.set(definition.id,entry);if(entry.selectionDraw)selectionDrawSources.add(entry.source);entry.rendered=clone(rendered);return map;
+  entries.set(definition.id,entry);
+  if(definition.metadata?.atlas?.borderPreviewOwners){borderProviders.set(definition.id,{entry,owners:new Set(definition.metadata.atlas.borderPreviewOwners)});refreshBorderOwnership();}
+  if(entry.selectionDraw)selectionDrawSources.add(entry.source);entry.rendered=clone(rendered);return map;
  };
  map.moveLayer=function(id,before){
   const layer=map.getLayer(id);if(!layer)return native.moveLayer(id,before);
   native.moveLayer(id,anchor(id,entries.get(id)?.role||describe(layer).role,before));return map;
  };
- map.removeLayer=function(id){const entry=entries.get(id);if(entry?.gate&&entry.gate.id!==null&&entry.gate.id!=='')map.setFeatureState({source:entry.source,id:entry.gate.id},{[entry.gate.key]:false});const result=native.removeLayer(id);entries.delete(id);if(entry?.selectionDraw&&![...entries.values()].some(e=>e.selectionDraw&&e.source===entry.source))selectionDrawSources.delete(entry.source);return result;};
+ map.removeLayer=function(id){const entry=entries.get(id);if(entry?.gate&&entry.gate.id!==null&&entry.gate.id!=='')map.setFeatureState({source:entry.source,id:entry.gate.id},{[entry.gate.key]:false});const result=native.removeLayer(id);entries.delete(id);if(borderProviders.delete(id))refreshBorderOwnership();if(entry?.selectionDraw&&![...entries.values()].some(e=>e.selectionDraw&&e.source===entry.source))selectionDrawSources.delete(entry.source);return result;};
  map.setPaintProperty=function(id,key,value,...options){
   const entry=entries.get(id);if(entry?.type==='fill'&&key==='fill-opacity'&&!entry.preserveSelectionOpacity)value=entry.selection?1:selectedOpacity(value);if(!entry)return native.setPaintProperty(id,key,value,...options);
   if(entry.type==='line'&&entry.role==='selection'&&key==='line-width')value=regionalLineWidth(1,true);
@@ -151,7 +163,7 @@ export function createMapScene(map,{version=globalThis.maplibregl?.getVersion?.(
   else entry.paint[key]=clone(value);
   render(id,entry);return map;
  };
- map.setLayoutProperty=function(id,key,value,...options){const entry=entries.get(id);if(key==='visibility'&&entry){entry.visibility=value||'visible';return native.setLayoutProperty(id,key,visibility(id,entry),...options);}return native.setLayoutProperty(id,key,value,...options);};
+ map.setLayoutProperty=function(id,key,value,...options){const entry=entries.get(id);if(key==='visibility'&&entry){entry.visibility=value||'visible';const result=native.setLayoutProperty(id,key,visibility(id,entry),...options);if(borderProviders.has(id))refreshBorderOwnership();return result;}return native.setLayoutProperty(id,key,value,...options);};
  if(native.setFilter)map.setFilter=function(id,filter,...options){
   // Filters come from tested adapter expressions. Revalidating each dynamic
   // country ID serializes the whole world style; compile them in regression
@@ -170,6 +182,7 @@ export function createMapScene(map,{version=globalThis.maplibregl?.getVersion?.(
   setLayerWarming(id,value){const entry=entries.get(id);if(!entry)return;entry.warming=!!value;render(id,entry);},
   setOverview(value){value=!!value;if(overview===value)return;overview=value;for(const [id,entry]of entries)if(entry.replaceInOverview)native.setLayoutProperty(id,'visibility',visibility(id,entry));},
   get overview(){return overview;},
+  setBorderOwnership(value){value=!!value;if(borderOwnership===value)return;borderOwnership=value;refreshBorderOwnership();},
   setBorderPreparation(value){value=!!value;if(borderPreparation===value)return;borderPreparation=value;for(const [id,entry]of entries)if(entry.detailedBorder)native.setLayoutProperty(id,'visibility',visibility(id,entry));},
   setCulling(value){culling=!!value;updateView();},
   setHorizonCulling(value){horizonCulling=!!value;updateView();},
@@ -193,7 +206,9 @@ export function createMapScene(map,{version=globalThis.maplibregl?.getVersion?.(
   // Context restoration resizes before its asynchronously restored style loads.
   if(map.style===null||map.style?._loaded===false)return;
   view=getView();globe=globeView();
-  for(const [id,entry]of entries){const hidden=culling&&offscreen(entry.file);if(entry.culled===hidden)continue;entry.culled=hidden;native.setLayoutProperty(id,'visibility',visibility(id,entry));}
+  let providerChanged=false;
+  for(const [id,entry]of entries){const hidden=culling&&offscreen(entry.file);if(entry.culled===hidden)continue;entry.culled=hidden;native.setLayoutProperty(id,'visibility',visibility(id,entry));if(borderProviders.has(id))providerChanged=true;}
+  if(providerChanged)refreshBorderOwnership();
  }
  map.on?.('move',updateView);map.on?.('resize',updateView);map.on?.('projectiontransition',updateView);map.on?.('style.load',updateView);
  scenes.set(map,scene);return scene;

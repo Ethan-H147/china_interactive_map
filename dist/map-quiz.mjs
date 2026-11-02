@@ -1,4 +1,5 @@
 import {createFirstLevelQuiz} from './first-level-quiz.mjs';
+import {sceneLayers} from './map-scene.mjs';
 
 // Quizzes borrow the country's installed map. No quiz geography or duplicate
 // sources are loaded; the country adapter prepares its normal division layers.
@@ -11,7 +12,7 @@ export function createQuizMapSession(map,atlas,country,native=atlas.quizMap){
   if(!active||enforcing)return;enforcing=true;
   try{
    const visible=new Set([...fills(),...lines(),...(reviewed?reviewPaints.keys():[])]);
-   for(const layer of map.getStyle().layers)if(owns(layer.source)){
+   for(const layer of sceneLayers(map))if(owns(layer.source)){
     if(!snapshot.has(layer.id))snapshot.set(layer.id,{visibility:map.getLayoutProperty(layer.id,'visibility')||'visible'});
     const visibility=visible.has(layer.id)?'visible':'none';
     if((map.getLayoutProperty(layer.id,'visibility')||'visible')!==visibility)map.setLayoutProperty(layer.id,'visibility',visibility);

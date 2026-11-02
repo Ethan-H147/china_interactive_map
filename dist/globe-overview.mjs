@@ -3,13 +3,13 @@ import {countryFill} from './settings.mjs';
 import {getMapScene} from './map-scene.mjs';
 import {backgroundLandColor} from './map-palette.mjs';
 import {internationalBorderPaint} from './adaptive-lines.mjs';
-import {attachBorderHandoff} from './border-handoff.mjs';
+import {attachBorderHandoff,createBorderZoomPolicy} from './border-handoff.mjs';
 import './countries.js';
 const ids=['globe-overview-land','globe-overview-borders'];
 const unclaimed=open=>['all',['!=',['coalesce',['get','claimedBy'],''],open],['any',['!',['has','claimants']],['in',open||'-',['get','claimants']]]];
 export async function addGlobeOverview(map){
  let ready=false,disposed=false,bordersVisible=false,handoff,lastCountry,activeCountry=globalThis.AtlasEntry?.current||'china',paintedCountry=activeCountry,pendingCountry;
- const wrapHooks=new Map();
+ const wrapHooks=new Map(),borderZoom=createBorderZoomPolicy();
  const pinSources=()=>{for(const id of ids){
   const source=map.getSource(id);if(source)source.reparseOverscaled=false;
   const manager=map.style?.tileManagers?.[id];
@@ -21,13 +21,17 @@ export async function addGlobeOverview(map){
    manager.handleWrapJump=handle;wrapHooks.set(manager,{native,handle});
   }
  }};
- const snapshot=()=>({ready,activeCountry,overview:!!getMapScene(map)?.overview,borders:handoff?.snapshot(),sourceZoom:0,reparseOverscaled:false});
+ const snapshot=()=>({ready,activeCountry,overview:!!getMapScene(map)?.overview,borders:handoff?.snapshot(),borderZoom:borderZoom.snapshot(),sourceZoom:0,reparseOverscaled:false});
  const sync=()=>{
   if(disposed)return;pinSources();if(!ready&&ids.every(id=>map.getSource(id)&&map.isSourceLoaded(id)))ready=true;
   const scene=getMapScene(map),supported=!!handoff?.snapshot().supported;
   // Prepare precise strokes before the root tile's coordinate quantization becomes visible.
   // Border detail changes independently of the land overview.
-  scene?.setBorderPreparation(ready&&supported&&map.getZoom()>=3.5);
+  const borderState=borderZoom.update(map.getZoom(),ready&&supported);
+  // The canonical package owns these exact strokes. Suppress adapter copies at
+  // source preparation as well as drawing, while the resident root covers loading.
+  scene?.setBorderOwnership(ready&&supported);
+  scene?.setBorderPreparation(borderState.prepare);
   scene?.setOverview(ready&&map.getZoom()<(scene.overview?5.25:4.75));
   // The frame gate draws one border set after checking the current tile data.
   // Keep the previous zoom-based fallback for unsupported renderer versions.
@@ -49,7 +53,7 @@ export async function addGlobeOverview(map){
  // A new palette reaches the land only after its worker tiles reload. Layers drawn
  // outside the tiles (the polar cap) follow this, not the entry, so both change together.
  const painted=()=>{if(pendingCountry!==undefined&&map.getSource(ids[0])&&map.isSourceLoaded(ids[0])){paintedCountry=pendingCountry;pendingCountry=undefined;map.triggerRepaint();}};
- const controller={snapshot,setCountry:countryChanged,refreshPalette,paintedCountry:()=>paintedCountry,destroy(){disposed=true;handoff?.destroy();map.off('render',sync);map.off('render',painted);map.off('move',sync);map.off('style.load',pinSources);map.off('webglcontextrestored',pinSources);for(const [manager,{native,handle}]of wrapHooks)if(manager.handleWrapJump===handle)manager.handleWrapJump=native;wrapHooks.clear();globalThis.removeEventListener?.('atlas-developer-change',refreshPalette);getMapScene(map)?.setOverview(false);getMapScene(map)?.setBorderPreparation(false);if(map.getLayer(ids[1]))map.setPaintProperty(ids[1],'line-opacity',0);}};
+ const controller={snapshot,setCountry:countryChanged,refreshPalette,paintedCountry:()=>paintedCountry,destroy(){disposed=true;handoff?.destroy();map.off('render',sync);map.off('render',painted);map.off('move',sync);map.off('style.load',pinSources);map.off('webglcontextrestored',pinSources);for(const [manager,{native,handle}]of wrapHooks)if(manager.handleWrapJump===handle)manager.handleWrapJump=native;wrapHooks.clear();globalThis.removeEventListener?.('atlas-developer-change',refreshPalette);getMapScene(map)?.setOverview(false);getMapScene(map)?.setBorderPreparation(false);getMapScene(map)?.setBorderOwnership(false);if(map.getLayer(ids[1]))map.setPaintProperty(ids[1],'line-opacity',0);}};
  // Source tile 0 is the whole world. Reusing its buffers at every camera zoom
  // avoids waiting for a new grid of worker tiles during a fast zoom or reversal.
  // Invisible paint keeps both root tiles warm even when opening a saved city
@@ -59,7 +63,7 @@ export async function addGlobeOverview(map){
  const opacity=['interpolate',['linear'],['zoom'],6.5,1,7,0];
  map.addLayer({id:ids[0],source:ids[0],type:'fill',metadata:{atlas:{role:'land',overview:true}},paint:{'fill-color':backgroundLandColor(),'fill-opacity':opacity,'fill-antialias':false}});
  map.addLayer({id:ids[1],source:ids[1],type:'line',metadata:{atlasInternationalBorder:true,atlas:{role:'border',overview:true}},layout:{'line-join':'round','line-cap':'round'},paint:{...internationalBorderPaint(),'line-opacity':0,'line-opacity-transition':{duration:0,delay:0}}});
- handoff=attachBorderHandoff(map,{rootLayer:ids[1],enabled:()=>ready,preferCoarse:()=>map.getZoom()<4});
+ handoff=attachBorderHandoff(map,{rootLayer:ids[1],enabled:()=>ready,preferCoarse:()=>borderZoom.update(map.getZoom(),ready).coarse});
  map.on('render',sync);map.on('render',painted);map.on('move',sync);map.on('style.load',pinSources);map.on('webglcontextrestored',pinSources);
  globalThis.AtlasGlobeOverviewController=controller;
  globalThis.addEventListener?.('atlas-developer-change',refreshPalette);

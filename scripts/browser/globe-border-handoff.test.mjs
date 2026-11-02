@@ -16,9 +16,13 @@ export default [1280,390].map(width=>({name:'Overview and detailed country borde
   await p.evaluate('void map.jumpTo({center:[114,44.5],zoom:'+zoom+'})');await p.settle();
   const state=await p.evaluate('({overview:mapScene.overview,handoff:AtlasGlobeOverviewController.snapshot().borders,transition:map.getPaintProperty("globe-overview-borders","line-opacity-transition"),tiles:map.style.tileManagers["globe-overview-borders"].getRenderableIds().length})');
   assert.equal(state.overview,overview,'Earlier detail threshold retains hysteresis at zoom '+zoom);
-  assert.equal(state.handoff.coarse,state.overview,'Only the active border representation draws after loading at zoom '+zoom);
-  if(!state.overview){assert(state.handoff.detailedSources>0,'Detailed international borders return');assert.equal(state.handoff.pending.length,0,'All replacement border sources are ready');}
+  assert.equal(state.handoff.coarse,false,'Precise borders remain independent of the land overview at zoom '+zoom);
+  assert(state.handoff.detailedSources>0,'Detailed international borders return');assert.equal(state.handoff.pending.length,0,'All replacement border sources are ready');
   assert.equal(state.transition.duration,0,'No crossfade can briefly draw both representations');assert(state.tiles>0,'Invisible border paint keeps the world tile prepared');
+ }
+ for(const [zoom,coarse]of [[3.6,true],[3.9,true],[4,false],[3.9,false],[3.76,false],[3.7,true],[3.9,true],[4.1,false]]){
+  await p.evaluate('void map.jumpTo({center:[114,44.5],zoom:'+zoom+'})');await p.settle();
+  assert.equal(await p.evaluate('AtlasGlobeOverviewController.snapshot().borders.coarse'),coarse,'Border hysteresis at zoom '+zoom);
  }
  await p.evaluate('void map.jumpTo({center:[114,44.5],zoom:6.25})');await p.settle();await p.screenshot('single-country-borders-'+width);
 }}));

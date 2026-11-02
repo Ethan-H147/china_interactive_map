@@ -1,6 +1,7 @@
 import {quizNamePlace} from './quiz-modes.mjs';
 import {createHoverOverview} from './hover-overview.mjs';
 import {createFirstLevelQuiz} from './first-level-quiz.mjs';
+import {sceneLayers} from './map-scene.mjs';
 import {createQuizMapSession} from './map-quiz.mjs';
 import {quizRecords} from './quiz-records.mjs';
 import {medalMarkup,highestMedal} from './quiz-medals.mjs';
@@ -18,7 +19,7 @@ export function createCityQuiz(map,host,atlas,{country,sidebar,tab,prefix,addPic
  const pointStates=new Map(),pointId=r=>cities.groupLocations?records().find(other=>other.locationId===r.locationId)?.id||r.id:r.id;
  function records(){const scope=quiz?.scope||order[0];if(!data)return [];return cache[scope]??=data.records.filter(r=>order.indexOf(r.tier)<=order.indexOf(scope)).map(r=>({...r,level:3,parent:scope,local:r.local||''}));}
  function remove(){clearPreviewSelection();pointStates.clear();previewHover?.clear();if(map.getLayer(key+'-dots'))map.removeLayer(key+'-dots');if(map.getSource(key))map.removeSource(key);}
- function enforce(){if(!(quiz?.active||previewing)||enforcing||!hidePrefix)return;enforcing=true;try{for(const layer of map.getStyle().layers)if(typeof layer.source==='string'&&layer.source.startsWith(hidePrefix)&&!contextLayers.has(layer.id)){const visibility=map.getLayoutProperty(layer.id,'visibility')||'visible';if(!hidden.has(layer.id))hidden.set(layer.id,visibility);if(visibility!=='none')map.setLayoutProperty(layer.id,'visibility','none');}}finally{enforcing=false;}}
+ function enforce(){if(!(quiz?.active||previewing)||enforcing||!hidePrefix)return;enforcing=true;try{for(const layer of sceneLayers(map))if(typeof layer.source==='string'&&layer.source.startsWith(hidePrefix)&&!contextLayers.has(layer.id)){const visibility=map.getLayoutProperty(layer.id,'visibility')||'visible';if(!hidden.has(layer.id))hidden.set(layer.id,visibility);if(visibility!=='none')map.setLayoutProperty(layer.id,'visibility','none');}}finally{enforcing=false;}}
  const state=name=>['boolean',['feature-state',name],false];
  function pick(point){
   if(!map.getLayer(key+'-dots'))return null;const [x,y]=point.x===undefined?point:[point.x,point.y],r=12;

@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {searchAndSelect as pick} from './countries.test.mjs';
 const facts=JSON.parse(fs.readFileSync('dist/data/europe/united-states/municipalities/facts.json'));
+const expandedStats=JSON.parse(fs.readFileSync('dist/data/europe/united-states/statistics.json'));
 const ready=async page=>{await page.waitFor('document.getElementById("united-states-sidebar").getAttribute("aria-busy")!=="true"',{timeout:45000});await page.settle();};
 const choose=async(page,query,name,kind)=>{await pick(page,query,name,kind);await ready(page);};
 const population=async(page,value)=>{await page.waitFor('[...document.querySelectorAll("#united-states-sidebar .archipelago-population:not([hidden]) .population-total")].some(e=>e.textContent==='+JSON.stringify(value.toLocaleString('en-US'))+')');};
@@ -13,11 +14,11 @@ export default [
   assert(await page.evaluate('document.getElementById("us-municipal-card").hidden'),'Ranked cities reuse the shared statistics cards');
   await page.screenshot('us-new-york-municipal-population');
   await choose(page,'Hempstead town New York','Hempstead','Town');await population(page,795734);
-  await choose(page,'Louisville KY','Louisville/Jefferson County','Consolidated city');await population(page,795222);
-  assert.equal(await page.evaluate('currentAtlas().getSelection()'),'US-CONCITY-2148003');
+  await choose(page,'Louisville KY','Louisville/Jefferson County','City and county');await population(page,795222);
+  assert.equal(await page.evaluate('currentAtlas().getSelection()'),'US-COUNTY-21111');
   await choose(page,'Oak Park IL','Oak Park','Village');
-  assert(await page.evaluate('!document.querySelector("#united-states-sidebar .archipelago-population:not([hidden])")'),'Below-cutoff places never inherit the preceding city population');
-  assert(await page.evaluate('!document.getElementById("us-municipal-card").hidden'));
+  await population(page,expandedStats.regions['united-states:US-PLACE-1754885'].population.value);
+  assert(await page.evaluate('document.getElementById("us-municipal-card").hidden'),'Unranked municipalities use their own shared population/area cards');
  }},
  {name:'municipal flags load only for the selection and open the exact original',options:{width:1280,height:820},async run(page,base){
   await page.open(base,'#united-states');

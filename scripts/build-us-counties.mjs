@@ -1,4 +1,5 @@
 import fs from 'node:fs';
+import {applyUSCountyGDP} from './us-ireland-statistics.mjs';
 import assert from 'node:assert/strict';
 import {pathToFileURL} from 'node:url';
 import path from 'node:path';
@@ -30,6 +31,7 @@ export async function buildUSCounties(root='dist/data/europe/united-states/'){
  stats.sources.usCountyBoundaries={title:pins.files['counties.zip'].provider,url:pins.files['counties.zip'].url,license:'Public domain'};
  for(const key of Object.keys(stats.regions))if(key.startsWith('united-states:US-COUNTY-'))delete stats.regions[key];
  for(const r of records){const p=population.get(r.code);stats.regions['united-states:'+r.id]={name:r.en,level:2,parent:r.parent,area:{value:r.areaKm2,unit:'km²',year:2025,method:'reported',source:'usCountyBoundaries',label:'Land area'},...(p?{population:{value:+p.POPESTIMATE2025,year:2025,date:'2025-07-01',method:'estimate',periodLabel:'1 July 2025 estimate',source:'usCountyPopulation'}}:{note:'County-equivalent land area is from the 2025 Census boundary file. No population estimate is supplied by the county estimates release for this territory.'})};}
+ applyUSCountyGDP(stats,records);
  write(root+'statistics.json',stats);
  const sources=load(root+'sources.json');sources.counts=catalogue.counts;sources.countySources=['counties.zip','population.csv'].map(file=>({file,...pins.files[file]}));sources.kinds=catalogue.records.reduce((o,r)=>(o[r.kind]=(o[r.kind]||0)+1,o),{});sources.countyCoverage='All 3,235 counties and county equivalents in the Census 2025 cartographic county file: 3,144 in the 50 states and DC, 78 Puerto Rico municipios, 13 equivalents in American Samoa, Guam, Northern Mariana Islands and US Virgin Islands. Connecticut uses its nine current planning regions. No invented counties for the Minor Outlying Islands. Geometry loads one state or territory at a time; coasts are outlined only for a selection.';write(root+'sources.json',sources);
  console.log('US counties: 3,235 units, '+Object.keys(chunks).length+' lazy state/territory chunks; existing state statistics retained.');

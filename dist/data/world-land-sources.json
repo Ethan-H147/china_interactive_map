@@ -505,7 +505,7 @@
     "balkans": "Detailed Balkan land frontiers supersede residual generalized shoreline segments within 200 metres. Existing atlas borders are retained; Croatia–Montenegro stops at the verified shared-way coastal endpoint.",
     "balkanFallbackRefresh": "Country fallback land refreshed from the six final reconciled contexts, preserving all other atlas and foreign geometry."
   },
-  "bytes": 26479632,
+  "bytes": 26179175,
   "fallbackSimplificationDegrees": 0.018,
   "outlineBytes": 2449,
   "titicacaShoreline": {
@@ -3922,5 +3922,9 @@
       ],
       "note": "Original unrelated international border segments restored and protected near new-country junctions."
     }
+  },
+  "egyptNileDisplay": {
+    "source": "data/europe/egypt/sources.json",
+    "version": 1
   }
 }

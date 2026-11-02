@@ -11,6 +11,8 @@ assert(!overlaps([10,20,20,30],[100,20,110,30]));
 assert(!overlaps([10,20,20,30],[-180,-30,180,-10]));
 assert(overlaps([-180,-90,180,90],[125,50,135,60]));
 assert(!outsideView('unknown.bin',[0,0,1,1]));
+assert(outsideView('europe/peru/neighbours.bin',[-180,-90,180,90]),'Verified empty geometry never wakes native tile preparation');
+for(const file of ['canada-lakes.bin','major-lake-cutouts.bin','americas-inland-water.bin','europe/cyprus/division.bin'])assert(coverage[file]?.boxes.length,'Water and control-line bounds: '+file);
 assert.deepEqual(paddedView([170,80,190,90]),[165,75,195,90]);
 assert.deepEqual(Object.keys(coverage),contextFiles(),'All displayed context files have coverage');
 for(const [file,row]of Object.entries(coverage)){
@@ -40,8 +42,19 @@ assert.equal(map.getLayoutProperty('canada-land','visibility'),'none','Disabling
 scene.setSnapshot(null);
 assert.equal(map.getLayoutProperty('canada-land','visibility'),'visible');
 console.log('Context culling preserves intended visibility, country re-entry and historical snapshots.');
+scene.setCulling(true);
+map.addSource('lake',{serialize:()=>({data:'atlas-data://lake?file=canada-lakes.bin'})});
+for(const type of ['fill','line'])map.addLayer({id:'lake-'+type,source:'lake',type,metadata:{atlas:{role:type==='fill'?'water':'waterLine'}},layout:{visibility:'visible'}});
+camera=[[100,20],[110,40]];map.emit('move');
+for(const type of ['fill','line'])assert.equal(map.getLayoutProperty('lake-'+type,'visibility'),'none','Off-screen water skips native tile work');
+camera=[[-130,55],[-100,75]];map.emit('move');
+assert.equal(map.getLayoutProperty('lake-fill','visibility'),'visible','On-screen water returns');
+map.setLayoutProperty('lake-line','visibility','none');
+camera=[[100,20],[110,40]];map.emit('move');camera=[[-130,55],[-100,75]];map.emit('move');
+assert.equal(map.getLayoutProperty('lake-line','visibility'),'none','Culling cannot turn on user-hidden hydrography');
+console.log('Water fill/line culling restores visible lakes and preserves intended visibility.');
 
-scene.setCulling(true);map.style={_loaded:false};camera=[[100,20],[110,40]];map.emit('resize');assert.equal(map.getLayoutProperty('canada-land','visibility'),'visible','A restoring style cannot receive layout mutations');
+camera=[[-140,45],[-60,80]];map.emit('move');scene.setCulling(true);map.style={_loaded:false};camera=[[100,20],[110,40]];map.emit('resize');assert.equal(map.getLayoutProperty('canada-land','visibility'),'visible','A restoring style cannot receive layout mutations');
 map.style=null;map.emit('move');assert.equal(map.getLayoutProperty('canada-land','visibility'),'visible','Context loss cannot initialize another empty style');
 map.style={_loaded:true};map.emit('style.load');assert.equal(map.getLayoutProperty('canada-land','visibility'),'none','Culling resumes after the restored style has loaded');
 console.log('Context loss and asynchronous style restoration defer culling mutations and resynchronize after style.load.');

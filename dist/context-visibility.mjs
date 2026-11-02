@@ -21,7 +21,12 @@ export function sourceFile(map,id){
  if(typeof data==='string'&&data.startsWith('atlas-data://'))return new URLSearchParams(data.slice(data.indexOf('?')+1)).get('file');
  return id==='flight-context'?'flight-context.bin':null;
 }
-export function outsideView(file,view){return !!(coverage[file]?.boxes.length&&!coverage[file].boxes.some(box=>overlaps(box,view)));}
+export function outsideView(file,view){
+ const entry=coverage[file];
+ // A verified empty file has no visible or selectable geography at any view.
+ // Unknown files stay available until their conservative bounds are generated.
+ return !!entry&&!entry.boxes.some(box=>overlaps(box,view));
+}
 
 // Maximum surface-facing dot product anywhere in a lon/lat rectangle. Taking
 // the analytic maximum keeps thin coastlines and islands safe at the horizon.

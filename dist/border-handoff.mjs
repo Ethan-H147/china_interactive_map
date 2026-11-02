@@ -1,3 +1,17 @@
+// Keep source preparation and displayed detail stable through small zoom reversals.
+// Land has its own hysteresis; these thresholds only govern international lines.
+export function createBorderZoomPolicy(){
+ let prepare=false,coarse=true;
+ return {
+  update(zoom,enabled=true){
+   prepare=!!enabled&&zoom>=(prepare?3:3.5);
+   coarse=!enabled||zoom<(coarse?4:3.75);
+   return this.snapshot();
+  },
+  snapshot:()=>({prepare,coarse})
+ };
+}
+
 // Decide after native source updates, immediately before drawing. Preparing
 // detail remains invisible until every visible international source is ready.
 export function attachBorderHandoff(map,{rootLayer,enabled,preferCoarse,version=globalThis.maplibregl?.getVersion?.()}={}){

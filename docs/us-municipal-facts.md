@@ -1,6 +1,6 @@
-# Largest US municipalities: population and flags
+# US municipal population and top-500 flags
 
-The local atlas adds Census population cards for the 500 largest functioning municipal governments represented by its Municipalities layer. The figures are July 1, 2025 estimates from the Census Bureau's Vintage 2025 subcounty release, published May 2026. Source bytes and SHA-256 are pinned in scripts/us-municipal-fact-sources.json and retained in compressed form under scripts/statistics-sources/united-states/.
+The local atlas has Census population cards for 49,666 mapped local units. The ranking and flag collection target the 500 largest functioning municipal governments represented by its Municipalities layer. The top-500 figures and 35,660 matched local estimates use 1 July 2025, from the Census Bureau's Vintage 2025 subcounty release. Another 14,006 units use explicitly dated 2020 census counts; 464 unmatched records remain without population. See [US and Ireland statistics coverage](us-ireland-statistics.md) for the expansion, boundary notes and county GDP. Source bytes and SHA-256 are pinned in scripts/us-municipal-fact-sources.json and retained in compressed form under scripts/statistics-sources/united-states/.
 
 ## Ranking and identity
 
@@ -24,7 +24,7 @@ Original images are stored unchanged. Lossless WebP thumbnails preserve proporti
 
 A small facts file adds rank and flag metadata to the existing search records. Images are requested only for the selected municipality. The catalogue never embeds image bytes, and the three-country memory cap and one-state geometry limit remain intact.
 
-Population cards use the shared statistics renderer, including date and source link. Unranked municipalities retain their existing area card and do not inherit a preceding city's population. Population/density colors contain only the 500 actual municipal metric records, while reporting full coverage totals; missing units stay marked as no data.
+Population cards use the shared statistics renderer, including date and source link. Unranked municipalities with a verified population use their own shared population/area card. Unmatched units retain the area card and never inherit a preceding city's population. Population colors cover 49,666 local units; density uses the 35,660 current-vintage estimates. Historical census counts with potentially different boundaries omit density, and missing units stay marked as no data.
 
 - node scripts/prepare-us-municipal-facts.mjs — reproduce the ranking, statistics and compact facts from the pinned Census snapshot and prepared flags.
 - node scripts/fetch-us-municipal-flags.mjs — fetch the reviewed originals and lossless thumbnails; validate hashes, resume local copies and respect Retry-After.

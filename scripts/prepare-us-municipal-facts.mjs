@@ -1,4 +1,5 @@
 import fs from 'node:fs';
+import {applyUSLocalPopulation,usIrelandSnapshot} from './us-ireland-statistics.mjs';
 import {createHash} from 'node:crypto';
 import {gzipSync,gunzipSync} from 'node:zlib';
 import {pathToFileURL} from 'node:url';
@@ -33,6 +34,7 @@ export async function prepareUSMunicipalFacts(root='dist/data/europe/united-stat
   stats.regions['united-states:'+r.id]={name:r.en,level:3,parent:r.parent,area:{value:r.areaKm2,unit:'km²',year:2025,method:'reported',source:'usMunicipalBoundaries',label:'Land area'},population:{value,year:2025,date:'2025-07-01',method:'estimate',periodLabel:'1 July 2025 estimate',source:'usMunicipalPopulation'}};
   const f=flags[r.id];facts.records[r.id]={rank,population:value,summaryLevel,sourceName,...(f?{flag:Object.fromEntries(Object.entries(f).filter(([key])=>!['sha256','commonsSha1','sourceSha1','commonsFile','id','rank','evidence'].includes(key)))}:{})};
  }
+ applyUSLocalPopulation(stats,catalogue.records);facts.populationIds=Object.keys(usIrelandSnapshot().us.population).sort();
  const population={url,provider:'US Census Bureau · Vintage 2025 subcounty estimates, released May 2026',date:'2025-07-01',retrieved:'2026-10-17',sha256,bytes:bytes.length,retained};
  const ranking='Largest 500 functioning whole municipal governments represented in the atlas: active general-purpose places, towns/townships and full consolidated cities (functional status A/B/C). Whole-government summary levels 162/061/170 only; never county/place parts, CDPs, statistical balances, metropolitan populations or subordinate special-purpose townships. Distinct overlapping governments remain distinct; populations must not be summed as disjoint areas.';
  write(pinFile,{population,ranking,layout:'https://www2.census.gov/programs-surveys/popest/technical-documentation/file-layouts/2020-2025/SUB-EST2025.pdf'});write(root+'statistics.json',stats);write(root+'municipalities/facts.json',facts);write(root+'municipalities/top500.json',{asOf:facts.asOf,definition:ranking,source:population,records:top.map(({record:r,value,summaryLevel,sourceName},i)=>({rank:i+1,id:r.id,name:r.en,parent:r.parent,kind:r.kind,population:value,summaryLevel,sourceName,flag:!!flags[r.id]}))});

@@ -12,7 +12,7 @@ assert.equal(createHash('sha256').update(bytes).digest('hex'),pins.population.sh
 const ranking=rankMunicipalities(cat.records,csv(bytes.toString('utf8'))).slice(0,500);
 assert.equal(Object.keys(facts.records).length,500);assert.equal(facts.eligibleGovernments,35648);assert.equal(facts.cutoffPopulation,84647);
 assert.deepEqual(Object.keys(facts.records),ranking.map(r=>r.record.id),'Exact whole-government top 500');
-assert.equal(Object.values(stats.regions).filter(r=>r.population?.source==='usMunicipalPopulation').length,500);
+assert.equal(Object.values(stats.regions).filter(r=>r.population?.source==='usMunicipalPopulation').length,35660);
 for(const[{record:r,value,summaryLevel},i]of ranking.map((r,i)=>[r,i])){
  const f=facts.records[r.id],s=stats.regions['united-states:'+r.id];
  assert.equal(f.rank,i+1);assert.equal(f.population,value);assert.equal(f.summaryLevel,summaryLevel);assert.equal(s.population.value,value);assert.equal(s.population.date,'2025-07-01');assert.equal(s.population.method,'estimate');assert.equal(s.area.value,r.areaKm2);assert(stats.sources[s.population.source].url===pins.population.url);
@@ -35,6 +35,6 @@ for(const[id,flag]of Object.entries(allFlags)){
 }
 for(const id of ['US-PLACE-0602000','US-PLACE-0807850','US-MCD-1716711046'])assert(!allFlags[id],'Unverified variant, map or city logo omitted: '+id);
 const colors=load('dist/data/region-colors/united-states.json'),scale=metricScale(colors,'population',3);
-assert.equal(scale.count,500);assert.equal(scale.total,50130);assert.equal(colors.records.filter(r=>r.level===3).length,500,'Sparse metric data avoids copying all municipal records');
+assert.equal(scale.count,49666);assert.equal(scale.total,50130);assert.equal(colors.records.filter(r=>r.level===3).length,49666,'Only verified local metric records are published');
 assert.equal(metricScale(colors,'gdp',3),null);
-console.log('US municipal facts: 500 exact Census 2025 populations; '+Object.keys(allFlags).length+' identity-matched flag originals/thumbnails; whole-government scope, own area, no GDP inheritance, source hashes and sparse metric coverage passed.');
+console.log('US municipal facts: 500 ranked municipal flags and expanded local populations; '+Object.keys(allFlags).length+' identity-matched flag originals/thumbnails; whole-government scope, own area, no GDP inheritance, source hashes and sparse metric coverage passed.');

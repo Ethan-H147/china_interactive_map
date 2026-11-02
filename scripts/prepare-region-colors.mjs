@@ -63,6 +63,15 @@ export function prepareRegionColors(countries=[]){
   for(const r of records)if(country!=='united-states'&&r.level===2&&geography.some(g=>g.level===3)&&!withChildren.has(r.id))r.leaf=true;
   const supportedLevels=new Set(records.filter(r=>Object.keys(r.metrics).length).map(r=>r.level));
   const data={version:2,country,level:c.levels,levels:subdivisionColorLabels[country]||[c.levels],records:records.filter(r=>supportedLevels.has(r.level)&&(country!=='united-states'||r.level!==3||Object.keys(r.metrics).length)),...(country==='united-states'?{counts:Object.fromEntries([1,2,3].map(level=>[level,records.filter(r=>r.level===level).length]))}:{}),parents};outputs[country]=data;
+  // The nationwide US local layer repeats the same official source URLs tens
+  // of thousands of times. Intern metadata text without dropping any sources.
+  if(country==='united-states'){
+   const texts=[],positions=new Map();
+   for(const r of data.records)for(const m of Object.values(r.metrics))for(const field of ['unit','sourceUrl','areaSourceUrl','exchangeSourceUrl','note'])if(typeof m[field]==='string'){
+    const value=m[field];if(!positions.has(value)){positions.set(value,texts.length);texts.push(value);}m[field]=positions.get(value);
+   }
+   data.metricTexts=texts;
+  }
   fs.mkdirSync(new URL('dist/data/region-colors/',root),{recursive:true});fs.writeFileSync(new URL('dist/data/region-colors/'+country+'.json',root),JSON.stringify(data));
   console.log(country,Object.fromEntries([1,2,3].map(level=>[level,{regions:records.filter(r=>r.level===level).length,...Object.fromEntries(['population','populationDensity','gdp','gdpPerCapita'].map(k=>[k,records.filter(r=>r.level===level&&r.metrics[k]).length]))}])));
  }return outputs;
