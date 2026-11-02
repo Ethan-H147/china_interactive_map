@@ -61,8 +61,8 @@
       "url": "Derived from retained GNQ OSM administrative relations and OCHA country land",
       "credit": "© OpenStreetMap contributors / national authorities via OCHA",
       "license": "ODbL 1.0; OCHA source-specific attribution",
-      "sha256": "f5dca28f6fceb7f8a5f6bf244bb027532b5f9d5d7ebdfb862b1a4ea9c6840720",
-      "bytes": 517783
+      "sha256": "77d9be4ff462dae33f92c0890ec499f04186fbb1b1ef4f24ffa69bdbf04b2b7b",
+      "bytes": 515555
     },
     "GNQ-adm0.geojson": {
       "url": "https://data.humdata.org/dataset/0c1a3093-c97d-48a2-a992-e652ebcbf05c/resource/6b004317-faaa-4176-b5f4-eb6cd4ed46a6/download/gnq_admin_boundaries.geojson.zip",
