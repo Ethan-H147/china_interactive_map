@@ -1,11 +1,16 @@
 import {addWorkerSource} from './geo-pack.mjs';
-import {addInternationalBorder,internationalLineSourceOptions} from './adaptive-lines.mjs';
-import {getMapScene,sceneLayers} from './map-scene.mjs';
+import {internationalBorderPaint,internationalLineSourceOptions} from './adaptive-lines.mjs';
+import './countries.js';
+
+// Keep runtime ownership and the packaged border inputs in one inventory.
+export function borderPreviewDefinitions(){
+ const registry=globalThis.AtlasCountries;
+ return [...['europe','southern-africa'].flatMap(adapter=>registry.byAdapter(adapter).filter(country=>!registry.countries[country].snapshot).map(country=>({country,base:adapter+'/'+country}))),{country:'russia',base:'russia'}];
+}
 
 export function borderPreviewFilter(map,country){
- const scene=getMapScene(map);
- const replaced=sceneLayers(map).filter(l=>l.id!=='country-border-previews'&&l.metadata?.atlasInternationalBorder&&scene?.baseVisibility(l.id)!=='none').map(l=>l.id).sort();
- return ['all',['!',['in',['get','previewLayer'],['literal',replaced]]],['!=',['coalesce',['get','claimedBy'],''],country],['any',['!',['has','claimants']],['in',country||'-',['get','claimants']]]];
+ // This is the canonical precise border set, independent of loaded country adapters.
+ return ['all',['!=',['coalesce',['get','claimedBy'],''],country],['any',['!',['has','claimants']],['in',country||'-',['get','claimants']]]];
 }
 
 // Country adapters load on demand. Their national borders must also be present
@@ -13,7 +18,8 @@ export function borderPreviewFilter(map,country){
 export async function addBorderPreviews(map){
  const id='country-border-previews';
  await addWorkerSource(map,id,'data/country-border-previews.bin',internationalLineSourceOptions);
- addInternationalBorder(map,id,id);
+ const owners=borderPreviewDefinitions().map(({country})=>country+'-international');
+ map.addLayer({id,type:'line',source:id,metadata:{atlasInternationalBorder:true,atlas:{role:'border',borderPreviewOwners:owners}},layout:{'line-join':'round','line-cap':'round'},paint:internationalBorderPaint()});
  let country='',previous;
  function sync(){
   const filter=borderPreviewFilter(map,country);
@@ -22,6 +28,6 @@ export async function addBorderPreviews(map){
  }
  const controller={setCountry(value){country=value;sync();}};
  globalThis.AtlasBorderPreviews=controller;
- // A newly installed or re-enabled adapter takes over its exact same geometry.
- map.on('styledata',sync);sync();return controller;
+ // Country loading never removes precise preview geometry or reloads this source.
+ sync();return controller;
 }

@@ -23,7 +23,7 @@ for(const f of land){const parts=polygons(f.geometry),largest=parts.reduce((best
 // directly in degrees: retained island shapes can use longitudes beyond 180.
 const overview=fc(land);
 const borderFiles=['world-country-outlines.bin','atlas-frontiers.bin','shared-context-borders.bin','russia/international.bin',...['south-africa','botswana','namibia','eswatini','lesotho'].map(c=>'southern-africa/'+c+'/international.bin'),...byAdapter('europe').filter(c=>!countries[c].snapshot).map(c=>'europe/'+c+'/international.bin')],borders=[];
-for(const file of borderFiles){if(!fs.existsSync('dist/data/'+file))continue;const owner=file==='atlas-frontiers.bin'?'atlas-frontiers':file.split('/').at(-2)||file;for(const f of load('dist/data/'+file).features)borders.push({...f,properties:{...f.properties,overviewOwner:owner}});}
+for(const file of borderFiles){if(!fs.existsSync('dist/data/'+file))continue;const owner=file==='atlas-frontiers.bin'?'atlas-frontiers':file.split('/').at(-2)||file;for(const f of load('dist/data/'+file).features.filter(f=>!f.properties.retainedSouthAmericaFrontier))borders.push({...f,properties:{...f.properties,overviewOwner:owner}});}
 for(const key of ['landBorders','riverBorders'])for(const f of flight[key]?.features||[])borders.push({...f,properties:{...f.properties,overviewOwner:'flight'}});
 const strokes=fc(borders.flatMap(f=>linesOf(fc([f])).map(path=>({...f,geometry:{type:'LineString',coordinates:simplify(path,.005)}}))));
 const write=(file,data)=>{const bytes=gzipSync(JSON.stringify(data),{level:9});fs.writeFileSync('dist/data/'+file,bytes);return bytes.length;};

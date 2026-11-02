@@ -25,3 +25,20 @@ const old=map.painter;map.painter=painter();events.get('webglcontextrestored')()
 handoff.destroy();assert.deepEqual(map.painter.render(style),['root','a','b','admin']);assert.equal(events.size,0);
 const unsupported=attachBorderHandoff(map,{version:'future'});assert.equal(unsupported.snapshot().supported,false);unsupported.destroy();
 console.log('Border handoff: preparation, pending tiles, atomic draw selection, pause/error guards, native visibility, interrupted draws, context recovery and cleanup passed.');
+
+// Loading an adapter is never a prerequisite for a border in the global package.
+const precise=layer('precise','precise');precise.metadata.atlas.borderPreviewOwners=['a','b'];
+style._order.push(precise.id);style._layers.precise=precise;
+managers.precise={used:true,complete:true,loaded(){return this.complete;},getRenderableIds:()=>['tile']};
+managers.a.complete=false;managers.b._sourceErrored=true;prefer=false;
+const canonical=attachBorderHandoff(map,{rootLayer:'root',enabled:()=>true,preferCoarse:()=>prefer,version:'6.11.2'});
+assert.deepEqual(map.painter.render(style),['admin','precise'],'Global detail does not wait for country adapter tiles');
+assert.equal(style._layers.a._atlasBorderSuppressed,true);assert.equal(precise._atlasBorderSuppressed,false);
+prefer=true;map.painter.render(style);prefer=false;managers.precise.complete=false;
+assert.deepEqual(map.painter.render(style),['root','admin'],'Retain coarse coverage until the canonical source is ready');
+managers.precise.complete=true;assert.deepEqual(map.painter.render(style),['admin','precise']);
+canonical.destroy();assert.equal(style._layers.a._atlasBorderSuppressed,undefined,'Cleanup restores feature-query visibility');
+managers.precise.complete=false;
+const cold=attachBorderHandoff(map,{rootLayer:'root',enabled:()=>true,preferCoarse:()=>false,version:'6.11.2'});
+assert.deepEqual(map.painter.render(style),['root','admin'],'A map starting zoomed in retains the resident border while detail loads');cold.destroy();
+console.log('Universal precise borders: pending country adapters cannot block detail; global readiness, cold close-up entry, single ownership and query cleanup passed.');

@@ -1,4 +1,5 @@
 import fs from 'node:fs';
+import {retainedSouthAmericanFrontiers} from './south-america-frontiers.mjs';
 import path from 'node:path';
 import {gzipSync} from 'node:zlib';
 import {createHash} from 'node:crypto';
@@ -34,7 +35,7 @@ for(const country of ['brazil','argentina','uruguay']){
  write(base+'context.bin',fc(context.features.filter(f=>f.properties.country===country).map(f=>({...f,properties:{...f.properties,...f.properties.contextHiddenFor?{claimedBy:f.properties.contextHiddenFor}:{} }}))));
  // Use the existing shared frontier paths, so the same reference is drawn in
  // country view and neighbouring views. No replacement border is computed.
- write(base+'international.bin',fc(frontiers.features.filter(f=>String(f.properties.countries).split(' ').includes(country))));
+ write(base+'international.bin',fc([...frontiers.features.filter(f=>String(f.properties.countries).split(' ').includes(country)),...retainedSouthAmericanFrontiers(country)]));
 
  const source={renderer:'regional-country.mjs',method:'Metadata adapter; original geometry retained without simplification or coordinate edits',original:'../../south-america/'+country+'-sources.json',inputs:[country+'-first.bin',country+'-local/index.bin',...(country==='argentina'?['argentina-cities/index.bin']:[])].map(file=>({file:'../../south-america/'+file,sha256:createHash('sha256').update(fs.readFileSync(oldBase+file)).digest('hex')}))};
  fs.writeFileSync(base+'sources.json',JSON.stringify(source,null,2)+'\n');

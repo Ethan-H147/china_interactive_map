@@ -25,7 +25,9 @@ export async function addGlobeOverview(map){
  const sync=()=>{
   if(disposed)return;pinSources();if(!ready&&ids.every(id=>map.getSource(id)&&map.isSourceLoaded(id)))ready=true;
   const scene=getMapScene(map),supported=!!handoff?.snapshot().supported;
-  scene?.setBorderPreparation(ready&&supported&&map.getZoom()>=4.25);
+  // Prepare precise strokes before the root tile's coordinate quantization becomes visible.
+  // Border detail changes independently of the land overview.
+  scene?.setBorderPreparation(ready&&supported&&map.getZoom()>=3.5);
   scene?.setOverview(ready&&map.getZoom()<(scene.overview?5.25:4.75));
   // The frame gate draws one border set after checking the current tile data.
   // Keep the previous zoom-based fallback for unsupported renderer versions.
@@ -57,7 +59,7 @@ export async function addGlobeOverview(map){
  const opacity=['interpolate',['linear'],['zoom'],6.5,1,7,0];
  map.addLayer({id:ids[0],source:ids[0],type:'fill',metadata:{atlas:{role:'land',overview:true}},paint:{'fill-color':backgroundLandColor(),'fill-opacity':opacity,'fill-antialias':false}});
  map.addLayer({id:ids[1],source:ids[1],type:'line',metadata:{atlasInternationalBorder:true,atlas:{role:'border',overview:true}},layout:{'line-join':'round','line-cap':'round'},paint:{...internationalBorderPaint(),'line-opacity':0,'line-opacity-transition':{duration:0,delay:0}}});
- handoff=attachBorderHandoff(map,{rootLayer:ids[1],enabled:()=>ready,preferCoarse:()=>!!getMapScene(map)?.overview});
+ handoff=attachBorderHandoff(map,{rootLayer:ids[1],enabled:()=>ready,preferCoarse:()=>map.getZoom()<4});
  map.on('render',sync);map.on('render',painted);map.on('move',sync);map.on('style.load',pinSources);map.on('webglcontextrestored',pinSources);
  globalThis.AtlasGlobeOverviewController=controller;
  globalThis.addEventListener?.('atlas-developer-change',refreshPalette);
