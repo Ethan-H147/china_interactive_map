@@ -26,14 +26,9 @@ if(import.meta.url===pathToFileURL(path.resolve(process.argv[1])).href){
  const present=compactSources.filter(f=>fs.existsSync('dist/data/'+f));
  // Keep the previous compact files available to open previews until each replacement is ready.
  let before=0,after=0;const empty=[];
- // Keep permanent shared lakes and the Swiss survey frontier in every rebuild.
- await (await import('./alpine-lakes.mjs')).reconcileAlpineLakes();
- if(fs.existsSync('scripts/boundary-sources/central-europe/resolved.bin'))await (await import('./repair-central-enclaves.mjs')).repairCentralEnclaves();
- await (await import('./repair-rhine-levee.mjs')).repairRhineLevee();
- await (await import('./central-europe-frontiers.mjs')).preserveCentralEuropeanFrontiers();
- await (await import('./refresh-central-world.mjs')).refreshCentralWorld();
- await (await import('./finalize-central-water.mjs')).refreshCentralSelectionOutlines();
- await (await import('./antarctic-claims.mjs')).preserveAntarctica();
+ // Only packs the current data. The Central European lake, frontier and world-land repairs
+ // and the Antarctic preservation run from their own builders: replayed here they re-erased
+ // the lakes on every run and replaced newer Swiss-Liechtenstein and Alpine land edits.
  await (await import('./build-context-coverage.mjs')).build();
  for(const file of present){
   const source=fs.readFileSync('dist/data/'+file),text=gunzipSync(source).toString('utf8');
