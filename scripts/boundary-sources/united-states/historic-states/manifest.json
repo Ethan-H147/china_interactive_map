@@ -1,0 +1,18 @@
+{
+ "title": "U.S. Historical States and Territories, 3 September 1783 – 31 December 2000",
+ "publisher": "Atlas of Historical County Boundaries, Dr. William M. Scholl Center for American History and Culture, The Newberry Library",
+ "page": "https://publications.newberry.org/ahcb/download/",
+ "metadata": "https://publications.newberry.org/ahcb/documents/US_HistStateTerr_Metadata2.htm",
+ "url": "https://publications.newberry.org/ahcb/downloads/gis/US_AtlasHCB_StateTerr.zip",
+ "file": "US_AtlasHCB_StateTerr.zip",
+ "variant": "Full shapefile, not generalized, including Alaska and Hawaii",
+ "bytes": 112838505,
+ "sha256": "a4cd1845bae8332776b1b117729aec04538d5f7c50024d9df3f6618d3c4a56bd",
+ "retrieved": "2026-11-04",
+ "retrievedWith": "The Newberry server refuses scripted requests (HTTP 403); the archive was saved from the download page in a browser.",
+ "license": "CC0 1.0 Universal. The Newberry's About page states that the Atlas data is released under CC0 1.0 and may be used without requesting permission; its download page says the data may be reused for any lawful purpose and that older Creative Commons Attribution-NonCommercial-ShareAlike notices inside the files are out of date.",
+ "licenseSource": "https://publications.newberry.org/ahcb/about/",
+ "attribution": "Atlas of Historical County Boundaries, Dr. William M. Scholl Center for American History and Culture, The Newberry Library",
+ "members": ["US_AtlasHCB_StateTerr/US_HistStateTerr_Shapefile/US_HistStateTerr.shp", "US_AtlasHCB_StateTerr/US_HistStateTerr_Shapefile/US_HistStateTerr.shx", "US_AtlasHCB_StateTerr/US_HistStateTerr_Shapefile/US_HistStateTerr.dbf", "US_AtlasHCB_StateTerr/US_HistStateTerr_Shapefile/US_HistStateTerr.prj"],
+ "note": "The archive is larger than GitHub's per-file limit and is ignored by Git; this manifest pins its bytes."
+}

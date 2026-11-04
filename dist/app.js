@@ -199,13 +199,18 @@ function lockCamera(){
 }
 function unlockCamera(){cameraBusy=false;renderPipeline.resume();enabledInteractions.forEach(name=>map[name].enable());enabledInteractions=[];controls();updateLabels();}
 const fitCountry=(bounds,maxZoom,camera={})=>navigateBounds(bounds,window.AtlasInteractionPolicy.cameraOptions(bounds,maxZoom,camera).options);
-function navigationOptions(options={}){const top=options.paddingTopLeft||options.padding||[35,76],bottom=options.paddingBottomRight||options.padding||[55,55];return{padding:window.AtlasSheet?.navigationPadding({selection:options.overview===undefined?!!(atlasMode==='china'?selected:currentAtlas()?.getSelection()):!options.overview})||{left:top[0],top:top[1],right:bottom[0],bottom:bottom[1]},maxZoom:Number.isFinite(options.maxZoom)?options.maxZoom:11,retainPadding:false};}
+// While an Elections map view shows its dock, fits keep their target above it; other views keep their usual padding.
+function electionInset(padding){const dock=document.querySelector('.election-dock:not([hidden])');if(!dock)return padding;const box=map.getContainer().getBoundingClientRect(),cover=Math.round(box.bottom-dock.getBoundingClientRect().top)+12;return{...padding,bottom:Math.max(padding.bottom,Math.min(cover,box.height-padding.top-120))};}
+function navigationOptions(options={}){const top=options.paddingTopLeft||options.padding||[35,76],bottom=options.paddingBottomRight||options.padding||[55,55];return{padding:electionInset(window.AtlasSheet?.navigationPadding({selection:options.overview===undefined?!!(atlasMode==='china'?selected:currentAtlas()?.getSelection()):!options.overview})||{left:top[0],top:top[1],right:bottom[0],bottom:bottom[1]}),maxZoom:Number.isFinite(options.maxZoom)?options.maxZoom:11,retainPadding:false};}
 let navigationEpoch=0,navigationCleanup,previewStart;
 function cancelNavigation(){navigationEpoch++;navigationCleanup?.(false);navigationCleanup=null;finishNavigation=null;map.stop();}
+// The latest fit is repeated when the election dock appears or leaves, so the map clears it and then returns to its usual framing.
+let lastNavigation=null;
+window.addEventListener('atlas-map-insets',()=>{if(lastNavigation?.mode===atlasMode&&!quiz.active&&!countrySwitching&&!atlasStarting&&!lastNavigation.options.camera)navigateBounds(lastNavigation.bounds,lastNavigation.options);});
 async function navigateBounds(bounds,options={},animate=true){
  if(zoomLock&&!zoomLock.allows({manual:options.manual,initial:atlasStarting,restoring:restoringView})){updateLabels();saveViewSoon();return true;}
  if(registry.countries[atlasMode]?.polar&&options.overview&&!options.camera)options={...options,camera:currentAtlas()?.homeCamera()};
- cancelNavigation();const epoch=navigationEpoch,cameraOptions=navigationOptions(options);
+ cancelNavigation();lastNavigation={bounds,options,mode:atlasMode};const epoch=navigationEpoch,cameraOptions=navigationOptions(options);
  if(!animate||reducedMotion.matches||atlasStarting||restoringView){await motionRenderer.end();const target=options.camera||window.AtlasCameraFit.cameraForBounds(map,bounds,cameraOptions);if(target)map.jumpTo(target);unlockCamera();return !!target;}
  lockCamera();
  if(!previewStart)previewStart=motionRenderer.begin().catch(error=>console.warn('Motion preview:',error.message)).finally(()=>previewStart=null);

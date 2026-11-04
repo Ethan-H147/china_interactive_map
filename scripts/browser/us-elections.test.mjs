@@ -1,0 +1,82 @@
+import assert from 'node:assert/strict';import {chooseMapView} from './map-view-dropdown.test.mjs';
+const fillAt=id=>`(()=>{const paint=map.getPaintProperty('united-states-first-fill','fill-color');if(!Array.isArray(paint))return paint;const i=paint.indexOf(${JSON.stringify(id)});return i<0?paint.at(-1):paint[i+1];})()`;
+const tapState=async(p,lngLat)=>{const point=await p.evaluate(`(()=>{const q=map.project(${JSON.stringify(lngLat)}),r=map.getCanvas().getBoundingClientRect();return[r.x+q.x,r.y+q.y]})()`);await p.tap(point);await p.settle();};
+export default [
+ {name:'Election view colours states by year, shows national and state results, and restores the administrative map',options:{width:1360,height:900},async run(p,base){
+  await p.open(base,'#united-states');await chooseMapView(p,'elections');
+  await p.waitFor('!document.getElementById("election-dock").hidden&&document.querySelector("#election-dock .election-year strong").textContent.length===4',{timeout:30000});await p.settle();
+  await p.evaluate('void document.querySelector(\'.election-tick[data-year="2024"]\').click()');await p.settle();
+  assert.equal(await p.evaluate('document.querySelector("#election-dock .election-year strong").textContent'),'2024');
+  assert.match(await p.evaluate('document.querySelector("#election-dock .election-names").textContent'),/Trump\s*312.*226\s*Harris/);
+  const red=await p.evaluate(fillAt('US-PA')),blue=await p.evaluate(fillAt('US-CA'));
+  assert.notEqual(red,blue,'Pennsylvania and California are shaded for different winners');
+  assert.equal(await p.evaluate(fillAt('US-PR')),await p.evaluate(fillAt('US-GU')),'Territories share the no-electoral-votes colour');
+  assert(!(await p.evaluate('document.getElementById("us-election-summary").hidden')),'National summary is shown in map settings');
+  assert.match(await p.evaluate('document.getElementById("us-election-summary").textContent'),/Kamala Harris.*226/);
+  await p.screenshot('us-elections-2024');
+  await p.evaluate('void document.querySelector(\'.election-tick[data-year="1860"]\').click()');await p.settle();
+  assert.equal(await p.evaluate('document.querySelector("#election-dock .election-year strong").textContent'),'1860');
+  assert.notEqual(await p.evaluate(fillAt('US-AK')),await p.evaluate(fillAt('US-NY')),'A state admitted later is not shaded as voting');
+  await p.screenshot('us-elections-1860');
+  await tapState(p,[-77.6,40.9]);
+  await p.waitFor('!document.getElementById("us-election-card").hidden',{timeout:15000});
+  assert.match(await p.evaluate('document.getElementById("us-election-card").textContent'),/Abraham Lincoln.*Electoral votes27/);
+  await p.screenshot('us-elections-1860-pennsylvania');
+  await p.key('ArrowLeft');
+  await p.evaluate('void document.querySelector(\'.election-step[data-step="1"]\').click()');await p.settle();
+  assert.equal(await p.evaluate('document.querySelector("#election-dock .election-year strong").textContent'),'1864');
+  assert.match(await p.evaluate('document.getElementById("us-election-card").textContent'),/1864 presidential election/,'The selected state card follows the year');
+  await chooseMapView(p,'administrative');
+  assert(await p.evaluate('document.getElementById("election-dock").hidden'),'The dock leaves with the view');
+  assert.equal(await p.evaluate('map.getPaintProperty("united-states-first-fill","fill-color")'),'#e1e8f3','Administrative fill returns');
+  assert(await p.evaluate('document.getElementById("us-election-card").hidden'));
+ }},
+ {name:'Historic borders draw each election on the boundaries of its day and open the state that held a place',options:{width:1360,height:900},async run(p,base){
+  const year=async y=>{await p.evaluate(`void document.querySelector('.election-tick[data-year="${y}"]').click()`);await p.settle();};
+  const card='document.getElementById("us-election-card").textContent',name='document.getElementById("us-name").textContent';
+  const opacities='["united-states-first-lines","united-states-first-selected"].map(id=>JSON.stringify(map.getPaintProperty(id,"line-opacity")))';
+  const labels='[...document.querySelectorAll("[data-atlas-place^=election-],[data-atlas-place^=history-]")].map(e=>e.firstChild.textContent)';
+  await p.open(base,'#united-states');await chooseMapView(p,'elections');
+  await p.waitFor('!document.getElementById("election-dock").hidden&&document.querySelector("#election-dock .election-year strong").textContent.length===4',{timeout:30000});await p.settle();
+  assert.equal(await p.evaluate('document.querySelector("[data-borders][aria-pressed=true]").dataset.borders'),'present','Current borders are the default');
+  await tapState(p,[-71.8,42.3]);await p.waitFor('!document.getElementById("us-election-card").hidden',{timeout:15000});
+  const modern=await p.evaluate(opacities);
+  await p.evaluate('void document.querySelector("[data-borders=historic]").click()');
+  await p.waitFor('!!map.getLayer("united-states-history-fill")',{timeout:30000});await year(1789);
+  await p.evaluate('void document.getElementById("us-reset").click()');await p.settle();
+  assert((await p.evaluate(opacities)).every(value=>value==='0'||value.includes('["*",0,')),'Present-day borders and outline give way to the historic ones');
+  assert((await p.evaluate(labels)).includes('Northwest Territory'),'Territories are labelled');
+  assert(!(await p.evaluate(labels)).includes('Maine'),'Maine is not a unit in 1789');
+  assert((await p.evaluate(labels)).includes('Spanish Louisiana'),'Land beyond the Mississippi is Spanish in 1789');
+  await p.screenshot('us-elections-historic-1789');
+  await tapState(p,[-69.2,45.4]);await p.waitFor(name+'==="Massachusetts"',{timeout:15000});
+  assert.match(await p.evaluate(card),/1789 presidential election.*George Washington/,'Maine opens Massachusetts in 1789');
+  assert(await p.evaluate('map.getFilter("united-states-history-selected")[2][1].length>0'),'Historic Massachusetts is outlined');
+  await p.screenshot('us-elections-historic-1789-maine');
+  await year(1820);await p.waitFor(name+'==="Maine"',{timeout:15000});
+  assert.match(await p.evaluate(card),/1820 presidential election.*James Monroe/,'The picked place follows Maine into statehood');
+  await year(1860);await p.evaluate('void document.getElementById("us-reset").click()');await p.settle();await tapState(p,[-80.6,38.6]);await p.waitFor(name+'==="Virginia"',{timeout:15000});
+  assert.match(await p.evaluate(card),/John Bell/,'West Virginia votes within Virginia in 1860');
+  await year(1848);await p.evaluate('void document.getElementById("us-reset").click()');await p.settle();await tapState(p,[-104.5,34.6]);await p.waitFor(name+'==="Texas"',{timeout:15000});
+  assert.match(await p.evaluate(card),/1848 presidential election.*Lewis Cass/,'Eastern New Mexico lies within Texas in 1848');
+  await p.screenshot('us-elections-historic-1848');
+  await year(1796);await p.evaluate('void document.getElementById("us-reset").click()');await p.settle();await tapState(p,[-82.9,40.0]);await p.waitFor(card+'.includes("Northwest Territory")',{timeout:15000});
+  assert.equal(await p.evaluate(name),'Ohio','A territory keeps the present-day place under the click');
+  assert.match(await p.evaluate(card),/A territory, with no electoral votes/);
+  await year(1844);await p.evaluate('void document.getElementById("us-reset").click()');await p.settle();await tapState(p,[-119.5,37.2]);await p.waitFor(card+'.includes("Mexico")',{timeout:15000});
+  assert.equal(await p.evaluate(name),'California');assert.match(await p.evaluate(card),/1844 presidential election.*Mexico.*independent from Spain since 1821/,'California votes with no one in 1844: it is part of Mexico');
+  await p.evaluate('void document.querySelector("[data-borders=present]").click()');await p.settle();
+  assert(await p.evaluate('!map.getLayer("united-states-history-fill")&&!map.getSource("united-states-history-faces")'),'Historic layers leave with the switch');
+  await p.evaluate('void document.getElementById("us-reset").click()');await p.settle();await tapState(p,[-71.8,42.3]);await p.waitFor(name+'==="Massachusetts"',{timeout:15000});
+  assert.deepEqual(await p.evaluate(opacities),modern,'Present-day borders and outline return unchanged');
+  assert.equal(await p.evaluate('document.querySelector("#us-election-card .election-unit")'),null);
+ }},
+ {name:'Election dock fits a phone with the borders switch',options:{width:390,height:844,mobile:true},async run(p,base){
+  await p.open(base,'#united-states');await chooseMapView(p,'elections');
+  await p.waitFor('!document.getElementById("election-dock").hidden&&document.querySelector("#election-dock .election-tick")',{timeout:30000});
+  await p.evaluate('void document.querySelector("[data-borders=historic]").click()');await p.waitFor('!!map.getLayer("united-states-history-fill")',{timeout:30000});await p.settle();
+  assert(await p.evaluate('document.documentElement.scrollWidth<=innerWidth+1'),'No page-level horizontal overflow');
+  assert(await p.evaluate('(()=>{const r=document.getElementById("election-dock").getBoundingClientRect(),s=document.querySelector(".election-switch").getBoundingClientRect();return r.left>=0&&r.right<=innerWidth&&s.right<=r.right})()'),'The dock and its switch fit the screen');
+  await p.screenshot('us-elections-phone-historic');
+ }}
+];

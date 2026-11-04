@@ -1,0 +1,18 @@
+{
+ "note": "Officially reported national figures only. The Central Election Committee and KCNA publish no per-province results for these elections, so every province is shown with the national figure. Candidates are nominated on one approved list of the Democratic Front for the Reunification of Korea, one per constituency (some local constituencies had two in 2023).",
+ "retrieved": "2026-11-04",
+ "elections": [
+  {"year":2009,"date":"March 8, 2009","title":"2009 Supreme People's Assembly election","body":"12th Supreme People's Assembly","seats":687,"turnout":99.98,"for":100,
+   "source":"https://www.globalsecurity.org/wmd/library/news/dprk/2009/dprk-090309-kcna02.htm","sourceName":"KCNA, 9 March 2009 (Central Election Committee returns)",
+   "note":"Each of the 687 constituencies had a single candidate."},
+  {"year":2014,"date":"March 9, 2014","title":"2014 Supreme People's Assembly election","body":"13th Supreme People's Assembly","seats":687,"turnout":99.97,"for":100,
+   "source":"https://www.globalsecurity.org/wmd/library/news/dprk/2014/dprk-140311-kcna03.htm","sourceName":"KCNA, 11 March 2014 (Central Election Committee returns)",
+   "note":"Kim Jong Un's own constituency, Mount Paektu, reported 100% turnout and no votes against."},
+  {"year":2019,"date":"March 10, 2019","title":"2019 Supreme People's Assembly election","body":"14th Supreme People's Assembly","seats":687,"turnout":99.99,"for":100,
+   "source":"https://www.aljazeera.com/news/2019/3/12/north-korea-election-turnout-99-99-percent-state-media","sourceName":"KCNA, via Al Jazeera, 12 March 2019",
+   "note":"KCNA said the 0.01% who did not vote were abroad or working at sea."},
+  {"year":2023,"date":"November 26, 2023","title":"2023 local people's assembly elections","body":"Provincial, city and county people's assemblies","seats":27858,"turnout":99.63,"for":99.91,"against":0.09,
+   "source":"https://en.yna.co.kr/view/AEN20231128001551315","sourceName":"KCNA, via Yonhap, 28 November 2023","kcna":"http://kcna.kp/en/article/q/2caa2a9224ff2758ddbea189ba1c5e28.kcmsf",
+   "note":"Map figures are for provincial assemblies: 99.91% for and 0.09% against. City and county assemblies: 99.87% for, 0.13% against. These were the first votes against reported in decades."}
+ ]
+}

@@ -42,3 +42,6 @@ scripts/boundary-sources/mainland-seasia/*.zip
 
 # Local Wrangler preview state.
 /.wrangler/
+
+# Newberry AHCB states and territories archive (over GitHub's file limit); hash-pinned in its manifest.
+/scripts/boundary-sources/united-states/historic-states/*.zip

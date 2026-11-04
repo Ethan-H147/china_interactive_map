@@ -1,0 +1,429 @@
+{
+ "title": "US presidential elections, 1788–89 to 2024",
+ "method": "State and national results are read from the Results tables of each election article at the pinned revision. Present-day state shapes are drawn for every year; states not yet admitted are not shown as voting.",
+ "license": "CC BY-SA 4.0",
+ "provider": "Wikipedia, rendered article HTML (MediaWiki parse API)",
+ "retrieved": "2026-11-04",
+ "articles": {
+  "1789": {
+   "title": "1788–89 United States presidential election",
+   "revision": 1382006053,
+   "url": "https://en.wikipedia.org/w/index.php?oldid=1382006053",
+   "sha256": "4906bac8096f0d2ceecfed84acbd104719eb567986a1328d39365ed27e554221",
+   "bytes": 263081
+  },
+  "1792": {
+   "title": "1792 United States presidential election",
+   "revision": 1378957166,
+   "url": "https://en.wikipedia.org/w/index.php?oldid=1378957166",
+   "sha256": "5b30b42a316c0180adb03864654ceeec7f80b412461266ee77d771cbee47d13b",
+   "bytes": 220644
+  },
+  "1796": {
+   "title": "1796 United States presidential election",
+   "revision": 1382433150,
+   "url": "https://en.wikipedia.org/w/index.php?oldid=1382433150",
+   "sha256": "44d7aafcb91df4efb86f980448bfa4324825dea841a9641ef3ac1b947be71439",
+   "bytes": 386456
+  },
+  "1800": {
+   "title": "1800 United States presidential election",
+   "revision": 1383669676,
+   "url": "https://en.wikipedia.org/w/index.php?oldid=1383669676",
+   "sha256": "3f0ec54bcc01d53b994d4e241e20c28c35a5e65f25aedfb1d8a5f71b3cb7ac65",
+   "bytes": 455261
+  },
+  "1804": {
+   "title": "1804 United States presidential election",
+   "revision": 1383472850,
+   "url": "https://en.wikipedia.org/w/index.php?oldid=1383472850",
+   "sha256": "33b28d944bf035c7e1c879df0ff97709d840a56443549c2a21861cc1f9b067fc",
+   "bytes": 348647
+  },
+  "1808": {
+   "title": "1808 United States presidential election",
+   "revision": 1379826376,
+   "url": "https://en.wikipedia.org/w/index.php?oldid=1379826376",
+   "sha256": "a66f24ec8f59efc02504e444ec27fbbc38c855d925801191bc1b153f8c1e5872",
+   "bytes": 268274
+  },
+  "1812": {
+   "title": "1812 United States presidential election",
+   "revision": 1379826396,
+   "url": "https://en.wikipedia.org/w/index.php?oldid=1379826396",
+   "sha256": "38afef35d06c0ba7e4276b6c6fbf22cc0caca78ea39d19c662f89a326ddceb08",
+   "bytes": 250734
+  },
+  "1816": {
+   "title": "1816 United States presidential election",
+   "revision": 1382293699,
+   "url": "https://en.wikipedia.org/w/index.php?oldid=1382293699",
+   "sha256": "ebd4f69c06517b5b5cdb96d8078b174aef797e1e56175bc8089a0e6998b0fd81",
+   "bytes": 323023
+  },
+  "1820": {
+   "title": "1820 United States presidential election",
+   "revision": 1382243804,
+   "url": "https://en.wikipedia.org/w/index.php?oldid=1382243804",
+   "sha256": "a1c0dfe4d76292f2075b17308dac7f1d651f8f0be2cdec51537a0743462d11d0",
+   "bytes": 225151
+  },
+  "1824": {
+   "title": "1824 United States presidential election",
+   "revision": 1383649812,
+   "url": "https://en.wikipedia.org/w/index.php?oldid=1383649812",
+   "sha256": "fc613b65f76277eb7b104d8e42049b1148ce5e1184256eac77f595aa2a286c2e",
+   "bytes": 393114
+  },
+  "1828": {
+   "title": "1828 United States presidential election",
+   "revision": 1383675726,
+   "url": "https://en.wikipedia.org/w/index.php?oldid=1383675726",
+   "sha256": "1e795781b4366866d2f47f69ea1d184e2c5cc41caf12af823d3a64c6f7177bae",
+   "bytes": 357580
+  },
+  "1832": {
+   "title": "1832 United States presidential election",
+   "revision": 1381385478,
+   "url": "https://en.wikipedia.org/w/index.php?oldid=1381385478",
+   "sha256": "6adf2177f3bdc2dda8bc6d988a9b7ad029345c552254728a7dc0963faeef9219",
+   "bytes": 344679
+  },
+  "1836": {
+   "title": "1836 United States presidential election",
+   "revision": 1379826428,
+   "url": "https://en.wikipedia.org/w/index.php?oldid=1379826428",
+   "sha256": "7a06dba68bf3cca4f6dfbf59c4c85ec951581f9b2c4779f2425f6192e2c125bd",
+   "bytes": 269349
+  },
+  "1840": {
+   "title": "1840 United States presidential election",
+   "revision": 1378946446,
+   "url": "https://en.wikipedia.org/w/index.php?oldid=1378946446",
+   "sha256": "0afd62e4db64c6bba10cff1eb4163e97aceb9416d4002af71e2549d99247f197",
+   "bytes": 215551
+  },
+  "1844": {
+   "title": "1844 United States presidential election",
+   "revision": 1381688765,
+   "url": "https://en.wikipedia.org/w/index.php?oldid=1381688765",
+   "sha256": "a1cbc9b3c5fb44d2aa5d62f86e45b5e32af1f28adf3ec7e5f1238fbc621f8831",
+   "bytes": 295554
+  },
+  "1848": {
+   "title": "1848 United States presidential election",
+   "revision": 1380388776,
+   "url": "https://en.wikipedia.org/w/index.php?oldid=1380388776",
+   "sha256": "eeb92f57fd34bbfd5f37474487a136408390c4a760709ec86c3c445bb375feac",
+   "bytes": 321687
+  },
+  "1852": {
+   "title": "1852 United States presidential election",
+   "revision": 1377918051,
+   "url": "https://en.wikipedia.org/w/index.php?oldid=1377918051",
+   "sha256": "2994a4b80f5f3173024ff407ea89abbfb11a27162d92d9d7869a4de63105783f",
+   "bytes": 303266
+  },
+  "1856": {
+   "title": "1856 United States presidential election",
+   "revision": 1380691847,
+   "url": "https://en.wikipedia.org/w/index.php?oldid=1380691847",
+   "sha256": "e5abe9e55d7768f6ca19c148811086da672c281e10a189ba4cefd7cc7eede062",
+   "bytes": 326022
+  },
+  "1860": {
+   "title": "1860 United States presidential election",
+   "revision": 1382407345,
+   "url": "https://en.wikipedia.org/w/index.php?oldid=1382407345",
+   "sha256": "d5b5fee584de2f28c28baafb5dbacad0f617428c48009c816769c4bc803363bf",
+   "bytes": 499718
+  },
+  "1864": {
+   "title": "1864 United States presidential election",
+   "revision": 1378425158,
+   "url": "https://en.wikipedia.org/w/index.php?oldid=1378425158",
+   "sha256": "852fbcdd2f786783d371a480b0c9b30a80729db190edb5ff2d8207598c0bb46e",
+   "bytes": 445969
+  },
+  "1868": {
+   "title": "1868 United States presidential election",
+   "revision": 1378526575,
+   "url": "https://en.wikipedia.org/w/index.php?oldid=1378526575",
+   "sha256": "55e0f2329e53afafe2d70722bf19859b8792c510b448e7eee230b31fbca1ee84",
+   "bytes": 326366
+  },
+  "1872": {
+   "title": "1872 United States presidential election",
+   "revision": 1382311513,
+   "url": "https://en.wikipedia.org/w/index.php?oldid=1382311513",
+   "sha256": "a0a885a695e4b38e5451575268fa8ce52c29aedd2caf97f88d7e4d062985da49",
+   "bytes": 427313
+  },
+  "1876": {
+   "title": "1876 United States presidential election",
+   "revision": 1382286665,
+   "url": "https://en.wikipedia.org/w/index.php?oldid=1382286665",
+   "sha256": "35c91c84640d479b266671325119bb4d9689ea41e81eae0ab4281329a9fa084b",
+   "bytes": 398498
+  },
+  "1880": {
+   "title": "1880 United States presidential election",
+   "revision": 1381689238,
+   "url": "https://en.wikipedia.org/w/index.php?oldid=1381689238",
+   "sha256": "06dfe1942e954943e628dbb1732b810d8d7593655ab9f8c03ecb3569a56eb734",
+   "bytes": 348035
+  },
+  "1884": {
+   "title": "1884 United States presidential election",
+   "revision": 1382416324,
+   "url": "https://en.wikipedia.org/w/index.php?oldid=1382416324",
+   "sha256": "0402c1ba9c782b7ae290aecfe1412a114665c37ddaff9071d259953ecbe0bb3a",
+   "bytes": 270378
+  },
+  "1888": {
+   "title": "1888 United States presidential election",
+   "revision": 1378608701,
+   "url": "https://en.wikipedia.org/w/index.php?oldid=1378608701",
+   "sha256": "1f8eb9ba77ca210b3243c4835e18ceb618f97dbd794d84588e30141f0d8b75bf",
+   "bytes": 297213
+  },
+  "1892": {
+   "title": "1892 United States presidential election",
+   "revision": 1382669726,
+   "url": "https://en.wikipedia.org/w/index.php?oldid=1382669726",
+   "sha256": "200f2683a4c07f3b3b2cd8bdf6ccbb8a69903eeac1d36d14afe227dfb2882c03",
+   "bytes": 409665
+  },
+  "1896": {
+   "title": "1896 United States presidential election",
+   "revision": 1380713480,
+   "url": "https://en.wikipedia.org/w/index.php?oldid=1380713480",
+   "sha256": "59a4e944c3967d53b13e4f99923b0a458fdf2bf0dd0a418041590a797f7bc589",
+   "bytes": 542300
+  },
+  "1900": {
+   "title": "1900 United States presidential election",
+   "revision": 1382286304,
+   "url": "https://en.wikipedia.org/w/index.php?oldid=1382286304",
+   "sha256": "deffdc01e5eb425e9d666f0e38ffad962260ad13a0227eaabd27b6967d45f8eb",
+   "bytes": 474824
+  },
+  "1904": {
+   "title": "1904 United States presidential election",
+   "revision": 1381226978,
+   "url": "https://en.wikipedia.org/w/index.php?oldid=1381226978",
+   "sha256": "e73c4dc575f2965a7b25cb47f75cff60f3e6222412e02e8563ce1f39ac8d5d64",
+   "bytes": 361887
+  },
+  "1908": {
+   "title": "1908 United States presidential election",
+   "revision": 1382558862,
+   "url": "https://en.wikipedia.org/w/index.php?oldid=1382558862",
+   "sha256": "43a9020d9fc1aa3fa56ba019882d53ce8b1a0ce37dbd17289f6c58d2f3fe1df1",
+   "bytes": 421913
+  },
+  "1912": {
+   "title": "1912 United States presidential election",
+   "revision": 1383406865,
+   "url": "https://en.wikipedia.org/w/index.php?oldid=1383406865",
+   "sha256": "681346226732b30a0f6e37bab9a2e3390217e85727df6ed4cbbe7948b666cd5f",
+   "bytes": 538341
+  },
+  "1916": {
+   "title": "1916 United States presidential election",
+   "revision": 1383660537,
+   "url": "https://en.wikipedia.org/w/index.php?oldid=1383660537",
+   "sha256": "2632bc7bdde4ccdc2120d4fde8e23e4ecbffa79fa2e424d480ee74bcfdd56710",
+   "bytes": 417102
+  },
+  "1920": {
+   "title": "1920 United States presidential election",
+   "revision": 1383512164,
+   "url": "https://en.wikipedia.org/w/index.php?oldid=1383512164",
+   "sha256": "7993b343c71cf8fe5fbedfce8d7c59bf41b7603d65306b39ef9313294f10ac47",
+   "bytes": 502973
+  },
+  "1924": {
+   "title": "1924 United States presidential election",
+   "revision": 1383122570,
+   "url": "https://en.wikipedia.org/w/index.php?oldid=1383122570",
+   "sha256": "ca1fc059b768bcf991e64eab967e2418e2caa27c4d0af2c760a62ffab1602b9d",
+   "bytes": 455949
+  },
+  "1928": {
+   "title": "1928 United States presidential election",
+   "revision": 1381865811,
+   "url": "https://en.wikipedia.org/w/index.php?oldid=1381865811",
+   "sha256": "2bcd723c626eb465712ef5acf470d46c23e404a049902adb6c83e37a427b6322",
+   "bytes": 397529
+  },
+  "1932": {
+   "title": "1932 United States presidential election",
+   "revision": 1383484776,
+   "url": "https://en.wikipedia.org/w/index.php?oldid=1383484776",
+   "sha256": "00129fa5c83b3900afe3b8289e756df3b37b9dbebfff6faac4c7f1d27a569eec",
+   "bytes": 390645
+  },
+  "1936": {
+   "title": "1936 United States presidential election",
+   "revision": 1383518716,
+   "url": "https://en.wikipedia.org/w/index.php?oldid=1383518716",
+   "sha256": "396b029f880b656e8ceecbeafa85981a7155404db30986054d07e8d166bed09b",
+   "bytes": 335839
+  },
+  "1940": {
+   "title": "1940 United States presidential election",
+   "revision": 1383398307,
+   "url": "https://en.wikipedia.org/w/index.php?oldid=1383398307",
+   "sha256": "b9024aac615e26d193c75141a3c7e2534c6dd5c7dca12e7298f8950ca4fc8c15",
+   "bytes": 419692
+  },
+  "1944": {
+   "title": "1944 United States presidential election",
+   "revision": 1383658406,
+   "url": "https://en.wikipedia.org/w/index.php?oldid=1383658406",
+   "sha256": "49953e369a351ae9444237a6edb9e84ff58f25324addabcb0e2c77c63aed1d5a",
+   "bytes": 376592
+  },
+  "1948": {
+   "title": "1948 United States presidential election",
+   "revision": 1383094202,
+   "url": "https://en.wikipedia.org/w/index.php?oldid=1383094202",
+   "sha256": "b3ec91d2416194b7f39ba224a744e18ec39c1dc1cfd5b9db639d1d44d4304bba",
+   "bytes": 569321
+  },
+  "1952": {
+   "title": "1952 United States presidential election",
+   "revision": 1383370917,
+   "url": "https://en.wikipedia.org/w/index.php?oldid=1383370917",
+   "sha256": "ad9e80301fd3daca6d187ee92c5dad01a0c5498f584f6de6e566eeccb7f64bbf",
+   "bytes": 419726
+  },
+  "1956": {
+   "title": "1956 United States presidential election",
+   "revision": 1379715444,
+   "url": "https://en.wikipedia.org/w/index.php?oldid=1379715444",
+   "sha256": "65bb8cf92c789f93e6fc8f580d15ad69deff2492c89212871f6b891988439827",
+   "bytes": 392445
+  },
+  "1960": {
+   "title": "1960 United States presidential election",
+   "revision": 1383670077,
+   "url": "https://en.wikipedia.org/w/index.php?oldid=1383670077",
+   "sha256": "b77d73a685a0183cc87992d6804b4d209da5f225c7239823ca6c278d1e685a65",
+   "bytes": 697281
+  },
+  "1964": {
+   "title": "1964 United States presidential election",
+   "revision": 1383431392,
+   "url": "https://en.wikipedia.org/w/index.php?oldid=1383431392",
+   "sha256": "fb728f50bbb00646329796c3bac1d5c9ca1b7738cd4b68094127cc9cd6d3222f",
+   "bytes": 514928
+  },
+  "1968": {
+   "title": "1968 United States presidential election",
+   "revision": 1383658603,
+   "url": "https://en.wikipedia.org/w/index.php?oldid=1383658603",
+   "sha256": "9a243913f5086a5617e3cff0756855c8b05b5cbdffb5673b0054d1ee1d6cfc7f",
+   "bytes": 721800
+  },
+  "1972": {
+   "title": "1972 United States presidential election",
+   "revision": 1383485188,
+   "url": "https://en.wikipedia.org/w/index.php?oldid=1383485188",
+   "sha256": "0dcf64857e086d228a9062ba38ac8ef7a0ef13c975be7ecef0ff15c2f6b8f7af",
+   "bytes": 567603
+  },
+  "1976": {
+   "title": "1976 United States presidential election",
+   "revision": 1383377152,
+   "url": "https://en.wikipedia.org/w/index.php?oldid=1383377152",
+   "sha256": "036fcda097bb5d4cc59479c8a495a388ab13ac28207835c89a5988afdef4c48a",
+   "bytes": 484975
+  },
+  "1980": {
+   "title": "1980 United States presidential election",
+   "revision": 1383658688,
+   "url": "https://en.wikipedia.org/w/index.php?oldid=1383658688",
+   "sha256": "1826e889084f0a6a7b9a0871bd2001ac39a9715b89d21eddad00b6a16466ad57",
+   "bytes": 796901
+  },
+  "1984": {
+   "title": "1984 United States presidential election",
+   "revision": 1380048070,
+   "url": "https://en.wikipedia.org/w/index.php?oldid=1380048070",
+   "sha256": "c6271a4225843111fc6e5cda883712e4c6721a4316f9dbacbe0315371cabbb1a",
+   "bytes": 701317
+  },
+  "1988": {
+   "title": "1988 United States presidential election",
+   "revision": 1383688420,
+   "url": "https://en.wikipedia.org/w/index.php?oldid=1383688420",
+   "sha256": "62e9f3dd2fdc41f04b9738c4eabaa18fc105859fbb738be4d41b892548e4f306",
+   "bytes": 514631
+  },
+  "1992": {
+   "title": "1992 United States presidential election",
+   "revision": 1383304139,
+   "url": "https://en.wikipedia.org/w/index.php?oldid=1383304139",
+   "sha256": "cb6d92e19cb36dbe30398d5c7508d6d3211909ef6f7180b2f1ffbbd2c773e4b8",
+   "bytes": 711023
+  },
+  "1996": {
+   "title": "1996 United States presidential election",
+   "revision": 1383669488,
+   "url": "https://en.wikipedia.org/w/index.php?oldid=1383669488",
+   "sha256": "432b0ccf306e74ca851088b4bc953316bd1e5c3c90b6aa558af13bd18e027882",
+   "bytes": 565308
+  },
+  "2000": {
+   "title": "2000 United States presidential election",
+   "revision": 1383449736,
+   "url": "https://en.wikipedia.org/w/index.php?oldid=1383449736",
+   "sha256": "441f28281d71e91b91ddba6ddc4a963602f3a2cb319b6bf53a16fa322a770663",
+   "bytes": 769605
+  },
+  "2004": {
+   "title": "2004 United States presidential election",
+   "revision": 1383075971,
+   "url": "https://en.wikipedia.org/w/index.php?oldid=1383075971",
+   "sha256": "38dc16c67bd6ed31b8629ef283b8e90694813934d1d79cc88e13d3453f1e21e9",
+   "bytes": 643276
+  },
+  "2008": {
+   "title": "2008 United States presidential election",
+   "revision": 1382516945,
+   "url": "https://en.wikipedia.org/w/index.php?oldid=1382516945",
+   "sha256": "8ab35ddd18a47f2e7388a447547c05367ee2a7682e844d7a126ddd17ca46a45b",
+   "bytes": 952124
+  },
+  "2012": {
+   "title": "2012 United States presidential election",
+   "revision": 1383181054,
+   "url": "https://en.wikipedia.org/w/index.php?oldid=1383181054",
+   "sha256": "e8568a89e0e44f54ab1b278e8be5139da9796b1ba3e64f91939e58d16ad56b5b",
+   "bytes": 919197
+  },
+  "2016": {
+   "title": "2016 United States presidential election",
+   "revision": 1383507764,
+   "url": "https://en.wikipedia.org/w/index.php?oldid=1383507764",
+   "sha256": "cb74ff6a77eed010cf2b650e52a78ba943b90be7b712cb6658a5349c1e5daf3b",
+   "bytes": 1936262
+  },
+  "2020": {
+   "title": "2020 United States presidential election",
+   "revision": 1381608142,
+   "url": "https://en.wikipedia.org/w/index.php?oldid=1381608142",
+   "sha256": "60f2af17500393c58745cea7094129c355c7baf379f6613a5516356ece84d251",
+   "bytes": 1974635
+  },
+  "2024": {
+   "title": "2024 United States presidential election",
+   "revision": 1383696455,
+   "url": "https://en.wikipedia.org/w/index.php?oldid=1383696455",
+   "sha256": "6201c8dd4b309c849293ed8351fe5f8ed51e7615fdadcfaa03a894d0a045e57a",
+   "bytes": 1911861
+  }
+ }
+}
