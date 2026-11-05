@@ -1,0 +1,8 @@
+{
+  "url": "https://www.internationalboundarycommission.org/uploads/shapefile/us-canada-boundary-v1-3.zip",
+  "title": "International Boundary Commission digital boundary v1.3",
+  "reference": "https://www.internationalboundarycommission.org/en/maps-coordinates/coordinates.php",
+  "sha256": "eb327459528b87cbc27e55ccc6bfd6982562c75559823a00b6dc50c04abcaab1",
+  "processing": "NAD83 geographic coordinates reprojected to WGS84; full source resolution retained at 1e-6 degree precision.",
+  "geometrySha256": "0e1aa41dea541cd251f49f819d602ae66c5d91ec0be5ab3a837a590a7e697c77"
+}

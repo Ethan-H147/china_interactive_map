@@ -111,7 +111,7 @@
     "test:polygon-parts": "node scripts/validate-polygon-parts.mjs",
     "test:europe": "node scripts/validate-polygon-parts.mjs && node --check dist/europe.mjs && node scripts/validate-europe-data.mjs && node scripts/validate-regional-loading.mjs && npm run test:entry && node scripts/validate-developer-mode.mjs && npm run test:country-expansion",
     "test:browser": "node scripts/browser/run.mjs",
-    "build:borders": "node --max-old-space-size=6000 scripts/build-atlas-frontiers.mjs && node --max-old-space-size=6000 scripts/build-unit-edges.mjs && node --max-old-space-size=7000 scripts/build-channel-borders.mjs && node scripts/reconcile-frontier-arcs.mjs && node scripts/reconcile-china-southern-frontiers.mjs && node scripts/reconcile-myanmar-laos.mjs && node --max-old-space-size=8000 scripts/reconcile-bolivia-peru.mjs && node scripts/reconcile-bangladesh-myanmar-junction.mjs && node scripts/reconcile-himalaya-frontiers.mjs && npm run build:china-pack && node scripts/prepare-motion.mjs && npm run build:compact && npm run build:border-previews",
+    "build:borders": "node --max-old-space-size=6000 scripts/build-atlas-frontiers.mjs && node --max-old-space-size=6000 scripts/build-unit-edges.mjs && node --max-old-space-size=7000 scripts/build-channel-borders.mjs && node scripts/reconcile-frontier-arcs.mjs && node scripts/reconcile-china-southern-frontiers.mjs && node scripts/reconcile-myanmar-laos.mjs && node --max-old-space-size=8000 scripts/reconcile-bolivia-peru.mjs && node scripts/reconcile-bangladesh-myanmar-junction.mjs && node scripts/reconcile-himalaya-frontiers.mjs && npm run build:china-pack && node scripts/prepare-motion.mjs && node --max-old-space-size=8000 scripts/reconcile-us-canada.mjs && npm run build:compact && npm run build:border-previews",
     "build:compact": "node scripts/build-compact.mjs",
     "test:compact": "node --check dist/geo-pack.mjs && node scripts/validate-compact.mjs",
     "test:borders": "node --check dist/edge-runs.mjs && node --check scripts/channel-lines.mjs && node scripts/validate-borders.mjs && npm run test:frontier-continuity && npm run test:bolivia-peru-frontier",
@@ -501,6 +501,10 @@
     "test:country-render-pipeline": "node scripts/validate-country-render-pipeline.mjs && node scripts/browser/run.mjs country-render-pipeline pan-outline-continuity",
     "test:cloudflare-assets": "node scripts/validate-cloudflare-assets.mjs",
     "build:south-america-regional": "node scripts/build-south-america-regional.mjs",
-    "test:south-america-regional": "node scripts/validate-south-america-regional.mjs && node scripts/browser/run.mjs south-america-pages"
+    "test:south-america-regional": "node scripts/validate-south-america-regional.mjs && node scripts/browser/run.mjs south-america-pages",
+    "build:us-canada-frontier": "node --max-old-space-size=8000 scripts/reconcile-us-canada.mjs && node scripts/build-us-canada-frontier-assets.mjs",
+    "test:us-canada-frontier": "node scripts/validate-us-canada-frontier.mjs && node scripts/browser/run.mjs us-canada-frontier",
+    "build:historical-coasts": "node scripts/build-alaska-history.mjs && node --max-old-space-size=8000 scripts/build-upper-peninsula-history.mjs && node --max-old-space-size=10000 scripts/build-historical-coast-display.mjs",
+    "test:historical-coasts": "node scripts/validate-historical-coast-display.mjs && node scripts/browser/run.mjs historical-coast-selection"
   }
 }

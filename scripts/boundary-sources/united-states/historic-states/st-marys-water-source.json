@@ -1,0 +1,9 @@
+{
+  "title": "OpenStreetMap St. Marys River water surfaces",
+  "url": "https://www.openstreetmap.org/copyright",
+  "license": "ODbL 1.0",
+  "attribution": "© OpenStreetMap contributors",
+  "query": "[out:json][timeout:120];(way[\"natural\"=\"water\"][\"water\"=\"river\"](45.75,-85.1,46.7,-83.35);relation[\"natural\"=\"water\"][\"water\"=\"river\"](45.75,-85.1,46.7,-83.35);way[\"waterway\"=\"riverbank\"](45.75,-85.1,46.7,-83.35);relation[\"waterway\"=\"riverbank\"](45.75,-85.1,46.7,-83.35);way[\"natural\"=\"water\"][\"name\"~\"Nicolet|George|Munuscong|Potagannissing\",i](45.75,-85.1,46.7,-83.35);relation[\"natural\"=\"water\"][\"name\"~\"Nicolet|George|Munuscong|Potagannissing\",i](45.75,-85.1,46.7,-83.35););out geom;",
+  "sha256": "f1807057af31b78bb3bf02ebedd8ee792fa064955d6fd510b657d6561f2f4375",
+  "features": 221
+}

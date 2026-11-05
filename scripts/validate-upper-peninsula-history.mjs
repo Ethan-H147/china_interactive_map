@@ -1,0 +1,20 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {createHash} from 'node:crypto';
+import {decodeData} from '../dist/geo-pack.mjs';import {polygons,landIndex,lineIndex,linesOf,metres} from './geo-index.mjs';import {lineRegion} from '../dist/historical-region.mjs';
+const read=async f=>decodeData(fs.readFileSync(f)),file='dist/data/europe/united-states/history/borders.bin',h=await read(file),r=await read('dist/data/europe/united-states/history/upper-peninsula.bin');
+assert.equal(createHash('sha256').update(fs.readFileSync(file)).digest('hex'),r.inputs[file],'The national history file was not rewritten');assert.equal(h.source.sha256,r.historySource);assert.equal(h.faces.features.length,r.historyFaces);
+const index=data=>data.features.map(f=>({f,inside:landIndex(polygons(f.geometry).flat())})),faces=index(r.faces),land=index(r.land),water=index(r.sea),at=(list,p)=>list.find(o=>o.inside(p))?.f;
+const config=h.configs[h.years[1833].config];
+for(const [name,p,us]of [['UP mainland',[-84.5,46.3],true],['Sugar Island',[-84.2,46.43],true],['Neebish Island',[-84.13,46.27],true],['Drummond Island',[-83.7,46.02],true],['St Joseph Island',[-83.95,46.24],false]]){assert(at(land,p),name+' retained as physical land');assert(!at(water,p),name+' not flooded');const f=at(faces,p);if(us){assert(f,name+' has dated land');assert.equal(config.units[config.face[f.properties.f]].sovereign,'US');assert.match(config.units[config.face[f.properties.f]].name,/Michigan/);}else assert(!f||config.units[config.face[f.properties.f]].sovereign!=='US',name+' remains Canadian');}
+// Probe the channel and its shores densely; land and water must never overlap.
+let count=0;for(let x=-84.65;x<=-83.5;x+=.0067)for(let y=45.9;y<=46.55;y+=.0067){const p=[x,y];assert(!(at(land,p)&&at(water,p)),'Physical land/water overlap at '+p);if(at(faces,p)){assert(at(land,p),'Historical face over water at '+p);assert(!at(water,p));count++;}}
+assert(count>3000);
+const oldBorder=h.borders.features.filter(f=>r.affected.borders.includes(f.properties.b));assert(oldBorder.length>0);
+assert.equal(lineRegion(linesOf({features:r.displayBorders.features.filter(f=>f.properties.face===undefined)}),r.bounds,true).length,0,'False historical shoreline borders removed');
+const survey=linesOf(r.borders),near=lineIndex(survey),native=await read('dist/data/europe/united-states/international.bin'),originalWater=lineIndex(linesOf({features:native.features.filter(f=>f.properties.pair==='CAN-USA'&&f.properties.resolvedFrontier==='USA-CAN-SHARED-WATER')}));
+for(const p of Object.values(r.joins)){assert(near(p)<.1,'Surveyed channel reaches its seam');assert(originalWater(p)<.1,'Channel joins existing water border exactly');}
+for(const collection of [r.outsidePrecise,r.outsideCoarse])for(const f of collection.features){assert.equal(f.properties.pair,'CAN-USA');assert.equal(lineRegion(linesOf({features:[f]}),(f.properties.resolvedFrontier==='USA-CAN-SHARED-LAND'?r.bounds:r.borderBounds).map((v,i)=>v+(i<2?1:-1)*1e-6),true).length,0,'No replacement stroke inside the repaired region');}
+// Outside faces retain both geometry and jurisdiction, tested across every
+// affected original face rather than just checking a dissolved country outline.
+const [w,s,e,n]=r.bounds;let probes=0;for(const f of h.faces.features.filter(f=>r.affected.faces.includes(f.properties.f))){const before=landIndex(polygons(f.geometry).flat()),after=landIndex(r.displayFaces.features.filter(g=>g.properties.f===f.properties.f).flatMap(g=>polygons(g.geometry).flat()));for(const ring of polygons(f.geometry).flat())for(let i=1;i<ring.length;i++){const p=ring[i].map((v,j)=>(v+ring[i-1][j])/2);if(p[0]>w-.00001&&p[0]<e+.00001&&p[1]>s-.00001&&p[1]<n+.00001)continue;for(const dx of [-.00002,.00002]){const q=[p[0]+dx,p[1]+.000013];assert.equal(after(q),before(q),'Outside dated face changed '+f.properties.f+' at '+q);probes++;}}}
+assert(probes>100);assert.match(r.source.water.license,/ODbL|Open Database/i);
+console.log('Upper Peninsula: original national history unchanged;',count,'land probes and',probes,'outside face probes; islands, channel seams and false-shore removal passed.');

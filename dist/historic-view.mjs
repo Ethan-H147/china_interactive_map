@@ -1,3 +1,4 @@
+import {addDockCollapse} from './dock-collapse.mjs';
 import {OTHER_LAND,createHostLines} from './historic-borders.mjs';
 import {CHEVRON,DISPUTED,TERRITORY,holderLines} from './elections.mjs';
 import {getMapScene} from './map-scene.mjs';
@@ -42,7 +43,7 @@ export function createHistoricView(map,{country,base,config,borders:engine,fill,
   if(!applied)original=map.getPaintProperty(fillLayer,'fill-color');
   map.setPaintProperty(fillLayer,'fill-color',OTHER_LAND);
   if(map.getLayer(selectionLayer))map.setPaintProperty(selectionLayer,'fill-opacity',0);
-  engine.draw(current(),colorOf,fillLayer);engine.outline(current(),currentUnit());
+  engine.draw(current(),colorOf,fillLayer);engine.outline(current(),currentUnit(),{highlight:true});
   hostLines({borders:true,selection:true});applied=true;
  }
  function restore(){
@@ -54,6 +55,7 @@ export function createHistoricView(map,{country,base,config,borders:engine,fill,
  function buildDock(){
   dock=el('section','election-dock history-dock');dock.id=country+'-history-dock';dock.hidden=true;dock.setAttribute('aria-label',config.label);
   dock.innerHTML='<div class="election-head"><div class="election-year"><strong></strong><span></span></div><div class="election-tally history-tally"><div class="history-counts"></div><div class="election-needed"></div></div></div><div class="election-legend"></div><div class="election-timeline"><div class="election-strip" role="listbox" aria-label="Year"></div><div class="election-steps"><button type="button" class="election-step" data-step="-1" aria-label="Previous year">'+CHEVRON+'</button><button type="button" class="election-step" data-step="1" aria-label="Next year">'+CHEVRON+'</button></div></div>';
+  addDockCollapse(dock,{label:'historical controls',onResize:insets});
   document.getElementById('map-shell').append(dock);
   for(const button of dock.querySelectorAll('.election-step'))button.onclick=()=>step(+button.dataset.step);
   dock.querySelector('.election-strip').onkeydown=event=>{const keys={ArrowLeft:-1,ArrowRight:1,Home:-Infinity,End:Infinity};if(!(event.key in keys))return;event.preventDefault();const all=years(),i=all.indexOf(year),next=keys[event.key]===-Infinity?0:keys[event.key]===Infinity?all.length-1:Math.max(0,Math.min(all.length-1,i+keys[event.key]));setYear(all[next],true);};
@@ -110,7 +112,7 @@ export function createHistoricView(map,{country,base,config,borders:engine,fill,
   // present-day place under a click on a unit without a state of its own.
   if(focus&&focus.place!=null&&focus.place!==record?.id)focus=null;
   if(focus&&focus.place==null)focus.place=record?.id;
-  selectedRecord=record?.level===1?record.id:null;if(applied)engine.outline(current(),currentUnit());
+  selectedRecord=record?.level===1?record.id:null;if(applied)engine.outline(current(),currentUnit(),{highlight:true});
   anchor.hidden=!active||!engine.data||!record||record.level!==1;if(anchor.hidden)return;
   const unit=currentUnit();
   anchor.append(el('h3',undefined,unit?unit.name:config.outside));

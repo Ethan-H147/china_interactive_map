@@ -1,3 +1,6 @@
+import {createHistoricalAlaska} from './historical-alaska.mjs';
+import {createHistoricalRegion} from './historical-region-display.mjs';
+import {internationalBorderPaint,regionalLineWidth} from './adaptive-lines.mjs';
 import {compactUrl,decodeData,fetchBytes} from './geo-pack.mjs';
 import {mapPalette} from './map-palette.mjs';
 import {getMapScene} from './map-scene.mjs';
@@ -18,7 +21,7 @@ export const OTHER_LAND=mapPalette.country;
 // polygons because rendered-feature queries skip layers the map's motion handling has not
 // registered, which these layers are not.
 export function packShapes(features){
- return features.filter(f=>!f.properties.outline).map(f=>{
+ return features.filter(f=>f.geometry&&['Polygon','MultiPolygon'].includes(f.geometry.type)&&!f.properties.outline).map(f=>{
   const rings=(f.geometry.type==='Polygon'?[f.geometry.coordinates]:f.geometry.coordinates).flat(),starts=new Int32Array(rings.length+1),xy=new Float64Array(2*rings.reduce((n,r)=>n+r.length,0));
   let k=0,w=180,s=90,e=-180,n=-90;rings.forEach((ring,i)=>{starts[i]=k/2;for(const [x,y] of ring){xy[k++]=x;xy[k++]=y;if(x<w)w=x;if(x>e)e=x;if(y<s)s=y;if(y>n)n=y;}});starts[rings.length]=k/2;
   return {properties:f.properties,xy,starts,box:[w,s,e,n]};
@@ -50,59 +53,86 @@ export function createHostLines(map,{country,scene=getMapScene(map),own=()=>fals
  };
 }
 
+// Historical arcs and election overlays do not carry the administrative
+// mesh's visibleZoom attribute. Keep its normal opacity instead of fading out.
+export function administrativeBorderPaint(map,lineLayer,scene=getMapScene(map)){
+ const compatible=value=>Array.isArray(value)?value[0]==='get'&&value[1]==='visibleZoom'?['coalesce',value,0]:value.map(compatible):value;
+ return map.getLayer(lineLayer)?Object.fromEntries(['line-color','line-width','line-opacity'].map(p=>[p,compatible(scene?.basePaint(lineLayer,p)??map.getPaintProperty(lineLayer,p))]).filter(([,v])=>v!==undefined)):{'line-color':'#587694','line-width':1};
+}
+
 export function createHistoricBorders(map,{country,base,file,lineLayer=country+'-first-lines'}){
- const layers={fill:country+'-history-fill',lines:country+'-history-lines',frontiers:country+'-history-frontiers',outer:country+'-history-outer',selected:country+'-history-selected'};
- const sources={faces:country+'-history-faces',edges:country+'-history-edges',outer:country+'-history-borders'};
+ const layers={fill:country+'-history-fill',lines:country+'-history-lines',frontiers:country+'-history-frontiers',outer:country+'-history-outer',selected:country+'-history-selected',selectedFill:country+'-history-selected-fill',water:country+'-history-water'};
+ const sources={faces:country+'-history-faces',edges:country+'-history-edges',outer:country+'-history-borders',water:country+'-history-water'};
  const ownLayers=new Set(Object.values(layers));
+ const region=createHistoricalRegion(map,{country,base,packShapes,shapeAt,ownLayers});
+ const alaska=createHistoricalAlaska(map,{country,base,packShapes,shapeAt,ownLayers});
+ const exclude=(field,filter)=>alaska.exclude(field,region.exclude(field,filter));
  let data=null,loading=null;
  function load(){
   loading??=(async()=>{
-   const bytes=await fetchBytes(compactUrl(base+file)),loaded=await decodeData(bytes),sides=loaded.arcs.features.map(f=>f.properties);
-   data={source:loaded.source,versions:loaded.versions,configs:loaded.configs,elections:loaded.elections,years:loaded.years,url:URL.createObjectURL(new Blob([bytes])),shapes:packShapes(loaded.faces.features),arcL:Int32Array.from(sides,a=>a.l),arcR:Int32Array.from(sides,a=>a.r),arcId:Int32Array.from(sides,a=>a.a)};
+   const bytes=await fetchBytes(compactUrl(base+file)),loaded=await decodeData(bytes);
+   const displayBytes=country==='united-states'?await fetchBytes(compactUrl(base+'history/coastal-display.bin')):null,display=displayBytes?await decodeData(displayBytes):loaded;
+   if(displayBytes&&display.historySource!==loaded.source.sha256)throw Error('Coastal display does not match the retained history');
+   const sides=display.arcs.features.map(f=>f.properties),originalUrl=URL.createObjectURL(new Blob([bytes]));
+   data={source:loaded.source,faceCount:loaded.faces.features.length,versions:loaded.versions,configs:loaded.configs,elections:loaded.elections,years:loaded.years,originalUrl,url:displayBytes?URL.createObjectURL(new Blob([displayBytes])):originalUrl,display:!!displayBytes,shapes:packShapes(display.faces.features),arcL:Int32Array.from(sides,a=>a.l),arcR:Int32Array.from(sides,a=>a.r),arcId:Int32Array.from(sides,a=>a.a)};
+   await Promise.all([region.load(data),alaska.load(data)]);
    return data;
   })().catch(error=>{loading=null;throw error;});
   return loading;
  }
- const linePaint=()=>map.getLayer(lineLayer)?Object.fromEntries(['line-color','line-width','line-opacity'].map(p=>[p,map.getPaintProperty(lineLayer,p)]).filter(([,v])=>v!==undefined)):{'line-color':'#587694','line-width':1};
- // Frontiers between countries are drawn heavier than borders within one.
- const frontierPaint=()=>{const color=map.getLayer(lineLayer)&&map.getPaintProperty(lineLayer,'line-color');return {'line-color':typeof color==='string'?color:'#587694','line-width':['interpolate',['linear'],['zoom'],3,1.1,8,2]};};
- function selectionPaint(){
-  const host=map.getStyle().layers.find(l=>l.type==='line'&&l.id.startsWith(country+'-')&&l.metadata?.atlas?.role==='selection'&&!ownLayers.has(l.id));
-  const color=host&&map.getPaintProperty(host.id,'line-color'),width=host&&map.getPaintProperty(host.id,'line-width');
-  return {'line-color':typeof color==='string'?color:'#b73945','line-width':width??1.8};
- }
- function remove(){for(const id of Object.values(layers))if(map.getLayer(id))map.removeLayer(id);for(const id of Object.values(sources))if(map.getSource(id))map.removeSource(id);}
+ // Capture the ordinary state-line paint before the host lines are hidden.
+ let normalPaint;
+ const linePaint=()=>normalPaint??=administrativeBorderPaint(map,lineLayer);
+ // Country frontiers match the gray shared country-border layer.
+ const frontierPaint=internationalBorderPaint;
+ // A selected dated unit uses a single visible stroke, including its coast.
+ const selectionPaint=()=>({...linePaint(),'line-width':regionalLineWidth(1,true),'line-opacity':1});
+ function remove(){alaska.remove();region.remove();normalPaint=undefined;for(const id of Object.values(layers))if(map.getLayer(id))map.removeLayer(id);for(const id of Object.values(sources))if(map.getSource(id))map.removeSource(id);}
  const none=['==',['get','a'],-1],round={'line-join':'round','line-cap':'round'};
  return {
   layers:ownLayers,load,remove,get data(){return data;},
   unit(config,face){const i=face>=0?config.face[face]:-1;return i>=0?config.units[i]:null;},
-  pick(point){const hit=shapeAt(map,data.shapes,point);return hit?hit.properties.f:null;},
+  pick(point){const ak=alaska.pick(point);if(ak!==undefined)return ak;const local=region.pick(point);if(local!==undefined)return local;const hit=shapeAt(map,data.shapes,point);return hit?hit.properties.f:null;},
   // Draws a configuration directly above the host's first-level fill, colouring each unit.
   draw(config,colorOf,fillLayer){
    if(!map.getSource(sources.faces)){
     const url=member=>'atlas-data://'+country+'-history?url='+encodeURIComponent(data.url)+'&member='+member;
-    map.addSource(sources.faces,{type:'geojson',data:url('faces'),tolerance:.25});map.addSource(sources.edges,{type:'geojson',data:url('arcs'),tolerance:.25});map.addSource(sources.outer,{type:'geojson',data:url('borders'),tolerance:.25});
+    const original=member=>'atlas-data://'+country+'-original-history?url='+encodeURIComponent(data.originalUrl)+'&member='+member;
+    map.addSource(sources.faces,{type:'geojson',data:url('faces'),tolerance:.25});map.addSource(sources.edges,{type:'geojson',data:url('arcs'),tolerance:.25});map.addSource(sources.outer,{type:'geojson',data:original('borders'),tolerance:.25});
     const all=map.getStyle().layers,before=all[all.findIndex(l=>l.id===fillLayer)+1]?.id;
     map.addLayer({id:layers.fill,type:'fill',source:sources.faces,paint:{'fill-color':TRANSPARENT}},before);
     map.addLayer({id:layers.lines,type:'line',source:sources.edges,filter:none,layout:round,paint:linePaint()},before);
     map.addLayer({id:layers.frontiers,type:'line',source:sources.edges,filter:none,layout:round,paint:frontierPaint()},before);
     map.addLayer({id:layers.outer,type:'line',source:sources.outer,filter:['==',['get','b'],-1],layout:round,paint:frontierPaint()},before);
-    map.addLayer({id:layers.selected,type:'line',source:sources.edges,filter:none,layout:round,paint:selectionPaint()},before);
+    map.addLayer({id:layers.selected,type:'line',source:sources.edges,metadata:{atlas:{role:'selection'}},filter:none,layout:round,paint:selectionPaint()},before);
    }
    const color=config.units.map(colorOf),faces=new Map();
    config.face.forEach((unit,f)=>{if(unit<0)return;const key=color[unit];if(!faces.has(key))faces.set(key,[]);faces.get(key).push(f);});
-   map.setPaintProperty(layers.fill,'fill-color',faces.size?['match',['get','f'],...[...faces].flatMap(([key,list])=>[list,key]),TRANSPARENT]:TRANSPARENT);
-   map.setFilter(layers.lines,['in',['get','a'],['literal',config.lines]]);
-   map.setFilter(layers.frontiers,['in',['get','a'],['literal',config.frontiers]]);
-   map.setFilter(layers.outer,['in',['get','b'],['literal',config.borders]]);
+   const colors=faces.size?['match',['get','f'],...[...faces].flatMap(([key,list])=>[list,key]),TRANSPARENT]:TRANSPARENT;
+   map.setPaintProperty(layers.fill,'fill-color',colors);
+   map.setFilter(layers.fill,data.display?alaska.exclude('f',['literal',true]):exclude('f',['literal',true]));
+   const lines=[],frontiers=[];
+   if(data.display)for(let i=0;i<data.arcId.length;i++){const l=config.face[data.arcL[i]],r=data.arcR[i]>=0?config.face[data.arcR[i]]:-1;if(l>=0&&r>=0&&l!==r)(config.units[l].sovereign===config.units[r].sovereign?lines:frontiers).push(data.arcId[i]);}
+   map.setFilter(layers.lines,['in',['get','a'],['literal',data.display?lines:config.lines]]);
+   map.setFilter(layers.frontiers,['in',['get','a'],['literal',data.display?frontiers:config.frontiers]]);
+   map.setFilter(layers.outer,exclude('b',['in',['get','b'],['literal',config.borders]]));
+   region.draw(config,colors,linePaint());alaska.draw(config,colorOf);if(data.display)map.moveLayer(layers.fill);
+   if(data.display){
+    if(!map.getSource(sources.water))map.addSource(sources.water,{type:'geojson',data:'atlas-data://'+country+'-history-water?url='+encodeURIComponent(data.url)+'&member=water',tolerance:.125});
+    if(!map.getLayer(layers.water))map.addLayer({id:layers.water,type:'fill',source:sources.water,metadata:{atlas:{role:'water',sea:true,satellite:{fill:'fade'}}},paint:{'fill-color':map.getPaintProperty('background','background-color'),'fill-antialias':false}});
+   }
+   if(!map.getLayer(layers.selectedFill))map.addLayer({id:layers.selectedFill,metadata:{atlas:{satellite:{fill:'none'}}},type:'fill',source:sources.faces,filter:['==',['get','f'],-1],paint:{'fill-color':map.getPaintProperty(country+'-first-selection-fill','fill-color')||'#b7cce3','fill-opacity':.45,'fill-antialias':false}});
+   map.moveLayer(layers.selectedFill);
   },
   // Outlines one unit: the edges with that unit on exactly one side.
-  outline(config,unit){
+  outline(config,unit,{highlight=false}={}){
    if(!map.getLayer(layers.selected))return;
    const index=unit?config.units.indexOf(unit):-1,arcs=[];
    if(index>=0)for(let i=0;i<data.arcL.length;i++){const l=config.face[data.arcL[i]]===index,r=data.arcR[i]>=0&&config.face[data.arcR[i]]===index;if(l!==r)arcs.push(data.arcId[i]);}
    map.setFilter(layers.selected,['in',['get','a'],['literal',arcs]]);
+   const faces=highlight&&index>=0?config.face.flatMap((u,f)=>u===index?[f]:[]):[];
+   if(map.getLayer(layers.selectedFill))map.setFilter(layers.selectedFill,['in',['get','f'],['literal',faces]]);
   },
-  dispose(){remove();if(data)URL.revokeObjectURL(data.url);data=null;loading=null;}
+  dispose(){remove();region.dispose();alaska.dispose();if(data){URL.revokeObjectURL(data.url);if(data.originalUrl!==data.url)URL.revokeObjectURL(data.originalUrl);}data=null;loading=null;}
  };
 }

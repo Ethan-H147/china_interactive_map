@@ -1,5 +1,7 @@
+import {regionalLineWidth} from './adaptive-lines.mjs';
+import {addDockCollapse} from './dock-collapse.mjs';
 import {loadCompressed} from './korea-data.mjs';
-import {createHistoricBorders,createHostLines,packShapes,shapeAt,OTHER_LAND} from './historic-borders.mjs';
+import {administrativeBorderPaint,createHistoricBorders,createHostLines,packShapes,shapeAt,OTHER_LAND} from './historic-borders.mjs';
 import {getMapScene} from './map-scene.mjs';
 // National elections as a first-level map view, shared by every country with an Elections view.
 // Present-day shapes are drawn for every year; a unit is shaded by its winner, and by the
@@ -103,12 +105,9 @@ export function createElectionView(map,{country,base,config,fill,selected:select
  const unitLayers=[country+'-election-units-fill',country+'-election-units-lines',country+'-election-units-selected'],unitSource=country+'-election-units';
  const hostLines=createHostLines(map,{country,scene,own:id=>unitLayers.includes(id)||!!engine?.layers.has(id)});
  const insertBefore=()=>{const layers=map.getStyle().layers;return layers[layers.findIndex(l=>l.id===fillLayer)+1]?.id;};
- const linePaint=()=>map.getLayer(lineLayer)?Object.fromEntries(['line-color','line-width','line-opacity'].map(p=>[p,map.getPaintProperty(lineLayer,p)]).filter(([,v])=>v!==undefined)):{'line-color':'#587694','line-width':1};
- function selectionPaint(){
-  const host=map.getStyle().layers.find(l=>l.type==='line'&&l.id.startsWith(country+'-')&&l.metadata?.atlas?.role==='selection'&&!unitLayers.includes(l.id));
-  const color=host&&map.getPaintProperty(host.id,'line-color'),width=host&&map.getPaintProperty(host.id,'line-width');
-  return {'line-color':typeof color==='string'?color:'#b73945','line-width':width??1.8};
- }
+ let normalPaint;
+ const linePaint=()=>normalPaint??=administrativeBorderPaint(map,lineLayer,scene);
+ const selectionPaint=()=>({...linePaint(),'line-width':regionalLineWidth(1,true),'line-opacity':1});
 
  // Units that voted on their own but are not drawn on the present-day map (Gwangju, now within
  // Jeonnam–Gwangju) come with the dataset as `units`: their fill and outline, directly above
@@ -120,7 +119,7 @@ export function createElectionView(map,{country,base,config,fill,selected:select
    const before=insertBefore();
    map.addLayer({id:unitLayers[0],type:'fill',source:unitSource,filter:['!',['has','outline']],paint:{'fill-color':paint}},before);
    map.addLayer({id:unitLayers[1],type:'line',source:unitSource,filter:['has','outline'],layout:{'line-join':'round','line-cap':'round'},paint:linePaint()},before);
-   map.addLayer({id:unitLayers[2],type:'line',source:unitSource,filter:['==',['get','id'],''],layout:{'line-join':'round','line-cap':'round'},paint:selectionPaint()},before);
+   map.addLayer({id:unitLayers[2],metadata:{atlas:{role:'selection'}},type:'line',source:unitSource,filter:['==',['get','id'],''],layout:{'line-join':'round','line-cap':'round'},paint:selectionPaint()},before);
   }else map.setPaintProperty(unitLayers[0],'fill-color',paint);
  }
  // The historic unit shown for the current selection: the face picked on the map, or the unit
@@ -135,6 +134,7 @@ export function createElectionView(map,{country,base,config,fill,selected:select
  function outline(){
   if(showingHistory())engine.outline(historyConfig(),currentUnit());
   if(data?.units&&map.getLayer(unitLayers[2])){const e=election(),ids=focus?.unit?[focus.unit]:selectedRecord?Object.entries(e.states).filter(([,s])=>s.within===selectedRecord).map(([id])=>id):[];map.setFilter(unitLayers[2],['all',['has','outline'],['in',['get','id'],['literal',ids]]]);}
+  // Keep ordinary state strokes, using dated edges when historic borders are shown.
   hostLines({borders:showingHistory(),selection:showingHistory()||!!focus?.unit});
  }
  function apply(){
@@ -142,13 +142,13 @@ export function createElectionView(map,{country,base,config,fill,selected:select
   if(!applied)original??=map.getPaintProperty(fillLayer,'fill-color');
   const paint=expression(),past=showingHistory();map.setPaintProperty(fillLayer,'fill-color',past?OTHER_LAND:paint);drawUnits(paint);
   if(past)engine.draw(historyConfig(),unitColor,fillLayer);else engine?.remove();
-  if(map.getLayer(selectionLayer)){map.setPaintProperty(selectionLayer,'fill-color',paint);map.setPaintProperty(selectionLayer,'fill-opacity',past?0:1);}
+  if(map.getLayer(selectionLayer)){map.setPaintProperty(selectionLayer,'fill-color',paint);map.setPaintProperty(selectionLayer,'fill-opacity',0);}
   outline();applied=true;
  }
  function restore(){
-  if(!applied)return;applied=false;removeUnits();engine?.remove();hostLines();
+  if(!applied)return;applied=false;removeUnits();engine?.remove();hostLines();normalPaint=undefined;
   if(map.getLayer(fillLayer))map.setPaintProperty(fillLayer,'fill-color',original);
-  if(map.getLayer(selectionLayer))map.setPaintProperty(selectionLayer,'fill-color',selectedFill);
+  if(map.getLayer(selectionLayer)){map.setPaintProperty(selectionLayer,'fill-color',selectedFill);map.setPaintProperty(selectionLayer,'fill-opacity',1);}
   if(!fill)original=undefined;
  }
  // A map click while the view draws units of its own. Returns the host record to select (null:
@@ -190,6 +190,7 @@ export function createElectionView(map,{country,base,config,fill,selected:select
   const switcher=datasets.length>1?'<div class="election-switch" role="group" aria-label="Electorate">'+datasets.map(d=>'<button type="button" data-dataset="'+d.id+'">'+d.label+'</button>').join('')+'</div>':historic?'<div class="election-switch" role="group" aria-label="Borders"><button type="button" data-borders="present">Current borders</button><button type="button" data-borders="historic">Historic borders</button></div>':'';
   dock.innerHTML='<div class="election-head"><div class="election-year"><strong></strong><span></span></div><div class="election-tally"><div class="election-names"></div><div class="election-bar" role="img"></div><div class="election-needed"></div></div></div><div class="election-legend"></div><div class="election-timeline">'+switcher+'<div class="election-strip" role="listbox" aria-label="Election year"></div><div class="election-steps"><button type="button" class="election-step" data-step="-1" aria-label="Previous election">'+CHEVRON+'</button><button type="button" class="election-step" data-step="1" aria-label="Next election">'+CHEVRON+'</button></div></div>';
   dock.querySelector('.election-timeline').classList.toggle('has-switch',!!switcher);
+  addDockCollapse(dock,{label:'election controls',onResize:insets});
   document.getElementById('map-shell').append(dock);
   for(const button of dock.querySelectorAll('.election-step'))button.onclick=()=>step(+button.dataset.step);
   for(const button of dock.querySelectorAll('[data-dataset]'))button.onclick=()=>setDataset(button.dataset.dataset);

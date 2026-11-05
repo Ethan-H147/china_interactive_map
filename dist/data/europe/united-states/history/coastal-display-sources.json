@@ -1,0 +1,278 @@
+{
+  "inputs": {
+    "dist/data/europe/united-states/history/borders.bin": "ec8384fb9daebbcbf9faa5c524154912cb3fba931c9b2fb676803308a26944b3",
+    "dist/data/europe/united-states/first.bin": "a52e2aa775b039cdd32b12c5a499c703bd6780219146522ca4330e2208bcd830",
+    "dist/data/europe/united-states/context.bin": "40f6cf9157214f49a22450f28daeb7022fd7e4b1719606ba7a42ea8566be8eaf",
+    "dist/data/europe/united-states/history/upper-peninsula.bin": "17b7d948f37cefad49e3a3b1249e95c900e77e07ef1868f6d8680f0b720b2f7f",
+    "dist/data/europe/united-states/history/alaska.bin": "c3ed8ab88be6885d0afbb39167a28a7a8f4f09c4651eba3af6aca47e7e0df15e",
+    "dist/data/major-lake-cutouts.bin": "7fecac8f739150e8a19505e0326f6c5702afb57844572f1494792d93946572d0",
+    "dist/data/americas-inland-water.bin": "0a71f019285afa3de531645e10871d69e63250b904efe0be85f9e665517d81f5",
+    "dist/data/canada-lakes.bin": "1108d964af355abfe2d554b2eb84f6ea4642e32f38ac8bad2cc60bc9a9b618ca"
+  },
+  "uniformTimelineStates": [
+    "US-AL",
+    "US-FL",
+    "US-GA",
+    "US-AZ",
+    "US-NM",
+    "US-OR",
+    "US-CT",
+    "US-NY",
+    "US-MD",
+    "US-VA",
+    "US-DE",
+    "US-NJ",
+    "US-NC",
+    "US-SC",
+    "US-TX",
+    "US-HI",
+    "US-IL",
+    "US-ID",
+    "US-WA",
+    "US-NH",
+    "US-VT",
+    "US-ME"
+  ],
+  "waterMaskSources": [
+    "dist/data/major-lake-cutouts.bin",
+    "dist/data/americas-inland-water.bin",
+    "dist/data/canada-lakes.bin"
+  ],
+  "regions": [
+    {
+      "id": "new-england",
+      "name": "Maine, New Hampshire, Massachusetts, Rhode Island",
+      "bounds": [
+        -73,
+        39.3,
+        -65.3,
+        46.7
+      ],
+      "reviewBounds": [
+        -71.5,
+        40.8,
+        -66.8,
+        45.2
+      ],
+      "decision": "Current-day physical shore; retain dated interior divisions. Tiny enclosed water holes below 0.25 km² are filled.",
+      "addedKm2": 1255.0810412195372,
+      "removedKm2": 95.63363357533694
+    },
+    {
+      "id": "new-york-new-jersey",
+      "name": "Long Island, New York Harbor, New Jersey",
+      "bounds": [
+        -77.3,
+        37.3,
+        -70,
+        42.9
+      ],
+      "reviewBounds": [
+        -75.8,
+        38.8,
+        -71.5,
+        41.4
+      ],
+      "decision": "Current-day physical shore; retain dated interior divisions. Tiny enclosed water holes below 0.25 km² are filled.",
+      "addedKm2": 3598.942348940137,
+      "removedKm2": 510.9787663311784
+    },
+    {
+      "id": "chesapeake",
+      "name": "Delaware, Maryland and Virginia estuaries",
+      "bounds": [
+        -79,
+        34.9,
+        -73.3,
+        41.3
+      ],
+      "reviewBounds": [
+        -77.5,
+        36.4,
+        -74.8,
+        39.8
+      ],
+      "decision": "Current-day physical shore; retain dated interior divisions. Tiny enclosed water holes below 0.25 km² are filled.",
+      "addedKm2": 3744.5828811475776,
+      "removedKm2": 544.9284926457248
+    },
+    {
+      "id": "carolinas-georgia",
+      "name": "North Carolina, South Carolina and Georgia",
+      "bounds": [
+        -83,
+        29.1,
+        -73.9,
+        37.9
+      ],
+      "reviewBounds": [
+        -81.5,
+        30.6,
+        -75.4,
+        36.4
+      ],
+      "decision": "Current-day physical shore; retain dated interior divisions. Tiny enclosed water holes below 0.25 km² are filled.",
+      "addedKm2": 2850.7873454543155,
+      "removedKm2": 161.73971963178008
+    },
+    {
+      "id": "florida",
+      "name": "Florida Atlantic, Keys and Gulf shores",
+      "bounds": [
+        -89.2,
+        22.6,
+        -78.3,
+        32.1
+      ],
+      "reviewBounds": [
+        -87.7,
+        24.1,
+        -79.8,
+        30.6
+      ],
+      "decision": "Current-day physical shore; retain dated interior divisions. Tiny enclosed water holes below 0.25 km² are filled.",
+      "addedKm2": 4671.503210115446,
+      "removedKm2": 115.22294296631642
+    },
+    {
+      "id": "northern-gulf",
+      "name": "Alabama, Mississippi and Louisiana",
+      "bounds": [
+        -95.5,
+        26.5,
+        -86.2,
+        32.6
+      ],
+      "reviewBounds": [
+        -94,
+        28,
+        -87.7,
+        31.1
+      ],
+      "decision": "Current-day physical shore; retain dated interior divisions. Tiny enclosed water holes below 0.25 km² are filled.",
+      "addedKm2": 2393.8457110000227,
+      "removedKm2": 434.21646099574787
+    },
+    {
+      "id": "texas",
+      "name": "Texas Gulf coast",
+      "bounds": [
+        -99.5,
+        24,
+        -92.5,
+        31.5
+      ],
+      "reviewBounds": [
+        -98,
+        25.5,
+        -94,
+        30
+      ],
+      "decision": "Current-day physical shore; retain dated interior divisions. Tiny enclosed water holes below 0.25 km² are filled.",
+      "addedKm2": 1628.0691585279117,
+      "removedKm2": 150.61390677425538
+    },
+    {
+      "id": "california",
+      "name": "California Pacific coast",
+      "bounds": [
+        -126.5,
+        30.799999999999997,
+        -115.5,
+        43.5
+      ],
+      "reviewBounds": [
+        -125,
+        32.3,
+        -117,
+        42
+      ],
+      "decision": "Current-day physical shore; retain dated interior divisions. Tiny enclosed water holes below 0.25 km² are filled.",
+      "addedKm2": 471.4184944942905,
+      "removedKm2": 70.29917752603428
+    },
+    {
+      "id": "pacific-northwest",
+      "name": "Oregon, Washington and Puget Sound",
+      "bounds": [
+        -127,
+        40.5,
+        -119.8,
+        50.6
+      ],
+      "reviewBounds": [
+        -125.5,
+        42,
+        -121.3,
+        49.1
+      ],
+      "decision": "Current-day physical shore; retain dated interior divisions. Tiny enclosed water holes below 0.25 km² are filled.",
+      "addedKm2": 685.355911010991,
+      "removedKm2": 55.721972544961
+    },
+    {
+      "id": "great-lakes",
+      "name": "Lower Great Lakes and New York lake shores",
+      "bounds": [
+        -94.5,
+        39.8,
+        -74.3,
+        50.9
+      ],
+      "reviewBounds": [
+        -93,
+        41.3,
+        -75.8,
+        49.4
+      ],
+      "decision": "Current-day physical shore; retain dated interior divisions. Tiny enclosed water holes below 0.25 km² are filled.",
+      "addedKm2": 648.5344112537284,
+      "removedKm2": 499.4657178604728
+    },
+    {
+      "id": "hawaii",
+      "name": "Hawaiian islands",
+      "bounds": [
+        -162.5,
+        16.5,
+        -152.5,
+        24.5
+      ],
+      "reviewBounds": [
+        -161,
+        18,
+        -154,
+        23
+      ],
+      "decision": "Current-day physical shore; retain dated interior divisions. Tiny enclosed water holes below 0.25 km² are filled.",
+      "addedKm2": 93.49591286980656,
+      "removedKm2": 30.58049778512337
+    }
+  ],
+  "retainedSections": [
+    {
+      "id": "everglades-marsh",
+      "bounds": [
+        -81.8,
+        25,
+        -80.6,
+        25.8
+      ],
+      "reason": "Retain the smoother historical marsh outline instead of dense modern pond cutouts."
+    },
+    {
+      "id": "laguna-madre",
+      "bounds": [
+        -97.65,
+        26,
+        -97.1,
+        27.3
+      ],
+      "reason": "Retain the coherent historical lagoon shore instead of rectilinear modern fragments."
+    }
+  ],
+  "filledTinyHoles": 4,
+  "addedShorePieces": 30351,
+  "farthestMixedTimelineAssignmentMetres": 32608.561655340898,
+  "politicalAssignments": "Original face IDs and all date configurations are retained; internal lines stay in place, with only shore endpoints extended into newly filled fringe. New land is split at shoreline jurisdiction joins; its dated face is selected from the same present-day state to avoid borrowing the neighboring shore."
+}

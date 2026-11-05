@@ -505,7 +505,7 @@
     "balkans": "Detailed Balkan land frontiers supersede residual generalized shoreline segments within 200 metres. Existing atlas borders are retained; Croatia–Montenegro stops at the verified shared-way coastal endpoint.",
     "balkanFallbackRefresh": "Country fallback land refreshed from the six final reconciled contexts, preserving all other atlas and foreign geometry."
   },
-  "bytes": 26179175,
+  "bytes": 30752438,
   "fallbackSimplificationDegrees": 0.018,
   "outlineBytes": 2449,
   "titicacaShoreline": {
