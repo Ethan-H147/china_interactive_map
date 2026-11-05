@@ -24,7 +24,7 @@ const pct=(n,d)=>Number.isFinite(n)?n.toFixed(d??(Number.isInteger(n)?0:n>=99&&n
 const sharePct=n=>pct(n,Number.isInteger(n)?0:2);
 const el=(tag,className,text)=>{const n=document.createElement(tag);if(className)n.className=className;if(text!==undefined)n.textContent=text;return n;};
 const surname=name=>name.replace(/,? (Jr|Sr|II|III)\.?$/,'').split(' ').pop();
-const rank=(a,b)=>((b.electoral||0)-(a.electoral||0))||((b.popular||0)-(a.popular||0))||((b.percent||0)-(a.percent||0));
+const rank=(a,b)=>((b.seats||0)-(a.seats||0))||((b.electoral||0)-(a.electoral||0))||((b.popular||0)-(a.popular||0))||((b.percent||0)-(a.percent||0));
 const share=(result,name)=>result.shares?.[name]??(result.votes?.[name]!=null&&result.total?result.votes[name]/result.total*100:null);
 // One left-pointing chevron; the next button mirrors it in CSS.
 export const CHEVRON='<svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M10 3.5 5.5 8l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>';
@@ -37,7 +37,7 @@ export function candidateColors(election,{partyColors=[],candidateColors:fixedBy
  for(const c of [...election.candidates].sort(rank)){
   // Candidates beyond the alternates (1789 had twelve) receive evenly spaced muted hues.
   const next=()=>alternate<ALTERNATES.length?ALTERNATES[alternate++]:hue((alternate++*47)%360);
-  let color=c.color||fixed[c.name]||partyColors.find(([pattern])=>pattern.test(c.party||''))?.[1]||next();
+  let color=c.color||fixed[c.name]||partyColors.find(([pattern])=>pattern.test(c.party||c.name))?.[1]||next();
   while(used.has(color))color=next();
   used.add(color);colors.set(c.name,color);
  }
@@ -49,14 +49,14 @@ export function stateShade(result,color){
  return mix(color,MARGIN_STEPS.find(([max])=>result.margin<max)[1]);
 }
 
-export function createElectionView(map,{country,base,config,fill,selected:selectedFill,fillLayer=country+'-first-fill',selectionLayer=country+'-first-selection-fill',lineLayer=country+'-first-lines',scene=getMapScene(map),historicBorders,dataset:initialDataset,onDataset=()=>{},onChange=()=>{},onPlace=()=>{}}){
+export function createElectionView(map,{country,base,config,fill,selected:selectedFill,fillLayer=country+'-first-fill',selectionLayer=country+'-first-selection-fill',lineLayer=country+'-first-lines',scene=getMapScene(map),historicBorders,dataset:initialDataset,onDataset=()=>{},onChange=()=>{},onPlace=()=>{},onError=()=>{}}){
  const datasets=config.datasets,cache=new Map(),store=id=>config.store+(datasets.length>1?':'+id:''),historic=config.historic;
  let dataset=datasets.find(d=>d.id===initialDataset)||datasets[0],data,year,active=false,colors=new Map(),dock,applied=false,original=fill,epoch=0;
  // Borders: present-day units, or (where the config has historic data) the units in force on
  // election day, drawn by the shared historic borders (historic-borders.mjs). focus is the unit
  // picked on the map; the host keeps its own selection.
  const engine=historic?historicBorders||createHistoricBorders(map,{country,base,file:historic.file,lineLayer}):null;
- let borders='present',focus=null,selectedRecord=null;
+ let request=0,borders=historic?.fixed?'historic':'present',focus=null,selectedRecord=null;
  try{if(historic&&localStorage.getItem(config.store+':borders')==='historic')borders='historic';}catch{}
  const election=()=>data?.elections.find(e=>e.year===year);
  const candidate=name=>election()?.candidates.find(c=>c.name===name);
@@ -87,6 +87,7 @@ export function createElectionView(map,{country,base,config,fill,selected:select
  // another country, and independent republics, read as that country's land.
  function unitKind(unit){
   const e=election();
+  if(historic?.fixed)return e.states[unit.id]?.winner?'result':e.states[unit.id]?'no-votes':'foreign';
   if(unit.state&&e.states[unit.state])return 'result';
   if(unit.state&&e.notVoting?.includes(unit.state))return 'not-voting';
   if(unit.type==='Disputed'||unit.sovereign==='Contested')return 'disputed';
@@ -94,7 +95,7 @@ export function createElectionView(map,{country,base,config,fill,selected:select
   return unit.type==='State'||unit.type==='District of Columbia'?'no-votes':'territory';
  }
  const KIND_COLORS={'not-voting':NOT_VOTING,disputed:DISPUTED,foreign:OTHER_LAND,'no-votes':NO_VOTES,territory:TERRITORY};
- const unitColor=unit=>{const kind=unitKind(unit);return kind==='result'?shade(election().states[unit.state]):KIND_COLORS[kind];};
+ const unitColor=unit=>{const kind=unitKind(unit);return kind==='result'?shade(election().states[unit.state||unit.id]):KIND_COLORS[kind];};
  // The host record a historic unit opens: its state where it voted or was a state, otherwise
  // whatever present-day place was clicked.
  function unitPlace(unit){
@@ -126,7 +127,7 @@ export function createElectionView(map,{country,base,config,fill,selected:select
  // holding most of the selected present-day place.
  function currentUnit(){
   if(!showingHistory())return null;
-  if(focus?.face!=null)return historyUnit(focus.face);
+  if(focus?.face!=null)return !historic.fixed||election().states[focus.face]?historyUnit(focus.face):null;
   const c=historyConfig(),i=selectedRecord?c.partOf[selectedRecord]:undefined;return i>=0?c.units[i]:null;
  }
  // Outlines drawn by the view: the historic unit shown, or the overlay unit picked (or, with its
@@ -135,14 +136,16 @@ export function createElectionView(map,{country,base,config,fill,selected:select
   if(showingHistory())engine.outline(historyConfig(),currentUnit());
   if(data?.units&&map.getLayer(unitLayers[2])){const e=election(),ids=focus?.unit?[focus.unit]:selectedRecord?Object.entries(e.states).filter(([,s])=>s.within===selectedRecord).map(([id])=>id):[];map.setFilter(unitLayers[2],['all',['has','outline'],['in',['get','id'],['literal',ids]]]);}
   // Keep ordinary state strokes, using dated edges when historic borders are shown.
-  hostLines({borders:showingHistory(),selection:showingHistory()||!!focus?.unit});
+  hostLines({borders:showingHistory(),international:!config.standalone,selection:showingHistory()||!!focus?.unit});
  }
  function apply(){
   if(!active||!data||!map.getLayer(fillLayer))return;
   if(!applied)original??=map.getPaintProperty(fillLayer,'fill-color');
   const paint=expression(),past=showingHistory();map.setPaintProperty(fillLayer,'fill-color',past?OTHER_LAND:paint);drawUnits(paint);
-  if(past)engine.draw(historyConfig(),unitColor,fillLayer);else engine?.remove();
-  if(map.getLayer(selectionLayer)){map.setPaintProperty(selectionLayer,'fill-color',paint);map.setPaintProperty(selectionLayer,'fill-opacity',0);}
+  if(past)engine.draw(historyConfig(),unitColor,fillLayer,historic.fixed?{visible:u=>!!election().states[u.id]}:undefined);else engine?.remove();
+  // The host's selection fill stays hidden while results are shown; recolouring it would lay out
+  // the whole first level again each year.
+  if(map.getLayer(selectionLayer))map.setPaintProperty(selectionLayer,'fill-opacity',0);
   outline();applied=true;
  }
  function restore(){
@@ -156,7 +159,9 @@ export function createElectionView(map,{country,base,config,fill,selected:select
  function pick(point){
   focus=null;if(!active||!data)return null;
   if(showingHistory()){
-   const face=engine.pick(point);if(face==null)return null;
+   const face=engine.pick(point);
+   if(config.standalone){if(face!=null&&election().states[face])focus={face,location:map.unproject(point)};outline();onChange();return {standalone:true,bounds:currentUnit()?.bounds};}
+   if(face==null)return null;
    const unit=historyUnit(face);focus={face,place:unitPlace(unit)};
    return {place:focus.place,bounds:unit?.bounds};
   }
@@ -187,7 +192,7 @@ export function createElectionView(map,{country,base,config,fill,selected:select
 
  function buildDock(){
   dock=el('section','election-dock');dock.id='election-dock';dock.hidden=true;dock.setAttribute('aria-label',config.label);
-  const switcher=datasets.length>1?'<div class="election-switch" role="group" aria-label="Electorate">'+datasets.map(d=>'<button type="button" data-dataset="'+d.id+'">'+d.label+'</button>').join('')+'</div>':historic?'<div class="election-switch" role="group" aria-label="Borders"><button type="button" data-borders="present">Current borders</button><button type="button" data-borders="historic">Historic borders</button></div>':'';
+  const switcher=datasets.length>1?'<div class="election-switch" role="group" aria-label="Electorate">'+datasets.map(d=>'<button type="button" data-dataset="'+d.id+'">'+d.label+'</button>').join('')+'</div>':historic&&!historic.fixed?'<div class="election-switch" role="group" aria-label="Borders"><button type="button" data-borders="present">Current borders</button><button type="button" data-borders="historic">Historic borders</button></div>':'';
   dock.innerHTML='<div class="election-head"><div class="election-year"><strong></strong><span></span></div><div class="election-tally"><div class="election-names"></div><div class="election-bar" role="img"></div><div class="election-needed"></div></div></div><div class="election-legend"></div><div class="election-timeline">'+switcher+'<div class="election-strip" role="listbox" aria-label="Election year"></div><div class="election-steps"><button type="button" class="election-step" data-step="-1" aria-label="Previous election">'+CHEVRON+'</button><button type="button" class="election-step" data-step="1" aria-label="Next election">'+CHEVRON+'</button></div></div>';
   dock.querySelector('.election-timeline').classList.toggle('has-switch',!!switcher);
   addDockCollapse(dock,{label:'election controls',onResize:insets});
@@ -199,28 +204,36 @@ export function createElectionView(map,{country,base,config,fill,selected:select
  }
  function buildStrip(){
   const strip=dock.querySelector('.election-strip');if(strip.dataset.dataset===dataset.id)return;strip.dataset.dataset=dataset.id;strip.replaceChildren();
+  if(config.standalone){
+   let range=dock.querySelector('.election-range');
+   if(!range){range=el('p','election-range');strip.before(range);}
+   range.textContent=data.elections.length+' elections · '+data.elections[0].year+'–'+data.elections.at(-1).year;
+  }
+  let period;
   for(const e of data.elections){
    const tick=el('button','election-tick');tick.type='button';tick.setAttribute('role','option');tick.dataset.year=e.year;tick.tabIndex=-1;
    const winner=[...e.candidates].sort(rank)[0];tick.style.setProperty('--party',candidateColors(e,config).get(winner.name));
    tick.setAttribute('aria-label',e.year+', '+winner.name);tick.title=e.year+': '+winner.name;
-   tick.append(el('span','election-tick-year',String(e.year)));if((config.mark||(y=>y%40===0))(e.year))tick.dataset.mark=e.year;
+   tick.append(el('span','election-tick-year',String(e.year)));const nextPeriod=Math.floor(e.year/20);
+   if(config.standalone?nextPeriod!==period:(config.mark||(y=>y%40===0))(e.year))tick.dataset.mark=e.year;
+   period=nextPeriod;
    tick.onclick=()=>setYear(e.year,true);strip.append(tick);
   }
  }
  function step(delta){const years=data.elections.map(e=>e.year),i=years.indexOf(year);setYear(years[Math.max(0,Math.min(years.length-1,i+delta))],true);}
  function renderTally(e){
-  const electoral=!!e.electors,value=c=>electoral?c.electoral:c.percent,text=c=>electoral?String(c.electoral):sharePct(c.percent);
+  const electoral=!!e.electors,seats=!!config.standalone,value=c=>seats?c.seats:electoral?c.electoral:c.percent,text=c=>seats||electoral?String(value(c)):sharePct(c.percent);
   const ranked=[...e.candidates].filter(c=>value(c)>0).sort(rank),winner=ranked[0],runner=ranked[1];
   const names=dock.querySelector('.election-names');names.replaceChildren();
   for(const [c,side] of [[winner,'winner'],[runner,'runner']]){if(!c)continue;const span=el('span','election-name '+side);span.style.setProperty('--party',colors.get(c.name));const label=el('span',undefined,shortName(c)),count=el('b',undefined,text(c));if(side==='winner')span.append(label,count);else span.append(count,label);names.append(span);}
-  const total=electoral?(e.electors||ranked.reduce((s,c)=>s+c.electoral,0))*(e.dualVote?2:1):100,bar=dock.querySelector('.election-bar');bar.replaceChildren();
+  const total=seats?e.seats:electoral?(e.electors||ranked.reduce((s,c)=>s+c.electoral,0))*(e.dualVote?2:1):100,bar=dock.querySelector('.election-bar');bar.replaceChildren();
   const order=runner?[winner,...ranked.slice(2),runner]:[winner];
   for(const c of order){const part=el('span');part.style.width=(value(c)/total*100)+'%';part.style.background=colors.get(c.name);part.title=c.name+': '+text(c);if(c===runner)part.style.marginLeft='auto';bar.append(part);}
   const needed=dock.querySelector('.election-needed');
-  if(electoral){
+  if(electoral||seats){
    const marker=el('i');marker.style.left=(e.needed/total*100)+'%';bar.append(marker);
-   bar.setAttribute('aria-label',order.map(c=>c.name+' '+c.electoral).join(', ')+'. '+e.needed+' needed to win.');
-   needed.textContent=e.dualVote?e.needed+' electors of '+e.electors+' to win; each cast two votes':e.needed+' to win';
+   bar.setAttribute('aria-label',order.map(c=>c.name+' '+value(c)).join(', ')+'. '+e.needed+' needed to win.');
+   needed.textContent=seats?e.needed+' seats for a majority':e.dualVote?e.needed+' electors of '+e.electors+' to win; each cast two votes':e.needed+' to win';
   }else{
    bar.setAttribute('aria-label',order.map(c=>c.name+' '+sharePct(c.percent)).join(', ')+'.');
    needed.textContent=Number.isFinite(e.turnout)?'Turnout '+pct(e.turnout):'';
@@ -232,7 +245,7 @@ export function createElectionView(map,{country,base,config,fill,selected:select
   for(const c of e.candidates.filter(c=>carried.has(c.name))){
    const row=el('span','election-key');
    // National figures shown in every unit have no regional margin to grade.
-   if(e.uniform){const swatch=el('i','election-swatch');swatch.style.background=colors.get(c.name);row.append(swatch);}
+   if(e.uniform||c.legendOnly){const swatch=el('i','election-swatch');swatch.style.background=colors.get(c.name);row.append(swatch);}
    else{const ramp=el('span','election-ramp');for(const [,amount] of MARGIN_STEPS){const swatch=el('i');swatch.style.background=mix(colors.get(c.name),amount);ramp.append(swatch);}row.append(ramp);}
    row.append(el('span',undefined,shortName(c)));legend.append(row);
   }
@@ -241,7 +254,7 @@ export function createElectionView(map,{country,base,config,fill,selected:select
    for(const [,amount,label] of MARGIN_STEPS){const stepKey=el('span','election-scale-step'),swatch=el('i');swatch.style.background=mix('#5f5b52',amount);stepKey.append(swatch,el('small',undefined,label));scale.append(stepKey);}
    legend.append(scale);
   }
-  const kinds=showingHistory()?new Set(historyConfig().units.map(unitKind)):new Set();
+  const kinds=showingHistory()?new Set((historyConfig().units||[]).map(unitKind)):new Set();
   for(const [shown,color,label] of [[e.notVoting?.length,NOT_VOTING,'Did not vote'],[kinds.has('territory'),TERRITORY,'Territory'],[kinds.has('disputed'),DISPUTED,'Disputed']])if(shown){const row=el('span','election-key');const swatch=el('i','election-swatch');swatch.style.background=color;row.append(swatch,el('span',undefined,label));legend.append(row);}
  }
  function renderDock(focus=false){
@@ -253,9 +266,11 @@ export function createElectionView(map,{country,base,config,fill,selected:select
   for(const tick of dock.querySelectorAll('.election-tick')){const current=+tick.dataset.year===e.year;tick.setAttribute('aria-selected',String(current));tick.tabIndex=current?0:-1;if(current){tick.scrollIntoView?.({block:'nearest',inline:'center',behavior:focus?'smooth':'auto'});if(focus)tick.focus({preventScroll:true});}}
   const years=data.elections.map(x=>x.year);dock.querySelector('[data-step="-1"]').disabled=e.year===years[0];dock.querySelector('[data-step="1"]').disabled=e.year===years.at(-1);
  }
- function setYear(next,focus=false){
-  if(!data||next===year)return;year=next;try{localStorage.setItem(store(dataset.id),String(year));}catch{}
-  colors=candidateColors(election(),config);apply();followFocus();renderDock(focus);onChange();
+ async function setYear(next,focusTick=false){
+  const token=++request;if(!data||next===year)return;
+  if(engine?.prepare){try{await engine.prepare(engine.data.configs[engine.data.elections[next].config]);}catch{onError();return;}if(token!==request||!active)return;}
+  year=next;try{localStorage.setItem(store(dataset.id),String(year));}catch{}
+  colors=candidateColors(election(),config);apply();if(config.standalone&&focus?.location){focus.face=engine.pickLocation(focus.location);outline();}else followFocus();renderDock(focusTick);onChange();
  }
  async function setDataset(id){
   const next=datasets.find(d=>d.id===id);if(!next||next===dataset&&data)return;
@@ -270,14 +285,14 @@ export function createElectionView(map,{country,base,config,fill,selected:select
   anchor.append(el('h3',undefined,e.title||e.year+' presidential election'));
   if(e.note)anchor.append(el('p','country-note',e.note));
   const won=new Map();for(const s of Object.values(e.states))if(s.winner&&!s.partOf)won.set(s.winner,(won.get(s.winner)||0)+1);
-  const table=el('table','election-table');table.innerHTML='<thead><tr><th scope="col">Candidate</th>'+(electoral?'<th scope="col">Electoral</th><th scope="col">Popular</th>':e.uniform?'<th scope="col">Vote</th>':'<th scope="col">Won</th><th scope="col">Votes</th>')+'</tr></thead>';
+  const table=el('table','election-table');table.innerHTML='<thead><tr><th scope="col">'+(config.standalone?'Party':'Candidate')+'</th>'+(electoral?'<th scope="col">Electoral</th><th scope="col">Popular</th>':e.uniform?'<th scope="col">Vote</th>':'<th scope="col">'+(config.standalone?'Seats':'Won')+'</th><th scope="col">Votes</th>')+'</tr></thead>';
   const body=el('tbody');
-  for(const c of [...e.candidates].sort(rank)){
+  for(const c of [...e.candidates].filter(c=>!c.legendOnly).sort(rank)){
    const row=el('tr'),who=el('th');who.scope='row';who.style.setProperty('--party',colors.get(c.name));
    who.append(el('span','election-candidate',c.name),el('small',undefined,[c.party,(c.runningMates||[]).map(r=>r.name).join(', ')].filter(Boolean).join(' / ')));
    row.append(who);
    if(electoral){const ev=el('td');ev.append(el('b',undefined,String(c.electoral||0)));if(won.get(c.name))ev.append(el('small',undefined,unitCount(won.get(c.name))));row.append(ev);}
-   else if(!e.uniform)row.append(el('td',undefined,won.get(c.name)?String(won.get(c.name)):'–'));
+   else if(!e.uniform)row.append(el('td',undefined,config.standalone?String(c.seats||0):won.get(c.name)?String(won.get(c.name)):'–'));
    const pop=el('td');pop.append(el('b',undefined,sharePct(c.percent)));if(c.popular)pop.append(el('small',undefined,fmt(c.popular)));
    row.append(pop);body.append(row);
   }
@@ -285,6 +300,15 @@ export function createElectionView(map,{country,base,config,fill,selected:select
   const facts=el('dl','election-facts');
   for(const [term,value] of [['Election day',e.date],['Electors',e.electors&&e.electors+(e.needed?' ('+e.needed+' to win)':'')],['Seats',e.seats&&fmt(e.seats)],['Registered voters',e.registered&&fmt(e.registered)],['Turnout',Number.isFinite(e.turnout)?pct(e.turnout):null]])if(value){facts.append(el('dt',undefined,term),el('dd',undefined,value));}
   anchor.append(facts);
+  if(e.provinces){
+   const details=el('details','election-districts');details.append(el('summary',undefined,'Results by province and territory'));
+   for(const [name,local] of Object.entries(e.provinces).sort(([a],[b])=>a.localeCompare(b))){
+    const group=el('details');group.append(el('summary',undefined,name+' ('+local.seats+')'));
+    const list=el('ul');for(const [party,p] of Object.entries(local.parties).sort(([,a],[,b])=>b.seats-a.seats||b.votes-a.votes))list.append(el('li',undefined,party+': '+p.seats+' seats, '+fmt(p.votes)+' recorded votes'));
+    group.append(list);details.append(group);
+   }
+   anchor.append(details,bordersLink());
+  }
   anchor.append(sourceLink(e));
  }
  function sourceLink(e){const a=el('a','election-source','Results source: '+(e.sourceName||data.sourceName||'Wikipedia'));a.href=e.source;a.target='_blank';a.rel='noopener';return a;}
@@ -293,9 +317,10 @@ export function createElectionView(map,{country,base,config,fill,selected:select
   if(!anchor)return;anchor.replaceChildren();
   // The host's selection moved away from the place picked on the map; or, for a historic unit
   // without a state of its own, the host has picked the present-day place under the click.
-  if(focus&&focus.place!=null&&focus.place!==record?.id)focus=null;
-  if(focus&&focus.place==null)focus.place=record?.id;
+  if(!config.standalone&&focus&&focus.place!=null&&focus.place!==record?.id)focus=null;
+  if(!config.standalone&&focus&&focus.place==null)focus.place=record?.id;
   selectedRecord=record?.level===1?record.id:null;if(active&&data&&applied)outline();
+  if(config.standalone){anchor.hidden=!active||!showingHistory()||!currentUnit();if(!anchor.hidden)renderRiding(anchor,election(),currentUnit());return;}
   anchor.hidden=!active||!data||!record||record.level!==1||config.covers&&!config.covers(record,dataset.id);if(anchor.hidden)return;
   const e=election(),result=e.states[focus?.unit||record.id];
   anchor.append(el('h3',undefined,e.title||e.year+' presidential election'));
@@ -321,21 +346,32 @@ export function createElectionView(map,{country,base,config,fill,selected:select
   anchor.append(el('p','country-note',kind==='not-voting'?'Did not take part in this election.':unit.note||historic.describe?.(unit,kind,e,data)||'No electoral votes.'));
   if(kind==='not-voting'&&e.note)anchor.append(el('p','country-note',e.note));
  }
+ function renderRiding(anchor,e,unit){
+  const result=e.states[unit.id];
+  anchor.append(el('h3',undefined,e.title));
+  if(result.province)anchor.append(el('p','election-unit',result.province));
+  renderResult(anchor,e,result);anchor.append(sourceLink(e),bordersLink());
+ }
  function bordersLink(){const a=el('a','election-source','Borders: '+historic.sourceName);a.href=historic.source;a.target='_blank';a.rel='noopener';return a;}
  function renderResult(anchor,e,result){
-  const winner=candidate(result.winner),headline=el('p','election-state-winner');headline.style.setProperty('--party',colors.get(result.winner));
-  headline.append(el('strong',undefined,result.winner),el('span',undefined,winner?.party||''));anchor.append(headline);
+  const local=result.candidates;
+  const winners=local?local.filter(c=>c.elected):[{name:result.winner,party:candidate(result.winner)?.party}];
+  for(const winner of winners){
+   const headline=el('p','election-state-winner');headline.style.setProperty('--party',colors.get(local?winner.party:winner.name));
+   headline.append(el('strong',undefined,winner.name),el('span',undefined,[winner.party,local?(winner.acclaimed?'acclaimed':'elected'):null].filter(Boolean).join(' · ')));anchor.append(headline);
+  }
+  if(local&&!local.length){if(result.note)anchor.append(el('p','country-note',result.note));return;}
   const electors=result.electors||{},cast=Object.values(electors).reduce((a,b)=>a+b,0),hasElectors=!!e.electors;
   const facts=el('dl','election-facts');
   const electoralText=result.electoral==null?null:e.dualVote?result.electoral+' electors, '+cast+' votes':String(result.electoral);
   for(const [term,value] of [['Electoral votes',electoralText],['Margin',Number.isFinite(result.margin)&&(result.total||result.shares)?result.margin.toFixed(1)+' points':null],['Total votes',result.total?fmt(result.total):null],['Turnout',Number.isFinite(result.turnout)?pct(result.turnout):null]])if(value)facts.append(el('dt',undefined,term),el('dd',undefined,value));
   anchor.append(facts);
-  const votes=result.votes||{},names=[...new Set([...Object.keys(votes),...Object.keys(result.shares||{}),...Object.keys(electors)])].filter(n=>n!=='other').sort((a,b)=>(electors[b]||0)-(electors[a]||0)||(share(result,b)??0)-(share(result,a)??0));
+  const votes=result.votes||Object.fromEntries((local||[]).map(c=>[c.name,c.votes])),names=[...new Set([...Object.keys(votes),...Object.keys(result.shares||{}),...Object.keys(electors)])].filter(n=>n!=='other').sort((a,b)=>(electors[b]||0)-(electors[a]||0)||(share(result,b)??0)-(share(result,a)??0));
   const table=el('table','election-table');table.innerHTML='<thead><tr><th scope="col">Candidate</th><th scope="col">Votes</th>'+(hasElectors?'<th scope="col">Electors</th>':'')+'</tr></thead>';const body=el('tbody');
   for(const name of [...names,...(votes.other?['other']:[])]){
-   const row=el('tr'),who=el('th');who.scope='row';if(name!=='other')who.style.setProperty('--party',colors.get(name)||'#b9b4aa');
-   who.append(el('span','election-candidate',name==='other'?'Others':name));if(name!=='other'&&candidate(name)?.party)who.append(el('small',undefined,candidate(name).party));
-   const cell=el('td'),value=share(result,name);if(value!=null){cell.append(el('b',undefined,pct(value)));if(votes[name]!=null)cell.append(el('small',undefined,fmt(votes[name])));}else cell.textContent='–';
+   const row=el('tr'),who=el('th');who.scope='row';const party=local?local.find(c=>c.name===name)?.party:candidate(name)?.party;if(name!=='other')who.style.setProperty('--party',colors.get(local?party:name)||'#b9b4aa');
+   who.append(el('span','election-candidate',name==='other'?'Others':name));if(name!=='other'&&party)who.append(el('small',undefined,party));
+   const cell=el('td'),value=local&&votes[name]!=null&&result.total?votes[name]/result.total*100:share(result,name);if(value!=null){cell.append(el('b',undefined,pct(value)));if(votes[name]!=null)cell.append(el('small',undefined,fmt(votes[name])));}else cell.textContent=local&&votes[name]!=null?fmt(votes[name]):'–';
    row.append(who,cell);if(hasElectors)row.append(el('td',undefined,electors[name]?String(electors[name]):'–'));body.append(row);
   }
   table.append(body);anchor.append(table);
@@ -354,25 +390,34 @@ export function createElectionView(map,{country,base,config,fill,selected:select
  function labelLines(record){const result=election()?.states[record.id];return result?.electoral?[record.en,String(result.electoral)]:null;}
  // Map labels for historic units, which replace the present-day first-level labels.
  function unitLabels(){
-  if(!active||!data||!showingHistory())return null;
+  if(!active||!data||!showingHistory()||!historyConfig()?.units)return null;
   const e=election(),shown=currentUnit();
-  return historyConfig().units.map(unit=>{const result=unit.state&&e.states[unit.state],[[w,s],[east,n]]=unit.bounds;return {id:'election-'+unit.key,en:unit.name,center:unit.label,lines:result?.electoral?[unit.name,String(result.electoral)]:holderLines(unit),...(result?.electoral?{className:'korea-marker election-label'}:{}),priority:Math.min(1,(east-w)*(n-s)/400),selected:unit===shown};});
+  return historyConfig().units.filter(unit=>!historic.fixed||e.states[unit.id]).map(unit=>{const result=e.states[unit.state||unit.id],[[w,s],[east,n]]=unit.bounds;return {id:'election-'+unit.key,en:result?.name||unit.name,center:unit.label,lines:result?.electoral?[unit.name,String(result.electoral)]:historic.fixed?[result?.name||unit.name]:holderLines(unit),...(result?.electoral?{className:'korea-marker election-label'}:{}),priority:Math.min(1,(east-w)*(n-s)/400),selected:unit===shown};});
  }
  function hoverAt(point){
   if(!active||!showingHistory())return undefined;
-  const face=engine.pick(point),unit=face!=null&&historyUnit(face);
-  return unit?{id:'election-'+unit.key,en:unit.name,kind:unit.type}:null;
+  const face=engine.pick(point),unit=face!=null&&historyUnit(face),result=unit&&election()?.states[unit.id];
+  return unit&&(!historic.fixed||result)?{id:'election-'+unit.key,en:result?.name||unit.name,kind:unit.type}:null;
  }
 
  return {
   get active(){return active;},get dataset(){return dataset.id;},
   async enter(){
    active=true;if(!await use(dataset)||!active)return;
-   if(borders==='historic'&&engine&&!engine.data){try{await engine.load();}catch(error){console.warn('Historic borders:',error.message);borders='present';}if(!active)return;}
+   if(borders==='historic'&&engine&&!engine.data){try{await engine.load();}catch(error){if(historic.fixed)throw error;console.warn('Historic borders:',error.message);borders='present';}if(!active)return;}
+   const token=epoch;if(engine?.prepare)await engine.prepare(historyConfig());if(!active||token!==epoch)return;
    window.AtlasRegionColorController?.suspend(true);apply();renderDock();dock.hidden=false;onChange();insets();},
-  leave(){if(!active)return;active=false;epoch++;focus=null;restore();if(dock){dock.hidden=true;insets();}if(document.getElementById('map-shell')?.dataset.quiz!=='true')window.AtlasRegionColorController?.suspend(false);},
+  leave(){if(!active)return;active=false;epoch++;request++;focus=null;restore();if(dock){dock.hidden=true;insets();}if(document.getElementById('map-shell')?.dataset.quiz!=='true')window.AtlasRegionColorController?.suspend(false);},
   get borders(){return borders;},
   apply,renderSummary,renderState,labelLines,unitLabels,hoverAt,pick,setDataset,setBorders,
+  datedOptions(){return active&&showingHistory()?(historyConfig().units||[]).filter(u=>election().states[u.id]).map(u=>({...u,name:election().states[u.id].name})):[];},
+  get datedRecord(){const unit=currentUnit();return unit&&{name:election().states[unit.id].name||unit.name,kind:'Federal riding'};},
+  get datedSelection(){return currentUnit()?.id||'';},
+  selectDated(id){
+   const unit=id&&historyUnit(id);
+   focus=unit?{face:id,location:{lng:unit.label[0],lat:unit.label[1]}}:null;
+   outline();onChange();return unit?.bounds;
+  },
   dispose(){this.leave();dock?.remove();dock=null;if(!historicBorders)engine?.dispose();}
  };
 }

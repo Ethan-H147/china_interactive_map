@@ -191,8 +191,8 @@ function setMode(mode,automatic=false){if(automatic&&$('mode-lock')?.getAttribut
 const interactionNames=['dragPan','scrollZoom','doubleClickZoom','touchZoomRotate','boxZoom','keyboard'];
 let enabledInteractions=[];
 function lockCamera(){
+  if(!cameraBusy)enabledInteractions=interactionNames.filter(name=>map[name]?.isEnabled());
   cameraBusy=true;renderPipeline.pause();controls();
-  enabledInteractions=interactionNames.filter(name=>map[name]?.isEnabled());
 
   countryLabels.clear();labels.forEach(label=>label.remove());labels.length=0;currentAtlas()?.pauseLabels();
   clearHover();
@@ -215,7 +215,11 @@ async function navigateBounds(bounds,options={},animate=true){
  lockCamera();
  if(!previewStart)previewStart=motionRenderer.begin().catch(error=>console.warn('Motion preview:',error.message)).finally(()=>previewStart=null);
  await previewStart;if(epoch!==navigationEpoch)return false;
- if(atlasMode!=='china'&&!await renderPipeline.paintFill())return false;if(epoch!==navigationEpoch)return false;
+ if(atlasMode!=='china'&&!await renderPipeline.paintFill()){
+  if(epoch===navigationEpoch){await motionRenderer.end({interactive:true});if(epoch===navigationEpoch)unlockCamera();}
+  return false;
+ }
+ if(epoch!==navigationEpoch)return false;
  const target=options.camera||window.AtlasCameraFit.cameraForBounds(map,bounds,cameraOptions);if(!target){unlockCamera();return false;}
  const point=map.project(target.center),size=map.getContainer();
  const distance=Math.hypot(point.x-size.clientWidth/2,point.y-size.clientHeight/2)/Math.max(1,Math.min(size.clientWidth,size.clientHeight));

@@ -16,13 +16,24 @@ export default [
   assert.equal(await p.evaluate('document.querySelector(".history-counts").textContent'),'13 states, 1 territory');
   for(const label of ['Spanish Louisiana','New Spain','Spanish Florida','Northwest Territory'])assert((await p.evaluate(labels)).includes(label),label+' is labelled');
   assert(!(await p.evaluate(labels)).includes('Maine'),'Maine is part of Massachusetts');
-  await p.screenshot('us-history-1789');
+  await p.waitFor('!!map.getLayer("canada-history-context-fill")&&Array.isArray(map.getPaintProperty("canada-history-context-fill","fill-color"))',{timeout:30000});
+  await p.evaluate('void map.jumpTo({center:[-104,51],zoom:5})');await p.settle();
+  assert((await p.evaluate('JSON.stringify(map.getPaintProperty("canada-history-context-fill","fill-color"))')).includes("#e9e3d8"),"Rupert’s Land is drawn on the Canadian side");
+  await p.screenshot('us-history-ruperts-land');
+  await year(p,1870);
+  assert(await p.evaluate('!map.getLayer("canada-history-context-fill")'),"Rupert’s Land leaves after the transfer");
+  await p.evaluate('void map.jumpTo({center:[-97,38],zoom:3})');await p.settle();
   await year(p,1800);assert((await p.evaluate(labels)).includes('French Louisiana'),'Louisiana returned to France in 1800');
   await year(p,1803);assert.match(await p.evaluate('document.getElementById("us-history-summary").textContent'),/30 April 1803.*Louisiana/,'The Louisiana Purchase is listed among 1803\'s changes');
   await year(p,1840);await tapAt(p,[-119.5,37.2]);await p.waitFor(card+'.includes("Mexico")',{timeout:15000});
   assert.equal(await p.evaluate(name),'California','The present-day place stays selected');
   assert.match(await p.evaluate(card),/^Mexico.*Held by Mexico.*independent from Spain since 1821/,'California is part of Mexico in 1840');
   await p.screenshot('us-history-1840-california');
+  // Oregon Country reached 54°40′ N, beyond the Alaska picker's band west of 129° W. A click there
+  // opens Canada's atlas, so the hover label shows what the snapshot finds.
+  const hover=lngLat=>p.evaluate('currentAtlas().hoverAt(map.project('+JSON.stringify(lngLat)+'))?.en??null');
+  assert.equal(await hover([-120.5,47]),'Oregon Country');
+  assert.equal(await hover([-132,53.3]),'Oregon Country','Haida Gwaii is part of Oregon Country in 1840');
   await year(p,1863);await p.evaluate('void document.getElementById("us-reset").click()');await p.settle();await tapAt(p,[-80.6,38.6]);await p.waitFor(name+'==="West Virginia"',{timeout:15000});
   assert.match(await p.evaluate(card),/^West Virginia.*State.*Since20 June 1863.*Boundary2 November 1863 to present/,'West Virginia is a state from June 1863');
   await year(p,1866);await p.evaluate('void map.jumpTo({center:[-152,64],zoom:3})');await p.settle();await tapAt(p,[-152,64]);await p.waitFor(card+'.includes("Russian America")',{timeout:15000});

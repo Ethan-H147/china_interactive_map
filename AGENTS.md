@@ -24,3 +24,7 @@ Keep country overview pages and Country tabs hidden. Maps should open and reset 
 # Center-dot review tracker
 
 Keep `docs/center-dot-usage.md` current when changing visible center-dot separators. Remove an entry when its last visible use is removed, and preserve the IDs of remaining entries. Strings converted into CSS dividers before rendering are not visible center-dot uses.
+
+# Reuse and assets
+
+Never create unnecessary new assets. Reuse the existing renderer, UI components, and data assets whenever they can meet the requirement. Adapt data loading or inputs before adding a separate implementation. Add an asset only when the requested behavior requires it and an existing asset cannot serve that purpose.

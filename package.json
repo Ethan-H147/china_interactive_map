@@ -148,6 +148,8 @@
     "build:us-municipal-facts": "node scripts/prepare-us-municipal-facts.mjs && node scripts/prepare-flag-images.mjs && node scripts/prepare-region-colors.mjs",
     "test:us-municipal-facts": "node scripts/validate-us-municipal-assets.mjs && node scripts/validate-us-municipal-facts.mjs",
     "fetch:us-municipal-flags": "node scripts/fetch-us-municipal-flags.mjs && npm run build:us-municipal-facts",
+    "build:canada-dated-maps": "node --max-old-space-size=8500 scripts/build-canada-history.mjs && node --max-old-space-size=9500 scripts/build-canada-ridings.mjs && node --max-old-space-size=6500 scripts/build-canada-elections.mjs",
+    "test:canada-dated-maps": "node --max-old-space-size=7500 scripts/validate-canada-dated-maps.mjs && node scripts/browser/run.mjs canada-dated-maps",
     "build:canada-local": "node scripts/fetch-canada-local.mjs && node scripts/prepare-canada-statistics.mjs && node --expose-gc --max-old-space-size=7000 scripts/build-canada-local.mjs && npm run build:canada-municipal-facts && npm run build:canada-lakes",
     "build:canada-municipal-facts": "node scripts/prepare-canada-municipal-facts.mjs && node scripts/prepare-flag-images.mjs && node scripts/prepare-region-colors.mjs",
     "fetch:canada-municipal-flags": "node scripts/fetch-canada-municipal-flags.mjs && node scripts/fetch-canada-municipal-fotw-flags.mjs && npm run build:canada-municipal-facts",

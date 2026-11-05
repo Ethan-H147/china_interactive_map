@@ -122,3 +122,10 @@ export async function addWorkerSource(map,id,url,options,transform,{skipEmpty=fa
  try{map.addSource(id,{...options,data:'atlas-data://'+id+'?url='+encodeURIComponent(blob)+(file?'&file='+encodeURIComponent(file):'')+(transform?'&transform='+transform:'')});}catch(error){URL.revokeObjectURL(blob);throw error;}
  return true;
 }
+
+// Modern and dated regional maps use the same source settings and feature IDs.
+export function addRegionalBoundarySources(map,{fill,edges,outlines},{regions,borders,selection,tolerance=0,attribution,edgeOptions,outlineOptions}){
+ map.addSource(fill,{type:'geojson',data:regions,promoteId:'id',tolerance,buffer:128,maxzoom:16,attribution});
+ map.addSource(edges,{...edgeOptions,data:borders});
+ map.addSource(outlines,{...outlineOptions,data:selection});
+}

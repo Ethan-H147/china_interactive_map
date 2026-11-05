@@ -39,6 +39,8 @@ Only rendered center dots belong here. A string that is split into CSS divider n
 | 46 | Map-input setting descriptions: Trackpad · scroll to pan | `dist/map-interaction.mjs` |
 | 47 | Automatic-zoom tooltip: Automatic zoom locked · selections keep this view | `dist/zoom-lock.mjs` |
 | 48 | Multiple place names in a ZIP-code card | `dist/us-place-cards.mjs` |
+| 49 | Election range line: count of elections · first–last year | `dist/elections.mjs` |
+| 50 | Riding winner status: party · elected or acclaimed | `dist/elections.mjs` |
 
 IDs omitted from this list have already been removed or now use CSS dividers or primary/secondary name styling. Update the source-file pointers if a renderer moves.
 

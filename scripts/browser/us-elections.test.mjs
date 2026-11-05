@@ -51,7 +51,7 @@ export default [
   await p.screenshot('us-elections-historic-1789');
   await tapState(p,[-69.2,45.4]);await p.waitFor(name+'==="Massachusetts"',{timeout:15000});
   assert.match(await p.evaluate(card),/1789 presidential election.*George Washington/,'Maine opens Massachusetts in 1789');
-  assert(await p.evaluate('map.getFilter("united-states-history-selected")[2][1].length>0'),'Historic Massachusetts is outlined');
+  assert(await p.evaluate('(()=>{const d=map.getSource("united-states-history-selection")?.serialize().data;return typeof d==="string"&&/[?&]unit=\\d/.test(d)})()'),'Historic Massachusetts is outlined');
   await p.screenshot('us-elections-historic-1789-maine');
   await year(1820);await p.waitFor(name+'==="Maine"',{timeout:15000});
   assert.match(await p.evaluate(card),/1820 presidential election.*James Monroe/,'The picked place follows Maine into statehood');

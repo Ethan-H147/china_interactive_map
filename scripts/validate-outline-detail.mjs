@@ -36,3 +36,32 @@ const [outer,hole]=selectionLineData(specimen).features;assert(hole.properties.v
 const thin=selectionLineData(fc([{...specimen.features[0],geometry:{type:'Polygon',coordinates:[square(0,45,1,.00001)]}}])).features[0];assert(thin.properties.visibleZoom>outer.properties.visibleZoom+5,'A long narrow footprint cannot show a cluttered outline at overview scale');
 assert.equal(selectionLineSourceOptions.maxzoom,18);assert(selectionLineSourceOptions.tolerance>0);assert.deepEqual(lineSourceOptions,{type:'geojson',tolerance:.65,maxzoom:18,buffer:128},'Shared administrative-border rendering is unchanged');
 console.log('Selection detail: lake holes, narrow islands, immutable source geometry, retained ownership and shared-border profile passed.');
+
+// Dated riding files (historic-borders.mjs): a selection is built from the worker's compact copy
+// of the file, decoded once, and matches the original whole-file decode exactly.
+{
+ const {decodeData}=await import('../dist/geo-pack.mjs'),{polygonParts}=await import('../dist/polygon-parts.mjs');
+ const {compactRegions,regionFeatures}=await import('../dist/outline-detail.mjs'),{loadAtlasData}=await import('../dist/atlas-data.mjs');
+ const files={a:'dist/data/europe/canada/elections/ridings-2025.bin',b:'dist/data/europe/canada/elections/ridings-2013.bin',c:'dist/data/europe/canada/elections/ridings-1867.bin'};
+ const fetches=[],realFetch=globalThis.fetch;
+ globalThis.fetch=async url=>{fetches.push(url);const bytes=fs.readFileSync(files[new URL(url).pathname.slice(1)]);return new Response(bytes);};
+ try{
+  const decoded=await decodeData(fs.readFileSync(files.a)),regions=compactRegions(decoded.regions);
+  const ids=['62001','61001','35111'];// Nunavut, Northwest Territories, Toronto—St. Paul's
+  for(const id of ids){
+   const original=fc(decoded.regions.features.filter(f=>f.properties.id===id));
+   assert.deepEqual(fc(regionFeatures(regions,id)),original,id+' compact copy keeps every coordinate');
+   const outline=await loadAtlasData('atlas-data://test-outlines?url=http://files/a&member=regions&transform=selection-outline&unit='+id);
+   assert.deepEqual(outline,selectionLineData(original),id+' worker outline matches the whole-file decode');
+   const shape=await loadAtlasData('atlas-data://test-highlight?url=http://files/a&member=regions&transform=parts&unit='+id);
+   assert.deepEqual(shape,polygonParts(original),id+' worker shape matches the whole-file decode');
+  }
+  assert.deepEqual(await loadAtlasData('atlas-data://test-outlines?url=http://files/a&member=regions&transform=selection-outline&unit='),fc([]),'An empty unit only builds the copy');
+  assert.equal(fetches.length,1,'One riding file is fetched and decoded once for every selection');
+  // The two most recently used files stay; a third evicts the least recent.
+  const outline=unit=>loadAtlasData('atlas-data://test-outlines?url=http://files/'+unit+'&member=regions&transform=selection-outline&unit=x');
+  await outline('b');await outline('a');await outline('c');await outline('a');assert.equal(fetches.length,3,'Recently used riding files are reused');
+  await outline('b');assert.equal(fetches.length,4,'The least recently used file was released');
+  console.log('Dated ridings: worker outline and shape match the whole-file decode for '+ids.join(', ')+'; each file decodes once.');
+ }finally{globalThis.fetch=realFetch;}
+}

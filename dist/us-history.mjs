@@ -15,6 +15,7 @@ export const usHistory={
   return unit.type!=='Foreign'||unit.sovereign==='Hawaii'?'Independent':'Held by '+unit.sovereign;
  },
  describe:unit=>describeShared(unit),
+ neighbour:{country:'canada',key:'ruperts-land',name:"Rupert's Land",through:1869,note:'Rupert’s Land north of the present-day border uses generalized Canadian historical boundaries. Years before 1866 use the earliest available Canadian snapshot.'},
  // Changes of holder outside the source, which records only United States jurisdictions.
  events:[
   {date:'1795-05-01',when:'May 1795',name:'Hawaiian Islands',text:'Kamehameha I\'s conquests united most of the islands as the Kingdom of Hawaii.'},
