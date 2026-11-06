@@ -10,6 +10,7 @@ import {decodeData} from '../dist/geo-pack.mjs';
 import {command,fc,geographicBounds} from './build-regional-dataset.mjs';
 import {landIndex} from './geo-index.mjs';
 import {area,centre,largestCover,nearestUnit,polygons,writeMosaic} from './historic-mosaic.mjs';
+import {addChinaCircuits} from './build-china-circuits.mjs';
 const sources='scripts/boundary-sources/china-history/',out='dist/data/china/history/borders.bin';
 const read=file=>JSON.parse(fs.readFileSync(file,'utf8'));
 const cliopatria=read(sources+'cliopatria.geojson'),polities=read(sources+'polities.json'),manifest=read(sources+'manifest.json');
@@ -78,6 +79,11 @@ for(const {year,field} of manifest.snapshots.filter(s=>s.year!==1820)){
  largestCover(own,reference,{field,uncovered:true,shape:p=>simple.get(p.id)});
  // An offshore piece Cliopatria's coarse polygons leave out takes the polity of land within 0.5° (about 50 km).
  nearestUnit(own,field,{limit:.5,only:p=>islands.has(p)||coastal.has(p),distance:toLand});
+ for(const [id,{unit}] of Object.entries(manifest.countyOverrides?.[year]||{})){
+  const piece=own.find(p=>p.id===id);
+  assert(piece&&reference.some(r=>r.unit===unit),'Valid historical county override: '+year+' '+id);
+  piece[field]=unit;
+ }
  for(const piece of pieces)if(piece.host)piece[field]=piece.host[field];
  const used=new Set(pieces.map(p=>p[field]).filter(Boolean));
  const units=Object.fromEntries(Object.values(polities).filter(p=>used.has(p.key)).map(({key,...unit})=>[key,unit]));
@@ -323,7 +329,8 @@ const result=await writeMosaic({
  partOf:(s,units)=>{if(s.fullLand)return {};const index=new Map(units.map((u,i)=>[u.key,i])),totals={};for(const p of pieces)if(p[s.field]){const t=totals[p.province]??={};t[p[s.field]]=(t[p[s.field]]||0)+shares.get(p);}return Object.fromEntries(Object.entries(totals).map(([province,t])=>[province,index.get(Object.entries(t).sort((a,b)=>b[1]-a[1])[0][0])]));},
  source:{name:'Cliopatria (Seshat Global History Databank)',url:manifest.cliopatria.url,lastDate:snapshots.at(-1).date}
 });
-console.log('China history: '+own.length+' pieces, '+left.length+' slivers and '+holes.length+' holes filled ('+islands.size+' on small islands, '+coastal.size+' small and coastal), '+result.faces+' faces, '+result.edges+' edges, '+result.bytes+' bytes; land '+result.land.toFixed(0)+' km², faces '+result.faceArea.toFixed(0)+' km².');
+await addChinaCircuits(out);
+console.log('China history: '+own.length+' pieces, '+left.length+' slivers and '+holes.length+' holes filled ('+islands.size+' on small islands, '+coastal.size+' small and coastal), '+result.faces+' faces, '+result.edges+' edges, '+fs.statSync(out).size+' bytes; land '+result.land.toFixed(0)+' km², faces '+result.faceArea.toFixed(0)+' km².');
 for(const s of snapshots){
  const tally={};for(const p of combined){const k=p[s.field]||'none';tally[k]=(tally[k]||0)+area(p.polygons);}
  console.log(s.year+': '+Object.entries(tally).sort((a,b)=>b[1]-a[1]).map(([k,v])=>k+' '+Math.round(v/1000)+'k').join(', '));

@@ -41,6 +41,14 @@
    "field": "qing"
   }
  ],
+ "countyOverrides": {
+  "1100": {
+   "659011": {
+    "unit": "qocho",
+    "reason": "Both parts of present-day Xinxing are enclosed by the mapped Qocho portion of the Hami area. The coarse source edge leaves them unassigned and the modern city outline creates an artificial cutout."
+   }
+  }
+ },
  "rejected": {
   "CHGIS": "China Historical GIS (Harvard and Fudan), V6: free for academic research, but its terms permit no commercial use, resale or redistribution, so the atlas cannot publish boundaries drawn from it. https://chgis.fas.harvard.edu/data/chgis/v6/",
   "Cliopatria, Warring States": "Not used. Its Warring States polygons misplace the states: 'Wei (state)' lies at 37–40°N over Beijing, Datong and Shijiazhuang (Yan and Zhao land), Wei's capital Daliang (Kaifeng) and Han's capital Xinzheng fall inside 'Chu', and the Zhou royal domain is linked to the 10th-century Later Zhou. No openly licensed alternative was found; CHGIS also begins in 221 BCE."
@@ -54,5 +62,42 @@
   "license": "CC BY 3.0",
   "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
   "description": "Reprojected to WGS84, cleaned, simplified to a 100 m interval, renamed in English and Chinese, and limited to land divisions and the disputed Nerchinsk frontier. The five South China Sea reef entries are omitted."
+ },
+ "tangSong": {
+  "file": "tang-song-circuits.geojson.gz",
+  "names": "circuits.json",
+  "retainedSha256": "c64d5ad7fa9b581fd9b41eb2dad849f70c4ecec3d503526bad0ec7627ec2a3e8",
+  "dataset": "County-level population dataset of ancient China in 2, 742, 1102 & 1820 AD",
+  "credit": "Yichen Zheng and Tinghai Wu (2026)",
+  "url": "https://doi.org/10.6084/m9.figshare.30518417",
+  "paper": "https://doi.org/10.1038/s41597-026-07086-6",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "description": "ResearchArea prefectures dissolved by circuit and generalized. CountyPointsWithPopulation contributes seat coordinates only. Historical extents are clipped to the atlas dynasty land. Selectable interiors and graduated tints model approximate coverage. A small set of independently documented frontier seats is shown as points with a note when the polity reconstruction places their sites outside the dynasty.",
+  "song1100": "Adapted from the 1102 reconstruction. Qinfeng’s Xining, Huang, Kuo and Jishi entries are excluded at the end of 1100. Kaifeng is a capital district. The western circuits follow the dataset’s fiscal grouping. Selected place names and titles were checked against Song shi. Remaining extents use the nearest available reconstruction.",
+  "chineseNames": {
+   "tang": [
+    "https://zh.wikisource.org/wiki/新唐書/卷037",
+    "https://zh.wikisource.org/wiki/舊唐書/卷38"
+   ],
+   "song": [
+    "https://zh.wikisource.org/wiki/宋史/卷085",
+    "https://zh.wikisource.org/wiki/宋史/卷494"
+   ],
+   "description": "Historical spellings checked against the Tang and Song geography chapters by prefecture and county. City names are keyed to the retained source’s seat IDs. The selected spellings also correct clear source abbreviations and transcription errors."
+  },
+  "audit": {
+   "geography": [
+    "https://zh.wikisource.org/wiki/新唐書/卷037",
+    "https://zh.wikisource.org/wiki/舊唐書/卷38",
+    "https://zh.wikisource.org/wiki/宋史/卷085",
+    "https://zh.wikisource.org/wiki/元豐九域志/卷01"
+   ],
+   "independentComparisons": [
+    "https://doi.org/10.7910/DVN/Q9VOF5",
+    "https://doi.org/10.7910/DVN/WW1PD6"
+   ],
+   "description": "All retained city dots compared with period-appropriate gazetteer records by Chinese place name, parent prefecture and proximity. An independent same-name seat within 12 km or a matching parent seat within 8 km corroborates only the vicinity. Circuit corroboration comes from the geography chapters, with dated overrides where the sources document a transfer. Unresolved locations and affiliations are marked separately. Harvard and Fudan GIS layers served as comparison references. Seat changes use independently documented historical identifications at approximate coordinates."
+  }
  }
 }

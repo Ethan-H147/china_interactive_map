@@ -27,14 +27,13 @@ export default [
   assert(await p.evaluate('["province-lines","prefecture-lines","other-lines"].every(id=>!map.getLayer(id)||map.getLayoutProperty(id,"visibility")==="none")'),'Present-day lines are hidden');
   assert(await p.evaluate(`!${shown('province')}&&!${shown('prefecture-layer')}`),'Present-day region picker and line layers are hidden');
   await p.waitFor(labels+'.includes("history-tang")',{timeout:15000});
-  // Chang’an (Xi’an) in each period.
-  await tapAt(p,[108.94,34.34]);await p.waitFor(name+'==="Tang"',{timeout:15000});
-  assert.deepEqual(await p.evaluate(heading),['DYNASTY','Tang','唐']);
+  await tapAt(p,[108.948,34.268]);await p.waitFor(name+'==="Chang’an"',{timeout:15000});
+  assert.deepEqual(await p.evaluate(heading),['IMPERIAL CAPITAL','Chang’an','長安']);
   assert(await p.evaluate(`!${shown('selection-flag')}&&!${shown('selection-meta')}&&!${shown('subdivisions')}`),'No flag, statistics or subdivisions for a historical unit');
-  assert.match(await p.evaluate('document.getElementById("history-card").innerText'),/Cliopatria/);
+  assert.match(await p.evaluate('document.getElementById("history-card").innerText'),/Zheng and Wu/);
   await tapAt(p,[91.1,29.65]);await p.waitFor(name+'==="Tibetan Empire"',{timeout:15000});
   await p.screenshot('china-history-tang');
-  for(const [year,label,unit] of [[2,'Han dynasty','Han'],[250,'Three Kingdoms','Wei'],[1100,'Song dynasty','Song'],[1430,'Ming dynasty','Ming'],[1820,'Qing dynasty','Shaanxi']]){
+  for(const [year,label,unit] of [[2,'Han dynasty','Han'],[250,'Three Kingdoms','Wei'],[1100,'Song dynasty','Yongxingjun'],[1430,'Ming dynasty','Ming'],[1820,'Qing dynasty','Shaanxi']]){
    await period(p,year);
    assert.equal((await head(p))[1],label);
    await tapAt(p,[108.94,34.34]);await p.waitFor(name+'==='+JSON.stringify(unit),{timeout:15000});
@@ -85,6 +84,72 @@ export default [
   assert(await p.evaluate(`${shown('province')}&&map.getLayoutProperty("province-lines","visibility")!=="none"`),'Present-day picker and lines return');
   await p.evaluate('void selectRegion(provinceLayers.get(110000),110000)');await p.waitFor(name+'==="Beijing"',{timeout:15000});
   assert(await p.evaluate(shown('selection-flag')),'The present-day flag returns');
+ }},
+ {name:'Tang and Song circuits shade only on selection and historical city dots use the shared cards',options:{width:1360,height:900},async run(p,base){
+  p.base=base;await open(p);
+  const layer='china-history-circuit-tint';
+  const filter=()=>p.evaluate('map.getFilter("'+layer+'")');
+  const tapHere=async at=>{
+   const point=await p.evaluate(`(()=>{const q=map.project(${JSON.stringify(at)}),r=map.getCanvas().getBoundingClientRect();return[r.x+q.x,r.y+q.y]})()`);
+   await p.tap(point);await p.settle();
+  };
+  assert.deepEqual(await filter(),['==',['get','id'],'']);
+  await p.evaluate('void map.jumpTo({center:[112.5,34.27],zoom:5})');await p.settle();
+  const camera=await p.evaluate('map.getCenter().toArray().concat(map.getZoom())');
+  await tapHere([112.5,34.27]);
+  await p.waitFor(name+'==="Duji"',{timeout:15000});
+  assert.deepEqual(await p.evaluate('map.getCenter().toArray().concat(map.getZoom())'),camera);
+  assert.deepEqual(await filter(),['==',['get','id'],'742-circuit-duji']);
+  assert(await p.evaluate('map.queryRenderedFeatures(map.project([112.5,34.27]),{layers:["'+layer+'"]}).some(f=>f.properties.shade>.1)'));
+  assert.equal(await p.evaluate('map.getLayer("'+layer+'").type'),'fill');
+  assert.deepEqual(await p.evaluate('map.getPaintProperty("'+layer+'","fill-opacity")'),['get','opacity']);
+  assert.match(await p.evaluate('document.getElementById("history-card").innerText'),/Luoyang.*approximate/s);
+  await p.screenshot('china-history-tang-circuit');
+  const assertCity=async(year,id,at,en,zh)=>{
+   await p.evaluate(`void map.jumpTo({center:${JSON.stringify(at)},zoom:8})`);
+   await p.settle();
+   const label=`[data-atlas-place="${year}-city-${id}"]`;
+   await p.waitFor(`document.querySelector(${JSON.stringify(label)})?.textContent.includes(${JSON.stringify(zh)})`);
+   await tapHere(at);
+   await p.waitFor(name+'==='+JSON.stringify(en));
+   assert.equal(await p.evaluate('document.getElementById("selection-chinese").textContent'),zh);
+  };
+  await assertCity(742,570,[102.998,29.98],'Yandao','嚴道');
+  await period(p,1100);
+  assert.deepEqual(await filter(),['==',['get','id'],'']);
+  await p.evaluate('void map.jumpTo({center:[114.346,34.804],zoom:6})');await p.settle();
+  await tapHere([114.346,34.804]);
+  await p.waitFor(name+'==="Dongjing"',{timeout:15000});
+  assert.match(await p.evaluate('document.getElementById("history-card").innerText'),/Kaifeng capital district/);
+  assert.match(await p.evaluate('document.querySelector("#china-history-dock .history-counts").textContent'),/23 circuits, 1 capital district/);
+  await assertCity(1100,1253,[110.386,28.472],'Yuanling','沅陵');
+  await period(p,1820);
+  assert(await p.evaluate('!map.getLayer("'+layer+'")&&!map.getSource("china-history-cities")'));
+ }},
+ {name:'All Tang and Song circuit fades render on the shared map',options:{width:1000,height:760},async run(p,base){
+  p.base=base;await open(p);
+  const points=await p.evaluate(`(async()=>{const {decodeData}=await import('./geo-pack.mjs');const h=await decodeData(new Uint8Array(await (await fetch('data/china/history/borders.bin')).arrayBuffer()));return Object.fromEntries([742,1100].map(y=>{const {circuits,protectorates}=h.configs[h.years[y].config].points;return [y,{circuits,protectorates}];}));})()`);
+  for(const year of [742,1100]){
+   if(year===1100)await period(p,year);
+   for(const {id,en,bounds,center} of points[year].circuits){
+    await p.evaluate(`void chinaHistory.selectPlace(${JSON.stringify(id)},false);void map.fitBounds(${JSON.stringify(bounds)},{duration:0,padding:{left:30,right:30,top:30,bottom:145},maxZoom:7})`);
+    await p.settle();
+    assert.equal(await p.evaluate(name),en);
+    const rendered=await p.evaluate(`map.queryRenderedFeatures(map.project(${JSON.stringify(center)}),{layers:['china-history-circuit-tint']}).map(f=>f.properties)`);
+    assert(rendered.length>=5&&rendered.every(f=>f.id===id),en+' renders its selected nested contours');
+    await p.screenshot(id+'-audit');
+   }
+   if(year===742){
+    for(const {id,en,local} of points[year].protectorates){
+     await p.evaluate(`void chinaHistory.selectPlace(${JSON.stringify(id)},false)`);
+     assert.deepEqual(await p.evaluate(heading),['PROTECTORATE',en,local]);
+    }
+   }
+  }
+  for(const [id,at] of [['1100-circuit-liangzhe',[118.88,28.95]],['1100-circuit-jiangnan-east',[117.96,28.45]]]){
+   await p.evaluate(`void chinaHistory.selectPlace(${JSON.stringify(id)},false);void map.jumpTo({center:${JSON.stringify(at)},zoom:8.6})`);
+   await p.settle();await p.screenshot(id+'-detail-audit');
+  }
  }},
  {name:'The China snapshot dock fits a phone',options:{width:390,height:844,mobile:true},async run(p,base){
   p.base=base;await open(p);

@@ -130,7 +130,7 @@ export function createHistoricView(map,{country,base,config,borders:engine,fill,
   const districts=c.units.filter(u=>u.type==='Territorial district').length;
   const colonies=c.units.filter(u=>u.type==='Colony').length;
   const territorial=c.units.filter(u=>u.type==='Territory').length;
-  const summary=config.counts?config.counts(c.units):config.standalone
+  const summary=config.counts?config.counts(c.units,c):config.standalone
    ? [states&&provinceCount,territorial&&count(territorial,'territory','territories'),districts&&count(districts,'district','districts'),!states&&colonies&&count(colonies,'colony','colonies')].filter(Boolean).join(', ')
    : provinceCount+(territories?', '+count(territories,'territory','territories'):'');
   dock.querySelector('.history-counts').textContent=summary;

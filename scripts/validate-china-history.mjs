@@ -31,6 +31,57 @@ for(const year of years){
  assert(c.units.every(u=>u.name&&u.zh&&u.type&&u.label&&u.bounds),year+' unit cards');
  assert(linesSeparate(year),year+' lines separate different units');
 }
+assert.equal(createHash('sha256').update(fs.readFileSync(sources+manifest.tangSong.file)).digest('hex'),manifest.tangSong.retainedSha256);
+for(const [year,count,capital,dynasty] of [[742,15,'Chang’an','tang'],[1100,24,'Dongjing','song']]){
+ const {circuits,coverage,municipalities,protectorates}=config(year).points;
+ assert.equal(protectorates.length,year===742?6:0);
+ assert(protectorates.every(p=>p.local.endsWith('都護府')&&p.statusSource));
+ const byId=new Map(circuits.map(c=>[c.id,c]));
+ assert.equal(byId.size,count,year+' divisions');
+ assert.equal(municipalities.length,year===742?293:301,year+' audited prefectural seats');
+ assert.equal(new Set(municipalities.map(p=>p.id)).size,municipalities.length);
+ for(const p of municipalities){
+  assert(byId.has(p.circuit),p.en+' has a circuit');
+  for(const key of ['location','circuit'])assert(['corroborated','uncertain'].includes(p.audit[key]),p.en+' '+key+' was audited');
+  assert(p.local&&/^\p{Script=Han}+$/u.test(p.local),p.en+' has a Chinese name');
+  assert.equal(p.names['zh-Hant'],p.local,p.en+' has the same map and card name');
+  const mapped=unit(year,p.center);
+  if(p.frontier)assert.notEqual(mapped,dynasty,p.en+' records a frontier source disagreement');
+  else assert.equal(mapped,dynasty,p.en+' sits on dynasty land');
+ }
+ assert.equal(municipalities.find(p=>p.en===capital)?.kind,'Imperial capital');
+ for(const c of circuits){
+  const bands=coverage.features.filter(f=>f.properties.id===c.id);
+  const shades=bands.map(f=>f.properties.shade);
+  assert(shades[0]<.01&&shades.at(-1)>.25&&shades.every((v,i)=>!i||v>shades[i-1]),c.en+' fades from the interior to the edge');
+  let transmission=1;
+  for(const f of bands){transmission*=1-f.properties.opacity;assert(Math.abs(1-transmission-f.properties.shade)<1e-5,c.en+' blends to the intended shade');}
+  const core=bands.filter(f=>f.properties.step===5);
+  assert(core.some(f=>landIndex(polygons(f.geometry).flat())(c.center)),c.en+' label inside selectable area');
+  assert.equal(unit(year,c.center),dynasty,c.en+' label on dynasty land');
+ }
+}
+assert.deepEqual(config(742).points.municipalities.find(p=>p.id==='742-city-169').center,[116.94,26.01]);
+const songConfig=config(1100),qochoIndex=songConfig.units.findIndex(u=>u.id==='qocho');
+const qochoTests=faceTests.filter((_,i)=>songConfig.face[i]===qochoIndex);
+const qochoContains=p=>qochoTests.some(test=>test(p));
+const qochoOutline=songConfig.selectionLines.qocho.features;
+assert(qochoOutline.length,'Qocho retains a selection outline');
+for(const line of qochoOutline)for(const path of line.geometry.coordinates)for(let i=1;i<path.length;i++){
+ const [x,y]=path[i-1],[e,n]=path[i],length=Math.hypot(e-x,n-y);
+ if(length<.001)continue;
+ const k=.0002/length,m=(x+e)/2,b=(y+n)/2;
+ assert(!(qochoContains([m+(n-y)*k,b+(x-e)*k])&&qochoContains([m-(n-y)*k,b-(x-e)*k])),'Qocho outline contains an interior spur');
+}
+const songPoints=config(1100).points;
+for(const [id,circuit] of [['1100-city-845','1100-circuit-guangnan-east'],['1100-city-1002','1100-circuit-jiangnan-west']]){
+ const city=songPoints.municipalities.find(p=>p.id===id);
+ assert.equal(city.circuit,circuit,city.en+' corrected circuit');
+ assert(songPoints.coverage.features.some(f=>f.properties.id===circuit&&f.properties.step===1&&landIndex(polygons(f.geometry).flat())(city.center)),city.en+' agrees with the corrected circuit extent');
+}
+assert.equal(config(1100).points.circuits.find(c=>c.en==='Kaifeng capital district')?.kind,'Capital district');
+assert(!config(1100).points.municipalities.some(p=>p.aliases.includes('Xining Zhou')),'1100 has no later Xining prefecture');
+
 // The period's own states, and the share of land with no recorded polity.
 const states=year=>config(year).units.filter(u=>u.chinese).map(u=>u.key).sort();
 assert.deepEqual(states(250),['cao-wei','shu-han','wu']);
@@ -62,6 +113,7 @@ for(const [name,p,checks] of [
  ['Nanjing',[118.8,32.06],{250:'wu',1100:'song'}],
  ['Beijing',[116.4,39.9],{2:'han',250:'cao-wei',742:'tang',1100:'liao',1430:'ming',1820:'25036'}],
  ['Ji’an',[126.19,41.12],{2:'goguryeo',742:'balhae'}],['Kashgar',[75.99,39.47],{1100:'kara-khanid',1430:'chagatai'}],['Turpan',[89.19,42.95],{1100:'qocho'}],
+ ['Xinxing main area',[93.724674,42.694585],{1100:'qocho'}],['Xinxing detached area',[94.106193,42.548185],{1100:'qocho'}],
  ['Lhasa',[91.1,29.65],{742:'tibetan-empire',1100:'tibetans',1430:'tibet',1820:'25020'}],
  ['Yinchuan',[106.23,38.49],{1100:'western-xia'}],['Dali',[100.23,25.6],{1100:'dali'}],
  ['Taipei',[121.56,25.04],{1430:null,1820:'25034'}],['Macau',[113.55,22.19],{1820:'macau'}],['Zhuhai',[113.55,22.27],{1820:'25033'}],

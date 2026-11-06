@@ -33,7 +33,7 @@ function faceSize(mosaic,f){
 export function unitOutline(mosaic,config,unit){
  const face=mosaic.configs[config],features=[];if(unit<0)return {type:'FeatureCollection',features};
  const exact=mosaic.boundaries[config];
- if(exact)return exact[unit];
+ if(exact?.[unit])return exact[unit];
  // Join the unit's faces across the edges inside it.
  const parent=new Map(),find=f=>{let r=f;while(parent.get(r)!==r)r=parent.get(r);while(parent.get(f)!==r){const next=parent.get(f);parent.set(f,r);f=next;}return r;};
  face.forEach((u,f)=>{if(u===unit)parent.set(f,f);});
