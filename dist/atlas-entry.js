@@ -3,7 +3,8 @@
 (()=>{
  const registry=window.AtlasCountries,countries=registry.countries;
  const storageKey='boundary-atlas-country-v1';
- const fromHash=hash=>registry.route.exec(hash)?.[1].toLowerCase()||(hash.startsWith('#place=')?'china':null);
+ const oldRepublic=hash=>/^#china-1949(?:\/view=.*)?$/i.test(hash);
+ const fromHash=hash=>registry.route.exec(hash)?.[1].toLowerCase()||(hash.startsWith('#place=')||oldRepublic(hash)?'china':null);
  let saved;try{saved=localStorage.getItem(storageKey);}catch{}
  const allowed=country=>window.AtlasDev.allows(country);
  const requested=fromHash(location.hash)||(countries[saved]?saved:registry.fallback);
@@ -18,14 +19,14 @@
  const root=document.documentElement;root.dataset.atlas=initial;root.dataset.starting='true';
  function persist(country){try{localStorage.setItem(storageKey,country);}catch{}}
  function setUrl(country,preservePlace=true){
-  if(preservePlace&&location.hash.startsWith('#'+country+'/view='))return;
+  if(preservePlace&&(location.hash.startsWith('#'+country+'/view=')||country==='china'&&(/^#china\/history=\d+(?:&view=.*)?$/.test(location.hash)||oldRepublic(location.hash))))return;
   const place=country==='china'&&preservePlace?(/^#(?:china\/)?place=(.*)$/.exec(location.hash)?.[1]??null):null;
   history.replaceState(null,'',location.pathname+location.search+'#'+country+(place!==null?'/place='+place:''));
  }
  if(initial){persist(initial);setUrl(initial);document.title=countries[initial].en+(countries[initial].local?' ('+countries[initial].local+')':'');}
  function paint(){
   const info=countries[current];root.dataset.atlas=current;document.body.dataset.atlas=current;
-  const historical=document.getElementById('historical-snapshot');if(historical){const child=Object.values(countries).find(c=>c.parent===current&&c.snapshot),own=info.map?.history;historical.hidden=!info.snapshot&&!child&&!own;historical.textContent=info.snapshot?'Present day':'Historical snapshot';historical.onclick=()=>{if(own)dispatchEvent(new Event('atlas-history-toggle'));else location.hash='#'+(info.snapshot?info.parent:child.id);};}
+  const historical=document.getElementById('historical-snapshot');if(historical){const child=Object.values(countries).find(c=>c.parent===current&&c.snapshot),own=info.map?.history||info.history;historical.hidden=!info.snapshot&&!child&&!own;historical.textContent=info.snapshot?'Present day':'Historical snapshot';historical.onclick=()=>{if(own)dispatchEvent(new Event('atlas-history-toggle'));else location.hash='#'+(info.snapshot?info.parent:child.id);};}
   const $=id=>document.getElementById(id);
   if($('atlas-title-english')){$('atlas-title-english').textContent=info?.en||'Atlas';$('atlas-title-english').className=(info?.titleClasses?.[0]||'korea-english')+' title-english';}
   if($('atlas-title-local')){$('atlas-title-local').textContent=info?.local||'';$('atlas-title-local').className=(info?.titleClasses?.[1]||'mongolia-title')+' title-local';$('atlas-title-local').lang=info?.lang||'en';}

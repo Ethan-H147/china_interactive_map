@@ -5,7 +5,11 @@ export function createRegionalCapitals(map,{country,base,line,onSelect,labelPrio
  const id=country+'-capitals';let points=[],active=false,generation=0;
  return {
   async warm(){
-   if(map.getSource(id))return;const token=generation,response=await fetch(base+'capitals.json');if(!response.ok)throw Error('Capital locations unavailable');const data=await response.json();if(token!==generation)throw new DOMException('Country changed','AbortError');points=data.records;
+   if(map.getSource(id))return;const token=generation,response=await fetch(base+'capitals.json');if(!response.ok)throw Error('Capital locations unavailable');const data=await response.json();if(token!==generation)throw new DOMException('Country changed','AbortError');
+   this.install(data.records);
+  },
+  install(records){
+   points=records;
    map.addSource(id,{type:'geojson',data:{type:'FeatureCollection',features:points.map(p=>({type:'Feature',properties:{id:p.id,parent:p.parent},geometry:{type:'Point',coordinates:p.center}}))}});
    map.addLayer({id,type:'circle',source:id,layout:{visibility:'none'},paint:{'circle-radius':['interpolate',['linear'],['zoom'],3,2.5,9,4],'circle-color':line,'circle-stroke-color':'#fffdf8','circle-stroke-width':1.25}});
   },

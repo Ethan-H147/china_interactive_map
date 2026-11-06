@@ -7,5 +7,156 @@
   "license": "CC0 1.0",
   "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
   "sha256": "31fc07eb58545675ad3b3790e04abf7c5de3d76aac8649fec04aa94789d38b31",
-  "bytes": 258308
+  "bytes": 258308,
+  "jiangxinpo": {
+    "title": "Historical Begonia Leaf Map of China",
+    "credit": "Chatsven",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "url": "https://commons.wikimedia.org/wiki/File:Historical_Begonia_Leaf_Map_of_China.svg",
+    "historicalReference": "https://treaties.un.org/doc/Publication/UNTS/Volume%201010/volume-1010-I-14847-English.pdf",
+    "method": "Approximate trace of the northern Burma inset from the supplied globe. Inverse orthographic projection centered at 100°E, 40°N; smoothed at approximately the 1280-pixel reference scale. Clipped to northern Burma and the atlas land at build time.",
+    "ring": [
+      [
+        93.986,
+        28.932
+      ],
+      [
+        94.088,
+        27.099
+      ],
+      [
+        94.377,
+        27.393
+      ],
+      [
+        95.281,
+        27.625
+      ],
+      [
+        95.477,
+        27.818
+      ],
+      [
+        95.887,
+        27.744
+      ],
+      [
+        95.883,
+        27.836
+      ],
+      [
+        96.592,
+        27.955
+      ],
+      [
+        96.598,
+        27.771
+      ],
+      [
+        97.113,
+        27.512
+      ],
+      [
+        97.123,
+        27.144
+      ],
+      [
+        97.329,
+        26.965
+      ],
+      [
+        97.333,
+        26.781
+      ],
+      [
+        96.928,
+        26.861
+      ],
+      [
+        96.923,
+        27.045
+      ],
+      [
+        96.22,
+        26.928
+      ],
+      [
+        96.028,
+        26.644
+      ],
+      [
+        95.335,
+        26.336
+      ],
+      [
+        95.269,
+        25.498
+      ],
+      [
+        95.866,
+        25.526
+      ],
+      [
+        95.96,
+        25.715
+      ],
+      [
+        96.262,
+        25.635
+      ],
+      [
+        96.256,
+        25.82
+      ],
+      [
+        96.456,
+        25.828
+      ],
+      [
+        96.459,
+        25.735
+      ],
+      [
+        96.957,
+        25.752
+      ],
+      [
+        96.965,
+        25.474
+      ],
+      [
+        97.761,
+        25.496
+      ],
+      [
+        97.763,
+        25.404
+      ],
+      [
+        100.646,
+        25.428
+      ],
+      [
+        100.668,
+        29.111
+      ],
+      [
+        93.986,
+        28.932
+      ]
+    ]
+  },
+  "claimsReference": {
+    "url": "https://commons.wikimedia.org/wiki/File:ROC_Administrative_and_Claims.svg",
+    "credit": "ZanderSchubert, after Electionworld and Pryaltonian",
+    "license": "CC BY-SA 3.0",
+    "note": "Schematic 1953–2005 reference. Atlas administrative outlines supply physical land. Local approximations locate the Wakhan, Karakoram, northern Bhutan and Amur sectors; their polygons do not represent surveyed claims or conditions on one date.",
+    "sectors": {
+      "wakhan": [[74.17,36.92],[74.18,37.18],[74.33,37.33],[74.49,37.39],[75.03,37.49],[75.06,36.94],[74.53,36.88],[74.17,36.92]],
+      "karakoram": [[74.13,37.12],[74.38,36.94],[74.62,36.7],[75.1,36.51],[75.48,36.41],[75.87,36.28],[76.38,36.04],[76.9,35.83],[77.09,35.99],[77.09,36.45],[76.7,36.78],[75.8,37.2],[74.9,37.32],[74.13,37.12]],
+      "bhutan": [[89.4,28.34],[90.78,28.36],[91.07,28.17],[90.98,27.93],[90.7,27.88],[90.54,27.92],[90.41,27.84],[90.21,27.81],[90.02,27.91],[89.76,27.9],[89.53,28.03],[89.4,28.34]],
+      "amur": [[127.37,50.22],[127.47,50.48],[127.65,50.53],[127.91,50.52],[128.08,50.38],[128.16,50.12],[128.18,49.95],[127.91,49.91],[127.62,50.02],[127.37,50.22]]
+    }
+  }
 }

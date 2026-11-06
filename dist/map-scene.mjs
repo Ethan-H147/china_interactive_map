@@ -73,7 +73,7 @@ export function createMapScene(map,{version=globalThis.maplibregl?.getVersion?.(
   if(options.type==='geojson'&&/-(?:outlines|selection|selection-edges)$/.test(id))options={...options,promoteId:options.promoteId||'id',tolerance:.35};
   if(id.endsWith('-selection-edges')&&typeof options.data==='string'&&!options.data.startsWith('atlas-data://'))options={...options,data:'atlas-data://'+id+'?url='+encodeURIComponent(options.data)+'&transform=selection-outline'};
   sourceIds.set(id,options.promoteId);return native.addSource(id,options);
- };const getView=()=>{const bounds=map.getBounds?.()?.toArray?.();return bounds?paddedView(bounds.flat()):[-180,-90,180,90];};let culling=true,horizonCulling=true,selectionCulling=true,view=getView();let overview=false,borderPreparation=false;let satellite={visible:false,opacity:1},snapshot=null,snapshotContexts=[];
+ };const getView=()=>{const bounds=map.getBounds?.()?.toArray?.();return bounds?paddedView(bounds.flat()):[-180,-90,180,90];};let culling=true,horizonCulling=true,selectionCulling=true,view=getView();let overview=false,borderPreparation=false;let satellite={visible:false,opacity:1},snapshot=null,snapshotContexts=[],snapshotKeepsWater=false;
  if(map.removeSource){const remove=map.removeSource.bind(map);map.removeSource=id=>{const result=remove(id);sourceIds.delete(id);return result;};}
  // The pinned renderer exposes altitude on its transform. Missing or invalid
  // altitude falls back to the conservative back hemisphere, never tighter culling.
@@ -129,7 +129,8 @@ export function createMapScene(map,{version=globalThis.maplibregl?.getVersion?.(
  }
  const refreshBorderOwnership=()=>{for(const [id,entry]of entries)if(entry.detailedBorder)native.setLayoutProperty(id,'visibility',visibility(id,entry));};
  const visibility=(id,entry)=>{
-  return coveredBorder(id,entry)||entry.culled||emptySelection(entry)||overview&&entry.replaceInOverview&&!(snapshot&&id.startsWith(snapshot+'-'))&&!(borderPreparation&&entry.detailedBorder)?'none':snapshot&&!id.startsWith(snapshot+'-')&&(['line','circle','symbol'].includes(entry.type)||['water','selection'].includes(entry.role)||snapshotContexts.includes(entry.contextCountry))?'none':entry.visibility;
+  const hideForSnapshot=snapshot&&!id.startsWith(snapshot+'-')&&(snapshotContexts.includes(entry.contextCountry)||(!(snapshotKeepsWater&&['water','waterLine'].includes(entry.role))&&(['line','circle','symbol'].includes(entry.type)||['water','selection'].includes(entry.role))));
+  return coveredBorder(id,entry)||entry.culled||emptySelection(entry)||overview&&entry.replaceInOverview&&!(snapshot&&id.startsWith(snapshot+'-'))&&!(borderPreparation&&entry.detailedBorder)?'none':hideForSnapshot?'none':entry.visibility;
  };
  function render(id,entry){
   for(const [key,value] of Object.entries(paint(entry)))if(!same(entry.rendered[key],value)){native.setPaintProperty(id,key,value);entry.rendered[key]=clone(value);}
@@ -189,7 +190,7 @@ export function createMapScene(map,{version=globalThis.maplibregl?.getVersion?.(
   setSelectionDrawCulling(value){selectionDrawCulling=!!value;map.triggerRepaint();},
   setSelectionCulling(value){selectionCulling=!!value;for(const [id,entry]of entries)if(entry.visibleStates)native.setLayoutProperty(id,'visibility',visibility(id,entry));},
   cullingStats(){let culledLayers=0,contextLayers=0,emptySelectionLayers=0;for(const entry of entries.values()){if(entry.culled)culledLayers++;if(entry.file)contextLayers++;if(emptySelection(entry))emptySelectionLayers++;}return {enabled:culling,horizonCulling,selectionCulling,culledLayers,contextLayers,emptySelectionLayers};},
-  setSnapshot(id,{replaceContexts=[]}={}){if(snapshot===id&&same(snapshotContexts,replaceContexts))return;snapshot=id;snapshotContexts=[...replaceContexts];for(const [key,entry]of entries)native.setLayoutProperty(key,'visibility',visibility(key,entry));},
+  setSnapshot(id,{replaceContexts=[],keepWater=false}={}){if(snapshot===id&&same(snapshotContexts,replaceContexts)&&snapshotKeepsWater===keepWater)return;snapshot=id;snapshotContexts=[...replaceContexts];snapshotKeepsWater=keepWater;for(const [key,entry]of entries)native.setLayoutProperty(key,'visibility',visibility(key,entry));},
   setSatellite(visible,opacity=1){
    const next={visible:!!visible,opacity:Math.max(0,Math.min(1,opacity))};
    if(same(next,satellite))return;satellite=next;

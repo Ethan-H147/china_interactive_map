@@ -140,6 +140,8 @@
     "build:us-elections": "node scripts/fetch-us-elections.mjs && node scripts/build-us-elections.mjs",
     "build:us-historic-borders": "node --max-old-space-size=8000 scripts/build-us-historic-borders.mjs",
     "test:us-elections": "node --check dist/elections.mjs && node --check dist/us-elections.mjs && node scripts/validate-us-elections.mjs && node scripts/validate-us-historic-borders.mjs && node scripts/browser/run.mjs us-elections",
+    "build:china-history": "node --max-old-space-size=6000 scripts/build-china-history.mjs",
+    "test:china-history": "node --check dist/china-history.mjs && node scripts/validate-china-history.mjs && node scripts/browser/run.mjs china-history",
     "test:us-history": "node --check dist/historic-borders.mjs && node --check dist/historic-view.mjs && node --check dist/us-history.mjs && node scripts/validate-us-historic-borders.mjs && node scripts/browser/run.mjs us-history",
     "build:korea-elections": "node scripts/build-korea-elections.mjs",
     "test:korea-elections": "node --check dist/elections.mjs && node --check dist/korea-elections.mjs && node scripts/validate-korea-elections.mjs && node scripts/browser/run.mjs korea-elections",

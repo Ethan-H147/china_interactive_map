@@ -1,0 +1,58 @@
+{
+ "cliopatria": {
+  "file": "cliopatria.geojson",
+  "description": "Every Cliopatria polity whose feature for a snapshot year overlaps present-day China by at least 1 km², copied unchanged from the release file. Group features (names in parentheses) are left out.",
+  "dataset": "Cliopatria, a geospatial database of world-wide political entities (Seshat Global History Databank)",
+  "url": "https://github.com/Seshat-Global-History-Databank/cliopatria",
+  "release": "cliopatria.geojson.zip at commit 5f433377139a6eeaeacbdc894b70f8805b72c8b5 (2026-10-03), file cliopatria_polities_only_v021.geojson",
+  "archiveSha256": "e10a4e429fca708788ff9e7572a95fce801fae55852d217cffabc1c59cd4eed4",
+  "fileSha256": "fc6f0d1e4cc42f45da83522b3696db6f2cc85ec0d12259a85c89b31347b8fc0a",
+  "license": "CC BY 4.0",
+  "retrieved": "2026-11-05",
+  "retainedSha256": "dfac9fda84376f99983d4b04dd7a4b8cb14bd632041fc830e50646355208d542"
+ },
+ "polities": {
+  "file": "polities.json",
+  "description": "English and Chinese names, kind and notes for each Cliopatria polity, compiled for this atlas."
+ },
+ "snapshots": [
+  {
+   "year": 2,
+   "field": "han"
+  },
+  {
+   "year": 250,
+   "field": "threeKingdoms"
+  },
+  {
+   "year": 742,
+   "field": "tang"
+  },
+  {
+   "year": 1100,
+   "field": "song"
+  },
+  {
+   "year": 1430,
+   "field": "ming"
+  },
+  {
+   "year": 1820,
+   "field": "qing"
+  }
+ ],
+ "rejected": {
+  "CHGIS": "China Historical GIS (Harvard and Fudan), V6: free for academic research, but its terms permit no commercial use, resale or redistribution, so the atlas cannot publish boundaries drawn from it. https://chgis.fas.harvard.edu/data/chgis/v6/",
+  "Cliopatria, Warring States": "Not used. Its Warring States polygons misplace the states: 'Wei (state)' lies at 37–40°N over Beijing, Datong and Shijiazhuang (Yan and Zhao land), Wei's capital Daliang (Kaifeng) and Han's capital Xinzheng fall inside 'Chu', and the Zhou royal domain is linked to the 10th-century Later Zhou. No openly licensed alternative was found; CHGIS also begins in 221 BCE."
+ },
+ "qing1820": {
+  "file": "qing-1820.geojson.gz",
+  "retainedSha256": "7a782d5b0aed9e2444c07ad408822c3698bbcb51200b345c5e571dacbc7d66e6",
+  "dataset": "Provincial Boundaries, China, 1820",
+  "credit": "Jeffrey Snyder-Reinke / Stanford University Center for Interdisciplinary Research (Grave Reform in Modern China); geometry compiled by Man Zhimin, checked by Zou Yilin",
+  "url": "https://purl.stanford.edu/wd799pc4692",
+  "license": "CC BY 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "description": "Reprojected to WGS84, cleaned, simplified to a 100 m interval, renamed in English and Chinese, and limited to land divisions and the disputed Nerchinsk frontier. The five South China Sea reef entries are omitted."
+ }
+}

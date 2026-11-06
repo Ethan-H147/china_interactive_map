@@ -62,5 +62,5 @@ export function countryLabelCandidates(active,allows=()=>true,centerLongitude){
 export function createCountryLabels(map,{allows=()=>true}={}){
  let markers=[];
  const clear=()=>{markers.forEach(marker=>marker.remove());markers=[];};
- return {clear,sync(active){clear();const candidates=countryLabelCandidates(active,allows,map.getRenderWorldCopies?.()?map.getCenter().lng:undefined);markers=render(map,candidates,'province-label');for(const marker of markers)marker.getElement().dataset.atlasCountryLabel='true';}};
+ return {clear,sync(active,include){clear();const candidates=countryLabelCandidates(active,allows,map.getRenderWorldCopies?.()?map.getCenter().lng:undefined);markers=render(map,include?candidates.filter(include):candidates,'province-label');for(const marker of markers)marker.getElement().dataset.atlasCountryLabel='true';}};
 }

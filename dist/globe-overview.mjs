@@ -8,7 +8,7 @@ import './countries.js';
 const ids=['globe-overview-land','globe-overview-borders'];
 const unclaimed=open=>['all',['!=',['coalesce',['get','claimedBy'],''],open],['any',['!',['has','claimants']],['in',open||'-',['get','claimants']]]];
 export async function addGlobeOverview(map){
- let ready=false,disposed=false,bordersVisible=false,handoff,lastCountry,activeCountry=globalThis.AtlasEntry?.current||'china',paintedCountry=activeCountry,pendingCountry;
+ let ready=false,disposed=false,bordersVisible=false,handoff,lastCountry,activeCountry=globalThis.AtlasEntry?.current||'china',paintedCountry=activeCountry,pendingCountry,replaceLand=[];
  const wrapHooks=new Map(),borderZoom=createBorderZoomPolicy();
  const pinSources=()=>{for(const id of ids){
   const source=map.getSource(id);if(source)source.reparseOverscaled=false;
@@ -38,18 +38,21 @@ export async function addGlobeOverview(map){
   const showBorders=supported||!!scene?.overview;
   if(showBorders!==bordersVisible&&map.getLayer(ids[1])){bordersVisible=showBorders;map.setPaintProperty(ids[1],'line-opacity',showBorders?1:0);}
  };
- const countryChanged=country=>{
-  activeCountry=country;if(lastCountry===country){sync();return;}lastCountry=country;const registry=globalThis.AtlasCountries,definition=registry.countries[country];
+ const countryChanged=(country,{replaceContexts=[]}={})=>{
+  activeCountry=country;
+  const key=JSON.stringify([country,replaceContexts]);if(lastCountry===key){sync();return;}
+  lastCountry=key;replaceLand=replaceContexts;
+  const registry=globalThis.AtlasCountries,definition=registry.countries[country],replaced=replaceContexts.length?replaceContexts:definition?.snapshot?.replaces;
   if(map.getLayer(ids[0])){
    const color=country==='china'?'#e9dfc9':countryFill(definition)||'#d7d7d3';
    map.setPaintProperty(ids[0],'fill-color',['case',['==',['get','country'],country],color,backgroundLandColor()]);
-   map.setFilter(ids[0],['all',unclaimed(country),...(definition?.snapshot?.replaces?.length?[['!',['in',['get','country'],['literal',definition.snapshot.replaces]]]]:[])]);
+   map.setFilter(ids[0],['all',unclaimed(country),...(replaced?.length?[['!',['in',['get','country'],['literal',replaced]]]]:[])]);
    pendingCountry=country;
   }else paintedCountry=country;
   if(map.getLayer(ids[1]))map.setFilter(ids[1],['all',unclaimed(country),...(definition?.ownFrontier?[['any',['!=',['get','overviewOwner'],'atlas-frontiers'],['!',['in',' '+country+' ',['concat',' ',['get','countries'],' ']]]]]:[])]);
   sync();
  };
- const refreshPalette=()=>{lastCountry=undefined;countryChanged(activeCountry);};
+ const refreshPalette=()=>{lastCountry=undefined;countryChanged(activeCountry,{replaceContexts:replaceLand});};
  // A new palette reaches the land only after its worker tiles reload. Layers drawn
  // outside the tiles (the polar cap) follow this, not the entry, so both change together.
  const painted=()=>{if(pendingCountry!==undefined&&map.getSource(ids[0])&&map.isSourceLoaded(ids[0])){paintedCountry=pendingCountry;pendingCountry=undefined;map.triggerRepaint();}};

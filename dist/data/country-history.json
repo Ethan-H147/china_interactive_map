@@ -855,15 +855,6 @@
       }
     },
     {
-      "country": "china-1949",
-      "name": "Republic of China",
-      "addedOn": "2026-10-19",
-      "basis": "local-implementation",
-      "evidence": {
-        "note": "Historical snapshot (1949), not a new present-day country; CC0 1947–1949 province reconstruction, earlier Outer Mongolia reference extent with non-control note, and twelve municipality location points. Hidden from the country list; accessed beside China."
-      }
-    },
-    {
       "country": "soviet-union-1988",
       "name": "Soviet Union",
       "addedOn": "2026-10-19",

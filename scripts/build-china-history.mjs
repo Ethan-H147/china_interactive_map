@@ -1,0 +1,330 @@
+// China's historical snapshots, from the Han to the Qing, as one dated mosaic built
+// by the shared historic-mosaic.mjs (as Korea's). Han through Ming use whole modern
+// counties. The Qing frame uses Stanford's historical provinces and frontier regions.
+// Inputs are retained under scripts/boundary-sources/china-history/; nothing is downloaded.
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import {gunzipSync} from 'node:zlib';
+import {decodePack} from '../dist/china-pack.mjs';
+import {decodeData} from '../dist/geo-pack.mjs';
+import {command,fc,geographicBounds} from './build-regional-dataset.mjs';
+import {landIndex} from './geo-index.mjs';
+import {area,centre,largestCover,nearestUnit,polygons,writeMosaic} from './historic-mosaic.mjs';
+const sources='scripts/boundary-sources/china-history/',out='dist/data/china/history/borders.bin';
+const read=file=>JSON.parse(fs.readFileSync(file,'utf8'));
+const cliopatria=read(sources+'cliopatria.geojson'),polities=read(sources+'polities.json'),manifest=read(sources+'manifest.json');
+const display=decodePack(gunzipSync(fs.readFileSync('dist/data/china-boundaries.pack.bin'))).display;
+const counties=JSON.parse(gunzipSync(fs.readFileSync('dist/data/china-counties.bin'))).regions.features;
+
+// Present-day pieces: the county-level divisions, and the displayed subdivisions that have none
+// (the municipalities' districts, directly administered units, Taiwan, Hong Kong and Macau),
+// cleaned into one tiling of the displayed provinces.
+const provinceOf=new Map(display.subdivisions.features.map(f=>[f.properties.adcode,f.properties.provinceCode??f.properties.parent?.adcode]));
+const divided=new Set(counties.map(f=>f.properties.parentCity));
+const raw=[
+ ...counties.map(f=>({type:'Feature',properties:{id:String(f.properties.adcode),province:f.properties.provinceCode},geometry:f.geometry})),
+ ...display.subdivisions.features.filter(f=>!divided.has(f.properties.adcode)).map(f=>({type:'Feature',properties:{id:String(f.properties.adcode),province:provinceOf.get(f.properties.adcode)},geometry:f.geometry}))
+];
+const provinces=fc(display.provinces.features.map(f=>({type:'Feature',properties:{province:f.properties.adcode},geometry:f.geometry})));
+// Overlaps go to the larger piece and small enclosed gaps to a neighbour; the result is clipped to
+// the displayed land.
+const cleaned=await command({'pieces.json':fc(raw),'provinces.json':provinces},'-clean gap-fill-area=2km2 -clip provinces.json');
+const pieces=cleaned.features.filter(f=>f.geometry).map(f=>({id:f.properties.id,province:f.properties.province,polygons:polygons(f.geometry)}));
+assert.equal(new Set(pieces.map(p=>p.id)).size,raw.length,'Every county-level division keeps land');
+// Displayed land no piece covers (slivers where county outlines do not meet) joins the nearest
+// piece of its province, so the snapshot fill has no holes.
+const left=(await command({'provinces.json':provinces,'pieces.json':fc(cleaned.features)},'-erase pieces.json -explode')).features.filter(f=>f.geometry&&area(polygons(f.geometry))>=1e-6);
+const boxOf=piece=>piece.box??=piece.polygons.reduce((b,polygon)=>{for(const [x,y] of polygon[0]){b[0]=Math.min(b[0],x);b[1]=Math.min(b[1],y);b[2]=Math.max(b[2],x);b[3]=Math.max(b[3],y);}return b;},[Infinity,Infinity,-Infinity,-Infinity]);
+
+for(const f of left){
+ const ring=polygons(f.geometry)[0][0],[x,y]=ring.reduce(([a,b],[u,v])=>[a+u/ring.length,b+v/ring.length],[0,0]);
+ const candidates=pieces.filter(p=>!p.host&&p.province===f.properties.province),close=candidates.filter(p=>{const b=boxOf(p);return x>=b[0]-.1&&x<=b[2]+.1&&y>=b[1]-.1&&y<=b[3]+.1;});
+ const host=(close.length?close:candidates).reduce((best,p)=>{let d=Infinity;for(const polygon of p.polygons)for(const [a,b] of polygon[0])d=Math.min(d,Math.hypot((a-x)*Math.cos(y*Math.PI/180),b-y));return d<best[1]?[p,d]:best;},[null,Infinity])[0];
+ pieces.push({id:host.id+'+'+pieces.length,province:host.province,polygons:polygons(f.geometry),host});
+}
+// Holes left in the assembled land (gaps where the displayed provinces' own borders do not meet,
+// and the few the cleaning leaves) also join the nearest piece.
+const nearestPiece=([x,y],list)=>{const close=list.filter(p=>{const b=boxOf(p);return x>=b[0]-.1&&x<=b[2]+.1&&y>=b[1]-.1&&y<=b[3]+.1;});return (close.length?close:list).reduce((best,p)=>{let d=Infinity;for(const polygon of p.polygons)for(const [a,b] of polygon[0])d=Math.min(d,Math.hypot((a-x)*Math.cos(y*Math.PI/180),b-y));return d<best[1]?[p,d]:best;},[null,Infinity])[0];};
+// A hole may hold an island of another piece, which keeps its land.
+const assembled=fc(pieces.map(p=>({type:'Feature',properties:{},geometry:{type:'MultiPolygon',coordinates:p.polygons}})));
+const rings=(await command(assembled,'-dissolve')).features.flatMap(f=>polygons(f.geometry)).flatMap(p=>p.slice(1)).filter(ring=>area([[ring]])<50);
+const holes=(await command({'holes.json':fc(rings.map(ring=>({type:'Feature',properties:{},geometry:{type:'Polygon',coordinates:[ring]}}))),'pieces.json':assembled},'-erase pieces.json -explode')).features.filter(f=>f.geometry&&area(polygons(f.geometry))>=1e-6);
+for(const f of holes){const ring=polygons(f.geometry)[0][0],at=ring.reduce(([a,b],[u,v])=>[a+u/ring.length,b+v/ring.length],[0,0]),host=nearestPiece(at,pieces.filter(p=>!p.host));pieces.push({id:host.id+'+'+pieces.length,province:host.province,polygons:polygons(f.geometry),host});}
+const own=pieces.filter(p=>!p.host);
+
+// Offshore pieces: those on a landmass under 5,000 km² (Zhoushan, but not Hainan or Taiwan), and
+// pieces under 1,000 km² on the coast (Dongtou, joined to the mainland by a causeway).
+const pieceFeatures=fc(own.map(p=>({type:'Feature',properties:{id:p.id},geometry:{type:'MultiPolygon',coordinates:p.polygons}})));
+const masses=(await command(pieceFeatures,'-dissolve -explode')).features.map(f=>polygons(f.geometry));
+const small=masses.filter(list=>area(list)<5000).map(list=>landIndex(list.flat()));
+const shore=new Set();for(const list of masses)for(const polygon of list)for(const ring of polygon)for(const [x,y] of ring)shore.add(x+','+y);
+const coastal=new Set(own.filter(p=>area(p.polygons)<1000&&p.polygons.some(polygon=>polygon[0].some(([x,y])=>shore.has(x+','+y)))));
+const inner=new Map((await command(pieceFeatures,'-points inner',{precision:null})).features.map(f=>[f.properties.id,f.geometry.coordinates]));
+const islands=new Set(own.filter(p=>small.some(test=>test(inner.get(p.id)))));
+// From a piece's centre to the nearest vertex of another piece, in degrees.
+const toLand=(p,q)=>{const [x,y]=p.center??=centre(p),b=boxOf(q);if(x<b[0]-1||x>b[2]+1||y<b[1]-1||y>b[3]+1)return Infinity;let d=Infinity;for(const polygon of q.polygons)for(const [a,c] of polygon[0])d=Math.min(d,Math.hypot((a-x)*Math.cos(y*Math.PI/180),c-y));return d;};
+// Shares are measured on a simplified copy; Cliopatria's polygons are far coarser.
+const simple=new Map((await command(pieceFeatures,'-simplify interval=250 keep-shapes')).features.map(f=>[f.properties.id,polygons(f.geometry)]));
+const snapshots=[];
+for(const {year,field} of manifest.snapshots.filter(s=>s.year!==1820)){
+ // Each polygon is widened by 10 km, about its vertex spacing, so a coarse coast or edge does not
+ // leave the land beside it unrecorded.
+ const current=cliopatria.features.filter(f=>f.properties.FromYear<=year&&f.properties.ToYear>=year);
+ const widened=await command(fc(current.map((f,i)=>({type:'Feature',properties:{i},geometry:f.geometry}))),'-buffer radius=10000');
+ const reference=widened.features.map(f=>({unit:polities[current[f.properties.i].properties.Name]?.key,name:current[f.properties.i].properties.Name,polygons:polygons(f.geometry)}));
+ assert.equal(reference.length,current.length,year+': every polygon widened');
+ const missing=reference.filter(r=>!r.unit).map(r=>r.name);
+ assert(!missing.length,year+': polities without an entry in polities.json: '+missing.join(', '));
+ largestCover(own,reference,{field,uncovered:true,shape:p=>simple.get(p.id)});
+ // An offshore piece Cliopatria's coarse polygons leave out takes the polity of land within 0.5° (about 50 km).
+ nearestUnit(own,field,{limit:.5,only:p=>islands.has(p)||coastal.has(p),distance:toLand});
+ for(const piece of pieces)if(piece.host)piece[field]=piece.host[field];
+ const used=new Set(pieces.map(p=>p[field]).filter(Boolean));
+ const units=Object.fromEntries(Object.values(polities).filter(p=>used.has(p.key)).map(({key,...unit})=>[key,unit]));
+ snapshots.push({year,date:String(year).padStart(4,'0')+'-12-31',field,units});
+}
+
+// A last clean of every piece, fillers included, removes self-intersecting rings in the source
+// outlines, which drew stray triangles.
+const final=new Map((await command(fc(pieces.map(p=>({type:'Feature',properties:{id:p.id},geometry:{type:'MultiPolygon',coordinates:p.polygons}}))),'-clean gap-fill-area=0')).features.filter(f=>f.geometry).map(f=>[f.properties.id,polygons(f.geometry)]));
+for(const p of pieces)p.polygons=final.get(p.id)||[];
+assert(own.every(p=>p.polygons.length),'Every division keeps land after the last clean');
+const shares=new Map(pieces.map(p=>[p,area(p.polygons)]));
+const feature=(properties,geometry)=>({type:'Feature',properties,geometry});
+const multi=coordinates=>({type:'MultiPolygon',coordinates});
+const early=(await command(fc(pieces.map(p=>feature({frame:snapshots.map(s=>p[s.field]||'').join('|')},multi(p.polygons)))),'-dissolve2 frame')).features;
+const qing=JSON.parse(gunzipSync(fs.readFileSync(sources+manifest.qing1820.file))).features;
+const jilin=qing.find(f=>f.properties.id===25026);
+const islandsOfJilin=polygons(jilin.geometry);
+const sakhalin=islandsOfJilin.find(p=>geographicBounds(multi([p]))[1][0]>144);
+jilin.geometry=multi(islandsOfJilin.filter(p=>p!==sakhalin));
+qing.push(feature({id:'sakhalin',name:'Sakhalin',zh:'庫頁島',type:'Qing claim',note:'The Qing claimed Sakhalin. Indigenous communities lived on the island, where Qing authority was limited.'},multi([sakhalin])));
+const historic=qing.map(f=>feature({qing:String(f.properties.id)},f.geometry));
+
+// Use the atlas land as the only footprint. The historical source contributes divisions.
+const contextFiles=['china-neighbours.bin','korea-context.bin','mongolia-context.bin','russia/context.bin','europe/bhutan/context.bin','japan-context.bin'];
+const loadLand=async file=>(await decodeData(fs.readFileSync('dist/data/'+file))).features;
+const context=await Promise.all(contextFiles.map(loadLand));
+const world=(await loadLand('world-land.bin')).filter(f=>!['china','korea','mongolia','russia'].includes(f.properties.country));
+const nearEastAsia=f=>{const [[w,s],[e,n]]=geographicBounds(f.geometry);return w<148&&e>66&&s<59&&n>15;};
+const neighbours=(await command({
+ 'context.json':fc([...world,...context.flat()].filter(f=>f.properties.country!=='china'&&nearEastAsia(f)).map(f=>feature({},f.geometry))),
+ 'china.json':fc(early)
+},'-clip bbox=66,15,148,59 -erase china.json -dissolve2')).features;
+const modernLand=(await command(fc([...early,...neighbours].map(f=>feature({},f.geometry))),'-dissolve2')).features;
+const coast=fc(modernLand.map(f=>feature({},multi(polygons(f.geometry).map(([ring])=>[ring])))));
+const inland=await command(coast,'-simplify interval=400 keep-shapes -buffer radius=-3000');
+// Match small shoreline differences beyond modern China as well. Keep the
+// correction in the coastal band so it cannot shift an inland frontier.
+const coastalUnits=new Set(['25025','25026','sakhalin']);
+const shoreCorrections=(await command({
+ 'coastal.json':fc(historic.filter(f=>coastalUnits.has(f.properties.qing))),
+ 'historical.json':fc(historic),'land.json':coast,'inland.json':inland
+},'-buffer radius=2200 -erase historical.json -clip land.json -erase inland.json')).features;
+const qingLand=(await command({'qing.json':fc([...historic,...shoreCorrections]),'land.json':coast},'-dissolve2 qing -clean gap-width=0 -clip land.json')).features;
+
+const macau=polygons(display.provinces.features.find(f=>f.properties.adcode===820000).geometry);
+const {key:macauKey,...macauUnit}=polities['Portuguese Colonies'];
+const qingWithMacau=(await command({
+ 'qing.json':fc(qingLand),
+ 'macau.json':fc([feature({},multi(macau))])
+},'-erase macau.json')).features;
+qingWithMacau.push(feature({qing:macauKey},multi(macau)));
+// Reuse Mapshaper's shared-edge data fill for connected pieces the historical outline misses.
+// Macau has its own exact footprint, so it does not supply a value to adjoining land.
+const merged=(await command(fc([
+ ...early.map(f=>feature({layer:'early',frame:f.properties.frame,qing:null},f.geometry)),
+ ...qingWithMacau.map(f=>feature({layer:'qing',frame:null,qing:f.properties.qing},f.geometry))
+]),"-split layer -union fields=frame,qing -clean gap-width=0 -explode -each 'adjoining=qing_2 === \"macau\" ? null : qing_2' -data-fill field=adjoining")).features.filter(f=>f.geometry&&polygons(f.geometry).length);
+const extended=merged.map(f=>{
+ const keys=f.properties.frame_1?.split('|')||[];
+ return {qing:f.properties.qing_2||(f.properties.frame_1!=null?f.properties.adjoining:undefined)||undefined,polygons:polygons(f.geometry),external:f.properties.frame_1==null,...Object.fromEntries(snapshots.map((s,i)=>[s.field,keys[i]]))};
+});
+// Separate modern coastal islands can take their nearest shore. Remote reefs
+// without a nearby division keep the neutral land colour.
+nearestUnit(extended.filter(p=>p.qing!==macauKey),'qing',{limit:.5,only:p=>!p.external,distance:toLand});
+const qingFrontier=await command({
+ 'qing.json':fc(extended.filter(p=>p.qing).map(p=>feature({},multi(p.polygons)))),
+ 'inland.json':inland
+},'-dissolve2 -lines -clip inland.json');
+snapshots.push({year:1820,date:'1820-12-31',field:'qing',frontier:qingFrontier,fullLand:true,units:{
+ ...Object.fromEntries(qing.map(({properties:{id,...unit}})=>[id,unit])),[macauKey]:macauUnit
+}});
+// Fit the ROC interior divisions to the same modern land used by the Qing frame.
+// Keep substantive historical extensions and the earlier Mongolia reference outline.
+const rocBase='dist/data/europe/china-1949/';
+const [rocBoundaries,rocCatalogue]=await Promise.all(['first.bin','catalogue.bin'].map(async file=>decodeData(fs.readFileSync(rocBase+file))));
+const rocUnits=Object.fromEntries(rocCatalogue.records.map(r=>[r.id,{name:r.en,zh:r.local,type:r.kind==='Province'?'ROC province':r.id==='ROC-MONGOLIA'?'ROC claim':'ROC area',kind:r.kind,aliases:r.aliases,capital:r.capital,note:r.id==='ROC-MONGOLIA'?'The ROC recognized Mongolian independence in January 1946. The map uses the atlas outline of independent Mongolia and shows the earlier claim for reference. Tuva, already part of the Soviet Union in 1949, has its own outline.':r.statusNote,statusSource:r.statusSource}]));
+const referenceId='ROC-MONGOLIA',foreignId='ROC-FOREIGN',outsideId='ROC-OUTSIDE',burmaId='ROC-JIANGXINPO';
+const original=rocBoundaries.regions.features;
+const foreign=display.provinces.features.filter(f=>[810000,820000].includes(f.properties.adcode));
+const rocLand=(await command({
+ 'roc.json':fc(original.filter(f=>f.properties.id!==referenceId)),
+ 'china.json':fc(early),'foreign.json':fc(foreign)
+},'-clip china.json -erase foreign.json')).features;
+// A historical claim can cross today's border, but thin strips caused by
+// two surveys tracing the same river or coast are not separate extensions.
+const exteriorROC=(await command({
+ 'roc.json':fc(original),'china.json':fc(early),'land.json':coast
+},'-erase china.json -clip land.json -explode')).features.filter(f=>f.geometry);
+async function substantial(shapes){
+ const candidates=shapes.flatMap((f,i)=>f.geometry&&area(polygons(f.geometry))>=75?[feature({i},f.geometry)]:[]);
+ const cores=(await command(fc(candidates),'-buffer radius=-2500')).features;
+ return new Set(cores.filter(f=>f.geometry&&area(polygons(f.geometry))>0).map(f=>f.properties.i));
+}
+// The Khorgos sector follows the post-1881 border. In the western Pamirs the
+// historical sheet also excludes several broad modern-only pieces.
+const western=(await command({'china.json':fc(early),'historical.json':fc(original)},'-clip bbox=72,37.5,81.4,43.3 -erase historical.json -explode')).features;
+const [extensions,excluded]=await Promise.all([substantial(exteriorROC),substantial(western)]);
+rocLand.push(...exteriorROC.filter((f,i)=>{
+ const id=f.properties.id,[[w,s],[e,n]]=geographicBounds(f.geometry);
+ return id===referenceId||extensions.has(i)&&!(id==='ROC-XINJIANG'&&w>=79.7&&e<=81.3&&s>=43.3&&n<=45);
+}),...western.flatMap((f,i)=>excluded.has(i)?[feature({id:outsideId},f.geometry)]:[]),...foreign.map(f=>feature({id:foreignId},f.geometry)));
+const {jiangxinpo,claimsReference}=read('scripts/boundary-sources/china-1949/manifest.json');
+const claim=(id,name,zh,note,{aliases=[],selectionGroup}={})=>{
+ rocUnits[id]={name,zh,type:'ROC claim',kind:'Historical claim',aliases,note,statusSource:claimsReference.url,...(selectionGroup?{selectionGroup}:{})};
+ return geometry=>feature({id},geometry);
+};
+const claimRing=ring=>fc([feature({}, {type:'Polygon',coordinates:[ring]})]);
+const clipClaim=async (ring,land)=>(await command({'trace.json':claimRing(ring),'land.json':fc(land)},'-clip land.json')).features[0].geometry;
+const readRegions=async file=>(await decodeData(fs.readFileSync('dist/data/'+file))).regions.features;
+const [india,russia,pakistan,afghanistan]=await Promise.all([
+ readRegions('europe/india/first.bin'),readRegions('russia/first.bin'),loadLand('europe/pakistan/context.bin'),loadLand('europe/afghanistan/context.bin')
+]);
+const [borderBand,,mongolia,russianLand,bhutan,japan]=context;
+const arunachal=india.find(f=>f.properties.id==='IN-AR').geometry;
+const tuva=russia.find(f=>f.properties.id==='RU-TY').geometry;
+const senkakuIslands=polygons(japan.find(f=>f.properties.id==='JP-47').geometry).filter(p=>{
+ const [[w,s],[e,n]]=geographicBounds(multi([p]));
+ return w>=123.4&&e<=124.65&&s>=25.5&&n<=26.1;
+});
+const {sectors}=claimsReference;
+const [wakhan,karakoram,bhutanSector,amur]=await Promise.all([
+ clipClaim(sectors.wakhan,afghanistan),
+ clipClaim(sectors.karakoram,pakistan),
+ clipClaim(sectors.bhutan,bhutan),
+ clipClaim(sectors.amur,russianLand)
+]);
+const claims=[
+ feature({id:referenceId},mongolia[0].geometry),
+ claim('ROC-TUVA','Tannu Uriankhai','唐努烏梁海','The Soviet Union incorporated Tuva in 1944. The reference shows the earlier ROC claim.')(tuva),
+ claim('ROC-PAMIRS','Eastern Pamirs','東帕米爾','The reference shows a historical claim in the eastern Pamirs, administered by the Soviet Union in 1949 and now part of Tajikistan.',{aliases:['Tajikistan','Gorno-Badakhshan']})(borderBand.find(f=>f.properties.country==='tajikistan').geometry),
+ claim('ROC-WAKHAN','Eastern Wakhan','瓦罕走廊東部','Approximate Afghan-administered sector shown in the reference, near the eastern tip of the Wakhan Corridor.',{aliases:['Afghanistan']})(wakhan),
+ claim('ROC-KARAKORAM','Karakoram frontier','喀喇崑崙邊區','Approximate Pakistan-administered sector shown in the reference. The 1963 China–Pakistan boundary agreement changed the alignment in this region.',{aliases:['Pakistan']})(karakoram),
+ claim('ROC-ARUNACHAL','Arunachal Pradesh','藏南','The reference shows the Indian-administered eastern Himalayan claim. The atlas uses its existing Arunachal Pradesh outline.',{aliases:['India','South Tibet','NEFA']})(arunachal),
+ claim('ROC-BHUTAN','Northern Bhutan frontier','不丹北部邊區','Approximate Bhutan-administered sector shown in the reference.',{aliases:['Bhutan']})(bhutanSector),
+ claim('ROC-AMUR','Sixty-Four Villages East of the Amur','江東六十四屯','Approximate extent of the former villages across the Amur from Heihe. The Soviet Union administered the area in 1949.',{aliases:['Russia','Amur']})(amur),
+ claim('ROC-DIAOYU','Diaoyutai / Senkaku Islands','釣魚臺列嶼','The reference shows the ROC claim to the islands. The United States administered them in 1949 and transferred administration to Japan in 1972.',{aliases:['Japan','Senkaku','Diaoyu']})(multi(senkakuIslands))
+];
+if(claims.some(f=>!f.geometry||!polygons(f.geometry).length))throw Error('Missing ROC claim geometry');
+const burma=(await command({
+ 'claim.json':fc([feature({id:burmaId},{type:'Polygon',coordinates:[jiangxinpo.ring]})]),
+ 'burma.json':fc(world.filter(f=>f.properties.country==='myanmar')),
+ 'china.json':fc(early)
+},'-clip burma.json -erase china.json')).features;
+claim(burmaId,'Jiangxinpo','江心坡','Historical claim in northern Burma. Burma administered the area in 1949. The northern frontier was settled by the 1960 China–Burma boundary treaty.',{aliases:['Northern Burma','Kachin','江心坡']});
+rocUnits[burmaId].statusSource=jiangxinpo.url;
+claims.push(...burma);
+
+// The Beibu Gulf coast and Leizhou were part of Guangdong in 1949. Use
+// whole coastal districts so the province line meets the land without steps.
+const coastalPrefectures=display.subdivisions.features.filter(f=>[440800,450500,450600,450700].includes(f.properties.adcode));
+// Shangsi joined Fangchenggang much later and was already part of Guangxi in 1949.
+const shangsi=counties.filter(f=>f.properties.adcode===450621);
+const cantonCoast=(await command({'coast.json':fc(coastalPrefectures),'shangsi.json':fc(shangsi)},'-erase shangsi.json')).features;
+const coastCorrection=[
+ ...cantonCoast.map(f=>feature({id:'ROC-GUANGDONG'},f.geometry)),
+ ...shangsi.map(f=>feature({id:'ROC-GUANGXI'},f.geometry))
+];
+// Claim polygons take precedence over the coarse nominal divisions, but the
+// reference's exaggerated offshore marker is replaced by the islands' land.
+const diaoyuBox=(await command(fc(early),'-clip bbox=123.4,25.5,124.65,26.1')).features;
+const fittedROC=(await command({
+ 'roc.json':fc(rocLand.filter(f=>f.properties.id!==referenceId)),
+ 'overrides.json':fc([...claims,...coastCorrection,...diaoyuBox])
+},'-erase overrides.json')).features;
+fittedROC.push(...claims,...coastCorrection,...diaoyuBox.map(f=>feature({id:'ROC-DIAOYU'},f.geometry)));
+const fitted=(await command(fc(fittedROC),'-dissolve2 id -clean gap-width=0')).features;
+rocUnits[foreignId]={name:'Hong Kong and Macau',zh:'香港及澳門',type:'ROC reference',kind:'Other land',note:'Shown on their modern land outlines.'};
+
+// Combine the date assignments once. Only modern Chinese pieces take a missing
+// ROC division from a neighbor, so Qing land across the frontier stays separate.
+const states=new Map();
+for(const p of extended){
+ const id=JSON.stringify([p.external,...snapshots.map(s=>p[s.field])]);
+ if(!states.has(id))states.set(id,{...p,polygons:[]});
+ for(const polygon of p.polygons)states.get(id).polygons.push(polygon);
+}
+const overlay=(await command(fc([
+ ...[...states].map(([id,p])=>feature({layer:'previous',frame:id,roc:null},multi(p.polygons))),
+ ...fitted.map(f=>feature({layer:'republic',frame:null,roc:f.properties.id},f.geometry))
+]),"-split layer -union fields=frame,roc -clean gap-width=0 -explode")).features.filter(f=>f.geometry&&polygons(f.geometry).length);
+const combined=overlay.map(f=>{
+ const previous=states.get(f.properties.frame_1),external=previous?.external??true;
+ const id=f.properties.roc_2,excluded=id===outsideId;
+ const roc=excluded||!external&&id===referenceId?undefined:id||undefined;
+ return {...previous,roc,excluded,external,polygons:polygons(f.geometry),box:null,center:null};
+});
+// Resolve each uncovered piece from its own location. A shared-edge fill can
+// propagate across an entire frontier strip and give it to a distant province.
+const gaps=combined.filter(p=>!p.roc&&!p.external&&!p.excluded);
+const locations=await command(fc(gaps.map((p,i)=>feature({i},multi(p.polygons)))),'-points inner',{precision:null});
+for(const f of locations.features)if(f.geometry)gaps[f.properties.i].center=f.geometry.coordinates;
+const nearby=fitted.filter(f=>['ROC province','ROC area'].includes(rocUnits[f.properties.id]?.type)).map(f=>({roc:f.properties.id,polygons:polygons(f.geometry)}));
+function distanceToEdge(p,q){
+ const [x,y]=p.center??=centre(p),[w,s,e,n]=boxOf(q),scale=Math.cos(y*Math.PI/180);
+ if(x<w-3||x>e+3||y<s-3||y>n+3)return Infinity;
+ let distance=Infinity;
+ for(const polygon of q.polygons)for(const ring of polygon)for(let i=1;i<ring.length;i++){
+  const [a,b]=ring[i-1],[c,d]=ring[i],dx=(c-a)*scale,dy=d-b,px=(x-a)*scale,py=y-b;
+  const t=Math.max(0,Math.min(1,(px*dx+py*dy)/(dx*dx+dy*dy||1)));
+  distance=Math.min(distance,(px-t*dx)**2+(py-t*dy)**2);
+ }
+ return Math.sqrt(distance);
+}
+nearestUnit([...nearby,...gaps],'roc',{distance:distanceToEdge,limit:1});
+// A detached modern seam can be closest to a province tip even though it
+// sits beside another province's main body. Keep source-backed islands and
+// repair inferred pockets for inland divisions drawn as one piece.
+const singleProvinces=new Set(original.filter(f=>polygons(f.geometry).length===1&&rocUnits[f.properties.id]?.type==='ROC province').map(f=>f.properties.id));
+const joined=await command(fc(combined.filter(p=>p.roc&&singleProvinces.has(p.roc)).map(p=>feature({id:p.roc},multi(p.polygons)))),'-dissolve2 id');
+const mainBodies=new Map();
+for(const f of joined.features){
+ const parts=polygons(f.geometry);
+ if(parts.length<2)continue;
+ const main=parts.reduce((a,b)=>area([a])>area([b])?a:b);
+ mainBodies.set(f.properties.id,{polygons:[main],contains:landIndex(main)});
+}
+for(const gap of gaps){
+ const main=mainBodies.get(gap.roc);
+ if(!main||main.contains(gap.center)||distanceToEdge(gap,main)<.03)continue;
+ let closest=distanceToEdge(gap,main),replacement=gap.roc;
+ for(const candidate of nearby){
+  if(candidate.roc===gap.roc)continue;
+  const distance=distanceToEdge(gap,mainBodies.get(candidate.roc)||candidate);
+  if(distance<closest){closest=distance;replacement=candidate.roc;}
+ }
+ gap.roc=replacement;
+}
+const rocFrontier=await command({
+ 'roc.json':fc(combined.filter(p=>p.roc).map(p=>feature({},multi(p.polygons)))),
+ 'inland.json':inland
+},'-dissolve2 -lines -clip inland.json');
+const readROC=file=>JSON.parse(fs.readFileSync(rocBase+file,'utf8')).records;
+snapshots.push({year:1949,date:'1949-12-31',field:'roc',frontier:rocFrontier,fullLand:true,dissolvedBoundaries:true,units:rocUnits,
+ frontierBetween:(a,b)=>['ROC reference','ROC claim'].includes(a.type)!==['ROC reference','ROC claim'].includes(b.type),
+ points:{capitals:readROC('capitals.json'),municipalities:readROC('settlements.json')}});
+const exterior=combined.filter(p=>p.external).map(p=>p.polygons).flat();
+
+const result=await writeMosaic({
+ pieces:combined,snapshots,out,label:'China dated boundaries',tolerance:250,cleanRoundedFaces:true,
+ firstLevel:[...display.provinces.features.map(f=>({id:String(f.properties.adcode),polygons:polygons(f.geometry)})),{polygons:exterior}],
+ // A present-day province selected without a click shows the unit holding most of its pieces' land.
+ partOf:(s,units)=>{if(s.fullLand)return {};const index=new Map(units.map((u,i)=>[u.key,i])),totals={};for(const p of pieces)if(p[s.field]){const t=totals[p.province]??={};t[p[s.field]]=(t[p[s.field]]||0)+shares.get(p);}return Object.fromEntries(Object.entries(totals).map(([province,t])=>[province,index.get(Object.entries(t).sort((a,b)=>b[1]-a[1])[0][0])]));},
+ source:{name:'Cliopatria (Seshat Global History Databank)',url:manifest.cliopatria.url,lastDate:snapshots.at(-1).date}
+});
+console.log('China history: '+own.length+' pieces, '+left.length+' slivers and '+holes.length+' holes filled ('+islands.size+' on small islands, '+coastal.size+' small and coastal), '+result.faces+' faces, '+result.edges+' edges, '+result.bytes+' bytes; land '+result.land.toFixed(0)+' km², faces '+result.faceArea.toFixed(0)+' km².');
+for(const s of snapshots){
+ const tally={};for(const p of combined){const k=p[s.field]||'none';tally[k]=(tally[k]||0)+area(p.polygons);}
+ console.log(s.year+': '+Object.entries(tally).sort((a,b)=>b[1]-a[1]).map(([k,v])=>k+' '+Math.round(v/1000)+'k').join(', '));
+}

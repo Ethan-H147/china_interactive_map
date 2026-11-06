@@ -13,7 +13,40 @@ const longDate=iso=>{const [y,m,d]=iso.split('-').map(Number);return d+' '+MONTH
 const el=(tag,className,text)=>{const n=document.createElement(tag);if(className)n.className=className;if(text!==undefined)n.textContent=text;return n;};
 const count=(n,one,many)=>n+' '+(n===1?one:many);
 
-export function createHistoricView(map,{country,base,config,borders:engine,fill,onError=()=>{},fillLayer=country+'-first-fill',selectionLayer=country+'-first-selection-fill',scene=getMapScene(map),onChange=()=>{},onPlace=()=>{}}){
+// The same timeline can drive in-place snapshots or link to a detailed snapshot page.
+export function buildHistoryDock({id,label,entries,yearText,onSelect,onResize}){
+ const dock=el('section','election-dock history-dock');dock.id=id;dock.hidden=true;dock.setAttribute('aria-label',label);
+  dock.innerHTML='<div class="election-head"><div class="election-year"><strong></strong><span></span></div><div class="election-tally history-tally"><div class="history-counts"></div><div class="election-needed"></div></div></div><div class="election-legend"></div><div class="election-timeline"><div class="election-strip" role="listbox" aria-label="Year"></div><div class="election-steps"><button type="button" class="election-step" data-step="-1" aria-label="Previous year">'+CHEVRON+'</button><button type="button" class="election-step" data-step="1" aria-label="Next year">'+CHEVRON+'</button></div></div>';
+ const strip=dock.querySelector('.election-strip'),ticks=[];
+ let current;
+ const select=entry=>{if(entry.href)location.hash=entry.href;else onSelect(entry.year);};
+ const step=delta=>{const i=entries.findIndex(entry=>entry.year===current);select(entries[Math.max(0,Math.min(entries.length-1,i+delta))]);};
+ for(const button of dock.querySelectorAll('.election-step'))button.onclick=()=>step(+button.dataset.step);
+ strip.onkeydown=event=>{const delta={ArrowLeft:-1,ArrowRight:1,Home:-Infinity,End:Infinity}[event.key];if(delta===undefined)return;event.preventDefault();step(delta);};
+ for(const entry of entries){
+  const tick=el(entry.href?'a':'button','election-tick'+(entry.href?' history-link':''));
+  if(entry.href)tick.href=entry.href;else{tick.type='button';tick.onclick=()=>select(entry);}
+  tick.setAttribute('role','option');tick.dataset.year=entry.year;
+  tick.style.setProperty('--party',entry.changed?'#587694':'#b8c3d1');
+  const text=yearText(entry.year);
+  tick.setAttribute('aria-label',entry.name?text+', '+entry.name:text);
+  tick.append(el('span','election-tick-year',text));if(entry.mark)tick.dataset.mark=text;
+  strip.append(tick);ticks.push(tick);
+ }
+ addDockCollapse(dock,{label:'historical controls',onResize});
+ document.getElementById('map-shell').append(dock);
+ return {dock,showYear(year,focus=false){
+  current=year;
+  for(const tick of ticks){
+   const selected=+tick.dataset.year===year;tick.setAttribute('aria-selected',String(selected));tick.tabIndex=selected?0:-1;
+   if(selected){tick.scrollIntoView?.({block:'nearest',inline:'center',behavior:focus?'smooth':'auto'});if(focus)tick.focus({preventScroll:true});}
+  }
+  dock.querySelector('[data-step="-1"]').disabled=year===entries[0].year;
+  dock.querySelector('[data-step="1"]').disabled=year===entries.at(-1).year;
+ }};
+}
+
+export function createHistoricView(map,{country,base,config,borders:engine,fill,onError=()=>{},fillLayer=country+'-first-fill',hostFills=[fillLayer],selectionLayer=country+'-first-selection-fill',scene=getMapScene(map),onChange=()=>{},onPlace=()=>{}}){
  let request=0,active=false,year,dock,applied=false,original,focus=null,selectedRecord=null,epoch=0;
  try{year=+localStorage.getItem(config.store)||null;}catch{}
  const neighbour=config.neighbour;
@@ -32,22 +65,29 @@ export function createHistoricView(map,{country,base,config,borders:engine,fill,
   if(unit.type==='Foreign'||unit.sovereign!=='US')return 'foreign';
   return unit.type==='State'||unit.type==='District of Columbia'?'state':unit.type==='Territory'?'territory':'unorganized';
  }
- const COLORS={colony:'#e0e8da',claims:'#e9e3d8',state:fill,territory:TERRITORY,unorganized:UNORGANIZED,disputed:DISPUTED,foreign:OTHER_LAND},colorOf=unit=>COLORS[kind(unit)];
- const KEYS=[['state',config.names?'Province':'State'],['colony','Colony'],['claims','Colonial claims'],['territory','Territory'],['unorganized','Unorganized territory'],['disputed','Disputed'],['foreign','Another country']];
+ // A config's own keys ([kind, label or label(year), colour]) replace the defaults.
+ const COLORS=config.keys?Object.fromEntries(config.keys.map(([key,,color])=>[key,color])):{colony:'#e0e8da',claims:'#e9e3d8',state:fill,territory:TERRITORY,unorganized:UNORGANIZED,disputed:DISPUTED,foreign:OTHER_LAND},colorOf=unit=>COLORS[kind(unit)];
+ const KEYS=config.keys||[['state',config.names?'Province':'State'],['colony','Colony'],['claims','Colonial claims'],['territory','Territory'],['unorganized','Unorganized territory'],['disputed','Disputed'],['foreign','Another country']];
+ // A config of separate periods (periods: true) names each with yearText and dateText, and has no year-to-year changes.
+ const yearText=y=>config.yearText?.(y)??String(y),ofYear=value=>typeof value==='function'?value(year):value;
  // The host record a unit opens: its present-day state where the unit is one, otherwise the
  // present-day place that was clicked.
  const unitPlace=unit=>unit&&kind(unit)==='state'?unit.state:null;
  function currentUnit(){
   if(!active||!engine.data||!snapshot())return null;
-  if(config.standalone)return focus?.face!=null?engine.unit(current(),focus.face):null;
+  if(config.standalone){
+   const unit=focus?.face!=null?engine.unit(current(),focus.face):null;
+   return unit?.selectionGroup?current().units.find(u=>u.id===unit.selectionGroup):unit;
+  }
   if(focus?.face!=null)return engine.unit(current(),focus.face);
   const i=selectedRecord?current().partOf[selectedRecord]:undefined;return i>=0?current().units[i]:null;
  }
 
  function apply(){
   if(!active||!engine.data||!map.getLayer(fillLayer))return;
-  if(!applied)original=map.getPaintProperty(fillLayer,'fill-color');
-  map.setPaintProperty(fillLayer,'fill-color',OTHER_LAND);
+  // hostFills: every layer drawing the present-day first level; the snapshot draws above fillLayer.
+  if(!applied)original=new Map(hostFills.filter(id=>map.getLayer(id)).map(id=>[id,map.getPaintProperty(id,'fill-color')]));
+  for(const id of original.keys())map.setPaintProperty(id,'fill-color',OTHER_LAND);
   if(map.getLayer(selectionLayer))map.setPaintProperty(selectionLayer,'fill-opacity',0);
   engine.draw(current(),colorOf,fillLayer);engine.outline(current(),currentUnit(),{highlight:true});
   hostLines({borders:true,selection:true,international:!config.standalone});applied=true;
@@ -70,46 +110,38 @@ export function createHistoricView(map,{country,base,config,borders:engine,fill,
  function restore(){
   contextRequest++;context?.remove();contextUnit=null;
   if(!applied)return;applied=false;engine.remove();hostLines();
-  if(map.getLayer(fillLayer))map.setPaintProperty(fillLayer,'fill-color',original);
+  for(const [id,color] of original)if(map.getLayer(id))map.setPaintProperty(id,'fill-color',color);
   if(map.getLayer(selectionLayer))map.setPaintProperty(selectionLayer,'fill-opacity',1);
  }
 
+ let timeline;
  function buildDock(){
-  dock=el('section','election-dock history-dock');dock.id=country+'-history-dock';dock.hidden=true;dock.setAttribute('aria-label',config.label);
-  dock.innerHTML='<div class="election-head"><div class="election-year"><strong></strong><span></span></div><div class="election-tally history-tally"><div class="history-counts"></div><div class="election-needed"></div></div></div><div class="election-legend"></div><div class="election-timeline"><div class="election-strip" role="listbox" aria-label="Year"></div><div class="election-steps"><button type="button" class="election-step" data-step="-1" aria-label="Previous year">'+CHEVRON+'</button><button type="button" class="election-step" data-step="1" aria-label="Next year">'+CHEVRON+'</button></div></div>';
-  addDockCollapse(dock,{label:'historical controls',onResize:insets});
-  document.getElementById('map-shell').append(dock);
-  for(const button of dock.querySelectorAll('.election-step'))button.onclick=()=>step(+button.dataset.step);
-  dock.querySelector('.election-strip').onkeydown=event=>{const keys={ArrowLeft:-1,ArrowRight:1,Home:-Infinity,End:Infinity};if(!(event.key in keys))return;event.preventDefault();const all=years(),i=all.indexOf(year),next=keys[event.key]===-Infinity?0:keys[event.key]===Infinity?all.length-1:Math.max(0,Math.min(all.length-1,i+keys[event.key]));setYear(all[next],true);};
-  // Years whose map differs from the year before are marked.
-  const strip=dock.querySelector('.election-strip');let previous;
-  for(const y of years()){
-   const tick=el('button','election-tick');tick.type='button';tick.setAttribute('role','option');tick.dataset.year=y;tick.tabIndex=-1;
-   const changed=engine.data.years[y].config!==previous;previous=engine.data.years[y].config;
-   tick.style.setProperty('--party',changed?'#587694':'#b8c3d1');tick.setAttribute('aria-label',String(y));
-   tick.append(el('span','election-tick-year',String(y)));if(y%20===0)tick.dataset.mark=y;
-   tick.onclick=()=>setYear(y,true);strip.append(tick);
-  }
+  let previous;
+  const entries=years().map(y=>{const next=engine.data.years[y].config,changed=next!==previous;previous=next;return {year:y,changed,mark:config.labelTicks||!config.periods&&y%20===0};});
+  entries.push(...(config.links||[]).map(link=>({...link,mark:config.labelTicks})));
+  timeline=buildHistoryDock({id:country+'-history-dock',label:config.label,entries,yearText,onSelect:next=>setYear(next,true),onResize:insets});
+  dock=timeline.dock;
  }
  function renderDock(focusTick=false){
   if(!dock)buildDock();
   const c=current(),kinds=c.units.map(kind),states=kinds.filter(k=>k==='state').length-c.units.filter(u=>u.type==='District of Columbia').length,territories=kinds.filter(k=>k==='territory').length;
-  dock.querySelector('.election-year strong').textContent=year;dock.querySelector('.election-year span').textContent=longDate(snapshot().date);
+  dock.querySelector('.election-year strong').textContent=yearText(year);dock.querySelector('.election-year span').textContent=config.dateText?.(year)??longDate(snapshot().date);
   const provinceCount=count(states,...(config.names||['state','states']));
   const districts=c.units.filter(u=>u.type==='Territorial district').length;
   const colonies=c.units.filter(u=>u.type==='Colony').length;
   const territorial=c.units.filter(u=>u.type==='Territory').length;
-  const summary=config.standalone
+  const summary=config.counts?config.counts(c.units):config.standalone
    ? [states&&provinceCount,territorial&&count(territorial,'territory','territories'),districts&&count(districts,'district','districts'),!states&&colonies&&count(colonies,'colony','colonies')].filter(Boolean).join(', ')
    : provinceCount+(territories?', '+count(territories,'territory','territories'):'');
   dock.querySelector('.history-counts').textContent=summary;
-  const changes=changesIn(year);dock.querySelector('.election-needed').textContent=changes.length?count(changes.length,'change','changes')+' this year':'No boundary changes this year';
+  const changes=changesIn(year);dock.querySelector('.election-needed').textContent=config.periods?'':changes.length?count(changes.length,'change','changes')+' this year':'No boundary changes this year';
   const legend=dock.querySelector('.election-legend');legend.replaceChildren();
-  for(const [key,label] of KEYS)if(kinds.includes(key)||key==='claims'&&neighbour&&year<=neighbour.through){const row=el('span','election-key'),swatch=el('i','election-swatch');swatch.style.background=COLORS[key];row.append(swatch,el('span',undefined,label));legend.append(row);}
-  for(const tick of dock.querySelectorAll('.election-tick')){const selected=+tick.dataset.year===year;tick.setAttribute('aria-selected',String(selected));tick.tabIndex=selected?0:-1;if(selected){tick.scrollIntoView?.({block:'nearest',inline:'center',behavior:focusTick?'smooth':'auto'});if(focusTick)tick.focus({preventScroll:true});}}
-  const all=years();dock.querySelector('[data-step="-1"]').disabled=year===all[0];dock.querySelector('[data-step="1"]').disabled=year===all.at(-1);
+  const key=(color,label)=>{const row=el('span','election-key'),swatch=el('i','election-swatch');swatch.style.background=color;row.append(swatch,el('span',undefined,label));legend.append(row);};
+  for(const [kind,label] of KEYS)if(kinds.includes(kind)||kind==='claims'&&neighbour&&year<=neighbour.through)key(COLORS[kind],ofYear(label));
+  // Land the source gives to no unit keeps the gray of other land.
+  const unrecorded=ofYear(config.unrecorded);if(unrecorded&&c.face?.includes(-1))key(OTHER_LAND,unrecorded);
+  timeline.showYear(year,focusTick);
  }
- function step(delta){const all=years(),i=all.indexOf(year);setYear(all[Math.max(0,Math.min(all.length-1,i+delta))],true);}
  async function setYear(next,focusTick=false){
   const token=++request;
   if(!engine.data||next===year)return;
@@ -125,6 +157,7 @@ export function createHistoricView(map,{country,base,config,borders:engine,fill,
  // Boundary changes during a year: the source's dated changes and the changes of holder.
  function changesIn(y){
   // The source's first date only sets out the 1783 boundaries.
+  if(config.periods)return [];
   if(config.standalone)return engine.data.events[y]||[];
   const seen=new Set(),list=[],first=engine.data.versions.reduce((a,b)=>a.start<b.start?a:b).start;
   for(const v of engine.data.versions)if(+v.start.slice(0,4)===y&&v.start>first){const key=v.start+v.change;if(seen.has(key))continue;seen.add(key);list.push({date:v.start,name:v.name,text:v.change,citation:v.citation});}
@@ -135,13 +168,13 @@ export function createHistoricView(map,{country,base,config,borders:engine,fill,
   if(!anchor)return;anchor.replaceChildren();anchor.hidden=!active||!engine.data;if(anchor.hidden)return;
   anchor.append(el('h3',undefined,config.title(year)));
   const changes=changesIn(year);
-  if(!changes.length)anchor.append(el('p','country-note',config.noChanges||'No state or territory boundary changed this year.'));
+  if(!changes.length){if(!config.periods)anchor.append(el('p','country-note',config.noChanges||'No state or territory boundary changed this year.'));}
   else{const list=el('ol','history-changes');for(const change of changes){const item=el('li');item.append(el('strong',undefined,(change.when||longDate(change.date))+(change.name?', '+change.name:'')),el('span',undefined,change.text));list.append(item);}anchor.append(list);}
   if(neighbour&&year<=neighbour.through)anchor.append(el('p','country-note',neighbour.note));
-  if(config.coverage)anchor.append(el('p','country-note',config.coverage));
+  if(config.coverage)anchor.append(el('p','country-note',ofYear(config.coverage)));
   anchor.append(sourceLink());
  }
- function sourceLink(){const a=el('a','election-source','Borders: '+config.sourceName);a.href=config.source;a.target='_blank';a.rel='noopener';return a;}
+ function sourceLink(){const a=el('a','election-source','Borders: '+ofYear(config.sourceName));a.href=ofYear(config.source);a.target='_blank';a.rel='noopener';return a;}
  function renderState(anchor,record){
   if(!anchor)return;anchor.replaceChildren();
   // The host's selection moved away from the place picked; or the host has picked the
@@ -152,6 +185,8 @@ export function createHistoricView(map,{country,base,config,borders:engine,fill,
   const unit=currentUnit();
   anchor.hidden=!active||!engine.data||(config.standalone?!unit:!record||record.level!==1);if(anchor.hidden)return;
   if(!config.standalone)anchor.append(el('h3',undefined,unit?unit.name:config.outside));
+  const local=!config.standalone&&unit&&config.localName?.(unit);
+  if(local){const names=el('p','korean-name');names.lang='ko';names.append(el('span',undefined,local[0]));if(local[1]){const hanja=el('span','hanja-name',' '+local[1]);hanja.lang='ko-Hani';names.append(hanja);}anchor.append(names);}
   if(unit){
    const version=unit.version&&engine.data.versions.find(v=>v.id===unit.version);
    if(!config.standalone)anchor.append(el('p','election-unit',config.kindLabel(unit,kind(unit))));
@@ -167,12 +202,17 @@ export function createHistoricView(map,{country,base,config,borders:engine,fill,
   anchor.append(sourceLink());
  }
 
+ function focusBounds(unit){
+  if(!unit)return;
+  return current().units.filter(part=>part.selectionGroup===unit.id).reduce(([[w,s],[e,n]],{bounds:[[x,y],[a,b]]})=>
+   [[Math.min(w,x),Math.min(s,y)],[Math.max(e,a),Math.max(n,b)]],unit.bounds);
+ }
  // A map click: the host record to select (null: the present-day place under the point) and
  // the unit's bounds.
  function pick(point){
   focus=null;if(!active||!engine.data||!snapshot())return null;
   const face=engine.pick(point);
-  if(config.standalone){if(face!=null)focus={face,location:map.unproject(point)};engine.outline(current(),currentUnit(),{highlight:true});onChange();return {standalone:true,bounds:currentUnit()?.bounds};}
+  if(config.standalone){if(face!=null)focus={face,location:map.unproject(point)};engine.outline(current(),currentUnit(),{highlight:true});onChange();return {standalone:true,bounds:focusBounds(currentUnit())};}
   if(face==null)return null;
   const unit=engine.unit(current(),face);focus={face,place:unitPlace(unit)};
   return {place:focus.place,bounds:unit?.bounds};
@@ -181,7 +221,7 @@ export function createHistoricView(map,{country,base,config,borders:engine,fill,
   if(!active||!engine.data||!snapshot()||!current().units)return null;
   const shown=currentUnit();
   const units=contextUnit?[...current().units.filter(unit=>unit.name!==neighbour.name),contextUnit]:current().units;
-  return units.map(unit=>{const [[w,s],[e,n]]=unit.bounds;return {id:'history-'+unit.key,en:unit.name,center:unit.label,lines:holderLines(unit),priority:Math.min(1,(e-w)*(n-s)/400),selected:unit===shown};});
+  return units.filter(unit=>!unit.selectionGroup).map(unit=>{const [[w,s],[e,n]]=unit.bounds;return {id:'history-'+unit.key,en:unit.name,center:unit.label,lines:config.labelLines?.(unit)??holderLines(unit),priority:Math.min(1,(e-w)*(n-s)/400),selected:unit===shown};});
  }
  function hoverAt(point){
   if(!active||!engine.data)return undefined;
@@ -190,23 +230,25 @@ export function createHistoricView(map,{country,base,config,borders:engine,fill,
  }
  const insets=()=>dispatchEvent(new Event('atlas-map-insets'));
  return {
-  get active(){return active;},
-  async enter(){
+  get active(){return active;},get currentYear(){return year;},
+  async enter(initialYear){
    active=true;const token=++epoch;await engine.load();if(!active||token!==epoch)return;
-   if(!(year in engine.data.years))year=config.defaultYear;
+   if(initialYear in engine.data.years)year=initialYear;
+   else if(!(year in engine.data.years))year=config.defaultYear;
    if(engine.prepare)await engine.prepare(current());if(!active||token!==epoch)return;
    if(config.standalone)window.AtlasRegionColorController?.suspend(true);
    apply();renderDock();dock.hidden=false;onChange();insets();void syncContext();
   },
   leave(){if(!active)return;active=false;epoch++;request++;focus=null;restore();if(config.standalone&&document.getElementById('map-shell')?.dataset.quiz!=='true')window.AtlasRegionColorController?.suspend(false);if(dock){dock.hidden=true;insets();}},
-  apply,renderSummary,renderState,pick,unitLabels,hoverAt,
-  datedOptions(){return active&&engine.data&&snapshot()?current().units||[]:[];},
-  get datedRecord(){const unit=currentUnit();return unit&&{name:unit.name,kind:config.kindLabel(unit,kind(unit))};},
+  apply,renderSummary,renderState,pick,unitLabels,hoverAt,setYear,
+  datedPoints(){return active&&engine.data&&snapshot()?current().points:undefined;},
+  datedOptions(){return active&&engine.data&&snapshot()?current().units.filter(u=>!u.selectionGroup):[];},
+  get datedRecord(){const unit=currentUnit();return unit&&{name:unit.name,kind:config.kindLabel(unit,kind(unit)),unit,period:config.dateText?.(year)};},
   get datedSelection(){return currentUnit()?.id||'';},
   selectDated(id){
    const found=id?engine.find(current(),id):null,unit=found?.unit;
    focus=unit?{face:found.face,location:{lng:unit.label[0],lat:unit.label[1]}}:null;
-   engine.outline(current(),currentUnit(),{highlight:true});onChange();return unit?.bounds;
+   engine.outline(current(),currentUnit(),{highlight:true});onChange();return focusBounds(currentUnit());
   },
   dispose(){this.leave();context?.dispose();dock?.remove();dock=null;}
  };

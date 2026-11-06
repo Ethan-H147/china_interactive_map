@@ -5,7 +5,7 @@ import {createHistoricalRegion} from './historical-region-display.mjs';
 import {adaptiveOpacity,lineSourceOptions,internationalBorderPaint,regionalLineWidth} from './adaptive-lines.mjs';
 import {addRegionalBoundarySources,compactUrl,decodeData,fetchBytes} from './geo-pack.mjs';
 import {mapPalette} from './map-palette.mjs';
-import {getMapScene} from './map-scene.mjs';
+import {blendColor,getMapScene} from './map-scene.mjs';
 // Dated historical borders drawn over a country's present-day first level, shared by the
 // Elections view's historic borders (elections.mjs) and the historical snapshot
 // (historic-view.mjs). The data (scripts/build-us-historic-borders.mjs) is one mosaic of faces
@@ -65,7 +65,10 @@ export function administrativeBorderPaint(map,lineLayer,scene=getMapScene(map)){
  return map.getLayer(lineLayer)?Object.fromEntries(['line-color','line-width','line-opacity'].map(p=>[p,compatible(scene?.basePaint(lineLayer,p)??map.getPaintProperty(lineLayer,p))]).filter(([,v])=>v!==undefined)):{'line-color':'#587694','line-width':1};
 }
 
-export function createHistoricBorders(map,{country,base,file,tag='history',sourceUnit,frontierLines=false,lineLayer=country+'-first-lines',scene=getMapScene(map)}){
+// selection: a host whose selection is not its first level's ({fill, fillOpacity, line}) names its colours.
+// fillTolerance: the fills' tile simplification; China's long, narrow face outlines crossed
+// themselves at the default and drew stray triangles, so it passes 0.
+export function createHistoricBorders(map,{country,base,file,tag='history',sourceUnit,frontierLines=false,lineLayer=country+'-first-lines',selection={},fillTolerance=.25,scene=getMapScene(map)}){
  const prefix=country+'-'+tag;
  const layers={fill:prefix+'-fill',lines:prefix+'-lines',frontiers:prefix+'-frontiers',outer:prefix+'-outer',selected:prefix+'-selected',selectedFill:prefix+'-selected-fill',water:prefix+'-water'};
  const sources={faces:prefix+'-faces',edges:prefix+'-edges',outer:prefix+'-borders',water:prefix+'-water',outlines:prefix+'-outlines',selection:prefix+'-selection',highlight:prefix+'-highlight'};
@@ -78,6 +81,7 @@ export function createHistoricBorders(map,{country,base,file,tag='history',sourc
  let data=null,loading=null,frame=null,outlined=null,highlighted='',reveal=null,pendingColors;
  // A dated file's regions are coloured by feature state, so a new year repaints them instead of
  // laying out every tile again: about 0.7 s per election year for Canada's ridings.
+ const selectedFaces=new Set();
  const regionFill=['to-color',['coalesce',['feature-state','fill'],TRANSPARENT]],painted=new Map();
  function paintRegions(){for(const [id,color] of pendingColors)if(painted.get(id)!==color){painted.set(id,color);map.setFeatureState({source:sources.faces,id},{fill:color});}}
  const frameUrl=(id,member,options)=>'atlas-data://'+id+'?'+new URLSearchParams({url:frame.url,member,...options});
@@ -122,7 +126,7 @@ export function createHistoricBorders(map,{country,base,file,tag='history',sourc
  const frontierPaint=internationalBorderPaint;
  // A selected dated unit uses a single visible stroke, including its coast.
  const selectionPaint=()=>({...linePaint(),'line-width':regionalLineWidth(1,true),'line-opacity':1});
- function remove({keepPaint=false}={}){if(reveal)map.off('render',reveal);reveal=null;frame=null;painted.clear();outlined=null;highlighted='';alaska.remove();region.remove();if(!keepPaint)normalPaint=undefined;for(const id of Object.values(layers))if(map.getLayer(id))map.removeLayer(id);for(const id of Object.values(sources))if(map.getSource(id))map.removeSource(id);}
+ function remove({keepPaint=false}={}){if(reveal)map.off('render',reveal);reveal=null;frame=null;painted.clear();selectedFaces.clear();outlined=null;highlighted='';alaska.remove();region.remove();if(!keepPaint)normalPaint=undefined;for(const id of Object.values(layers))if(map.getLayer(id))map.removeLayer(id);for(const id of Object.values(sources))if(map.getSource(id))map.removeSource(id);}
  const none=['==',['get','a'],-1],round={'line-join':'round','line-cap':'round'};
  // The selected unit's fill, kept on top. A dated file adds its shape source only when a
  // highlight is first asked for: an extra source, even empty, slowed each election year change
@@ -130,7 +134,7 @@ export function createHistoricBorders(map,{country,base,file,tag='history',sourc
  function selectedFill(){
   // A dated file's shape source has the fill's settings, so the two coincide.
   if(!map.getSource(sources.highlight))map.addSource(sources.highlight,{type:'geojson',data:empty,tolerance:0,buffer:128,maxzoom:16});
-  if(!map.getLayer(layers.selectedFill))map.addLayer({id:layers.selectedFill,metadata:{atlas:{satellite:{fill:'none'}}},type:'fill',source:sources.highlight,paint:{'fill-color':(map.getLayer(country+'-first-selection-fill')?map.getPaintProperty(country+'-first-selection-fill','fill-color'):undefined)||'#b7cce3','fill-opacity':.45,'fill-antialias':false}});
+  if(!map.getLayer(layers.selectedFill))map.addLayer({id:layers.selectedFill,metadata:{atlas:{satellite:{fill:'none'}}},type:'fill',source:sources.highlight,paint:{'fill-color':selection.fill||(map.getLayer(country+'-first-selection-fill')?map.getPaintProperty(country+'-first-selection-fill','fill-color'):undefined)||'#b7cce3','fill-opacity':selection.fillOpacity??.45,'fill-antialias':false}});
   map.moveLayer(layers.selectedFill);
  }
  return {
@@ -160,12 +164,14 @@ export function createHistoricBorders(map,{country,base,file,tag='history',sourc
      });
      outlined='';highlighted='';
     }else{
-     map.addSource(sources.faces,{type:'geojson',data:url('faces'),tolerance:.25});map.addSource(sources.edges,{type:'geojson',data:url('arcs'),tolerance:.25});
+     const faceSource=selection.paintFaces?{data:url('faces')+'&transform=parts',promoteId:'f',buffer:128,maxzoom:16}:{data:url('faces')};
+     map.addSource(sources.faces,{type:'geojson',...faceSource,tolerance:fillTolerance});map.addSource(sources.edges,{type:'geojson',data:url('arcs'),tolerance:.25});
      // As on the present-day map, the selected outline fades small islands' rings in by size.
      // The selected unit's outline and shape, requested by unit when it is picked.
      // Asking for no unit when they are added builds the workers' compact copies up front.
      const warm=transform=>'atlas-data://'+prefix+'-unit?'+new URLSearchParams({url:data.url,configs:data.originalUrl,transform,config:'0',unit:'-1'});
-     map.addSource(sources.selection,{...selectionLineSourceOptions,data:warm('unit-outline')});map.addSource(sources.highlight,{type:'geojson',data:warm('unit-shape'),tolerance:.25});outlined='';highlighted='';map.addSource(sources.outer,{type:'geojson',data:original('borders'),tolerance:.25});
+     map.addSource(sources.selection,{...selectionLineSourceOptions,data:warm('unit-outline')});
+     if(!selection.paintFaces)map.addSource(sources.highlight,{type:'geojson',data:warm('unit-shape'),tolerance:fillTolerance});outlined='';highlighted='';map.addSource(sources.outer,{type:'geojson',data:original('borders'),tolerance:.25});
     }
     const all=map.getStyle().layers,before=all[all.findIndex(l=>l.id===fillLayer)+1]?.id;
     map.addLayer({id:layers.fill,type:'fill',source:sources.faces,paint:{'fill-color':frame?regionFill:TRANSPARENT,'fill-antialias':false}},before);
@@ -174,7 +180,7 @@ export function createHistoricBorders(map,{country,base,file,tag='history',sourc
      map.addLayer({id:layers.frontiers,type:'line',source:sources.edges,filter:none,layout:round,paint:frontierPaint()},before);
      map.addLayer({id:layers.outer,type:'line',source:sources.outer,filter:['==',['get','b'],-1],layout:round,paint:frontierPaint()},before);
     }
-    const selectedPaint=frame?{...selectionPaint(),'line-color':(map.getLayer(country+'-first-selected')?scene?.basePaint(country+'-first-selected','line-color'):undefined)??linePaint()['line-color'],'line-opacity':adaptiveOpacity(1)}:{...selectionPaint(),'line-opacity':adaptiveOpacity(1)};
+    const selectedPaint=frame?{...selectionPaint(),'line-color':(map.getLayer(country+'-first-selected')?scene?.basePaint(country+'-first-selected','line-color'):undefined)??linePaint()['line-color'],'line-opacity':adaptiveOpacity(1)}:{...selectionPaint(),...(selection.line?{'line-color':selection.line}:{}),'line-opacity':adaptiveOpacity(1)};
     map.addLayer({id:layers.selected,type:'line',source:frame?sources.outlines:sources.selection,metadata:{atlas:{role:'selection'}},layout:round,paint:selectedPaint},before);
    }
    if(frame){
@@ -203,8 +209,10 @@ export function createHistoricBorders(map,{country,base,file,tag='history',sourc
      const unit=config.units[index];if(!unit||visible&&!visible(unit))return;
      const color=colorOf(unit);if(!faces.has(color))faces.set(color,[]);faces.get(color).push(f);
     });
-    const colors=faces.size?['match',['get','f'],...[...faces].flatMap(([key,list])=>[list,key]),TRANSPARENT]:TRANSPARENT;
-    map.setPaintProperty(layers.fill,'fill-color',colors);
+    const missing=config.modernLand?.length?['match',['get','f'],config.modernLand,OTHER_LAND,TRANSPARENT]:config.fullLand?OTHER_LAND:TRANSPARENT;
+    const match=(tint=false)=>faces.size?['match',['get','f'],...[...faces].flatMap(([color,list])=>[list,tint?blendColor(color,selection.fill,selection.fillOpacity):color]),missing]:missing;
+    const colors=match();
+    map.setPaintProperty(layers.fill,'fill-color',selection.paintFaces?['case',['boolean',['feature-state','selected'],false],match(true),colors]:colors);
     map.setFilter(layers.fill,data.display?alaska.exclude('f',['literal',true]):exclude('f',['literal',true]));
     const lines=[],frontiers=[];
     if(data.display)for(let i=0;i<data.arcId.length;i++){const l=config.face[data.arcL[i]],r=data.arcR[i]>=0?config.face[data.arcR[i]]:-1;if(l>=0&&r>=0&&l!==r)(config.units[l].sovereign===config.units[r].sovereign?lines:frontiers).push(data.arcId[i]);}
@@ -219,7 +227,7 @@ export function createHistoricBorders(map,{country,base,file,tag='history',sourc
      if(!map.getLayer(layers.water))map.addLayer({id:layers.water,type:'fill',source:sources.water,metadata:{atlas:{role:'water',sea:true,satellite:{fill:'fade'}}},paint:{'fill-color':map.getPaintProperty('background','background-color'),'fill-antialias':false}});
     }
    }
-   if(!frame||map.getLayer(layers.selectedFill))selectedFill();
+   if(!frame&&!selection.paintFaces||map.getLayer(layers.selectedFill))selectedFill();
    if(frame&&reveal)scene?.setLayerWarming(layers.selectedFill,true);
   },
   // Outlines one unit: the edges with that unit on exactly one side.
@@ -234,7 +242,13 @@ export function createHistoricBorders(map,{country,base,file,tag='history',sourc
     const key=index>=0?data.configs.indexOf(config)+':'+index:'',shape=highlight?key:'';
     const unitUrl=transform=>'atlas-data://'+prefix+'-unit?'+new URLSearchParams({url:data.url,configs:data.originalUrl,transform,config:key.split(':')[0],unit:key.split(':')[1]});
     if(key!==outlined){outlined=key;map.getSource(sources.selection)?.setData(key?unitUrl('unit-outline'):empty);}
-    if(shape!==highlighted){highlighted=shape;map.getSource(sources.highlight)?.setData(shape?unitUrl('unit-shape'):empty);}
+    if(selection.paintFaces){
+     const next=new Set();
+     if(shape)config.face.forEach((value,id)=>{if(value===index||config.units[value]?.selectionGroup===unit.id)next.add(id);});
+     for(const id of selectedFaces)if(!next.has(id))map.removeFeatureState({source:sources.faces,id},'selected');
+     for(const id of next)if(!selectedFaces.has(id))map.setFeatureState({source:sources.faces,id},{selected:true});
+     selectedFaces.clear();for(const id of next)selectedFaces.add(id);
+    }else if(shape!==highlighted){highlighted=shape;map.getSource(sources.highlight)?.setData(shape?unitUrl('unit-shape'):empty);}
    }
   },
   dispose(){remove();region.dispose();alaska.dispose();frames.clear();if(data?.url){URL.revokeObjectURL(data.url);if(data.originalUrl!==data.url)URL.revokeObjectURL(data.originalUrl);}data=null;loading=null;}

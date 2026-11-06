@@ -17,7 +17,7 @@ const pack=path=>{const a=new Float32Array(path.length*2);path.forEach(([x,y],i)
 const unpack=a=>{const path=[];for(let i=0;i<a.length;i+=2)path.push([a[i],a[i+1]]);return path;};
 export function compactMosaic(decoded,configs){
  const faces=decoded.faces.features.map(f=>(f.geometry.type==='Polygon'?[f.geometry.coordinates]:f.geometry.coordinates).map(polygon=>polygon.map(pack)));
- return {faces,arcs:decoded.arcs.features.map(f=>({l:f.properties.l,r:f.properties.r,path:pack(f.geometry.coordinates)})),configs:configs.map(c=>Int32Array.from(c.face))};
+ return {faces,arcs:decoded.arcs.features.filter(f=>!f.properties.drawOnly).map(f=>({l:f.properties.l,r:f.properties.r,path:pack(f.geometry.coordinates)})),configs:configs.map(c=>Int32Array.from(c.face)),boundaries:configs.map(c=>c.selectionLines?c.units.map(u=>c.selectionLines[u.id]):null)};
 }
 const mercatorY=lat=>(1-Math.log(Math.tan(Math.PI/4+lat*Math.PI/360))/Math.PI)/2;
 // Each face's projected extent and outer-ring area, as lineData measures a ring.
@@ -32,6 +32,8 @@ function faceSize(mosaic,f){
 }
 export function unitOutline(mosaic,config,unit){
  const face=mosaic.configs[config],features=[];if(unit<0)return {type:'FeatureCollection',features};
+ const exact=mosaic.boundaries[config];
+ if(exact)return exact[unit];
  // Join the unit's faces across the edges inside it.
  const parent=new Map(),find=f=>{let r=f;while(parent.get(r)!==r)r=parent.get(r);while(parent.get(f)!==r){const next=parent.get(f);parent.set(f,r);f=next;}return r;};
  face.forEach((u,f)=>{if(u===unit)parent.set(f,f);});

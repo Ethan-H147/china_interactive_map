@@ -10,6 +10,7 @@ const version='a'.repeat(40),{omitted,retained,redirects}=cloudflareAssetPlan('d
 const hash=file=>createHash('sha256').update(fs.readFileSync('dist/'+file)).digest('hex');
 for(const [from,to]of redirects){assert(omitted.has(from));if(to.startsWith('/')){assert(!omitted.has(to.slice(1)));assert.equal(path.extname(from),path.extname(to));assert.equal(hash(from),hash(to.slice(1)),'Alias retains identical bytes: '+from);}else{assert(retained.has(from));assert.equal(to,'https://raw.githubusercontent.com/Ethan-H147/china_interactive_map/'+version+'/dist/'+from);}}
 
+assert.equal(redirects.get('vendor/flag-originals/national-roc.svg'),'https://raw.githubusercontent.com/Ethan-H147/china_interactive_map/'+version+'/dist/vendor/flag-originals/national-roc.svg');
 assert(omitted.has('data/world-land.bin'));assert(!omitted.has('data/compact/world-land.bin'));
 assert.equal(compactUrl('data/world-land.bin'),'data/compact/world-land.bin');
 for(const file of compactFiles){assert(omitted.has('data/'+file));assert(fs.existsSync('dist/data/compact/'+file),'Runtime compact copy retained: '+file);assert(!omitted.has('data/compact/'+file)||redirects.get('data/compact/'+file)?.startsWith('/'),'Compact URL is available directly or through an identical local asset');}

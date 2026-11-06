@@ -1,0 +1,82 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {createHash} from 'node:crypto';
+import {gunzipSync} from 'node:zlib';
+import {decodePack} from '../dist/china-pack.mjs';
+import {area,polygons,readMosaic} from './historic-mosaic.mjs';
+import {command,fc,geographicBounds} from './build-regional-dataset.mjs';
+const sources='scripts/boundary-sources/china-history/',read=file=>JSON.parse(fs.readFileSync(sources+file,'utf8')),manifest=read('manifest.json');
+assert.equal(createHash('sha256').update(fs.readFileSync(sources+manifest.cliopatria.file)).digest('hex'),manifest.cliopatria.retainedSha256,'Retained Cliopatria polities');
+assert.equal(createHash('sha256').update(fs.readFileSync(sources+manifest.qing1820.file)).digest('hex'),manifest.qing1820.retainedSha256,'Retained Qing divisions');
+// Every retained feature is a polity (no group) of a snapshot year, and has an entry.
+const cliopatria=read(manifest.cliopatria.file),polities=read('polities.json'),years=[...manifest.snapshots.map(s=>s.year),1949];
+assert(cliopatria.features.every(f=>!f.properties.Name.startsWith('(')&&polities[f.properties.Name]&&years.some(y=>f.properties.FromYear<=y&&f.properties.ToYear>=y)),'Retained features are snapshot-year polities with entries');
+const {history,config,unit,faceArea,linesSeparate}=await readMosaic('dist/data/china/history/borders.bin');
+assert.deepEqual(Object.keys(history.years).map(Number),years);
+
+// The atlas covers present-day China plus the Qing territories outside it.
+const display=decodePack(gunzipSync(fs.readFileSync('dist/data/china-boundaries.pack.bin'))).display;
+const land=display.provinces.features.reduce((n,f)=>n+area(polygons(f.geometry)),0),total=faceArea.reduce((a,b)=>a+b,0);
+// The faces also fill gaps where the displayed provinces' borders do not meet (about 175 km² in all).
+assert(total-land>3e6&&total-land<4.5e6,'The shared faces include the Qing lands outside present-day China');
+// No holes: every hole in a face is another face, apart from rounding specks under 1,000 m².
+const {landIndex}=await import('./geo-index.mjs'),faceTests=history.faces.features.map(f=>landIndex(polygons(f.geometry).flat()));
+history.faces.features.forEach((f,i)=>{for(const polygon of polygons(f.geometry))for(const hole of polygon.slice(1)){
+ if(area([[hole]])<1e-3)continue;
+ const inside=landIndex([hole]),point=hole.flatMap((a,k)=>hole.slice(k+2).map(b=>[(a[0]+b[0])/2,(a[1]+b[1])/2])).find(inside);
+ assert(!point||faceTests.some((test,j)=>j!==i&&test(point)),'Unfilled hole near '+point);
+}});
+for(const year of years){
+ const c=config(year);
+ assert(c.units.every(u=>u.name&&u.zh&&u.type&&u.label&&u.bounds),year+' unit cards');
+ assert(linesSeparate(year),year+' lines separate different units');
+}
+// The period's own states, and the share of land with no recorded polity.
+const states=year=>config(year).units.filter(u=>u.chinese).map(u=>u.key).sort();
+assert.deepEqual(states(250),['cao-wei','shu-han','wu']);
+for(const [year,key] of [[2,'han'],[742,'tang'],[1100,'song'],[1430,'ming']])assert.deepEqual(states(year),[key]);
+const unrecorded=year=>config(year).face.reduce((n,i,face)=>i<0?n+faceArea[face]:n,0)/land;
+assert(config(1820).fullLand,'Qing draws the full modern China land mask');
+const qingUnassigned=config(1820).modernLand.flatMap(i=>config(1820).face[i]<0?polygons(history.faces.features[i].geometry):[]);
+const inlandUnassigned=qingUnassigned.filter(p=>geographicBounds({type:'Polygon',coordinates:p})[0][1]>22);
+assert(inlandUnassigned.reduce((n,p)=>n+area([p]),0)<100,'Only small coastal and border fragments can remain neutral outside the South China Sea');
+assert(config(1820).borders.length,'Qing land frontiers have a separate outline');
+assert.equal(config(1820).units.filter(u=>u.type==='Province').length,18,'The eighteen Qing provinces are selectable');
+const roc=config(1949);
+assert(roc.fullLand&&roc.borders.length&&roc.frontiers.length,'ROC uses atlas land and a separate international stroke');
+assert.equal(roc.units.filter(u=>u.type==='ROC province').length,35);
+assert.equal(roc.points.capitals.length,38);
+assert.equal(roc.points.municipalities.length,12);
+const rocNeutral=roc.modernLand.filter(i=>roc.face[i]<0).flatMap(i=>polygons(history.faces.features[i].geometry));
+const outsideWest=p=>{const [[w,s],[e,n]]=geographicBounds({type:'Polygon',coordinates:p});return s>22&&!(w>=72&&e<=81.40001&&s>=37.49999&&n<=43.30001);};
+assert(rocNeutral.filter(outsideWest).reduce((n,p)=>n+area([p]),0)<250,'Neutral land is limited to small gaps and the documented western corrections');
+assert(roc.units.every(u=>roc.selectionLines[u.selectionGroup||u.id]?.features.length),'All 1949 units have a clean selection outline');
+assert.equal(roc.units.find(u=>u.id==='ROC-JIANGXINPO').selectionGroup,undefined);
+assert(roc.selectionLines['ROC-JIANGXINPO'].features.length,'Jiangxinpo has its own selection outline');
+assert.equal(roc.units.filter(u=>u.type==='ROC claim').length,10,'All externally administered claim areas are present');
+assert(unrecorded(250)>.4,'Cliopatria records no polity over much of the west in 250 CE');
+
+for(const [name,p,checks] of [
+ ['Xi’an',[108.94,34.34],{2:'han',250:'cao-wei',742:'tang',1100:'song',1430:'ming',1820:'25029'}],
+ ['Chengdu',[104.07,30.67],{250:'shu-han',742:'tang',1100:'song'}],
+ ['Nanjing',[118.8,32.06],{250:'wu',1100:'song'}],
+ ['Beijing',[116.4,39.9],{2:'han',250:'cao-wei',742:'tang',1100:'liao',1430:'ming',1820:'25036'}],
+ ['Ji’an',[126.19,41.12],{2:'goguryeo',742:'balhae'}],['Kashgar',[75.99,39.47],{1100:'kara-khanid',1430:'chagatai'}],['Turpan',[89.19,42.95],{1100:'qocho'}],
+ ['Lhasa',[91.1,29.65],{742:'tibetan-empire',1100:'tibetans',1430:'tibet',1820:'25020'}],
+ ['Yinchuan',[106.23,38.49],{1100:'western-xia'}],['Dali',[100.23,25.6],{1100:'dali'}],
+ ['Taipei',[121.56,25.04],{1430:null,1820:'25034'}],['Macau',[113.55,22.19],{1820:'macau'}],['Zhuhai',[113.55,22.27],{1820:'25033'}],
+ ['Zhoushan',[122.2,30.0],{1820:'25035'}],['Dongtou',[121.16,27.84],{1820:'25035'}],
+ ['Ulaanbaatar',[106.9,47.9],{1430:null,1820:'25027',1949:'ROC-MONGOLIA'}],['Kyzyl',[94.4,51.7],{1820:'25027',1949:'ROC-TUVA'}],
+ ['Khabarovsk',[135.1,48.5],{1820:'25026'}],['Vladivostok',[131.8855,43.1155],{1820:'25026'}],['Nerchinsk treaty frontier',[133,53.94],{1820:'25021'}],
+ ['Western Ili',[80.304016,44.287421],{1820:'25022',1949:null}],['Modern-only western strip',[74,39.6],{1949:null}],['Jiangxinpo',[96.5,25.9],{1949:'ROC-JIANGXINPO'}],['Western Pamirs',[74.272343,38.406657],{1949:'ROC-PAMIRS'}],['Qinzhou',[108.62,21.97],{1949:'ROC-GUANGDONG'}],['Beihai',[109.08,21.48],{1949:'ROC-GUANGDONG'}],['Leizhou coast',[110.098829,21.722858],{1949:'ROC-GUANGDONG'}],['Nanning',[108.33,22.82],{1949:'ROC-GUANGXI'}],['Shangsi',[107.98,22.16],{1949:'ROC-GUANGXI'}],['Arunachal Pradesh',[93.61,27.08],{1949:'ROC-ARUNACHAL'}],['Historical Hejiang east of the modern border',[133.865723,46.076109],{1949:'ROC-HEJIANG'}],['Mongolian land formerly drawn as Ningxia',[101.953446,42.493076],{1949:'ROC-MONGOLIA'}],['Eastern Wakhan',[74.3,37.16],{1949:'ROC-WAKHAN'}],['Karakoram',[75.05,36.6],{1949:'ROC-KARAKORAM'}],['Bhutan frontier',[90.41,27.97],{1949:'ROC-BHUTAN'}],['East of the Amur',[127.89,50.33],{1949:'ROC-AMUR'}],['Diaoyutai / Senkaku',[123.475,25.744],{1949:'ROC-DIAOYU'}],['Kashgar',[75.99,39.47],{1949:'ROC-XINJIANG'}],['Taipei',[121.56,25.04],{1949:'ROC-TAIWAN'}],['Sakhalin',[142.7,50.8],{1820:'sakhalin'}]
+
+])for(const [year,key] of Object.entries(checks))assert.equal(unit(+year,p),key,name+' in '+year);
+for(const point of [[131.247974,43.402549],[130.579031,42.447734],[130.584667,42.668779],[130.869532,42.900463]]){
+ const id=unit(1949,point);
+ assert(id&&!['ROC-HEJIANG','ROC-HEILONGJIANG'].includes(id),'The modern border strip near '+point+' is no longer assigned to Hejiang');
+}
+const hejiang=fc(history.faces.features.filter((f,i)=>roc.units[roc.face[i]]?.id==='ROC-HEJIANG'));
+const hejiangParts=(await command(hejiang,'-dissolve2')).features.flatMap(f=>polygons(f.geometry));
+assert.equal(hejiangParts.filter(p=>area([p])>=.01).length,1,'Hejiang has one continuous historical shape');
+const beijing=config(1430).partOf['110000'];assert.equal(config(1430).units[beijing].key,'ming','Beijing selected without a click shows the Ming');
+console.log('China history: '+years.length+' snapshots, '+history.faces.features.length+' faces; spot checks passed.');

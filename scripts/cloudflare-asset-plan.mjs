@@ -13,9 +13,9 @@ export function cloudflareAssetPlan(root,version){
  const absolute=rel=>path.join(root,...rel.split('/'));
  function walk(dir){for(const e of fs.readdirSync(dir,{withFileTypes:true})){const file=path.join(dir,e.name);if(e.isDirectory())walk(file);else if(e.isFile())files.push(path.relative(root,file).split(path.sep).join('/'));else throw Error('Unexpected non-file asset: '+file);}}
  walk(root);files.sort();
- // Original DataV inputs and audit reports have runtime replacements. Retain
+ // Original flag artwork, DataV inputs and audit reports have runtime replacements. Retain
  // their original URL as a redirect to the same immutable GitHub source.
- for(const file of files)if(/^data\/\d{6}(?:_full)?\.json$/.test(file)||/^data\/europe\/[^/]+\/(?:frontier-report|alignment-report)\.json$/.test(file))retained.add(file);
+ for(const file of files)if(/^vendor\/flag-originals\/[^/]+\.svg$/.test(file)||/^data\/\d{6}(?:_full)?\.json$/.test(file)||/^data\/europe\/[^/]+\/(?:frontier-report|alignment-report)\.json$/.test(file))retained.add(file);
  // Builders retain superseded chunk filenames. Current catalogues define the
  // complete active second/third-level hierarchy; older inputs stay in GitHub.
  for(const [id] of Object.entries(configurations)){
