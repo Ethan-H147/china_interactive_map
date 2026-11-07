@@ -99,5 +99,43 @@
    ],
    "description": "All retained city dots compared with period-appropriate gazetteer records by Chinese place name, parent prefecture and proximity. An independent same-name seat within 12 km or a matching parent seat within 8 km corroborates only the vicinity. Circuit corroboration comes from the geography chapters, with dated overrides where the sources document a transfer. Unresolved locations and affiliations are marked separately. Harvard and Fudan GIS layers served as comparison references. Seat changes use independently documented historical identifications at approximate coordinates."
   }
+ },
+ "han2": {
+  "file": "han-circuits.geojson.gz",
+  "source": "https://doi.org/10.6084/m9.figshare.30518417",
+  "license": "CC BY 4.0",
+  "retainedSha256": "59d7b1e1d8a0f530c5df9a8778c08662a33fe4304116ac4f99c7cd80ea79de24",
+  "geography": "https://zh.wikisource.org/wiki/漢書/卷028",
+  "notes": "Source commanderies are dissolved by inspectorate and clipped to the existing atlas land. Seat coordinates and affiliation are reviewed independently. Ambiguous seats and the Shuofang grouping are marked in their cards.",
+  "koreanExtension": {
+   "source": "https://github.com/Seshat-Global-History-Databank/cliopatria",
+   "reference": "https://contents.history.go.kr/eh_kk/teach/notebook/data/04_d06.htm",
+   "notes": "Restore the retained Han polity polygon on Korean land in 2 CE, clipped to the atlas coastline. The detailed reconstruction includes Chaoxian under Lelang. The outer territorial line is approximate."
+  }
+ },
+ "ming1430": {
+  "geography": "https://zh.wikisource.org/wiki/明史/卷40",
+  "reference": "https://ikcest-drr.data.ac.cn/map/m26ba",
+  "notes": "Hartwell / CHGIS V5 approximate Ming provincial reconstruction, served by Harvard ChinaX. The layer is labelled 1391 but contains later divisions including Guizhou and Nurgan. All boundary positions are unverified for 1430. Nanjing and Zhongdu are merged into the Southern Metropolitan Region. Nominal Tibetan and Nurgan commissions are excluded from provincial geometry. Clipped to existing atlas Ming land. Gaps use nearby historical provinces and are also unverified. Coastal gaps on present-day land are assigned to their coastal province within 50 km of the shoreline. Modern coastal province footprints locate the repairs. Guangxi coastal gaps follow the historical Guangdong assignment. These are coastline reconciliations with unverified 1430 provincial alignment. Ming-held offshore islands in the modern Taiwan catalogue, including Dongyin, use Fujian. The correction is restricted to land already assigned to Ming.",
+  "file": "ming-provinces.geojson.gz",
+  "retainedSha256": "d3164735f2075ab08472d5b6561604d5670d755d6027eedaaa3bee692c4bea6b",
+  "source": "https://doi.org/10.7910/DVN/29302",
+  "service": "https://www.arcgis.com/home/item.html?id=5960a2c871244b9e95a3085fcab46bee",
+  "sourceDate": 1391,
+  "license": "Original README restricts use to non-commercial academic purposes. Dataverse catalogue says CC0. Retain the original restriction."
+ },
+ "externalExtents": {
+  "source": "https://github.com/Seshat-Global-History-Databank/cliopatria",
+  "notes": "Every early snapshot retains its dated Chinese polity extent beyond modern China, clipped only to the shared atlas land shape. Modern counties supply interior ownership, not an outer territorial limit. Adjacent dated polities are classified separately for each year. Historical extent and nominal authority remain approximate; small mismatches at modern borders are not evidence of a precise ancient boundary.",
+  "audit": {
+   "2": "Northern Vietnam, Lelang in Korea and the source western frontier.",
+   "250": "Wu in northern Vietnam, Wei in Korea and the source western frontier.",
+   "742": "Annan in northern Vietnam and the source western frontier.",
+   "1100": "Only small border-edge differences in this source; no major additional Song region.",
+   "1430": "Northeastern nominal administration and northern/frontier extensions retain the dated polity reconstruction, outside the approximate provincial layer.",
+   "1820": "Existing Stanford provincial/frontier extents, including Mongolia, Outer Manchuria and the western frontier.",
+   "1949": "Existing historical divisions and separately labelled claims; keep their documented corrections and status."
+  },
+  "annamReference": "https://www.cambridge.org/core/journals/journal-of-the-royal-asiatic-society/article/annan-protectorate-in-northern-vietnam-during-the-tang-period-679907/0330A3F32086B5B1AEFC262A54FBF023"
  }
 }

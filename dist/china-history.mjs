@@ -18,27 +18,29 @@ const PERIODS={
 const CLIOPATRIA=['Cliopatria (Seshat)','https://github.com/Seshat-Global-History-Databank/cliopatria'];
 
 const QING_YEAR=1820,ROC_YEAR=1949;
-const circuitYear=year=>year===742||year===1100;
+const circuitYear=year=>[2,742,1100].includes(year);
 const ROC_AREA_FILL='#e9dfc9';
 const replacesLand=year=>year===QING_YEAR||year===ROC_YEAR;
 const ROC_SOURCE=['Christian Henriot / ENP-China, CC0','https://www.virtualshanghai.net/Data/Tables?ID=198'];
 const QING_SOURCE=['Stanford University (Grave Reform in Modern China), CC BY 3.0','https://purl.stanford.edu/wd799pc4692'];
-const sourceFor=year=>year===ROC_YEAR?ROC_SOURCE:year===QING_YEAR?QING_SOURCE:CLIOPATRIA;
+const MING_SOURCE=['Hartwell / CHGIS Ming reconstruction','https://doi.org/10.7910/DVN/29302'];
+const sourceFor=year=>year===1430?MING_SOURCE:year===ROC_YEAR?ROC_SOURCE:year===QING_YEAR?QING_SOURCE:CLIOPATRIA;
 
 export const chinaHistory={
  label:'Historical snapshot',store:'atlas-china-history-year',file:'history/borders.bin',defaultYear:742,periods:true,standalone:true,labelTicks:true,
  yearText:year=>PERIODS[year].year,dateText:year=>PERIODS[year].name,
  sourceName:year=>sourceFor(year)[0],source:year=>sourceFor(year)[1],
  title:year=>PERIODS[year].name+', '+PERIODS[year].year,
- coverage:year=>year===ROC_YEAR?'Nominal 1947–1949 divisions with historical claims from a later reference map. Municipality dots mark city locations.':year===QING_YEAR?'Historical provinces and frontier regions. The Nerchinsk treaty frontier is shown as disputed.':circuitYear(year)?'Select a city or circuit. Faded edges show approximate circuit extents.':'Approximate extents, drawn along present-day county lines.',
+ coverage:year=>year===1430?'Provincial outlines use a historical reconstruction. All boundary positions are unverified for 1430.':year===ROC_YEAR?'Nominal 1947–1949 divisions with historical claims from a later reference map. Municipality dots mark city locations.':year===QING_YEAR?'Historical provinces and frontier regions. The Nerchinsk treaty frontier is shown as disputed.':circuitYear(year)?'Select a city or region. Faded edges show approximate extents.':'Approximate extents, fitted to atlas land.',
  counts:(units,{points}={})=>{
   if(points?.circuits){
    const districts=points.circuits.filter(c=>c.kind==='Capital district').length;
-   return (points.circuits.length-districts)+' circuits'+(districts?', '+districts+' capital district':'');
+   const military=points.circuits.filter(c=>c.kind==='Military commission').length;
+   return (points.circuits.length-districts-military)+' '+(points.label||'circuits')+(districts?', '+districts+' capital district'+(districts===1?'':'s'):'')+(military?', '+military+' military commission':'');
   }
   const provinces=units.filter(u=>u.type==='Province'||u.type==='ROC province').length;return provinces?provinces+' provinces':units.length+(units.length===1?' polity':' polities');},
- kind:unit=>unit.type.startsWith('ROC ')?unit.type:unit.type==='Qing claim'?'claim':unit.type==='Province'?'province':unit.type==='Frontier region'?'frontier':unit.type==='Disputed frontier'?'disputed':unit.chinese?'state':unit.type==='Nomadic people'?'territory':unit.type==='Colony'?'foreign':'colony',
- keys:[['ROC province','ROC province','#efdfbd'],['ROC claim','Historical claim',ROC_AREA_FILL],['ROC area','Area or special administrative region',ROC_AREA_FILL],['ROC reference','Other land','#d7d7d3'],['province','Qing province','#ecd6a6'],['frontier','Qing frontier region','#eee2c2'],['disputed','Disputed frontier','#d9bfa9'],['claim','Qing claim','#f4ead2'],['state',year=>PERIODS[year].state,'#ecd6a6'],['colony','Other states','#e0e8da'],['territory','Nomadic peoples','#e4def0'],['foreign','Colonies','#f0dcd6']],
+ kind:unit=>unit.type.startsWith('ROC ')?unit.type:unit.type==='Qing claim'?'claim':['Province','Capital district','Military commission'].includes(unit.type)?'province':unit.type==='Frontier region'?'frontier':unit.type==='Disputed frontier'?'disputed':unit.chinese?'state':unit.type==='Nomadic people'?'territory':unit.type==='Colony'?'foreign':'colony',
+ keys:[['ROC province','ROC province','#efdfbd'],['ROC claim','Historical claim',ROC_AREA_FILL],['ROC area','Area or special administrative region',ROC_AREA_FILL],['ROC reference','Other land','#d7d7d3'],['province',year=>year===1430?'Ming province':'Qing province','#ecd6a6'],['frontier',year=>year===1430?'Ming frontier areas':'Qing frontier region','#eee2c2'],['disputed','Disputed frontier','#d9bfa9'],['claim','Qing claim','#f4ead2'],['state',year=>PERIODS[year].state,'#ecd6a6'],['colony','Other states','#e0e8da'],['territory','Nomadic peoples','#e4def0'],['foreign','Colonies','#f0dcd6']],
  unrecorded:year=>year===ROC_YEAR?null:year===QING_YEAR?'Other land':'No state recorded',
  kindLabel:unit=>unit.kind||unit.type,
  describe:unit=>unit.note,
@@ -63,9 +65,9 @@ export function attachChinaHistory(map,host){
     const qing=year===QING_YEAR;
     const republic=year===ROC_YEAR,previous=shownYear;
     const full=replacesLand(year);
-    if(full||replacesLand(previous))host.scene.setSnapshot(full?'china-history':null,{keepWater:full,replaceContexts:full?['china']:[]});
+    host.scene.setSnapshot('china-history',{keepWater:true,replaceContexts:full?['china']:[]});
     if(municipalityDots)removePoints();
-    if(republic||circuitYear(year))installPoints(view.datedPoints(),republic);
+    if(republic||circuitYear(year)||year===1430)installPoints(view.datedPoints(),republic);
     sidebar.dataset.history=republic?'roc':qing?'qing':circuitData?'circuits':'true';
     shownYear=year;
     host.syncLand();
@@ -89,11 +91,13 @@ export function attachChinaHistory(map,host){
    capitals.install(seats);
   }else{
    circuitData=data;
-   circuitShapes=packShapes(data.coverage.features.filter(f=>f.properties.step===5));
-   map.addSource(circuitLayer,{type:'geojson',data:data.coverage,tolerance:0});
-   map.addLayer({id:circuitLayer,type:'fill',source:circuitLayer,filter:noCircuit,
-    metadata:{atlas:{role:'fill',preserveSelectionOpacity:true}},
-    paint:{'fill-color':'#ae5b35','fill-opacity':['get','opacity'],'fill-antialias':false}});
+   if(data.coverage){
+    circuitShapes=packShapes(data.coverage.features.filter(f=>f.properties.step===5));
+    map.addSource(circuitLayer,{type:'geojson',data:data.coverage,tolerance:0});
+    map.addLayer({id:circuitLayer,type:'fill',source:circuitLayer,filter:noCircuit,
+     metadata:{atlas:{role:'fill',preserveSelectionOpacity:true}},
+     paint:{'fill-color':'#ae5b35','fill-opacity':['get','opacity'],'fill-antialias':false}});
+   }
   }
   const dots=municipalityDots=settlementFeatures(places);
   map.addSource(citySource,{type:'geojson',promoteId:'id',data:dots});
@@ -101,7 +105,7 @@ export function attachChinaHistory(map,host){
   municipalityLayers=layers.map(layer=>layer.id);
   for(const layer of layers){map.addLayer(layer);setLayerVisible(map,layer.id,true);}
   const units=view.datedOptions().map(u=>({id:u.id,en:u.name,local:u.zh,kind:u.kind,aliases:u.aliases}));
-  const records=[...units,...(circuitData?.circuits||[]),...places];
+  const records=[...units,...(circuitData?.coverage?circuitData.circuits:[]),...places];
   placeSearch=host.createSearch(records);
   if(!republic)return;
   const picker=$('province');modernOptions=[...picker.options];
@@ -109,7 +113,7 @@ export function attachChinaHistory(map,host){
  }
  function removePoints(){
   if(circuitData){
-   map.removeLayer(circuitLayer);map.removeSource(circuitLayer);
+   if(map.getLayer(circuitLayer))map.removeLayer(circuitLayer);if(map.getSource(circuitLayer))map.removeSource(circuitLayer);
    circuit=null;circuitData=null;circuitShapes=null;
   }
   capitals.dispose();for(const id of municipalityLayers)map.removeLayer(id);
@@ -121,7 +125,7 @@ export function attachChinaHistory(map,host){
  function setCircuit(next){
   if(circuit===next)return;
   circuit=next;
-  if(circuitData)map.setFilter(circuitLayer,next?['==',['get','id'],next.id]:noCircuit);
+  if(map.getLayer(circuitLayer))map.setFilter(circuitLayer,next?['==',['get','id'],next.id]:noCircuit);
  }
  function pointAt(point){
   if(!municipalityDots)return;
@@ -136,7 +140,7 @@ export function attachChinaHistory(map,host){
  }
  function selectPlace(id,fit=true){
   const picked=municipalities.find(p=>p.id===id);
-  const area=circuitData?.circuits.find(c=>c.id===id);
+  const area=circuitData?.coverage&&circuitData.circuits.find(c=>c.id===id);
   setCircuit(area);
   city=picked;
   if(map.getLayer(citySource))map.setFilter(citySource,['==',['get','id'],picked?.id||'']);
@@ -171,7 +175,7 @@ export function attachChinaHistory(map,host){
    if(city?.circuit)fact('Division',circuitData.circuits.find(c=>c.id===city.circuit)?.en);
    if(place){const note=document.createElement('p');note.className='country-note';note.textContent=place.statusNote;card.append(note);}
    const sourceLink=(source,title)=>{if(!source)return;const link=document.createElement('a');link.className='election-source';link.href=source;link.target='_blank';link.rel='noopener';link.textContent=title;card.append(link);};
-   sourceLink(city?.statusSource||unit.statusSource||(place&&circuitData?.source),city?.statusSourceLabel?.trim()||(place&&circuitData?.attribution)||'Historical reference');
+   sourceLink(city?.statusSource||(place&&circuitData?.source),city?.statusSourceLabel?.trim()||(place&&circuitData?.attribution)||'Historical reference');
    sourceLink(city?.primary||circuit?.primary,'Historical geography reference');
    card.hidden=false;
   }
@@ -182,7 +186,7 @@ export function attachChinaHistory(map,host){
  const syncButton=()=>{const button=document.getElementById('historical-snapshot');if(button)button.textContent=view.active?'Present day':'Historical snapshot';};
  const fitUnit=hit=>{if(hit?.bounds)host.fit(hit.bounds);};
  // Leaves without moving the camera, as when the quiz opens or another country does.
- function leave(){if(!view.active)return;view.leave();if(replacesLand(shownYear))host.scene.setSnapshot(null);if(municipalityDots)removePoints();shownYear=null;host.syncLand();delete sidebar.dataset.history;clearMapViewPicker('china');view.renderSummary($('history-summary'));view.renderState($('history-card'));}
+ function leave(){if(!view.active)return;view.leave();host.scene.setSnapshot(null);if(municipalityDots)removePoints();shownYear=null;host.syncLand();delete sidebar.dataset.history;clearMapViewPicker('china');view.renderSummary($('history-summary'));view.renderState($('history-card'));}
  function set(on,year){
   if(on===view.active)return on&&year?view.setYear(year):undefined;
   let entering;
@@ -194,12 +198,12 @@ export function attachChinaHistory(map,host){
  }
  return {
   get active(){return view.active;},get replacesLand(){return view.active&&replacesLand(shownYear);},get isRepublic(){return view.active&&shownYear===ROC_YEAR;},get hasHistoricalCities(){return !!municipalityDots;},get selection(){return city?.id||circuit?.id||view.datedSelection;},set,leave,search(query){const matches=placeSearch?.(query);return circuitData&&!matches?.length?undefined:matches;},selectPlace,
-  coversLabel(center){return view.active&&replacesLand(shownYear)&&!!view.hoverAt(map.project(center));},
+  coversLabel(center){return view.active&&!!view.hoverAt(map.project(center));},
   // A click, or a present-day place found by search, selects the historical unit there.
   click(point){
    const place=pointAt(point)||circuitAt(point);
-   if(place)selectPlace(place.id,!circuitData);
-   else pickPolity(point,!circuitData);
+   if(place)selectPlace(place.id,!circuitData?.coverage);
+   else pickPolity(point,!circuitData?.coverage);
   },
   pickAt(lngLat){const point=map.project(lngLat),area=circuitAt(point);if(area)selectPlace(area.id);else pickPolity(point,true);},
   clear(){if(city||circuit||view.datedSelection)selectPlace('',false);},
@@ -209,8 +213,8 @@ export function attachChinaHistory(map,host){
    capitals.sync(shownYear===ROC_YEAR&&$('capital-layer').checked);
    const mapLanguage=window.AtlasLabels.getLanguage(),language=mapLanguage==='local'?'zh-Hant':mapLanguage;
    const dots=municipalityDots.features.filter(f=>settlementDotVisible(f,map.getZoom(),city?.id));
-   const towns=dots.map(f=>{const p=municipalities.find(r=>r.id===f.properties.id);return {...p,lines:placeLines(p,language),priority:city===p?1:.75,selected:city===p,className:'settlement-label',onClick:()=>selectPlace(p.id,!circuitData)};});
-   const circuits=(circuitData?.circuits||[]).filter(c=>map.getZoom()>=4.9||c===circuit).map(c=>({...c,lines:placeLines({...c,names:{'zh-Hant':c.local}},language),priority:c===circuit ? .95 : .5,selected:c===circuit,onClick:()=>selectPlace(c.id,false)}));
+   const towns=dots.map(f=>{const p=municipalities.find(r=>r.id===f.properties.id);return {...p,lines:placeLines(p,language),priority:city===p?1:.75,selected:city===p,className:'settlement-label',onClick:()=>selectPlace(p.id,!circuitData?.coverage)};});
+   const circuits=(circuitData?.coverage?circuitData.circuits:[]).filter(c=>map.getZoom()>=4.9||c===circuit).map(c=>({...c,lines:placeLines({...c,names:{'zh-Hant':c.local}},language),priority:c===circuit ? .95 : .5,selected:c===circuit,onClick:()=>selectPlace(c.id,false)}));
    return [...units,...capitals.labels(language,map.getBounds(),view.datedSelection),...circuits,...towns];
   },
   dispose(){leave();$('capital-layer').removeEventListener('change',refreshCapitals);view.dispose();borders.dispose();}

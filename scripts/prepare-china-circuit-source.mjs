@@ -20,3 +20,7 @@ const prefectures=await read('ResearchArea',`-filter "${period}" -proj wgs84 -ea
 const points=(await read('CountyPointsWithPopulation',`-filter "(${period}) && TYPE == 'Prefecture Seat'" -proj wgs84 -filter-fields YEAR,CountyID,ProvNAM,PrefNAM,CountyNAM`)).filter(f=>(!f.properties.PrefNAM.includes(',')||['742AD:Lingnan Dao','1102AD:Guangnanxi Lu'].includes(f.properties.YEAR+':'+f.properties.ProvNAM))&&!(f.properties.YEAR==='1102AD'&&f.properties.ProvNAM==='Qinfeng Lu'&&later.includes(f.properties.PrefNAM)));
 fs.writeFileSync('scripts/boundary-sources/china-history/tang-song-circuits.geojson.gz',gzipSync(JSON.stringify({prefectures,points}),{level:9}));
 console.log(prefectures.length+' circuits and '+points.length+' prefectural seat records.');
+
+const han=await read('ResearchArea', `-filter "YEAR == '2AD'" -proj wgs84 -each "circuit=ProvNAM" -dissolve circuit allow-overlaps -simplify interval=1800 keep-shapes -filter-fields circuit`);
+fs.writeFileSync('scripts/boundary-sources/china-history/han-circuits.geojson.gz',gzipSync(JSON.stringify(han),{level:9}));
+console.log(han.length+' Han inspectorates and capital district.');
