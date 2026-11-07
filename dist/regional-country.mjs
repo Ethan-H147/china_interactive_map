@@ -310,7 +310,7 @@ if(historicLabels)candidates.push(...historicLabels);if(capitalDisplay)candidate
   if(flag){$('flag-source').href=flag.page;$('flag-source').title=flag.credit+' · '+flag.license;$('flag').src=flag.file;$('flag').alt='Flag of '+(flag.name||index.get(scope).en);}else $('flag').removeAttribute('src');
   $('detail-flag-source').hidden=!detailFlag;
   if(detailFlag){$('detail-flag-source').href=detailFlag.page;$('detail-flag-source').title=detailFlag.credit+' · '+detailFlag.license;$('detail-flag').src=detailFlag.file;$('detail-flag').alt='Flag of '+(detailFlag.name||names(record).en);}else $('detail-flag').removeAttribute('src');
-  const caption=[detailFlag,flag].find(f=>f?.status||f?.scope);
+  const caption=[detailFlag,flag].find(f=>f?.status);
   $('flag-caption').hidden=!caption;$('flag-caption').textContent=caption?[caption.name||names(record).en,caption.scope,caption.status,caption.year].filter(Boolean).join(' · '):'';
   if(caption?.legalSource?.verified){const link=document.createElement('a');link.href=caption.legalSource.url;link.target='_blank';link.rel='noopener';link.textContent='Legal source';link.title=caption.legalSource.title+' · '+caption.legalSource.articles;$('flag-caption').append(' · ',link);}
  }

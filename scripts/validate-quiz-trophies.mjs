@@ -1,12 +1,17 @@
+import '../dist/countries.js';
+import {firstLevelPool} from '../dist/first-level-quiz.mjs';
 import assert from 'node:assert/strict';import fs from 'node:fs';
 import {quizTrophies,trophyProgress,sortQuizTrophies} from '../dist/quiz-trophies-core.mjs';import {parseTrophyGlb} from '../dist/trophy-viewer.mjs';
 import {gunzipSync} from 'node:zlib';
 import {reservedCollectibles} from '../dist/dev-collectibles-core.mjs';
 for(const trophy of quizTrophies.filter(t=>t.addedOrder>7)){
- const file=['argentina','brazil'].includes(trophy.country)?'quiz/'+trophy.country+'.bin':'europe/'+trophy.country+'/catalogue.bin',data=JSON.parse(gunzipSync(fs.readFileSync('dist/data/'+file))),pool=data.records.filter(r=>r.level===1&&r.bounds&&r.center&&!r.nonGeographic&&r.quizEligible!==false&&!r.overseas);
+ const file=['argentina','brazil'].includes(trophy.country)?'quiz/'+trophy.country+'.bin':'europe/'+trophy.country+'/catalogue.bin',data=JSON.parse(gunzipSync(fs.readFileSync('dist/data/'+file))),q=globalThis.AtlasCountries.countries[trophy.country].quiz,pool=firstLevelPool(data.records.filter(r=>!q.excludeSpecial||!r.special),!!q.includeOverseas,q.exclude||[],q.level||1);
  assert.equal(trophy.minimum,pool.length,trophy.country+' reward must match its actual default first-level quiz pool');
 }
 const records=(t,mode='name',changes={})=>(t.scopeMinimums?Object.entries(t.scopeMinimums):[['',t.minimum]]).map(([scope,total])=>({country:t.country,level:1,scope,mode,total,bestCorrect:total,fullRound:true,fastestMs:50000,...changes}));
+const spain=quizTrophies.find(t=>t.country==='spain');
+for(const total of [19,20])assert(trophyProgress(spain,{bests:['name','identify','find'].map(mode=>({country:'spain',level:1,scope:'',mode,total,bestCorrect:total,fullRound:true,fastestMs:45000}))}).earned,'Saved perfect Spain rounds remain eligible');
+assert(!trophyProgress(spain,{bests:['name','identify','find'].map(mode=>({country:'spain',level:1,scope:'',mode,total:18,bestCorrect:18,fullRound:true,fastestMs:45000}))}).earned,'A smaller Spain pool cannot unlock the reward');
 assert.equal(quizTrophies.length,13);assert.equal(new Set(quizTrophies.map(t=>t.country)).size,13);assert.deepEqual([...quizTrophies].sort((a,b)=>a.addedOrder-b.addedOrder).map(t=>t.addedOrder),Array.from({length:13},(_,i)=>i+1));for(const t of quizTrophies)assert(Number.isFinite(Date.parse(t.addedAt)));
 assert.deepEqual(sortQuizTrophies(quizTrophies).map(t=>t.country),["italy","spain","united-kingdom","brazil","chile","argentina","germany","russia","korea","france","united-states","japan","china"]);assert.deepEqual(sortQuizTrophies(quizTrophies,'country').map(t=>t.country),["argentina","brazil","chile","china","france","germany","italy","japan","korea","russia","spain","united-kingdom","united-states"]);
 for(const trophy of quizTrophies){

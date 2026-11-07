@@ -55,15 +55,16 @@ export default [
    if(language)assert.equal(after.language,language,'The label language is restored');
   }})),
  // Flags stack downward: national, region or community, then department or province. A commune
- // or municipality shows its department's or province's flag, captioned as such.
+ // Municipalities can inherit their parent's flag without adding a place subtitle.
  ...[
-  ['france','Strasbourg','Strasbourg','Commune',['flag-fr.svg','FR-R-44','FR-D-67'],'Bas-Rhin · Department flag'],
+  ['france','Strasbourg','Strasbourg','Commune',['flag-fr.svg','FR-R-44','FR-D-67'],''],
   ['france','Bas-Rhin','Bas-Rhin','Department',['flag-fr.svg','FR-R-44','FR-D-67'],''],
   ['france','Chambéry','Chambéry','Commune',['flag-fr.svg','FR-R-84'],''],
   ['spain','Toledo','Toledo','Province',['flag-es.svg','ES-A-08','ES-P-45'],''],
   ['spain','Alcalá de Henares','Alcalá de Henares','Municipality',['flag-es.svg','ES-A-13'],''],
-  ['spain','Tarragona','Tarragona','Municipality',['flag-es.svg','ES-A-09','ES-P-43'],'Tarragona · Province flag'],
-  ['italy','Gallarate','Gallarate','Comune',['flag-it.svg','IT-R-03','IT-P-12'],'Varese · Province flag'],
+  ['spain','Saceruela','Saceruela','Municipality',['flag-es.svg','ES-A-08','ES-P-13'],''],
+  ['spain','Tarragona','Tarragona','Municipality',['flag-es.svg','ES-A-09','ES-P-43'],''],
+  ['italy','Gallarate','Gallarate','Comune',['flag-it.svg','IT-R-03','IT-P-12'],''],
   ['italy','Turin','Turin','Metropolitan city',['flag-it.svg','IT-R-01'],''],
   ['united-kingdom','Maidstone','Maidstone','District',['flag-gb.svg','GB-R-TLJ'],''],
   ['united-kingdom','Edinburgh','Edinburgh','Council area',['flag-gb.svg','GB-R-TLM'],''],
