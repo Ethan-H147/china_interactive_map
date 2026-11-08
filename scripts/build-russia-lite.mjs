@@ -24,3 +24,6 @@ for(const file of files){
 }
 function assert(ok,message){if(!ok)throw Error(message);}
 console.log('Russia lite copies:',files.length,'files,',before,'->',after,'points;',(fs.statSync(base+'first.bin').size/1e6).toFixed(1),'->',(fs.statSync(out+'first.bin').size/1e6).toFixed(2),'MB first level,',(fs.statSync(base+'second/RU-KYA.bin').size/1e6).toFixed(2),'->',(fs.statSync(out+'second/RU-KYA.bin').size/1e6).toFixed(2),'MB Krasnoyarsk Krai.');
+
+// Keep district lines tied to the coast used at each display resolution.
+await (await import('./petersburg-coast.mjs')).repairPetersburgBorders();

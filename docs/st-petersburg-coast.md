@@ -1,0 +1,5 @@
+# Saint Petersburg district display lines
+
+The full and overview shared-line meshes are clipped against their matching first-level coast. Where an OSM shared line ends inland because its district shore differs from the atlas shore, the last 100 m direction is continued to the first coast intersection, capped at 2 km. Twelve full-detail endpoints and ten overview endpoints are joined this way. This is a display-line repair, not a new legal boundary dataset. The 18 district polygons, labels, IDs, centres, statistics and first-level geometry are unchanged.
+
+Three detached heuristic channel features were removed. All shared lines retain two district owners; no coast outline is added. The city-specific repair runs after full Russia builds, overview builds and channel builds, so later builds preserve the result. Geometry checks sample every segment, verify every free end meets its matching coast, and check both Neva mouths. Browser checks cover desktop and phone, flat and globe projections, and overview/full-detail zooms.

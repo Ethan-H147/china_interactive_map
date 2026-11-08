@@ -1,0 +1,389 @@
+{
+  "asOf": "2026-11-08",
+  "registrySnapshot": "2026-09-01",
+  "scope": "Label-only current municipal names/types; no claim of updated geometry; mergers deferred",
+  "records": [
+    {
+      "id": "RU-D-91883426895496",
+      "parent": "RU-MOS",
+      "en": "Dmitrov",
+      "local": "Дмитров",
+      "kind": "Municipal okrug",
+      "administrativeEn": "Dmitrovsky Municipal Okrug",
+      "administrativeLocal": "Дмитровский муниципальный округ",
+      "oktmo": "46515000",
+      "source": "https://classifikators.ru/oktmo/46515000000",
+      "pronunciation": false,
+      "audio": false,
+      "before": {
+        "en": "Dmitrovsky District",
+        "local": "Дмитровский район",
+        "kind": "District"
+      }
+    },
+    {
+      "id": "RU-D-22082895013138",
+      "parent": "RU-MOS",
+      "en": "Istra",
+      "local": "Истра",
+      "kind": "Municipal okrug",
+      "administrativeEn": "Istra Municipal Okrug",
+      "administrativeLocal": "муниципальный округ Истра",
+      "oktmo": "46533000",
+      "source": "https://classifikators.ru/oktmo/46533000000",
+      "pronunciation": false,
+      "audio": false,
+      "before": {
+        "en": "Istrinsky District",
+        "local": "городской округ Истра",
+        "kind": "District"
+      }
+    },
+    {
+      "id": "RU-D-34201544951901",
+      "parent": "RU-MOS",
+      "en": "Leninsky",
+      "local": "Ленинский",
+      "kind": "Urban okrug",
+      "administrativeEn": "Leninsky Urban Okrug",
+      "administrativeLocal": "Ленинский городской округ",
+      "oktmo": "46707000",
+      "source": "https://classifikators.ru/oktmo/46707000000",
+      "pronunciation": false,
+      "audio": false,
+      "before": {
+        "en": "Leninsky District",
+        "local": "Ленинский район",
+        "kind": "District"
+      }
+    },
+    {
+      "id": "RU-D-32318639490132",
+      "parent": "RU-MOS",
+      "en": "Lukhovitsy",
+      "local": "Луховицы",
+      "kind": "Municipal okrug",
+      "administrativeEn": "Lukhovitsy Municipal Okrug",
+      "administrativeLocal": "муниципальный округ Луховицы",
+      "oktmo": "46547000",
+      "source": "https://classifikators.ru/oktmo/46547000000",
+      "pronunciation": false,
+      "audio": false,
+      "before": {
+        "en": "Lukhovitsky District",
+        "local": "городской округ Луховицы",
+        "kind": "District"
+      }
+    },
+    {
+      "id": "RU-D-77401404468401",
+      "parent": "RU-MOS",
+      "en": "Mozhaysk",
+      "local": "Можайск",
+      "kind": "Municipal okrug",
+      "administrativeEn": "Mozhaysky Municipal Okrug",
+      "administrativeLocal": "Можайский муниципальный округ",
+      "oktmo": "46545000",
+      "source": "https://classifikators.ru/oktmo/46545000000",
+      "pronunciation": false,
+      "audio": false,
+      "before": {
+        "en": "Mozhaysky District",
+        "local": "Можайский район",
+        "kind": "District"
+      }
+    },
+    {
+      "id": "RU-D-20152914209721",
+      "parent": "RU-MOS",
+      "en": "Naro-Fominsk",
+      "local": "Наро-Фоминск",
+      "kind": "Urban okrug",
+      "administrativeEn": "Naro-Fominsky Urban Okrug",
+      "administrativeLocal": "Наро-Фоминский городской округ",
+      "oktmo": "46750000",
+      "source": "https://classifikators.ru/oktmo/46750000000",
+      "pronunciation": false,
+      "audio": false,
+      "before": {
+        "en": "Naro-Fominsky District",
+        "local": "Наро-Фоминский район",
+        "kind": "District"
+      }
+    },
+    {
+      "id": "RU-D-31656643140728",
+      "parent": "RU-MOS",
+      "en": "Ramenskoye",
+      "local": "Раменское",
+      "kind": "Municipal okrug",
+      "administrativeEn": "Ramensky Municipal Okrug",
+      "administrativeLocal": "Раменский муниципальный округ",
+      "oktmo": "46568000",
+      "source": "https://classifikators.ru/oktmo/46568000000",
+      "pronunciation": false,
+      "audio": false,
+      "before": {
+        "en": "Ramensky District",
+        "local": "Раменский район",
+        "kind": "District"
+      }
+    },
+    {
+      "id": "RU-D-4325562474452",
+      "parent": "RU-MOS",
+      "en": "Ruza",
+      "local": "Руза",
+      "kind": "Municipal okrug",
+      "administrativeEn": "Ruzsky Municipal Okrug",
+      "administrativeLocal": "Рузский муниципальный округ",
+      "oktmo": "46566000",
+      "source": "https://classifikators.ru/oktmo/46566000000",
+      "pronunciation": false,
+      "audio": false,
+      "before": {
+        "en": "Ruzsky District",
+        "local": "Рузский городской округ",
+        "kind": "District"
+      }
+    },
+    {
+      "id": "RU-D-93528412842449",
+      "parent": "RU-MOS",
+      "en": "Serebryanye Prudy",
+      "local": "Серебряные Пруды",
+      "kind": "Municipal okrug",
+      "administrativeEn": "Serebryanye Prudy Municipal Okrug",
+      "administrativeLocal": "муниципальный округ Серебряные Пруды",
+      "oktmo": "46572000",
+      "source": "https://classifikators.ru/oktmo/46572000000",
+      "audio": true,
+      "before": {
+        "en": "Serebryanye Prudy",
+        "local": "Серебряные Пруды",
+        "kind": "Urban okrug",
+        "administrativeEn": "Serebryanye Prudy Urban Okrug",
+        "administrativeLocal": "городской округ Серебряные Пруды"
+      }
+    },
+    {
+      "id": "RU-D-19414322011791",
+      "parent": "RU-MOS",
+      "en": "Sergiyev Posad",
+      "local": "Сергиев Посад",
+      "kind": "Urban okrug",
+      "administrativeEn": "Sergiyevo-Posadsky Urban Okrug",
+      "administrativeLocal": "Сергиево-Посадский городской округ",
+      "oktmo": "46728000",
+      "source": "https://classifikators.ru/oktmo/46728000000",
+      "pronunciation": false,
+      "audio": false,
+      "before": {
+        "en": "Sergiyevo-Posadsky District",
+        "local": "Сергиево-Посадский район",
+        "kind": "District"
+      }
+    },
+    {
+      "id": "RU-D-18420557368957",
+      "parent": "RU-MOS",
+      "en": "Shakhovskaya",
+      "local": "Шаховская",
+      "kind": "Municipal okrug",
+      "administrativeEn": "Shakhovskaya Municipal Okrug",
+      "administrativeLocal": "муниципальный округ Шаховская",
+      "oktmo": "46587000",
+      "source": "https://classifikators.ru/oktmo/46587000000",
+      "audio": true,
+      "before": {
+        "en": "Shakhovskaya",
+        "local": "Шаховская",
+        "kind": "Urban okrug",
+        "administrativeEn": "Shakhovskaya Urban Okrug",
+        "administrativeLocal": "городской округ Шаховская"
+      }
+    },
+    {
+      "id": "RU-D-6413114687626",
+      "parent": "RU-MOS",
+      "en": "Taldom",
+      "local": "Талдом",
+      "kind": "Urban okrug",
+      "administrativeEn": "Taldomsky Urban Okrug",
+      "administrativeLocal": "Талдомский городской округ",
+      "oktmo": "46778000",
+      "source": "https://classifikators.ru/oktmo/46778000000",
+      "pronunciation": false,
+      "audio": false,
+      "before": {
+        "en": "Taldomsky District",
+        "local": "Талдомский район",
+        "kind": "District"
+      }
+    },
+    {
+      "id": "RU-D-83953487714475",
+      "parent": "RU-MOS",
+      "en": "Volokolamsk",
+      "local": "Волоколамск",
+      "kind": "Municipal okrug",
+      "administrativeEn": "Volokolamsky Municipal Okrug",
+      "administrativeLocal": "Волоколамский муниципальный округ",
+      "oktmo": "46508000",
+      "source": "https://classifikators.ru/oktmo/46508000000",
+      "pronunciation": false,
+      "audio": false,
+      "before": {
+        "en": "Volokolamsky District",
+        "local": "Волоколамский район",
+        "kind": "District"
+      }
+    },
+    {
+      "id": "RU-D-9877275388102",
+      "parent": "RU-MOS",
+      "en": "Yegoryevsk",
+      "local": "Егорьевск",
+      "kind": "Municipal okrug",
+      "administrativeEn": "Yegoryevsk Municipal Okrug",
+      "administrativeLocal": "муниципальный округ Егорьевск",
+      "oktmo": "46522000",
+      "source": "https://classifikators.ru/oktmo/46522000000",
+      "audio": true,
+      "before": {
+        "en": "Yegoryevsk",
+        "local": "Егорьевск",
+        "kind": "Urban okrug",
+        "administrativeEn": "Yegoryevsk Urban Okrug",
+        "administrativeLocal": "городской округ Егорьевск"
+      }
+    },
+    {
+      "id": "RU-D-72365901450641",
+      "parent": "RU-MOS",
+      "en": "Zaraysk",
+      "local": "Зарайск",
+      "kind": "Municipal okrug",
+      "administrativeEn": "Zaraysk Municipal Okrug",
+      "administrativeLocal": "муниципальный округ Зарайск",
+      "oktmo": "46529000",
+      "source": "https://classifikators.ru/oktmo/46529000000",
+      "audio": true,
+      "before": {
+        "en": "Zaraysk",
+        "local": "Зарайск",
+        "kind": "Urban okrug",
+        "administrativeEn": "Zaraysk Urban Okrug",
+        "administrativeLocal": "городской округ Зарайск"
+      }
+    },
+    {
+      "id": "RU-D-38418473006455",
+      "parent": "RU-MOS",
+      "en": "Chekhov",
+      "local": "Чехов",
+      "kind": "Municipal okrug",
+      "administrativeEn": "Chekhov Municipal Okrug",
+      "administrativeLocal": "муниципальный округ Чехов",
+      "oktmo": "46584000",
+      "source": "https://classifikators.ru/oktmo/46584000000",
+      "pronunciation": false,
+      "audio": false,
+      "before": {
+        "en": "Chekhovsky District",
+        "local": "Чеховский район",
+        "kind": "District"
+      }
+    },
+    {
+      "id": "RU-D-80887817772253",
+      "parent": "RU-MOS",
+      "en": "Klin",
+      "local": "Клин",
+      "kind": "Urban okrug",
+      "administrativeEn": "Klin Urban Okrug",
+      "administrativeLocal": "городской округ Клин",
+      "oktmo": "46737000",
+      "source": "https://classifikators.ru/oktmo/46737000000",
+      "pronunciation": false,
+      "audio": false,
+      "before": {
+        "en": "Klinsky District",
+        "local": "Клинский район",
+        "kind": "District"
+      }
+    },
+    {
+      "id": "RU-D-79231087292240",
+      "parent": "RU-MOS",
+      "en": "Lotoshino",
+      "local": "Лотошино",
+      "kind": "Municipal okrug",
+      "administrativeEn": "Lotoshino Municipal Okrug",
+      "administrativeLocal": "муниципальный округ Лотошино",
+      "oktmo": "46552000",
+      "source": "https://classifikators.ru/oktmo/46552000000",
+      "pronunciation": false,
+      "audio": false,
+      "before": {
+        "en": "Lotoshinsky District",
+        "local": "Лотошинский район",
+        "kind": "District"
+      }
+    },
+    {
+      "id": "RU-D-51935162594441",
+      "parent": "RU-MOS",
+      "en": "Shchyolkovo",
+      "local": "Щёлково",
+      "kind": "Urban okrug",
+      "administrativeEn": "Shchyolkovo Urban Okrug",
+      "administrativeLocal": "городской округ Щёлково",
+      "oktmo": "46788000",
+      "source": "https://classifikators.ru/oktmo/46788000000",
+      "pronunciation": false,
+      "audio": false,
+      "before": {
+        "en": "Shchyolkovsky District",
+        "local": "Щёлковский район",
+        "kind": "District"
+      }
+    },
+    {
+      "id": "RU-D-13099707200338",
+      "parent": "RU-MOS",
+      "en": "Solnechnogorsk",
+      "local": "Солнечногорск",
+      "kind": "Urban okrug",
+      "administrativeEn": "Solnechnogorsk Urban Okrug",
+      "administrativeLocal": "городской округ Солнечногорск",
+      "oktmo": "46771000",
+      "source": "https://classifikators.ru/oktmo/46771000000",
+      "pronunciation": false,
+      "audio": false,
+      "before": {
+        "en": "Solnechnogorsky District",
+        "local": "Солнечногорский район",
+        "kind": "District"
+      }
+    },
+    {
+      "id": "RU-D-66251560781596",
+      "parent": "RU-MOS",
+      "en": "Voskresensk",
+      "local": "Воскресенск",
+      "kind": "Urban okrug",
+      "administrativeEn": "Voskresensk Urban Okrug",
+      "administrativeLocal": "городской округ Воскресенск",
+      "oktmo": "46710000",
+      "source": "https://classifikators.ru/oktmo/46710000000",
+      "pronunciation": false,
+      "audio": false,
+      "before": {
+        "en": "Voskresensky District",
+        "local": "Воскресенский район",
+        "kind": "District"
+      }
+    }
+  ]
+}

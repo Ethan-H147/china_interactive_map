@@ -99,3 +99,6 @@ if(run('south-america'))for(const country of ['brazil','argentina','uruguay']){
  if(indexChanged)write('south-america/'+country+'-local/index.bin',index);
 }
 for(const [name,pairs,length] of report)console.log(name.padEnd(36),String(pairs).padStart(4),'pairs',String(Math.round(length/1000)).padStart(6),'km');
+
+// The city-specific coastal mesh replaces heuristic open-water fragments.
+if(run('regional'))await (await import('./petersburg-coast.mjs')).repairPetersburgBorders();

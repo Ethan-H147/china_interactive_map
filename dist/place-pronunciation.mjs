@@ -1,16 +1,9 @@
 import {createPronunciationPlayer} from './pronunciation.mjs';
-import {placePronunciations} from './place-pronunciations.mjs';
+import {getPlacePronunciations} from './pronunciation-names.mjs';
+export {hasPlacePronunciations} from './pronunciation-names.mjs';
 
 const icon='<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4Z"/><path d="M15 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/></svg>';
-const languages={pl:'Polish',hu:'Hungarian',uk:'Ukrainian',ro:'Romanian',cs:'Czech',sk:'Slovak',vi:'Vietnamese',ja:'Japanese',tr:'Turkish',zh:'Mandarin',fr:'French',es:'Spanish',ko:'Korean',ru:'Russian',de:'German',it:'Italian',en:'English',pt:'Portuguese','fr-CA':'Canadian French','en-CA':'Canadian English','en-US':'English','es-MX':'Spanish','pt-BR':'Brazilian Portuguese','pt-PT':'European Portuguese'};
-const byPlace=new Map();
-const countriesWithPronunciations=new Set(Object.values(placePronunciations).map(entry=>entry.country));
-export const hasPlacePronunciations=country=>countriesWithPronunciations.has(country);
-for(const entry of Object.values(placePronunciations)){
- const key=entry.country+':'+entry.id;
- if(!byPlace.has(key))byPlace.set(key,[]);
- byPlace.get(key).push(entry);
-}
+const languages={mn:'Mongolian','en-PH':'Philippine English',th:'Thai',bg:'Bulgarian',rm:'Romansh','de-AT':'Austrian German','de-CH':'Swiss Standard German','fr-CH':'Swiss French','it-CH':'Swiss Italian',da:'Danish',fi:'Finnish',sv:'Swedish',no:'Norwegian',is:'Icelandic','da-DK':'Danish','fi-FI':'Finnish','sv-FI':'Finland Swedish','sv-SE':'Swedish','nb-NO':'Norwegian','is-IS':'Icelandic',nl:'Dutch',ar:'Arabic',cy:'Welsh',ga:'Irish',hi:'Hindi',bn:'Bengali',ta:'Tamil',te:'Telugu',mr:'Marathi',gu:'Gujarati',kn:'Kannada',ml:'Malayalam',pa:'Punjabi',as:'Assamese',or:'Odia',ne:'Nepali',ur:'Urdu',sd:'Sindhi',pl:'Polish',hu:'Hungarian',uk:'Ukrainian',ro:'Romanian',cs:'Czech',sk:'Slovak',vi:'Vietnamese',ja:'Japanese',tr:'Turkish',zh:'Mandarin',fr:'French',es:'Spanish',ko:'Korean',ru:'Russian',de:'German',it:'Italian',en:'English',pt:'Portuguese','en-GB':'British English','en-ZA':'South African English','en-IN':'Indian English','nl-BE':'Belgian Dutch','fr-BE':'Belgian French','ar-SA':'Saudi Arabic','fr-CA':'Canadian French','en-CA':'Canadian English','en-US':'English','es-AR':'Argentine Spanish','es-UY':'Uruguayan Spanish','es-CL':'Chilean Spanish','es-CR':'Costa Rican Spanish','es-419':'Latin American Spanish','es-MX':'Spanish','pt-BR':'Brazilian Portuguese','pt-PT':'European Portuguese'};
 let active;
 const player=createPronunciationPlayer({onState:state=>active?.render(state)});
 export function stopPlacePronunciation(){player.stop();active=null;}
@@ -45,11 +38,14 @@ export function createPlacePronunciation({country,id,heading,local,button,status
   stop(){if(controls.includes(active))stopPlacePronunciation();},
   clear(){controller.stop();for(const control of controls){control.entry=null;control.button.hidden=true;control.render('idle');}},
   set(placeId){
-   controller.clear();const entries=byPlace.get(country+':'+placeId)||[];
+   controller.clear();const entries=getPlacePronunciations(country,placeId);
    entries.forEach((entry,index)=>{
     const control=controls[index]||createControl(index),element=control.button;
     control.entry=entry;const visibleLocal=local&&!local.hidden&&local.textContent.trim();
-    const anchor=country==='canada'&&entry.language==='en'?heading:visibleLocal?local:heading;
+    const normalized=value=>String(value||'').normalize('NFC').trim();
+    const regional=Array.from(heading.parentElement.querySelectorAll('.regional-name-row bdi[lang]')).find(node=>node.lang===entry.language&&normalized(node.textContent)===normalized(entry.text));
+    const variant=Array.from(heading.parentElement.querySelectorAll('.place-name-variants p[lang]')).find(row=>row.lang===entry.language&&normalized(row.querySelector('.name-primary')?.textContent||row.textContent)===normalized(entry.text));
+    const anchor=entry.language==='en'&&entries.length>1?heading:regional?regional.parentElement:variant|| (visibleLocal?local:heading);
     if(entries.length>1)element.dataset.languageLabel=entry.language.toUpperCase();else delete element.dataset.languageLabel;
     element.dataset.pronunciationLanguage=entry.language;element.dataset.pronunciationLocale=entry.locale||entry.language;
     anchor.append(element);element.hidden=false;control.render('idle');

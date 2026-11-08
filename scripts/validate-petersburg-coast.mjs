@@ -1,0 +1,8 @@
+import fs from'node:fs';import assert from'node:assert/strict';import{load,landIndex,lineIndex,polygons,metres}from'./geo-index.mjs';
+const key=p=>p.map(n=>n.toFixed(6)).join(',');
+for(const prefix of['','lite/']){const base='dist/data/russia/'+prefix,data=load(base+'second/RU-SPE.bin'),parent=load(base+'first.bin').regions.features.find(f=>f.properties.id==='RU-SPE'),land=landIndex(polygons(parent.geometry).flat()),coast=lineIndex(polygons(parent.geometry).flat()),degree=new Map();assert.equal(data.regions.features.length,18);assert(!data.boundaries.features.some(f=>f.properties.channel));
+ for(const f of data.boundaries.features){assert.equal(f.properties.owners.length,2);for(const l of f.geometry.coordinates){for(const p of[l[0],l.at(-1)])degree.set(key(p),(degree.get(key(p))||0)+1);for(let i=1;i<l.length;i++)for(const t of[0,.25,.5,.75,1]){const a=l[i-1],b=l[i],p=[a[0]+t*(b[0]-a[0]),a[1]+t*(b[1]-a[1])];assert(land(p)||coast(p)<.3,'Line outside matching coast '+p);}}}
+ for(const f of data.boundaries.features)for(const l of f.geometry.coordinates)for(const p of[l[0],l.at(-1)])if(degree.get(key(p))===1)assert(coast(p)<.3,'Unconnected inland end '+p);
+ const mouths=[['RU-OSM-1114252','RU-OSM-1114905'],['RU-OSM-1114905','RU-OSM-1115367']];for(const pair of mouths){const candidates=data.boundaries.features.filter(f=>pair.every(id=>f.properties.owners.includes(id))).flatMap(f=>f.geometry.coordinates).flatMap(l=>[l[0],l.at(-1)]);assert(candidates.some(p=>p[0]<30.23&&coast(p)<.3),'Neva mouth reaches coast: '+pair);}
+}
+console.log('Saint Petersburg: 18 districts retained; all open mesh ends reach the matching full/lite coast; no offshore channel fragments.');

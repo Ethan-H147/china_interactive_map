@@ -143,3 +143,6 @@ if(fs.existsSync('scripts/boundary-sources/khanka/sources.json'))await (await im
 if(fs.existsSync('scripts/boundary-sources/korean-frontiers/resolved.bin'))await import('./reconcile-korean-frontiers.mjs');
 
 if(fs.existsSync('scripts/boundary-sources/china-russia/resolved.bin')){await (await import('./china-russia-frontier.mjs')).reconcileChinaRussia();await (await import('./khanka-water.mjs')).reconcileKhanka();}
+
+// Keep district lines tied to the coast used at each display resolution.
+await (await import('./petersburg-coast.mjs')).repairPetersburgBorders();

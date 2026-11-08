@@ -29,7 +29,7 @@ for(const [country,config]of Object.entries(definitions)){
   if(country==='finland'){
    const fi=p.taajnimi,sv=p.taajnimiruo;
    if(fi&&sv){const svBase=sv.replace(/ ct\.$/,'');const municipality=fi.endsWith(' kt.')?municipalities.find(r=>(r.names?.sv||r.local)===svBase):null;name=municipality?.en||fi;local=municipality?.names?.fi||fi;names={en:name,fi:{name:local},sv:{name:sv.replace(/ ct\.$/,'')}};aliases=[fi,sv,svBase,...(municipality?.aliases||[])];}
-  }else if(country==='sweden'){names={en:name,sv:{name}};if(name==='Göteborg')aliases.push('Gothenburg');}
+  }else if(country==='sweden'){if(name==='Göteborg'){aliases.push(name);name='Gothenburg';}names={en:name,sv:{name:local}};}
   else names={en:name,nb:{name}};
   const id=config.prefix+'-S-'+(code||'YKR25-'+p.ykr25nro);
   const note=country==='finland'?'Whole statistical urban area, which may span municipality boundaries.':parents.length>1?'Whole statistical urban area spanning '+parents.length+' municipalities.':'Statistical urban settlement, distinct from the municipality.';

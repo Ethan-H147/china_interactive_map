@@ -1,5 +1,7 @@
+import {swissCardNames,swissNameRows,swissSecondaryNameRows} from './swiss-names.mjs';
 import {spanishNameRows,spanishCardNames} from './spanish-names.mjs';
 import {italianNameRows,italianCardNames} from './italian-names.mjs';
+import {getPlacePronunciations} from './pronunciation-names.mjs';
 import {configureSouthAmericanCountry,southAmericanFlags} from './south-america-regional.mjs';
 import {createRegionalCollection} from './regional-collection.mjs';
 import './countries.js';
@@ -48,6 +50,18 @@ export function createEurope(map,host){
    nameAliases:record=>atlanticRegionalNames(record).regionalNames.flatMap(name=>[name.text,...(name.aliases||[])])
   });
   if(country==='spain')Object.assign(config,{cardNames:spanishCardNames,renderCardNames:renderSpanishNames,nameAliases:record=>spanishNameRows(record).map(([, ,name])=>name).filter(Boolean)});
+  if(country==='denmark')Object.assign(config,{
+   renderCardNames:(container,record)=>renderRegionalNames(container,{...record,regionalNames:getPlacePronunciations(country,record.id).filter(entry=>entry.nameSource).map(entry=>({lang:entry.language,language:'Danish',text:entry.text}))},{labelFirst:true})
+  });
+  if(country==='belgium')Object.assign(config,{
+   cardNames:record=>{const primary=getPlacePronunciations(country,record.id)[0];return {...record,local:primary?(primary.text===record.en?'':primary.text):record.local,localLang:primary?.language||record.localLang};},
+   renderCardNames:(container,record)=>renderRegionalNames(container,{...record,regionalNames:getPlacePronunciations(country,record.id).slice(1).map(entry=>({lang:entry.language,language:{nl:'Dutch',fr:'French',de:'German'}[entry.language],text:entry.text}))},{labelFirst:true,shownNames:[record.en,getPlacePronunciations(country,record.id)[0]?.text||record.local]})
+  });
+  if(country==='switzerland')Object.assign(config,{
+   cardNames:swissCardNames,
+   renderCardNames:(container,record)=>renderRegionalNames(container,{...record,regionalNames:swissSecondaryNameRows(record)},{labelFirst:true,collapseAfter:3}),
+   nameAliases:record=>swissNameRows(record).map(n=>n.text)
+  });
   if(country==='italy')Object.assign(config,{cardNames:italianCardNames,renderCardNames:(container,record)=>renderRegionalNames(container,{...record,regionalNames:italianNameRows(record).filter(([,lang,name])=>lang!=='it'&&name).map(([language,lang,text])=>({language,lang,text}))},{labelFirst:true,shownNames:[italianCardNames(record).en,italianCardNames(record).local]}),nameAliases:record=>italianNameRows(record).map(([, ,name])=>name).filter(Boolean)});
   const flagSet=registry.countries[country].flagSet;
   const selectedFlags=flags[country]||(flagSet?(await flagSets[flagSet]())[country]:null);

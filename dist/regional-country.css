@@ -11,6 +11,9 @@ body[data-atlas=russia] #atlas-title-local,.country-option[data-atlas=russia] .t
 .country-detail-spinner{display:block;text-align:center;margin:12px auto}.country-detail-spinner .country-symbol{width:26px;height:26px}
 
 .regional-sidebar .administrative-name{font-size:13px;line-height:1.5;color:var(--muted);margin:4px 0 18px}
+#russia-sidebar .administrative-name{margin-top:12px}
+#russia-sidebar .administrative-name .name-primary,#russia-sidebar .administrative-name .name-secondary{display:block}
+#russia-sidebar .administrative-name .name-secondary{margin-top:2px;font-size:inherit}
 
 :root[data-atlas=south-africa],body[data-atlas=south-africa],.country-option[data-atlas=south-africa]{--ink:#2d3c2d;--muted:#758070;--red:#477443;--red-dark:#325331;--gold:#b39944;--line:#dce5d5;--paper:#fefffc;--map:#eef2e9;--surface-soft:#f1f5ed;--title-accent:#477443;--header-stripe:linear-gradient(90deg,#477443 0 40%,#bd9f46 40% 60%,#497ca1 60%)}
 :root[data-atlas=eswatini],body[data-atlas=eswatini],.country-option[data-atlas=eswatini]{--ink:#443527;--muted:#887663;--red:#966a32;--red-dark:#735025;--gold:#bd9e44;--line:#e9dfd2;--paper:#fffdfa;--map:#f5eee4;--surface-soft:#f7f0e6;--title-accent:#966a32;--header-stripe:linear-gradient(90deg,#477594 0 25%,#bd9e44 25% 30%,#a24c42 30% 70%,#bd9e44 70% 75%,#477594 75%)}

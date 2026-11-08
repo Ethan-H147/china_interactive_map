@@ -1,5 +1,7 @@
+import {swissNameRows} from './swiss-names.mjs';
 import {koreanNameAliases} from './korean-names.mjs';
 import {italianNameRows} from './italian-names.mjs';
+import {pronunciationNameAliases} from './pronunciation-names.mjs';
 export const normalizeName=value=>String(value||'').normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase().replace(/đ/g,'d').replace(/[\s\p{P}\p{S}]/gu,'');
 export const shortEnglish=value=>value.replace(/\s+(?:(?:Tibetan|Mongol|Kazakh|Kyrgyz|Korean|Hui|Tujia|Miao|Dai|Jingpo|Lisu|Yi|Hani|Bai|Bouyei|Buyi|Zhuang|Dong|Qiang|Tu)\b.*)?(?:Autonomous Prefecture|Prefecture|League|City|County)$/i,'');
 export const shortChinese=value=>value.replace(/(?:土家族|布依族|蒙古族|蒙古|哈萨克|柯尔克孜|朝鲜族|藏族|羌族|回族|土族|苗族|侗族|壮族|傣族|彝族|白族|哈尼族|傈僳族|景颇族).*自治州$/u,'').replace(/(?:自治州|地区|地區|市|县|縣|盟)$/u,'');
@@ -7,7 +9,7 @@ const commonAliases={'US-DC':['Washington DC','DC','Washington, District of Colu
 // Native forms can be separate language records or slash-separated official names.
 export function regionalNameAliases(place){
  const text=value=>typeof value==='string'?value:value?.text||value?.name;
- return [place.local,...Object.values(place.names||{}).map(text),...(place.regionalNames||[]).map(text),...(place.id?.startsWith('IT-')?italianNameRows(place).map(([, ,name])=>name):[])].filter(Boolean).flatMap(name=>[name,...name.split(/\s*\/\s*/u)]);
+ return [place.local,...Object.values(place.names||{}).map(text),...(place.regionalNames||[]).map(text),...pronunciationNameAliases(place),...swissNameRows(place).map(n=>n.text),...(place.id?.startsWith('IT-')?italianNameRows(place).map(([, ,name])=>name):[])].filter(Boolean).flatMap(name=>[name,...name.split(/\s*\/\s*/u)]);
 }
 export function aliases(place){return new Set([place.en,place.zh,shortEnglish(place.en),shortChinese(place.zh),...(place.aliases||[]),...regionalNameAliases(place),...koreanNameAliases(place),...(commonAliases[place.code]||[])].flatMap(name=>typeof name==='string'?[name,...name.split(/\s*\/\s*/u)]:[]).map(normalizeName).filter(Boolean));}
 

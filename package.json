@@ -14,6 +14,7 @@
   },
   "private": true,
   "scripts": {
+    "test:nordic-pronunciation": "node scripts/validate-nordic-pronunciations.mjs && node scripts/browser/run.mjs nordic-pronunciation",
     "build:flag-images": "node scripts/prepare-flag-images.mjs",
     "fetch:national-flags": "node scripts/fetch-national-flags.mjs && npm run build:flag-images",
     "test:flag-viewer": "node --check dist/flag-viewer.mjs && node scripts/validate-flag-viewer.mjs",
@@ -352,7 +353,7 @@
     "test:mexico-municipalities-browser": "node scripts/browser/run.mjs mexico-municipalities",
     "test:app-cache": "node --check dist/sw.js && node scripts/validate-app-cache.mjs && node scripts/browser/run.mjs app-cache",
     "test:medal-cabinet": "node --check dist/medal-cabinet.mjs && node --check dist/football-medals.mjs && node scripts/browser/run.mjs medal-cabinet us-misc-medals",
-    "test:deployment": "node scripts/validate-app-cache.mjs && node --check dist/app.js && npm run test:entry && npm run test:runtime && npm run test:compact && npm run test:quiz-records && node scripts/validate-quiz-trophies.mjs && npm run test:scoped-countries && node scripts/validate-place-pronunciations.mjs && node scripts/validate-italian-names.mjs",
+    "test:deployment": "node scripts/validate-app-cache.mjs && node --check dist/app.js && npm run test:entry && npm run test:runtime && npm run test:compact && npm run test:quiz-records && node scripts/validate-quiz-trophies.mjs && npm run test:scoped-countries && node scripts/validate-place-pronunciations.mjs && node scripts/validate-italian-names.mjs && node scripts/validate-multilingual-pronunciations.mjs && node scripts/validate-nordic-pronunciations.mjs && node scripts/validate-alpine-asian-pronunciations.mjs && node scripts/validate-mn-ph-overseas-pronunciations.mjs && node scripts/validate-russian-city-pronunciations.mjs && node scripts/validate-petersburg-coast.mjs",
     "db:generate": "drizzle-kit generate --config hosting/drizzle.config.ts",
     "build:quiz-geography": "node --max-old-space-size=8000 scripts/build-quiz-geography.mjs && node scripts/build-us-county-quizzes.mjs",
     "test:quiz-records": "node scripts/validate-quiz-records.mjs",
@@ -512,7 +513,10 @@
     "test:us-canada-frontier": "node scripts/validate-us-canada-frontier.mjs && node scripts/browser/run.mjs us-canada-frontier",
     "build:historical-coasts": "node scripts/build-alaska-history.mjs && node --max-old-space-size=8000 scripts/build-upper-peninsula-history.mjs && node --max-old-space-size=10000 scripts/build-historical-coast-display.mjs",
     "test:historical-coasts": "node scripts/validate-historical-coast-display.mjs && node scripts/browser/run.mjs historical-coast-selection",
-    "test:pronunciation": "node scripts/validate-place-pronunciations.mjs && node scripts/browser/run.mjs place-pronunciation china-pronunciation",
-    "test:italy-names": "node scripts/validate-italian-names.mjs && node scripts/browser/run.mjs italy-card-names"
+    "test:pronunciation": "node scripts/validate-place-pronunciations.mjs && node scripts/validate-russian-city-pronunciations.mjs && node scripts/browser/run.mjs place-pronunciation china-pronunciation russian-city-pronunciation",
+    "test:russian-city-pronunciation": "node scripts/validate-russian-city-pronunciations.mjs && node scripts/browser/run.mjs russian-city-pronunciation",
+    "test:italy-names": "node scripts/validate-italian-names.mjs && node scripts/browser/run.mjs italy-card-names",
+    "test:multilingual-pronunciation": "node scripts/validate-multilingual-pronunciations.mjs && node scripts/browser/run.mjs multilingual-pronunciation latin-spanish-pronunciation",
+    "test:mn-ph-overseas-pronunciation": "node scripts/validate-mn-ph-overseas-pronunciations.mjs && node scripts/browser/run.mjs mn-ph-overseas-pronunciation"
   }
 }
