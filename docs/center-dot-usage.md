@@ -23,7 +23,6 @@ Only rendered center dots belong here. A string that is split into CSS divider n
 | 28 | Regional-language annotation: language · romanized | `dist/regional-names.mjs` |
 | 31 | Boundary availability and coverage labels: City · Municipal boundary pending; counts and coverage qualifications | `dist/app.js`, `dist/japan.mjs`, `dist/regional-country.mjs` |
 | 32 | Historical notice: year · Historical snapshot | `dist/regional-country.mjs`, `dist/countries.js` |
-| 33 | Flag caption: name · scope · status · year | `dist/regional-country.mjs`, `dist/national-flags.mjs`, `dist/flag-viewer.mjs` |
 | 34 | Flag credits, classification and licenses, including retained credit text | `dist/flag-viewer.mjs`, `dist/regional-country.mjs`, flag data modules |
 | 35 | Collections of source links and source/coverage notes | Country modules, `dist/index.html`, `dist/korea.html` |
 | 36 | Map and satellite attribution | Map source modules, `dist/satellite.mjs`, `dist/app.js` |

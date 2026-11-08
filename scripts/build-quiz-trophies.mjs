@@ -5,12 +5,13 @@ import {quizTrophies} from '../dist/quiz-trophies-core.mjs';
 import {reservedCollectibles} from '../dist/dev-collectibles-core.mjs';
 import {createLibertyCollectible} from './collectible-liberty-design.mjs';
 import {createChristCollectible} from './collectible-christ-design.mjs';
+import {createMoaiCollectible} from './collectible-moai-design.mjs';
+import {createSagradaCollectible} from './collectible-sagrada-design.mjs';
 import {createGreatWallCollectible} from './collectible-great-wall-design.mjs';
 import {createPalaceCollectible} from './collectible-palace-design.mjs';
 import {createSaintBasilCollectible} from './collectible-saint-basil-design.mjs';
 import {createAdditionalCollectibles} from './collectible-designs.mjs';
 import {createArgentinaCollectible} from './collectible-argentina-design.mjs';
-import {createSouthAmericanCollectibles} from './collectible-south-america-designs.mjs';
 import {createUkSpainCollectibles} from './collectible-uk-spain-designs.mjs';
 import {createItalyCollectible} from './collectible-italy-design.mjs';
 const out=new URL('../dist/data/trophies/',import.meta.url);fs.mkdirSync(out,{recursive:true});fs.mkdirSync(new URL('reserved/',out),{recursive:true});
@@ -57,7 +58,7 @@ function cradle(){
  for(const sign of [-1,1]){const angle=sign*.52,half=.10,inner=.984,outer=1.015,depth=.10;for(let i=0;i<20;i++){const a=angle-half+i/20*half*2,b=angle-half+(i+1)/20*half*2,point=(r,t,z)=>[r*Math.sin(t),.22-r*Math.cos(t),z];const p=point(inner,a,-depth),q=point(inner,b,-depth),r=point(inner,b,depth),t=point(inner,a,depth),u=point(outer,a,-depth),v=point(outer,b,-depth),w=point(outer,b,depth),x=point(outer,a,depth);quad(p,q,r,t,'cradle');quad(v,u,x,w,'cradle');quad(t,r,w,x,'cradle');quad(u,v,q,p,'cradle');if(i===0)quad(u,p,t,x,'cradle');if(i===19)quad(q,v,w,r,'cradle');}beam([sign*.50,-.9925,0],[sign*.50,-.664,0],.045,.10,'cradle');}
 }
 const api={tri,quad,plinth,box,beam,cylinder,torus,lathe,palette,masks,getParts:()=>parts};
-const extra={...await createAdditionalCollectibles(api),...await createArgentinaCollectible(api),...await createSouthAmericanCollectibles(api),...await createUkSpainCollectibles(api),...await createItalyCollectible(api)};
+const extra={...await createAdditionalCollectibles(api),...await createArgentinaCollectible(api),...await createUkSpainCollectibles(api),...await createItalyCollectible(api)};
 const originalDefinitions={
  china:{title:'Jade disc',build(){plinth();lathe([[.3,-.075],[.9,-.075],[.98,-.04],[.98,.04],[.9,.075],[.3,.075],[.275,.04],[.275,-.04],[.3,-.075]],'jade',112,p=>[p[0],p[2]+.22,p[1]]);for(const z of [-.086,.086]){torus([0,.22,z],.84,.009,'gold',true);torus([0,.22,z],.345,.008,'gold',true);}for(let i=0;i<12;i++){const a=i/12*Math.PI*2;beam([.865*Math.cos(a),.22+.865*Math.sin(a),.080],[.89*Math.cos(a),.22+.89*Math.sin(a),.080],.012,.004,'gold');}cradle();}},
  japan:{title:'Vermilion torii',build(){plinth(1.1);for(const sign of [-1,1]){beam([sign*.7,-.9925,0],[sign*.62,.82,0],.15,.16,'red');cylinder(sign*.7,-.9025,0,.13,.18,'black');const x=sign*(.7-.08*(.3125/1.8125));for(const side of [-1,1]){box(x+side*.0875,-.68,0,.019,.04,.204,'gold');box(x,-.68,side*.0925,.156,.04,.019,'gold');}}box(0,.42,0,1.85,.13,.19,'red');box(0,.65,0,.1,.4,.16,'red');const points=Array.from({length:25},(_,i)=>{const x=-1.16+i/24*2.32;return[x,.89+.13*Math.pow(Math.abs(x)/1.16,3)];});ribbon(points,.12,.27,'black');ribbon(points.map(([x,y])=>[x*.96,y-.1]),.105,.23,'red');box(0,.48,.11,.2,.24,.028,'gold');box(0,.48,.130,.12,.16,.012,'black');const ropeY=x=>.33-.08*Math.sin(Math.PI*(x+.68)/1.36);for(let i=0;i<40;i++){const x=-.68+i/40*1.36,u=-.68+(i+1)/40*1.36;beam([x,ropeY(x),.14],[u,ropeY(u),.14],.012,.012,'ivory');}for(const x of [-.42,0,.42]){const y=ropeY(x)-.01;beam([x,y,.14],[x,y-.13,.14],.014,.012,'ivory');beam([x,y-.13,.14],[x+.05,y-.18,.14],.036,.009,'ivory');beam([x+.05,y-.18,.14],[x-.025,y-.23,.14],.036,.009,'ivory');}}},
@@ -65,7 +66,7 @@ const originalDefinitions={
  france:{title:'Eiffel Tower',build(){plinth(.75);importedTower();}},...extra
 
 };
-const landmarks={...await createLibertyCollectible(api),...await createGreatWallCollectible(api),...await createPalaceCollectible(api),...await createSaintBasilCollectible(api),...await createChristCollectible(api)};
+const landmarks={...await createLibertyCollectible(api),...await createGreatWallCollectible(api),...await createPalaceCollectible(api),...await createSaintBasilCollectible(api),...await createChristCollectible(api),...await createMoaiCollectible(api),...await createSagradaCollectible(api)};
 const reservedDefinitions={'russia-matryoshka':originalDefinitions.russia,'china-jade-disc':originalDefinitions.china,'korea-celadon':originalDefinitions.korea,'us-liberty-bell':originalDefinitions['united-states']};
 const definitions={...originalDefinitions,...landmarks,...reservedDefinitions};
 function bounds(data){const lo=[Infinity,Infinity,Infinity],hi=[-Infinity,-Infinity,-Infinity];for(let i=0;i<data.length;i++){const k=i%3;lo[k]=Math.min(lo[k],data[i]);hi[k]=Math.max(hi[k],data[i]);}return[lo,hi];}

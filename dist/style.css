@@ -58,3 +58,7 @@
 #population-metrics .population-metric:focus-visible{outline:2px solid var(--red);outline-offset:5px}
 @media(hover:hover){#population-metrics .population-metric:not(:disabled):hover .population-metric-label{color:var(--ink)}}
 #population-metrics{grid-column:1/-1;max-width:480px}
+
+.china-name-audio{display:block}.pronunciation-button{display:inline-flex;position:relative;align-items:center;justify-content:center;width:28px;height:28px;padding:7px;margin-inline-start:5px;border:0;border-radius:0;background:none;color:var(--muted);vertical-align:middle;line-height:1;letter-spacing:normal;cursor:pointer}.pronunciation-button svg{width:14px;height:14px;flex-shrink:0}.pronunciation-button::before{content:'';position:absolute;inset:-6px}.pronunciation-button:hover,.pronunciation-button[aria-pressed="true"]{color:var(--red);background:none}.pronunciation-button:focus-visible{outline:2px solid currentColor;outline-offset:1px}.pronunciation-button[hidden]{display:none}.pronunciation-button[data-state="loading"]{opacity:.55}.pronunciation-status{display:block;font-size:12px;color:var(--muted);margin:0 0 12px}.pronunciation-status:empty{display:none}
+
+.pronunciation-button[data-language-label]{width:auto;min-width:28px;gap:3px;padding:4px}.pronunciation-button[data-language-label]::after{content:attr(data-language-label);font-family:Arial,sans-serif;font-size:9px;line-height:1;font-weight:600;letter-spacing:.02em}

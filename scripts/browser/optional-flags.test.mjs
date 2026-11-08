@@ -6,10 +6,10 @@ async function reveal(page,prefix){await page.tap('#'+prefix+'-source-options su
 export default [
  {name:'unofficial Belgian banners are hidden unless deliberately enabled',options:{width:1280,height:820},async run(page,base){
   await page.open(base,'#belgium');await searchAndSelect(page,'Hainaut','Hainaut','Province');
-  await check(page,'be',true);assert.equal(await page.evaluate('document.getElementById("be-flag-caption").hidden'),true);assert.equal(await page.evaluate('document.getElementById("be-source-options").open'),false);
+  await check(page,'be',true);assert.equal(await page.evaluate('document.getElementById("be-flag-caption")===null'),true);assert.equal(await page.evaluate('document.getElementById("be-source-options").open'),false);
   await page.screenshot('unofficial-flags-hidden');
   const before=await page.evaluate(camera);await reveal(page,'be');await check(page,'be',false);assert.equal(await page.evaluate(camera),before,'Revealing flags does not move the map');
-  assert((await page.evaluate('document.getElementById("be-flag-caption").textContent')).includes('Unofficial provincial banner'));
+  assert.equal(await page.evaluate('document.querySelector("#belgium-sidebar .flag-caption")'),null);
   await page.screenshot('unofficial-flags-option');
   await page.evaluate('currentAtlas().restore("BE33")');await check(page,'be',false);
   await page.tap('#be-optional-flags');await check(page,'be',true);

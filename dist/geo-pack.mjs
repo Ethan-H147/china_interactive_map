@@ -52,7 +52,7 @@ export function geoEncoder({scale=SCALE}={}){
 export function encodeGeo(value,meta={},options){const encoder=geoEncoder(options),encoded=encoder.encode(value);return encoder.finish({meta,value:encoded});}
 
 // Decodes the whole structure; encodeGeo's files hold {meta, value}.
-export function decodeGeoStructure(bytes){
+export function decodeGeoStructure(bytes,{select}={}){
  bytes=bytes instanceof Uint8Array?bytes:new Uint8Array(bytes);
  if(!isGeoPack(bytes))throw Error('Not a compact geometry file');
  const view=new DataView(bytes.buffer,bytes.byteOffset,bytes.byteLength);
@@ -79,9 +79,9 @@ export function decodeGeoStructure(bytes){
   if(value.type&&'coordinates' in value)return {...value,coordinates:coordinates(value.coordinates)};
   return Object.fromEntries(Object.entries(value).map(([key,item])=>[key,key==='properties'?item:decode(item)]));
  }
- return decode(structure);
+ return select?{...structure,meta:decode(structure.meta),value:decode(select(structure.value))}:decode(structure);
 }
-export const decodeGeo=bytes=>decodeGeoStructure(bytes).value;
+export const decodeGeo=(bytes,options)=>decodeGeoStructure(bytes,options).value;
 
 // Published compact copies sit under data/compact/ beside their gzip JSON build files
 // (scripts/build-compact.mjs). Requests for a listed file go to its compact copy.
@@ -104,10 +104,11 @@ export async function fetchBytes(url,init){
  }
 }
 // Body bytes of a fetched data file: gunzipped, then a compact copy decoded or JSON parsed.
-export async function decodeData(bytes){
+export async function decodeData(bytes,options={}){
  let view=new Uint8Array(bytes);
  if(view[0]===31&&view[1]===139)view=new Uint8Array(await new Response(new Blob([view]).stream().pipeThrough(new DecompressionStream('gzip'))).arrayBuffer());
- return isGeoPack(view)?decodeGeo(view):JSON.parse(new TextDecoder().decode(view));
+ options.signal?.throwIfAborted();
+ return isGeoPack(view)?decodeGeo(view,options):(options.select|| (value=>value))(JSON.parse(new TextDecoder().decode(view)));
 }
 // A GeoJSON source whose data file the page fetches (so its preload applies) and MapLibre's
 // workers decode (maplibre-worker-protocols.mjs, atlas-data://), so the page never copies the

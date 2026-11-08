@@ -145,6 +145,18 @@
       "license": "Public domain",
       "sha256": "eb1dbd977fdb824dcae7767ce9ec3a023e41158e81b5f524772609ddcb622025"
     },
+    "joseon": {
+      "file": "vendor/flag-joseon.svg",
+      "full": "vendor/flag-originals/national-joseon.svg",
+      "width": 500,
+      "height": 450,
+      "original": "https://upload.wikimedia.org/wikipedia/commons/4/48/Flag_of_Korea_%281883%29.svg",
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Korea_(1883).svg",
+      "credit": "Samhanin",
+      "license": "CC0",
+      "retrieved": "2026-11-05",
+      "sha256": "c600305789c36421c4ce62756034aa4e84a2274e5a3d1ac80664f8075c60eed4"
+    },
     "br": {
       "file": "vendor/flag-br.svg",
       "full": "vendor/flag-originals/national-br.svg",

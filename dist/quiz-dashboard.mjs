@@ -3,6 +3,7 @@ import {usMiscQuizzes} from './us-misc-definitions.mjs';
 import {usSportsQuizForScope} from './us-sports-definitions.mjs';
 import {mountQuizTrophies} from './quiz-trophies.mjs';
 import {mountMedalCabinet} from './medal-cabinet.mjs';
+import {collectiblesRevealed} from './settings.mjs';
 import {quizRecords} from './quiz-records.mjs';
 import {quizTime,quizModeLabels} from './quiz-records-core.mjs';
 import {medalMarkup,highestMedal,perfectLevels,lockedMedalMarkup} from './quiz-medals.mjs';
@@ -23,7 +24,7 @@ export function mountQuizDashboard(container,{play}){
  const $=s=>container.querySelector(s),level=$('[data-quiz-level]'),scopePicker=$('[data-quiz-scope]'),footballDifficulty=$('[data-football-difficulty]'),historyFilter=$('[data-history-filter]'),search=$('#quiz-country-search');
  const definitions=globalThis.AtlasCountries.countries,available=Object.values(definitions).filter(c=>c.quiz&&!c.snapshot).sort((a,b)=>a.en.localeCompare(b.en));
  let country=available.find(c=>c.id===globalThis.AtlasEntry?.current)?.id||available[0]?.id||'',mode='name',view='countries',shelf='medals',detail=false,user=null,loadingMore=false,prefectureScopes=null,countyScopes=null,scopeSignature='',libraryLoading=false,libraryScroll=0;
- const collection=mountQuizTrophies($('[data-quiz-collection]'),{snapshot:()=>quizRecords.data,play}),cabinet=mountMedalCabinet($('[data-medal-cabinet]'),{snapshot:()=>quizRecords.data,definitions});
+ const collection=mountQuizTrophies($('[data-quiz-collection]'),{snapshot:()=>quizRecords.data,play,revealed:collectiblesRevealed}),cabinet=mountMedalCabinet($('[data-medal-cabinet]'),{snapshot:()=>quizRecords.data,definitions,revealed:collectiblesRevealed});
  const cards=new Map(),modeControls=new Map();
  function flags(definition,cls='quiz-country-flags',eager=false){
   const holder=make('span',undefined,cls);holder.setAttribute('aria-hidden','true');
@@ -123,6 +124,6 @@ export function mountQuizDashboard(container,{play}){
  search.oninput=render;$('[data-clear-country]').onclick=()=>{search.value='';render();search.focus();};level.onchange=scopePicker.onchange=footballDifficulty.onchange=historyFilter.onchange=render;
  $('[data-play-quiz]').onclick=()=>play({country,level:hasLevels(country)?Number(level.value):definitions[country].quiz.level||1,mode,scope:(level.value==='4'&&(definitions[country].quiz.football||country==='united-states'&&usSportsQuizForScope(scopePicker.value))?footballDifficulty.value:scopePicker.value)||''});
  $('[data-history-more]').onclick=async()=>{loadingMore=true;render();try{await quizRecords.more();}finally{loadingMore=false;render();}};
- quizRecords.subscribe(render);render();
+ quizRecords.subscribe(render);globalThis.addEventListener('atlas-collectibles-reveal',render);render();
  return{setOwner(name){if(cabinet.setOwner(name)&&view==='collection')render();},setUser(id){if(user!==id){view='countries';shelf='medals';detail=false;search.value='';collection.reset();}user=id;quizRecords.connect(id);render();},refresh(){render();void quizRecords.retry();},focus(){if(view==='collection'){collection.focus();return;}(view==='history'?historyFilter:detail?$('[data-country-back]'):search).focus({preventScroll:true});}};
 }

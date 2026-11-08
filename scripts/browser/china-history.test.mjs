@@ -37,6 +37,58 @@ const regionFades=(title,years,details)=>({name:title,options:{width:1000,height
   }
 }});
 export default [
+ {name:'Ming southern Yunnan edge selects Yunnan without frontier slivers',options:{width:1360,height:900},async run(p,base){
+  p.base=base;await open(p);await period(p,1430);
+  for(const [i,at] of [[104.596937,22.847352],[103.463978,22.666182],[101.235816,21.308025]].entries()){
+   await p.evaluate('void map.jumpTo({center:'+JSON.stringify(at)+',zoom:9})');await p.settle();
+   const point=await p.evaluate('(()=>{const q=map.project('+JSON.stringify(at)+'),r=map.getCanvas().getBoundingClientRect();return[r.x+q.x,r.y+q.y]})()');
+   await p.tap(point);await p.settle();
+   assert.equal(await p.evaluate(name),'Yunnan','Former frontier sliver at '+at+' selects its province');
+   await p.evaluate('void map.jumpTo({center:'+JSON.stringify(at)+',zoom:9})');await p.settle();
+   await p.screenshot('ming-yunnan-edge-'+i);
+  }
+  await p.evaluate('void chinaHistory.clear();void document.getElementById("tab-layers").click();void map.fitBounds([[98,20.9],[106,25]],{duration:0,padding:{left:30,right:30,top:30,bottom:190}})');await p.settle();
+  await p.screenshot('ming-yunnan-frontier-slivers-repaired');
+ }},
+ {name:'Ming southern neighbors have full footprints and Đại Việt shares the Vietnam coast',options:{width:1360,height:900},async run(p,base){
+  p.base=base;await open(p);await period(p,1430);
+  for(const [at,expected] of [[[96.94,25.3],'Shan States'],[[102.14,19.89],'Lan Xang'],[[105.84,21.03],'Đại Việt']]){
+   await p.evaluate('void map.jumpTo({center:'+JSON.stringify(at)+',zoom:5})');await p.settle();
+   const point=await p.evaluate('(()=>{const q=map.project('+JSON.stringify(at)+'),r=map.getCanvas().getBoundingClientRect();return[r.x+q.x,r.y+q.y]})()');
+   await p.tap(point);await p.settle();assert.equal(await p.evaluate(name),expected);assert.equal(await p.evaluate('AtlasEntry.current'),'china');
+   await p.screenshot('ming-neighbor-'+(expected==='Đại Việt'?'dai-viet':expected.toLowerCase().replaceAll(' ','-')));
+  }
+  assert.match(await p.evaluate('document.getElementById("history-card").innerText'),/1427.*1428/);
+  for(const zoom of [5,7,9]){
+   await p.evaluate('void map.jumpTo({center:[107.5,21],zoom:'+zoom+'})');await p.settle();await p.screenshot('ming-dai-viet-coast-'+zoom);
+  }
+  for(const at of [[107.371469,20.925119],[107.773575,21.011503],[107.456627,20.981821],[107.528561,20.890332],[107.469374,20.902524],[107.57575,21.035041]]){
+   const land=await p.evaluate('(()=>{const q=map.project('+JSON.stringify(at)+'),layers=map.getStyle().layers.filter(l=>l.type==="fill"&&map.getLayoutProperty(l.id,"visibility")!=="none"&&l.metadata?.atlas?.role!=="water"&&(l.id!=="globe-overview-land"||map.getZoom()<7)).map(l=>l.id);return map.queryRenderedFeatures(q,{layers}).map(f=>f.layer.id)})()');
+   assert.deepEqual(land,[],'No historical or modern coarse island fill at '+at);
+  }
+  await p.evaluate('void map.jumpTo({center:[107.9,16.3],zoom:7.2})');await p.settle();await p.screenshot('ming-dai-viet-hai-van-frontier');
+  await p.evaluate('void map.fitBounds([[92,13],[111,29]],{duration:0,padding:{left:35,right:35,top:30,bottom:190}})');await p.settle();await p.screenshot('ming-southeast-asia-repaired');
+ }},
+ {name:'Historical search uses only the current period and clears stale results',options:{width:1360,height:900},async run(p,base){
+  p.base=base;await open(p);
+  const pools=await p.evaluate('(async()=>{const {decodeData}=await import("./geo-pack.mjs");const h=await decodeData(new Uint8Array(await (await fetch("data/china/history/borders.bin")).arrayBuffer()));return Object.fromEntries(Object.entries(h.years).map(([y,v])=>{const c=h.configs[v.config];return [y,[...c.units,...(c.points?.coverage?c.points.circuits:[]),...(c.points?.municipalities||[]),...(c.points?.protectorates||[])].map(p=>p.id)];}));})()');
+  for(const [year,query] of [[2,'Sili'],[250,'Wei'],[742,'Jingji'],[1100,'Yongxingjun'],[1430,'Zhejiang'],[1820,'Jilin'],[1949,'Jiangxinpo']]){
+   await period(p,year);
+   assert(await p.evaluate('document.getElementById("search").value===""&&document.getElementById("search-results").hidden'));
+   for(const q of ['Sili','Wei','Jingji','Yongxingjun','Zhejiang','Jilin','Jiangxinpo','310105']){
+    const results=await p.evaluate('chinaHistory.search('+JSON.stringify(q)+')');
+    assert(results.every(r=>pools[year].includes(r.id)),year+' search has no other-period records');
+    if(q===query)assert(results.length,year+' has its own search pool');
+    if(q==='310105')assert.equal(results.length,0,'No modern-county fallback');
+   }
+   await p.evaluate('document.getElementById("search").value='+JSON.stringify(query)+';document.getElementById("search").dispatchEvent(new Event("input"))');
+   assert(await p.evaluate('document.querySelectorAll("#search-results button").length>0'));
+  }
+  await period(p,742);
+  await p.evaluate('document.getElementById("search").value="Jiangxinpo";document.getElementById("search").dispatchEvent(new Event("input"))');
+  assert.equal(await p.evaluate('document.querySelectorAll("#search-results button").length'),0);
+  await p.screenshot('china-period-search-isolated');
+ }},
  {name:'The China historical snapshot steps from the Han to the Republic of China on present-day land, and returns to the present day',options:{width:1360,height:900},async run(p,base){
   p.base=base;
   await p.open(base,'#china');await p.waitFor('allReady&&chinaReady&&!countrySwitching',{timeout:60000});await p.settle();

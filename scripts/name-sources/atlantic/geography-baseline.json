@@ -1,0 +1,22 @@
+{
+  "dist/data/europe/united-kingdom/catalogue.bin": {
+    "count": 418,
+    "coreHash": "4c09a4190642933e68d45190dc1e04ec2b1ae402fc45f3a0bd675181a219beef"
+  },
+  "dist/data/europe/france/catalogue.bin": {
+    "count": 35092,
+    "coreHash": "2efab17e0d33cedd5ece39dc977bf886dc876cb1a45ac3c3b5c0e84727162517"
+  },
+  "dist/data/europe/united-kingdom/settlements.bin": {
+    "count": 33590,
+    "coreHash": "48c9db92684959e1a2017a5b03bcd69e673042260b99ea573ddf81b4c00645f4"
+  },
+  "dist/data/quiz/united-kingdom-cities.json": {
+    "count": 63,
+    "coreHash": "683e0d05aed776c44a97806452ff8292c6b58329364b6c2bd525544acc274657"
+  },
+  "dist/data/quiz/france-cities.json": {
+    "count": 68,
+    "coreHash": "fa67b66c8bca138b572af35bf216dae04d3ffc8ee93f18a4458c626560ee65f4"
+  }
+}

@@ -33,14 +33,15 @@ export function cabinetCatalog(definitions){
  return shelves;
 }
 // Medals earned per mode for each slot (a material name, 'topic', or null), with points and tier.
-export function cabinetState(catalog,bests){
+// reveal (developer preview) shows every slot at its top medal without reading or changing records.
+export function cabinetState(catalog,bests,reveal=false){
  let points=0;
  const shelves=catalog.map(shelf=>{
   const slots=shelf.slots.map(slot=>{
-   const modes=cabinetModes.map(mode=>slot.kind==='topic'?(perfectLevels(bests,shelf.country,3,mode).has(slot.id)?'topic':null):highestMedal(bests,shelf.country,3,slot.levels,mode)?.medal||null);
+   const top=slot.kind==='topic'?'topic':slot.levels.at(-1).medal;
+   const modes=cabinetModes.map(mode=>reveal?top:slot.kind==='topic'?(perfectLevels(bests,shelf.country,3,mode).has(slot.id)?'topic':null):highestMedal(bests,shelf.country,3,slot.levels,mode)?.medal||null);
    for(const m of modes)if(m)points+=medalPoints[m];
    const best=slot.kind==='topic'?(modes.some(Boolean)?'topic':null):modes.filter(Boolean).sort((a,b)=>rank.indexOf(b)-rank.indexOf(a))[0]||null;
-   const top=slot.kind==='topic'?'topic':slot.levels.at(-1).medal;
    return {...slot,modes,best,complete:modes.every(m=>m===top)};
   });
   return {...shelf,slots,earned:slots.some(s=>s.best),complete:slots.every(s=>s.complete)};
@@ -75,13 +76,13 @@ function slotMarkup(slot){
  if(slot.kind==='topic')return slot.markup();
  return slot.markup?slot.markup(slot.best):medalMarkup(slot.best);
 }
-export function mountMedalCabinet(container,{snapshot,definitions}){
+export function mountMedalCabinet(container,{snapshot,definitions,revealed=()=>false}){
  const catalog=cabinetCatalog(definitions);let owner='',signature='';
  container.className='medal-cabinet';
  container.innerHTML=`<div class="medal-cabinet-heading"><h3>Medal cabinet</h3><div class="medal-cabinet-progress"><span data-cabinet-points></span><span class="medal-cabinet-bar" data-cabinet-bar><i></i></span></div></div><div class="medal-case" data-cabinet-case><div class="medal-case-crest" data-cabinet-crest></div><div class="medal-case-frame"><div class="medal-case-glass"><div class="medal-case-lining" data-cabinet-shelves></div></div><div class="medal-case-plaque" data-cabinet-owner hidden></div></div></div>`;
  const $=s=>container.querySelector(s);
  function refresh(){
-  const state=cabinetState(catalog,snapshot().bests||[]),{tier,next,points}=state,key=JSON.stringify([owner,tier.id,state.shelves.map(s=>s.slots.map(t=>t.modes))]);
+  const state=cabinetState(catalog,snapshot().bests||[],revealed()),{tier,next,points}=state,key=JSON.stringify([owner,tier.id,state.shelves.map(s=>s.slots.map(t=>t.modes))]);
   $('[data-cabinet-points]').textContent=next?`${points} / ${next.points} points to ${next.name}`:`${points} points`;
   const bar=$('[data-cabinet-bar]');bar.hidden=!next;if(next)bar.firstChild.style.width=((points-tier.points)/(next.points-tier.points)*100).toFixed(1)+'%';
   if(key===signature)return;signature=key;

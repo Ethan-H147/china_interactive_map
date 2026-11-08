@@ -239,7 +239,7 @@ export function createHistoricView(map,{country,base,config,borders:engine,fill,
    if(config.standalone)window.AtlasRegionColorController?.suspend(true);
    apply();renderDock();dock.hidden=false;onChange();insets();void syncContext();
   },
-  leave(){if(!active)return;active=false;epoch++;request++;focus=null;restore();if(config.standalone&&document.getElementById('map-shell')?.dataset.quiz!=='true')window.AtlasRegionColorController?.suspend(false);if(dock){dock.hidden=true;insets();}},
+  leave(){if(!active)return;active=false;epoch++;request++;focus=null;restore();if(config.releaseOnLeave){engine.dispose();context?.dispose();contextFrame=null;}if(config.standalone&&document.getElementById('map-shell')?.dataset.quiz!=='true')window.AtlasRegionColorController?.suspend(false);if(dock){dock.hidden=true;insets();}},
   apply,renderSummary,renderState,pick,unitLabels,hoverAt,setYear,
   datedPoints(){return active&&engine.data&&snapshot()?current().points:undefined;},
   datedOptions(){return active&&engine.data&&snapshot()?current().units.filter(u=>!u.selectionGroup):[];},

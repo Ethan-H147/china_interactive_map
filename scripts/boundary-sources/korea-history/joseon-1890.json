@@ -1,0 +1,35 @@
+{
+ "provinces": {
+  "gyeonggi": {"name": "Gyeonggi", "ko": "경기도", "hanja": "京畿道", "seat": "Hanseong"},
+  "chungcheong": {"name": "Chungcheong", "ko": "충청도", "hanja": "忠淸道", "seat": "Gongju"},
+  "jeolla": {"name": "Jeolla", "ko": "전라도", "hanja": "全羅道", "seat": "Jeonju"},
+  "gyeongsang": {"name": "Gyeongsang", "ko": "경상도", "hanja": "慶尙道", "seat": "Daegu"},
+  "gangwon": {"name": "Gangwon", "ko": "강원도", "hanja": "江原道", "seat": "Wonju"},
+  "hwanghae": {"name": "Hwanghae", "ko": "황해도", "hanja": "黃海道", "seat": "Haeju"},
+  "pyeongan": {"name": "Pyeongan", "ko": "평안도", "hanja": "平安道", "seat": "Pyongyang"},
+  "hamgyeong": {"name": "Hamgyeong", "ko": "함경도", "hanja": "咸鏡道", "seat": "Hamhung"}
+ },
+ "byProvince": {
+  "KR-11": "gyeonggi", "KR-28": "gyeonggi", "KR-41": "gyeonggi", "KP-5455268": "gyeonggi",
+  "KR-30": "chungcheong", "KR-36": "chungcheong", "KR-43": "chungcheong", "KR-44": "chungcheong",
+  "KR-12": "jeolla", "KR-52": "jeolla", "KR-50": "jeolla",
+  "KR-26": "gyeongsang", "KR-27": "gyeongsang", "KR-31": "gyeongsang", "KR-47": "gyeongsang", "KR-48": "gyeongsang",
+  "KR-51": "gangwon", "KP-356535": "gangwon",
+  "KP-356533": "hwanghae", "KP-356442": "hwanghae",
+  "KP-356443": "pyeongan", "KP-5453650": "pyeongan", "KP-356419": "pyeongan", "KP-356540": "pyeongan", "KP-356392": "pyeongan",
+  "KP-356386": "hamgyeong", "KP-3781418": "hamgyeong", "KP-356379": "hamgyeong", "KP-6648083": "hamgyeong"
+ },
+ "exceptions": [
+  {"ids": ["KR-47930", "KR-47940"], "province": "gangwon", "source": "Uljin moved to North Gyeongsang in 1963; Ulleung moved to Gyeongsang in 1906."},
+  {"ids": ["KR-44710"], "province": "jeolla", "source": "Geumsan moved to South Chungcheong in 1963."},
+  {"ids": ["KP-8318609", "KP-8319793", "KP-7117363", "KP-5974099", "KP-8320618", "KP-8321389"], "province": "hamgyeong", "source": "Wonsan (Deogwon), Munchon and Anbyon, and the counties formed from them in 1952 (Kosan, Chonnae; Poptong mostly), moved from South Hamgyong to Kangwon in 1946."},
+  {"ids": ["KP-3859544", "KP-3860474", "KP-3860518"], "province": "pyeongan", "source": "Chunghwa and Sangwon, and Sungho formed from them, were in South Pyongan before 1952."},
+  {"ids": ["KP-5475709"], "province": "hamgyeong", "source": "Rangnim was formed in 1952 from Changjin County, South Hamgyong."},
+  {"ids": ["KP-8429865"], "province": "pyeongan", "source": "Kimhyongjik County is the former Huchang County, North Pyongan."}
+ ],
+ "ongjin": {"id": "KR-28720", "northOf": 37.6, "north": "hwanghae", "south": "gyeonggi", "source": "Baengnyeong, Daecheong and Yeonpyeong belonged to Hwanghae; the islands off Incheon to Gyeonggi."},
+ "sources": [
+  "Korean Wikipedia county histories (연혁) for the North Korean counties reorganized in December 1952",
+  "Encyclopedia of Korean Culture (한국민족문화대백과사전), province and county entries"
+ ]
+}

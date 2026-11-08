@@ -107,17 +107,21 @@ jilin.geometry=multi(islandsOfJilin.filter(p=>p!==sakhalin));
 qing.push(feature({id:'sakhalin',name:'Sakhalin',zh:'庫頁島',type:'Qing claim',note:'The Qing claimed Sakhalin. Indigenous communities lived on the island, where Qing authority was limited.'},multi([sakhalin])));
 const historic=qing.map(f=>feature({qing:String(f.properties.id)},f.geometry));
 
-// Use the atlas land as the only footprint. The historical source contributes divisions.
+// Use a single clean modern land mask; dated county-group rings are not a land mask.
+const chinaMask=await command(fc(provinces.features.map(f=>feature({land:1},f.geometry))),'-clean gap-width=0 -dissolve2 land');
+// The historical source contributes divisions.
 const contextFiles=['china-neighbours.bin','korea-context.bin','mongolia-context.bin','russia/context.bin','europe/bhutan/context.bin','japan-context.bin'];
 const loadLand=async file=>(await decodeData(fs.readFileSync('dist/data/'+file))).features;
 const context=await Promise.all(contextFiles.map(loadLand));
-const world=(await loadLand('world-land.bin')).filter(f=>!['china','korea','mongolia','russia'].includes(f.properties.country));
-const nearEastAsia=f=>{const [[w,s],[e,n]]=geographicBounds(f.geometry);return w<148&&e>66&&s<59&&n>15;};
+const world=(await loadLand('world-land.bin')).filter(f=>!['china','korea','mongolia','russia','vietnam'].includes(f.properties.country));
+const vietnamLand=fc(await loadLand('europe/vietnam/context.bin'));
+const vietnamProvinces=(await decodeData(fs.readFileSync('dist/data/europe/vietnam/first.bin'))).regions;
+const nearEastAsia=f=>{const [[w,s],[e,n]]=geographicBounds(f.geometry);return w<148&&e>66&&s<59&&n>13;};
 const neighbours=(await command({
- 'context.json':fc([...world,...context.flat()].filter(f=>f.properties.country!=='china'&&nearEastAsia(f)).map(f=>feature({},f.geometry))),
- 'china.json':fc(early)
-},'-clip bbox=66,15,148,59 -erase china.json -dissolve2')).features;
-const modernLand=(await command(fc([...early,...neighbours].map(f=>feature({},f.geometry))),'-dissolve2')).features;
+ 'context.json':fc([...world,...context.flat().filter(f=>f.properties.country!=='vietnam'),...vietnamLand.features].filter(f=>f.properties.country!=='china'&&nearEastAsia(f)).map(f=>feature({},f.geometry))),
+ 'china.json':chinaMask
+},'-clip bbox=66,13,148,59 -erase china.json -dissolve2')).features;
+const modernLand=(await command(fc([...chinaMask.features,...neighbours].map(f=>feature({},f.geometry))),'-dissolve2')).features;
 const coast=fc(modernLand.map(f=>feature({},multi(polygons(f.geometry).map(([ring])=>[ring])))));
 const inland=await command(coast,'-simplify interval=400 keep-shapes -buffer radius=-3000');
 // Match small shoreline differences beyond modern China as well. Keep the
@@ -146,29 +150,48 @@ const extended=merged.map(f=>{
  const keys=f.properties.frame_1?.split('|')||[];
  return {qing:f.properties.qing_2||(f.properties.frame_1!=null?f.properties.adjoining:undefined)||undefined,polygons:polygons(f.geometry),external:f.properties.frame_1==null,...Object.fromEntries(snapshots.map((s,i)=>[s.field,keys[i]]))};
 });
+// Reconcile the 1430 Đại Việt coast to the exact modern Vietnam land source.
+// The retained Lê shape covers 1429–1474 and carries a later southern expansion.
+// Keep its inland extent, but use the Hải Vân / Huế ridge as an approximate 1430
+// southern limit; this is not a claim that modern provincial borders existed then.
+const daiVietSource=fc(cliopatria.features.filter(f=>f.properties.Name==='Lê Dynasty'&&f.properties.FromYear<=1430&&f.properties.ToYear>=1430));
+const vietnamNorth=fc(vietnamProvinces.features.filter(f=>Number(f.properties.id.slice(3))<=46));
+const hue=vietnamProvinces.features.find(f=>f.properties.id==='VN-46');
+const southLimit=geographicBounds(hue.geometry)[0][1];
+const vietnamEnvelope=fc(vietnamLand.features.map(f=>feature({},multi(polygons(f.geometry).map(([ring])=>[ring])))));
+const beyondVietnam=await command({'land.json':coast,'vietnam.json':vietnamEnvelope},'-erase vietnam.json -clip bbox=66,'+southLimit+',148,59');
+const historicalNorth=await command(fc([...vietnamNorth.features,...beyondVietnam.features].map(f=>feature({},f.geometry))),'-dissolve2');
+const coastInterior=await command(coast,'-simplify interval=400 keep-shapes -buffer radius=-15000');
+const shoreFit=await command({'dated.json':daiVietSource,'vietnam.json':vietnamLand,'interior.json':coastInterior},'-buffer radius=25000 -clip vietnam.json -erase interior.json');
+const daiViet1430=await command({'dated.json':fc([...daiVietSource.features,...shoreFit.features].map(f=>feature(daiVietSource.features[0].properties,f.geometry))),'land.json':coast,'north.json':historicalNorth},'-dissolve2 -clip land.json -clip north.json -clean gap-width=0');
+const datedPolities=cliopatria.features.flatMap(f=>f===daiVietSource.features[0]?daiViet1430.features.map(g=>feature(f.properties,g.geometry)):[f]);
+const southernNeighbours=new Set(['shan','lan-xang','dai-viet-1430']);
 // Restore dated territory on the shared land mask outside modern China. Existing
 // Chinese county assignments stay in place. The external mosaic is classified
 // separately for every period, including land already present for the Qing frame.
-const chinaMask=await command(fc(provinces.features.map(f=>feature({land:1},f.geometry))),'-clean gap-width=0 -dissolve2 land');
 const outsideChinese=(await command({
- 'dated.json':fc(cliopatria.features.filter(f=>polities[f.properties.Name]?.chinese&&snapshots.some(s=>f.properties.FromYear<=s.year&&f.properties.ToYear>=s.year))),
+ 'dated.json':fc(datedPolities.filter(f=>(polities[f.properties.Name]?.chinese&&snapshots.some(s=>f.properties.FromYear<=s.year&&f.properties.ToYear>=s.year))||(southernNeighbours.has(polities[f.properties.Name]?.key)&&f.properties.FromYear<=1430&&f.properties.ToYear>=1430))),
  'land.json':coast,'china.json':chinaMask
 },'-dissolve2 -clip land.json -erase china.json')).features.filter(f=>f.geometry&&polygons(f.geometry).length);
 const inside=extended.filter(p=>!p.external);
 const qingOutside=(await command({'qing.json':fc(qingWithMacau),'china.json':chinaMask},'-erase china.json -clean gap-width=0 -explode')).features.filter(f=>f.geometry&&polygons(f.geometry).length);
-const oldExternal=qingOutside.map(f=>({qing:f.properties.qing,external:true,polygons:polygons(f.geometry)}));
-const oldExternalMask=await command(fc(oldExternal.map(p=>feature({land:1},multi(p.polygons)))),'-dissolve2 land -clean gap-width=0');
-const addedExternal=(await command({'dated.json':fc(outsideChinese),'occupied.json':oldExternalMask},'-erase occupied.json')).features.filter(f=>f.geometry&&polygons(f.geometry).length);
-let external=[...oldExternal,...addedExternal.map(f=>({external:true,polygons:polygons(f.geometry)}))];
+// Normalize both footprints before combining them. Erasing a separately dissolved
+// exterior ring can invert its holes at shared coast vertices and discard Vietnam.
+const exteriorUnion=(await command(fc([
+ ...qingOutside.map(f=>feature({layer:'qing',qing:f.properties.qing,domain:null},f.geometry)),
+ ...outsideChinese.map(f=>feature({layer:'dated',qing:null,domain:1},f.geometry))
+]),'-split layer -clean target=qing gap-width=0 -clean target=dated gap-width=0 -union target=* fields=qing,domain -clean gap-width=0')).features;
+let external=exteriorUnion.filter(f=>f.geometry&&polygons(f.geometry).length).map(f=>({qing:f.properties.qing_1||undefined,external:true,polygons:polygons(f.geometry)}));
 const externalMask=await command(fc(external.map(p=>feature({},multi(p.polygons)))),'-dissolve2');
 const extensionAudit=[];
 for(const snapshot of snapshots){
- const current=cliopatria.features.filter(f=>f.properties.FromYear<=snapshot.year&&f.properties.ToYear>=snapshot.year);
+ const current=datedPolities.filter(f=>f.properties.FromYear<=snapshot.year&&f.properties.ToYear>=snapshot.year);
  const own=current.filter(f=>polities[f.properties.Name]?.chinese);
  const neighbours=current.filter(f=>!polities[f.properties.Name]?.chinese);
  const owned=await command({'own.json':fc(own),'mask.json':externalMask},'-clip mask.json -clean gap-width=0');
  const context=await command({'context.json':fc(neighbours),'own.json':owned,'mask.json':externalMask},'-clip mask.json'+(owned.features.some(f=>f.geometry)?' -erase own.json':''));
  const dated=fc([...owned.features,...context.features].filter(f=>f.geometry&&polygons(f.geometry).length).map(f=>feature({unit:polities[f.properties.Name].key},f.geometry)));
+ for(const [year,point,key] of [[2,[105.84,21.03],'han'],[250,[105.84,21.03],'wu'],[742,[105.84,21.03],'tang'],[1430,[96.94,25.3],'shan'],[1430,[102.14,19.89],'lan-xang'],[1430,[107.59,16.46],'dai-viet-1430']])if(snapshot.year===year)assert(dated.features.some(f=>f.properties.unit===key&&landIndex(polygons(f.geometry).flat())(point)),year+' exterior footprint retains '+key+' at '+point);
  const frames=new Map();
  for(const p of external){
   const key=JSON.stringify([p.qing||null,...snapshots.map(period=>p[period.field]||null)]);
@@ -208,12 +231,12 @@ const original=rocBoundaries.regions.features;
 const foreign=display.provinces.features.filter(f=>[810000,820000].includes(f.properties.adcode));
 const rocLand=(await command({
  'roc.json':fc(original.filter(f=>f.properties.id!==referenceId)),
- 'china.json':fc(early),'foreign.json':fc(foreign)
+ 'china.json':chinaMask,'foreign.json':fc(foreign)
 },'-clip china.json -erase foreign.json')).features;
 // A historical claim can cross today's border, but thin strips caused by
 // two surveys tracing the same river or coast are not separate extensions.
 const exteriorROC=(await command({
- 'roc.json':fc(original),'china.json':fc(early),'land.json':coast
+ 'roc.json':fc(original),'china.json':chinaMask,'land.json':coast
 },'-erase china.json -clip land.json -explode')).features.filter(f=>f.geometry);
 async function substantial(shapes){
  const candidates=shapes.flatMap((f,i)=>f.geometry&&area(polygons(f.geometry))>=75?[feature({i},f.geometry)]:[]);
@@ -222,7 +245,7 @@ async function substantial(shapes){
 }
 // The Khorgos sector follows the post-1881 border. In the western Pamirs the
 // historical sheet also excludes several broad modern-only pieces.
-const western=(await command({'china.json':fc(early),'historical.json':fc(original)},'-clip bbox=72,37.5,81.4,43.3 -erase historical.json -explode')).features;
+const western=(await command({'china.json':chinaMask,'historical.json':fc(original)},'-clip bbox=72,37.5,81.4,43.3 -erase historical.json -explode')).features;
 const [extensions,excluded]=await Promise.all([substantial(exteriorROC),substantial(western)]);
 rocLand.push(...exteriorROC.filter((f,i)=>{
  const id=f.properties.id,[[w,s],[e,n]]=geographicBounds(f.geometry);
@@ -268,7 +291,7 @@ if(claims.some(f=>!f.geometry||!polygons(f.geometry).length))throw Error('Missin
 const burma=(await command({
  'claim.json':fc([feature({id:burmaId},{type:'Polygon',coordinates:[jiangxinpo.ring]})]),
  'burma.json':fc(world.filter(f=>f.properties.country==='myanmar')),
- 'china.json':fc(early)
+ 'china.json':chinaMask
 },'-clip burma.json -erase china.json')).features;
 claim(burmaId,'Jiangxinpo','江心坡','Historical claim in northern Burma. Burma administered the area in 1949. The northern frontier was settled by the 1960 China–Burma boundary treaty.',{aliases:['Northern Burma','Kachin','江心坡']});
 rocUnits[burmaId].statusSource=jiangxinpo.url;
@@ -409,6 +432,25 @@ const provincePieces=dividedMing.filter(f=>f.properties.piece_1!=null).map(f=>{
  const p=previous.get(String(f.properties.piece_1));assert(p,'Ming split remains on atlas land');
  return {...p,[mingSnapshot.field]:p[mingSnapshot.field]==='ming'?(f.properties.province_2||'ming'):p[mingSnapshot.field],polygons:polygons(f.geometry)};
 });
+// Reconcile southern Yunnan after the final overlay: its narrow residuals can be
+// recreated by the independent province/land topologies during that overlay.
+// Reassign whole small pieces already belonging to Ming, without moving any edge.
+// Both atlas Yunnan and the nearby historical reconstruction must contain the
+// interior probe; northern/western frontier land and foreign states stay intact.
+const yunnanBand=await command(fc(provinceShapes.filter(f=>f.properties.key==='Yunnan')),'-buffer radius=10000');
+const inYunnan=landIndex(provinces.features.filter(f=>f.properties.province===530000).flatMap(f=>polygons(f.geometry)).flat());
+const nearYunnan=landIndex(yunnanBand.features.flatMap(f=>polygons(f.geometry)).flat());
+const yunnanResiduals=provincePieces.flatMap((p,i)=>{
+ if(p[mingSnapshot.field]!=='ming'||area(p.polygons)>=1500)return [];
+ const [[w,s],[e,n]]=geographicBounds(multi(p.polygons));
+ return w>=98&&e<=106.5&&s>=21&&n<25?[feature({i},multi(p.polygons))]:[];
+});
+const yunnanProbes=await command(fc(yunnanResiduals),'-points inner');
+let yunnanRepairs=0;
+for(const f of yunnanProbes.features)if(f.geometry&&inYunnan(f.geometry.coordinates)&&nearYunnan(f.geometry.coordinates)){
+ provincePieces[f.properties.i][mingSnapshot.field]='1430-circuit-yunnan';yunnanRepairs++;
+}
+console.log('Southern Yunnan: '+yunnanRepairs+' residual pieces returned to the province.');
 // Check source-backed extensions as well as the province ownership after all overlays.
 for(const [point,field,key] of [
  [[105.85,21.03],'han','han'],[[105.85,21.03],'threeKingdoms','wu'],[[105.85,21.03],'tang','tang'],
@@ -437,8 +479,16 @@ const exterior=combined.filter(p=>p.external).map(p=>p.polygons).flat();
 // Simplification affects only the largest-share selection lookup, never drawn land.
 const lookupProvinces=(await command(provinces,'-simplify interval=1500 keep-shapes')).features.map(f=>({id:String(f.properties.province),polygons:polygons(f.geometry)}));
 const lookupRegions=(await command(fc(provincePieces.filter(p=>p[mingSnapshot.field]).map(p=>feature({key:p[mingSnapshot.field]},multi(p.polygons)))),'-dissolve2 key -simplify interval=1500 keep-shapes')).features;
-largestCover(lookupProvinces,lookupRegions.map(f=>({unit:f.properties.key,polygons:polygons(f.geometry)})),{field:'owner'});
-const mingLookup=Object.fromEntries(lookupProvinces.map(p=>[p.id,p.owner]));
+// Measure largest-share ownership with the same normalized topology overlay used
+// for the drawn mosaic. Independent polygon intersections can fail on coincident
+// vertices of the detailed shared Vietnam/China coastline.
+const lookupFaces=(await command(fc([
+ ...lookupProvinces.map(p=>feature({layer:'province',province:p.id,owner:null},multi(p.polygons))),
+ ...lookupRegions.map(f=>feature({layer:'dated',province:null,owner:f.properties.key},f.geometry))
+]),'-split layer -clean target=province gap-width=0 -clean target=dated gap-width=0 -union target=* fields=province,owner -clean gap-width=0')).features;
+const lookupShares={};
+for(const f of lookupFaces){const {province_1:province,owner_2:owner}=f.properties;if(!f.geometry||!province||!owner)continue;const totals=lookupShares[province]??={};totals[owner]=(totals[owner]||0)+area(polygons(f.geometry));}
+const mingLookup=Object.fromEntries(Object.entries(lookupShares).map(([id,totals])=>[id,Object.entries(totals).sort((a,b)=>b[1]-a[1])[0][0]]));
 for(const snapshot of snapshots.filter(s=>s.year<1430)){
  const covered=fc(provincePieces.filter(p=>p[snapshot.field]).map(p=>feature({},multi(p.polygons))));
  snapshot.frontier=await command({'regions.json':covered,'inland.json':inland},'-dissolve2 -lines -clip inland.json');

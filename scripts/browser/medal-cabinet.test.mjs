@@ -26,6 +26,27 @@ export default [{name:'Medal cabinet: shelves, mode dots, owner plaque, points a
  assert(await p.evaluate(`document.querySelector('[data-cabinet-country=italy] .medal-shelf-plaque').classList.contains('complete')`),'Italy shelf completes with every medal at its top material');
  assert(await p.evaluate(`!!document.querySelector('[data-cabinet-country=china] [data-cabinet-slot=cities] .medal-sparkle')`),'Diamond city medal glints');
  await p.evaluate(`document.querySelector('[data-medal-cabinet]').scrollIntoView({block:'start'})`);await p.screenshot('medal-cabinet-mahogany');
+}},{name:'Developer reveal shows every medal and trinket without changing records',options:{width:1280,height:1000},async run(p,base){
+ await p.send('Page.addScriptToEvaluateOnNewDocument',{source:fixture});await p.send('Page.addScriptToEvaluateOnNewDocument',{source:`sessionStorage.setItem('boundary-atlas-developer-v1','true')`});await p.open(base,'#italy');
+ await p.evaluate(seed([attempt(60,'italy','hard','find',64)]));await login(p);await p.tap('[data-quiz-view=collection]');
+ const stored=()=>p.evaluate(`JSON.stringify([Object.entries(localStorage).sort(),Object.entries(sessionStorage).sort()])`);
+ const shown=async()=>{const cabinet=await state(p);await p.tap('[data-collection-tab=trinkets]');const trinkets=await p.evaluate(`(()=>{const cards=[...document.querySelectorAll('[data-trophy-card]')];return {total:cards.length,earned:cards.filter(c=>c.dataset.earned==='true').length,count:document.querySelector('[data-trophy-count]').textContent}})()`);await p.tap('[data-collection-tab=medals]');return {...cabinet,empty:await p.evaluate(`document.querySelectorAll('[data-medal-cabinet] .medal-slot.empty').length`),trinkets};};
+ const toggle=async()=>{await p.tap('#account-close');await p.tap('#settings-open');assert(await p.evaluate(`!document.getElementById('settings-reveal-collectibles').closest('[data-developer-setting]').hidden`),'Developer settings show the reveal toggle');await p.tap('#settings-reveal-collectibles');const on=await p.evaluate(`document.getElementById('settings-reveal-collectibles').checked`);await p.tap('#settings-close');await p.tap('#account-open');await p.tap('[data-quiz-view=collection]');return on;};
+ const real=await shown(),before=await stored();
+ assert.deepEqual(real.shelves,['italy']);assert.equal(real.points,'4 / 50 points to Walnut');assert.equal(real.trinkets.earned,0);
+ assert.equal(await toggle(),true);let s=await shown();
+ assert(s.shelves.length>real.shelves.length&&s.empty===0,'Every shelf shows every medal');assert.equal(s.tier,'marble','The case shows its top tier');
+ assert.equal(s.trinkets.earned,s.trinkets.total,'Every trinket shows as collected');assert.equal(s.trinkets.count,s.trinkets.total+' / '+s.trinkets.total+' collected');
+ await p.tap('[data-collection-tab=trinkets]');await p.tap('[data-trophy-card=italy]');
+ const detail=await p.evaluate(`({title:document.querySelector('[data-trophy-title]').textContent,mystery:document.querySelector('[data-trophy-mystery]').hidden,progress:document.querySelector('[data-trophy-progress]').textContent,play:document.querySelector('[data-trophy-play]').textContent})`);
+ assert.deepEqual(detail,{title:'Colosseum',mystery:true,progress:'0 / 3 modes complete',play:'Play: Name every place'},'A revealed trinket opens unlocked while its quiz progress stays real');
+ await p.tap('[data-trophy-back]');await p.tap('[data-collection-tab=medals]');
+ assert.equal(await stored(),before,'Revealing writes nothing to storage, records or the synced account');
+ assert.equal(await toggle(),false);s=await shown();assert.deepEqual(s,real,'Turning the toggle off restores the real collection');
+ assert.equal(await toggle(),true);await p.tap('#account-close');await p.tap('.developer-exit');
+ await p.tap('#account-open');await p.tap('[data-quiz-view=collection]');s=await shown();assert.deepEqual(s,real,'Leaving developer mode restores the real collection');
+ await p.tap('#account-close');await p.tap('#settings-open');assert(await p.evaluate(`document.getElementById('settings-reveal-collectibles').closest('[data-developer-setting]').hidden&&!document.getElementById('settings-reveal-collectibles').checked`),'The toggle is hidden and off outside developer mode');await p.tap('#settings-close');
+ const after=JSON.parse(await stored());after[1]=after[1].filter(([k])=>k!=='boundary-atlas-developer-v1');const initial=JSON.parse(before);initial[1]=initial[1].filter(([k])=>k!=='boundary-atlas-developer-v1');assert.deepEqual(after,initial,'Storage is unchanged apart from developer mode itself');
 }},{name:'Medal cabinet on a phone',options:{width:390,height:844,mobile:true},async run(p,base){
  await p.send('Page.addScriptToEvaluateOnNewDocument',{source:fixture});await p.open(base,'#italy');
  await p.evaluate(seed(['find','name'].map((m,i)=>attempt(40+i,'united-states','misc-college-towns',m,40))));await login(p);await p.tap('[data-quiz-view=collection]');

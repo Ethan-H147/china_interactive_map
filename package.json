@@ -140,12 +140,14 @@
     "build:us-elections": "node scripts/fetch-us-elections.mjs && node scripts/build-us-elections.mjs",
     "build:us-historic-borders": "node --max-old-space-size=8000 scripts/build-us-historic-borders.mjs",
     "test:us-elections": "node --check dist/elections.mjs && node --check dist/us-elections.mjs && node scripts/validate-us-elections.mjs && node scripts/validate-us-historic-borders.mjs && node scripts/browser/run.mjs us-elections",
+    "build:korea-history": "node scripts/build-korea-history.mjs",
+    "test:korea-history": "node --check dist/korea-history.mjs && node scripts/validate-korea-history.mjs && node scripts/browser/run.mjs korea-history",
     "build:china-history": "node --max-old-space-size=6000 scripts/build-china-history.mjs",
     "test:china-history": "node --check dist/china-history.mjs && node scripts/validate-china-history.mjs && node scripts/browser/run.mjs china-history",
     "test:us-history": "node --check dist/historic-borders.mjs && node --check dist/historic-view.mjs && node --check dist/us-history.mjs && node scripts/validate-us-historic-borders.mjs && node scripts/browser/run.mjs us-history",
     "build:korea-elections": "node scripts/build-korea-elections.mjs",
     "test:korea-elections": "node --check dist/elections.mjs && node --check dist/korea-elections.mjs && node scripts/validate-korea-elections.mjs && node scripts/browser/run.mjs korea-elections",
-    "test:us-local":"node --check dist/us-place-cards.mjs && node scripts/validate-us-local.mjs && node scripts/validate-us-performance.mjs",
+    "test:us-local": "node --check dist/us-place-cards.mjs && node scripts/validate-us-local.mjs && node scripts/validate-us-performance.mjs",
     "measure:us-navigation": "node scripts/browser/measure-us-navigation.mjs",
     "build:us-municipal-facts": "node scripts/prepare-us-municipal-facts.mjs && node scripts/prepare-flag-images.mjs && node scripts/prepare-region-colors.mjs",
     "test:us-municipal-facts": "node scripts/validate-us-municipal-assets.mjs && node scripts/validate-us-municipal-facts.mjs",
@@ -350,7 +352,7 @@
     "test:mexico-municipalities-browser": "node scripts/browser/run.mjs mexico-municipalities",
     "test:app-cache": "node --check dist/sw.js && node scripts/validate-app-cache.mjs && node scripts/browser/run.mjs app-cache",
     "test:medal-cabinet": "node --check dist/medal-cabinet.mjs && node --check dist/football-medals.mjs && node scripts/browser/run.mjs medal-cabinet us-misc-medals",
-    "test:deployment": "node scripts/validate-app-cache.mjs && node --check dist/app.js && npm run test:entry && npm run test:runtime && npm run test:compact && npm run test:quiz-records && node scripts/validate-quiz-trophies.mjs && npm run test:scoped-countries",
+    "test:deployment": "node scripts/validate-app-cache.mjs && node --check dist/app.js && npm run test:entry && npm run test:runtime && npm run test:compact && npm run test:quiz-records && node scripts/validate-quiz-trophies.mjs && npm run test:scoped-countries && node scripts/validate-place-pronunciations.mjs && node scripts/validate-italian-names.mjs",
     "db:generate": "drizzle-kit generate --config hosting/drizzle.config.ts",
     "build:quiz-geography": "node --max-old-space-size=8000 scripts/build-quiz-geography.mjs && node scripts/build-us-county-quizzes.mjs",
     "test:quiz-records": "node scripts/validate-quiz-records.mjs",
@@ -509,6 +511,8 @@
     "build:us-canada-frontier": "node --max-old-space-size=8000 scripts/reconcile-us-canada.mjs && node scripts/build-us-canada-frontier-assets.mjs",
     "test:us-canada-frontier": "node scripts/validate-us-canada-frontier.mjs && node scripts/browser/run.mjs us-canada-frontier",
     "build:historical-coasts": "node scripts/build-alaska-history.mjs && node --max-old-space-size=8000 scripts/build-upper-peninsula-history.mjs && node --max-old-space-size=10000 scripts/build-historical-coast-display.mjs",
-    "test:historical-coasts": "node scripts/validate-historical-coast-display.mjs && node scripts/browser/run.mjs historical-coast-selection"
+    "test:historical-coasts": "node scripts/validate-historical-coast-display.mjs && node scripts/browser/run.mjs historical-coast-selection",
+    "test:pronunciation": "node scripts/validate-place-pronunciations.mjs && node scripts/browser/run.mjs place-pronunciation china-pronunciation",
+    "test:italy-names": "node scripts/validate-italian-names.mjs && node scripts/browser/run.mjs italy-card-names"
   }
 }

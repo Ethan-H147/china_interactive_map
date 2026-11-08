@@ -32,6 +32,9 @@ export function chinaShore(display){
   // A narrow island can put both 30 m probes in water. With no owner, the
   // nearest-outline query would mistake its own coast for another province.
   if(!left&&!right)return 2;
+  // The Yangtze estuary's nearby opposing banks are shores, not land borders.
+  // Exact shared land topology has already returned above.
+  if(m[0]>121&&m[0]<122.1&&m[1]>31.35&&m[1]<32.05)return 2;
   return neighbour(m,left||right)===null&&frontier(m)>3000?2:1;
  };
  return path=>{

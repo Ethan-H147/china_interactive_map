@@ -1,0 +1,7 @@
+{
+ "GB-X-IM":[{"lang":"gv","language":"Manx","text":"Ellan Vannin","aliases":["Mannin"],"source":"https://www.gov.im/categories/home-and-neighbourhood/manx-gaelic/","license":"Geographical name; Isle of Man Government"}],
+ "GB-R-TLN":[{"lang":"sco-x-ulster","language":"Ulster Scots","text":"Norlin Airlann","source":"https://www.ulsterscotsagency.com/fs/doc/new_range_of_ulster-scots_booklets/Who_is_the_USA_BK8_AW_6.pdf","license":"Geographical name; Ulster-Scots Agency, Who is the Ulster-Scots Agency?, back cover"}],
+ "GB-C-N09000003":[{"lang":"sco-x-ulster","language":"Ulster Scots","text":"Bilfawst","source":"https://www.ulsterscotsacademy.com/ullans/4/some-belfast-placenames.php","license":"Geographical name; Ulster-Scots Academy"}],
+ "FR-R-53":[{"lang":"br","language":"Breton","text":"Breizh","aliases":["Rannvro Breizh"],"source":"https://www.bretagne.bzh/","license":"Geographical name; Région Bretagne"},{"lang":"fr-x-gallo","language":"Gallo","text":"Bertègn","source":"https://cinema.bretagne.bzh/bertegn-cinema/","license":"Geographical name; Région Bretagne / Bretagne Cinéma"}],
+ "FR-C-57672":[{"lang":"und-x-platt","language":"Lorraine Franconian","text":"Diddenuewen","aliases":["Diddenowen"],"source":"https://fr.wikipedia.org/wiki/Thionville#Toponymie","license":"Geographical name; referenced local Lorraine forms, Wikipedia CC BY-SA"}]
+}

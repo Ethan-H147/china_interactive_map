@@ -101,6 +101,17 @@ for(const [id,expectedArea] of [['zhejiang',101637],['jiangxi',164859],['fujian'
  assert(actual/expectedArea>.9&&actual/expectedArea<1.15,id+' retains its source province area after coastline reconciliation');
 }
 
+// Source/atlas edge differences in southern Yunnan must not become frontier hooks.
+for(const at of [[104.596937,22.847352],[103.463978,22.666182],[101.235816,21.308025],[99.575625,22.108883],[98.870914,24.084839]]){
+ assert.equal(unit(1430,at),'1430-circuit-yunnan','Southern Yunnan edge belongs to its province at '+at);
+}
+const yunnanFrontier=await command({
+ 'frontier.json':fc(history.faces.features.filter((f,i)=>ming.units[ming.face[i]]?.id==='ming')),
+ 'yunnan.json':fc(display.provinces.features.filter(f=>f.properties.adcode===530000))
+},'-clip yunnan.json -clip bbox=98,21,106.5,25');
+const yunnanSlivers=yunnanFrontier.features.filter(f=>f.geometry).reduce((n,f)=>n+area(polygons(f.geometry)),0);
+assert(yunnanSlivers<.05,'No southern Yunnan frontier slivers; remaining '+yunnanSlivers.toFixed(4)+' km²');
+
 assert.equal(config(1100).points.circuits.find(c=>c.en==='Kaifeng capital district')?.kind,'Capital district');
 assert(!config(1100).points.municipalities.some(p=>p.aliases.includes('Xining Zhou')),'1100 has no later Xining prefecture');
 
@@ -108,10 +119,17 @@ assert(!config(1100).points.municipalities.some(p=>p.aliases.includes('Xining Zh
 // Checking only modern-China faces would miss whole commanderies beyond today's border.
 const contextFiles=['china-neighbours.bin','korea-context.bin','mongolia-context.bin','russia/context.bin','europe/bhutan/context.bin','japan-context.bin','world-land.bin'];
 const context=await Promise.all(contextFiles.map(async file=>(await decodeData(fs.readFileSync('dist/data/'+file))).features));
-const nearEastAsia=f=>{const [[w,s],[e,n]]=geographicBounds(f.geometry);return w<148&&e>66&&s<59&&n>15;};
+const nearEastAsia=f=>{const [[w,s],[e,n]]=geographicBounds(f.geometry);return w<148&&e>66&&s<59&&n>13;};
+const vietnamLand=await decodeData(fs.readFileSync('dist/data/europe/vietnam/context.bin'));
 const chinaMask=await command(fc(display.provinces.features),'-clean gap-width=0 -dissolve2');
-const nearby=fc(context.flat().filter(f=>f.properties.country!=='china'&&nearEastAsia(f)).map(f=>({...f,properties:{}})));
-const neighbours=await command({'land.json':nearby,'china.json':chinaMask},'-clip bbox=66,15,148,59 -erase china.json -dissolve2');
+const vietnamFirst=(await decodeData(fs.readFileSync('dist/data/europe/vietnam/first.bin'))).regions;
+const modernVietnam=await command(vietnamFirst,'-dissolve2 -clean gap-width=0');
+for(const [a,b] of [[vietnamLand,modernVietnam],[modernVietnam,vietnamLand]]){
+ const delta=await command({'a.json':a,'b.json':b},'-erase b.json');
+ assert(delta.features.filter(f=>f.geometry).reduce((n,f)=>n+area(polygons(f.geometry)),0)<1,'Vietnam preview and modern administrative land share the same full coastline');
+}
+const nearby=fc([...context.flat().filter(f=>f.properties.country!=='china'&&f.properties.country!=='vietnam'&&nearEastAsia(f)),...vietnamLand.features].map(f=>({...f,properties:{}})));
+const neighbours=await command({'land.json':nearby,'china.json':chinaMask},'-clip bbox=66,13,148,59 -erase china.json -dissolve2');
 const allLand=await command(fc([...chinaMask.features,...neighbours.features].map(f=>({...f,properties:{}}))),'-dissolve2');
 const coast=fc(allLand.features.map(f=>({...f,geometry:{type:'MultiPolygon',coordinates:polygons(f.geometry).map(([ring])=>[ring])}})));
 for(const {year} of manifest.snapshots.filter(s=>s.year<1820)){
@@ -124,6 +142,28 @@ for(const {year} of manifest.snapshots.filter(s=>s.year<1820)){
  assert(missingArea<100,year+' retains the modeled exterior territory; missing '+missingArea.toFixed(1)+' km²');
  console.log(year+': exterior source comparison, '+missingArea.toFixed(1)+' km² missing');
 }
+
+// Southern neighbors must retain their actual regional footprint, not China-edge scraps.
+for(const [key,sourceName,minimum] of [['shan','Shan States',240000],['lan-xang','Lan Xang',340000]]){
+ const c=config(1430),i=c.units.findIndex(u=>u.id===key),shown=fc(history.faces.features.filter((f,j)=>c.face[j]===i));
+ assert(i>=0&&shown.features.reduce((n,f)=>n+area(polygons(f.geometry)),0)>minimum,key+' retains its main body outside China');
+ const reference=fc(cliopatria.features.filter(f=>f.properties.Name===sourceName&&f.properties.FromYear<=1430&&f.properties.ToYear>=1430));
+ const expected=await command({'source.json':reference,'land.json':coast,'china.json':chinaMask},'-clip land.json -erase china.json');
+ const drawn=await command(shown,'-dissolve2 -clean gap-width=0');
+ const missing=await command({'expected.json':expected,'drawn.json':drawn},'-erase drawn.json');
+ assert(missing.features.filter(f=>f.geometry).reduce((n,f)=>n+area(polygons(f.geometry)),0)<100,key+' has no clipped exterior source region');
+ assert(c.units[i].label[1]<27&&c.units[i].label[0]<107,key+' label lies on its main regional footprint');
+}
+const daiVietIndex=ming.units.findIndex(u=>u.id==='dai-viet-1430');
+const daiViet=await command(fc(history.faces.features.filter((f,i)=>ming.face[i]===daiVietIndex)),'-dissolve2');
+const modernVNEnvelope=fc(vietnamLand.features.map(f=>({...f,geometry:{type:'MultiPolygon',coordinates:polygons(f.geometry).map(([ring])=>[ring])}})));
+const insideVN=await command({'dated.json':daiViet,'envelope.json':modernVNEnvelope},'-clip envelope.json');
+const waterConflict=await command({'dated.json':insideVN,'modern.json':vietnamLand},'-erase modern.json');
+assert(waterConflict.features.filter(f=>f.geometry).reduce((n,f)=>n+area(polygons(f.geometry)),0)<1,'Đại Việt uses modern Vietnam dry-land geometry without a second coastline');
+for(const [p,key] of [[[96.94,25.3],'shan'],[[96.37,24.78],'shan'],[[102.14,19.89],'lan-xang'],[[102.63,17.97],'lan-xang'],[[105.84,21.03],'dai-viet-1430'],[[107.59,16.46],'dai-viet-1430']])assert.equal(unit(1430,p),key,'1430 southern polity at '+p);
+for(const p of [[108.2,16.06],[108.8,15.12],[106.7,10.78]])assert(!faceTests.some((test,i)=>test(p)&&ming.face[i]===daiVietIndex),'1430 Đại Việt excludes the later southern expansion at '+p);
+assert(ming.units[daiVietIndex].note.includes('1427')&&ming.units[daiVietIndex].note.includes('approximate'));
+assert(!config(1100).units.find(u=>u.id==='dai-viet-1100').note?.includes('1430'),'The 1430 note cannot leak into the 1100 polity card');
 
 // The period's own states, and the share of land with no recorded polity.
 const states=year=>config(year).units.filter(u=>u.chinese).map(u=>u.key).sort();
@@ -166,7 +206,7 @@ for(const [name,p,checks] of [
  ['Nanchang',[115.86,28.68],{1430:'1430-circuit-jiangxi',1820:'25043',1949:'ROC-JIANGXI'}],
  ['Fuzhou',[119.3,26.08],{1430:'1430-circuit-fujian',1820:'25034',1949:'ROC-FUJIAN'}],
  ['Hangzhou',[120.15,30.27],{1430:'1430-circuit-zhejiang',1820:'25035',1949:'ROC-ZHEJIANG'}],
- ['Northern Vietnam',[105.85,21.03],{2:'han',250:'wu',742:'tang'}],
+ ['Northern Vietnam',[105.85,21.03],{2:'han',250:'wu',742:'tang',1430:'dai-viet-1430',1820:null,1949:null}],
  ['Pyongyang',[125.716,38.958],{2:'han',250:'cao-wei'}],
  ['Ming northeastern frontier',[136.34,47.09],{1430:'ming'}],
  ['Western source frontier',[74.355,40.609],{2:'han',250:'cao-wei'}],

@@ -1,0 +1,37 @@
+{
+  "retrieved": "2026-11-07",
+  "coverage": "Attested forms only, matched by official codes, with regional language scope filters. No name is inherited from a parent. Coverage varies by language and subdivision. Gallo theoretical forms and conflicting code-label matches are excluded. The Isle of Man retains its Crown Dependency status.",
+  "records": 68,
+  "names": 99,
+  "languages": {
+    "Irish": 10,
+    "Ulster Scots": 2,
+    "Scottish Gaelic": 32,
+    "Scots": 30,
+    "Welsh": 23,
+    "Manx": 1,
+    "Cornish": 1
+  },
+  "sources": [
+    {
+      "title": "Wikidata, CC0; official GSS and INSEE code matching",
+      "url": "https://www.wikidata.org/"
+    },
+    {
+      "title": "Manx reference",
+      "url": "https://www.gov.im/categories/home-and-neighbourhood/manx-gaelic/"
+    },
+    {
+      "title": "Ulster Scots reference",
+      "url": "https://www.ulsterscotsagency.com/fs/doc/new_range_of_ulster-scots_booklets/Who_is_the_USA_BK8_AW_6.pdf"
+    },
+    {
+      "title": "Ulster Scots reference",
+      "url": "https://www.ulsterscotsacademy.com/ullans/4/some-belfast-placenames.php"
+    },
+    {
+      "title": "OS Open Names and retained national statistical settlement names",
+      "url": "https://www.ordnancesurvey.co.uk/products/os-open-names"
+    }
+  ]
+}

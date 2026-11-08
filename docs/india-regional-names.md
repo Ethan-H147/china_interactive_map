@@ -2,11 +2,11 @@
 
 All 28 states and eight union territories use a curated regional-language profile. The primary local name uses the region’s language and script rather than a Hindi name for every state. A visible language caption above it identifies that language, using the same caption style as China’s regional names. Established regional and Indigenous communities are included; a census-wide migrant-language list and the smallest speech communities are outside this update’s scope. This is not a register of official-language status, and it does not claim exhaustive dialect coverage.
 
-The retained source snapshot produces 142 attested name forms and 157 additional language-presence entries. The latter identify communities for which this dataset does not contain a verified state-name spelling. The UI keeps these under **Other regional languages**, rather than inventing translations. Some attested forms have identical spellings in different languages. English primary forms in Nagaland and Arunachal Pradesh are included in the source total.
+The retained source snapshot produces 142 attested name forms and 157 additional language-presence entries. The latter identify communities for which this dataset does not contain a verified state-name spelling. The UI keeps these under **Other regional languages**, rather than inventing translations. Some attested forms have identical spellings in different languages. When one regional language is shown, the cards omit its name if it matches a heading. With multiple regional languages, separate labeled names remain visible even when spellings coincide. English primary forms in Nagaland and Arunachal Pradesh are included in the source total.
 
 Names use their attested script and language tag, including Urdu/Kashmiri right-to-left text, Santali in Ol Chiki, Meitei Mayek and Tibetan script. Sikkim’s three source-attested traditional Latin forms are explicitly marked **romanized**. These are regional traditional names, not additional official names. Name forms are searchable aliases. Existing English aliases remain searchable.
 
-A **Regional languages** disclosure is closed by default when there are more than three additional names or language-presence entries. Shorter lists remain visible. Each name links to its source. Language-presence links identify coverage sources; they do not assert a particular translated spelling. **Sources & coverage** links to the complete public dataset.
+A **Regional languages** disclosure is closed by default when there are more than three displayed name rows or language-presence entries. Shorter lists remain visible. Language labels and language-presence entries are plain text. **Sources & coverage** links to the complete public dataset, which retains the references for names and language coverage.
 
 ## Sources and reproducibility
 
@@ -27,4 +27,4 @@ The runtime uses the shared `regional-names.mjs` renderer and the `nameVariants`
 Open `http://127.0.0.1:4174/?preview=india-regional-names#india` and refresh. Select Tamil Nadu or Punjab to check the primary script, Jharkhand or Assam for the expandable list, Jammu and Kashmir for right-to-left names, and Sikkim for Tibetan and explicitly romanized traditional forms. Search also accepts the attested native names.
 
 - `npm run test:india-names` validates exact identities, coverage independent of spelling availability, source metadata, scripts/direction, native aliases and repeatable builds.
-- `npm run test:india-names-browser` checks all 36 records in real Chrome, disclosure defaults, keyboard and touch interaction, source links, safe literal text, phone layout and country switching.
+- `npm run test:india-names-browser` checks all 36 records in real Chrome, disclosure defaults, keyboard and touch interaction, plain language labels, duplicate suppression, safe literal text, phone layout and country switching.

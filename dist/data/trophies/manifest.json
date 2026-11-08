@@ -8,8 +8,8 @@
       "addedOrder": 1,
       "title": "Great Wall",
       "file": "data/trophies/china-great-wall.glb",
-      "triangles": 49432,
-      "bytes": 3566168,
+      "triangles": 82089,
+      "bytes": 6856632,
       "source": "Boundary Atlas original"
     },
     {
@@ -57,8 +57,8 @@
       "addedOrder": 5,
       "title": "Gyeongbokgung throne hall",
       "file": "data/trophies/korea-gyeongbokgung.glb",
-      "triangles": 95590,
-      "bytes": 6917548,
+      "triangles": 104478,
+      "bytes": 7558176,
       "source": "Boundary Atlas original"
     },
     {
@@ -87,18 +87,28 @@
       "addedOrder": 8,
       "title": "Obelisco medallion",
       "file": "data/trophies/argentina.glb",
-      "triangles": 93531,
-      "bytes": 6767228,
+      "triangles": 44647,
+      "bytes": 3247576,
       "source": "Boundary Atlas original"
     },
     {
-      "country": "chile",
+      "country": "united-kingdom",
       "addedAt": "2026-10-28T01:29:33Z",
-      "addedOrder": 9,
-      "title": "Moai on an ahu",
-      "file": "data/trophies/chile.glb",
-      "triangles": 47708,
-      "bytes": 3438676,
+      "addedOrder": 11,
+      "title": "Elizabeth Tower",
+      "file": "data/trophies/united-kingdom.glb",
+      "triangles": 43682,
+      "bytes": 3299268,
+      "source": "Boundary Atlas original"
+    },
+    {
+      "country": "italy",
+      "addedAt": "2026-10-28T01:29:33Z",
+      "addedOrder": 13,
+      "title": "Colosseum",
+      "file": "data/trophies/italy.glb",
+      "triangles": 101366,
+      "bytes": 7305440,
       "source": "Boundary Atlas original"
     },
     {
@@ -114,17 +124,17 @@
       "addedOrder": 10,
       "title": "Christ the Redeemer",
       "file": "data/trophies/brazil-christ-v2.glb",
-      "triangles": 29476,
-      "bytes": 2126452
+      "triangles": 77337,
+      "bytes": 6127624
     },
     {
-      "country": "united-kingdom",
+      "country": "chile",
       "addedAt": "2026-10-28T01:29:33Z",
-      "addedOrder": 11,
-      "title": "Elizabeth Tower",
-      "file": "data/trophies/united-kingdom.glb",
-      "triangles": 43682,
-      "bytes": 3299268,
+      "addedOrder": 9,
+      "title": "Moai on an ahu",
+      "file": "data/trophies/chile.glb",
+      "triangles": 69521,
+      "bytes": 6945832,
       "source": "Boundary Atlas original"
     },
     {
@@ -133,18 +143,8 @@
       "addedOrder": 12,
       "title": "Sagrada Família",
       "file": "data/trophies/spain.glb",
-      "triangles": 86430,
-      "bytes": 6230068,
-      "source": "Boundary Atlas original"
-    },
-    {
-      "country": "italy",
-      "addedAt": "2026-10-28T01:29:33Z",
-      "addedOrder": 13,
-      "title": "Colosseum",
-      "file": "data/trophies/italy.glb",
-      "triangles": 101366,
-      "bytes": 7305440,
+      "triangles": 54084,
+      "bytes": 4846800,
       "source": "Boundary Atlas original"
     }
   ],

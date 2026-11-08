@@ -1,3 +1,4 @@
+import {clearChinaPronunciation} from './china-pronunciation.mjs';
 // China's historical snapshots for the shared historic view (historic-view.mjs), from the
 // Han through the Republic of China, built by scripts/build-china-history.mjs.
 import {createHistoricBorders,packShapes,shapeAt} from './historic-borders.mjs';
@@ -27,7 +28,7 @@ const MING_SOURCE=['Hartwell / CHGIS Ming reconstruction','https://doi.org/10.79
 const sourceFor=year=>year===1430?MING_SOURCE:year===ROC_YEAR?ROC_SOURCE:year===QING_YEAR?QING_SOURCE:CLIOPATRIA;
 
 export const chinaHistory={
- label:'Historical snapshot',store:'atlas-china-history-year',file:'history/borders.bin',defaultYear:742,periods:true,standalone:true,labelTicks:true,
+ releaseOnLeave:true,label:'Historical snapshot',store:'atlas-china-history-year',file:'history/borders.bin',defaultYear:742,periods:true,standalone:true,labelTicks:true,
  yearText:year=>PERIODS[year].year,dateText:year=>PERIODS[year].name,
  sourceName:year=>sourceFor(year)[0],source:year=>sourceFor(year)[1],
  title:year=>PERIODS[year].name+', '+PERIODS[year].year,
@@ -70,6 +71,9 @@ export function attachChinaHistory(map,host){
     if(republic||circuitYear(year)||year===1430)installPoints(view.datedPoints(),republic);
     sidebar.dataset.history=republic?'roc':qing?'qing':circuitData?'circuits':'true';
     shownYear=year;
+    const units=view.datedOptions().map(u=>({id:u.id,en:u.name,local:u.zh,kind:u.kind||u.type,aliases:u.aliases}));
+    placeSearch=host.createSearch([...units,...(circuitData?.coverage?circuitData.circuits:[]),...municipalities]);
+    host.clearSearch();
     host.syncLand();
     history.replaceState(null,'','#china/history='+year);
     if(qing&&previous!==ROC_YEAR){
@@ -106,7 +110,6 @@ export function attachChinaHistory(map,host){
   for(const layer of layers){map.addLayer(layer);setLayerVisible(map,layer.id,true);}
   const units=view.datedOptions().map(u=>({id:u.id,en:u.name,local:u.zh,kind:u.kind,aliases:u.aliases}));
   const records=[...units,...(circuitData?.coverage?circuitData.circuits:[]),...places];
-  placeSearch=host.createSearch(records);
   if(!republic)return;
   const picker=$('province');modernOptions=[...picker.options];
   picker.replaceChildren(new Option('All Republic of China',''),...records.sort((a,b)=>a.en.localeCompare(b.en)).map(r=>new Option(r.en,r.id)));
@@ -162,11 +165,16 @@ export function attachChinaHistory(map,host){
  function showUnit(){
   view.renderState($('history-card'));
   if(!view.active)return;
+  clearChinaPronunciation();
   if(shownYear===ROC_YEAR)$('province').value=city?.id||view.datedSelection;
   const place=city||circuit;
   const record=place?{kind:place.kind,unit:{name:place.en,zh:place.local}}:view.datedRecord;
   if(!record){$('selection').hidden=true;$('tab-explore').hidden=true;host.showPanel('layers');return;}
   const {unit}=record;host.clearSelection();
+  if(!place&&shownYear===1430&&!unit.id.startsWith("1430-circuit-")){
+   const link=$("history-card").querySelector(".election-source");
+   if(link){link.href=CLIOPATRIA[1];link.textContent="Borders: "+CLIOPATRIA[0];}
+  }
   if(place||unit.capital||unit.statusSource){
    const card=$('history-card');
    if(place)card.replaceChildren();
@@ -175,7 +183,7 @@ export function attachChinaHistory(map,host){
    if(city?.circuit)fact('Division',circuitData.circuits.find(c=>c.id===city.circuit)?.en);
    if(place){const note=document.createElement('p');note.className='country-note';note.textContent=place.statusNote;card.append(note);}
    const sourceLink=(source,title)=>{if(!source)return;const link=document.createElement('a');link.className='election-source';link.href=source;link.target='_blank';link.rel='noopener';link.textContent=title;card.append(link);};
-   sourceLink(city?.statusSource||(place&&circuitData?.source),city?.statusSourceLabel?.trim()||(place&&circuitData?.attribution)||'Historical reference');
+   sourceLink(city?.statusSource||(!place&&unit.statusSource!==sourceFor(shownYear)[1]?unit.statusSource:undefined)||(place&&circuitData?.source),city?.statusSourceLabel?.trim()||(place&&circuitData?.attribution)||'Historical reference');
    sourceLink(city?.primary||circuit?.primary,'Historical geography reference');
    card.hidden=false;
   }
@@ -197,7 +205,7 @@ export function attachChinaHistory(map,host){
   view.renderSummary($('history-summary'));view.renderState($('history-card'));syncButton();host.syncLayers();host.updateLabels();return entering;
  }
  return {
-  get active(){return view.active;},get replacesLand(){return view.active&&replacesLand(shownYear);},get isRepublic(){return view.active&&shownYear===ROC_YEAR;},get hasHistoricalCities(){return !!municipalityDots;},get selection(){return city?.id||circuit?.id||view.datedSelection;},set,leave,search(query){const matches=placeSearch?.(query);return circuitData&&!matches?.length?undefined:matches;},selectPlace,
+  get active(){return view.active;},get replacesLand(){return view.active&&replacesLand(shownYear);},get isRepublic(){return view.active&&shownYear===ROC_YEAR;},get hasHistoricalCities(){return !!municipalityDots;},get selection(){return city?.id||circuit?.id||view.datedSelection;},set,leave,search(query){return placeSearch?.(query)||[];},selectPlace,
   coversLabel(center){return view.active&&!!view.hoverAt(map.project(center));},
   // A click, or a present-day place found by search, selects the historical unit there.
   click(point){

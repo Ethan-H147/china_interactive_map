@@ -1,7 +1,7 @@
 // Country data can vary; interaction, selection and detail policies are shared.
 export const SEARCH_LIMIT=20;
 export const LABEL_CANDIDATE_LIMIT=100;
-export const normalizeSearch=value=>String(value||'').normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase().replace(/[\s\p{P}\p{S}]/gu,'');
+export const normalizeSearch=value=>String(value||'').normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase().replace(/đ/g,'d').replace(/[\s\p{P}\p{S}]/gu,'');
 export const SELECTION_STATE_PREFIX='_atlasSelection:';
 export const selectedOpacity=value=>{
  if(!Array.isArray(value))return value;

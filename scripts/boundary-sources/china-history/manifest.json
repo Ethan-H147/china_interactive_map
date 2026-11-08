@@ -137,5 +137,17 @@
    "1949": "Existing historical divisions and separately labelled claims; keep their documented corrections and status."
   },
   "annamReference": "https://www.cambridge.org/core/journals/journal-of-the-royal-asiatic-society/article/annan-protectorate-in-northern-vietnam-during-the-tang-period-679907/0330A3F32086B5B1AEFC262A54FBF023"
+ },
+ "southernNeighbours1430": {
+  "notes": "Show the full retained Shan States and Lan Xang shapes on the shared atlas land, rather than their intersections with modern China or the Qing footprint. Shan States is an approximate grouping of principalities, not one centralized kingdom. The Lê feature spans 1429–1474; its later southern expansion is not used as a secure 1430 boundary. The approximate southern limit follows the Hải Vân / Huế ridge, located with the modern Huế land footprint; it is not a verified 1430 survey. Historical inland land beyond modern Vietnam is preserved north of that limit. The historical coastline and inland water holes use the existing modern Vietnam context and province geometries. Within a 15 km coastal band, land within 25 km of the coarse source joins that same coastline.",
+  "files": [
+   "dist/data/europe/vietnam/context.bin",
+   "dist/data/europe/vietnam/first.bin"
+  ],
+  "references": [
+   "https://www.cambridge.org/core/journals/journal-of-southeast-asian-studies/article/abs/our-mountains-and-rivers-have-changed-nature-and-empire-in-the-ming-colonisation-of-dai-viet-140728/8C80AE99F170BD2D8E7891707996BD05",
+   "https://baotanglichsuquocgia.vn/vi/Articles/3101/73244/xu-quang-nam-xua-o-djau.html",
+   "https://ssic.gov.mm/geographical-information-of-shan-state/"
+  ]
  }
 }

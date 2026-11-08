@@ -1,4 +1,5 @@
 import {applyPopulationExpansion} from './population-expansion.mjs';
+import {repairHidalgoTlaxcala} from './repair-hidalgo-tlaxcala.mjs';
 import {applyIrishDistrictPopulation} from './us-ireland-statistics.mjs';
 import {geographicAreaKm2} from './geographic-area.mjs';
 import fs from 'node:fs';import assert from 'node:assert/strict';import {createRequire} from 'node:module';import {gzipSync} from 'node:zlib';import {polygons} from './geo-index.mjs';import {lineData,visibleSegments} from '../dist/adaptive-lines.mjs';import {countryContext} from './country-context.mjs';
@@ -14,6 +15,7 @@ export async function buildRegionalDataset({country,units,byLevel,sources,covera
  for(const [levelString,regions]of Object.entries(byLevel)){const level=+levelString;assert.equal(new Set(regions.features.map(f=>f.properties.id)).size,regions.features.length);counts[level]=regions.features.length;const points=await command(regions,'-points inner');
   for(let i=0;i<regions.features.length;i++){const f=regions.features[i],u=units.get(f.properties.id);assert(u&&u.level===level,'Exact unit identity '+f.properties.id);records.push({...u,center:points.features[i].geometry.coordinates,bounds:geographicBounds(f.geometry),areaKm2:u.reportedArea??geographicAreaKm2(f.geometry)});}
   whole[level]={regions,boundaries:sharedBorders(regions)};
+  if(country==='mexico'&&level===1)whole[level].boundaries=repairHidalgoTlaxcala(regions,whole[level].boundaries);
  }
  const first=new Map(records.filter(r=>r.level===1).map(r=>[r.id,r])),context=await buildContext(country,byLevel,records);
  write('context.bin',context);write('international.bin',lineData(fc([])));write('first.bin',whole[1]);
@@ -33,5 +35,6 @@ export async function buildContext(country,byLevel,records){
  // Geographic entry clusters keep remote islands focused without inventing new
  // administrative units. Each cluster restores its real parent page.
  context.features=context.features.flatMap(f=>{const r=records.find(r=>r.id===f.properties.region);if(!r?.focusPartsOnEntry)return[f];const parts=polygons(f.geometry).map(coordinates=>({coordinates,bounds:geographicBounds({type:'Polygon',coordinates})})),parent=parts.map((_,i)=>i),find=i=>parent[i]===i?i:parent[i]=find(parent[i]);for(let i=0;i<parts.length;i++)for(let j=0;j<i;j++){const a=parts[i].bounds,b=parts[j].bounds,dx=Math.max(0,a[0][0]-b[1][0],b[0][0]-a[1][0]),dy=Math.max(0,a[0][1]-b[1][1],b[0][1]-a[1][1]);if(Math.hypot(dx,dy)<.12)parent[find(i)]=find(j);}const groups=new Map();for(let i=0;i<parts.length;i++){const id=find(i);if(!groups.has(id))groups.set(id,[]);groups.get(id).push(parts[i].coordinates);}return[...groups.values()].map(coordinates=>{const geometry={type:'MultiPolygon',coordinates};return{type:'Feature',properties:{...f.properties,bounds:geographicBounds(geometry).flat()},geometry};});});
- return command(context,'-simplify dp interval=.002 planar keep-shapes');
+ // Vietnam history and modern previews share the full coastline; workers handle zoom detail.
+ return command(context,country==='vietnam'?'-clean gap-width=0':'-simplify dp interval=.002 planar keep-shapes');
 }

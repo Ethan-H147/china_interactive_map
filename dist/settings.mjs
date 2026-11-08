@@ -12,6 +12,12 @@ let storageAvailable=true,settings;try{const saved=JSON.parse(localStorage.getIt
 export const getSettings=()=>({...settings});
 // Legacy styling is a developer-mode setting: a saved choice applies only while developer mode is on.
 export const legacyStylingActive=()=>settings.legacyStyling&&!!globalThis.AtlasDev?.enabled;
+// Developer preview: shows every medal and trinket as unlocked. Held in memory only, never saved,
+// synced or written to quiz records, and cleared when developer mode ends.
+let collectiblesReveal=false;
+export const collectiblesRevealed=()=>collectiblesReveal&&!!globalThis.AtlasDev?.enabled;
+export function setCollectiblesRevealed(value){if(collectiblesReveal===!!value)return;collectiblesReveal=!!value;globalThis.dispatchEvent?.(new Event('atlas-collectibles-reveal'));}
+globalThis.addEventListener?.('atlas-developer-change',()=>{if(!globalThis.AtlasDev?.enabled)setCollectiblesRevealed(false);});
 // A country's map fill; portal.legacyFill or map.legacy keeps an earlier colour for Legacy styling.
 export function countryFill(definition){const legacy=legacyStylingActive()&&(definition?.portal?.legacyFill||definition?.map?.legacy?.fill);return legacy||definition?.map?.fill||definition?.portal?.fill;}
 export const prefersReducedMotion=()=>settings.motion==='reduce'||globalThis.matchMedia?.('(prefers-reduced-motion: reduce)').matches===true;
@@ -40,11 +46,14 @@ export function mountSettings({refreshLabels,refreshStyling=()=>{},setProjection
  <label class="settings-row" for="settings-hover-info"><span><strong>Place info on hover</strong><small>Show names and details beside the cursor</small></span><input id="settings-hover-info" type="checkbox" role="switch" data-setting="hoverInfo"></label>
  <label class="settings-row" for="settings-legacy-styling" data-developer-setting hidden><span><strong>Legacy styling</strong><small>Individual colors for Chinese provinces and earlier map colors</small></span><input id="settings-legacy-styling" type="checkbox" role="switch" data-setting="legacyStyling"></label>
  <label class="settings-field" for="settings-projection">Map view<select id="settings-projection" data-setting="projection"><option value="mercator">Flat map</option><option value="globe">Globe</option></select></label>
- <label class="settings-field" for="settings-motion">Motion<select id="settings-motion" data-setting="motion"><option value="system">Use device setting</option><option value="reduce">Reduce motion</option></select></label></fieldset></div>
+ <label class="settings-field" for="settings-motion">Motion<select id="settings-motion" data-setting="motion"><option value="system">Use device setting</option><option value="reduce">Reduce motion</option></select></label></fieldset>
+ <fieldset data-developer-setting hidden><legend>Quiz collection</legend>
+ <label class="settings-row" for="settings-reveal-collectibles"><span><strong>Reveal collectibles</strong><small>Show every medal and trinket without unlocking them</small></span><input id="settings-reveal-collectibles" type="checkbox" role="switch"></label></fieldset></div>
  <footer class="settings-footer"><span role="status" aria-live="polite">Saved on this device</span><button id="settings-reset" type="button">Reset settings</button></footer>`;
  document.body.append(dialog);
- const fields=[...dialog.querySelectorAll('[data-setting]')],projection=dialog.querySelector('#settings-projection');
- function sync(){for(const row of dialog.querySelectorAll('[data-developer-setting]'))row.hidden=!globalThis.AtlasDev?.enabled;dialog.querySelector(".settings-footer span").textContent=savedLabel();const value=getSettings();for(const input of fields){const key=input.dataset.setting;if(input.type==='checkbox')input.checked=value[key];else if(input.value!==String(value[key]))input.value=value[key];}dialog.querySelector('#settings-heading-size-value').textContent=value.placeHeadingSize+' px';dialog.querySelector('#settings-heading-size').setAttribute('aria-valuetext',value.placeHeadingSize+' pixels');projection.disabled=document.getElementById("globe-view").disabled;const next=getProjection();if(projection.value!==next)projection.value=next;}
+ const fields=[...dialog.querySelectorAll('[data-setting]')],projection=dialog.querySelector('#settings-projection'),reveal=dialog.querySelector('#settings-reveal-collectibles');
+ reveal.addEventListener('change',()=>setCollectiblesRevealed(reveal.checked));
+ function sync(){for(const row of dialog.querySelectorAll('[data-developer-setting]'))row.hidden=!globalThis.AtlasDev?.enabled;reveal.checked=collectiblesRevealed();dialog.querySelector(".settings-footer span").textContent=savedLabel();const value=getSettings();for(const input of fields){const key=input.dataset.setting;if(input.type==='checkbox')input.checked=value[key];else if(input.value!==String(value[key]))input.value=value[key];}dialog.querySelector('#settings-heading-size-value').textContent=value.placeHeadingSize+' px';dialog.querySelector('#settings-heading-size').setAttribute('aria-valuetext',value.placeHeadingSize+' pixels');projection.disabled=document.getElementById("globe-view").disabled;const next=getProjection();if(projection.value!==next)projection.value=next;}
  for(const field of fields)field.addEventListener(field.type==='range'?'input':'change',()=>setSettings({[field.dataset.setting]:field.type==='checkbox'?field.checked:field.type==='range'?Number(field.value):field.value}));
 
  trigger.onclick=()=>{if(dialog.open)return;if(!document.getElementById('country-menu').hidden)document.getElementById('country-switch').click();sync();(document.fullscreenElement||document.body).append(dialog);dialog.showModal();trigger.setAttribute('aria-expanded','true');};
@@ -52,8 +61,8 @@ export function mountSettings({refreshLabels,refreshStyling=()=>{},setProjection
  dialog.addEventListener('keydown',event=>{if(event.key!=='Tab')return;const controls=[...dialog.querySelectorAll('button,input,select,a[href]')].filter(el=>!el.disabled&&el.getClientRects().length),first=controls[0],last=controls.at(-1);if(event.shiftKey&&document.activeElement===first){event.preventDefault();last.focus();}else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first.focus();}});
  dialog.addEventListener('close',()=>{trigger.setAttribute('aria-expanded','false');trigger.focus({preventScroll:true});});
  dialog.addEventListener('click',event=>{if(event.target!==dialog)return;const r=dialog.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)dialog.close();});
- dialog.querySelector('#settings-reset').onclick=()=>{setSettings(defaults);sync();};
+ dialog.querySelector('#settings-reset').onclick=()=>{setSettings(defaults);setCollectiblesRevealed(false);sync();};
  let applied=getSettings();globalThis.addEventListener('atlas-settings-change',()=>{const next=getSettings(),previous=applied;applied=next;if(next.projection!==previous.projection)setProjection(next.projection);sync();if(['placeNames','countryNames','countryLanguage','labelSize'].some(key=>next[key]!==previous[key]))refreshLabels();if(next.legacyStyling!==previous.legacyStyling)refreshStyling();applied=next;});
  new MutationObserver(()=>{if(dialog.open)sync();}).observe(document.getElementById('globe-view'),{attributes:true,attributeFilter:['aria-pressed','disabled']});
- globalThis.addEventListener('atlas-settings-sync',sync);globalThis.addEventListener('atlas-developer-change',()=>{sync();refreshStyling();});setProjection(getSettings().projection);sync();return{dialog};
+ globalThis.addEventListener('atlas-settings-sync',sync);globalThis.addEventListener('atlas-collectibles-reveal',sync);globalThis.addEventListener('atlas-developer-change',()=>{sync();refreshStyling();});setProjection(getSettings().projection);sync();return{dialog};
 }

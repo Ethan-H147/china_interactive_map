@@ -8,7 +8,7 @@ Interactive static map using DataV GeoAtlas, official Taiwan, Hong Kong and Maca
 
 Brazil, Argentina and Uruguay use the same regional renderer as the United States. Their existing boundary coordinates and scoped subdivision files are retained; the adapter in `scripts/build-south-america-regional.mjs` supplies the shared catalogues and previews. Brazil retains its DDD view and explicit unavailable CEP view; Argentina retains its 80 city points, municipality outlines and CABA page alias. Run `npm run test:south-america-regional` for geometry preservation and desktop/phone integration checks.
 
-Detailed country data uses one shared three-country memory budget. The active country and up to two recent countries stay cached; older country datasets unload and return on demand. See [country memory](docs/country-memory.md) for cleanup and checks.
+Detailed country data uses one shared active-country memory budget. Inactive country datasets unload and return on demand. China historical snapshots release their geometry on exit. See [country memory](docs/country-memory.md) for cleanup and checks.
 
 Map settings is the default panel. Selecting a region opens its details; Featured regions is temporarily hidden. Cultural cards are assigned to their province and specific subdivision codes. Subdivision lists appear only for a region whose children are included in the dataset.
 

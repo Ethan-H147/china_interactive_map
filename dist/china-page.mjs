@@ -1,3 +1,5 @@
+import {mountChinaPronunciation} from './china-pronunciation.mjs';
+export {setChinaPronunciation,clearChinaPronunciation,stopPlacePronunciation} from './china-pronunciation.mjs';
 export {renderPopulationMetrics} from './china-population.mjs';
 import {createCountryPage} from './country-page.mjs';
 import {chinaInfoPanel,chinaRomanizationDialog,wireChinaInfo} from './china-info.mjs';
@@ -23,7 +25,7 @@ export function mountChinaPage(){
  kindId:`selection-kind`,
  nameId:`selection-name`,
  nameLang:`en`,
- names:`<p id="selection-chinese" lang="zh"></p><div id="selection-regional" class="regional-names" hidden></div>`
+ names:`<div class="china-name-audio"><p id="selection-chinese" lang="zh"></p><button type="button" id="china-pronunciation" class="pronunciation-button" aria-label="Play Mandarin pronunciation (AI-generated)" title="Play Mandarin pronunciation (AI-generated)" aria-pressed="false" hidden><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4Z"/><path d="M15 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/></svg></button></div><p id="china-pronunciation-status" class="pronunciation-status" role="status"></p><div id="selection-regional" class="regional-names" hidden></div>`
 },
  cards:`<section id="history-card" class="place-phone-card election-card" hidden></section><div id="selection-meta" class="country-card-anchor" hidden></div><section id="population" class="population" aria-labelledby="population-heading" hidden>
   <h3 id="population-heading">Population</h3>
@@ -50,5 +52,5 @@ export function mountChinaPage(){
  hidden:false
 });
  document.querySelector('.workspace').insertBefore(page,document.getElementById('map-shell'));
- document.body.insertAdjacentHTML('beforeend',chinaRomanizationDialog+crossStraitDialog);infoReader=wireChinaInfo();crossStraitReader=wireCrossStraitInfo();return page;
+ mountChinaPronunciation();document.body.insertAdjacentHTML('beforeend',chinaRomanizationDialog+crossStraitDialog);infoReader=wireChinaInfo();crossStraitReader=wireCrossStraitInfo();return page;
 }

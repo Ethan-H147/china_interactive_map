@@ -1,0 +1,3398 @@
+{
+  "totals": {
+    "united-kingdom": {
+      "records": 68,
+      "names": 99,
+      "languages": {
+        "Irish": 10,
+        "Ulster Scots": 2,
+        "Scottish Gaelic": 32,
+        "Scots": 30,
+        "Welsh": 23,
+        "Manx": 1,
+        "Cornish": 1
+      }
+    },
+    "france": {
+      "records": 21174,
+      "names": 23835,
+      "languages": {
+        "Occitan": 10733,
+        "Franco-Provençal / Arpitan": 2007,
+        "Picard": 3768,
+        "West Flemish": 646,
+        "Alsatian": 867,
+        "Catalan": 221,
+        "Norman": 2563,
+        "Basque": 536,
+        "Breton": 1369,
+        "Gallo": 761,
+        "Corsican": 363,
+        "Lorraine Franconian": 1
+      }
+    }
+  },
+  "conflicts": [
+    {
+      "id": "GB-C-S12000013",
+      "lang": "gd",
+      "values": [
+        "Na h-Eileanan an Iar",
+        "Comhairle nan Eilean Siar"
+      ]
+    },
+    {
+      "id": "FR-C-01015",
+      "lang": "frp",
+      "values": [
+        "Arbignieu",
+        "Arboys-en-Bugey"
+      ]
+    },
+    {
+      "id": "FR-C-01033",
+      "lang": "frp",
+      "values": [
+        "Bellegarde-sur-Valserine",
+        "Valserhône"
+      ]
+    },
+    {
+      "id": "FR-C-01080",
+      "lang": "frp",
+      "values": [
+        "Champdor",
+        "Champdor-Corcelles"
+      ]
+    },
+    {
+      "id": "FR-C-01104",
+      "lang": "frp",
+      "values": [
+        "Chèseri-Forens",
+        "Chèseri"
+      ]
+    },
+    {
+      "id": "FR-C-01187",
+      "lang": "frp",
+      "values": [
+        "Hotonnes",
+        "Haut-Valromey"
+      ]
+    },
+    {
+      "id": "FR-C-01204",
+      "lang": "frp",
+      "values": [
+        "Lalleyriat",
+        "Le Poizat-Lalleyriat"
+      ]
+    },
+    {
+      "id": "FR-C-01267",
+      "lang": "frp",
+      "values": [
+        "Nurieux-Volognat",
+        "Mornay"
+      ]
+    },
+    {
+      "id": "FR-C-01286",
+      "lang": "frp",
+      "values": [
+        "Parves",
+        "Parves-et-Nattages"
+      ]
+    },
+    {
+      "id": "FR-C-01338",
+      "lang": "frp",
+      "values": [
+        "Sent-Benimo",
+        "Groslée-Saint-Benoît"
+      ]
+    },
+    {
+      "id": "FR-C-01426",
+      "lang": "frp",
+      "values": [
+        "Treffort-Cuisiat",
+        "Val-Revermont",
+        "Trèfôrt"
+      ]
+    },
+    {
+      "id": "FR-C-02008",
+      "lang": "pcd",
+      "values": [
+        "Aizy-Jouy",
+        "Aizy"
+      ]
+    },
+    {
+      "id": "FR-C-02053",
+      "lang": "pcd",
+      "values": [
+        "Baulne-en-Brie",
+        "Vallées en Champagne"
+      ]
+    },
+    {
+      "id": "FR-C-02140",
+      "lang": "pcd",
+      "values": [
+        "Camelin",
+        "Camelin-et-le-Fresne"
+      ]
+    },
+    {
+      "id": "FR-C-02439",
+      "lang": "pcd",
+      "values": [
+        "Longueval-Barbonval",
+        "Les Septvallons"
+      ]
+    },
+    {
+      "id": "FR-C-02458",
+      "lang": "pcd",
+      "values": [
+        "Marchais-en-Brie",
+        "Dhuys-et-Morin-en-Brie"
+      ]
+    },
+    {
+      "id": "FR-C-02524",
+      "lang": "pcd",
+      "values": [
+        "Mont-Saint-Père",
+        "Charmont-sur-Marne"
+      ]
+    },
+    {
+      "id": "FR-C-02757",
+      "lang": "pcd",
+      "values": [
+        "Vadencourt",
+        "Vadencourt-et-Bohéries"
+      ]
+    },
+    {
+      "id": "FR-C-04033",
+      "lang": "oc",
+      "values": [
+        "La Breula",
+        "Ubaia e La Sèrra de Ponçon"
+      ]
+    },
+    {
+      "id": "FR-C-04046",
+      "lang": "oc",
+      "values": [
+        "Lo Chafauc e Sant Jurson",
+        "Le Chaffaut-Lagremuse"
+      ]
+    },
+    {
+      "id": "FR-C-04072",
+      "lang": "oc",
+      "values": [
+        "Drais",
+        "Archail-Draix"
+      ]
+    },
+    {
+      "id": "FR-C-04120",
+      "lang": "oc",
+      "values": [
+        "Maironas",
+        "Val-d'Oronaye"
+      ]
+    },
+    {
+      "id": "FR-C-05001",
+      "lang": "oc",
+      "values": [
+        "Abries",
+        "Abries e Ristolàs"
+      ]
+    },
+    {
+      "id": "FR-C-05053",
+      "lang": "oc",
+      "values": [
+        "Aiguians",
+        "Garde-Colombe"
+      ]
+    },
+    {
+      "id": "FR-C-05064",
+      "lang": "oc",
+      "values": [
+        "La Chapela en Gaudemar",
+        "Guillaume-Peyrouse"
+      ]
+    },
+    {
+      "id": "FR-C-05101",
+      "lang": "oc",
+      "values": [
+        "Pelvós",
+        "Vau Loïsa e Pelvós"
+      ]
+    },
+    {
+      "id": "FR-C-05118",
+      "lang": "oc",
+      "values": [
+        "Ribiers",
+        "Val-Buëch-Méouge"
+      ]
+    },
+    {
+      "id": "FR-C-05139",
+      "lang": "oc",
+      "values": [
+        "Sant Estève de Devolui",
+        "Dévoluy"
+      ]
+    },
+    {
+      "id": "FR-C-07011",
+      "lang": "oc",
+      "values": [
+        "Entraigas",
+        "Vals d'Entraigas e Asperjòc"
+      ]
+    },
+    {
+      "id": "FR-C-07262",
+      "lang": "oc",
+      "values": [
+        "Sant Laurenç daus Banhs",
+        "Sant Laurenç daus Banhs e L'Aval d'Aurèla"
+      ]
+    },
+    {
+      "id": "FR-C-09056",
+      "lang": "oc",
+      "values": [
+        "Vesac",
+        "Vesac e Sent Amanç"
+      ]
+    },
+    {
+      "id": "FR-C-09088",
+      "lang": "oc",
+      "values": [
+        "Caissacs",
+        "Caissacs e Senconac"
+      ]
+    },
+    {
+      "id": "FR-C-09296",
+      "lang": "oc",
+      "values": [
+        "Sinsat",
+        "Aulòs e Sinsat"
+      ]
+    },
+    {
+      "id": "FR-C-09334",
+      "lang": "oc",
+      "values": [
+        "Vic de Sòs",
+        "Val de Sòs"
+      ]
+    },
+    {
+      "id": "FR-C-11080",
+      "lang": "oc",
+      "values": [
+        "Caudavalh",
+        "Val-de-Lambronne"
+      ]
+    },
+    {
+      "id": "FR-C-11128",
+      "lang": "oc",
+      "values": [
+        "Esculhens e Sant Just de Belengard",
+        "Esculhens"
+      ]
+    },
+    {
+      "id": "FR-C-11131",
+      "lang": "oc",
+      "values": [
+        "Fan",
+        "Fan e Rovenac"
+      ]
+    },
+    {
+      "id": "FR-C-11195",
+      "lang": "oc",
+      "values": [
+        "Laurapuc",
+        "Laurabuc-et-Mireval"
+      ]
+    },
+    {
+      "id": "FR-C-11251",
+      "lang": "oc",
+      "values": [
+        "Montlaur",
+        "Val de Danha"
+      ]
+    },
+    {
+      "id": "FR-C-11323",
+      "lang": "oc",
+      "values": [
+        "Ròcatalhada",
+        "Ròcatalhada e Conilhac"
+      ]
+    },
+    {
+      "id": "FR-C-12021",
+      "lang": "oc",
+      "values": [
+        "La Bastida de l'Avesque",
+        "Le Bas-Ségala"
+      ]
+    },
+    {
+      "id": "FR-C-12056",
+      "lang": "oc",
+      "values": [
+        "La Barraca de Fraisse",
+        "Carcenac-Peyralès"
+      ]
+    },
+    {
+      "id": "FR-C-12090",
+      "lang": "oc",
+      "values": [
+        "Druèla",
+        "Druèla e Balsac"
+      ]
+    },
+    {
+      "id": "FR-C-12120",
+      "lang": "oc",
+      "values": [
+        "Laissac",
+        "Laissac-Sévérac-l'Église"
+      ]
+    },
+    {
+      "id": "FR-C-12177",
+      "lang": "oc",
+      "values": [
+        "Palmàs d'Avairon",
+        "Palmàs"
+      ]
+    },
+    {
+      "id": "FR-C-12218",
+      "lang": "oc",
+      "values": [
+        "Sent Cebrian",
+        "Conques-en-Rouergue"
+      ]
+    },
+    {
+      "id": "FR-C-12223",
+      "lang": "oc",
+      "values": [
+        "Sant Jurvèva",
+        "Argences-en-Aubrac"
+      ]
+    },
+    {
+      "id": "FR-C-12224",
+      "lang": "oc",
+      "values": [
+        "Sent Ginièis d'Òlt",
+        "Saint-Geniez-d'Olt-et-d'Aubrac"
+      ]
+    },
+    {
+      "id": "FR-C-12270",
+      "lang": "oc",
+      "values": [
+        "Severac del Castèl",
+        "Sévérac-d'Aveyron"
+      ]
+    },
+    {
+      "id": "FR-C-12305",
+      "lang": "oc",
+      "values": [
+        "Vivièrs",
+        "Viviez-les-Albres"
+      ]
+    },
+    {
+      "id": "FR-C-14014",
+      "lang": "nrm",
+      "values": [
+        "Anguerny",
+        "Colomby-Anguerny"
+      ]
+    },
+    {
+      "id": "FR-C-14035",
+      "lang": "nrm",
+      "values": [
+        "Balleroy",
+        "Balleroy-sur-Drôme"
+      ]
+    },
+    {
+      "id": "FR-C-14037",
+      "lang": "nrm",
+      "values": [
+        "Banneville-sur-Ajon",
+        "Malherbe-sur-Ajon"
+      ]
+    },
+    {
+      "id": "FR-C-14061",
+      "lang": "nrm",
+      "values": [
+        "Le Bény-Bocage",
+        "Souleuvre-en-Bocage"
+      ]
+    },
+    {
+      "id": "FR-C-14174",
+      "lang": "nrm",
+      "values": [
+        "Condé-sur-Noireau",
+        "Condé-en-Normandie"
+      ]
+    },
+    {
+      "id": "FR-C-14336",
+      "lang": "nrm",
+      "values": [
+        "Hottot-les-Bagues",
+        "Hottot-Longraye"
+      ]
+    },
+    {
+      "id": "FR-C-14371",
+      "lang": "nrm",
+      "values": [
+        "Livarot",
+        "Livarot-Pays-d'Auge"
+      ]
+    },
+    {
+      "id": "FR-C-14474",
+      "lang": "nrm",
+      "values": [
+        "Notre-Dame-d'Estrées",
+        "Notre-Dame-d'Estrées-Corbon"
+      ]
+    },
+    {
+      "id": "FR-C-14475",
+      "lang": "nrm",
+      "values": [
+        "Noyers-Bocage",
+        "Noyers-Missy"
+      ]
+    },
+    {
+      "id": "FR-C-14554",
+      "lang": "nrm",
+      "values": [
+        "Saint-Aignan-de-Cramesnil",
+        "Le Castelet"
+      ]
+    },
+    {
+      "id": "FR-C-14570",
+      "lang": "nrm",
+      "values": [
+        "Saint-Cyr-du-Ronceray",
+        "Valorbiquet"
+      ]
+    },
+    {
+      "id": "FR-C-14576",
+      "lang": "nrm",
+      "values": [
+        "Sainte-Foy-de-Montgommery",
+        "Val-de-Vie"
+      ]
+    },
+    {
+      "id": "FR-C-14579",
+      "lang": "nrm",
+      "values": [
+        "Saint-Georges-d'Aunay",
+        "Seulline"
+      ]
+    },
+    {
+      "id": "FR-C-14689",
+      "lang": "nrm",
+      "values": [
+        "Thury-Harcourt",
+        "Thury-Harcourt-le-Hom"
+      ]
+    },
+    {
+      "id": "FR-C-14726",
+      "lang": "nrm",
+      "values": [
+        "Vassy",
+        "Valdallière"
+      ]
+    },
+    {
+      "id": "FR-C-14740",
+      "lang": "nrm",
+      "values": [
+        "La Vespière",
+        "La Vespière-Friardel"
+      ]
+    },
+    {
+      "id": "FR-C-14762",
+      "lang": "nrm",
+      "values": [
+        "Vire",
+        "Vire-Normandie"
+      ]
+    },
+    {
+      "id": "FR-C-15031",
+      "lang": "oc",
+      "values": [
+        "Cèlas",
+        "Cèlas (Cantal)"
+      ]
+    },
+    {
+      "id": "FR-C-15047",
+      "lang": "oc",
+      "values": [
+        "Chavanhac",
+        "Chavanhac (Cantal)"
+      ]
+    },
+    {
+      "id": "FR-C-15108",
+      "lang": "oc",
+      "values": [
+        "Lobaressa",
+        "Val-d'Arcomie"
+      ]
+    },
+    {
+      "id": "FR-C-15140",
+      "lang": "oc",
+      "values": [
+        "Naucèla",
+        "Naucelles-Reilhac"
+      ]
+    },
+    {
+      "id": "FR-C-15141",
+      "lang": "oc",
+      "values": [
+        "Nuçargues e Moissac",
+        "Neussargues en Pinatelle"
+      ]
+    },
+    {
+      "id": "FR-C-15142",
+      "lang": "oc",
+      "values": [
+        "Neuvéglise",
+        "Nòvaglèisa de Trueire"
+      ]
+    },
+    {
+      "id": "FR-C-15181",
+      "lang": "oc",
+      "values": [
+        "Sant Constant",
+        "Saint-Constant-Fournoulès"
+      ]
+    },
+    {
+      "id": "FR-C-15268",
+      "lang": "oc",
+      "values": [
+        "Le Rouget",
+        "Le Rouget-Pers"
+      ]
+    },
+    {
+      "id": "FR-C-16029",
+      "lang": "oc",
+      "values": [
+        "Bardenac",
+        "Brie-Bardenac"
+      ]
+    },
+    {
+      "id": "FR-C-16082",
+      "lang": "oc",
+      "values": [
+        "Charmant",
+        "Boinat de Tuda"
+      ]
+    },
+    {
+      "id": "FR-C-16106",
+      "lang": "oc",
+      "values": [
+        "Cofolents",
+        "Confolent"
+      ]
+    },
+    {
+      "id": "FR-C-16148",
+      "lang": "oc",
+      "values": [
+        "Genac",
+        "Genac-Bignac"
+      ]
+    },
+    {
+      "id": "FR-C-16153",
+      "lang": "oc",
+      "values": [
+        "Gondeville",
+        "Mainxe e Gondeville"
+      ]
+    },
+    {
+      "id": "FR-C-16175",
+      "lang": "oc",
+      "values": [
+        "Jurignac",
+        "Val des Vignes"
+      ]
+    },
+    {
+      "id": "FR-C-16192",
+      "lang": "oc",
+      "values": [
+        "Roumazières-Loubert",
+        "Loubert-Madieu"
+      ]
+    },
+    {
+      "id": "FR-C-16198",
+      "lang": "oc",
+      "values": [
+        "Magnac-Lavalette-Villars",
+        "Manhac e Garda"
+      ]
+    },
+    {
+      "id": "FR-C-16204",
+      "lang": "oc",
+      "values": [
+        "Malaville",
+        "Bellevigne"
+      ]
+    },
+    {
+      "id": "FR-C-16206",
+      "lang": "oc",
+      "values": [
+        "Mansle",
+        "Mansle-les-Fontaines"
+      ]
+    },
+    {
+      "id": "FR-C-16224",
+      "lang": "oc",
+      "values": [
+        "Montchaude",
+        "Montmérac"
+      ]
+    },
+    {
+      "id": "FR-C-16230",
+      "lang": "oc",
+      "values": [
+        "Montmoreau-Saint-Cybard",
+        "Montmaureu"
+      ]
+    },
+    {
+      "id": "FR-C-16281",
+      "lang": "oc",
+      "values": [
+        "La Ròcha Focaud",
+        "La Ròcha Focaud d'Engolmés"
+      ]
+    },
+    {
+      "id": "FR-C-16300",
+      "lang": "oc",
+      "values": [
+        "Saint-Angeau",
+        "Vau de Boniura"
+      ]
+    },
+    {
+      "id": "FR-C-16339",
+      "lang": "oc",
+      "values": [
+        "Auge-Saint-Médard",
+        "Vau d'Auja"
+      ]
+    },
+    {
+      "id": "FR-C-16406",
+      "lang": "oc",
+      "values": [
+        "Vilonor",
+        "Molins de Tardoira"
+      ]
+    },
+    {
+      "id": "FR-C-19123",
+      "lang": "oc",
+      "values": [
+        "Malamòrt",
+        "Malemort"
+      ]
+    },
+    {
+      "id": "FR-C-19248",
+      "lang": "oc",
+      "values": [
+        "Sanch Ibarch",
+        "Los Tres Sents"
+      ]
+    },
+    {
+      "id": "FR-C-19252",
+      "lang": "oc",
+      "values": [
+        "Sarron",
+        "Sarron e Sent Julian"
+      ]
+    },
+    {
+      "id": "FR-C-19261",
+      "lang": "oc",
+      "values": [
+        "Saurnac",
+        "Sornac-Saint-Germain-Lavolps"
+      ]
+    },
+    {
+      "id": "FR-C-22046",
+      "lang": "br",
+      "values": [
+        "Koedlinez",
+        "Ar Menez"
+      ]
+    },
+    {
+      "id": "FR-C-22055",
+      "lang": "br",
+      "values": [
+        "Staol",
+        "Binig-Staol"
+      ]
+    },
+    {
+      "id": "FR-C-22084",
+      "lang": "br",
+      "values": [
+        "Lanyugon",
+        "Lanyugon-Kumun-Nevez"
+      ]
+    },
+    {
+      "id": "FR-C-22093",
+      "lang": "br",
+      "values": [
+        "Lambal",
+        "Lambal-Arvor"
+      ]
+    },
+    {
+      "id": "FR-C-22107",
+      "lang": "br",
+      "values": [
+        "Lanniskad",
+        "Berrepoz-ar-Blavezh"
+      ]
+    },
+    {
+      "id": "FR-C-22158",
+      "lang": "br",
+      "values": [
+        "Mur",
+        "Gwerledan"
+      ]
+    },
+    {
+      "id": "FR-C-22190",
+      "lang": "br",
+      "values": [
+        "Plelin-Tregavoù",
+        "Plelin"
+      ]
+    },
+    {
+      "id": "FR-C-22203",
+      "lang": "br",
+      "values": [
+        "Ploheg",
+        "Ploheg-Peniti"
+      ]
+    },
+    {
+      "id": "FR-C-22204",
+      "lang": "br",
+      "values": [
+        "Pleuzal",
+        "Ploëzal-Runan"
+      ]
+    },
+    {
+      "id": "FR-C-22206",
+      "lang": "br",
+      "values": [
+        "Plagad",
+        "Kastellaodren-Plagad"
+      ]
+    },
+    {
+      "id": "FR-C-22209",
+      "lang": "br",
+      "values": [
+        "Plouvalae",
+        "Bosez-Poudour"
+      ]
+    },
+    {
+      "id": "FR-C-22213",
+      "lang": "br",
+      "values": [
+        "Plouhern",
+        "Plouër-Langrolay-sur-Rance"
+      ]
+    },
+    {
+      "id": "FR-C-22219",
+      "lang": "br",
+      "values": [
+        "Plougonwaz",
+        "Plougonwaz-Lanwal"
+      ]
+    },
+    {
+      "id": "FR-C-22237",
+      "lang": "br",
+      "values": [
+        "Pludunoù",
+        "Traoñ-Argenon"
+      ]
+    },
+    {
+      "id": "FR-C-22264",
+      "lang": "br",
+      "values": [
+        "Ar Roc'h-Derrien",
+        "Roc'h-ar-Yeodi"
+      ]
+    },
+    {
+      "id": "FR-C-22296",
+      "lang": "br",
+      "values": [
+        "Sant-Glenn",
+        "Saint-Glen-Penguily"
+      ]
+    },
+    {
+      "id": "FR-C-23109",
+      "lang": "oc",
+      "values": [
+        "Linard",
+        "Linard-Malval"
+      ]
+    },
+    {
+      "id": "FR-C-23149",
+      "lang": "oc",
+      "values": [
+        "Parçac",
+        "Parçac e Rimondés",
+        "Parçac (Marcha)"
+      ]
+    },
+    {
+      "id": "FR-C-24026",
+      "lang": "oc",
+      "values": [
+        "Bassilhac",
+        "Bassilhac e Aubaròcha"
+      ]
+    },
+    {
+      "id": "FR-C-24028",
+      "lang": "oc",
+      "values": [
+        "Bèlmont",
+        "Bèlmontés de Perigòrd"
+      ]
+    },
+    {
+      "id": "FR-C-24035",
+      "lang": "oc",
+      "values": [
+        "Belvés",
+        "Pays-de-Belvès"
+      ]
+    },
+    {
+      "id": "FR-C-24053",
+      "lang": "oc",
+      "values": [
+        "Bolasac",
+        "Boulazac-Isle-Manoire",
+        "Bolasac Eila Manoire"
+      ]
+    },
+    {
+      "id": "FR-C-24064",
+      "lang": "oc",
+      "values": [
+        "Brantòsme",
+        "Brantôme-en-Périgord",
+        "Brantòsme de Perigòrd"
+      ]
+    },
+    {
+      "id": "FR-C-24086",
+      "lang": "oc",
+      "values": [
+        "Castelnòu e La Capèla",
+        "Castelnaud-Fayrac"
+      ]
+    },
+    {
+      "id": "FR-C-24087",
+      "lang": "oc",
+      "values": [
+        "Castèls",
+        "Castèls e Besenac"
+      ]
+    },
+    {
+      "id": "FR-C-24117",
+      "lang": "oc",
+      "values": [
+        "Chavanhac",
+        "Los Termes Perigòrds"
+      ]
+    },
+    {
+      "id": "FR-C-24142",
+      "lang": "oc",
+      "values": [
+        "Lo Cos e Bigaròca",
+        "Coux-et-Bigaroque-Mouzens"
+      ]
+    },
+    {
+      "id": "FR-C-24147",
+      "lang": "oc",
+      "values": [
+        "Cujac",
+        "Cujac Auvesera Vau d'Ans"
+      ]
+    },
+    {
+      "id": "FR-C-24168",
+      "lang": "oc",
+      "values": [
+        "Eyrenville",
+        "Plasença"
+      ]
+    },
+    {
+      "id": "FR-C-24172",
+      "lang": "oc",
+      "values": [
+        "Las Aisiás de Taiac e Siruèlh",
+        "Las Aisiás"
+      ]
+    },
+    {
+      "id": "FR-C-24216",
+      "lang": "oc",
+      "values": [
+        "La Jamaia",
+        "La Jamaia e Pontairaud"
+      ]
+    },
+    {
+      "id": "FR-C-24229",
+      "lang": "oc",
+      "values": [
+        "Lo Lardin e Sent Lazar",
+        "Bersac"
+      ]
+    },
+    {
+      "id": "FR-C-24253",
+      "lang": "oc",
+      "values": [
+        "Maruelh",
+        "Maruelh de Perigòrd"
+      ]
+    },
+    {
+      "id": "FR-C-24260",
+      "lang": "oc",
+      "values": [
+        "Mausac e Grand Castanh",
+        "Mauzac-et-Saint-Meyme-de-Rozens"
+      ]
+    },
+    {
+      "id": "FR-C-24312",
+      "lang": "oc",
+      "values": [
+        "Nòstra Dama de Sanilhac",
+        "Sanilhac"
+      ]
+    },
+    {
+      "id": "FR-C-24316",
+      "lang": "oc",
+      "values": [
+        "Parcol",
+        "Parcoul-Chenaud"
+      ]
+    },
+    {
+      "id": "FR-C-24325",
+      "lang": "oc",
+      "values": [
+        "Puegs de l'Esperança",
+        "Pairilhac e Milhac"
+      ]
+    },
+    {
+      "id": "FR-C-24335",
+      "lang": "oc",
+      "values": [
+        "Lo Pòrt de Senta Fe e Ponchac",
+        "Port-Sainte-Foy"
+      ]
+    },
+    {
+      "id": "FR-C-24362",
+      "lang": "oc",
+      "values": [
+        "Vau de Loira e Caudau",
+        "Senta Alvèra",
+        "Sainte-Alvère-Saint-Laurent-les-Bâtons"
+      ]
+    },
+    {
+      "id": "FR-C-24364",
+      "lang": "oc",
+      "values": [
+        "Sench Amand de Còli",
+        "En Còli e Sench Amand"
+      ]
+    },
+    {
+      "id": "FR-C-24376",
+      "lang": "oc",
+      "values": [
+        "Senta Eulàlia",
+        "Saint-Aulaye-Puymangou"
+      ]
+    },
+    {
+      "id": "FR-C-24423",
+      "lang": "oc",
+      "values": [
+        "Senta Denença",
+        "Sent Júlia-Denença-Aulària"
+      ]
+    },
+    {
+      "id": "FR-C-24450",
+      "lang": "oc",
+      "values": [
+        "Sent Marçal de Nabirac",
+        "Saint-Martial-et-Saint-Aubin-de-Nabirat"
+      ]
+    },
+    {
+      "id": "FR-C-24490",
+      "lang": "oc",
+      "values": [
+        "Sent Privat daus Prats",
+        "Sent Privat de Perigòrd"
+      ]
+    },
+    {
+      "id": "FR-C-24534",
+      "lang": "oc",
+      "values": [
+        "Lo Sigolés",
+        "Lo Sigolés e Flaujac"
+      ]
+    },
+    {
+      "id": "FR-C-24540",
+      "lang": "oc",
+      "values": [
+        "Sòrges",
+        "Sòrges e Ligüers de Perigòrd"
+      ]
+    },
+    {
+      "id": "FR-C-24554",
+      "lang": "oc",
+      "values": [
+        "La Tor Blancha",
+        "La Tor Blancha e Cercle"
+      ]
+    },
+    {
+      "id": "FR-C-26001",
+      "lang": "oc",
+      "values": [
+        "Ais de Diés",
+        "Solaure-en-Diois"
+      ]
+    },
+    {
+      "id": "FR-C-26055",
+      "lang": "oc",
+      "values": [
+        "Boulc-Bonneval",
+        "Boulc"
+      ]
+    },
+    {
+      "id": "FR-C-26136",
+      "lang": "oc",
+      "values": [
+        "Vau Maravèu",
+        "Fourcinet"
+      ]
+    },
+    {
+      "id": "FR-C-26179",
+      "lang": "oc",
+      "values": [
+        "Mercurol",
+        "Mercurol-Veaunes"
+      ]
+    },
+    {
+      "id": "FR-C-27011",
+      "lang": "nrm",
+      "values": [
+        "Amfreville-la-Campagne",
+        "Amfreville-Saint-Amand"
+      ]
+    },
+    {
+      "id": "FR-C-27022",
+      "lang": "nrm",
+      "values": [
+        "Aubevoye",
+        "Le Val-d'Hazey"
+      ]
+    },
+    {
+      "id": "FR-C-27032",
+      "lang": "nrm",
+      "values": [
+        "Chambois",
+        "Avrilly"
+      ]
+    },
+    {
+      "id": "FR-C-27049",
+      "lang": "nrm",
+      "values": [
+        "Beaumesnil",
+        "Mesnil-en-Ouche"
+      ]
+    },
+    {
+      "id": "FR-C-27085",
+      "lang": "nrm",
+      "values": [
+        "Bosc-Bénard-Crescy",
+        "Flancourt-Crescy-en-Roumois"
+      ]
+    },
+    {
+      "id": "FR-C-27105",
+      "lang": "nrm",
+      "values": [
+        "Bourgtheroulde-Infreville",
+        "Grand-Bourgtheroulde"
+      ]
+    },
+    {
+      "id": "FR-C-27107",
+      "lang": "nrm",
+      "values": [
+        "Bourneville-Sainte-Croix",
+        "Bourneville"
+      ]
+    },
+    {
+      "id": "FR-C-27157",
+      "lang": "nrm",
+      "values": [
+        "Le Chesne",
+        "Marbois"
+      ]
+    },
+    {
+      "id": "FR-C-27191",
+      "lang": "nrm",
+      "values": [
+        "La Croix-Saint-Leufroy",
+        "Clef-Vallée-d'Eure"
+      ]
+    },
+    {
+      "id": "FR-C-27198",
+      "lang": "nrm",
+      "values": [
+        "Damville",
+        "Mesnils-sur-Iton"
+      ]
+    },
+    {
+      "id": "FR-C-27213",
+      "lang": "nrm",
+      "values": [
+        "Écos",
+        "Vexin-sur-Epte"
+      ]
+    },
+    {
+      "id": "FR-C-27277",
+      "lang": "nrm",
+      "values": [
+        "Garencières",
+        "La Baronnie"
+      ]
+    },
+    {
+      "id": "FR-C-27302",
+      "lang": "nrm",
+      "values": [
+        "Le Gros-Theil",
+        "Le Bosc-du-Theil"
+      ]
+    },
+    {
+      "id": "FR-C-27528",
+      "lang": "nrm",
+      "values": [
+        "Le Vaudreuil",
+        "Saint-Cyr-du-Vaudreuil"
+      ]
+    },
+    {
+      "id": "FR-C-27565",
+      "lang": "nrm",
+      "values": [
+        "Sainte-Marguerite-de-l'Autel",
+        "Le Lesme"
+      ]
+    },
+    {
+      "id": "FR-C-27578",
+      "lang": "nrm",
+      "values": [
+        "Saint-Ouen-d'Attez",
+        "Sainte-Marie-d'Attez"
+      ]
+    },
+    {
+      "id": "FR-C-27693",
+      "lang": "nrm",
+      "values": [
+        "Sylvains-lès-Moulins",
+        "Sylvains-Lès-Moulins"
+      ]
+    },
+    {
+      "id": "FR-C-29021",
+      "lang": "br",
+      "values": [
+        "Brignogan",
+        "Plouneour-Traezh-Brignogan"
+      ]
+    },
+    {
+      "id": "FR-C-29076",
+      "lang": "br",
+      "values": [
+        "Gwiproñvel",
+        "Milizag-Gwiproñvel"
+      ]
+    },
+    {
+      "id": "FR-C-29266",
+      "lang": "br",
+      "values": [
+        "Sant-Tegoneg",
+        "Sant-Tegoneg-Logeginer"
+      ]
+    },
+    {
+      "id": "FR-C-29302",
+      "lang": "br",
+      "values": [
+        "Pont-ar-Veuzenn-Kimerc'h",
+        "Pont-de-Buis"
+      ]
+    },
+    {
+      "id": "FR-C-30052",
+      "lang": "oc",
+      "values": [
+        "Brèu e Salagòssa",
+        "Brèu e Març"
+      ]
+    },
+    {
+      "id": "FR-C-30183",
+      "lang": "oc",
+      "values": [
+        "Molesan",
+        "Moulézan-et-Montagnac"
+      ]
+    },
+    {
+      "id": "FR-C-31040",
+      "lang": "oc",
+      "values": [
+        "Bachos-Binos",
+        "Baishòs"
+      ]
+    },
+    {
+      "id": "FR-C-31059",
+      "lang": "oc",
+      "values": [
+        "Bèthvéder de Comenge",
+        "Belbèze- Escoulis"
+      ]
+    },
+    {
+      "id": "FR-C-31144",
+      "lang": "oc",
+      "values": [
+        "Cièrp e Gaud",
+        "Cierp-Gaud-Signac"
+      ]
+    },
+    {
+      "id": "FR-C-31277",
+      "lang": "oc",
+      "values": [
+        "La Sèrra",
+        "La Sèrra e Pradèra"
+      ]
+    },
+    {
+      "id": "FR-C-31471",
+      "lang": "oc",
+      "values": [
+        "Sent Biat",
+        "Sent Biat e Les"
+      ]
+    },
+    {
+      "id": "FR-C-32045",
+      "lang": "oc",
+      "values": [
+        "Berdoas",
+        "Berdoues-Ponsampère"
+      ]
+    },
+    {
+      "id": "FR-C-32079",
+      "lang": "oc",
+      "values": [
+        "Castèthnau d'Eusan",
+        "Castelnau-d'Auzan-Labarrère"
+      ]
+    },
+    {
+      "id": "FR-C-32287",
+      "lang": "oc",
+      "values": [
+        "Montias",
+        "Monties-Aussos"
+      ]
+    },
+    {
+      "id": "FR-C-33008",
+      "lang": "oc",
+      "values": [
+        "Arbís",
+        "Pòrta de Benauja"
+      ]
+    },
+    {
+      "id": "FR-C-33018",
+      "lang": "oc",
+      "values": [
+        "Aubia e Espessàs",
+        "Val-de-Virvée"
+      ]
+    },
+    {
+      "id": "FR-C-33055",
+      "lang": "oc",
+      "values": [
+        "Blanhan",
+        "Blanhan e Prinhac"
+      ]
+    },
+    {
+      "id": "FR-C-33106",
+      "lang": "oc",
+      "values": [
+        "Castèths Andòrta",
+        "Castèths e Castilhon"
+      ]
+    },
+    {
+      "id": "FR-C-33268",
+      "lang": "oc",
+      "values": [
+        "Margaus",
+        "Margaus e Cantenac"
+      ]
+    },
+    {
+      "id": "FR-C-33380",
+      "lang": "oc",
+      "values": [
+        "Saint-Caprais-de-Blaye",
+        "Val-de-Livenne"
+      ]
+    },
+    {
+      "id": "FR-C-34246",
+      "lang": "oc",
+      "values": [
+        "Sant Cristòu",
+        "Sant Cristòu e Verargas"
+      ]
+    },
+    {
+      "id": "FR-C-35004",
+      "lang": "br",
+      "values": [
+        "Entraven",
+        "Traoñ-Kouenon"
+      ]
+    },
+    {
+      "id": "FR-C-35062",
+      "lang": "br",
+      "values": [
+        "Chapel-Yent",
+        "Ar Chapel-Flurinieg"
+      ]
+    },
+    {
+      "id": "FR-C-35163",
+      "lang": "br",
+      "values": [
+        "Loezherieg",
+        "Loezherieg-Dompêr"
+      ]
+    },
+    {
+      "id": "FR-C-35168",
+      "lang": "br",
+      "values": [
+        "Traoñ Anast",
+        "Anast"
+      ]
+    },
+    {
+      "id": "FR-C-35176",
+      "lang": "br",
+      "values": [
+        "Mezeg",
+        "Gwipri-Mezeg"
+      ]
+    },
+    {
+      "id": "FR-C-35191",
+      "lang": "br",
+      "values": [
+        "Montourz",
+        "Dorioù-ar-Gougleiz"
+      ]
+    },
+    {
+      "id": "FR-C-35206",
+      "lang": "br",
+      "values": [
+        "Noal-Kastellan",
+        "Noal"
+      ]
+    },
+    {
+      "id": "FR-C-35220",
+      "lang": "br",
+      "values": [
+        "Pereg",
+        "Pereg-Kantieg"
+      ]
+    },
+    {
+      "id": "FR-C-35257",
+      "lang": "br",
+      "values": [
+        "Sant-Brizh-Gougleiz",
+        "Maen-Roc'h"
+      ]
+    },
+    {
+      "id": "FR-C-35282",
+      "lang": "br",
+      "values": [
+        "Sant-Yann-ar-C'houenon",
+        "Glannoù-ar-C'houenon"
+      ]
+    },
+    {
+      "id": "FR-C-35308",
+      "lang": "br",
+      "values": [
+        "Sant-Pêr-Plewenn",
+        "Mesnil-Roc'h"
+      ]
+    },
+    {
+      "id": "FR-C-38001",
+      "lang": "oc",
+      "values": [
+        "Les Abrets",
+        "Les Abrets-en-Dauphiné"
+      ]
+    },
+    {
+      "id": "FR-C-38001",
+      "lang": "frp",
+      "values": [
+        "Los Âbrèts",
+        "Los Âbrèts-en-Dôfenât"
+      ]
+    },
+    {
+      "id": "FR-C-38022",
+      "lang": "oc",
+      "values": [
+        "Les Avenières",
+        "Les Avenières-Veyrins-Thuellin"
+      ]
+    },
+    {
+      "id": "FR-C-38022",
+      "lang": "frp",
+      "values": [
+        "Les Avenières",
+        "Les Avenières-Veyrins-Thuellin"
+      ]
+    },
+    {
+      "id": "FR-C-38053",
+      "lang": "oc",
+      "values": [
+        "Bourgoin-Jallieu",
+        "Bourgoin"
+      ]
+    },
+    {
+      "id": "FR-C-38053",
+      "lang": "frp",
+      "values": [
+        "Bourgoin-Jallieu",
+        "Bourgoin"
+      ]
+    },
+    {
+      "id": "FR-C-38085",
+      "lang": "oc",
+      "values": [
+        "Charvieu-Chavagneux",
+        "Charvieu"
+      ]
+    },
+    {
+      "id": "FR-C-38085",
+      "lang": "frp",
+      "values": [
+        "Charvieu-Chavagneux",
+        "Charvieu"
+      ]
+    },
+    {
+      "id": "FR-C-38139",
+      "lang": "oc",
+      "values": [
+        "Creys-Mépieu",
+        "Creys-et-Pusignieu"
+      ]
+    },
+    {
+      "id": "FR-C-38139",
+      "lang": "frp",
+      "values": [
+        "Creys-Mépieu",
+        "Creys-et-Pusignieu"
+      ]
+    },
+    {
+      "id": "FR-C-38152",
+      "lang": "oc",
+      "values": [
+        "Eclose",
+        "Eclose-Badinières"
+      ]
+    },
+    {
+      "id": "FR-C-38225",
+      "lang": "oc",
+      "values": [
+        "Méaudre",
+        "Autrans-Méaudre-en-Vercors"
+      ]
+    },
+    {
+      "id": "FR-C-38395",
+      "lang": "oc",
+      "values": [
+        "Saint-Hilaire",
+        "Plateau-des-Petites-Roches"
+      ]
+    },
+    {
+      "id": "FR-C-38439",
+      "lang": "oc",
+      "values": [
+        "Saint-Pierre-d'Allevard",
+        "Crêts-en-Belledonne"
+      ]
+    },
+    {
+      "id": "FR-C-38466",
+      "lang": "oc",
+      "values": [
+        "Saint-Vincent-de-Mercuze",
+        "Saint-Vincent-de-Mercuze-Sainte-Marie-du-Mont"
+      ]
+    },
+    {
+      "id": "FR-C-38466",
+      "lang": "frp",
+      "values": [
+        "Saint-Vincent-de-Mercuze",
+        "Saint-Vincent-de-Mercuze-Sainte-Marie-du-Mont"
+      ]
+    },
+    {
+      "id": "FR-C-38479",
+      "lang": "oc",
+      "values": [
+        "Semons",
+        "Porte-des-Bonnevaux"
+      ]
+    },
+    {
+      "id": "FR-C-40197",
+      "lang": "oc",
+      "values": [
+        "Morcens la Navèra",
+        "Morcens"
+      ]
+    },
+    {
+      "id": "FR-C-42005",
+      "lang": "frp",
+      "values": [
+        "Andrèsiô-Botion",
+        "Andrèsiô"
+      ]
+    },
+    {
+      "id": "FR-C-42039",
+      "lang": "frp",
+      "values": [
+        "Chalmazel",
+        "Vers-Charmasél-Genceniéres"
+      ]
+    },
+    {
+      "id": "FR-C-42218",
+      "lang": "frp",
+      "values": [
+        "Sant-Etiève",
+        "Saint-Étienne-sur-Loire"
+      ]
+    },
+    {
+      "id": "FR-C-42245",
+      "lang": "frp",
+      "values": [
+        "Saint-Julien-la-Vêtre",
+        "Lavètro-sus-Anzon"
+      ]
+    },
+    {
+      "id": "FR-C-42268",
+      "lang": "frp",
+      "values": [
+        "Saint-Paul-de-Vézelin",
+        "Véselyins-sus-Lêre"
+      ]
+    },
+    {
+      "id": "FR-C-42279",
+      "lang": "frp",
+      "values": [
+        "Saint-Just-Saint-Rambert",
+        "Saint-Rambert-sur-Loire"
+      ]
+    },
+    {
+      "id": "FR-C-43090",
+      "lang": "oc",
+      "values": [
+        "Esplantats",
+        "Esplantats e Vaselhas"
+      ]
+    },
+    {
+      "id": "FR-C-44003",
+      "lang": "br",
+      "values": [
+        "Ankiniz",
+        "Ankiniz-Sant-Gerent"
+      ]
+    },
+    {
+      "id": "FR-C-44005",
+      "lang": "br",
+      "values": [
+        "Arzhon-Raez",
+        "Kalaved-Raez"
+      ]
+    },
+    {
+      "id": "FR-C-44021",
+      "lang": "br",
+      "values": [
+        "Bourc'hnevez-Raez",
+        "Kernevez-Raez"
+      ]
+    },
+    {
+      "id": "FR-C-44029",
+      "lang": "br",
+      "values": [
+        "Chapel-Baz-Meur",
+        "Diwazh-Liger"
+      ]
+    },
+    {
+      "id": "FR-C-44087",
+      "lang": "br",
+      "values": [
+        "Machikoul",
+        "Machikoul-Sant-Masen"
+      ]
+    },
+    {
+      "id": "FR-C-44163",
+      "lang": "br",
+      "values": [
+        "Sant-Ervlon-ar-Roz",
+        "Gwer-Liger"
+      ]
+    },
+    {
+      "id": "FR-C-44180",
+      "lang": "br",
+      "values": [
+        "Sant-Marzh-an-Olivenn",
+        "Saonioù-an-Erzh"
+      ]
+    },
+    {
+      "id": "FR-C-44213",
+      "lang": "br",
+      "values": [
+        "Gwared",
+        "Loireauxence"
+      ]
+    },
+    {
+      "id": "FR-C-46033",
+      "lang": "oc",
+      "values": [
+        "Lo Bolben",
+        "Pòrta de Carcin"
+      ]
+    },
+    {
+      "id": "FR-C-46063",
+      "lang": "oc",
+      "values": [
+        "Castèlnau de Montratièr",
+        "Castèlnau de Montratièr e Senta Alàusia"
+      ]
+    },
+    {
+      "id": "FR-C-46083",
+      "lang": "oc",
+      "values": [
+        "Cressençac",
+        "Cressençac-Sarrasac"
+      ]
+    },
+    {
+      "id": "FR-C-46103",
+      "lang": "oc",
+      "values": [
+        "Flaunhac",
+        "Saint-Paul-Flaugnac"
+      ]
+    },
+    {
+      "id": "FR-C-46138",
+      "lang": "oc",
+      "values": [
+        "La Bastida Fortunièra",
+        "Cœur-de-Causse"
+      ]
+    },
+    {
+      "id": "FR-C-46156",
+      "lang": "oc",
+      "values": [
+        "La Ròca dels Arcs",
+        "Bèlafont e La Rausa"
+      ]
+    },
+    {
+      "id": "FR-C-46201",
+      "lang": "oc",
+      "values": [
+        "Montcuc",
+        "Montcuc de Carcin Blanc"
+      ]
+    },
+    {
+      "id": "FR-C-46252",
+      "lang": "oc",
+      "values": [
+        "Sent Sarnin",
+        "Les Pechs-du-Vers"
+      ]
+    },
+    {
+      "id": "FR-C-46262",
+      "lang": "oc",
+      "values": [
+        "Sent Crabasi",
+        "Lendon de Carcin"
+      ]
+    },
+    {
+      "id": "FR-C-46263",
+      "lang": "oc",
+      "values": [
+        "Sent Daunès",
+        "Bargalona"
+      ]
+    },
+    {
+      "id": "FR-C-46268",
+      "lang": "oc",
+      "values": [
+        "Sent Juèli",
+        "Sent Juèli e Vèrn"
+      ]
+    },
+    {
+      "id": "FR-C-46269",
+      "lang": "oc",
+      "values": [
+        "Sent Alari",
+        "Saint-Hilaire-Bessonies"
+      ]
+    },
+    {
+      "id": "FR-C-46311",
+      "lang": "oc",
+      "values": [
+        "Soçairac",
+        "Soçairac de Carcin"
+      ]
+    },
+    {
+      "id": "FR-C-47010",
+      "lang": "oc",
+      "values": [
+        "Antanhac",
+        "Antagnac-Ruffiac"
+      ]
+    },
+    {
+      "id": "FR-C-48009",
+      "lang": "oc",
+      "values": [
+        "Autmont d'Aubrac",
+        "Peire d'Aubrac"
+      ]
+    },
+    {
+      "id": "FR-C-48017",
+      "lang": "oc",
+      "values": [
+        "Banaçac",
+        "Banassac-Canilhac"
+      ]
+    },
+    {
+      "id": "FR-C-48027",
+      "lang": "oc",
+      "values": [
+        "Lo Blumar",
+        "Mont Losera e Golet"
+      ]
+    },
+    {
+      "id": "FR-C-48050",
+      "lang": "oc",
+      "values": [
+        "Cocurès",
+        "Bédouès-Cocurès"
+      ]
+    },
+    {
+      "id": "FR-C-48061",
+      "lang": "oc",
+      "values": [
+        "Florac",
+        "Florac Tres Rius"
+      ]
+    },
+    {
+      "id": "FR-C-48087",
+      "lang": "oc",
+      "values": [
+        "Malboson",
+        "Prensuèjols e Malboson"
+      ]
+    },
+    {
+      "id": "FR-C-48099",
+      "lang": "oc",
+      "values": [
+        "Lo Monastièr",
+        "Borgs de Colanha"
+      ]
+    },
+    {
+      "id": "FR-C-48105",
+      "lang": "oc",
+      "values": [
+        "Naussac",
+        "Naussac-Fontanes"
+      ]
+    },
+    {
+      "id": "FR-C-48116",
+      "lang": "oc",
+      "values": [
+        "Lo Pònt de Montverd",
+        "Pont-de-Montvert-Sud-Mont-Lozère"
+      ]
+    },
+    {
+      "id": "FR-C-48126",
+      "lang": "oc",
+      "values": [
+        "Ribenas",
+        "La Chalm e Ribenas"
+      ]
+    },
+    {
+      "id": "FR-C-48127",
+      "lang": "oc",
+      "values": [
+        "Riutòrt de Randon",
+        "Monts-de-Randon"
+      ]
+    },
+    {
+      "id": "FR-C-48139",
+      "lang": "oc",
+      "values": [
+        "Sent Bonet de Montaurós",
+        "Sent Bonet e La Val"
+      ]
+    },
+    {
+      "id": "FR-C-48152",
+      "lang": "oc",
+      "values": [
+        "Sent Fresald de Ventalon",
+        "Ventalon-en-Cévennes"
+      ]
+    },
+    {
+      "id": "FR-C-48166",
+      "lang": "oc",
+      "values": [
+        "Sent Laurenç de Trevas",
+        "Cans-et-Cévennes"
+      ]
+    },
+    {
+      "id": "FR-C-50066",
+      "lang": "nrm",
+      "values": [
+        "Jullouville",
+        "Bouillon"
+      ]
+    },
+    {
+      "id": "FR-C-50082",
+      "lang": "nrm",
+      "values": [
+        "Bricquebec",
+        "Bricquebec-en-Cotentin"
+      ]
+    },
+    {
+      "id": "FR-C-50090",
+      "lang": "nrm",
+      "values": [
+        "Buais",
+        "Buais-les-Monts"
+      ]
+    },
+    {
+      "id": "FR-C-50099",
+      "lang": "nrm",
+      "values": [
+        "Carentan",
+        "Carentan-les-Marais"
+      ]
+    },
+    {
+      "id": "FR-C-50115",
+      "lang": "nrm",
+      "values": [
+        "Champcervon",
+        "Le Grippon"
+      ]
+    },
+    {
+      "id": "FR-C-50129",
+      "lang": "nrm",
+      "values": [
+        "Tchidbouo",
+        "Cherbourg-en-Cotentin"
+      ]
+    },
+    {
+      "id": "FR-C-50142",
+      "lang": "nrm",
+      "values": [
+        "Cosqueville",
+        "Vicq-sur-Mer"
+      ]
+    },
+    {
+      "id": "FR-C-50167",
+      "lang": "nrm",
+      "values": [
+        "Dragey-Ronthon",
+        "Dragey-Tombelaine"
+      ]
+    },
+    {
+      "id": "FR-C-50168",
+      "lang": "nrm",
+      "values": [
+        "Ducey",
+        "Ducey-Les Chéris"
+      ]
+    },
+    {
+      "id": "FR-C-50209",
+      "lang": "nrm",
+      "values": [
+        "Gonneville",
+        "Gonneville-le-Theil"
+      ]
+    },
+    {
+      "id": "FR-C-50216",
+      "lang": "nrm",
+      "values": [
+        "Graignes-Mesnil-Angot",
+        "Graignes"
+      ]
+    },
+    {
+      "id": "FR-C-50236",
+      "lang": "nrm",
+      "values": [
+        "La Haye-du-Puits",
+        "La Haye"
+      ]
+    },
+    {
+      "id": "FR-C-50239",
+      "lang": "nrm",
+      "values": [
+        "Hébécrevon",
+        "Thèreval"
+      ]
+    },
+    {
+      "id": "FR-C-50273",
+      "lang": "nrm",
+      "values": [
+        "Lithaire",
+        "Montsenelle"
+      ]
+    },
+    {
+      "id": "FR-C-50292",
+      "lang": "nrm",
+      "values": [
+        "Marigny",
+        "Marigny-le-Lozon"
+      ]
+    },
+    {
+      "id": "FR-C-50363",
+      "lang": "nrm",
+      "values": [
+        "Moyon",
+        "Moyon-Villages"
+      ]
+    },
+    {
+      "id": "FR-C-50391",
+      "lang": "nrm",
+      "values": [
+        "Parigny",
+        "Grandparigny"
+      ]
+    },
+    {
+      "id": "FR-C-50393",
+      "lang": "nrm",
+      "values": [
+        "Percy",
+        "Percy-en-Normandie"
+      ]
+    },
+    {
+      "id": "FR-C-50405",
+      "lang": "nrm",
+      "values": [
+        "Le Plessis-Lastelle",
+        "Le Plessis"
+      ]
+    },
+    {
+      "id": "FR-C-50436",
+      "lang": "nrm",
+      "values": [
+        "Romagny",
+        "Romagny-Fontenay"
+      ]
+    },
+    {
+      "id": "FR-C-50492",
+      "lang": "nrm",
+      "values": [
+        "Saint-Jean-des-Baisants",
+        "Saint-Jean-d'Elle"
+      ]
+    },
+    {
+      "id": "FR-C-50528",
+      "lang": "nrm",
+      "values": [
+        "Saint-Nicolas-de-Pierrepont",
+        "Pierrepont-en-Cotentin"
+      ]
+    },
+    {
+      "id": "FR-C-50535",
+      "lang": "nrm",
+      "values": [
+        "Sainte-Pience",
+        "Le Parc"
+      ]
+    },
+    {
+      "id": "FR-C-50546",
+      "lang": "nrm",
+      "values": [
+        "Saint-Samson-de-Bonfossé",
+        "Bourgvallées"
+      ]
+    },
+    {
+      "id": "FR-C-50550",
+      "lang": "nrm",
+      "values": [
+        "Saint-Sauveur-Lendelin",
+        "Saint-Sauveur-Villages"
+      ]
+    },
+    {
+      "id": "FR-C-50564",
+      "lang": "nrm",
+      "values": [
+        "Sainteny",
+        "Terre-et-Marais"
+      ]
+    },
+    {
+      "id": "FR-C-50609",
+      "lang": "nrm",
+      "values": [
+        "Turqueville",
+        "Criqueville-au-Plain"
+      ]
+    },
+    {
+      "id": "FR-C-50639",
+      "lang": "nrm",
+      "values": [
+        "Villedieu-les-Poêles",
+        "Villedieu-les-Poêles-Rouffigny"
+      ]
+    },
+    {
+      "id": "FR-C-56033",
+      "lang": "br",
+      "values": [
+        "Karantoer",
+        "Karantoer (kumun nevez)"
+      ]
+    },
+    {
+      "id": "FR-C-56102",
+      "lang": "br",
+      "values": [
+        "Lannoez",
+        "Govelioù-Lannoez"
+      ]
+    },
+    {
+      "id": "FR-C-56144",
+      "lang": "br",
+      "values": [
+        "Neizin",
+        "Évellys"
+      ]
+    },
+    {
+      "id": "FR-C-56173",
+      "lang": "br",
+      "values": [
+        "Pluniav",
+        "Pluniav-Bizhui"
+      ]
+    },
+    {
+      "id": "FR-C-56197",
+      "lang": "br",
+      "values": [
+        "Roz-Sant-Andrev",
+        "Traoñ-an-Oud"
+      ]
+    },
+    {
+      "id": "FR-C-56213",
+      "lang": "br",
+      "values": [
+        "Sant-Jelan",
+        "Sant-Jelan-Kroeshañveg"
+      ]
+    },
+    {
+      "id": "FR-C-56251",
+      "lang": "br",
+      "values": [
+        "Teiz",
+        "Teiz-Noaloù"
+      ]
+    },
+    {
+      "id": "FR-C-59009",
+      "lang": "pcd",
+      "values": [
+        "Neuvile-Ask",
+        "Annappes"
+      ]
+    },
+    {
+      "id": "FR-C-59009",
+      "lang": "vls",
+      "values": [
+        "Villeneuve-d'Ascq",
+        "Annappes"
+      ]
+    },
+    {
+      "id": "FR-C-59349",
+      "lang": "pcd",
+      "values": [
+        "Ligny-en-Cambrésis",
+        "Ligny-Haucourt"
+      ]
+    },
+    {
+      "id": "FR-C-59349",
+      "lang": "vls",
+      "values": [
+        "Ligny-en-Cambrésis",
+        "Ligny-Haucourt"
+      ]
+    },
+    {
+      "id": "FR-C-59588",
+      "lang": "pcd",
+      "values": [
+        "Téteghem",
+        "Téteghem-Coudekerque-Village"
+      ]
+    },
+    {
+      "id": "FR-C-59588",
+      "lang": "vls",
+      "values": [
+        "Tetegem",
+        "Téteghem-Coudekerque-Village"
+      ]
+    },
+    {
+      "id": "FR-C-61007",
+      "lang": "nrm",
+      "values": [
+        "Athis-de-l'Orne",
+        "Athis-Val de Rouvre"
+      ]
+    },
+    {
+      "id": "FR-C-61050",
+      "lang": "nrm",
+      "values": [
+        "Boissy-Maugis",
+        "Cour-Maugis-sur-Huisne"
+      ]
+    },
+    {
+      "id": "FR-C-61096",
+      "lang": "nrm",
+      "values": [
+        "La Chapelle-d'Andaine",
+        "Rives d'Andaine"
+      ]
+    },
+    {
+      "id": "FR-C-61116",
+      "lang": "nrm",
+      "values": [
+        "Condé-sur-Huisne",
+        "Sablons-sur-Huisne"
+      ]
+    },
+    {
+      "id": "FR-C-61145",
+      "lang": "nrm",
+      "values": [
+        "Domfront",
+        "Domfront en Poiraie"
+      ]
+    },
+    {
+      "id": "FR-C-61153",
+      "lang": "nrm",
+      "values": [
+        "Écouché",
+        "Écouché-les-Vallées"
+      ]
+    },
+    {
+      "id": "FR-C-61167",
+      "lang": "nrm",
+      "values": [
+        "La Ferté-Frênel",
+        "La Ferté-en-Ouche"
+      ]
+    },
+    {
+      "id": "FR-C-61168",
+      "lang": "nrm",
+      "values": [
+        "La Ferté Macé",
+        "La Ferté-Macé"
+      ]
+    },
+    {
+      "id": "FR-C-61230",
+      "lang": "nrm",
+      "values": [
+        "Longny-au-Perche",
+        "Longny les Villages"
+      ]
+    },
+    {
+      "id": "FR-C-61292",
+      "lang": "nrm",
+      "values": [
+        "Montsecret",
+        "Montsecret-Clairefougère"
+      ]
+    },
+    {
+      "id": "FR-C-61309",
+      "lang": "nrm",
+      "values": [
+        "Nocé",
+        "Perche en Nocé"
+      ]
+    },
+    {
+      "id": "FR-C-61324",
+      "lang": "nrm",
+      "values": [
+        "Passais",
+        "Passais Villages"
+      ]
+    },
+    {
+      "id": "FR-C-61341",
+      "lang": "nrm",
+      "values": [
+        "Radon",
+        "Écouves"
+      ]
+    },
+    {
+      "id": "FR-C-61345",
+      "lang": "nrm",
+      "values": [
+        "Rémalard",
+        "Rémalard en Perche"
+      ]
+    },
+    {
+      "id": "FR-C-61375",
+      "lang": "nrm",
+      "values": [
+        "Boischampré",
+        "Saint-Christophe-le-Jajolet"
+      ]
+    },
+    {
+      "id": "FR-C-61460",
+      "lang": "nrm",
+      "values": [
+        "Le Sap",
+        "Sap-en-Auge"
+      ]
+    },
+    {
+      "id": "FR-C-61463",
+      "lang": "nrm",
+      "values": [
+        "La Sauvagère",
+        "Les Monts-d'Andaine"
+      ]
+    },
+    {
+      "id": "FR-C-61474",
+      "lang": "nrm",
+      "values": [
+        "Silly-en-Gouffern",
+        "Gouffern-en-Auge"
+      ]
+    },
+    {
+      "id": "FR-C-61484",
+      "lang": "nrm",
+      "values": [
+        "Le Theil",
+        "Val-au-Perche"
+      ]
+    },
+    {
+      "id": "FR-C-61486",
+      "lang": "nrm",
+      "values": [
+        "Tinchebray",
+        "Tinchebray-Bocage"
+      ]
+    },
+    {
+      "id": "FR-C-61491",
+      "lang": "nrm",
+      "values": [
+        "Tourouvre",
+        "Tourouvre au Perche"
+      ]
+    },
+    {
+      "id": "FR-C-62178",
+      "lang": "pcd",
+      "values": [
+        "Brouay-l'Bussière",
+        "Brouay-in-Artoé"
+      ]
+    },
+    {
+      "id": "FR-C-62295",
+      "lang": "pcd",
+      "values": [
+        "Inquin-les-Mines",
+        "Inquin-lez-Guin’gatte"
+      ]
+    },
+    {
+      "id": "FR-C-62471",
+      "lang": "pcd",
+      "values": [
+        "Inguin",
+        "Bellinghin"
+      ]
+    },
+    {
+      "id": "FR-C-62691",
+      "lang": "pcd",
+      "values": [
+        "Arbècque",
+        "Saint-Augustin"
+      ]
+    },
+    {
+      "id": "FR-C-62757",
+      "lang": "pcd",
+      "values": [
+        "Saint-Martin-au-Laërt",
+        "Saint-Martin-lez-Tatinghem"
+      ]
+    },
+    {
+      "id": "FR-C-63160",
+      "lang": "oc",
+      "values": [
+        "Flat",
+        "Aulhat-Flat"
+      ]
+    },
+    {
+      "id": "FR-C-63226",
+      "lang": "oc",
+      "values": [
+        "Mezel",
+        "Meset e Dalet"
+      ]
+    },
+    {
+      "id": "FR-C-63244",
+      "lang": "oc",
+      "values": [
+        "La Motada",
+        "Chambaron-sur-Morge"
+      ]
+    },
+    {
+      "id": "FR-C-63255",
+      "lang": "oc",
+      "values": [
+        "Lenede",
+        "Nonette-Orsonnette"
+      ]
+    },
+    {
+      "id": "FR-C-63448",
+      "lang": "oc",
+      "values": [
+        "Vernet-la-Varenne",
+        "Le Vernet e Chameana"
+      ]
+    },
+    {
+      "id": "FR-C-64010",
+      "lang": "oc",
+      "values": [
+        "Aicirits-Camon-Suhast",
+        "Aïcirits"
+      ]
+    },
+    {
+      "id": "FR-C-64010",
+      "lang": "eu",
+      "values": [
+        "Aiziritze-Gamue-Zohazti",
+        "Aiziritze"
+      ]
+    },
+    {
+      "id": "FR-C-64049",
+      "lang": "oc",
+      "values": [
+        "Arüe-Ithorrotze-Olhaibi",
+        "Aroue"
+      ]
+    },
+    {
+      "id": "FR-C-64049",
+      "lang": "eu",
+      "values": [
+        "Arüe-Ithorrotze-Olhaibi",
+        "Arüe"
+      ]
+    },
+    {
+      "id": "FR-C-64064",
+      "lang": "oc",
+      "values": [
+        "Asasp e Arròs",
+        "Asasp"
+      ]
+    },
+    {
+      "id": "FR-C-64064",
+      "lang": "eu",
+      "values": [
+        "Asasp-Arros",
+        "Asasp"
+      ]
+    },
+    {
+      "id": "FR-C-64113",
+      "lang": "oc",
+      "values": [
+        "Bergüei e Vièlanava",
+        "Bergouey-Arancou-Viellenave",
+        "Bergouey"
+      ]
+    },
+    {
+      "id": "FR-C-64113",
+      "lang": "eu",
+      "values": [
+        "Burgue-Erreiti",
+        "Burgue",
+        "Burgue-Erango-Erreiti"
+      ]
+    },
+    {
+      "id": "FR-C-64148",
+      "lang": "oc",
+      "values": [
+        "Brutges, Capbis e Mieihaget",
+        "Bruges"
+      ]
+    },
+    {
+      "id": "FR-C-64148",
+      "lang": "eu",
+      "values": [
+        "Bruges-Capbis-Mifaget",
+        "Bruges"
+      ]
+    },
+    {
+      "id": "FR-C-64168",
+      "lang": "oc",
+      "values": [
+        "Carressa e Cassabè",
+        "Carresse"
+      ]
+    },
+    {
+      "id": "FR-C-64168",
+      "lang": "eu",
+      "values": [
+        "Carresse-Cassaber",
+        "Carresse"
+      ]
+    },
+    {
+      "id": "FR-C-64225",
+      "lang": "oc",
+      "values": [
+        "Hiars",
+        "Ansa e Hiars"
+      ]
+    },
+    {
+      "id": "FR-C-64225",
+      "lang": "eu",
+      "values": [
+        "Inhasi",
+        "Arhantze-Inhasi"
+      ]
+    },
+    {
+      "id": "FR-C-64252",
+      "lang": "oc",
+      "values": [
+        "Gurmençon",
+        "Val-du-Gave-d'Aspe"
+      ]
+    },
+    {
+      "id": "FR-C-64252",
+      "lang": "eu",
+      "values": [
+        "Gurmençon",
+        "Val-du-Gave-d'Aspe"
+      ]
+    },
+    {
+      "id": "FR-C-64269",
+      "lang": "oc",
+      "values": [
+        "Idron",
+        "Idron-Ousse-Sendets",
+        "Idron-Lée-Ousse-Sendets"
+      ]
+    },
+    {
+      "id": "FR-C-64269",
+      "lang": "eu",
+      "values": [
+        "Idron",
+        "Idron-Ousse-Sendets",
+        "Idron-Lée-Ousse-Sendets"
+      ]
+    },
+    {
+      "id": "FR-C-64300",
+      "lang": "oc",
+      "values": [
+        "Lac",
+        "Lac (Bearn)"
+      ]
+    },
+    {
+      "id": "FR-C-64417",
+      "lang": "oc",
+      "values": [
+        "Nai",
+        "Nay-Bourdettes"
+      ]
+    },
+    {
+      "id": "FR-C-64417",
+      "lang": "eu",
+      "values": [
+        "Nay",
+        "Nay-Bourdettes"
+      ]
+    },
+    {
+      "id": "FR-C-64461",
+      "lang": "oc",
+      "values": [
+        "Pujòu",
+        "Puyoô-Bellocq-Ramous"
+      ]
+    },
+    {
+      "id": "FR-C-64461",
+      "lang": "eu",
+      "values": [
+        "Puyoô",
+        "Puyoô-Bellocq-Ramous"
+      ]
+    },
+    {
+      "id": "FR-C-65081",
+      "lang": "oc",
+      "values": [
+        "Benquèr",
+        "Benquèr e Molèra"
+      ]
+    },
+    {
+      "id": "FR-C-65089",
+      "lang": "oc",
+      "values": [
+        "Bèthpuei",
+        "Betpouey-Barèges"
+      ]
+    },
+    {
+      "id": "FR-C-65092",
+      "lang": "oc",
+      "values": [
+        "Beireda e Jumet",
+        "Veireda, Jumet e Camors"
+      ]
+    },
+    {
+      "id": "FR-C-65141",
+      "lang": "oc",
+      "values": [
+        "Cadau, Hereishet, Anèra e Camors",
+        "Cazaux-Fréchet"
+      ]
+    },
+    {
+      "id": "FR-C-65192",
+      "lang": "oc",
+      "values": [
+        "Gèdra",
+        "Gavarnia-Gèdra"
+      ]
+    },
+    {
+      "id": "FR-C-66003",
+      "lang": "oc",
+      "values": [
+        "Els Banys i Palaldà",
+        "Amélie-les-Bains"
+      ]
+    },
+    {
+      "id": "FR-C-66003",
+      "lang": "ca",
+      "values": [
+        "els Banys i Palaldà",
+        "els Banys d'Arles"
+      ]
+    },
+    {
+      "id": "FR-C-66005",
+      "lang": "oc",
+      "values": [
+        "Angostrina i Vilanova de les Escaldes",
+        "Angoustrine"
+      ]
+    },
+    {
+      "id": "FR-C-66005",
+      "lang": "ca",
+      "values": [
+        "Angostrina i Vilanova de les Escaldes",
+        "Angostrina"
+      ]
+    },
+    {
+      "id": "FR-C-66010",
+      "lang": "oc",
+      "values": [
+        "Aiguatèbia i Talau",
+        "Ayguatébia"
+      ]
+    },
+    {
+      "id": "FR-C-66010",
+      "lang": "ca",
+      "values": [
+        "Aiguatèbia i Talau",
+        "Aiguatèbia"
+      ]
+    },
+    {
+      "id": "FR-C-66037",
+      "lang": "oc",
+      "values": [
+        "Canet de Rosselhon",
+        "Canet-en-Roussillon-Saint-Nazaire"
+      ]
+    },
+    {
+      "id": "FR-C-66037",
+      "lang": "ca",
+      "values": [
+        "Canet de Rosselló",
+        "Canet-en-Roussillon-Saint-Nazaire"
+      ]
+    },
+    {
+      "id": "FR-C-66134",
+      "lang": "oc",
+      "values": [
+        "Paçà",
+        "Passa-Llauro-Tordères"
+      ]
+    },
+    {
+      "id": "FR-C-66134",
+      "lang": "ca",
+      "values": [
+        "Paçà",
+        "Paçà, Llauró i Torderes"
+      ]
+    },
+    {
+      "id": "FR-C-66161",
+      "lang": "oc",
+      "values": [
+        "Rià i Cirac",
+        "Ria-Sirach-Urbanya"
+      ]
+    },
+    {
+      "id": "FR-C-66161",
+      "lang": "ca",
+      "values": [
+        "Rià i Cirac",
+        "Ria-Sirach-Urbanya"
+      ]
+    },
+    {
+      "id": "FR-C-66167",
+      "lang": "oc",
+      "values": [
+        "Sallagosa",
+        "Saillagouse-Llo"
+      ]
+    },
+    {
+      "id": "FR-C-66167",
+      "lang": "ca",
+      "values": [
+        "Sallagosa",
+        "Saillagouse-Llo"
+      ]
+    },
+    {
+      "id": "FR-C-67004",
+      "lang": "gsw",
+      "values": [
+        "Àllewiller",
+        "Sommerau"
+      ]
+    },
+    {
+      "id": "FR-C-67153",
+      "lang": "gsw",
+      "values": [
+        "Gäiswiller",
+        "Geisweiler-Zöbersdorf"
+      ]
+    },
+    {
+      "id": "FR-C-67339",
+      "lang": "gsw",
+      "values": [
+        "Batschdorf",
+        "Oberbetschdorf"
+      ]
+    },
+    {
+      "id": "FR-C-67340",
+      "lang": "gsw",
+      "values": [
+        "Owerbrunn",
+        "Oberbronn-Zinswiller"
+      ]
+    },
+    {
+      "id": "FR-C-67372",
+      "lang": "gsw",
+      "values": [
+        "Pfaffoffe",
+        "Val-de-Moder"
+      ]
+    },
+    {
+      "id": "FR-C-67513",
+      "lang": "gsw",
+      "values": [
+        "Wàlderschbàch",
+        "Ban-de-la-Roche"
+      ]
+    },
+    {
+      "id": "FR-C-67539",
+      "lang": "gsw",
+      "values": [
+        "Wíngersche",
+        "Wingersheim-les-Quatre-Bans"
+      ]
+    },
+    {
+      "id": "FR-C-68012",
+      "lang": "gsw",
+      "values": [
+        "Eweràschbàch",
+        "Aspach-Michelbach"
+      ]
+    },
+    {
+      "id": "FR-C-68056",
+      "lang": "gsw",
+      "values": [
+        "Brunscht",
+        "Brunstatt-Didenheim"
+      ]
+    },
+    {
+      "id": "FR-C-68143",
+      "lang": "gsw",
+      "values": [
+        "Holzweier",
+        "Porte-du-Ried"
+      ]
+    },
+    {
+      "id": "FR-C-68145",
+      "lang": "gsw",
+      "values": [
+        "Horwrig-Wihr",
+        "Horbourg"
+      ]
+    },
+    {
+      "id": "FR-C-68162",
+      "lang": "gsw",
+      "values": [
+        "Kaiserschbàrig",
+        "Kaysersberg-Vignoble"
+      ]
+    },
+    {
+      "id": "FR-C-68201",
+      "lang": "gsw",
+      "values": [
+        "Màsmìnschter",
+        "Masevaux-Niederbruck"
+      ]
+    },
+    {
+      "id": "FR-C-68219",
+      "lang": "gsw",
+      "values": [
+        "Morzwiller",
+        "Le Haut-Soultzbach"
+      ]
+    },
+    {
+      "id": "FR-C-68240",
+      "lang": "gsw",
+      "values": [
+        "Oberdorf",
+        "Illtal"
+      ]
+    },
+    {
+      "id": "FR-C-68320",
+      "lang": "gsw",
+      "values": [
+        "Owerspachbi",
+        "Spechbach"
+      ]
+    },
+    {
+      "id": "FR-C-69066",
+      "lang": "frp",
+      "values": [
+        "Cours-la-Ville",
+        "Cours"
+      ]
+    },
+    {
+      "id": "FR-C-69172",
+      "lang": "frp",
+      "values": [
+        "Salles-Arbuissonnas-en-Beaujolais",
+        "Salles"
+      ]
+    },
+    {
+      "id": "FR-C-69179",
+      "lang": "frp",
+      "values": [
+        "Sent-Anduér",
+        "Biôvalon (Jarês)"
+      ]
+    },
+    {
+      "id": "FR-C-69208",
+      "lang": "frp",
+      "values": [
+        "Saint-Germain-sur-l'Arbresle",
+        "Saint-Germain-Nuelles"
+      ]
+    },
+    {
+      "id": "FR-C-69228",
+      "lang": "frp",
+      "values": [
+        "Sant-Môris (Jarês)",
+        "Chabaniére"
+      ]
+    },
+    {
+      "id": "FR-C-69248",
+      "lang": "frp",
+      "values": [
+        "Thizy",
+        "Thizy-les-Bourgs"
+      ]
+    },
+    {
+      "id": "FR-C-69286",
+      "lang": "frp",
+      "values": [
+        "Rillieux-la-Pape",
+        "Rillieux"
+      ]
+    },
+    {
+      "id": "FR-C-73010",
+      "lang": "frp",
+      "values": [
+        "Arbens",
+        "Entrelacs"
+      ]
+    },
+    {
+      "id": "FR-C-73227",
+      "lang": "frp",
+      "values": [
+        "Sent-Bon-Tarentèsa",
+        "Ecôrchevél"
+      ]
+    },
+    {
+      "id": "FR-C-73235",
+      "lang": "frp",
+      "values": [
+        "Saint-François-Longchamp",
+        "Sènt-Francês-Longchamp"
+      ]
+    },
+    {
+      "id": "FR-C-73257",
+      "lang": "frp",
+      "values": [
+        "Saint-Martin-de-Belleville",
+        "Les Belleville"
+      ]
+    },
+    {
+      "id": "FR-C-73284",
+      "lang": "frp",
+      "values": [
+        "Salins-les-Thermes",
+        "Salins-Fontaine"
+      ]
+    },
+    {
+      "id": "FR-C-73290",
+      "lang": "frp",
+      "values": [
+        "Termignon",
+        "Vâl-Cenis"
+      ]
+    },
+    {
+      "id": "FR-C-74123",
+      "lang": "frp",
+      "values": [
+        "Favèrges",
+        "Faverges-Seythenex"
+      ]
+    },
+    {
+      "id": "FR-C-74167",
+      "lang": "frp",
+      "values": [
+        "Marlens",
+        "Val de Chaise"
+      ]
+    },
+    {
+      "id": "FR-C-74275",
+      "lang": "frp",
+      "values": [
+        "Talloires",
+        "Talloires-Montmin"
+      ]
+    },
+    {
+      "id": "FR-C-74289",
+      "lang": "frp",
+      "values": [
+        "Vallières",
+        "Vallières-sur-Fier"
+      ]
+    },
+    {
+      "id": "FR-C-76025",
+      "lang": "nrm",
+      "values": [
+        "Argueil",
+        "Argueil-Fry"
+      ]
+    },
+    {
+      "id": "FR-C-76276",
+      "lang": "nrm",
+      "values": [
+        "Forges-les-Eaux",
+        "Forges-les-iaux"
+      ]
+    },
+    {
+      "id": "FR-C-76355",
+      "lang": "nrm",
+      "values": [
+        "Héricourt-en-Caux",
+        "Rocquefort-sur-Héricourt"
+      ]
+    },
+    {
+      "id": "FR-C-76755",
+      "lang": "nrm",
+      "values": [
+        "Saint-Michel-en-Caux",
+        "Ypreville-Biville"
+      ]
+    },
+    {
+      "id": "FR-C-80155",
+      "lang": "pcd",
+      "values": [
+        "Buchu-Buchuel",
+        "Buchu-lès-Yeucourt"
+      ]
+    },
+    {
+      "id": "FR-C-80230",
+      "lang": "pcd",
+      "values": [
+        "Curchy",
+        "Curchy-Dreslincourt"
+      ]
+    },
+    {
+      "id": "FR-C-80456",
+      "lang": "pcd",
+      "values": [
+        "Lafrédjumint-Saint-Martin",
+        "Lafresnoye"
+      ]
+    },
+    {
+      "id": "FR-C-80505",
+      "lang": "pcd",
+      "values": [
+        "Mamé",
+        "Carneu-Mamé"
+      ]
+    },
+    {
+      "id": "FR-C-80582",
+      "lang": "pcd",
+      "values": [
+        "Neu-L'Mini",
+        "Namps-au-Val"
+      ]
+    },
+    {
+      "id": "FR-C-81026",
+      "lang": "oc",
+      "values": [
+        "Bèlagarda",
+        "Bèlagarda e Marçal"
+      ]
+    },
+    {
+      "id": "FR-C-81062",
+      "lang": "oc",
+      "values": [
+        "Castèlnòu de Braçac",
+        "Fontrieu"
+      ]
+    },
+    {
+      "id": "FR-C-81132",
+      "lang": "oc",
+      "values": [
+        "Guitalens e l'Albareda",
+        "Lalbarède"
+      ]
+    },
+    {
+      "id": "FR-C-81233",
+      "lang": "oc",
+      "values": [
+        "Romegós",
+        "Tèrra de Bancaliá"
+      ]
+    },
+    {
+      "id": "FR-C-87028",
+      "lang": "oc",
+      "values": [
+        "Bussiera",
+        "Val d'Oira e Gartempa"
+      ]
+    },
+    {
+      "id": "FR-C-87097",
+      "lang": "oc",
+      "values": [
+        "Masères",
+        "Val-d'Issoire"
+      ]
+    },
+    {
+      "id": "FR-C-87128",
+      "lang": "oc",
+      "values": [
+        "Rossac",
+        "Sent Perdos dau Lac"
+      ]
+    }
+  ]
+}

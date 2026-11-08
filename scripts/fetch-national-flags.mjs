@@ -1,7 +1,7 @@
 import fs from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 
-const references={prc:"Flag of the People's Republic of China.svg",roc:'Flag of the Republic of China.svg',hk:'Flag of Hong Kong.svg',mo:'Flag of Macau.svg',jp:'Flag of Japan.svg',kr:'Flag of South Korea.svg',kp:'Flag of North Korea.svg',mn:'Flag of Mongolia.svg',id:'Flag of Indonesia.svg',ph:'Flag of the Philippines.svg',my:'Flag of Malaysia.svg',sg:'Flag of Singapore.svg',ru:'Flag of Russia.svg',br:'Flag of Brazil.svg',ar:'Flag of Argentina.svg',uy:'Flag of Uruguay.svg'};
+const references={prc:"Flag of the People's Republic of China.svg",roc:'Flag of the Republic of China.svg',hk:'Flag of Hong Kong.svg',mo:'Flag of Macau.svg',jp:'Flag of Japan.svg',kr:'Flag of South Korea.svg',kp:'Flag of North Korea.svg',mn:'Flag of Mongolia.svg',id:'Flag of Indonesia.svg',ph:'Flag of the Philippines.svg',my:'Flag of Malaysia.svg',sg:'Flag of Singapore.svg',ru:'Flag of Russia.svg',joseon:'Flag of Korea (1883).svg',br:'Flag of Brazil.svg',ar:'Flag of Argentina.svg',uy:'Flag of Uruguay.svg'};
 const headers={'User-Agent':'BoundaryAtlas/1.0 (educational atlas; flag source preservation)'};
 async function request(url,binary=false){
  for(let attempt=0;attempt<5;attempt++){

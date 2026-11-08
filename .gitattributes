@@ -3,7 +3,7 @@
 # Preserve downloaded flag originals and their recorded byte checksums.
 dist/vendor/japan-local/*.svg -text
 dist/vendor/russia-city-flags/*.svg -text
-dist/vendor/flag-originals/*.svg -text
+dist/vendor/flag-originals/*.svg -text -whitespace
 scripts/argentina-sources/flags/*.svg -text
 # Keep the official CSV's bytes identical to its recorded source checksum.
 scripts/statistics-sources/argentina/*.csv -text
@@ -75,3 +75,7 @@ dist/vendor/regional-flags/* binary
 # Reviewed municipal flag artwork is checked byte for byte.
 dist/vendor/major-city-flags/* binary
 scripts/boundary-sources/major-city-flags/*.svg binary
+
+# Retained source pages and historical flag artwork keep their original bytes.
+scripts/name-sources/atlantic/*.html -text -whitespace
+dist/vendor/flag-joseon.svg -text -whitespace

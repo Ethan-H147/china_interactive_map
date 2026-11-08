@@ -1,0 +1,42 @@
+{
+  "retrieved": "2026-11-07",
+  "coverage": "Attested forms only, matched by official codes, with regional language scope filters. No name is inherited from a parent. Coverage varies by language and subdivision. Gallo theoretical forms and conflicting code-label matches are excluded. The Isle of Man retains its Crown Dependency status.",
+  "records": 21174,
+  "names": 23835,
+  "languages": {
+    "Occitan": 10733,
+    "Franco-Provençal / Arpitan": 2007,
+    "Picard": 3768,
+    "West Flemish": 646,
+    "Alsatian": 867,
+    "Catalan": 221,
+    "Norman": 2563,
+    "Basque": 536,
+    "Breton": 1369,
+    "Gallo": 761,
+    "Corsican": 363,
+    "Lorraine Franconian": 1
+  },
+  "sources": [
+    {
+      "title": "Wikidata, CC0; official GSS and INSEE code matching",
+      "url": "https://www.wikidata.org/"
+    },
+    {
+      "title": "Breton reference",
+      "url": "https://www.bretagne.bzh/"
+    },
+    {
+      "title": "Gallo reference",
+      "url": "https://cinema.bretagne.bzh/bertegn-cinema/"
+    },
+    {
+      "title": "Lorraine Franconian reference",
+      "url": "https://fr.wikipedia.org/wiki/Thionville#Toponymie"
+    },
+    {
+      "title": "Gallo geographical names: Régis Auffray / Le Petit Matao",
+      "url": "https://www.dugaloenbertegn.bzh/fr/les-noms-de-lieux"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+import assert from 'node:assert/strict';
+import {regionalNameRows} from '../dist/regional-names.mjs';
+const name=(text,language='Welsh',lang='cy')=>({text,language,lang,source:'https://example.org'});
+assert.deepEqual(regionalNameRows({en:'Gwynedd',local:'',regionalNames:[name('Gwynedd')]}),[]);
+assert.deepEqual(regionalNameRows({en:'Swansea',local:'Abertawe',regionalNames:[name('Abertawe')]},['Swansea','']).map(n=>n.text),['Abertawe']);
+assert.deepEqual(regionalNameRows({en:'Galicia',local:'',regionalNames:[name('Galicia','Galician','gl')]}),[]);
+const rows=regionalNameRows({en:'Occitania',local:'Occitanie',regionalNames:[name('Occitània','Occitan','oc'),name('Occitània','Catalan','ca')]});
+assert.equal(rows.length,2);assert.deepEqual(rows.map(r=>r.language),['Occitan','Catalan']);
+const scotland=regionalNameRows({en:'Scotland',local:'',regionalNames:[name('Alba','Scottish Gaelic','gd'),name('Scotland','Scots','sco')]});assert.deepEqual(scotland.map(r=>r.text),['Alba','Scotland'],'Multiple regional languages retain matching main names');
+const repeated=regionalNameRows({en:'Wales',local:'',regionalNames:[name('Cymru'),name('Cymru')]});assert.equal(repeated.length,1,'Identical entries within one language are not duplicated');
+assert.equal(regionalNameRows({en:'Valencia',local:'',regionalNames:[name('València','Valencian','ca')]}).length,1,'Meaningful accent differences remain');
+assert.equal(regionalNameRows({en:'Café',local:'',regionalNames:[name(' cafe\u0301 ')]}).length,0,'Composition, case and whitespace do not create duplicates');
+console.log('Single-language repeats suppressed; multiple regional languages remain distinct, including matching main names.');

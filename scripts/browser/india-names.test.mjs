@@ -8,8 +8,8 @@ export default [
   await p.open(base,'#india');
   for(const [id,r]of Object.entries(data.records)){
    await select(p,id);
-   const result=await p.evaluate(`(()=>{const e=document.getElementById('in-local'),box=document.getElementById('in-names'),details=box.querySelector('details');return {text:e.textContent,lang:e.lang,dir:e.dir,caption:document.getElementById('in-local-language').textContent,captionHidden:document.getElementById('in-local-language').hidden,localHidden:e.hidden,names:box.querySelectorAll('bdi').length,presence:box.querySelectorAll('.regional-language-coverage a').length,collapsed:details?!details.open:null};})()`);
-   const names=r.names.filter(n=>n.code!=='en'&&(!n.primary||n.text===r.primary.text&&['Meghalaya','Mizoram'].includes(n.text)));
+   const result=await p.evaluate(`(()=>{const e=document.getElementById('in-local'),box=document.getElementById('in-names'),details=box.querySelector('details');return {en:document.getElementById('in-name').textContent,text:e.textContent,lang:e.lang,dir:e.dir,caption:document.getElementById('in-local-language').textContent,captionHidden:document.getElementById('in-local-language').hidden,localHidden:e.hidden,names:box.querySelectorAll('bdi').length,presence:box.querySelectorAll('.regional-language-coverage > span:not(:first-child)').length,collapsed:details?!details.open:null};})()`);
+   const regional=r.names.filter(n=>n.code!=='en'&&(!n.primary||n.text===r.primary.text&&['Meghalaya','Mizoram'].includes(n.text)));const names=regional.length>1?regional:regional.filter(n=>n.text!==r.primary.text&&n.text!==result.en);
    assert.equal(result.text,r.primary.text,id);assert.equal(result.lang,r.primary.lang,id);assert.equal(result.dir,r.primary.dir,id);assert.equal(result.caption,r.primary.language,id+' identifies the main language');assert.equal(result.captionHidden,result.localHidden,id+' keeps the caption with its name');
    assert.equal(result.names,names.length,id);assert.equal(result.presence,r.otherLanguages.length,id);
    assert.equal(result.collapsed,names.length+r.otherLanguages.length>3?true:null,id+' collapses longer lists');
@@ -22,7 +22,7 @@ export default [
   assert.equal(await p.evaluate(`document.querySelector('#in-names bdi[lang=ur]').dir`),'rtl');
   await p.screenshot('india-names-kashmir-desktop');
   await select(p,'IN-SK');assert.equal(await p.evaluate(`document.querySelector('#in-names details').open`),false,'Changing place closes the list');
-  await p.tap('#in-names summary');assert.equal(await p.evaluate(`document.querySelectorAll('#in-names a[title^="Source"]').length`),5);assert(await p.evaluate(`document.getElementById('in-names').textContent.includes('romanized')`));
+  await p.tap('#in-names summary');assert.equal(await p.evaluate(`document.querySelectorAll('#in-names a').length`),0);assert(await p.evaluate(`document.getElementById('in-names').textContent.includes('romanized')`));
   await p.screenshot('india-names-sikkim-desktop');
   await select(p,'IN-PY');assert.equal(await p.evaluate(`!!document.querySelector('#in-names details')`),false,'Short lists stay visible');
  }},
@@ -31,7 +31,7 @@ export default [
   await p.evaluate(`document.querySelector('#in-names summary').focus()`);await p.key('Enter');assert(await p.evaluate(`document.querySelector('#in-names details').open`));
   await p.key(' ');assert.equal(await p.evaluate(`document.querySelector('#in-names details').open`),false);
   // Exercise the shared renderer with literal markup and RTL in a real DOM.
-  const result=await p.evaluate(`(async()=>{const {renderRegionalNames}=await import('./regional-names.mjs'),box=document.createElement('div'),record={regionalNames:[{text:'<img src=x onerror=alert(1)>',lang:'ur',dir:'rtl',language:'Urdu',source:'https://example.org/source'}]};renderRegionalNames(box,record);const safe=!box.querySelector('img')&&box.querySelector('bdi').textContent===record.regionalNames[0].text&&box.querySelector('bdi').dir==='rtl'&&box.querySelector('a').rel==='noopener';renderRegionalNames(box,{});return {safe,cleared:!box.childNodes.length};})()`);assert.deepEqual(result,{safe:true,cleared:true});
+  const result=await p.evaluate(`(async()=>{const {renderRegionalNames}=await import('./regional-names.mjs'),box=document.createElement('div'),record={regionalNames:[{text:'<img src=x onerror=alert(1)>',lang:'ur',dir:'rtl',language:'Urdu',source:'https://example.org/source'}]};renderRegionalNames(box,record);const safe=!box.querySelector('img')&&box.querySelector('bdi').textContent===record.regionalNames[0].text&&box.querySelector('bdi').dir==='rtl'&&!box.querySelector('a')&&box.querySelector('.name-secondary').tagName==='SPAN';renderRegionalNames(box,{});return {safe,cleared:!box.childNodes.length};})()`);assert.deepEqual(result,{safe:true,cleared:true});
   await p.evaluate(`location.hash='#united-kingdom'`);await p.waitFor(`AtlasEntry.current==='united-kingdom'`);await p.settle();
   const id=await p.evaluate(`document.querySelector('#gb-province option:not([value=""])').value`);await select(p,id);
   assert(await p.evaluate(`document.getElementById('gb-name').textContent.length>0`),'The pre-existing country name display still works');

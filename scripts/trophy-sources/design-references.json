@@ -54,15 +54,16 @@
     "france": "Imported footing rests on the circular base surface; source lattice and platform joins retained."
   },
   "designNotes": {
-    "argentina": "Obelisco miniature with an original ornamental Sun of May: thirty-two alternating straight and flame rays. Abbreviated original inscription arrangement, not a facsimile of all four historic inscriptions.",
-    "spain": "Artistic interpretation of the planned eighteen-tower scheme, not the current construction state.",
+    "chile": "Original moai sculpted as one continuous carved surface (brow, eye sockets, long nose, pursed lips, chin, ears, arms and long-fingered hands as relief) with painted weathered tuff and lichen, on an original fitted basalt ahu with a poro pebble apron and a shore diorama. Not a survey reconstruction.",
+    "argentina": "Obelisco miniature on a stepped pedestal whose front carries an original ornamental Sun of May: thirty-two alternating straight and flame rays, framed in laurel. Abbreviated original inscription arrangement, not a facsimile of all four historic inscriptions.",
+    "spain": "Artistic interpretation of the planned eighteen-tower scheme, not the current construction state: spindle apostle towers with painted helical louvres and red-and-white mosaic pinnacles under small white crosses, Evangelist towers with white horn crowns, Mary’s star, the Jesus Christ cross, Nativity, Passion and Glory facades and an octagonal Eixample block.",
     "italy": "Artistic reconstruction of surviving and ruined fabric, with partial arena decking to show the hypogeum.",
-    "korea": "Original five-by-five-bay Geunjeongjeon hall interpretation with double eaves, painted brackets and stone terraces.",
+    "korea": "Original five-by-five-bay Geunjeongjeon hall interpretation with stone terraces, painted brackets, a lower skirt roof rising into the upper storey and a hip-and-gable upper roof, each roof resting on its bracket sets.",
     "united-states": "Adapted Metron3D scan of a replica, CC BY 4.0. Source pedestal leveled by its measured base plane, correcting a 4.2479-degree tilt with a rigid rotation; only the lowest contact strip flattened. Proportions and drapery retained, with a level atlas display base. Source attribution and license retained in the downloadable model.",
-    "china": "Original scenic interpretation of Ming/Mutianyu wall architecture, with a winding stepped walkway, hollow towers and supporting mountain terrain. Not a survey reconstruction.",
+    "china": "Original diorama of Ming wall architecture on an autumn mountain ridge: crest-following wall with stepped walkway, outer battlement and inner parapet, four two-level watchtowers (one with a tiled lookout), painted heightfield ground and individual trees. Not a survey reconstruction.",
     "reserved": "Jade disc, celadon vase, Liberty bell and floral matryoshka retain exact existing model and poster bytes; no future quiz assignment has been made.",
     "russia": "Original architectural miniature with eight clustered chapels, a central tent, later low chapel and belfry. Distinct modeled spiral and diamond dome patterns. Not a survey reconstruction.",
-    "brazil": "Adapted JuanG3D authored Art Deco sculpture, CC BY 4.0. Original print plinth removed; face, hands and layered robe retained. Uniformly scaled onto an original proportional octagonal pedestal; pale stone finish. Not a scan."
+    "brazil": "Adapted JuanG3D authored Art Deco sculpture, CC BY 4.0. Original print plinth removed; face, hands and layered robe retained. Uniformly scaled onto an original pedestal and summit terraces on an original Corcovado diorama (sheer streaked granite face, dense Atlantic forest, bay). Not a scan."
   },
   "reservedModels": {
     "korea-celadon": [

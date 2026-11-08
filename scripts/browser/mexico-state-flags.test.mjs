@@ -9,8 +9,7 @@ export default [false,true].map(mobile=>({
   for(const[id,f]of Object.entries(mexicoStateFlags.mexico.firstFlags)){
    await page.evaluate('currentAtlas().restore('+JSON.stringify(id)+')');
    await page.waitFor('(()=>{const e=document.getElementById("mx-flag");return !e.closest("a").hidden&&e.getAttribute("src")==='+JSON.stringify(f.file)+'&&e.complete&&e.naturalWidth>0})()');
-   assert.equal(await page.evaluate('document.getElementById("mx-flag-caption").textContent.includes('+JSON.stringify(f.status)+')'),true);
-   assert.equal(await page.evaluate('!!document.querySelector("#mx-flag-caption a")'),id!=='MX-OAX');
+   assert.equal(await page.evaluate('document.querySelector("#mexico-sidebar .flag-caption")'),null);
   }
   const yuc=mexicoStateFlags.mexico.firstFlags['MX-YUC'];
   await page.tap('#mx-flag-source');await page.waitFor('document.getElementById("flag-viewer").open&&document.getElementById("flag-viewer-image").naturalWidth>0');
@@ -21,7 +20,7 @@ export default [false,true].map(mobile=>({
   assert.equal(await page.evaluate('document.getElementById("mx-detail-flag-source").hidden'),true);
   await page.evaluate('currentAtlas().restore("MX-CHH")');
   assert.equal(await page.evaluate('document.getElementById("mx-flag-source").hidden'),true);
-  assert.equal(await page.evaluate('document.getElementById("mx-flag-caption").hidden'),true);
+  assert.equal(await page.evaluate('document.getElementById("mx-flag-caption")===null'),true);
   await page.evaluate('currentAtlas().restore("MX-TAM")');await page.screenshot('mexico-tamaulipas-flag-'+(mobile?'phone':'desktop'));
  }
 }));

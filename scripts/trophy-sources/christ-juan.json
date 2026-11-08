@@ -20,5 +20,5 @@
       0.22401316175326494
     ]
   ],
-  "modifications": "Baked source scene transforms, removed duplicate and degenerate faces, removed the oversized signed print plinth below Y=-4.115, capped the cut, uniformly scaled the sculpture to 2.2 atlas units and positioned it on an original proportional octagonal pedestal. Source material replaced with a pale soapstone finish."
+  "modifications": "Baked source scene transforms, removed duplicate and degenerate faces, removed the oversized signed print plinth below Y=-4.115, capped the cut, uniformly scaled the sculpture to 2.2 atlas units. The collectible build scales it uniformly onto an original pedestal on an original Corcovado summit diorama. Source material replaced with a warm soapstone finish."
 }

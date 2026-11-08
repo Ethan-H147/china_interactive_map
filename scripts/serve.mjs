@@ -11,7 +11,7 @@ export function lanAddresses(interfaces=os.networkInterfaces(),physical){
 }
 export function createPreview({root=fileURLToPath(new URL('../dist/',import.meta.url)),port=4174,hosts=['127.0.0.1']}={}){
  const servers=[],sockets=new Set();let revision=Date.now(),watcher;
- const types={'.html':'text/html; charset=utf-8','.css':'text/css','.js':'text/javascript','.mjs':'text/javascript','.json':'application/json','.svg':'image/svg+xml','.woff2':'font/woff2','.ttf':'font/ttf','.wasm':'application/wasm','.png':'image/png','.jpg':'image/jpeg','.webp':'image/webp'};
+ const types={'.mp3':'audio/mpeg','.html':'text/html; charset=utf-8','.css':'text/css','.js':'text/javascript','.mjs':'text/javascript','.json':'application/json','.svg':'image/svg+xml','.woff2':'font/woff2','.ttf':'font/ttf','.wasm':'application/wasm','.png':'image/png','.jpg':'image/jpeg','.webp':'image/webp'};
  const inside=file=>{const relative=path.relative(root,file);return !relative.startsWith('..')&&!path.isAbsolute(relative);};
  async function handler(req,res){
   res.setHeader('Cache-Control','no-store');res.setHeader('X-Content-Type-Options','nosniff');

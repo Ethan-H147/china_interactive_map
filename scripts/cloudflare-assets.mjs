@@ -4,7 +4,8 @@ import path from 'node:path';
 import assert from 'node:assert/strict';
 
 export const maxAssetBytes=25*1024*1024;
-export const maxAssetFiles=20000;
+// This atlas now requires Workers Paid; Cloudflare enforces the account entitlement.
+export const maxAssetFiles=100000;
 export function assetIgnoreText(omitted){
  const paths=[...omitted].sort();
  for(const file of paths)assert(!file.startsWith('/')&&!file.split('/').includes('..')&&!/[\\\n\r*?!#\[\]]/.test(file),'Expected a literal asset path: '+file);
