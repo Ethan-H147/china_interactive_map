@@ -57,7 +57,7 @@ Rounds already outside the retained history cannot be undone individually.
 ## Coordinated rollout
 
 1. Back up the hosted database and browser recovery data.
-2. Apply `20261110085832_quiz_lifetime_retention.sql` during a coordinated rollout.
+2. Apply `20261110183131_quiz_lifetime_retention.sql` during a coordinated rollout.
    It locks attempts, copies all existing lifetime totals and bests, records legacy
    IDs, and only then deletes detail entries beyond 1,000 per owner.
 3. Verify totals, personal bests and medals against the backup before publishing
