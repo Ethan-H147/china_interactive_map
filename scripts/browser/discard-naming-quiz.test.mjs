@@ -1,0 +1,6 @@
+import assert from 'node:assert/strict';
+export default [{name:'Leave naming quiz discards draft without recording a result',options:{width:1280,height:900},async run(p,base){
+ await p.open(base,'#brunei');await p.tap('#bn-tab-quiz');await p.evaluate(`document.getElementById('bn-quiz-type').value='name';document.getElementById('bn-quiz-type').dispatchEvent(new Event('change'))`);await p.tap('#bn-quiz-panel [data-q=start]');await p.settle();await p.evaluate(`document.getElementById('bn-quiz-answer').value='Belait';document.querySelector('#bn-quiz-panel [data-q=form]').requestSubmit()`);
+ assert(await p.evaluate(`JSON.parse(localStorage.getItem('boundary-atlas-first-quiz-v2:guest:brunei')).draft.found.length===1`));await p.tap('#bn-quiz-panel [data-q=discard]');await p.settle();assert(!await p.evaluate('currentAtlas().quiz.active'));assert.equal(await p.evaluate('AtlasQuizRecords.quizRecords.data.summary.rounds'),0);assert.equal(await p.evaluate(`JSON.parse(localStorage.getItem('boundary-atlas-first-quiz-v2:guest:brunei')).draft`),undefined);assert.equal(await p.evaluate(`JSON.parse(localStorage.getItem('boundary-atlas-first-quiz-v2:guest:brunei')).savedQuiz`),undefined);
+ await p.tap('#bn-tab-quiz');assert(await p.evaluate(`document.querySelector('#bn-quiz-panel [data-q=resume]').hidden`));await p.screenshot('discard-naming-quiz');
+ }}];

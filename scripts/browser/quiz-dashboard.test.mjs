@@ -9,13 +9,19 @@ export const fixture=`(()=>{
  const owner=init=>new Headers(init.headers).get('Authorization')?.includes(B)?B:A;
  window.fetch=async(input,init={})=>{const url=typeof input==='string'?input:input.url||String(input),body=init.body?JSON.parse(init.body):{};
   if(url.startsWith('https://odenagmobrswlzkljayf.supabase.co/auth/v1/')){const path=new URL(url).pathname,id=body.email?idFor(body.email):owner(init);if(path.endsWith('/token'))return Response.json({access_token:'test-access-token-'+id,refresh_token:'test-refresh-token-'+id,token_type:'bearer',expires_in:3600,expires_at:Math.floor(Date.now()/1000)+3600,user:user(id)});if(path.endsWith('/user'))return Response.json({...user(id),user_metadata:{...user(id).user_metadata,...body.data}});return Response.json({});}
-  if(!url.startsWith('https://odenagmobrswlzkljayf.supabase.co/rest/v1/quiz_attempts'))return real(input,init);
-  window.quizApiCalls.push({owner:owner(init),method:init.method||'GET',body});if(window.quizApiOffline)throw TypeError('Offline');
-  const id=owner(init),cloud=read(),all=cloud[id]||[],u=new URL(url),{quizRow,quizAttempt}=await import('/quiz-supabase.mjs');
-  if(init.method==='POST'){for(const row of body){if(row.user_id!==id)return Response.json({message:'RLS violation'},{status:403});const a=quizAttempt(row);if(!all.some(old=>old.id===a.id))all.push(a);}cloud[id]=all;save(cloud);return new Response(null,{status:201});}
-  if(u.searchParams.get('select')==='id'){const ids=u.searchParams.get('id').slice(4,-1).split(',');return Response.json(all.filter(a=>ids.includes(a.id)).map(a=>({id:a.id})));}
-  const offset=Number(u.searchParams.get('offset')||0),limit=Number(u.searchParams.get('limit')||500);
-  return Response.json([...all].sort((a,b)=>b.finishedAt.localeCompare(a.finishedAt)||b.id.localeCompare(a.id)).slice(offset,offset+limit).map(a=>quizRow(a,id)));
+  if(!url.startsWith('https://odenagmobrswlzkljayf.supabase.co/rest/v1/rpc/'))return real(input,init);
+  const submitting=url.endsWith('/quiz_submit_v2');window.quizApiCalls.push({owner:owner(init),method:submitting?'POST':'GET',body:submitting?body.p_attempts:body});if(window.quizApiOffline)throw TypeError('Offline');
+  const id=owner(init),cloud=read(),all=cloud[id]||[],{quizRow,quizAttempt}=await import('/quiz-supabase.mjs');
+  if(submitting){
+   if(window.quizApiRateLimited)return Response.json({code:'QUIZ_RATE_LIMIT',message:'Quiz upload limit reached'},{status:429,headers:{'Retry-After':'60'}});
+   const streams=JSON.parse(localStorage.getItem('quiz-test-streams')||'{}'),key=id+':'+body.p_stream_id,last=streams[key]||0;
+   if(body.p_sequence<last)return Response.json({message:'Outdated upload state'},{status:400});
+   if(body.p_sequence>last){if(body.p_sequence!==last+1)return Response.json({message:'Out of order'},{status:400});for(const row of body.p_attempts){if(row.user_id!==id)return Response.json({message:'RLS violation'},{status:403});const a=quizAttempt(row);if(!all.some(old=>old.id===a.id))all.push(a);}cloud[id]=all;save(cloud);streams[key]=body.p_sequence;localStorage.setItem('quiz-test-streams',JSON.stringify(streams));}
+   if(window.quizApiDropAfterCommit){window.quizApiDropAfterCommit=false;throw TypeError('Reply lost after database commit');}
+   return Response.json({accepted:body.p_attempts.map(a=>a.id)});
+  }
+  const {summarizeQuizAttempts}=await import('/quiz-records-core.mjs'),sorted=[...all].sort((a,b)=>b.finishedAt.localeCompare(a.finishedAt)||b.id.localeCompare(a.id)).slice(0,1000),remaining=body.p_before_at?sorted.filter(a=>a.finishedAt<body.p_before_at||a.finishedAt===body.p_before_at&&a.id<body.p_before_id):sorted,recent=remaining.slice(0,25),last=recent.at(-1);
+  return Response.json({...(body.p_include_summary?summarizeQuizAttempts(all):{}),recent:recent.map(a=>quizRow(a,id)),nextCursor:remaining.length>25?JSON.stringify([last.finishedAt,last.id]):null,retentionLimit:1000});
  };
 })();`;
 export async function login(p,email='atlas@example.test'){

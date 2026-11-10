@@ -1,3 +1,4 @@
+import {appearancePaint} from './appearance-paint.mjs';
 import {SELECTION_STATE_PREFIX,selectionFilter,selectionOpacity,selectedOpacity} from './interaction-policy.mjs';
 import {createSelectionVisibility,selectionStates} from './selection-visibility.mjs';
 export {selectionStates} from './selection-visibility.mjs';
@@ -105,7 +106,7 @@ export function createMapScene(map,{version=globalThis.maplibregl?.getVersion?.(
  function gatePaint(entry,out){if(entry.gate){const property=entry.type==='line'?'line-opacity':'fill-opacity';out[property]=numericOutputs(out[property]??1,base=>selectionOpacity(entry.gate.key,base));}return out;}
  function paint(entry){
   const out=clone(entry.paint),amount=satellite.visible?satellite.opacity:0,rule=entry.satellite;
-  if(rule===false)return gatePaint(entry,out);
+  if(rule===false)return appearancePaint(gatePaint(entry,out),entry,amount);
   if(entry.type==='fill'){
    const base=entry.paint['fill-opacity']??1,mode=rule.fill||(entry.role==='context'?'fade':entry.role==='fill'?'highlight':'none');
    out['fill-opacity']=base;
@@ -116,7 +117,7 @@ export function createMapScene(map,{version=globalThis.maplibregl?.getVersion?.(
    if(rule.lineOpacity==='fade')out['line-opacity']=fade(entry.paint['line-opacity']??1,amount,false);
    else if(entry.role==='border'||entry.role==='selection')out['line-color']=blendColor(entry.paint['line-color']??'#000000',rule.lineColor||'#fff0bb',amount);
   }
-  return gatePaint(entry,out);
+  return appearancePaint(gatePaint(entry,out),entry,amount);
  }
  const emptySelection=entry=>!entry.stableSelectionFill&&!entry.warming&&selectionCulling&&entry.visibleStates&&!selectionVisibility.active(entry.source,entry.visibleStates);
  // A canonical border provider carries the same geometry and claims as its
@@ -212,5 +213,7 @@ export function createMapScene(map,{version=globalThis.maplibregl?.getVersion?.(
   if(providerChanged)refreshBorderOwnership();
  }
  map.on?.('move',updateView);map.on?.('resize',updateView);map.on?.('projectiontransition',updateView);map.on?.('style.load',updateView);
+ const themeBackground=()=>{if(map.getLayer('background')&&!entries.has('background')){const entry=describe({id:'background',type:'background',paint:{'background-color':map.getPaintProperty('background','background-color')}});entries.set('background',entry);render('background',entry);}};themeBackground();map.on?.('style.load',themeBackground);
+ globalThis.addEventListener?.('atlas-appearance-change',()=>{for(const [id,entry]of entries)render(id,entry);});
  scenes.set(map,scene);return scene;
 }

@@ -9,9 +9,17 @@ const commonAliases={'US-DC':['Washington DC','DC','Washington, District of Colu
 // Native forms can be separate language records or slash-separated official names.
 export function regionalNameAliases(place){
  const text=value=>typeof value==='string'?value:value?.text||value?.name;
- return [place.local,...Object.values(place.names||{}).map(text),...(place.regionalNames||[]).map(text),...pronunciationNameAliases(place),...swissNameRows(place).map(n=>n.text),...(place.id?.startsWith('IT-')?italianNameRows(place).map(([, ,name])=>name):[])].filter(Boolean).flatMap(name=>[name,...name.split(/\s*\/\s*/u)]);
+ return [place.local,...Object.values(place.names||{}).map(text),...(place.regionalNames||[]).map(text),...pronunciationNameAliases(place),...swissNameRows(place).map(n=>n.text),...(String(place.id||'').startsWith('IT-')?italianNameRows(place).map(([, ,name])=>name):[])].filter(Boolean).flatMap(name=>[name,...name.split(/\s*\/\s*/u)]);
 }
-export function aliases(place){return new Set([place.en,place.zh,shortEnglish(place.en),shortChinese(place.zh),...(place.aliases||[]),...regionalNameAliases(place),...koreanNameAliases(place),...(commonAliases[place.code]||[])].flatMap(name=>typeof name==='string'?[name,...name.split(/\s*\/\s*/u)]:[]).map(normalizeName).filter(Boolean));}
+export function aliases(place){
+ const names=new Set([place.en,place.zh,shortEnglish(place.en),shortChinese(place.zh),...(place.aliases||[]),...regionalNameAliases(place),...koreanNameAliases(place),...(commonAliases[place.code]||[])].flatMap(name=>typeof name==='string'?[name,...name.split(/\s*\/\s*/u)]:[]).map(normalizeName).filter(Boolean));
+ const result=new Set(names);
+ for(const qualifier of place.qualifiers||[]){const parent=normalizeName(qualifier);if(parent)for(const name of names){result.add(name+parent);result.add(parent+name);}}
+ return result;
+}
+export function ambiguousNameMessage(result){
+ return (result.matches||[]).some(p=>p.qualifiers?.length)?'That name matches more than one place. Add the province before or after the name, or use its local name.':'That name matches more than one place. Use its full or local name.';
+}
 
 // Adjacent swaps, missing letters and extra letters count as small spelling edits.
 function spellingDistance(a,b,limit){
@@ -41,7 +49,7 @@ export function submitName(round,value){
   // Prefer complete display names before considering shared short aliases.
   const exact=round.places.filter(p=>[p.en,p.zh].some(n=>n&&normalizeName(n)===text));
   const matches=exact.length?exact:round.places.filter(p=>aliases(p).has(text));
-  if(matches.length>1)return{status:'ambiguous'};
+  if(matches.length>1)return{status:'ambiguous',matches};
   if(!matches.length){const near=spellingCandidate(text,round.places.filter(p=>!round.found.has(p.code)));if(!near)return{status:'unknown'};return{status:'spelling'};}
   const place=matches[0];if(round.found.has(place.code))return{status:'duplicate',place};
   round.found.add(place.code);round.spellingWarnings.delete(place.code);round.complete=round.found.size===round.places.length;
