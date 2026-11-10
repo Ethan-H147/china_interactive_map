@@ -1,0 +1,36 @@
+{
+  "sources": [
+    {
+      "name": "IBGE, Evolução da divisão territorial do Brasil 1872–2010",
+      "url": "https://geoftp.ibge.gov.br/organizacao_do_territorio/estrutura_territorial/evolucao_da_divisao_territorial_do_brasil/evolucao_da_divisao_territorial_do_brasil_1872_2010/"
+    },
+    {
+      "name": "Câmara dos Deputados, political history",
+      "url": "https://www.camara.leg.br/historia-e-arquivo/"
+    }
+  ],
+  "dates": [
+    1808,
+    1821,
+    1822,
+    1835,
+    1872,
+    1900,
+    1933,
+    1934,
+    1940,
+    1960,
+    1980,
+    1991
+  ],
+  "municipalDates": [
+    1872,
+    1900,
+    1933,
+    1940,
+    1960,
+    1980,
+    1991
+  ],
+  "coverage": "Official IBGE geometry is retained for source years. Earlier dates merge later divisions into captaincies or provinces, without claiming surveyed early frontiers. Cisplatina uses current Uruguay as a proxy. The 1934 political period uses 1933 state geometry and no anachronistic municipal overlay. Fernando de Noronha is a state district of Pernambuco in the 1991 source, not a 27th state. Indigenous nations, effective settlement and occupation are not represented."
+}

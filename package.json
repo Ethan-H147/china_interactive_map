@@ -517,6 +517,8 @@
     "test:russian-city-pronunciation": "node scripts/validate-russian-city-pronunciations.mjs && node scripts/browser/run.mjs russian-city-pronunciation",
     "test:italy-names": "node scripts/validate-italian-names.mjs && node scripts/browser/run.mjs italy-card-names",
     "test:multilingual-pronunciation": "node scripts/validate-multilingual-pronunciations.mjs && node scripts/browser/run.mjs multilingual-pronunciation latin-spanish-pronunciation",
-    "test:mn-ph-overseas-pronunciation": "node scripts/validate-mn-ph-overseas-pronunciations.mjs && node scripts/browser/run.mjs mn-ph-overseas-pronunciation"
+    "test:mn-ph-overseas-pronunciation": "node scripts/validate-mn-ph-overseas-pronunciations.mjs && node scripts/browser/run.mjs mn-ph-overseas-pronunciation",
+    "build:american-history": "node --max-old-space-size=10000 scripts/build-american-history.mjs",
+    "test:american-history": "node scripts/validate-american-history.mjs && node scripts/browser/run.mjs american-history"
   }
 }

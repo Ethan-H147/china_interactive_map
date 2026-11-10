@@ -546,6 +546,8 @@ function countryAt(point){
 map.on('click',event=>{
  if(!allReady)return;
  if(historyActive()&&!countrySwitching&&!quiz.active&&chinaHistory.hoverAt(event.point)){chinaHistory.click(event.point);return;}
+ // A dated division can extend beyond today's country; its atlas handles the click.
+ if(!countrySwitching&&!quiz.active&&currentAtlas()?.hasHistoricalPlace?.(event.point))return;
  const hit=countryAt(event.point);
  if(!quiz.active&&hit&&(hit.country!==atlasMode||countrySwitching)){changeAtlas(hit.country,true,false,hit.region?{region:hit.region,bounds:typeof hit.bounds==='string'?JSON.parse(hit.bounds):hit.bounds}:null);return;}
  if(countrySwitching||atlasMode!=='china'||quiz.active)return;
