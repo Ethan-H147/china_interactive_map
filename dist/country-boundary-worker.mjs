@@ -46,6 +46,9 @@ self.onmessage=async({data})=>{
    self.postMessage(mesh,buffers);return;
   }
   const prepare=part=>{
+   // Omit disconnected channel artifacts along the Aysén–Magallanes boundary.
+   const source=part.boundaries||part.lines;
+   const borders={...source,features:source.features.filter(f=>!f.properties?.channel||!["CL-R-11,CL-R-12","CL-P-113,CL-P-124"].includes([...(f.properties.owners||[])].sort().join(",")))};
    // A few units (Antarctic claims) replace only their own selected outline,
    // leaving out an artificial cut such as the flat map's 85°S limit.
    const regions=polygonParts(part.regions),overrides=part.selectionOutlineOverrides,replaced=new Set(overrides?.features.map(f=>f.properties.id));
@@ -54,8 +57,8 @@ self.onmessage=async({data})=>{
    return {
     ...(part.towns?{towns:prepare(part.towns)}:{}),
     blob:!custom&&!part.selectionOutlineEdits&&indexed?.blob||new Blob([JSON.stringify(regions)],{type:'application/json'}),
-    borders:new Blob([JSON.stringify(lineData(part.boundaries||part.lines))],{type:'application/json'}),
-    hasBorders:(part.boundaries||part.lines).features.length>0,
+    borders:new Blob([JSON.stringify(lineData(borders))],{type:'application/json'}),
+    hasBorders:borders.features.length>0,
     // Reuse polygon slices unless the build supplies selection lines that omit
     // permanent water shores. Duplicate IDs retain every island or line part.
     ...(indexed?{outlines:new Blob([empty],{type:'application/json'}),outlineData:indexed.blob,outlineIndex:indexed.outlineIndex}:{

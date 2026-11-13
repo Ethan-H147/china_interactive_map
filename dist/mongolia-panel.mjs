@@ -11,7 +11,7 @@ export const mongoliaPanel=`<aside id="mongolia-sidebar" class="sidebar mongolia
 },
  settings:`<label class="field-label" for="m-province">Region</label><select id="m-province" data-nav disabled><option value="">All Mongolia</option></select><section class="layers"><h3>Visible layers</h3><label><span><i class="line province-line"></i>Provinces &amp; capital</span><input id="m-province-layer" type="checkbox" checked data-nav disabled></label><label><span><i class="line prefecture-line"></i>Districts</span><input id="m-district-layer" type="checkbox" checked data-nav disabled></label><label><span><i class="label-icon">Aa</i>Region names</span><input id="m-label-layer" type="checkbox" checked data-nav disabled></label></section>`,
  heading:{
- navigation:`<button id="m-selection-reset" class="back-button" data-nav>All Mongolia</button><img src="vendor/flag-mn.svg" width="40" height="30" alt="Flag of Mongolia">`,
+ navigation:`<button id="m-selection-reset" class="back-button" data-nav>All Mongolia</button><div class="division-flags"><img src="vendor/flag-mn.svg" width="40" height="30" alt="Flag of Mongolia"></div>`,
  kindId:`m-selection-kind`,
  nameId:`m-selection-name`,
  nameLang:`en`,

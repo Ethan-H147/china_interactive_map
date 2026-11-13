@@ -42,3 +42,33 @@ html[data-reduce-motion] *,html[data-reduce-motion] *::before,html[data-reduce-m
 #map-performance button[aria-pressed=true]{border-color:var(--red);color:var(--red)}
 #map-performance textarea{display:block;width:100%;max-width:340px;height:140px;margin-top:8px;padding:8px;background:var(--paper);color:var(--ink);border:1px solid var(--line);font:11px/1.4 monospace;user-select:text;-webkit-user-select:text}
 @media(max-width:760px){#map-performance{top:132px;right:12px;max-width:calc(100% - 24px)}#map-performance button{min-height:44px}}
+/* Keep place names and their pronunciation controls together when swapping the heading. */
+:root[data-local-name-first] .country-selection-heading:has(>p.country-local:not([hidden]):not(:empty),>p[id$="selection-local"]:not([hidden]):not(:empty),>p.korean-name:not([hidden]):not(:empty),>.china-name-audio>p:not(:empty)){display:flex;flex-direction:column;align-items:stretch}
+:root[data-local-name-first] .country-selection-heading:has(>p.country-local:not([hidden]):not(:empty),>p[id$="selection-local"]:not([hidden]):not(:empty),>p.korean-name:not([hidden]):not(:empty),>.china-name-audio>p:not(:empty))>*{order:2}
+:root[data-local-name-first] .country-selection-heading:has(>p.country-local:not([hidden]):not(:empty),>p[id$="selection-local"]:not([hidden]):not(:empty),>p.korean-name:not([hidden]):not(:empty),>.china-name-audio>p:not(:empty))>.selection-top{order:-2}
+:root[data-local-name-first] .country-selection-heading:has(>p.country-local:not([hidden]):not(:empty),>p[id$="selection-local"]:not([hidden]):not(:empty),>p.korean-name:not([hidden]):not(:empty),>.china-name-audio>p:not(:empty))>.eyebrow{order:-1}
+:root[data-local-name-first] .country-selection-heading:has(>p.country-local:not([hidden]):not(:empty),>p[id$="selection-local"]:not([hidden]):not(:empty),>p.korean-name:not([hidden]):not(:empty),>.china-name-audio>p:not(:empty))>h2{order:1;font-size:23px!important;line-height:1.35;color:#737780;margin:0 0 18px;font-weight:400}
+:root[data-local-name-first] .country-selection-heading> :is(p.country-local:not([hidden]):not(:empty),p[id$="selection-local"]:not([hidden]):not(:empty),p.korean-name:not([hidden]):not(:empty),.china-name-audio:has(>p:not(:empty))){order:0}
+:root[data-local-name-first] .country-selection-heading> :is(p.country-local:not([hidden]):not(:empty),p[id$="selection-local"]:not([hidden]):not(:empty),p.korean-name:not([hidden]):not(:empty)),:root[data-local-name-first] .country-selection-heading>.china-name-audio>p:not(:empty){font-size:var(--place-heading-size,36px)!important;line-height:1.18;color:var(--ink)!important;letter-spacing:normal;margin:0 0 7px;overflow-wrap:anywhere}
+/* Singapore already renders the selected local name and English separately. */
+:root[data-local-name-first] #singapore-sidebar .country-selection-heading{display:block}
+:root[data-local-name-first] #singapore-sidebar .country-selection-heading>h2{font-size:var(--place-heading-size,36px)!important;line-height:1.18;color:var(--ink);margin:0 0 7px}
+:root[data-local-name-first] #singapore-sidebar .country-selection-heading>p.country-local{font-size:23px!important;line-height:1.35;color:#737780!important;margin:0 0 18px}
+
+:root[data-local-name-first] #singapore-sidebar .country-selection-heading>p[id$="other-names"]{color:#737780!important}
+
+
+/* The primary name uses the heading typeface; subtitles keep their usual font. */
+:root[data-local-name-first] .country-selection-heading> :is(p.country-local:not([hidden]):not(:empty),p[id$="selection-local"]:not([hidden]):not(:empty),p.korean-name:not([hidden]):not(:empty)),:root[data-local-name-first] .country-selection-heading>.china-name-audio>p:not(:empty){font-family:Georgia,'Times New Roman',serif!important}
+:root[data-local-name-first] .country-selection-heading:has(>p.country-local:not([hidden]):not(:empty),>p[id$="selection-local"]:not([hidden]):not(:empty),>p.korean-name:not([hidden]):not(:empty),>.china-name-audio>p:not(:empty))>h2{font-family:'Segoe UI',Arial,sans-serif!important}
+:root[data-local-name-first] #singapore-sidebar .country-selection-heading>h2{font-family:Georgia,'Times New Roman',serif!important}
+:root[data-local-name-first] #singapore-sidebar .country-selection-heading>p.country-local{font-family:'Segoe UI',Arial,sans-serif!important}
+/* Keep the same title and subtitle spacing in either name order. */
+.country-selection-heading:has(>p.country-local:not([hidden]):not(:empty),>p[id$="selection-local"]:not([hidden]):not(:empty),>p.korean-name:not([hidden]):not(:empty),>.china-name-audio>p:not(:empty)){display:flex;flex-direction:column;align-items:stretch}
+.country-selection-heading:has(>p.country-local:not([hidden]):not(:empty),>p[id$="selection-local"]:not([hidden]):not(:empty),>p.korean-name:not([hidden]):not(:empty),>.china-name-audio>p:not(:empty))>h2{margin:11px 0 14px}
+.country-selection-heading> :is(p.country-local:not([id$="other-names"]),p[id$="selection-local"],p.korean-name),.country-selection-heading>.china-name-audio>p{margin:0 0 10px}
+:root[data-local-name-first] .country-selection-heading> :is(p.country-local:not([hidden]):not(:empty),p[id$="selection-local"]:not([hidden]):not(:empty),p.korean-name:not([hidden]):not(:empty)),:root[data-local-name-first] .country-selection-heading>.china-name-audio>p:not(:empty){margin:11px 0 14px}
+:root[data-local-name-first] .country-selection-heading:has(>p.country-local:not([hidden]):not(:empty),>p[id$="selection-local"]:not([hidden]):not(:empty),>p.korean-name:not([hidden]):not(:empty),>.china-name-audio>p:not(:empty))>h2{margin:0 0 10px}
+:root[data-local-name-first] #singapore-sidebar .country-selection-heading{display:flex}
+:root[data-local-name-first] #singapore-sidebar .country-selection-heading>h2{order:0;margin:11px 0 14px}
+:root[data-local-name-first] #singapore-sidebar .country-selection-heading>p.country-local{order:1;margin:0 0 10px}

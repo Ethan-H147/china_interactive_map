@@ -26,7 +26,7 @@ export async function addArchipelagoPortal(map,host,country){
 },
  settings:`<label class="field-label" for="${prefix}-province">${config.first.slice(0,-1)}</label><select id="${prefix}-province" data-nav><option value="">All ${name}</option></select><section class="layers"><h3>Visible layers</h3><label><span>${config.first} outlines</span><input id="${prefix}-province-layer" type="checkbox" checked data-nav></label><label><span>${config.second} outlines</span><input id="${prefix}-second-layer" type="checkbox" checked data-nav></label><label><span>Region names</span><input id="${prefix}-label-layer" type="checkbox" checked data-nav></label></section><p id="${prefix}-coverage" hidden></p>`,
  heading:{
- navigation:`<button id="${prefix}-selection-reset" class="back-button">All ${name}</button><img src="vendor/flag-${prefix}.svg" width="40" height="${country==='philippines'?20:27}" alt="Flag of ${name}">`,
+ navigation:`<button id="${prefix}-selection-reset" class="back-button">All ${name}</button><div class="division-flags"><img src="vendor/flag-${prefix}.svg" width="40" height="${country==='philippines'?20:27}" alt="Flag of ${name}"></div>`,
  kindId:`${prefix}-selection-kind`,
  nameId:`${prefix}-selection-name`,
  nameLang:``,

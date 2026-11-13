@@ -1,9 +1,9 @@
 const storageKey='boundary-atlas-settings-v1';
-export const defaults=Object.freeze({placeNames:true,hoverInfo:true,hoverHighlight:true,countryNames:true,countryLanguage:'both',labelSize:'standard',placeHeadingSize:36,motion:'system',legacyStyling:false,projection:'mercator'});
+export const defaults=Object.freeze({placeNames:true,hoverInfo:true,hoverHighlight:true,countryNames:true,countryLanguage:'both',labelSize:'standard',placeHeadingSize:36,localNameFirst:false,motion:'system',legacyStyling:false,projection:'mercator'});
 export function validateSettings(value){
  const result={...defaults};
  if(!value||typeof value!=='object')return result;
- for(const key of ['placeNames','countryNames','legacyStyling','hoverInfo','hoverHighlight'])if(typeof value[key]==='boolean')result[key]=value[key];
+ for(const key of ['placeNames','countryNames','legacyStyling','hoverInfo','hoverHighlight','localNameFirst'])if(typeof value[key]==='boolean')result[key]=value[key];
  for(const [key,values]of Object.entries({countryLanguage:['en','local','both'],labelSize:['standard','large'],motion:['system','reduce'],projection:['mercator','globe']}))if(values.includes(value[key]))result[key]=value[key];
  if(typeof value.placeHeadingSize==='number'&&Number.isFinite(value.placeHeadingSize))result.placeHeadingSize=Math.max(24,Math.min(48,Math.round(value.placeHeadingSize)));
  return result;
@@ -23,7 +23,7 @@ export function countryFill(definition){const legacy=legacyStylingActive()&&(def
 export const prefersReducedMotion=()=>settings.motion==='reduce'||globalThis.matchMedia?.('(prefers-reduced-motion: reduce)').matches===true;
 function apply(){
  const root=globalThis.document?.documentElement;if(!root)return;
- root.toggleAttribute('data-hide-place-names',!settings.placeNames);root.toggleAttribute('data-hide-country-names',!settings.countryNames);root.dataset.labelSize=settings.labelSize;root.style.setProperty('--place-heading-size',settings.placeHeadingSize+'px');root.toggleAttribute('data-reduce-motion',prefersReducedMotion());
+ root.toggleAttribute('data-local-name-first',settings.localNameFirst);root.toggleAttribute('data-hide-place-names',!settings.placeNames);root.toggleAttribute('data-hide-country-names',!settings.countryNames);root.dataset.labelSize=settings.labelSize;root.style.setProperty('--place-heading-size',settings.placeHeadingSize+'px');root.toggleAttribute('data-reduce-motion',prefersReducedMotion());
 }
 let syncState='guest';
 export function setSettingsSyncState(value){syncState=value;globalThis.dispatchEvent?.(new Event('atlas-settings-sync'));}
@@ -41,7 +41,8 @@ export function mountSettings({refreshLabels,refreshStyling=()=>{},setProjection
  <label class="settings-field" for="settings-country-language">Country-label language<select id="settings-country-language" data-setting="countryLanguage"><option value="both">English + local language</option><option value="en">English</option><option value="local">Local language</option></select></label>
  <label class="settings-field" for="settings-label-size">Label size<select id="settings-label-size" data-setting="labelSize"><option value="standard">Standard</option><option value="large">Large</option></select></label></fieldset>
  <fieldset><legend>Reading</legend>
- <div class="settings-slider"><label for="settings-heading-size">Place heading size<output id="settings-heading-size-value" for="settings-heading-size" aria-hidden="true">36 px</output></label><small id="settings-heading-size-description">English name in the side panel</small><input id="settings-heading-size" type="range" min="24" max="48" step="1" value="36" data-setting="placeHeadingSize" aria-describedby="settings-heading-size-description"></div></fieldset>
+ <label class="settings-row" for="settings-local-name-first"><span><strong>Local names first</strong><small>Show local names as place headings</small></span><input id="settings-local-name-first" type="checkbox" role="switch" data-setting="localNameFirst"></label>
+ <div class="settings-slider"><label for="settings-heading-size">Place heading size<output id="settings-heading-size-value" for="settings-heading-size" aria-hidden="true">36 px</output></label><small id="settings-heading-size-description">Place name in the side panel</small><input id="settings-heading-size" type="range" min="24" max="48" step="1" value="36" data-setting="placeHeadingSize" aria-describedby="settings-heading-size-description"></div></fieldset>
  <fieldset><legend>Map &amp; movement</legend>
  <label class="settings-row" for="settings-hover-highlight"><span><strong>Highlight hovered region</strong><small>Subtle shading under the pointer</small></span><input id="settings-hover-highlight" type="checkbox" role="switch" data-setting="hoverHighlight"></label>
  <label class="settings-row" for="settings-hover-info"><span><strong>Place info on hover</strong><small>Show names and details beside the cursor</small></span><input id="settings-hover-info" type="checkbox" role="switch" data-setting="hoverInfo"></label>

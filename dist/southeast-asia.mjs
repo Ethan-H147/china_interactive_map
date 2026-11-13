@@ -8,7 +8,7 @@ import {setLayerVisible,lineSourceOptions,adaptiveOpacity} from './adaptive-line
 import {malaysiaFlags} from './malaysia-flags.mjs';
 import {renderStatistics,clearStatistics} from './statistics.mjs';
 import {cameraSettled} from './interaction-policy.mjs';
-import {legacyStylingActive} from './settings.mjs';
+import {legacyStylingActive,getSettings} from './settings.mjs';
 import {singaporeLabel,readSingaporeLanguage,singaporeLanguages} from './singapore-languages.mjs';
 
 import './countries.js';
@@ -36,7 +36,7 @@ export async function addCountryPortal(map,host,country){
  kindId:`${prefix}-selection-kind`,
  nameId:`${prefix}-selection-name`,
  nameLang:``,
- names:`<p id="${prefix}-selection-local" class="country-local"></p>`
+ names:`<p id="${prefix}-selection-local" class="country-local"></p><p id="${prefix}-selection-other-names" class="country-local" hidden></p>`
 },
  cards:`<div id="${prefix}-selection-meta" class="country-card-anchor" hidden></div>`,
  subdivisions:`<details id="${prefix}-subdivisions" hidden><summary id="${prefix}-child-summary">${isMalaysia?'Districts':'Planning areas'}</summary><div id="${prefix}-children" class="archipelago-children"></div></details>`,
@@ -55,13 +55,21 @@ export async function addCountryPortal(map,host,country){
  function setLanguage(value){if(isMalaysia)return;language=singaporeLanguages.some(([code])=>code===value)?value:'en';try{localStorage.setItem('boundary-atlas-singapore-language-v1',language);}catch{}const control=sidebar.querySelector('[data-singapore-language]');if(control)control.value=language;if(selected)selectionNames();if(catalogue)populateRegions();updateLabels();}
  const name=record=>isMalaysia?record.en:singaporeLabel(record,language);
  function selectionNames(){
-  $('selection-name').textContent=name(selected);$('selection-name').lang=isMalaysia?'en':language;
-  const alternatives=isMalaysia?[selected.local]:['en','zh','ms','ta'].filter(code=>code!==language).map(code=>selected.names[code]);
-  $('selection-local').textContent=[...new Set(alternatives.filter(v=>v&&v!==name(selected)))].join(' / ');$('selection-local').hidden=!$('selection-local').textContent;
+  const original=name(selected),alternatives=isMalaysia?[selected.local]:['en','zh','ms','ta'].filter(code=>code!==language).map(code=>selected.names[code]);
+  const distinct=[...new Set(alternatives.filter(v=>v&&v!==original))];
+  let title=original,subtitle=distinct.join(' / '),others='';
+  if(!isMalaysia&&getSettings().localNameFirst){
+   const en=selected.names.en,local=language==='en'?distinct.find(v=>v!==en):original;
+   if(local&&en&&local!==en){title=local;subtitle=en;others=distinct.filter(v=>v!==local&&v!==en).join(' / ');}
+  }
+  $('selection-name').textContent=title;$('selection-name').lang=isMalaysia?'en':title===selected.names.en?'en':language==='en'?'':language;
+  $('selection-local').textContent=subtitle;$('selection-local').hidden=!subtitle;
+  $('selection-other-names').textContent=others;$('selection-other-names').hidden=!others;
 
   setRegionBreadcrumb(selected,r=>{const p=index.get(r.parent);return p?.level>0?p:null;},name,select);
   for(const childButton of $('children').querySelectorAll('button'))childButton.textContent=name(index.get(childButton.dataset.region));
  }
+ globalThis.addEventListener('atlas-settings-change',()=>{if(!isMalaysia&&selected)selectionNames();});
  function populateRegions(){const value=$('province').value;$('province').replaceChildren(new Option('All '+c.name,''));for(const r of catalogue.records.filter(r=>r.level===1).sort((a,b)=>name(a).localeCompare(name(b))))$('province').append(new Option(name(r),r.id));$('province').value=value;}
  const visible=(id,value)=>{if(map.getLayer(id))setLayerVisible(map,id,value);};
  const panel=name=>{if(name!=='explore')pronunciation?.stop();showCountryPanel(sidebar,$(name+'-panel'));};

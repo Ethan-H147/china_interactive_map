@@ -31,7 +31,7 @@ export async function addJapanPortal(map,host){
 },
  settings:`<label class="field-label" for="j-province">Prefecture</label><select id="j-province" data-nav><option value="">All Japan</option></select><section class="layers"><h3>Visible layers</h3><label><span>Prefecture outlines</span><input id="j-province-layer" type="checkbox" checked data-nav></label><label><span>Municipality outlines</span><input id="j-second-layer" type="checkbox" checked data-nav></label><label><span>Region names</span><input id="j-label-layer" type="checkbox" checked data-nav></label></section><p id="j-coverage" hidden>47 prefectures · 都道府県</p>`,
  heading:{
- navigation:`<button id="j-selection-reset" class="back-button">All Japan</button><div class="japan-flags"><img src="vendor/flag-jp.svg" width="40" height="27" alt="Flag of Japan"><a id="j-flag-source" target="_blank" rel="noopener"><img id="j-prefecture-flag" width="40" height="27" alt=""></a><a id="j-local-flag-source" hidden target="_blank" rel="noopener"><img id="j-local-flag" width="40" height="27" alt="" decoding="async"></a></div>`,
+ navigation:`<button id="j-selection-reset" class="back-button">All Japan</button><div class="japan-flags division-flags"><img src="vendor/flag-jp.svg" width="40" height="27" alt="Flag of Japan"><a id="j-flag-source" target="_blank" rel="noopener"><img id="j-prefecture-flag" width="40" height="27" alt=""></a><a id="j-local-flag-source" hidden target="_blank" rel="noopener"><img id="j-local-flag" width="40" height="27" alt="" decoding="async"></a></div>`,
  kindId:`j-selection-kind`,
  nameId:`j-selection-name`,
  nameLang:``,
