@@ -1,6 +1,6 @@
 # Quiz history retention
 
-These changes are local. The migration has not been applied to the hosted database.
+The database migration and matching frontend must be deployed together.
 
 ## Storage and reads
 
@@ -46,7 +46,15 @@ after trimming; new rounds never grow it. It contains no historical scores or na
 Old offline rounds not already known still contribute to lifetime records, even
 when their timestamps place them outside the retained history immediately.
 
-## Future rollout
+## Undoing a retained round
+
+Removing a retained round subtracts its contribution from lifetime totals and
+recalculates that challenge's personal best, medals and collectibles. Archived
+best results remain available as a fallback. Ownership checks prevent removing
+another account's results, and repeated requests cannot subtract a round twice.
+Rounds already outside the retained history cannot be undone individually.
+
+## Coordinated rollout
 
 1. Back up the hosted database and browser recovery data.
 2. Apply `20261110183131_quiz_lifetime_retention.sql` during a coordinated rollout.
