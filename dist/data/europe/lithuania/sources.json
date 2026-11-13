@@ -4,7 +4,7 @@
   "counts": {
     "1": 10,
     "2": 60,
-    "3": 533
+    "3": 538
   },
   "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
   "sources": {
@@ -34,5 +34,44 @@
       ],
       "note": "Detailed child polygons share the same outer display edge as their parent; Baltic mutual edges are reconciled together; Estonia’s lake frontier comes from the separate official full administrative-border layer. This is a display alignment, not a legal boundary determination."
     }
+  },
+  "cityCoverage": {
+    "coverage": "533 official elderships plus four cities administered outside elderships and the remaining Šiauliai city area. These five mapped areas belong to their existing municipalities; no new municipality or eldership is invented. City geometry is the official municipal polygon minus its official elderships. Existing lakes, international frontiers and official municipal population/area totals are retained.",
+    "areas": [
+      {
+        "code": "29",
+        "name": "Šiauliai",
+        "local": "Šiauliai",
+        "partial": true,
+        "source": "https://www.siauliai.lt/page/view/711"
+      },
+      {
+        "code": "12",
+        "name": "Birštonas",
+        "local": "Birštonas",
+        "source": "https://birstonas.lt/wp-content/uploads/2017/02/Birstono-savivaldyb%C4%97s-BP-keitimas-SPAV-ataskaita.pdf"
+      },
+      {
+        "code": "15",
+        "name": "Druskininkai",
+        "local": "Druskininkai",
+        "source": "https://druskininkusavivaldybe.lt/"
+      },
+      {
+        "code": "57",
+        "name": "Kupiškis",
+        "local": "Kupiškis",
+        "source": "https://www.kupiskis.lt/informacija-apie-pradedama-rengti-kupiskio-miesto-bendrojo-plano-keitima/852"
+      },
+      {
+        "code": "62",
+        "name": "Molėtai",
+        "local": "Molėtai",
+        "source": "https://www.e-tar.lt/rs/legalact/dd0b80b0545611e9975f9c35aedfe438/"
+      }
+    ]
+  },
+  "topologyRepair": {
+    "method": "Enclosed rounding gaps of at most 10 square metres are cleaned jointly before parent dissolution and shared-edge extraction. One omitted Jurbarkas river section is restored from the official municipal footprint, partitioned using the existing eldership divider extended to that footprint. Existing IDs and statistics remain unchanged."
   }
 }

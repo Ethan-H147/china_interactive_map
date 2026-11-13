@@ -1,0 +1,21 @@
+Country loading artwork
+
+Canada maple leaf and India Ashoka Chakra:
+Extracted from the existing flag-ca.svg and flag-in.svg without changing their
+paths, proportions or colors. MIT license; see flags-LICENSE.txt in this folder.
+
+Ireland shamrock: original Boundary Atlas artwork.
+
+Mexico Sun Stone:
+Aztec Solar Disk Calendar.svg by Haley.Parrot, based on artwork by Jlevine13.
+https://commons.wikimedia.org/wiki/File:Aztec_Solar_Disk_Calendar.svg
+Source retrieved 10 November 2026:
+https://upload.wikimedia.org/wikipedia/commons/d/d7/Aztec_Solar_Disk_Calendar.svg
+Creative Commons Attribution-Share Alike 4.0 International:
+https://creativecommons.org/licenses/by-sa/4.0/
+
+Modifications: brown ink, warm stone base, circular crop, transparent exterior,
+rasterized to a 256-pixel WebP.
+The derivative is distributed under the same CC BY-SA 4.0 license. The source SVG
+and reproducible conversion are retained in scripts/symbol-sources/ and
+scripts/prepare-country-symbols.mjs in the Boundary Atlas source repository.

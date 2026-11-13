@@ -1,0 +1,17 @@
+{
+  "sources": {
+    "oslo": {
+      "url": "https://www.oslo.kommune.no/english/politics/city-governance/"
+    }
+  },
+  "pages": [
+    {
+      "id": "NO-03",
+      "municipality": "NO-M-0301",
+      "name": "Oslo",
+      "local": "Oslo",
+      "kind": "City and county",
+      "source": "oslo"
+    }
+  ]
+}

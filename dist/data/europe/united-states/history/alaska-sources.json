@@ -1,6 +1,6 @@
 {
   "inputs": {
-    "dist/data/europe/united-states/first.bin": "a52e2aa775b039cdd32b12c5a499c703bd6780219146522ca4330e2208bcd830",
+    "dist/data/europe/united-states/first.bin": "dd71802827d635425ef620d9f410a11dc3a47473e273db6dc4393a030be5d05a",
     "dist/data/europe/united-states/history/borders.bin": "ec8384fb9daebbcbf9faa5c524154912cb3fba931c9b2fb676803308a26944b3"
   },
   "method": "Alaska uses exactly the current-day US-AK land geometry in every historical configuration. Historical ownership and status remain dated; old source coast fragments are not rendered."

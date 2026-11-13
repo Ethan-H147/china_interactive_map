@@ -1,0 +1,26 @@
+{
+  "sources": {
+    "statute": {
+      "title": "Statute of the City of Zagreb",
+      "url": "https://skupstina.zagreb.hr/UserDocsImages/engleski%20web/statistika/00%20INTERNO%20Statut%20Grada%20Zagreba_engleski%20prijevod.pdf"
+    }
+  },
+  "pages": [
+    {
+      "id": "HR050",
+      "municipality": "HR_01333",
+      "name": "Zagreb",
+      "local": "Grad Zagreb",
+      "kind": "City and county",
+      "type": "city-county",
+      "source": "statute"
+    }
+  ],
+  "exclusions": [
+    {
+      "id": "HR065",
+      "name": "Zagreb County",
+      "reason": "Separate surrounding county government."
+    }
+  ]
+}

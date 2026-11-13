@@ -26,9 +26,7 @@ const env=vm.createContext({quiz:{active:false},map,regionByCode,districtsVisibl
 vm.runInContext(source.slice(source.indexOf('function pickedRegion('),source.indexOf('function countryAt(')),env);
 assert.equal(env.pickedRegion({x:60,y:150}).feature.properties.adcode,220000,'Reproduce the old invalid plain-object query returning the first visible province');
 const hover=createHoverOverview(map,{document:{createElement:node},resolve:point=>env.pickedRegion(point)?.feature.properties});const tip=container.children.at(-1);
-Object.assign(env,{atlasMode:'china',cameraBusy:false,allReady:true,hovered:null,setRegionState(){},clearHover(hide=true){env.hovered=null;if(hide)hover.clear();}});
-const mouseStart=source.indexOf("window.AtlasPointer.onMapHover(map,");vm.runInContext(source.slice(mouseStart,source.indexOf("map.getCanvas().addEventListener('mouseleave'",mouseStart)),env);
-const move=(x,y)=>{listeners.get('pointermove')({target:canvas,clientX:x+350,clientY:y+90,pointerType:'mouse'});mapHandlers.get('mousemove')({point:[x,y]});flushFrames();};
+const move=(x,y)=>{listeners.get('pointermove')({target:canvas,clientX:x+350,clientY:y+90,pointerType:'mouse'});flushFrames();};
 for(const [x,y,name] of [[60,150,'Shaanxi'],[220,150,'Shandong'],[450,40,'Jilin'],[60,150,'Shaanxi']]){move(x,y);assert.equal(tip.children[0].textContent,name);assert(!tip.hidden);}
 level='prefecture';districts=true;move(175,135);assert.equal(tip.children[0].textContent,'Changning District','Detailed Chinese district picking keeps its priority');move(350,270);assert(tip.hidden,'Empty space does not retain the previous province');
 hover.destroy();console.log('Real MapLibre query parsing: reproduced viewport-wide Jilin bug; corrected pointer queries track Shaanxi, Shandong, Jilin, district priority and empty space.');

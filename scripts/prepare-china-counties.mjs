@@ -18,6 +18,7 @@ import {mesh} from 'topojson-client';
 import mapshaper from 'mapshaper';
 import {readData} from './read-data.mjs';
 import {transformFeature} from './coordinates.mjs';
+import {repairBinzhouCountyOutlines} from './binzhou-county-geometry.mjs';
 import {isPrefectureLevel} from '../dist/china-levels.mjs';
 
 const csv=process.argv[2]||'artifacts/areacity/x/ok_geo.csv';
@@ -102,6 +103,7 @@ for(const parent of prefectures){
  const centroids=await run('-i input.json -points inner',{'input.json':clean});
  clean.features.forEach((f,i)=>{f.properties.centroid=centroids.features[i].geometry.coordinates.map(v=>Math.round(v*1e6)/1e6);});
  assert.equal(clean.features.length,new Set(source.map(f=>f.properties.adcode)).size,code+': every county keeps a shape');
+ repairBinzhouCountyOutlines(clean.features);
  const top=topology({regions:clean});
  lines.push({type:'Feature',properties:{parentCity:code},geometry:mesh(top,top.objects.regions,(a,b)=>a!==b)});
  features.push(...clean.features);

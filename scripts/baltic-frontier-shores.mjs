@@ -18,7 +18,8 @@ export function removeBalticShoreFrontiers(){
    let run;
    for(let i=1;i<path.length;i++){
     const a=path[i-1],b=path[i],mid=[(a[0]+b[0])/2,(a[1]+b[1])/2];
-    const falseBorder=international(mid)>5&&[a,mid,b].every(p=>shore(p)<2);
+    const vistulaCoast=p=>p[0]>=19.68&&p[0]<=19.78&&p[1]>=54.48&&p[1]<=54.56;
+    const falseBorder=international(mid)>5&&([a,mid,b].every(p=>shore(p)<2)||!feature.properties.pair&&vistulaCoast(a)&&vistulaCoast(b));
     if(falseBorder){removed++;removedMetres+=metres(a,b);run=null;continue;}
     if(!run){run=[a];features.push({...feature,geometry:{type:'LineString',coordinates:run}});}
     run.push(b);

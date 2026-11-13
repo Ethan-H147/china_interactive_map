@@ -1,5 +1,6 @@
 import {applyPopulationExpansion} from './population-expansion.mjs';
 import {repairHidalgoTlaxcala} from './repair-hidalgo-tlaxcala.mjs';
+import {repairSudanNorthernBorder} from './repair-sudan-northern-border.mjs';
 import {applyIrishDistrictPopulation} from './us-ireland-statistics.mjs';
 import {geographicAreaKm2} from './geographic-area.mjs';
 import fs from 'node:fs';import assert from 'node:assert/strict';import {createRequire} from 'node:module';import {gzipSync} from 'node:zlib';import {polygons} from './geo-index.mjs';import {lineData,visibleSegments} from '../dist/adaptive-lines.mjs';import {countryContext} from './country-context.mjs';
@@ -16,6 +17,7 @@ export async function buildRegionalDataset({country,units,byLevel,sources,covera
   for(let i=0;i<regions.features.length;i++){const f=regions.features[i],u=units.get(f.properties.id);assert(u&&u.level===level,'Exact unit identity '+f.properties.id);records.push({...u,center:points.features[i].geometry.coordinates,bounds:geographicBounds(f.geometry),areaKm2:u.reportedArea??geographicAreaKm2(f.geometry)});}
   whole[level]={regions,boundaries:sharedBorders(regions)};
   if(country==='mexico'&&level===1)whole[level].boundaries=repairHidalgoTlaxcala(regions,whole[level].boundaries);
+  if(country==='sudan'&&level===1)whole[level].boundaries=repairSudanNorthernBorder(regions,whole[level].boundaries);
  }
  const first=new Map(records.filter(r=>r.level===1).map(r=>[r.id,r])),context=await buildContext(country,byLevel,records);
  write('context.bin',context);write('international.bin',lineData(fc([])));write('first.bin',whole[1]);

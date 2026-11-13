@@ -1,0 +1,13 @@
+import assert from 'node:assert/strict';
+import {load} from './geo-index.mjs';
+import {applySharedPlacePages,sharedPlacePage,sharedPlaceGeometry,uniquePlacePages} from '../dist/shared-place-pages.mjs';
+import {createPlaceSearch} from '../dist/place-search.mjs';
+const cat=load('dist/data/europe/croatia/catalogue.bin'),before=structuredClone(cat.records),defs=load('dist/data/europe/croatia/shared-place-pages.json');
+applySharedPlacePages(cat.records,defs);const idx=new Map(cat.records.map(r=>[r.id,r])),city=idx.get('HR050'),municipal=idx.get('HR_01333');
+assert.equal(sharedPlacePage(municipal,idx),city);assert.equal(sharedPlaceGeometry(city,1,idx),city);assert.equal(sharedPlaceGeometry(city,2,idx),municipal);
+assert.equal(city.kind,'City and county');assert.equal(municipal.en,'Zagreb');assert(!city.statusNote);assert(!idx.get('HR065').sharedPageId);
+const search=createPlaceSearch(uniquePlacePages(cat.records));for(const q of ['Zagreb','Grad Zagreb','01333','HR050'])assert.equal(search(q).filter(r=>r.id==='HR050').length,1);
+for(const r of before)for(const key of ['id','code','level','parent','bounds','center','areaKm2'])assert.deepEqual(idx.get(r.id)[key],r[key]);
+assert.equal(uniquePlacePages(cat.records).length,before.length-1);assert.equal(cat.records.filter(r=>r.level===1).length,21);
+const first=JSON.stringify(cat.records);applySharedPlacePages(cat.records,defs);assert.equal(JSON.stringify(cat.records),first);
+console.log('Zagreb: one shared card/search result, two geographic levels, separate surrounding county, unchanged IDs and geometry, stable repeated loading.');

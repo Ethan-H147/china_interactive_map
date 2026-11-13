@@ -1,5 +1,4 @@
 import {mapPalette} from './map-palette.mjs';
-import {loadCompressed} from './korea-data.mjs';
 // Native globe tiles stop at 85.051129°S, and their pole fan stretches that
 // edge to the pole. Draw the actual land, ice shelves included, on the sphere.
 const id='antarctica-pole-surface';
@@ -68,14 +67,19 @@ function claimLines(mesh,southOf){
 // Lines are sized as the regional selected outline (regionalLineWidth(1,true)).
 const selectedWidth=zoom=>zoom<=6?.7+(Math.max(2,zoom)-2)*.1:Math.min(1.7,1.1+(zoom-6)*.15);
 export async function addAntarcticCap(map){
- const data=await loadCompressed('data/antarctica/pole-mesh.bin');
+ const data=await new Promise((resolve,reject)=>{
+  const worker=new Worker(new URL('./country-boundary-worker.mjs',import.meta.url),{type:'module'});
+  worker.onmessage=({data})=>{worker.terminate();data.error?reject(Error(data.error)):resolve(data);};
+  worker.onerror=event=>{worker.terminate();reject(Error(event.message));};
+  worker.postMessage({operation:'polar-mesh',url:new URL('./data/antarctica/pole-mesh.bin',import.meta.url).href});
+ });
  let attached=false,disposed=false;
  function layer(){let program,vao,buffers,locations,shaders,line;
   return {id,type:'custom',renderingMode:'2d',metadata:{atlas:{role:'land',overview:true}},
    onAdd(_map,gl){
     shaders=[shader(gl,gl.VERTEX_SHADER,vertex),shader(gl,gl.FRAGMENT_SHADER,fragment)];program=gl.createProgram();for(const s of shaders)gl.attachShader(program,s);gl.linkProgram(program);if(!gl.getProgramParameter(program,gl.LINK_STATUS))throw Error(gl.getProgramInfoLog(program));
     locations={position:gl.getAttribLocation(program,'a_position'),matrix:gl.getUniformLocation(program,'u_matrix'),horizon:gl.getUniformLocation(program,'u_horizon'),color:gl.getUniformLocation(program,'u_color')};
-    vao=gl.createVertexArray();buffers=[data.neutral,...data.claims].map(mesh=>{const buffer=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,buffer);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array(mesh.positions),gl.STATIC_DRAW);return {buffer,count:mesh.positions.length/3,mesh};});
+    vao=gl.createVertexArray();buffers=[data.neutral,...data.claims].map(mesh=>{const buffer=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,buffer);gl.bufferData(gl.ARRAY_BUFFER,mesh.positions,gl.STATIC_DRAW);return {buffer,count:mesh.positions.length/3,mesh};});
     line={program:gl.createProgram(),shaders:[shader(gl,gl.VERTEX_SHADER,lineVertex),shader(gl,gl.FRAGMENT_SHADER,lineFragment)],buffers:new Map()};for(const s of line.shaders)gl.attachShader(line.program,s);gl.linkProgram(line.program);if(!gl.getProgramParameter(line.program,gl.LINK_STATUS))throw Error(gl.getProgramInfoLog(line.program));
     line.locations=Object.fromEntries(['a_position','a_other','a_side'].map(n=>[n,gl.getAttribLocation(line.program,n)]).concat(['u_matrix','u_horizon','u_viewport','u_half','u_color'].map(n=>[n,gl.getUniformLocation(line.program,n)])));
    },

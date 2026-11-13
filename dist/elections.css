@@ -115,3 +115,11 @@
 .collapsible-dock.is-collapsed .election-year strong{font-size:22px}
 .collapsible-dock.is-collapsed .election-year span,.collapsible-dock.is-collapsed .election-needed,.collapsible-dock.is-collapsed .election-bar{display:none}
 @media(max-width:760px){.collapsible-dock.is-collapsed{padding-bottom:10px}.collapsible-dock .election-head{gap:10px}}
+
+/* Selected regime years remain readable on compact screens and in either appearance. */
+.history-dock[data-periods] .election-tick{flex:1 0 34px}
+html[data-color-mode=dark] .election-dock{background:#17212af2;border-color:var(--line)}
+html[data-color-mode=dark] .election-legend{color:var(--muted)}
+html[data-color-mode=dark] .election-timeline{border-color:var(--line)}
+
+.history-dock[data-periods]:not(.is-collapsed) .election-year span{display:block}

@@ -6,7 +6,7 @@ These are present-day country pages under Estonia, Latvia and Lithuania. The Sov
 | --- | --- | --- | --- |
 | Estonia | 15 counties | 78 municipalities | 4,715 distinct settlement/city-district codes |
 | Latvia | 35 municipalities and 7 independent state cities | 586 towns/parishes | — |
-| Lithuania | 10 counties | 60 municipalities | 533 mapped elderships |
+| Lithuania | 10 counties | 60 municipalities | 533 elderships, four cities and one remaining city area |
 
 Estonia's Jõhvi–Toila merger is included. The original Estonian settlement download has 4,717 polygon records; duplicate Ridaküla and Tapa codes are dissolved into one feature per place. Latvia's Varakļāni–Madona merger of 1 July 2025 is included, using the revised Madona code 0038001. Carnikava's later 2026 town/parish split is mapped from current address-register polygons; its separate January 2026 population values are not invented. Six Lithuanian municipalities lack eldership polygons in the official source and remain selectable at municipal level. Counties are territorial units: their governments were abolished in Lithuania in 2010 and Estonia in 2018.
 
@@ -16,7 +16,7 @@ Estonia's Jõhvi–Toila merger is included. The original Estonian settlement do
 - [Latvian State Land Service address-register spatial data](https://data.gov.lv/dati/dataset/varis-atvertie-dati/resource/b643b1b3-223f-4394-9beb-18524f8b0b82), October 2026, CC BY 4.0. Full-resolution municipality, town and parish polygons are used, rather than the old district system or the generalized 1:1.2m map. Current official territorial codes join the statistical tables. English labels come from the CSB territorial classification; Latvian names retain their accents.
 - [Lithuanian SSVA / Centre of Registers INSPIRE data](https://www.geoportal.lt/metadata-catalog/catalog/search/resource/details.page?uuid=%7B2BADE6E6-1D35-456F-9441-6DC82E4FBD14%7D), 30 September 2026, CC BY 4.0. Official county/municipality/eldership codes and parent references are retained. City municipalities and surrounding district municipalities remain distinct.
 
-Parent geometry is dissolved from the same detailed children, including the actual city polygons where Lithuania has no ward layer. Shared subdivision edges are stored once. Baltic mutual display edges are reconciled as complete runs; detailed source geometry and dates remain documented. Natural Earth major lake water is removed from land fills while administrative strokes through lakes remain continuous. Display alignment is not a legal boundary determination.
+Parent geometry is dissolved from the same detailed children, including the actual city polygons where Lithuania has no ward layer. Cities outside elderships and the remainder of Šiauliai are included explicitly; see [Lithuania city coverage](lithuania-city-coverage.md). Shared subdivision edges are stored once. Baltic mutual display edges are reconciled as complete runs; detailed source geometry and dates remain documented. Natural Earth major lake water is removed from land fills while administrative strokes through lakes remain continuous. Display alignment is not a legal boundary determination.
 
 ## Statistics
 
@@ -25,7 +25,7 @@ Parent geometry is dissolved from the same detailed children, including the actu
 - Lithuania: State Data Agency **S3R167_M3010320**, 1 January 2026 resident population. County and municipal codes all match; eldership population is shown only for matching official codes. Registry municipal area is reported in hectares and converted to square kilometres; county areas sum the municipal registry figures. Eurostat **nama_10r_3gdp**, 2024 county GDP and GDP per capita. Municipal GDP is not invented.
 - Annual average EUR/USD conversions use Eurostat **ert_bil_eur_a**, for the same year as GDP. Cards keep the euro amount, year and source; the shared colour scale uses the documented dollar conversion.
 
-County centres are reference dots for Estonia and Lithuania. County names take priority over centre names when labels collide. They select their county. Local flag files retain original artwork, dimensions, source-page links, attribution, license and SHA-256 hashes. All 15 Estonian county flags and all 10 Lithuanian county flags are included. Latvian municipal artwork is included where downloaded; the source rate limit leaves some regional flags unavailable. The importer preserves cached artwork and stops further downloads during a rate limit. The module includes verified available flags; missing municipal artwork is not replaced with unrelated symbols.
+County-centre dots are disabled for Estonia and Lithuania. Cities are selected through their subdivision polygons. Local flag files retain original artwork, dimensions, source-page links, attribution, license and SHA-256 hashes. All 15 Estonian county flags and all 10 Lithuanian county flags are included. Latvian municipal artwork is included where downloaded; the source rate limit leaves some regional flags unavailable. The importer preserves cached artwork and stops further downloads during a rate limit. The module includes verified available flags; missing municipal artwork is not replaced with unrelated symbols.
 
 ## Rebuild and validation
 

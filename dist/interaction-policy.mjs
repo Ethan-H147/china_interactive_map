@@ -39,3 +39,11 @@ export function cameraSettled(map,{isMoving=()=>false,current=()=>true,delay=180
   check();
  });
 }
+
+// MapLibre's expression "in" scans the literal array for every feature.
+// Match compiles homogeneous ID lists into a direct lookup once per filter.
+export function membershipFilter(field,values){
+ const ids=[...new Set(values)];if(!ids.length)return ['literal',false];
+ const type=typeof ids[0],direct=(type==='number'||type==='string')&&ids.every(id=>typeof id===type&&(type==='number'?Number.isSafeInteger(id):!(id in Object.prototype)));
+ return direct?['match',['get',field],ids,true,false]:['in',['get',field],['literal',ids]];
+}

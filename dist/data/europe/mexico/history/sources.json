@@ -1,0 +1,46 @@
+{
+  "sources": [
+    {
+      "name": "Newberry Library, Atlas of Historical County Boundaries",
+      "url": "https://publications.newberry.org/ahcb/"
+    },
+    {
+      "name": "INEGI, Evolución histórica de los municipios de México de 1810 a 2020",
+      "url": "https://www.inegi.org.mx/contenidos/productos/prod_serv/contenidos/espanol/bvinegi/productos/nueva_estruc/889463909101.pdf"
+    },
+    {
+      "name": "UNAM, La división territorial del Segundo Imperio Mexicano",
+      "url": "https://moderna.historicas.unam.mx/index.php/ehm/article/download/68932/68892?inline=1"
+    },
+    {
+      "name": "Giggette",
+      "url": "https://commons.wikimedia.org/wiki/File:Political_divisions_of_Mexico_1821_(location_map_scheme).svg",
+      "license": "CC BY-SA 3.0"
+    },
+    {
+      "name": "Goran tek-en",
+      "url": "https://commons.wikimedia.org/wiki/File:Political_divisions_of_Mexico_1865_(numbers).svg",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "name": "Periódico Oficial del Departamento de Campeche, 7 April 1865",
+      "url": "https://periodicooficial.campeche.gob.mx/sipoec/public/archivo_historico/1865_123.pdf"
+    }
+  ],
+  "dates": [
+    1820,
+    1822,
+    1824,
+    1843,
+    1847,
+    1853,
+    1857,
+    1865,
+    1870,
+    1910,
+    1917,
+    1946,
+    2000
+  ],
+  "coverage": "Representative regime frames rather than an annual survey. Modern states are grouped to reconstruct historical administration, retaining the current detailed land geometry. Guerrero before 1849 is generalized into México even though its territory also came from Puebla and Michoacán. Northern provincial interiors use a generalized 1821 map. The 1847 frame uses the pre-cession exterior, not wartime control. Texas after 1836 is disputed and generalized to the present-day Texas outline. 1853 is midyear before the Gadsden treaty; 1910 is before the Revolution. Central American provinces of the First Empire use present-day country outlines. 1865 shows all 50 decreed departments as a plan, not actual control. The retained 1821 and 1865 derived maps are adaptations under CC BY-SA 3.0 and 4.0, respectively. For 1865, gaps between the sketch and the detailed land outline are assigned by shared frontage; gaps spanning several departments are partitioned locally. The coastal assignments at the ports of Campeche and Villa del Carmen are checked against the 1865 decree."
+}

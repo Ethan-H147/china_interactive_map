@@ -1,8 +1,9 @@
+import {membershipFilter} from './interaction-policy.mjs';
 import {internationalBorderPaint} from './adaptive-lines.mjs';
 import {compactUrl,decodeData,fetchBytes} from './geo-pack.mjs';
 import {mapPalette} from './map-palette.mjs';
 
-const included=(field,ids)=>['in',['get',field],['literal',ids]];
+const included=(field,ids)=>membershipFilter(field,ids);
 const same=(a,b)=>JSON.stringify(a)===JSON.stringify(b);
 const providers=['country-border-previews','globe-overview-borders'];
 export function regionalProviderFilter(base,keys,owner){
@@ -44,7 +45,7 @@ export function createHistoricalRegion(map,{country,base,packShapes,shapeAt,ownL
   draw(config,colors,linePaint){
    if(!data)return;active=true;
    if(!map.getSource(sources.land)){
-    for(const member of members)map.addSource(sources[member],{type:'geojson',data:'atlas-data://'+prefix+'?url='+encodeURIComponent(url)+'&member='+member,tolerance:.125,...(member==='sea'?{attribution:'© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'}:{})});
+    for(const member of members)map.addSource(sources[member],{type:'geojson',data:'atlas-data://'+prefix+'?url='+encodeURIComponent(url)+'&member='+member,tolerance:0,...(member==='sea'?{attribution:'© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'}:{})});
     const add=(key,type,member,paint,metadata={atlas:{role:type==='line'?'border':'fill'}})=>map.addLayer({id:ids[key],type,source:sources[member],metadata,...(type==='line'?{layout:{'line-cap':'round','line-join':'round'},filter:included('a',[])}:{}),paint});
     add('land','fill','land',{'fill-color':mapPalette.country,'fill-antialias':false});
     add('fill','fill','displayFaces',{'fill-color':'rgba(0,0,0,0)','fill-antialias':false});

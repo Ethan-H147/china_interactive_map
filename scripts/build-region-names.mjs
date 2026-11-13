@@ -32,7 +32,7 @@ for(const {properties:p} of features){
   if(wiki&&p.adcode!==653000){
     const candidates=wiki.mongolian.filter(s=>/[\u1820-\u18aa]/.test(s));
     // These infoboxes split the short name and administrative suffix into spans.
-    const text=(p.adcode===632800?candidates.find(s=>s.includes('ᠥᠪᠡᠷᠲᠡᠭᠡᠨ')):[150200,150600].includes(p.adcode)?candidates.find(s=>s.endsWith('ᠬᠣᠲᠠ')):candidates[0])?.replace(/\n/g,' ');
+    const text=(p.adcode===632800?candidates.find(s=>s.includes('ᠥᠪᠡᠷᠲᠡᠭᠡᠨ')):[150200,150600].includes(p.adcode)?candidates.find(s=>s.includes(' ')&&s.endsWith('ᠬᠣᠲᠠ')):candidates[0])?.replace(/\n/g,' ');
     assert(text,`Missing traditional Mongolian: ${p.adcode}`);
     entry.regional.push(local(text,'mn-Mong','Mongolian',wiki.source,'CC BY-SA 4.0'));
   }

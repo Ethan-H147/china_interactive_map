@@ -1,0 +1,36 @@
+{
+  "sources": {
+    "berlin": {
+      "url": "https://www.berlin.de/rbmskzl/en/the-governing-mayor/the-constitution-of-berlin/artikel.16534.en.php"
+    },
+    "hamburg": {
+      "url": "https://www.hamburgische-buergerschaft.de/unsere-arbeit/die-aufgaben"
+    }
+  },
+  "pages": [
+    {
+      "id": "DE3",
+      "members": [
+        "DE3",
+        "DE300",
+        "DE_11000000"
+      ],
+      "name": "Berlin",
+      "local": "Berlin",
+      "kind": "City-state",
+      "source": "berlin"
+    },
+    {
+      "id": "DE6",
+      "members": [
+        "DE6",
+        "DE600",
+        "DE_02000000"
+      ],
+      "name": "Hamburg",
+      "local": "Hamburg",
+      "kind": "City-state",
+      "source": "hamburg"
+    }
+  ]
+}

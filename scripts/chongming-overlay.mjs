@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import mapshaper from 'mapshaper';
+import {refineChongmingArtifacts} from './chongming-shore-artifacts.mjs';
 
 export const chongmingWindow=[121.10,31.42,122.05,31.93];
 const collection=features=>({type:'FeatureCollection',features});
@@ -31,5 +32,5 @@ export async function applyChongmingCoast(features,island,bank){
  const chongming=await overlay('-i input.json -dissolve2 adcode copy-fields=name,level,provinceCode,center,centroid,parent,acroutes,childrenNum,subFeatureIndex',{'input.json':collection([...shanghaiIsland,{...oldChongming,geometry:{type:'MultiPolygon',coordinates:other}}])});
  const nantong=await overlay('-i input.json -dissolve2 adcode copy-fields=name,level,provinceCode,center,centroid,parent,acroutes,childrenNum,subFeatureIndex',{'input.json':collection([...outside,...inside,...jiangsuIsland])});
  assert.equal(chongming.length,1);assert.equal(nantong.length,1);
- return features.map(f=>f.properties.adcode===310151?chongming[0]:f.properties.adcode===320600?nantong[0]:f);
+ return (await refineChongmingArtifacts(features.map(f=>f.properties.adcode===310151?chongming[0]:f.properties.adcode===320600?nantong[0]:f))).features;
 }

@@ -6,6 +6,7 @@ import {addWorkerSource} from './geo-pack.mjs';
 import {internationalLineSourceOptions,internationalBorderPaint} from './adaptive-lines.mjs';
 
 export {addBorderPreviews};
+export {createModernContext} from './modern-context.mjs';
 const overviews=new WeakMap(),caps=new WeakMap();
 // The globe overview's land and borders and the pole cap are all a map that opens on the
 // overview (Antarctica) draws besides its own country, so app.js adds them before that view

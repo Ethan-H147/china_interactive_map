@@ -1,7 +1,9 @@
 import {addDockCollapse} from './dock-collapse.mjs';
-import {OTHER_LAND,createHistoricBorders,createHostLines} from './historic-borders.mjs';
+import {OTHER_LAND,createHistoricBorders,createHostLines,administrativeBorderPaint} from './historic-borders.mjs';
 import {CHEVRON,DISPUTED,TERRITORY,holderLines} from './elections.mjs';
 import {getMapScene} from './map-scene.mjs';
+import {compactUrl} from './geo-pack.mjs';
+import {appearancePaint} from './appearance-paint.mjs';
 // A historical snapshot of a country's first level, year by year, drawn by the shared historic
 // borders (historic-borders.mjs) over the present-day map. A dock picks the year; picking a
 // unit shows what it was, and the host selects the present-day place it now covers. The
@@ -46,16 +48,50 @@ export function buildHistoryDock({id,label,entries,yearText,onSelect,onResize}){
  }};
 }
 
-export function createHistoricView(map,{country,base,config,borders:engine,fill,onError=()=>{},fillLayer=country+'-first-fill',hostFills=[fillLayer],selectionLayer=country+'-first-selection-fill',scene=getMapScene(map),onChange=()=>{},onPlace=()=>{}}){
+export function createHistoricView(map,{country,base,config,borders:engine,fill,onError=()=>{},fillLayer=country+'-first-fill',hostFills=[fillLayer],selectionLayer=country+'-first-selection-fill',scene=getMapScene(map),controls=()=>null,onChange=()=>{},onContextChange=()=>{},onPlace=()=>{}}){
  let request=0,active=false,year,dock,applied=false,original,focus=null,selectedRecord=null,epoch=0;
  try{year=+localStorage.getItem(config.store)||null;}catch{}
  const neighbour=config.neighbour;
  const context=neighbour&&createHistoricBorders(map,{country:neighbour.country,base:new URL('../'+neighbour.country+'/',new URL(base,document.baseURI)).href,file:'history/borders.bin',tag:'history-context',frontierLines:true,lineLayer:country+'-first-lines',scene});
  let contextUnit=null,contextFrame=null,contextRequest=0;
  const hostLines=createHostLines(map,{country,scene,own:id=>engine.layers.has(id)||context?.layers.has(id)});
+ const labelFaces=new Map();
+ const detailId=country+'-history-municipal',providers=['country-border-previews','globe-overview-borders'],savedFilters=new Map();
+ let detailFile=null,syncingFrontiers=false;
+ function syncDetails(){
+  const file=config.details&&current().detail;
+  if(!file){if(map.getLayer(detailId))map.removeLayer(detailId);if(map.getSource(detailId))map.removeSource(detailId);detailFile=null;return;}
+  const data='atlas-data://'+detailId+'?'+new URLSearchParams({url:new URL(compactUrl(base+file),document.baseURI).href,member:'boundaries'});
+  if(!map.getSource(detailId))map.addSource(detailId,{type:'geojson',data,tolerance:.25});else if(detailFile!==file)map.getSource(detailId).setData(data);
+  if(!map.getLayer(detailId))map.addLayer({id:detailId,type:'line',source:detailId,minzoom:6,metadata:{atlas:{role:'border'}},layout:{'line-join':'round','line-cap':'round'},paint:{...administrativeBorderPaint(map,country+'-first-lines',scene),'line-width':['interpolate',['linear'],['zoom'],6,.45,10,.8,14,1.1],'line-opacity':.6}});
+  detailFile=file;
+ }
+ function syncControls(){
+  if(!active||!applied)return;const visible=controls();if(!visible)return;
+  for(const id of engine.layers)if(map.getLayer(id)&&(/-(lines|frontiers|outer)$/.test(id)))map.setLayoutProperty(id,'visibility',visible.borders?'visible':'none');
+  if(map.getLayer(detailId))map.setLayoutProperty(detailId,'visibility',visible.details?'visible':'none');
+ }
+ function syncFrontiers(){
+  if(!active||!config.omitFrontiers||syncingFrontiers)return;syncingFrontiers=true;try{
+  const spec=config.omitFrontiers(year);
+  // Border packages also carry unnamed strokes and resolved frontier IDs.
+  // A missing pair must not make the entire feature filter fail.
+  const pair=['string',['get','pair'],['get','resolvedFrontier'],''];
+  const affected=['any',
+   ['==',['get','previewLayer'],country+'-international'],['==',['get','overviewOwner'],country],
+   ['==',['slice',pair,0,3],spec.country],['==',['slice',pair,4,7],spec.country],
+   ['in',pair,['literal',spec.pairs||[]]]
+  ];
+  for(const id of providers){if(!map.getLayer(id))continue;const now=map.getFilter(id),previous=savedFilters.get(id),same=JSON.stringify(now)===JSON.stringify(previous?.applied),base=previous&&same?previous.base:now;
+   const applied=['all',...(base?[base]:[]),['!',affected]];
+   if(JSON.stringify(now)!==JSON.stringify(applied))map.setFilter(id,applied);savedFilters.set(id,{base,applied});
+  }
+  }finally{syncingFrontiers=false;}
+ }
  const years=()=>Object.keys(engine.data.years).map(Number);
  const snapshot=()=>engine.data.years[year];
  const current=()=>engine.data.configs[snapshot().config];
+ const pickConfig=()=>engine.data.sharedLand?current():undefined;
 
  // What a unit was: a state, a territory, land held jointly or by another country.
  function kind(unit){
@@ -66,7 +102,7 @@ export function createHistoricView(map,{country,base,config,borders:engine,fill,
   return unit.type==='State'||unit.type==='District of Columbia'?'state':unit.type==='Territory'?'territory':'unorganized';
  }
  // A config's own keys ([kind, label or label(year), colour]) replace the defaults.
- const COLORS=config.keys?Object.fromEntries(config.keys.map(([key,,color])=>[key,color])):{colony:'#e0e8da',claims:'#e9e3d8',state:fill,territory:TERRITORY,unorganized:UNORGANIZED,disputed:DISPUTED,foreign:OTHER_LAND},colorOf=unit=>COLORS[kind(unit)];
+ const COLORS=config.keys?Object.fromEntries(config.keys.map(([key,,color])=>[key,color])):{colony:'#e0e8da',claims:'#e9e3d8',state:fill,territory:TERRITORY,unorganized:UNORGANIZED,disputed:DISPUTED,foreign:OTHER_LAND},colorOf=unit=>current()?.file?appearancePaint({'fill-color':COLORS[kind(unit)]},{type:'fill'},scene?.satellite.visible?scene.satellite.opacity:0)['fill-color']:COLORS[kind(unit)];
  const KEYS=config.keys||[['state',config.names?'Province':'State'],['colony','Colony'],['claims','Colonial claims'],['territory','Territory'],['unorganized','Unorganized territory'],['disputed','Disputed'],['foreign','Another country']];
  // A config of separate periods (periods: true) names each with yearText and dateText, and has no year-to-year changes.
  const yearText=y=>config.yearText?.(y)??String(y),ofYear=value=>typeof value==='function'?value(year):value;
@@ -86,11 +122,17 @@ export function createHistoricView(map,{country,base,config,borders:engine,fill,
  function apply(){
   if(!active||!engine.data||!map.getLayer(fillLayer))return;
   // hostFills: every layer drawing the present-day first level; the snapshot draws above fillLayer.
-  if(!applied)original=new Map(hostFills.filter(id=>map.getLayer(id)).map(id=>[id,map.getPaintProperty(id,'fill-color')]));
-  for(const id of original.keys())map.setPaintProperty(id,'fill-color',OTHER_LAND);
+  if(!applied)original=new Map(hostFills.filter(id=>map.getLayer(id)).map(id=>[id,scene?.basePaint(id,'fill-color')??map.getPaintProperty(id,'fill-color')]));
+  const hostColors=config.reuseHostGeometry&&[...engine.data.hostFaces].flatMap(([face,id])=>{
+   const unit=engine.unit(current(),face);
+   return unit?[id,colorOf(unit)]:[];
+  });
+  for(const id of original.keys())map.setPaintProperty(id,'fill-color',
+   id===fillLayer&&hostColors?.length?['match',['get','id'],...hostColors,OTHER_LAND]:OTHER_LAND);
   if(map.getLayer(selectionLayer))map.setPaintProperty(selectionLayer,'fill-opacity',0);
-  engine.draw(current(),colorOf,fillLayer);engine.outline(current(),currentUnit(),{highlight:true});
-  hostLines({borders:true,selection:true,international:!config.standalone});applied=true;
+  engine.draw(current(),colorOf,fillLayer,{reuseHost:!!hostColors?.length});engine.outline(current(),currentUnit(),{highlight:true});
+  hostLines({borders:true,selection:true,international:!config.standalone||!!config.frameOuter});syncDetails();syncFrontiers();applied=true;syncControls();
+  if(config.replaceContextLabels){if(engine.data.sharedLand)labelFaces.clear();onContextChange();}
  }
  async function syncContext(){
   if(!context)return;
@@ -110,8 +152,11 @@ export function createHistoricView(map,{country,base,config,borders:engine,fill,
  function restore(){
   contextRequest++;context?.remove();contextUnit=null;
   if(!applied)return;applied=false;engine.remove();hostLines();
+  if(map.getLayer(detailId))map.removeLayer(detailId);if(map.getSource(detailId))map.removeSource(detailId);detailFile=null;
+  for(const [id,{base,applied}]of savedFilters)if(map.getLayer(id)&&JSON.stringify(map.getFilter(id))===JSON.stringify(applied))map.setFilter(id,base??null);savedFilters.clear();
   for(const [id,color] of original)if(map.getLayer(id))map.setPaintProperty(id,'fill-color',color);
   if(map.getLayer(selectionLayer))map.setPaintProperty(selectionLayer,'fill-opacity',1);
+  if(config.replaceContextLabels){labelFaces.clear();onContextChange();}
  }
 
  let timeline;
@@ -120,7 +165,7 @@ export function createHistoricView(map,{country,base,config,borders:engine,fill,
   const entries=years().map(y=>{const next=engine.data.years[y].config,changed=next!==previous;previous=next;return {year:y,changed,mark:config.labelTicks||!config.periods&&y%20===0};});
   entries.push(...(config.links||[]).map(link=>({...link,mark:config.labelTicks})));
   timeline=buildHistoryDock({id:country+'-history-dock',label:config.label,entries,yearText,onSelect:next=>setYear(next,true),onResize:insets});
-  dock=timeline.dock;
+  dock=timeline.dock;if(config.periods)dock.dataset.periods='true';
  }
  function renderDock(focusTick=false){
   if(!dock)buildDock();
@@ -134,21 +179,31 @@ export function createHistoricView(map,{country,base,config,borders:engine,fill,
    ? [states&&provinceCount,territorial&&count(territorial,'territory','territories'),districts&&count(districts,'district','districts'),!states&&colonies&&count(colonies,'colony','colonies')].filter(Boolean).join(', ')
    : provinceCount+(territories?', '+count(territories,'territory','territories'):'');
   dock.querySelector('.history-counts').textContent=summary;
-  const changes=changesIn(year);dock.querySelector('.election-needed').textContent=config.periods?'':changes.length?count(changes.length,'change','changes')+' this year':'No boundary changes this year';
+  const changes=changesIn(year),changed=snapshot().config!==engine.data.years[year-1]?.config;
+  dock.querySelector('.election-needed').textContent=config.changeText?.(year,changed)??(config.periods?'':changes.length?count(changes.length,'change','changes')+' this year':'No boundary changes this year');
   const legend=dock.querySelector('.election-legend');legend.replaceChildren();
   const key=(color,label)=>{const row=el('span','election-key'),swatch=el('i','election-swatch');swatch.style.background=color;row.append(swatch,el('span',undefined,label));legend.append(row);};
-  for(const [kind,label] of KEYS)if(kinds.includes(kind)||kind==='claims'&&neighbour&&year<=neighbour.through)key(COLORS[kind],ofYear(label));
+  for(const [kind,label] of KEYS)if(kinds.includes(kind)||kind==='claims'&&neighbour&&year<=neighbour.through)key(config.matchLegendPaint?appearancePaint({'fill-color':COLORS[kind]},{type:'fill'})['fill-color']:COLORS[kind],ofYear(label));
   // Land the source gives to no unit keeps the gray of other land.
   const unrecorded=ofYear(config.unrecorded);if(unrecorded&&c.face?.includes(-1))key(OTHER_LAND,unrecorded);
   timeline.showYear(year,focusTick);
  }
  async function setYear(next,focusTick=false){
   const token=++request;
-  if(!engine.data||next===year)return;
-  if(engine.prepare){try{await engine.prepare(engine.data.configs[engine.data.years[next].config]);}catch{onError();return;}if(token!==request||!active)return;}
+  if(!active||!engine.data?.years[next]||next===year)return;
+  const nextConfig=engine.data.configs[engine.data.years[next].config],redraw=!applied||nextConfig!==current();
+  // Preserve the exact detailed-coast hit before a bounded renderer releases
+  // the previous year's sources. The focus may be on land finer than the mosaic.
+  const capturedLocation=redraw&&config.standalone&&engine.data.coasts?.length?focus?.location:null;
+  const capturedFace=capturedLocation?engine.pickLocation(capturedLocation,nextConfig):null;
+  if(redraw&&engine.prepare){try{await engine.prepare(nextConfig);}catch{if(token===request&&active)onError();return;}if(token!==request||!active)return;}
   year=next;try{localStorage.setItem(config.store,String(year));}catch{}
-  apply();
-  if(config.standalone&&focus?.location){focus.face=engine.pickLocation(focus.location);engine.outline(current(),currentUnit(),{highlight:true});}
+  if(redraw){
+   const location=config.standalone&&focus?.location, coast=engine.data.coasts?.length;
+   if(location&&coast)focus.face=location===capturedLocation?capturedFace:engine.pickLocation(location,pickConfig());
+   apply();
+   if(location&&!coast){focus.face=engine.pickLocation(location,pickConfig());engine.outline(current(),currentUnit(),{highlight:true});}
+  }else syncFrontiers();
   // The picked place may belong to another state this year; the host follows it.
   if(!config.standalone&&focus?.face!=null){const place=unitPlace(engine.unit(current(),focus.face));if(place&&place!==focus.place){focus.place=place;onPlace(place);}}
   void syncContext();renderDock(focusTick);onChange();
@@ -211,7 +266,7 @@ export function createHistoricView(map,{country,base,config,borders:engine,fill,
  // the unit's bounds.
  function pick(point){
   focus=null;if(!active||!engine.data||!snapshot())return null;
-  const face=engine.pick(point);
+  const face=engine.pick(point,pickConfig());
   if(config.standalone){if(face!=null)focus={face,location:map.unproject(point)};engine.outline(current(),currentUnit(),{highlight:true});onChange();return {standalone:true,bounds:focusBounds(currentUnit())};}
   if(face==null)return null;
   const unit=engine.unit(current(),face);focus={face,place:unitPlace(unit)};
@@ -225,22 +280,47 @@ export function createHistoricView(map,{country,base,config,borders:engine,fill,
  }
  function hoverAt(point){
   if(!active||!engine.data)return undefined;
-  const face=engine.pick(point),unit=face!=null&&engine.unit(current(),face);
+  const face=engine.pick(point,pickConfig()),unit=face!=null&&engine.unit(current(),face);
   return unit?{id:'history-'+unit.key,en:unit.name,kind:config.kindLabel(unit,kind(unit))}:contextUnit&&context.unit(contextFrame,context.pick(point))===contextUnit?{id:'history-'+contextUnit.key,en:contextUnit.name,kind:'Colonial claim'}:null;
  }
+ const appearance=()=>{
+  if(!active||!engine.data||!snapshot())return;
+  if(current()?.file){apply();renderDock();onChange();}
+  else if(config.matchLegendPaint)renderDock();
+ };
  const insets=()=>dispatchEvent(new Event('atlas-map-insets'));
  return {
-  get active(){return active;},get currentYear(){return year;},
+  get hasDetails(){return !!(active&&engine.data&&snapshot()&&current()?.detail);},get active(){return active;},get currentYear(){return year;},
   async enter(initialYear){
    active=true;const token=++epoch;await engine.load();if(!active||token!==epoch)return;
    if(initialYear in engine.data.years)year=initialYear;
    else if(!(year in engine.data.years))year=config.defaultYear;
    if(engine.prepare)await engine.prepare(current());if(!active||token!==epoch)return;
+   addEventListener('atlas-appearance-change',appearance);
    if(config.standalone)window.AtlasRegionColorController?.suspend(true);
-   apply();renderDock();dock.hidden=false;onChange();insets();void syncContext();
+   apply();if(config.omitFrontiers)map.on('styledata',syncFrontiers);renderDock();dock.hidden=false;onChange();insets();void syncContext();
   },
-  leave(){if(!active)return;active=false;epoch++;request++;focus=null;restore();if(config.releaseOnLeave){engine.dispose();context?.dispose();contextFrame=null;}if(config.standalone&&document.getElementById('map-shell')?.dataset.quiz!=='true')window.AtlasRegionColorController?.suspend(false);if(dock){dock.hidden=true;insets();}},
-  apply,renderSummary,renderState,pick,unitLabels,hoverAt,setYear,
+  leave(){
+   if(!active)return;
+   active=false;
+   epoch++;
+   request++;
+   focus=null;
+   removeEventListener('atlas-appearance-change',appearance);
+   if(config.omitFrontiers)map.off('styledata',syncFrontiers);
+   restore();
+   if(config.releaseOnLeave){engine.dispose();context?.dispose();contextFrame=null;}
+   if(config.standalone&&document.getElementById('map-shell')?.dataset.quiz!=='true')window.AtlasRegionColorController?.suspend(false);
+   if(dock){dock.hidden=true;insets();}
+  },
+  apply,syncControls,renderSummary,renderState,pick,unitLabels,hoverAt,setYear,
+  coversLabel(center){
+   if(!config.replaceContextLabels||!active||!applied)return false;
+   const key=center.join(",");
+   if(!labelFaces.has(key))labelFaces.set(key,engine.pickLocation({lng:center[0],lat:center[1]},pickConfig()));
+   const face=labelFaces.get(key);
+   return face!=null&&!!engine.unit(current(),face);
+  },
   datedPoints(){return active&&engine.data&&snapshot()?current().points:undefined;},
   datedOptions(){return active&&engine.data&&snapshot()?current().units.filter(u=>!u.selectionGroup):[];},
   get datedRecord(){const unit=currentUnit();return unit&&{name:unit.name,kind:config.kindLabel(unit,kind(unit)),unit,period:config.dateText?.(year)};},
@@ -250,6 +330,13 @@ export function createHistoricView(map,{country,base,config,borders:engine,fill,
    focus=unit?{face:found.face,location:{lng:unit.label[0],lat:unit.label[1]}}:null;
    engine.outline(current(),currentUnit(),{highlight:true});onChange();return focusBounds(currentUnit());
   },
-  dispose(){this.leave();context?.dispose();dock?.remove();dock=null;}
+  dispose(){
+   this.leave();
+   context?.dispose();
+   contextFrame=null;
+   dock?.remove();
+   dock=null;
+   timeline=null;
+  }
  };
 }

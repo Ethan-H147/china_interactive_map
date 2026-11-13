@@ -45,7 +45,20 @@ export async function launch({width=1280,height=820,mobile=false,developer=false
  const problems=[],requests=[],failures=[];
  ws.onmessage=m=>{const d=JSON.parse(m.data);if(d.id){pending.get(d.id)?.(d);pending.delete(d.id);return;}for(const fn of listeners.get(d.method)||[])fn(d.params);};
  const on=(method,fn)=>{if(!listeners.has(method))listeners.set(method,[]);listeners.get(method).push(fn);};
- const send=(method,params={})=>new Promise((resolve,reject)=>{const i=++id;pending.set(i,d=>d.error?reject(Error(method+': '+d.error.message)):resolve(d.result));ws.send(JSON.stringify({id:i,method,params}));});
+ // A crashed renderer can leave its socket open without answering commands.
+ // Fail pending calls rather than silently hanging the regression runner.
+ let disconnected;
+ const fail=message=>{disconnected=message;for(const done of pending.values())done({error:{message}});pending.clear();};
+ ws.onclose=()=>fail('Browser connection closed');
+ const monitor=new WebSocket(endpoint);await new Promise((resolve,reject)=>{monitor.onopen=resolve;monitor.onerror=reject;});
+ monitor.onmessage=event=>{const message=JSON.parse(event.data);if(message.method==='Target.targetCrashed'&&message.params.targetId===target.id){const reason='Renderer crashed: '+message.params.status+' ('+message.params.errorCode+')';problems.push(reason);fail(reason);}};
+ monitor.send(JSON.stringify({id:1,method:'Target.setDiscoverTargets',params:{discover:true}}));
+ on('Inspector.targetCrashed',()=>{problems.push('Renderer crashed');fail('Renderer crashed');});
+ const send=(method,params={})=>new Promise((resolve,reject)=>{
+  if(disconnected){reject(Error(method+': '+disconnected));return;}
+  const i=++id,timer=setTimeout(()=>fail('Browser did not respond within 60 seconds'),60000);
+  pending.set(i,d=>{clearTimeout(timer);d.error?reject(Error(method+': '+d.error.message)):resolve(d.result);});ws.send(JSON.stringify({id:i,method,params}));
+ });
  on('Runtime.exceptionThrown',p=>problems.push('exception: '+(p.exceptionDetails.exception?.description||p.exceptionDetails.text).split('\n')[0]));
  const warnings=[];
  on('Runtime.consoleAPICalled',p=>{const text=p.args.map(a=>a.value??a.description).join(' ').slice(0,400);if(p.type==='error')problems.push('console.error: '+text);if(p.type==='warning')warnings.push(text);});
@@ -58,7 +71,7 @@ export async function launch({width=1280,height=820,mobile=false,developer=false
  if(+process.env.BROWSER_CPU_SLOWDOWN>1)await send('Emulation.setCPUThrottlingRate',{rate:+process.env.BROWSER_CPU_SLOWDOWN});
  if(developer)await send('Page.addScriptToEvaluateOnNewDocument',{source:"try{sessionStorage.setItem('boundary-atlas-developer-v1','true')}catch{}"});
  const evaluate=async expression=>{const r=await send('Runtime.evaluate',{expression,awaitPromise:true,returnByValue:true});if(r.exceptionDetails)throw Error('evaluate: '+(r.exceptionDetails.exception?.description||r.exceptionDetails.text).split('\n')[0]);return r.result.value;};
- const waitFor=async(expression,{timeout=30000,label=expression}={})=>{const start=Date.now();for(;;){let value;try{value=await evaluate(expression);}catch{}if(value)return value;if(Date.now()-start>timeout)throw Error('Timed out waiting for '+label);await sleep(150);}};
+ const waitFor=async(expression,{timeout=30000,label=expression}={})=>{const start=Date.now();for(;;){let value;try{value=await evaluate(expression);}catch(error){if(disconnected)throw error;}if(value)return value;if(Date.now()-start>timeout)throw Error('Timed out waiting for '+label);await sleep(150);}};
  // The atlas is ready when startup and country switching have finished and the map is idle.
  const settle=async()=>{await waitFor("!document.documentElement.dataset.starting&&!document.documentElement.dataset.switching&&typeof map!=='undefined'&&map.loaded()&&!map.isMoving()&&!cameraBusy",{timeout:90000,label:'atlas to settle'});await sleep(600);};
  const center=async selector=>{
@@ -70,7 +83,7 @@ export async function launch({width=1280,height=820,mobile=false,developer=false
  const mouse=async(type,x,y,extra={})=>send('Input.dispatchMouseEvent',{type,x,y,button:'left',clickCount:1,timestamp:Date.now()/1000,...extra});
  const touch=async(type,points,timestamp=Date.now()/1000)=>send('Input.dispatchTouchEvent',{type,touchPoints:points.map(([x,y])=>({x,y})),timestamp});
  const session={
-  send,on,evaluate,waitFor,settle,problems,warnings,requests,failures,mobile,pid:chrome.pid,
+  send,on,evaluate,waitFor,settle,problems,warnings,requests,failures,mobile,pid:chrome.pid,debuggingEndpoint:endpoint,
   async open(base,hash=''){problems.length=0;failures.length=0;await send('Page.navigate',{url:base+'/'+hash});await settle();},
   // A real pointer press: touch on a phone, mouse otherwise.
   async tap(target){const [x,y]=Array.isArray(target)?target:await center(target);if(mobile){await touch('touchStart',[[x,y]]);await sleep(40);await touch('touchEnd',[]);}else{await mouse('mouseMoved',x,y);await mouse('mousePressed',x,y);await mouse('mouseReleased',x,y);}await sleep(250);},
@@ -84,7 +97,7 @@ export async function launch({width=1280,height=820,mobile=false,developer=false
   async type(text){for(const ch of text)await session.key(ch);await sleep(300);},
   async viewport(width,height){await send('Emulation.setDeviceMetricsOverride',{width,height,deviceScaleFactor:mobile?2:1,mobile});await sleep(500);},
   async screenshot(name){fs.mkdirSync(output,{recursive:true});const r=await send('Page.captureScreenshot',{format:'png'});const file=path.join(output,name.replace(/[^\w.-]+/g,'-')+'.png');fs.writeFileSync(file,Buffer.from(r.data,'base64'));return file;},
-  async close(){try{ws.close();}catch{}chrome.kill();await new Promise(r=>{chrome.once('exit',r);setTimeout(r,3000);});try{fs.rmSync(profile,{recursive:true,force:true});}catch{}}
+  async close(){try{monitor.close();ws.close();}catch{}chrome.kill();await new Promise(r=>{chrome.once('exit',r);setTimeout(r,3000);});try{fs.rmSync(profile,{recursive:true,force:true});}catch{}}
  };
  return session;
 }

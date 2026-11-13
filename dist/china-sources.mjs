@@ -29,7 +29,7 @@ export function chinaSourceBuilders({display,districts,fragments,lineOmissions={
   'provinces-selection-edges':()=>lineData(display.provinces),
   'prefectures-selection-edges':()=>lineData(featureCollection(prefectures)),
   'others-selection-edges':()=>lineData(featureCollection(others)),
-  'city-districts':()=>districts.regions,
+  'city-districts':()=>featureCollection(districts.regions.features.flatMap(f=>fragments[f.properties.adcode]?fragments[f.properties.adcode].coordinates.map(coordinates=>({...f,geometry:{type:'Polygon',coordinates}})):f)),
   'city-district-boundaries':()=>lineData(withoutSegments(districts.boundaries,lineOmissions.districts||[])),
   'city-districts-selection-edges':()=>lineData(districts.regions)
  };

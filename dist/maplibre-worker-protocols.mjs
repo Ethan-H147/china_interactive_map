@@ -1,3 +1,4 @@
+import {installHistoricalTileIndexBudget} from './historical-tile-index.mjs';
 // Loaded into MapLibre's workers with importScriptInWorkers.
 import {decodePack} from './china-pack.mjs';
 import {chinaSourceBuilders} from './china-sources.mjs';
@@ -35,4 +36,5 @@ self.addProtocol('china-pack',async request=>{
 });
 
 // Outline files the page hands over as blob URLs (geo-pack.mjs addWorkerSource), decoded here.
-self.addProtocol('atlas-data',async request=>({data:await loadAtlasData(request.url)}));
+installHistoricalTileIndexBudget(self.worker);
+self.addProtocol('atlas-data',async (request,controller)=>{installHistoricalTileIndexBudget(self.worker);return {data:await loadAtlasData(request.url,controller.signal)};});

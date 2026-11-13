@@ -8,6 +8,7 @@ import {describeChina,describeRegion} from '../dist/china-sources.mjs';
 import {borderIndex,hiddenSegments} from '../dist/adaptive-lines.mjs';
 import {chinaShore} from './china-shore.mjs';
 import {assertNearGeo} from './geo-compare.mjs';
+import {binzhouCountyFragments} from './binzhou-county-geometry.mjs';
 import {OVERVIEW_SCALE} from '../dist/china-sources.mjs';
 
 // The gzip JSON files remain the build inputs. Visitors download this packed copy,
@@ -52,7 +53,7 @@ console.log(`Region index: ${(fs.statSync('dist/data/china-regions.json').size/1
 if(fs.existsSync('dist/data/china-counties.bin')){
  const countiesText=gunzipSync(fs.readFileSync('dist/data/china-counties.bin')).toString('utf8'),counties=JSON.parse(countiesText);
  const empty={type:'FeatureCollection',features:[]};
- const countyPack=gzipSync(encodePack({display:{provinces:empty,subdivisions:empty,boundaries:{}},districts:counties,fragments:{},lineOmissions:{districts:hiddenSegments(counties.boundaries)},sources:{districts:sha(countiesText)}}),{level:9});
+ const countyPack=gzipSync(encodePack({display:{provinces:empty,subdivisions:empty,boundaries:{}},districts:counties,fragments:binzhouCountyFragments(counties.regions.features),lineOmissions:{districts:hiddenSegments(counties.boundaries)},sources:{districts:sha(countiesText)}}),{level:9});
  const countyDecoded=decodePack(gunzipSync(countyPack));
  assertNearGeo(countyDecoded.districts,counties,'Packed counties');
  fs.writeFileSync('dist/data/china-counties.pack.bin',countyPack);

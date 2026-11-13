@@ -51,8 +51,9 @@ export function geoEncoder({scale=SCALE}={}){
 
 export function encodeGeo(value,meta={},options){const encoder=geoEncoder(options),encoded=encoder.encode(value);return encoder.finish({meta,value:encoded});}
 
-// Decodes the whole structure; encodeGeo's files hold {meta, value}.
-export function decodeGeoStructure(bytes,{select}={}){
+// Prepare packed paths and their shared point table once. Each read expands
+// only the requested members and view windows; decoded edits stay independent.
+export function createGeoDecoder(bytes,{copyProperties=true}={}){
  bytes=bytes instanceof Uint8Array?bytes:new Uint8Array(bytes);
  if(!isGeoPack(bytes))throw Error('Not a compact geometry file');
  const view=new DataView(bytes.buffer,bytes.byteOffset,bytes.byteLength);
@@ -67,20 +68,56 @@ export function decodeGeoStructure(bytes,{select}={}){
    value=(value+((z>>>1)^-(z&1)))|0;points[2*i+axis]=value/scale;
   }
  }
+ return function decodeStructure({select,flatPaths=false,scope}={}){
  function decodePath(runs){
-  let id=runs[0];const path=[[points[2*id],points[2*id+1]]];
-  for(let k=1;k<runs.length;k+=2)for(let n=0;n<runs[k+1];n++){id+=runs[k];path.push([points[2*id],points[2*id+1]]);}
+  let length=1;
+  for(let k=2;k<runs.length;k+=2)length+=runs[k];
+  let id=runs[0],at=0;
+  if(flatPaths){
+   const path=new Float64Array(length*2);
+   path[at++]=points[2*id];path[at++]=points[2*id+1];
+   for(let k=1;k<runs.length;k+=2)for(let n=0;n<runs[k+1];n++){
+    id+=runs[k];path[at++]=points[2*id];path[at++]=points[2*id+1];
+   }
+   return path;
+  }
+  const path=new Array(length);
+  path[at++]=[points[2*id],points[2*id+1]];
+  for(let k=1;k<runs.length;k+=2)for(let n=0;n<runs[k+1];n++){
+   id+=runs[k];path[at++]=[points[2*id],points[2*id+1]];
+  }
   return path;
  }
  const coordinates=value=>value&&value.$?decodePath(value.$):typeof value[0]==='number'?value:value.map(coordinates);
+ // Test encoded features against the view before expanding coordinate paths.
+ // The shared point table remains exact; offscreen geometry stays packed.
+ function inScope(geometry){
+  if(!scope||!geometry?.coordinates)return true;
+  let w=Infinity,s=Infinity,e=-Infinity,n=-Infinity;
+  const add=(x,y)=>{w=Math.min(w,x);e=Math.max(e,x);s=Math.min(s,y);n=Math.max(n,y);};
+  const scan=value=>{
+   if(value?.$){const runs=value.$;let id=runs[0];add(points[2*id],points[2*id+1]);for(let k=1;k<runs.length;k+=2)for(let i=0;i<runs[k+1];i++){id+=runs[k];add(points[2*id],points[2*id+1]);}}
+   else if(typeof value[0]==='number')add(value[0],value[1]);else for(const part of value)scan(part);
+  };
+  scan(geometry.coordinates);
+  return (Array.isArray(scope[0])?scope:[scope]).some(box=>{
+   if(n<box[1]||s>box[3])return false;
+   if(box[2]-box[0]>=360||e-w>=360)return true;
+   const shift=360*Math.round((box[0]+box[2]-w-e)/720);
+   return w+shift<=box[2]&&e+shift>=box[0];
+  });
+ }
  function decode(value){
-  if(Array.isArray(value))return value.map(decode);
+  if(Array.isArray(value)){const result=value.map(decode);return scope&&value[0]?.type==='Feature'?result.filter(item=>item!==undefined):result;}
   if(!value||typeof value!=='object')return value;
+  if(value.type==='Feature'&&!inScope(value.geometry))return undefined;
   if(value.type&&'coordinates' in value)return {...value,coordinates:coordinates(value.coordinates)};
-  return Object.fromEntries(Object.entries(value).map(([key,item])=>[key,key==='properties'?item:decode(item)]));
+  return Object.fromEntries(Object.entries(value).map(([key,item])=>[key,key==='properties'?(copyProperties?structuredClone(item):item):decode(item)]));
  }
  return select?{...structure,meta:decode(structure.meta),value:decode(select(structure.value))}:decode(structure);
+ };
 }
+export const decodeGeoStructure=(bytes,options)=>createGeoDecoder(bytes,{copyProperties:false})(options);
 export const decodeGeo=(bytes,options)=>decodeGeoStructure(bytes,options).value;
 
 // Published compact copies sit under data/compact/ beside their gzip JSON build files
@@ -95,18 +132,19 @@ export function compactUrl(url){
 }
 // A data file's bytes, downloaded again (twice at most) when the network drops the request or
 // its body (a CDN mid-deploy does). HTTP errors and cancellations are not retried.
-export async function fetchBytes(url,init){
+async function fetchBody(url,init,body){
  for(let attempt=0;;attempt++){
   let response;
-  try{response=await fetch(url,init);if(response.ok)return await response.arrayBuffer();}
+  try{response=await fetch(url,init);if(response.ok)return await response[body]();}
   catch(error){if(error?.name!=='TypeError'||init?.signal?.aborted||attempt===2)throw error;await new Promise(resolve=>setTimeout(resolve,500*(attempt+1)));continue;}
   throw Error(`${url}: ${response.status}`);
  }
 }
+export const fetchBytes=(url,init)=>fetchBody(url,init,'arrayBuffer');
 // Body bytes of a fetched data file: gunzipped, then a compact copy decoded or JSON parsed.
 export async function decodeData(bytes,options={}){
  let view=new Uint8Array(bytes);
- if(view[0]===31&&view[1]===139)view=new Uint8Array(await new Response(new Blob([view]).stream().pipeThrough(new DecompressionStream('gzip'))).arrayBuffer());
+ if(view[0]===31&&view[1]===139)view=new Uint8Array(await new Response(new Blob([view]).stream().pipeThrough(new DecompressionStream('gzip'),{signal:options.signal})).arrayBuffer());
  options.signal?.throwIfAborted();
  return isGeoPack(view)?decodeGeo(view,options):(options.select|| (value=>value))(JSON.parse(new TextDecoder().decode(view)));
 }
@@ -119,7 +157,10 @@ export async function addWorkerSource(map,id,url,options,transform,{skipEmpty=fa
  // per-frame source/tile bookkeeping; the build verifies this list against geometry.
  const file=/(?:^|\/)data\/(?:compact\/)?([^?#]+)/.exec(String(url))?.[1];
  if(skipEmpty&&emptyGeometry.has(file))return false;
- const blob=URL.createObjectURL(new Blob([await fetchBytes(compactUrl(url))]));
+ // Keep the downloaded body in browser-managed Blob storage. Materializing an
+ // ArrayBuffer here copied large boundary files onto the page before handing
+ // them straight back to a worker, adding allocations during loading.
+ const blob=URL.createObjectURL(await fetchBody(compactUrl(url),undefined,'blob'));
  try{map.addSource(id,{...options,data:'atlas-data://'+id+'?url='+encodeURIComponent(blob)+(file?'&file='+encodeURIComponent(file):'')+(transform?'&transform='+transform:'')});}catch(error){URL.revokeObjectURL(blob);throw error;}
  return true;
 }

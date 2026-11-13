@@ -57,7 +57,7 @@ export function settlementDotZooms(records,spacing=36){
  // Coincident points stay searchable and selectable without stacking their dots.
  for(const p of pending)zooms.set(p.id,25);return zooms;
 }
-export function settlementFeatures(records){const zooms=records.every(r=>Number.isFinite(r.dotzoom))?null:settlementDotZooms(records);return {type:'FeatureCollection',features:records.map(r=>({type:'Feature',properties:{id:r.id,minzoom:settlementZoom(r),dotzoom:r.dotzoom??zooms.get(r.id)},geometry:{type:'Point',coordinates:r.center}}))};}
+export function settlementFeatures(records,precomputed){const zooms=records.every(r=>Number.isFinite(r.dotzoom??precomputed?.[r.id]))?null:settlementDotZooms(records);return {type:'FeatureCollection',features:records.map(r=>({type:'Feature',properties:{id:r.id,minzoom:settlementZoom(r),dotzoom:r.dotzoom??precomputed?.[r.id]??zooms.get(r.id)},geometry:{type:'Point',coordinates:r.center}}))};}
 // Use camera-only paint on separate admission tiers. Composite feature/zoom paint
 // is baked at a tile's zoom and can leave old close-up tiles opaque during zoom-out.
 // Layer minzoom and camera opacity both use the current frame, even for stale tiles.

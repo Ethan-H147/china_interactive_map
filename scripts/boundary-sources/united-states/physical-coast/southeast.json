@@ -1,0 +1,18 @@
+{
+  "provider": "OpenStreetMap contributors",
+  "endpoint": "https://overpass-api.de/api/interpreter",
+  "query": "[out:json][timeout:180][maxsize:536870912];way[\"natural\"=\"coastline\"](23.5,-94.5,37.5,-74.5);out geom;",
+  "bounds": [
+    -94.5,
+    23.5,
+    -74.5,
+    37.5
+  ],
+  "timestamp": "2026-11-12T00:57:51Z",
+  "license": "ODbL 1.0",
+  "licenseUrl": "https://www.openstreetmap.org/copyright",
+  "definition": "https://wiki.openstreetmap.org/wiki/Tag:natural%3Dcoastline",
+  "sha256": "149f6adf59a81d997469f044d4d618e2a2605c6968ddc1aac3707a11113ff1f1",
+  "ways": 38770,
+  "vertices": 3235968
+}

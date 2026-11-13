@@ -1,0 +1,11 @@
+# Intermittent pan/zoom slowdown investigation
+
+The user reports intermittent Chrome slowdown within one country that persists after switching to a light country and clears on refresh. This symptom has not yet been reproduced in a foreground test. It is not marked fixed.
+
+Local repeated-movement checks exercised 90 overview movements and 60 close-up movements. Observed map listeners, graphics buffers/textures and post-collection heap settled rather than growing continuously. These checks do not rule out a longer-session, input-specific, browser-profile or graphics-driver problem. The initial frame-timing probe duplicated its own frame callbacks between gestures; its frame-rate numbers are therefore not acceptance evidence. Resource counts were independent of that probe.
+
+The existing performance report now keeps the latest 12 completed visible gestures and 4 recent slow episodes, even when its readout is hidden. Slow samples survive subsequent smooth gestures and country changes. Each retains callback/draw gaps, long-task totals, country, projection, zoom and session age; slow episodes additionally retain source/tile counts and approximate Chrome JS heap size. Current context-loss and page-visibility information helps distinguish a map issue from background scheduling. These are diagnostic signals, not an automatic root-cause classification.
+
+The recorder reuses existing movement sampling and stops when idle or hidden. Frame-gap storage is capped at 600 samples per gesture; maxima and total counts cover the whole gesture. Percentiles describe the retained window. Gesture histories, long-task counters and rendering-resolution ranges remain bounded. Reports stay in memory, with no telemetry upload, saved browsing history, automatic refresh or map reconstruction.
+
+An isolated browser check injects a 220 ms main-thread stall, verifies automatic capture with the readout hidden, then performs smooth movement and switches to Singapore to verify that the evidence remains available. Unit checks verify retention bounds, report isolation and exclusion of interrupted/empty gestures. Reproduce the actual issue and capture the slow episode before choosing a renderer or lifecycle fix.

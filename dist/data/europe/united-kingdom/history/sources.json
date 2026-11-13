@@ -1,0 +1,201 @@
+{
+  "coverage": "Year-end snapshots of the United Kingdom, its predecessor Great Britain, and recorded British territories and administrations, 1707–2025.",
+  "method": [
+    "The map distinguishes home nations, Crown dependencies, colonies, chartered companies, protectorates, dominions, mandates, joint administrations and disputed claims. Modern Commonwealth membership is independent of the timeline.",
+    "Use the year-end date for a change. If the source supplies a year range, retain the mapped extent until the next recorded revision. Earlier shapes sometimes use a later land outline as a geographic reference.",
+    "Generalized historical boundaries show administrative extents, protectorates or claimed areas. They do not establish effective control, cover all Indigenous nations or reproduce every brief military occupation, concession or local boundary adjustment.",
+    "The home nations use the exact same polygons as the modern UK map. Selected overseas possessions and former colonies reuse the modern atlas's exact land geometry for matching extents. Hong Kong uses the atlas's modern coast with dated subsets for the island and southern Kowloon. All regional overviews and detailed colony layers derive from the same modern physical coast, with historical ownership inside it. Overview geometry is simplified together at 0.001 degrees. Both use the same dated limits and existing state borders where they match. Other changing extents use dated reconstructions where available. Parts of the American and Australian colonial frontier and several smaller overseas territories have approximate boundaries.",
+    "Close zoom reuses the atlas’s detailed regional land and Antarctic coast sources. The detail files retain dated face IDs. The modern shore is a physical reference and can show later reclamation.",
+    "Canada and South Africa leave the imperial overlay in 1931, Australia in 1942 and New Zealand in 1947, using the Statute of Westminster or its adoption as a consistent legislative milestone. These were stages in longer constitutional transitions.",
+    "The map follows administration through December 2025 for disputed overseas possessions. Antarctica is shown as a claim under the Antarctic Treaty. The Chagos transfer agreement signed in May 2025 had yet to enter into force.",
+    "North American matching extents reuse the retained modern US and Canadian polygons, including Newfoundland island and the post-1927 Labrador boundary. Historical interior boundaries and earlier Labrador limits use the dated reconstruction. Border strokes are derived from the replacement land topology and omit physical coastlines. Interior gaps in the Atlantic colonial footprint are reconciled against modern atlas land.",
+    "From 1763 the southern Atlantic colonial claims and the Floridas share the retained Newberry boundary mesh. West Florida expands north in 1764. Modern Florida supplies the detailed physical coastline; historical claims and transfer dates remain separate from modern state ownership.",
+    "Selected regional outlines use the canonical detailed coast at every zoom. The southeastern US physical coast is shared with the modern administrative maps, gray context and fallback; OpenStreetMap contributors, ODbL 1.0.",
+    "All regional detail begins at zoom 7. The overview derives from the same modern physical coast, so broad regional views retain a shared shoreline without loading close-zoom tiles."
+  ],
+  "geometry": [
+    {
+      "name": "Cliopatria v0.2.1, Seshat Global History Databank",
+      "authors": "James S. Bennett, Erin Mutch, Andrew Tollefson, Ed Chalstrey, Majid Benam, Enrico Cioni, Jenny Reddish, Jakob Zsambok, Jill Levine, C. Justin Cook, Pieter Francois, Daniel Hoyer and Peter Turchin",
+      "url": "https://github.com/Seshat-Global-History-Databank/cliopatria/tree/v0.2.1",
+      "reference": "https://doi.org/10.1038/s41597-025-04516-9",
+      "license": "CC BY 4.0",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "use": "British Empire records adapted by selecting date intervals, clipping geographical sections, smoothing minor geometry variations, applying dated corrections and combining with atlas boundaries. The earliest useful regional outline (1709) is carried back to 1707.",
+      "archiveSHA256": "e10a4e429fca708788ff9e7572a95fce801fae55852d217cffabc1c59cd4eed4"
+    },
+    {
+      "name": "Natural Earth 1:10m map units v5.1.2",
+      "url": "https://github.com/nvkelso/natural-earth-vector/blob/v5.1.2/geojson/ne_10m_admin_0_map_units.geojson",
+      "license": "Public domain",
+      "licenseURL": "https://www.naturalearthdata.com/about/terms-of-use/",
+      "use": "Generalized coastlines, geographic masks and outlines for territories whose earlier shape is unavailable."
+    },
+    {
+      "name": "Office for National Statistics and Boundary Atlas",
+      "url": "../sources.json",
+      "use": "Home nations, Crown dependencies and overseas possessions. The former territories use the modern atlas maps under their original source terms. scripts/uk-history-shared.mjs records each reused source and its dates."
+    },
+    {
+      "name": "Newberry Library, Atlas of Historical County Boundaries",
+      "url": "https://publications.newberry.org/ahcb/",
+      "use": "The retained US historical mosaic supplies Georgia’s southern charter, the Floridas, the river boundaries of the West Florida extension and Oregon Country. These later surveyed paths serve as geographic references for the dated colonial claims."
+    },
+    {
+      "name": "Government of Canada, Historical boundaries of Canada",
+      "url": "https://www.canada.ca/en/canadian-heritage/services/historical-boundaries-canada.html",
+      "use": "The atlas's Canadian historical geometry for British North America and Confederation. The atlas's 1866 Rupert’s Land reconstruction also represents the earlier charter at this scale."
+    },
+    {
+      "name": "United Nations, Togoland under British Administration, Map 835 (June 1956)",
+      "url": "https://digitallibrary.un.org/record/843223/files/A_3173-EN.pdf",
+      "use": "The British Togoland western boundary is a generalized reconstruction from the map's graticule, clipped to the present Ghana–Togo frontier."
+    },
+    {
+      "name": "Colonial Office, Cameroons under United Kingdom Trusteeship (1949)",
+      "url": "https://commons.wikimedia.org/wiki/File:Map_of_British_Cameroons_in_1949.jpg",
+      "use": "The western limit of Northern Cameroons is a generalized reconstruction from the Colonial Office map, clipped to Nigeria's modern frontier. Southern Cameroons uses Cameroon's present North-West and South-West regions."
+    },
+    {
+      "name": "Boundary Atlas retained US map",
+      "url": "../../united-states/sources.json",
+      "use": "Modern US land and New York county geometry for matching Atlantic colonial extents."
+    },
+    {
+      "name": "Statistics Canada cartographic boundaries in Boundary Atlas",
+      "url": "../../canada/sources.json",
+      "use": "Shared provincial and census-division polygons for the Maritimes, Newfoundland island and Labrador; each dated grouping retains its timeline assignment."
+    },
+    {
+      "name": "United States Geological Survey, Boundaries of the United States and the Several States, Bulletin 1212",
+      "url": "https://pubs.usgs.gov/bul/1212/report.pdf",
+      "use": "The 1763 initial West Florida northern limit at latitude 31° and its 1764 extension to 32°28′, together with the adjoining Georgia and East Florida boundaries."
+    }
+  ],
+  "chronology": [
+    {
+      "name": "UK Parliament, Acts of Union in 1707",
+      "url": "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/act-of-union-1707/overview/the-articles-constitution-and-trade/"
+    },
+    {
+      "name": "UK Parliament, union with Ireland in 1801",
+      "url": "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliamentandireland/overview/parliamentary-union/"
+    },
+    {
+      "name": "House of Commons Library, the United Kingdom and independence",
+      "url": "https://commonslibrary.parliament.uk/research-briefings/cbp-10649/"
+    },
+    {
+      "name": "US Office of the Historian, Treaty of Paris of 1763",
+      "url": "https://history.state.gov/milestones/1750-1775/treaty-of-paris"
+    },
+    {
+      "name": "US National Archives, Treaty of Paris of 1783",
+      "url": "https://www.archives.gov/milestone-documents/treaty-of-paris"
+    },
+    {
+      "name": "UK Parliament, British North America 1763–1791",
+      "url": "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliament-and-empire/parliament-and-the-american-colonies-before-1765/british-north-america-1763-91/"
+    },
+    {
+      "name": "Canada, British North America and Confederation",
+      "url": "https://www.canada.ca/en/intergovernmental-affairs/services/provinces-territories.html"
+    },
+    {
+      "name": "Judicial Committee of the Privy Council, Labrador boundary documents",
+      "url": "https://www.heritage.nf.ca/articles/politics/privy-council-introduction.php"
+    },
+    {
+      "name": "Parliament of Australia, Australian colonial boundary development",
+      "url": "https://www.aph.gov.au/-/media/05_About_Parliament/52_Sen/Publications_and_resources/Papers_and_research/Papers_on_Parliament/pop42.pdf"
+    },
+    {
+      "name": "National Archives of Australia, historical colonial boundaries",
+      "url": "https://www.foundingdocs.gov.au/places.html"
+    },
+    {
+      "name": "Australia, Statute of Westminster Adoption Act 1942",
+      "url": "https://www.legislation.gov.au/C1942A00056/asmade/1942-10-09/text/original/pdf"
+    },
+    {
+      "name": "New Zealand Ministry for Culture and Heritage, Crown colony",
+      "url": "https://nzhistory.govt.nz/page/crown-colony-era"
+    },
+    {
+      "name": "New Zealand Ministry for Culture and Heritage, Dominion status and adoption of the Statute of Westminster",
+      "url": "https://nzhistory.govt.nz/page/regalised"
+    },
+    {
+      "name": "Statute of Westminster 1931",
+      "url": "https://www.legislation.gov.uk/ukpga/Geo5/22-23/4/enacted"
+    },
+    {
+      "name": "UK Parliament, Parliament and Empire 1815–1970",
+      "url": "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliament-and-empire/key-dates/parliament-and-empire-1815-1970/"
+    },
+    {
+      "name": "United Nations, former Trust and Non-Self-Governing Territories",
+      "url": "https://www.un.org/dppa/decolonization/history/former-trust-and-nsgts"
+    },
+    {
+      "name": "United Nations, Trusteeship Agreements and Trust Territories",
+      "url": "https://research.un.org/en/docs/tc/territories"
+    },
+    {
+      "name": "United Nations, end of the Northern and Southern Cameroons trusteeship",
+      "url": "https://digitallibrary.un.org/record/843922/files/A_5097-EN.pdf"
+    },
+    {
+      "name": "Commonwealth Secretariat, Commonwealth history",
+      "url": "https://thecommonwealth.org/history"
+    },
+    {
+      "name": "Hong Kong Department of Justice, Basic Law Bulletin 22, historical context",
+      "url": "https://www.doj.gov.hk/en/publications/pdf/basiclaw/basic22.pdf"
+    },
+    {
+      "name": "Hong Kong Yearbook, Hong Kong Island, southern Kowloon and Stonecutters Island",
+      "url": "https://www.yearbook.gov.hk/2017/en/pdf/E22.pdf"
+    },
+    {
+      "name": "UK National Archives, Hong Kong and the Opium Wars",
+      "url": "https://www.nationalarchives.gov.uk/education/teaching-resources/hong-kong-and-the-opium-wars/"
+    },
+    {
+      "name": "Fiji Parliament, Rotuma Lands Bill summary",
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2017/03/Rotuma-Lands-Bill-summary.pdf"
+    },
+    {
+      "name": "United Nations Special Committee, 1965 detachment of Seychelles islands",
+      "url": "https://digitallibrary.un.org/record/707034/files/A_10023_Rev-1%5EVol-III%5E-EN.pdf?ln=ru"
+    },
+    {
+      "name": "United Nations Treaty Series, 1976 return of Seychelles islands",
+      "url": "https://treaties.un.org/doc/publication/UNTS/Volume%201038/v1038.pdf"
+    },
+    {
+      "name": "Papua New Guinea Department of Foreign Affairs, PNG history",
+      "url": "https://www.dfa.gov.pg/png-history/"
+    },
+    {
+      "name": "British Overseas Territories Act 2002",
+      "url": "https://www.legislation.gov.uk/ukpga/2002/8/section/1"
+    },
+    {
+      "name": "Saint Helena, Ascension and Tristan da Cunha Constitution Order 2009",
+      "url": "https://www.legislation.gov.uk/uksi/2009/1751/schedule/part/PREAMBLE"
+    },
+    {
+      "name": "British Antarctic Survey, British Antarctic Territory",
+      "url": "https://legacy.bas.ac.uk/about_antarctica/geopolitical/bat.php"
+    },
+    {
+      "name": "Antarctic Treaty, Article IV",
+      "url": "https://legacy.bas.ac.uk/about_antarctica/geopolitical/treaty/update_1959.php"
+    },
+    {
+      "name": "House of Commons Library, International Law and the Chagos Archipelago",
+      "url": "https://commonslibrary.parliament.uk/research-briefings/cbp-10512/"
+    }
+  ]
+}

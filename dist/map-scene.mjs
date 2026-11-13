@@ -1,3 +1,5 @@
+import {appearancePaint} from './appearance-paint.mjs';
+import {getSettings} from './settings.mjs';
 import {SELECTION_STATE_PREFIX,selectionFilter,selectionOpacity,selectedOpacity} from './interaction-policy.mjs';
 import {createSelectionVisibility,selectionStates} from './selection-visibility.mjs';
 export {selectionStates} from './selection-visibility.mjs';
@@ -30,6 +32,20 @@ export function blendColor(from,to,amount){
  if(a&&b)return '#'+a.map((v,i)=>Math.round(v+(b[i]-v)*amount).toString(16).padStart(2,'0')).join('');
  return numericOutputs(from,value=>['interpolate',['linear'],amount,0,value,1,to]);
 }
+// Hover tints the current fill in place. Geometry, selection and quiz paints stay shared.
+const hoverState=['boolean',['feature-state','hover'],false];
+const hoverPriority=['any',...['selected','quizActive','quizTarget','quizCorrect','quizWrong'].map(key=>['boolean',['feature-state',key],false])];
+export function withoutHover(value){
+ if(!Array.isArray(value))return value;
+ if(value[0]!=='case')return value.map(withoutHover);
+ const out=['case'];for(let i=1;i<value.length-1;i+=2)if(!same(value[i],hoverState))out.push(withoutHover(value[i]),withoutHover(value[i+1]));
+ out.push(withoutHover(value.at(-1)));return out.length===2?out[1]:out;
+}
+export function hoverFillPaint(paint,enabled){
+ const color=withoutHover(paint['fill-color']??'#000000'),opacity=withoutHover(paint['fill-opacity']??1);
+ return {...paint,'fill-color':enabled?numericOutputs(color,value=>['case',hoverPriority,value,hoverState,blendColor(value,'#000000',.1),value]):color,
+  'fill-opacity':enabled?numericOutputs(opacity,value=>['case',hoverPriority,value,hoverState,['max',value,.16],value]):opacity};
+}
 export function provinceOpacity(visible,opacity=1){
  const amount=visible?opacity:0;return ['case',
  ['boolean',['feature-state','inactive'],false],1-amount,
@@ -39,13 +55,25 @@ export function provinceOpacity(visible,opacity=1){
  ['boolean',['feature-state','selected'],false],.3-.12*amount,
  ['boolean',['feature-state','hover'],false],.35-.2*amount,1-amount];
 }
-export const getMapScene=map=>scenes.get(map);
+export const getMapScene=map=>scenes.get(map)||scenes.get(map?.style?.map);
 export const sceneLayers=map=>scenes.get(map)?.layerInventory()||map.getStyle()?.layers||[];
 export function createMapScene(map,{version=globalThis.maplibregl?.getVersion?.()}={}){
  if(scenes.has(map))return scenes.get(map);
  const native=Object.fromEntries(['addLayer','moveLayer','removeLayer','setPaintProperty','setLayoutProperty','addSource','setFilter','getFilter','queryRenderedFeatures'].map(key=>[key,map[key]?.bind(map)]));
  const entries=new Map(),sourceIds=new Map(),selectionDrawSources=new Set(),borderProviders=new Map();
- let borderOwnership=false;
+ let borderOwnership=false,hoverEnabled=getSettings().hoverHighlight,hoveredId,hoveredTargets=[];
+ function clearHover(){for(const target of hoveredTargets)if(map.getSource(target.source)){if(map.removeFeatureState)map.removeFeatureState(target,'hover');else map.setFeatureState(target,{hover:false});}hoveredTargets=[];hoveredId=undefined;}
+ function hoverPlace(place){
+  const id=place?.boundaryId??place?.id??place?.adcode;
+  if(!hoverEnabled||id===undefined||id===null||place?.settlement||place?.point||place?.level===0){if(hoveredTargets.length)clearHover();return;}
+  if(hoveredId===id)return;clearHover();const seen=new Set();
+  for(const [layerId,entry]of entries)if(entry.hoverFill&&!seen.has(entry.source)&&sourceIds.get(entry.source)&&map.getSource(entry.source)&&map.getLayoutProperty(layerId,'visibility')!=='none'){
+   seen.add(entry.source);for(const featureId of place.hoverIds||[id]){const target={source:entry.source,id:featureId};map.setFeatureState(target,{hover:true});hoveredTargets.push(target);}
+  }
+  hoveredId=hoveredTargets.length?id:undefined;
+ }
+ const hoverSettings=()=>{const next=getSettings().hoverHighlight;if(next===hoverEnabled)return;hoverEnabled=next;clearHover();for(const[id,entry]of entries)if(entry.hoverFill)render(id,entry);};
+ globalThis.addEventListener?.('atlas-settings-change',hoverSettings);map.on?.('remove',()=>{globalThis.removeEventListener?.('atlas-settings-change',hoverSettings);});
  let warmPainter,warmRender,selectionDrawCulling=true,detailStage=null,detailBaseline=null,skippedDetailDraws=0;
  const detailTypes=new Set(['line','circle','symbol']);
  const detailBlocked=(id,entry)=>!!warmRender&&detailStage!==null&&detailTypes.has(entry?.type)&&detailBaseline?.get(id)!==entry&&!detailStage.has(id);
@@ -74,7 +102,7 @@ export function createMapScene(map,{version=globalThis.maplibregl?.getVersion?.(
   if(id.endsWith('-selection-edges')&&typeof options.data==='string'&&!options.data.startsWith('atlas-data://'))options={...options,data:'atlas-data://'+id+'?url='+encodeURIComponent(options.data)+'&transform=selection-outline'};
   sourceIds.set(id,options.promoteId);return native.addSource(id,options);
  };const getView=()=>{const bounds=map.getBounds?.()?.toArray?.();return bounds?paddedView(bounds.flat()):[-180,-90,180,90];};let culling=true,horizonCulling=true,selectionCulling=true,view=getView();let overview=false,borderPreparation=false;let satellite={visible:false,opacity:1},snapshot=null,snapshotContexts=[],snapshotKeepsWater=false;
- if(map.removeSource){const remove=map.removeSource.bind(map);map.removeSource=id=>{const result=remove(id);sourceIds.delete(id);return result;};}
+ if(map.removeSource){const remove=map.removeSource.bind(map);map.removeSource=id=>{if(hoveredTargets.some(t=>t.source===id))clearHover();const result=remove(id);sourceIds.delete(id);return result;};}
  // The pinned renderer exposes altitude on its transform. Missing or invalid
  // altitude falls back to the conservative back hemisphere, never tighter culling.
  const globeView=()=>{if(!map.style)return null;if(map.getProjection?.()?.type!=='globe'||!(map.getZoom?.()<5)||map.getPitch?.()>0)return null;const transform=map.transform||map._camera?.transform,altitude=transform?.getCameraAltitude?.();return {center:map.getCenter(),minimumFacing:Number.isFinite(altitude)&&altitude>6371008.8*.05?6371008.8/(6371008.8+altitude):0};};
@@ -93,7 +121,7 @@ export function createMapScene(map,{version=globalThis.maplibregl?.getVersion?.(
   const basePaint=clone(layer.paint||{});if(layer.type==='fill'){if(atlas.selection)basePaint['fill-opacity']=1;else if(!atlas.preserveSelectionOpacity&&basePaint['fill-opacity'])basePaint['fill-opacity']=selectedOpacity(basePaint['fill-opacity']);}
   if(layer.type==='line'&&role==='selection'){basePaint['line-width']=regionalLineWidth(1,true);basePaint['line-opacity']=outlineOpacity(layer.source,basePaint['line-opacity']??1);}
   const file=sourceFile(map,layer.source),context=['context','land','water','waterLine'].includes(role)||layer.metadata?.atlasInternationalBorder;
-  return {stableSelectionFill:!!atlas.stableSelectionFill,selectionDraw:!!atlas.selectionDraw,preserveSelectionOpacity:!!atlas.preserveSelectionOpacity,selection:!!atlas.selection,detailedBorder:!atlas.overview&&!!layer.metadata?.atlasInternationalBorder,replaceInOverview:!atlas.overview&&(['land','context'].includes(role)||!!layer.metadata?.atlasInternationalBorder),source:layer.source,visibleStates:atlas.visibleStates||(role==='selection'&&JSON.stringify(basePaint).includes('"feature-state"')?selectionStates:null),file:context?file:null,culled:!!(culling&&context&&offscreen(file)),type:layer.type,role,contextCountry:atlas.contextCountry,paint:basePaint,satellite:atlas.satellite??{},rendered:{},visibility:layer.layout?.visibility||'visible'};
+  return {hoverFill:layer.type==='fill'&&role==='fill'&&!atlas.selection&&!atlas.stableSelectionFill&&(!!atlas.hoverFill||JSON.stringify(basePaint).includes('"feature-state","hover"')),stableSelectionFill:!!atlas.stableSelectionFill,selectionDraw:!!atlas.selectionDraw,preserveSelectionOpacity:!!atlas.preserveSelectionOpacity,selection:!!atlas.selection,detailedBorder:!atlas.overview&&!!layer.metadata?.atlasInternationalBorder,replaceInOverview:!atlas.overview&&(['land','context'].includes(role)||!!layer.metadata?.atlasInternationalBorder),source:layer.source,visibleStates:atlas.visibleStates||(role==='selection'&&JSON.stringify(basePaint).includes('"feature-state"')?selectionStates:null),file:context?file:null,culled:!!(culling&&context&&offscreen(file)),type:layer.type,role,backgroundFill:!!atlas.backgroundFill,contextCountry:atlas.contextCountry,paint:basePaint,satellite:atlas.satellite??{},rendered:{},visibility:layer.layout?.visibility||'visible'};
  };
  const rank=layer=>layerBands[entries.get(layer.id)?.role||layer.metadata?.atlas?.role||defaults[layer.type]];
  function anchor(id,role,before){
@@ -105,7 +133,7 @@ export function createMapScene(map,{version=globalThis.maplibregl?.getVersion?.(
  function gatePaint(entry,out){if(entry.gate){const property=entry.type==='line'?'line-opacity':'fill-opacity';out[property]=numericOutputs(out[property]??1,base=>selectionOpacity(entry.gate.key,base));}return out;}
  function paint(entry){
   const out=clone(entry.paint),amount=satellite.visible?satellite.opacity:0,rule=entry.satellite;
-  if(rule===false)return gatePaint(entry,out);
+  if(rule===false)return appearancePaint(gatePaint(entry,entry.hoverFill?hoverFillPaint(out,hoverEnabled):out),entry,amount);
   if(entry.type==='fill'){
    const base=entry.paint['fill-opacity']??1,mode=rule.fill||(entry.role==='context'?'fade':entry.role==='fill'?'highlight':'none');
    out['fill-opacity']=base;
@@ -116,7 +144,7 @@ export function createMapScene(map,{version=globalThis.maplibregl?.getVersion?.(
    if(rule.lineOpacity==='fade')out['line-opacity']=fade(entry.paint['line-opacity']??1,amount,false);
    else if(entry.role==='border'||entry.role==='selection')out['line-color']=blendColor(entry.paint['line-color']??'#000000',rule.lineColor||'#fff0bb',amount);
   }
-  return gatePaint(entry,out);
+  return appearancePaint(gatePaint(entry,entry.hoverFill?hoverFillPaint(out,hoverEnabled):out),entry,amount);
  }
  const emptySelection=entry=>!entry.stableSelectionFill&&!entry.warming&&selectionCulling&&entry.visibleStates&&!selectionVisibility.active(entry.source,entry.visibleStates);
  // A canonical border provider carries the same geometry and claims as its
@@ -173,7 +201,15 @@ export function createMapScene(map,{version=globalThis.maplibregl?.getVersion?.(
   options=[{validate:false,...options[0]}];const entry=entries.get(id);if(entry){const gated=!!entry.gate;if(configureGate(id,entry,filter)){if(!gated)native.setFilter(id,null,...options);render(id,entry);native.setLayoutProperty(id,'visibility',visibility(id,entry));return map;}if(gated){const gate=entry.gate;if(gate.id!==null&&gate.id!=='')map.setFeatureState({source:entry.source,id:gate.id},{[gate.key]:false});delete entry.gate;delete entry.filter;entry.visibleStates=entry.gateStates;render(id,entry);native.setLayoutProperty(id,'visibility',visibility(id,entry));}}return native.setFilter(id,filter,...options);};
  if(native.getFilter)map.getFilter=id=>entries.get(id)?.gate?clone(entries.get(id).filter):native.getFilter(id);
  if(native.queryRenderedFeatures)map.queryRenderedFeatures=(...args)=>native.queryRenderedFeatures(...args).filter(feature=>{const entry=entries.get(feature.layer?.id);return !map.getLayer(feature.layer.id)?._atlasBorderSuppressed&&!entry?.warming&&!detailBlocked(feature.layer?.id,entry)&&(!entry?.gate||String(feature.properties?.[entry.gate.property])===String(entry.gate.id));});
- const scene={
+ const scene={hoverPlace,clearHover,batchFeatureState:selectionVisibility.batch,
+  // Use the same visibility policy before a shared source has been installed.
+  contextLayerVisible(layer,file){
+   const atlas=layer.metadata?.atlas||{},role=atlas.role||defaults[layer.type];
+   const entry={source:layer.source,role,type:layer.type,contextCountry:atlas.contextCountry,visibility:layer.layout?.visibility||'visible',file,
+    detailedBorder:!atlas.overview&&!!layer.metadata?.atlasInternationalBorder,
+    replaceInOverview:!atlas.overview&&(['land','context'].includes(role)||!!layer.metadata?.atlasInternationalBorder),culled:culling&&offscreen(file)};
+   return visibility(layer.id,entry)!=='none';
+  },
   layerInventory:inventory,sourceInventory:()=>[...sourceIds.keys()],
   beginDetailStage(){detailBaseline=new Map(entries);detailStage=new Set();map.triggerRepaint?.();},
   setDetailStage(ids){if(ids===null){detailStage=null;detailBaseline=null;}else{detailBaseline??=new Map(entries);detailStage=new Set(ids);}map.triggerRepaint?.();},
@@ -181,16 +217,16 @@ export function createMapScene(map,{version=globalThis.maplibregl?.getVersion?.(
   detailStageStats:()=>({active:detailStage!==null,allowed:detailStage?.size||0,skippedDraws:skippedDetailDraws}),
   get canWarmLayers(){return warmPainter===map.painter&&!!warmRender&&map.painter?.renderLayer===warmRender;},
   setLayerWarming(id,value){const entry=entries.get(id);if(!entry)return;entry.warming=!!value;render(id,entry);},
-  setOverview(value){value=!!value;if(overview===value)return;overview=value;for(const [id,entry]of entries)if(entry.replaceInOverview)native.setLayoutProperty(id,'visibility',visibility(id,entry));},
+  setOverview(value){value=!!value;if(overview===value)return;overview=value;for(const [id,entry]of entries)if(entry.replaceInOverview)native.setLayoutProperty(id,'visibility',visibility(id,entry));map.fire?.('atlascontextchange');},
   get overview(){return overview;},
-  setBorderOwnership(value){value=!!value;if(borderOwnership===value)return;borderOwnership=value;refreshBorderOwnership();},
-  setBorderPreparation(value){value=!!value;if(borderPreparation===value)return;borderPreparation=value;for(const [id,entry]of entries)if(entry.detailedBorder)native.setLayoutProperty(id,'visibility',visibility(id,entry));},
-  setCulling(value){culling=!!value;updateView();},
-  setHorizonCulling(value){horizonCulling=!!value;updateView();},
+  setBorderOwnership(value){value=!!value;if(borderOwnership===value)return;borderOwnership=value;refreshBorderOwnership();map.fire?.('atlascontextchange');},
+  setBorderPreparation(value){value=!!value;if(borderPreparation===value)return;borderPreparation=value;for(const [id,entry]of entries)if(entry.detailedBorder)native.setLayoutProperty(id,'visibility',visibility(id,entry));map.fire?.('atlascontextchange');},
+  setCulling(value){culling=!!value;updateView();map.fire?.('atlascontextchange');},
+  setHorizonCulling(value){horizonCulling=!!value;updateView();map.fire?.('atlascontextchange');},
   setSelectionDrawCulling(value){selectionDrawCulling=!!value;map.triggerRepaint();},
   setSelectionCulling(value){selectionCulling=!!value;for(const [id,entry]of entries)if(entry.visibleStates)native.setLayoutProperty(id,'visibility',visibility(id,entry));},
   cullingStats(){let culledLayers=0,contextLayers=0,emptySelectionLayers=0;for(const entry of entries.values()){if(entry.culled)culledLayers++;if(entry.file)contextLayers++;if(emptySelection(entry))emptySelectionLayers++;}return {enabled:culling,horizonCulling,selectionCulling,culledLayers,contextLayers,emptySelectionLayers};},
-  setSnapshot(id,{replaceContexts=[],keepWater=false}={}){if(snapshot===id&&same(snapshotContexts,replaceContexts)&&snapshotKeepsWater===keepWater)return;snapshot=id;snapshotContexts=[...replaceContexts];snapshotKeepsWater=keepWater;for(const [key,entry]of entries)native.setLayoutProperty(key,'visibility',visibility(key,entry));},
+  setSnapshot(id,{replaceContexts=[],keepWater=false}={}){if(snapshot===id&&same(snapshotContexts,replaceContexts)&&snapshotKeepsWater===keepWater)return;snapshot=id;snapshotContexts=[...replaceContexts];snapshotKeepsWater=keepWater;for(const [key,entry]of entries)native.setLayoutProperty(key,'visibility',visibility(key,entry));map.fire?.('atlascontextchange');},
   setSatellite(visible,opacity=1){
    const next={visible:!!visible,opacity:Math.max(0,Math.min(1,opacity))};
    if(same(next,satellite))return;satellite=next;
@@ -212,5 +248,7 @@ export function createMapScene(map,{version=globalThis.maplibregl?.getVersion?.(
   if(providerChanged)refreshBorderOwnership();
  }
  map.on?.('move',updateView);map.on?.('resize',updateView);map.on?.('projectiontransition',updateView);map.on?.('style.load',updateView);
+ const themeBackground=()=>{if(map.getLayer('background')&&!entries.has('background')){const entry=describe({id:'background',type:'background',paint:{'background-color':map.getPaintProperty('background','background-color')}});entries.set('background',entry);render('background',entry);}};themeBackground();map.on?.('style.load',themeBackground);
+ globalThis.addEventListener?.('atlas-appearance-change',()=>{for(const [id,entry]of entries)render(id,entry);});
  scenes.set(map,scene);return scene;
 }

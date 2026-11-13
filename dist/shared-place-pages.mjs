@@ -2,12 +2,12 @@
 export function applySharedPlacePages(records,definitions){
  const byId=new Map(records.map(r=>[r.id,r]));
  for(const page of definitions.pages){
-  const county=byId.get(page.id),city=byId.get(page.municipality);
-  if(!county||!city||!(county.parent===city.parent||city.parent===county.id&&city.province===county.parent)||county.level!==2||city.level!==3)throw Error('Invalid shared place: '+page.id);
-  const aliases=[...new Set([county.en,city.en,county.code,city.code,...county.aliases||[],...city.aliases||[]])].sort();
-  const shared={en:page.name,local:page.local??page.name,kind:page.kind,sharedPageId:page.id,sharedGeometryIds:{2:county.id,3:city.id}};
-  Object.assign(county,shared,{aliases,statusNote:page.note,statusSource:definitions.sources[page.source].url,statusSourceLabel:' Source',...(city.flag?{flag:city.flag}:{})});
-  Object.assign(city,shared);
+  const ids=page.members||[page.id,page.municipality],members=ids.map(id=>byId.get(id)),county=members[0],city=members.at(-1);
+  if(ids[0]!==page.id||members.length<2||new Set(ids).size!==ids.length||members.some((r,i)=>!r||i>0&&(r.level!==members[i-1].level+1||!(r.parent===members[i-1].id||i===1&&members[i-1].parent!=null&&r.parent===members[i-1].parent))))throw Error('Invalid shared place: '+page.id);
+  const aliases=[...new Set(members.flatMap(r=>[r.en,r.local,r.code,...r.aliases||[]]).filter(Boolean))].sort();
+  const shared={en:page.name,local:page.local??page.name,kind:page.kind,sharedPageId:page.id,sharedGeometryIds:Object.fromEntries(members.map(r=>[r.level,r.id]))};
+  for(const member of members)Object.assign(member,shared);
+  Object.assign(county,{aliases,...(page.note?{statusNote:page.note,statusSource:definitions.sources[page.source].url,statusSourceLabel:' Source'}:{}),...(city.flag?{flag:city.flag}:{})});
  }
  const independentNames=new Set(definitions.pages.filter(p=>p.type==='independent-city').map(p=>p.parent+'|'+p.name));
  for(const record of records){

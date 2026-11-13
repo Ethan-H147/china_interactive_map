@@ -13262,6 +13262,103 @@
         "source": "population"
       },
       "note": "Current official eldership geometry. Published 2026 resident population is shown only where the statistical unit code matches; missing figures are not zero."
+    },
+    "lithuania:LT-CITY-29": {
+      "name": "Šiauliai (outside elderships)",
+      "level": 3,
+      "parent": "LT-M-29",
+      "area": {
+        "value": 68.9662629779996,
+        "unit": "km²",
+        "year": 2026,
+        "source": "boundaryArea",
+        "method": "mapped",
+        "label": "Mapped city area"
+      }
+    },
+    "lithuania:LT-CITY-12": {
+      "name": "Birštonas",
+      "level": 3,
+      "parent": "LT-M-12",
+      "area": {
+        "value": 15.331366628860078,
+        "unit": "km²",
+        "year": 2026,
+        "source": "boundaryArea",
+        "method": "mapped",
+        "label": "Mapped city area"
+      },
+      "population": {
+        "value": 2966,
+        "year": 2026,
+        "date": "2026-01-01",
+        "method": "estimate",
+        "periodLabel": "1 January 2026 population",
+        "source": "population"
+      }
+    },
+    "lithuania:LT-CITY-15": {
+      "name": "Druskininkai",
+      "level": 3,
+      "parent": "LT-M-15",
+      "area": {
+        "value": 23.92734166046639,
+        "unit": "km²",
+        "year": 2026,
+        "source": "boundaryArea",
+        "method": "mapped",
+        "label": "Mapped city area"
+      },
+      "population": {
+        "value": 12754,
+        "year": 2026,
+        "date": "2026-01-01",
+        "method": "estimate",
+        "periodLabel": "1 January 2026 population",
+        "source": "population"
+      }
+    },
+    "lithuania:LT-CITY-57": {
+      "name": "Kupiškis",
+      "level": 3,
+      "parent": "LT-M-57",
+      "area": {
+        "value": 6.409515161030272,
+        "unit": "km²",
+        "year": 2026,
+        "source": "boundaryArea",
+        "method": "mapped",
+        "label": "Mapped city area"
+      },
+      "population": {
+        "value": 5853,
+        "year": 2026,
+        "date": "2026-01-01",
+        "method": "estimate",
+        "periodLabel": "1 January 2026 population",
+        "source": "population"
+      }
+    },
+    "lithuania:LT-CITY-62": {
+      "name": "Molėtai",
+      "level": 3,
+      "parent": "LT-M-62",
+      "area": {
+        "value": 4.915319503965501,
+        "unit": "km²",
+        "year": 2026,
+        "source": "boundaryArea",
+        "method": "mapped",
+        "label": "Mapped city area"
+      },
+      "population": {
+        "value": 5459,
+        "year": 2026,
+        "date": "2026-01-01",
+        "method": "estimate",
+        "periodLabel": "1 January 2026 population",
+        "source": "population"
+      }
     }
   }
 }

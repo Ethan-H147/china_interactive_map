@@ -1,0 +1,12 @@
+{
+  "bounds": [
+    -68.12,
+    45.23,
+    -67.08,
+    46.02
+  ],
+  "source": "scripts/boundary-sources/us-canada/ibc-v1.3.geojson.gz",
+  "mask": "scripts/boundary-sources/us-canada/maine-display-fill.json.gz",
+  "allMaps": true,
+  "policy": "Solid physical display fill for the inland St. Croix border-lake cluster, split by the retained international survey and existing subdivision dividers. All selected, background, quiz, riding and historical map views share the fill. Existing identifiers, results, reported statistics and historical ownership dates remain intact; unrelated lakes and coastal bays remain open."
+}

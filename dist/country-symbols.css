@@ -1,5 +1,7 @@
 .country-symbol{display:block;width:32px;height:32px;overflow:visible;flex:none}
 .symbol-rotor{transform-box:fill-box;transform-origin:center;animation:emblem-turn 1.6s linear infinite;will-change:transform}
+.country-symbol[src$="india-chakra.svg"]{animation-duration:3.2s}
+.country-symbol[src$="mexico-sun-stone.webp"]{animation-duration:4.8s}
 .soyombo{width:24px;height:44px}
 @keyframes emblem-turn{to{transform:rotate(360deg)}}
 #moving-indicator{padding:8px 10px;min-width:52px;min-height:52px;border-radius:28px;justify-content:center}

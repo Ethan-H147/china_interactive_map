@@ -1,0 +1,118 @@
+[
+  {
+    "url": "https://geoftp.ibge.gov.br/organizacao_do_territorio/estrutura_territorial/evolucao_da_divisao_territorial_do_brasil/evolucao_da_divisao_territorial_do_brasil_1872_2010/municipios_1872_1991/divisao_territorial_1872_1991/1900/04_limite_estadual_1900.zip",
+    "file": "brazil/1900/04_limite_estadual_1900.zip",
+    "sha256": "eee73e79e531c56b0bc0221102ce285695c161bdf8f73e5056ad60172bb7e2bd",
+    "bytes": 414736
+  },
+  {
+    "url": "https://geoftp.ibge.gov.br/organizacao_do_territorio/estrutura_territorial/evolucao_da_divisao_territorial_do_brasil/evolucao_da_divisao_territorial_do_brasil_1872_2010/municipios_1872_1991/divisao_territorial_1872_1991/1933/04_limite_estadual_1933.zip",
+    "file": "brazil/1933/04_limite_estadual_1933.zip",
+    "sha256": "03cb0bd3fc8d12305691acf203743b67c4c3e4e57239e83aae7ad8b1bca7a6fa",
+    "bytes": 418731
+  },
+  {
+    "url": "https://geoftp.ibge.gov.br/organizacao_do_territorio/estrutura_territorial/evolucao_da_divisao_territorial_do_brasil/evolucao_da_divisao_territorial_do_brasil_1872_2010/municipios_1872_1991/divisao_territorial_1872_1991/1872/04_limite_de_provincia_1872.zip",
+    "file": "brazil/1872/04_limite_de_provincia_1872.zip",
+    "sha256": "6afbff713d1d0c43541d684724b690218b3aed12a594672da1272f9a06e338cf",
+    "bytes": 408993
+  },
+  {
+    "url": "https://geoftp.ibge.gov.br/organizacao_do_territorio/estrutura_territorial/evolucao_da_divisao_territorial_do_brasil/evolucao_da_divisao_territorial_do_brasil_1872_2010/municipios_1872_1991/divisao_territorial_1872_1991/1872/05_malha_municipal_1872.zip",
+    "file": "brazil/1872/05_malha_municipal_1872.zip",
+    "sha256": "091cfed3656234a1134e170e3c84a69614aca3fd6dc225784960a4d723337922",
+    "bytes": 1335711
+  },
+  {
+    "url": "https://geoftp.ibge.gov.br/organizacao_do_territorio/estrutura_territorial/evolucao_da_divisao_territorial_do_brasil/evolucao_da_divisao_territorial_do_brasil_1872_2010/municipios_1872_1991/divisao_territorial_1872_1991/1900/05_malha_municipal_1900.zip",
+    "file": "brazil/1900/05_malha_municipal_1900.zip",
+    "sha256": "8c7175e0b12e6d86d6c31a2c6d226ec3d80a3b20994627a2b36100b604412f08",
+    "bytes": 1761293
+  },
+  {
+    "url": "https://geoftp.ibge.gov.br/organizacao_do_territorio/estrutura_territorial/evolucao_da_divisao_territorial_do_brasil/evolucao_da_divisao_territorial_do_brasil_1872_2010/municipios_1872_1991/divisao_territorial_1872_1991/1933/05_malha_municipal_1933.zip",
+    "file": "brazil/1933/05_malha_municipal_1933.zip",
+    "sha256": "d441c5f3434c481dead3c711a8e0b3c54e1b6876b938f64f6835ed397230a679",
+    "bytes": 1872715
+  },
+  {
+    "url": "https://geoftp.ibge.gov.br/organizacao_do_territorio/estrutura_territorial/evolucao_da_divisao_territorial_do_brasil/evolucao_da_divisao_territorial_do_brasil_1872_2010/municipios_1872_1991/divisao_territorial_1872_1991/1980/04_limite_estadual_1980.zip",
+    "file": "brazil/1980/04_limite_estadual_1980.zip",
+    "sha256": "7d7970e9ae5875c80e071fede0b0b8c7b1a31dd08ffe4c72cfa4079a95ce4352",
+    "bytes": 412712
+  },
+  {
+    "url": "https://geoftp.ibge.gov.br/organizacao_do_territorio/estrutura_territorial/evolucao_da_divisao_territorial_do_brasil/evolucao_da_divisao_territorial_do_brasil_1872_2010/municipios_1872_1991/divisao_territorial_1872_1991/1940/04_limite_estadual_1940.zip",
+    "file": "brazil/1940/04_limite_estadual_1940.zip",
+    "sha256": "19d10e6df5c54cb7fcd287624218903974be1da34f8c211548316eb5740012e4",
+    "bytes": 343698
+  },
+  {
+    "url": "https://geoftp.ibge.gov.br/organizacao_do_territorio/estrutura_territorial/evolucao_da_divisao_territorial_do_brasil/evolucao_da_divisao_territorial_do_brasil_1872_2010/municipios_1872_1991/divisao_territorial_1872_1991/1960/04_limite_estadual_1960.zip",
+    "file": "brazil/1960/04_limite_estadual_1960.zip",
+    "sha256": "a1b9a449af32fa057fb26bc62acb1e4a7dc4768174fd05027f14bfa566a44de2",
+    "bytes": 402262
+  },
+  {
+    "url": "https://geoftp.ibge.gov.br/organizacao_do_territorio/estrutura_territorial/evolucao_da_divisao_territorial_do_brasil/evolucao_da_divisao_territorial_do_brasil_1872_2010/municipios_1872_1991/divisao_territorial_1872_1991/1960/05_malha_municipal_1960.zip",
+    "file": "brazil/1960/05_malha_municipal_1960.zip",
+    "sha256": "261399b8557ee26c118e94b13cebf3b6b3e1c70e91b5e8438a348847b875120f",
+    "bytes": 2222445
+  },
+  {
+    "url": "https://geoftp.ibge.gov.br/organizacao_do_territorio/estrutura_territorial/evolucao_da_divisao_territorial_do_brasil/evolucao_da_divisao_territorial_do_brasil_1872_2010/municipios_1872_1991/divisao_territorial_1872_1991/1940/05_malha_municipal_1940.zip",
+    "file": "brazil/1940/05_malha_municipal_1940.zip",
+    "sha256": "6a839703deb1a4f97367aac18669c993f4ce9e584eb8582e018064bfea69f657",
+    "bytes": 1731762
+  },
+  {
+    "url": "https://geoftp.ibge.gov.br/organizacao_do_territorio/estrutura_territorial/evolucao_da_divisao_territorial_do_brasil/evolucao_da_divisao_territorial_do_brasil_1872_2010/municipios_1872_1991/divisao_territorial_1872_1991/1980/05_malha_municipal_1980.zip",
+    "file": "brazil/1980/05_malha_municipal_1980.zip",
+    "sha256": "984ee90036bfae9b73dd9f14adc940e742658945abcd81e66c77767e0f35f398",
+    "bytes": 2616562
+  },
+  {
+    "url": "https://geoftp.ibge.gov.br/organizacao_do_territorio/estrutura_territorial/evolucao_da_divisao_territorial_do_brasil/evolucao_da_divisao_territorial_do_brasil_1872_2010/municipios_1872_1991/divisao_territorial_1872_1991/1991/04_limite_estadual_1991.zip",
+    "file": "brazil/1991/04_limite_estadual_1991.zip",
+    "sha256": "0c0b900fc0601cfbf3708ed03b005a0842b3bc66f9dae3b8b5a7a4198d44d7b7",
+    "bytes": 556412
+  },
+  {
+    "url": "https://geoftp.ibge.gov.br/organizacao_do_territorio/estrutura_territorial/evolucao_da_divisao_territorial_do_brasil/evolucao_da_divisao_territorial_do_brasil_1872_2010/municipios_1872_1991/divisao_territorial_1872_1991/1991/05_malha_municipal_1991.zip",
+    "file": "brazil/1991/05_malha_municipal_1991.zip",
+    "sha256": "850559e079ec4593f029f862ecf7f36c1f043f51f263529a0435b9f5961dac52",
+    "bytes": 4950809
+  },
+  {
+    "file": "mexico/1821.svg",
+    "url": "https://commons.wikimedia.org/wiki/File:Political_divisions_of_Mexico_1821_(location_map_scheme).svg",
+    "sha256": "b73b7b97b1aa0ac157d6c73fce683c0908f490fd9a7f9daf98ab48ba03c3def5",
+    "bytes": 422507,
+    "license": "CC BY-SA 3.0",
+    "author": "Giggette"
+  },
+  {
+    "file": "mexico/1865-numbers.svg",
+    "url": "https://commons.wikimedia.org/wiki/File:Political_divisions_of_Mexico_1865_(numbers).svg",
+    "sha256": "66431d51a0e62ff4a3ae8e0975a9e4427330f253c08ab8385237464446aaa905",
+    "bytes": 424421,
+    "license": "CC BY-SA 4.0",
+    "author": "Goran tek-en"
+  },
+  {
+    "file": "mexico/1821-georeferenced.json",
+    "url": null,
+    "sha256": "9f190de01bde0466f7f541d530aa07ddb78cd19aa13f5f3f229fd853a8fa0e89",
+    "bytes": 1117142,
+    "license": "CC BY-SA 3.0",
+    "author": "Derived from Giggette"
+  },
+  {
+    "file": "mexico/1865-georeferenced.json",
+    "url": null,
+    "sha256": "f02f47ae622b425527e4188c6330beedf406f3dafb3e1d515306c039d68199aa",
+    "bytes": 1021692,
+    "license": "CC BY-SA 4.0",
+    "author": "Derived from Goran tek-en"
+  }
+]

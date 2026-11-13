@@ -1,8 +1,8 @@
 {
-  "before": 3443595,
-  "after": 641539,
-  "reductionPercent": 81.37007981484466,
-  "compressedBytes": 4553365,
+  "before": 3442070,
+  "after": 641483,
+  "reductionPercent": 81.36345280601498,
+  "compressedBytes": 4552754,
   "sourceIds": [
     "provinces",
     "prefectures",

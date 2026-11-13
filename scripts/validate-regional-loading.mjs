@@ -1,6 +1,8 @@
+import {addRegionalBoundarySources} from '../dist/geo-pack.mjs';
 import {backgroundLandColor} from '../dist/map-palette.mjs';
 import {createMapResources} from '../dist/country-loader.mjs';
-import {createMapScene} from '../dist/map-scene.mjs';
+import {createContextSources} from '../dist/context-sources.mjs';
+import {createMapScene,getMapScene} from '../dist/map-scene.mjs';
 import {polygonParts} from '../dist/polygon-parts.mjs';
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
@@ -12,7 +14,7 @@ import {selectionLineSourceOptions} from '../dist/outline-detail.mjs';
 import {regionalLineWidth} from '../dist/adaptive-lines.mjs';
 const elements=new Map(),sources=new Map(),layers=new Map(),handlers=new Map(),jobs=[],revoked=[],fits=[],statistics=[];
 const element=id=>{
- if(!elements.has(id))elements.set(id,{id,parentElement:{hidden:false},dataset:{},hidden:false,checked:true,value:'',textContent:'',children:[],get childNodes(){return this.children;},attributes:{},matches(){return false;},classList:{toggle(){},remove(){},add(){}},setAttribute(k,v){this.attributes[k]=v;},getAttribute(k){return this.attributes[k];},append(...nodes){this.children.push(...nodes);},replaceChildren(...nodes){this.children=nodes;},querySelector(){return element(id+'-scroll');},addEventListener(){},querySelectorAll(){return [];},removeAttribute(k){delete this.attributes[k];},remove(){}});
+ if(!elements.has(id))elements.set(id,{id,parentElement:{hidden:false},dataset:{},hidden:false,checked:true,value:'',textContent:'',children:[],get childNodes(){return this.children;},attributes:{},matches(){return false;},classList:{toggle(){},remove(){},add(){}},setAttribute(k,v){this.attributes[k]=v;},getAttribute(k){return this.attributes[k];},append(...nodes){this.children.push(...nodes);},replaceChildren(...nodes){this.children=nodes;},querySelector(selector){return selector?.startsWith('#')?element(selector.slice(1)):element(id+'-scroll');},addEventListener(){},querySelectorAll(){return [];},removeAttribute(k){delete this.attributes[k];},remove(){}});
  return elements.get(id);
 };
 element('mode-lock').attributes['aria-pressed']='false';element('satellite-layer').checked=false;element('satellite-opacity').value='60';
@@ -22,9 +24,9 @@ let hit;const layerOrder=[];
 const states=new Map();
 const map={setFeatureState({source,id},state){states.set(source+'|'+id,state);},removeFeatureState({source,id}){states.delete(source+'|'+id);},addSource(id,options){sources.set(id,{...options,loaded:true});},getSource:id=>sources.get(id),removeSource:id=>sources.delete(id),addLayer(l,before){layers.set(l.id,l);const index=layerOrder.indexOf(before);if(index<0)layerOrder.push(l.id);else layerOrder.splice(index,0,l.id);},getLayer:id=>layers.get(id),removeLayer(id){layers.delete(id);layerOrder.splice(layerOrder.indexOf(id),1);},moveLayer(id){layerOrder.splice(layerOrder.indexOf(id),1);layerOrder.push(id);},setPaintProperty(id,key,value){(layers.get(id).paint??={})[key]=value;},getFilter:id=>layers.get(id)?.filter,setFilter(id,filter){layers.get(id).filter=filter;},setLayoutProperty(id,key,value){(layers.get(id).layout??={})[key]=value;},getLayoutProperty(id,key){return layers.get(id).layout?.[key];},queryRenderedFeatures:()=>hit?[hit]:[],isSourceLoaded:id=>sources.get(id)?.loaded,on(type,fn){if(!handlers.has(type))handlers.set(type,new Set());handlers.get(type).add(fn);},off(type,fn){handlers.get(type)?.delete(fn);},getBounds:()=>({getWest:()=>-180,getEast:()=>200,getSouth:()=>-65,getNorth:()=>80}),isMoving:()=>false};
 let nextURL=0,labelRecords=[];
-const context=vm.createContext({bilingualText:(node,text)=>{node.textContent=text;},nameParts:(node,primary)=>{node.textContent=primary;},cameraSettled:async()=>true,applySharedPlacePages,sharedPlacePage,sharedPlaceGeometry,uniquePlacePages,createFirstLevelQuiz:()=>undefined,backgroundLandColor,createMapResources,selectionLineSourceOptions,console,setTimeout,clearTimeout,DOMException,Option:class{constructor(text,value){this.text=text;this.value=value;}},Image:class{decode(){return Promise.resolve();}},URL:{createObjectURL:()=>String(++nextURL),revokeObjectURL:url=>revoked.push(url)},
+const context=vm.createContext({addRegionalBoundarySources,usElections:{},canadaElections:{},usHistory:{},canadaHistory:{},hasPlacePronunciations:()=>false,getMapScene,internationalBorderPaint:()=>({}),createContextSources:(map,scene,options)=>createContextSources(map,scene,{...options,loadSource:context.addWorkerSource}),bilingualText:(node,text)=>{node.textContent=text;},nameParts:(node,primary)=>{node.textContent=primary;},cameraSettled:async()=>true,applySharedPlacePages,sharedPlacePage,sharedPlaceGeometry,uniquePlacePages,createFirstLevelQuiz:()=>undefined,backgroundLandColor,createMapResources,selectionLineSourceOptions,console,setTimeout,clearTimeout,DOMException,Option:class{constructor(text,value){this.text=text;this.value=value;}},Image:class{decode(){return Promise.resolve();}},URL:{createObjectURL:()=>String(++nextURL),revokeObjectURL:url=>revoked.push(url)},
  Worker:class{constructor(){jobs.push(this);}postMessage(data){this.request=data;}terminate(){this.terminated=true;}},
- document:{createTextNode:text=>({nodeType:3,textContent:text}),createDocumentFragment:()=>element('fragment-'+Math.random()),getElementById:element,createElement:tag=>element('new-'+tag+'-'+Math.random()),querySelector:()=>({insertBefore(){}})},
+ CSS:{escape:value=>value},document:{createComment:()=>({nodeType:8}),createTextNode:text=>({nodeType:3,textContent:text}),createDocumentFragment:()=>element('fragment-'+Math.random()),getElementById:element,createElement:tag=>element('new-'+tag+'-'+Math.random()),querySelector:()=>({insertBefore(){}})},
  window:{AtlasCountries:{ids:['brazil','france']},AtlasSymbols:{markup:()=>'<svg/>'},AtlasLabels:{render:(_map,records)=>{labelRecords=records;return [];}}},
  createCountryPage:options=>element(options.id),setSubdivisionHeading:(node,label,count)=>node.textContent=label+' '+count,
  loadCompressed:async file=>file.endsWith('catalogue.bin')?catalogue:{type:'FeatureCollection',features:[]},createPlaceSearch,polygonParts,

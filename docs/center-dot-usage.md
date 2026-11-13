@@ -7,7 +7,6 @@ Only rendered center dots belong here. A string that is split into CSS divider n
 | ID | Remaining use | Main source files |
 | --- | --- | --- |
 | 11 | Sports hover details: city · stadium | `dist/city-quiz.mjs` |
-| 13 | Feedback status: Answer shown · name; highlighted-answer error text. Correct-answer rows in the sidebar now use a check mark without a separator. | `dist/first-level-quiz.mjs` |
 | 14 | Click-quiz summary: correct · incorrect · answers shown | `dist/first-level-quiz.mjs` |
 | 15 | Naming summary: number named · without hints · time; Practice · scope | `dist/name-quiz.mjs`, `dist/first-level-quiz.mjs` |
 | 16 | Personal best: score · fastest perfect time | `dist/first-level-quiz.mjs`, `dist/name-quiz.mjs` |

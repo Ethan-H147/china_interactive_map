@@ -15,13 +15,10 @@ const currentState=p=>(stateGrid.get(Math.floor(p[0])+','+Math.floor(p[1]))||[])
 
 console.log('Preparing bounded coastal targets...');
 const modern=await clip(await command(current,'-dissolve2',{precision:.0000001})),old=fc(h.faces.features.filter(f=>eligible.has(f.properties.f))),oldLand=await command(await clip(old),'-dissolve2',{precision:.0000001});
-let filledHoles=0;const smooth=fc(modern.features.map(f=>({...f,geometry:{type:'MultiPolygon',coordinates:polygons(f.geometry).map(p=>[p[0],...p.slice(1).filter(r=>{const keep=area({type:'Polygon',coordinates:[r]})>=.25;if(!keep)filledHoles++;return keep;})])}})));
-// The historical Everglades marsh and Laguna Madre shore avoid the modern
-// source's dense pond cuts and rectilinear lagoon fragments. Retain these
-// reviewed local coast sections; use the current source for the other regions.
-const retainedSections=[{id:'everglades-marsh',bounds:[-81.8,25,-80.6,25.8],reason:'Retain the smoother historical marsh outline instead of dense modern pond cutouts.'},{id:'laguna-madre',bounds:[-97.65,26,-97.1,27.3],reason:'Retain the coherent historical lagoon shore instead of rectilinear modern fragments.'}];
-const retainMask=fc(retainedSections.flatMap(r=>rect(r.bounds).features)),historicalSections=await command({'old.json':oldLand,'keep.json':retainMask},'-clip keep.json',{precision:.0000001}),modernSections=await command({'modern.json':smooth,'keep.json':retainMask},'-erase keep.json',{precision:.0000001});
-const target=await command(fc([...modernSections.features,...historicalSections.features]),'-dissolve2',{precision:.0000001});
+// Historical ownership is clipped to the same modern land and water holes.
+// Independent historical shore overrides would leave gray gaps or change
+// the physical coastline between the modern map and the timeline.
+const filledHoles=0,retainedSections=[],target=modern;
 const fringe=await command({'target.json':target,'old.json':oldLand},'-erase old.json -explode',{precision:.0000001}),trim=await command({'old.json':oldLand,'target.json':target},'-erase target.json',{precision:.0000001});
 // Index only outer historical shore arcs; assigning added shore land never
 // borrows a present-day state's political boundary.
@@ -59,7 +56,7 @@ const arcs=fc([...sides].map(([n,s],a)=>({type:'Feature',properties:{a,l:s[0],r:
 // rectangular mask and no Canadian/inland-state source mutation.
 const contextUS=fc(context.features.filter(f=>!f.properties.region||f.properties.region==='US-HI')),waterBase=await command(fc([...oldLand.features,...modern.features,...(await clip(contextUS)).features]),'-dissolve2',{precision:.0000001}),water=await command({'base.json':waterBase,'target.json':target},'-erase target.json -explode',{precision:.0000001});
 water.features.push(...(await coastalPhysicalWater(masks,h)).features);
-const reports=[];for(const region of coastRegions){const run=async data=>command({'data.json':data,'box.json':rect(region.bounds)},'-clip box.json',{precision:.0000001}),gained=await run(fringe),removed=await run(trim);reports.push({...region,decision:'Current-day physical shore; retain dated interior divisions. Tiny enclosed water holes below 0.25 km² are filled.',addedKm2:gained.features.reduce((s,f)=>s+area(f.geometry),0),removedKm2:removed.features.reduce((s,f)=>s+area(f.geometry),0)});}
+const reports=[];for(const region of coastRegions){const run=async data=>command({'data.json':data,'box.json':rect(region.bounds)},'-clip box.json',{precision:.0000001}),gained=await run(fringe),removed=await run(trim);reports.push({...region,decision:'Current-day physical shore; retain dated interior divisions. The modern coastline and water holes are shared with the present-day map.',addedKm2:gained.features.reduce((s,f)=>s+area(f.geometry),0),removedKm2:removed.features.reduce((s,f)=>s+area(f.geometry),0)});}
 const pins=Object.fromEntries([...inputs,...permanentWaterFiles].map(f=>[f,createHash('sha256').update(fs.readFileSync(f)).digest('hex')])),audit={uniformTimelineStates:[...uniformCoast.keys()],waterMaskSources:permanentWaterFiles,regions:reports,retainedSections,filledTinyHoles:filledHoles,addedShorePieces:added.length,farthestMixedTimelineAssignmentMetres:farthest,politicalAssignments:'Original face IDs and all date configurations are retained; internal lines stay in place, with only shore endpoints extended into newly filled fringe. New land is split at shoreline jurisdiction joins; its dated face is selected from the same present-day state to avoid borrowing the neighboring shore.'};
 const data={version:2,historySource:h.source.sha256,historyFaces:h.faces.features.length,inputs:pins,faces,arcs,water,audit};
 fs.writeFileSync('dist/data/europe/united-states/history/coastal-display.bin',gzipSync(encodeGeo(data),{level:9}));fs.writeFileSync('dist/data/europe/united-states/history/coastal-display-sources.json',JSON.stringify({inputs:pins,...audit},null,2)+'\n');console.log('Coastal display:',faces.features.length,'faces,',arcs.features.length,'arcs,',filledHoles,'tiny holes filled;',farthest.toFixed(0),'m farthest shore assignment.');

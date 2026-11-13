@@ -8,6 +8,11 @@ import {spanishNameRows} from '../dist/spanish-names.mjs';
 import {addMultilingualPronunciations} from './multilingual-pronunciation-plan.mjs';
 import {russiaPlaceNames} from '../dist/russia-names.mjs';
 import {addNordicPronunciations} from './nordic-pronunciation-plan.mjs';
+import {addBalticPronunciations} from './baltic-pronunciation-plan.mjs';
+import {addAsiaPronunciations} from './asia-pronunciation-plan.mjs';
+import {addChinaMongolianPronunciations} from './china-mongolian-pronunciation-plan.mjs';
+import {addBalkanCentralAsiaPronunciations} from './balkan-central-asia-pronunciation-plan.mjs';
+import {addGreeceMoldovaPronunciations} from './greece-moldova-pronunciation-plan.mjs';
 
 export async function pronunciationPlan(root=fileURLToPath(new URL('../',import.meta.url))){
  const read=file=>fs.readFile(path.join(root,'dist',file));const entries=[];
@@ -50,6 +55,11 @@ export async function pronunciationPlan(root=fileURLToPath(new URL('../',import.
  for(const f of japan.first.features){const p=f.properties;add('japan',p.id,1,p.en,p.ja,'ja');}
  await addMultilingualPronunciations(read,add);
  await addNordicPronunciations(read,add);
+ await addBalticPronunciations(read,add);
+ await addAsiaPronunciations(read,add);
+ await addChinaMongolianPronunciations(read,add);
+ await addBalkanCentralAsiaPronunciations(read,add);
+ await addGreeceMoldovaPronunciations(read,add);
  await addAlpineAsianPronunciations(read,add);
  const mongolia=JSON.parse(gunzipSync(await read('data/mongolia-boundaries.bin')));
  for(const {properties:p}of mongolia.first.features)add('mongolia',p.id,1,p.en,p.mn,'mn',{locale:'mn',context:'Монгол Улсын аймаг болон нийслэлийн нэрийг монгол хэлээр нэг удаа тод, байгалийн байдлаар хэлнэ үү. Зөвхөн заасан нэрийг хэлнэ үү.',voiceSettings:{stability:1,similarity_boost:.75,speed:1}});
@@ -81,5 +91,7 @@ export async function pronunciationPlan(root=fileURLToPath(new URL('../',import.
   entry.context=context;entry.voiceSettings={stability:1,similarity_boost:.75,speed:.9};
  }
  entries.find(p=>p.key==='uruguay:UY-DU').voiceSettings.speed=1;
+ {const e=entries.find(p=>p.key==="indonesia:ID31");Object.assign(e,{synthesisText:"[Indonesian accent] Jakarta",context:"Ucapkan nama kota Jakarta dengan pelafalan bahasa Indonesia asli: ja-KAR-ta, dengan vokal a jelas pada setiap suku kata, bukan pelafalan bahasa Inggris. Sebut sekali saja.",voiceSettings:{stability:1,similarity_boost:.75,speed:1}});}
+ {const e=entries.find(p=>p.key==="belgium:BE32");Object.assign(e,{synthesisText:"Éno",context:"Prononce le nom de la province belge Hainaut en français : é-no, sans aucun son h initial, sans consonne finale. Dis uniquement le nom une fois.",voiceSettings:{stability:1,similarity_boost:.75,speed:1}});}
  return entries.sort((a,b)=>a.key.localeCompare(b.key));
 }

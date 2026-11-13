@@ -5,7 +5,6 @@ import {createPlaceSearch} from './place-search.mjs';
 import {createSubdivisionScope} from './scoped-country.mjs';
 import {wireKoreaInfo} from './korea-info.mjs';
 import {matchesKoreanSearch,koreanNameAliases} from './korean-names.mjs';
-import {onMapHover} from './pointer-performance.mjs';
 import {setSubdivisionHeading,setRegionBreadcrumb} from './country-page.mjs';
 import {koreaComparisonProfile} from './compare.mjs';
 import {koreaPanel} from './korea-panel.mjs';
@@ -137,7 +136,7 @@ map.on('click',event=>{if(!active||!ready||host.isBusy())return;
  // Gwangju in the Elections view: its own unit, within Jeonnam–Gwangju.
  const unit=view?elections.pick(event.point):null;if(unit){const f=index.get(unit.place);if(f)select(f,false).then(()=>{if(active&&selected===f)fit(unit.bounds,11);});return;}
  const f=picked(event.point);if(f)select(f);});
-onMapHover(map,event=>{if(!active||!ready||host.isBusy()||map.isMoving())return;const f=picked(event.point);if(f!==hovered){clearHover();hovered=f;state(f,{hover:true});}if(!f)return;map.getCanvas().style.cursor='pointer';});
+
 map.on('movestart',clearHover);map.on('moveend',updateLabels);map.on('resize',updateLabels);map.getCanvas().addEventListener('mouseleave',clearHover);
 $('search').addEventListener('input',()=>{const q=$('search').value.trim().toLowerCase(),box=$('search-results');box.replaceChildren();box.hidden=!q;if(!q)return;const matches=(sharedSearch??=createPlaceSearch([...index.values()].map(f=>({...f.properties,local:nativeName(f.properties),aliases:[...(f.properties.aliases||[]),...koreanNameAliases({en:f.properties.en,zh:nativeName(f.properties),code:f.properties.id})],feature:f}))))(q).map(r=>r.feature);for(const f of matches){const b=document.createElement('button');b.className='search-result';b.dataset.nav='';const strong=document.createElement('strong'),small=document.createElement('small');bilingualText(strong,f.properties.en+' · '+nativeName(f.properties));small.textContent=f.properties.type+' · '+(index.get(f.properties.parent)?.properties.en||countryNames[f.properties.country]);b.append(strong,small);b.onclick=()=>select(f);box.append(b);}if(!matches.length){const p=document.createElement('p');p.textContent='No matching places.';box.append(p);}});
 $('search').onkeydown=event=>{if(event.isComposing)return;const box=$('search-results');if(event.key==='Enter'&&!box.hidden){event.preventDefault();box.querySelector('button')?.click();}if(event.key==='Escape')box.hidden=true;};

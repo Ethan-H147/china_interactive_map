@@ -1,0 +1,6 @@
+.build/
+.swiftpm/
+tools/
+__pycache__/
+*.xcuserstate
+*.zip

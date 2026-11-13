@@ -13,11 +13,15 @@ export function selectionLineData(input){
 // An outline edge fades as the selected outline above fades the ring it belongs to: the unit's
 // faces that touch are joined into land masses first, so a small island fades in by size while
 // a coast cut into many small faces stays whole.
-const pack=path=>{const a=new Float32Array(path.length*2);path.forEach(([x,y],i)=>{a[2*i]=x;a[2*i+1]=y;});return a;};
+const pack=(path,exact=false)=>{
+ if(ArrayBuffer.isView(path))return exact?path:Float32Array.from(path);
+ const a=exact?new Float64Array(path.length*2):new Float32Array(path.length*2);
+ path.forEach(([x,y],i)=>{a[2*i]=x;a[2*i+1]=y;});return a;
+};
 const unpack=a=>{const path=[];for(let i=0;i<a.length;i+=2)path.push([a[i],a[i+1]]);return path;};
 export function compactMosaic(decoded,configs){
- const faces=decoded.faces.features.map(f=>(f.geometry.type==='Polygon'?[f.geometry.coordinates]:f.geometry.coordinates).map(polygon=>polygon.map(pack)));
- return {faces,arcs:decoded.arcs.features.filter(f=>!f.properties.drawOnly).map(f=>({l:f.properties.l,r:f.properties.r,path:pack(f.geometry.coordinates)})),configs:configs.map(c=>Int32Array.from(c.face)),boundaries:configs.map(c=>c.selectionLines?c.units.map(u=>c.selectionLines[u.id]):null)};
+ const faces=decoded.faces.features.map(f=>(f.geometry.type==='Polygon'?[f.geometry.coordinates]:f.geometry.coordinates).map(polygon=>polygon.map(ring=>pack(ring,!!(f.properties.hostId||f.properties.sharedSource)))));
+ return {faces,arcs:decoded.arcs.features.filter(f=>!f.properties.drawOnly).map(f=>({l:f.properties.l,r:f.properties.r,coast:f.properties.coast===true,path:pack(f.geometry.coordinates,!!f.properties.exact)})),configs:configs.map(c=>Int32Array.from(c.face)),boundaries:configs.map(c=>c.selectionLines?c.units.map(u=>c.selectionLines[u.id]):null)};
 }
 const mercatorY=lat=>(1-Math.log(Math.tan(Math.PI/4+lat*Math.PI/360))/Math.PI)/2;
 // Each face's projected extent and outer-ring area, as lineData measures a ring.
@@ -29,6 +33,68 @@ function faceSize(mosaic,f){
   mosaic.size[f]={w,e,n,s:south,area};
  }
  return mosaic.size[f];
+}
+// Legacy meshes can contain coincident edges without shared face IDs. A
+// selected territory has no outline inside its own land. Index only this
+// selection's rings so checking those edges stays local to one worker request.
+function selectedInterior(mosaic,face,unit){
+ const rows=new Map(),step=.002;let polygonId=0,w=Infinity,e=-Infinity;
+ face.forEach((u,f)=>{if(u!==unit)return;
+  for(const polygon of mosaic.faces[f]){
+   const id=polygonId++;
+   for(const [ringId,ring] of polygon.entries())for(let i=0,j=ring.length-2;i<ring.length;j=i,i+=2){
+    const x=ring[i],y=ring[i+1],py=ring[j+1];w=Math.min(w,x);e=Math.max(e,x);
+    if(y===py&&ringId===0)continue;
+    const edge={ring,i,j,id,hole:ringId>0};
+    for(let row=Math.floor(Math.min(y,py)/step),end=Math.floor(Math.max(y,py)/step);row<=end;row++){
+     let bucket=rows.get(row);if(!bucket)rows.set(row,bucket=[]);bucket.push(edge);
+    }
+   }
+  }
+ });
+ const stamps=new Uint32Array(polygonId),parity=new Uint8Array(polygonId);let serial=0;
+ const contains=(x,y)=>{
+  if(x<w||x>e)return false;
+  const bucket=rows.get(Math.floor(y/step));if(!bucket)return false;
+  serial++;let count=0;
+  for(const {ring,i,j,id}of bucket){
+   const ay=ring[i+1],by=ring[j+1];
+   if((ay>y)===(by>y)||x>=(ring[j]-ring[i])*(y-ay)/(by-ay)+ring[i])continue;
+   if(stamps[id]!==serial){stamps[id]=serial;parity[id]=0;}
+   count+=parity[id]?-1:1;parity[id]^=1;
+  }
+  return count>0;
+ };
+ // Retain real water-hole rings even when a wider interior probe would
+ // jump across a very narrow channel. These coordinates are never edited.
+ contains.hole=(x,y)=>{
+  const row=Math.floor(y/step),cos=Math.cos(y*Math.PI/180),limit=2/111195;
+  for(let r=row-1;r<=row+1;r++)for(const {ring,i,j,hole} of rows.get(r)||[]){
+   if(!hole)continue;
+   const ax=(ring[i]-x)*cos,ay=ring[i+1]-y,dx=(ring[j]-ring[i])*cos,dy=ring[j+1]-ring[i+1];
+   const t=Math.max(0,Math.min(1,-(ax*dx+ay*dy)/(dx*dx+dy*dy)));
+   if(Math.hypot(ax+t*dx,ay+t*dy)<=limit)return true;
+  }
+  return false;
+ };
+ return contains;
+}
+function outlineRuns(path,inside){
+ const coordinates=unpack(path),runs=[];let start=0;
+ for(let i=1;i<coordinates.length;i++){
+  const a=coordinates[i-1],b=coordinates[i],middle=a.map((v,k)=>(v+b[k])/2);
+  const cos=Math.cos(middle[1]*Math.PI/180),dx=(b[0]-a[0])*cos,dy=b[1]-a[1],length=Math.hypot(dx,dy);
+  let internal=false;
+  // Tiny edges and pole/date-line paths keep their existing geometry.
+  if(length*111195>4&&cos>.01&&Math.abs(b[0]-a[0])<180){
+   const step=2/111195,x=-dy/length*step/cos,y=dx/length*step;
+   internal=inside(middle[0]+x,middle[1]+y)&&inside(middle[0]-x,middle[1]-y)&&!inside.hole(middle[0],middle[1]);
+  }
+  if(internal){if(start>=0&&i-start>1)runs.push(coordinates.slice(start,i));start=-1;}
+  else if(start<0)start=i-1;
+ }
+ if(start>=0&&coordinates.length-start>1)runs.push(start?coordinates.slice(start):coordinates);
+ return runs;
 }
 export function unitOutline(mosaic,config,unit){
  const face=mosaic.configs[config],features=[];if(unit<0)return {type:'FeatureCollection',features};
@@ -42,7 +108,10 @@ export function unitOutline(mosaic,config,unit){
  for(const f of parent.keys()){const root=find(f),size=faceSize(mosaic,f),m=masses.get(root);if(!m)masses.set(root,{...size});else{m.w=Math.min(m.w,size.w);m.e=Math.max(m.e,size.e);m.n=Math.min(m.n,size.n);m.s=Math.max(m.s,size.s);m.area+=size.area;}}
  // The selection footprint of selectionLineData: a ring fades in from 12 px.
  const zoom=new Map();for(const [root,m] of masses){const span=Math.min(Math.hypot(m.e-m.w,m.s-m.n),2*Math.sqrt(m.area))*512;zoom.set(root,span>0?Math.log2(12/span):24);}
- for(const a of mosaic.arcs){const l=face[a.l]===unit,r=a.r>=0&&face[a.r]===unit;if(l===r)continue;features.push({type:'Feature',properties:{visibleZoom:zoom.get(find(l?a.l:a.r))},geometry:{type:'LineString',coordinates:unpack(a.path)}});}
+ // Verified physical coasts already describe the land/water edge. Keep them
+ // verbatim and build the interior index only for legacy survey paths.
+ let inside;
+ for(const a of mosaic.arcs){const l=face[a.l]===unit,r=a.r>=0&&face[a.r]===unit;if(l===r)continue;for(const coordinates of a.coast?[unpack(a.path)]:outlineRuns(a.path,inside??=selectedInterior(mosaic,face,unit)))features.push({type:'Feature',properties:{visibleZoom:zoom.get(find(l?a.l:a.r))},geometry:{type:'LineString',coordinates}});}
  return {type:'FeatureCollection',features};
 }
 // Dated region files (one representation order's ridings, historic-borders.mjs): a compact copy

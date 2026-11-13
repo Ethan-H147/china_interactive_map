@@ -21,3 +21,20 @@ Run `node scripts/prepare-central-asian-symbols.mjs` to regenerate the inline ar
 Kazakhstan preserves the original sun and eagle geometry. Only the rays rotate; the sun disk and eagle stay still. The hoist ornament and flag background are omitted. The larger loader uses a 3.2-second turn and subtle warm-gold shading on one side of the rays to make movement visible despite their rotational symmetry. The flag artwork is unchanged.
 
 Kyrgyzstan preserves the current flag's straight rays, sun ring and central tunduk geometry. Complementary masks separate the stationary sun from the rotating center. The red interior disk retains the flag's contrast while the exterior remains transparent. Every instance receives separate SVG IDs so the startup and movement indicators can coexist. Both use the shared rotation and reduced-motion rules.
+
+## Canada, India, Ireland and Mexico
+
+Run `node scripts/prepare-country-symbols.mjs` to regenerate these four loaders.
+Canada's maple leaf and India's Ashoka Chakra retain the exact paths, proportions
+and colors of the existing `dist/vendor/flag-ca.svg` and `flag-in.svg`, covered
+by `dist/vendor/flags-LICENSE.txt`. Only flag backgrounds and outer viewports change.
+Ireland uses an original three-leaf shamrock.
+
+`aztec-sun-stone.svg` is the drawing by Haley.Parrot, based on Jlevine13's
+Aztec Solar Disk Calendar, retrieved 10 November 2026 from
+[Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Aztec_Solar_Disk_Calendar.svg).
+Source: https://upload.wikimedia.org/wikipedia/commons/d/d7/Aztec_Solar_Disk_Calendar.svg
+It is licensed [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
+The runtime WebP preserves its drawing, uses brown ink over a warm stone base and rasterizes it at
+256 pixels with a transparent background. This derivative remains CC BY-SA 4.0;
+see `dist/vendor/country-symbols-LICENSE.txt`.

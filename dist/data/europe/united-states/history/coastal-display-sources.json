@@ -1,10 +1,10 @@
 {
   "inputs": {
     "dist/data/europe/united-states/history/borders.bin": "ec8384fb9daebbcbf9faa5c524154912cb3fba931c9b2fb676803308a26944b3",
-    "dist/data/europe/united-states/first.bin": "a52e2aa775b039cdd32b12c5a499c703bd6780219146522ca4330e2208bcd830",
-    "dist/data/europe/united-states/context.bin": "40f6cf9157214f49a22450f28daeb7022fd7e4b1719606ba7a42ea8566be8eaf",
-    "dist/data/europe/united-states/history/upper-peninsula.bin": "17b7d948f37cefad49e3a3b1249e95c900e77e07ef1868f6d8680f0b720b2f7f",
-    "dist/data/europe/united-states/history/alaska.bin": "c3ed8ab88be6885d0afbb39167a28a7a8f4f09c4651eba3af6aca47e7e0df15e",
+    "dist/data/europe/united-states/first.bin": "fb8852b2d0accd9dffe02acec67057220daf71ae548b2233fd8697c8b0518bdd",
+    "dist/data/europe/united-states/context.bin": "310f2a565428cc8934c47abec1f4b85a29985a55f4a5aa7c8bebd4565e731c80",
+    "dist/data/europe/united-states/history/upper-peninsula.bin": "dd524624da8c83d93d1e78aaf323f39abdf5471339227f2be288985fcf44fe2d",
+    "dist/data/europe/united-states/history/alaska.bin": "33adbcfbebcc123a87637eeffdae44ba259653268bf7fe9fae926a91b15813d3",
     "dist/data/major-lake-cutouts.bin": "7fecac8f739150e8a19505e0326f6c5702afb57844572f1494792d93946572d0",
     "dist/data/americas-inland-water.bin": "0a71f019285afa3de531645e10871d69e63250b904efe0be85f9e665517d81f5",
     "dist/data/canada-lakes.bin": "1108d964af355abfe2d554b2eb84f6ea4642e32f38ac8bad2cc60bc9a9b618ca"
@@ -54,7 +54,7 @@
         -66.8,
         45.2
       ],
-      "decision": "Current-day physical shore; retain dated interior divisions. Tiny enclosed water holes below 0.25 km² are filled.",
+      "decision": "Current-day physical shore; retain dated interior divisions. The modern coastline and water holes are shared with the present-day map.",
       "addedKm2": 1255.0810412195372,
       "removedKm2": 95.63363357533694
     },
@@ -73,9 +73,9 @@
         -71.5,
         41.4
       ],
-      "decision": "Current-day physical shore; retain dated interior divisions. Tiny enclosed water holes below 0.25 km² are filled.",
-      "addedKm2": 3598.942348940137,
-      "removedKm2": 510.9787663311784
+      "decision": "Current-day physical shore; retain dated interior divisions. The modern coastline and water holes are shared with the present-day map.",
+      "addedKm2": 3323.1602394374286,
+      "removedKm2": 527.5532555530305
     },
     {
       "id": "chesapeake",
@@ -92,9 +92,9 @@
         -74.8,
         39.8
       ],
-      "decision": "Current-day physical shore; retain dated interior divisions. Tiny enclosed water holes below 0.25 km² are filled.",
-      "addedKm2": 3744.5828811475776,
-      "removedKm2": 544.9284926457248
+      "decision": "Current-day physical shore; retain dated interior divisions. The modern coastline and water holes are shared with the present-day map.",
+      "addedKm2": 3137.3861943808174,
+      "removedKm2": 684.6231114020111
     },
     {
       "id": "carolinas-georgia",
@@ -111,9 +111,9 @@
         -75.4,
         36.4
       ],
-      "decision": "Current-day physical shore; retain dated interior divisions. Tiny enclosed water holes below 0.25 km² are filled.",
-      "addedKm2": 2850.7873454543155,
-      "removedKm2": 161.73971963178008
+      "decision": "Current-day physical shore; retain dated interior divisions. The modern coastline and water holes are shared with the present-day map.",
+      "addedKm2": 1905.2686161572371,
+      "removedKm2": 618.9160403580593
     },
     {
       "id": "florida",
@@ -130,9 +130,9 @@
         -79.8,
         30.6
       ],
-      "decision": "Current-day physical shore; retain dated interior divisions. Tiny enclosed water holes below 0.25 km² are filled.",
-      "addedKm2": 4671.503210115446,
-      "removedKm2": 115.22294296631642
+      "decision": "Current-day physical shore; retain dated interior divisions. The modern coastline and water holes are shared with the present-day map.",
+      "addedKm2": 1788.252774176343,
+      "removedKm2": 955.2906723372101
     },
     {
       "id": "northern-gulf",
@@ -149,9 +149,9 @@
         -87.7,
         31.1
       ],
-      "decision": "Current-day physical shore; retain dated interior divisions. Tiny enclosed water holes below 0.25 km² are filled.",
-      "addedKm2": 2393.8457110000227,
-      "removedKm2": 434.21646099574787
+      "decision": "Current-day physical shore; retain dated interior divisions. The modern coastline and water holes are shared with the present-day map.",
+      "addedKm2": 778.9555928745459,
+      "removedKm2": 2173.296048770206
     },
     {
       "id": "texas",
@@ -168,9 +168,9 @@
         -94,
         30
       ],
-      "decision": "Current-day physical shore; retain dated interior divisions. Tiny enclosed water holes below 0.25 km² are filled.",
-      "addedKm2": 1628.0691585279117,
-      "removedKm2": 150.61390677425538
+      "decision": "Current-day physical shore; retain dated interior divisions. The modern coastline and water holes are shared with the present-day map.",
+      "addedKm2": 2224.9933888984774,
+      "removedKm2": 185.83988673336836
     },
     {
       "id": "california",
@@ -187,7 +187,7 @@
         -117,
         42
       ],
-      "decision": "Current-day physical shore; retain dated interior divisions. Tiny enclosed water holes below 0.25 km² are filled.",
+      "decision": "Current-day physical shore; retain dated interior divisions. The modern coastline and water holes are shared with the present-day map.",
       "addedKm2": 471.4184944942905,
       "removedKm2": 70.29917752603428
     },
@@ -206,7 +206,7 @@
         -121.3,
         49.1
       ],
-      "decision": "Current-day physical shore; retain dated interior divisions. Tiny enclosed water holes below 0.25 km² are filled.",
+      "decision": "Current-day physical shore; retain dated interior divisions. The modern coastline and water holes are shared with the present-day map.",
       "addedKm2": 685.355911010991,
       "removedKm2": 55.721972544961
     },
@@ -225,9 +225,9 @@
         -75.8,
         49.4
       ],
-      "decision": "Current-day physical shore; retain dated interior divisions. Tiny enclosed water holes below 0.25 km² are filled.",
-      "addedKm2": 648.5344112537284,
-      "removedKm2": 499.4657178604728
+      "decision": "Current-day physical shore; retain dated interior divisions. The modern coastline and water holes are shared with the present-day map.",
+      "addedKm2": 648.4836428159047,
+      "removedKm2": 499.47280855091105
     },
     {
       "id": "hawaii",
@@ -244,35 +244,15 @@
         -154,
         23
       ],
-      "decision": "Current-day physical shore; retain dated interior divisions. Tiny enclosed water holes below 0.25 km² are filled.",
+      "decision": "Current-day physical shore; retain dated interior divisions. The modern coastline and water holes are shared with the present-day map.",
       "addedKm2": 93.49591286980656,
       "removedKm2": 30.58049778512337
     }
   ],
-  "retainedSections": [
-    {
-      "id": "everglades-marsh",
-      "bounds": [
-        -81.8,
-        25,
-        -80.6,
-        25.8
-      ],
-      "reason": "Retain the smoother historical marsh outline instead of dense modern pond cutouts."
-    },
-    {
-      "id": "laguna-madre",
-      "bounds": [
-        -97.65,
-        26,
-        -97.1,
-        27.3
-      ],
-      "reason": "Retain the coherent historical lagoon shore instead of rectilinear modern fragments."
-    }
-  ],
-  "filledTinyHoles": 4,
-  "addedShorePieces": 30351,
+  "retainedSections": [],
+  "filledTinyHoles": 0,
+  "addedShorePieces": 56260,
   "farthestMixedTimelineAssignmentMetres": 32608.561655340898,
-  "politicalAssignments": "Original face IDs and all date configurations are retained; internal lines stay in place, with only shore endpoints extended into newly filled fringe. New land is split at shoreline jurisdiction joins; its dated face is selected from the same present-day state to avoid borrowing the neighboring shore."
+  "politicalAssignments": "Original face IDs and all date configurations are retained; internal lines stay in place, with only shore endpoints extended into newly filled fringe. New land is split at shoreline jurisdiction joins; its dated face is selected from the same present-day state to avoid borrowing the neighboring shore.",
+  "maineBorderFill": "Retained St. Croix survey splits the solid display fill; adjacent dated owners and source IDs are preserved."
 }

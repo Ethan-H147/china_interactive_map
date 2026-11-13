@@ -6,5 +6,5 @@ export function mountChinaPronunciation(){
 }
 export function clearChinaPronunciation(){controller?.clear();}
 export function setChinaPronunciation(place){
- if(place.level==='province')controller?.set(place.adcode);else controller?.clear();
+ if(['province','city','taiwan-region'].includes(place.level))controller?.set(place.adcode);else controller?.clear();
 }

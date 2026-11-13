@@ -1,6 +1,6 @@
 # Place pronunciation rollout
 
-Coverage is 2435 recordings across 2267 present-day map cards. The original 253 cards remain: China 34 provincial-level entries; France 18 regions and 101 departments; Spain 19 community/city cards and 52 province/city cards; Korea 29 first-level entries in the retained dataset. Expansion adds Russia 83 first-level cards, Germany 16, Italy 20 regions and 110 province equivalents, United States 65 states/district/territory cards, Canada 13 provinces/territories with English and French for each, Mexico 32, Brazil 27, Portugal 20 districts/autonomous regions, Japan 47 prefectures, Vietnam 34 current provinces/cities, and Turkey 81 provinces (level 2 beneath the statistical regions in this map). A further 127 first-level recordings cover Poland 16, Hungary 20, Ukraine 27, Romania 42, Czechia 14 and Slovakia 8. Coverage follows existing map units without changing boundaries. Communes and historical units are excluded. Regional-language names and quiz aliases are preserved.
+Coverage is 3081 recordings across 2913 present-day map cards. The latest additions include 38 Indonesian provinces, 16 Malaysian states and federal territories, 365 Chinese prefecture-level entries and 22 Taiwan county/city entries. These Daniel recordings await listening review. Estonia adds 15 counties and 78 municipalities, Latvia adds 42 first-level units, and Lithuania adds 10 counties and 60 municipalities. These 205 Daniel recordings are synthetic and await listening review. The original 253 cards remain: China 34 provincial-level entries; France 18 regions and 101 departments; Spain 19 community/city cards and 52 province/city cards; Korea 29 first-level entries in the retained dataset. Expansion adds Russia 83 first-level cards, Germany 16, Italy 20 regions and 110 province equivalents, United States 65 states/district/territory cards, Canada 13 provinces/territories with English and French for each, Mexico 32, Brazil 27, Portugal 20 districts/autonomous regions, Japan 47 prefectures, Vietnam 34 current provinces/cities, and Turkey 81 provinces (level 2 beneath the statistical regions in this map). A further 127 first-level recordings cover Poland 16, Hungary 20, Ukraine 27, Romania 42, Czechia 14 and Slovakia 8. Coverage follows existing map units without changing boundaries. Communes and historical units are excluded. Regional-language names and quiz aliases are preserved.
 
 ## Current state
 
@@ -109,3 +109,19 @@ If a Swiss title already uses one of its native names, that language’s speaker
 The French additions are Saint-Pierre-et-Miquelon, Saint-Barthélemy, Saint-Martin, Wallis-et-Futuna, Polynésie française, Nouvelle-Calédonie, Terres australes et antarctiques françaises, and Île de Clipperton. This completes all 26 French first-level atlas cards, including overseas cards with other legal statuses; no classification or boundary change is implied. Each recording reads its exact French name.
 
 All 48 additions passed SHA-256 integrity, actual MP3 decoding, duration and volume checks, and short-pause repeat screening. All 2387 previously installed recordings are unchanged. Recordings retain the existing Daniel voice and eleven_v4 model. Generation and audio audit provenance are retained outside dist. Automated checks do not certify every phoneme or accent.
+
+## Prefecture onset repair
+
+387 Chinese prefecture-layer recordings were regenerated as part of a longer phrase and cut in the preceding silence to preserve initial sounds. The generated source phrases, earlier audio, and per-file cut metadata are retained locally in the China onset audit artifacts. Lishui and Zhejiang Taizhou use user-approved homophones for their tones; their displayed names are unchanged. Other individual replacement pronunciations still require listening review. The ordinary single-name generation script does not reproduce these cuts.
+
+## Chinese Mongolian names
+
+Sixteen Mongolian variants use Cyrillic inputs from retained Wikidata labels, with traditional Mongolian names displayed. The user selected the Hohhot Cyrillic sample; other individual recordings need listening review.
+
+## Balkan and Central Asian expansion
+
+First-level audio covers Croatia 21, Serbia 25, Slovenia 12 statistical regions, Kazakhstan 21, and Kyrgyzstan 9. Individual pronunciations require listening review.
+
+## Greece and Moldova
+
+Pronunciations cover 14 Greek first-level and 74 second-level cards, plus 37 Moldovan first-level cards. Greek synthesis restores stress marks missing in some source labels while retaining the displayed text. Each recording remains subject to listening review.

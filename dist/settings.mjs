@@ -1,9 +1,9 @@
 const storageKey='boundary-atlas-settings-v1';
-export const defaults=Object.freeze({placeNames:true,hoverInfo:true,countryNames:true,countryLanguage:'both',labelSize:'standard',placeHeadingSize:36,motion:'system',legacyStyling:false,projection:'mercator'});
+export const defaults=Object.freeze({placeNames:true,hoverInfo:true,hoverHighlight:true,countryNames:true,countryLanguage:'both',labelSize:'standard',placeHeadingSize:36,motion:'system',legacyStyling:false,projection:'mercator'});
 export function validateSettings(value){
  const result={...defaults};
  if(!value||typeof value!=='object')return result;
- for(const key of ['placeNames','countryNames','legacyStyling','hoverInfo'])if(typeof value[key]==='boolean')result[key]=value[key];
+ for(const key of ['placeNames','countryNames','legacyStyling','hoverInfo','hoverHighlight'])if(typeof value[key]==='boolean')result[key]=value[key];
  for(const [key,values]of Object.entries({countryLanguage:['en','local','both'],labelSize:['standard','large'],motion:['system','reduce'],projection:['mercator','globe']}))if(values.includes(value[key]))result[key]=value[key];
  if(typeof value.placeHeadingSize==='number'&&Number.isFinite(value.placeHeadingSize))result.placeHeadingSize=Math.max(24,Math.min(48,Math.round(value.placeHeadingSize)));
  return result;
@@ -43,6 +43,7 @@ export function mountSettings({refreshLabels,refreshStyling=()=>{},setProjection
  <fieldset><legend>Reading</legend>
  <div class="settings-slider"><label for="settings-heading-size">Place heading size<output id="settings-heading-size-value" for="settings-heading-size" aria-hidden="true">36 px</output></label><small id="settings-heading-size-description">English name in the side panel</small><input id="settings-heading-size" type="range" min="24" max="48" step="1" value="36" data-setting="placeHeadingSize" aria-describedby="settings-heading-size-description"></div></fieldset>
  <fieldset><legend>Map &amp; movement</legend>
+ <label class="settings-row" for="settings-hover-highlight"><span><strong>Highlight hovered region</strong><small>Subtle shading under the pointer</small></span><input id="settings-hover-highlight" type="checkbox" role="switch" data-setting="hoverHighlight"></label>
  <label class="settings-row" for="settings-hover-info"><span><strong>Place info on hover</strong><small>Show names and details beside the cursor</small></span><input id="settings-hover-info" type="checkbox" role="switch" data-setting="hoverInfo"></label>
  <label class="settings-row" for="settings-legacy-styling" data-developer-setting hidden><span><strong>Legacy styling</strong><small>Individual colors for Chinese provinces and earlier map colors</small></span><input id="settings-legacy-styling" type="checkbox" role="switch" data-setting="legacyStyling"></label>
  <label class="settings-field" for="settings-projection">Map view<select id="settings-projection" data-setting="projection"><option value="mercator">Flat map</option><option value="globe">Globe</option></select></label>

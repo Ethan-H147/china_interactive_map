@@ -23,6 +23,28 @@ function indexedRegions(regions){
 }
 self.onmessage=async({data})=>{
  try{
+  if(data.operation==='historical-geometry'){
+   const {loadAtlasData}=await import('./atlas-data.mjs');
+   const geometry=await loadAtlasData(data.url);
+   let points=0;const count=coordinates=>{if(!coordinates)return;if(typeof coordinates[0]==='number'){points+=coordinates.length===2?1:coordinates.length/2;}else for(const path of coordinates)count(path);};
+   for(const feature of geometry.features){count(feature.geometry?.coordinates);if(points>data.maxPoints)throw Error('Historical detail exceeded its point budget');}
+   const blob=new Blob([JSON.stringify(geometry)],{type:'application/json'});
+   if(blob.size>data.maxBytes)throw Error('Historical detail exceeded its memory budget');
+   const {packShapes}=await import('./historic-shapes.mjs');
+   const picking=packShapes(geometry.features),buffers=picking.flatMap(shape=>[shape.xy.buffer,shape.starts.buffer]);
+   self.postMessage({blob,points,picking},buffers);return;
+  }
+  if(data.operation==='context-detail'){
+   const {prepareModernContext}=await import('./modern-context-geometry.mjs');
+   self.postMessage(await prepareModernContext(data));return;
+  }
+  if(data.operation==='polar-mesh'){
+   const mesh=await loadCompressed(data.url),buffers=[];
+   // These coordinates go straight to WebGL as floats. Transfer that final
+   // representation and retain every original outline used for hit testing.
+   for(const part of [mesh.neutral,...mesh.claims]){part.positions=new Float32Array(part.positions);buffers.push(part.positions.buffer);}
+   self.postMessage(mesh,buffers);return;
+  }
   const prepare=part=>{
    // A few units (Antarctic claims) replace only their own selected outline,
    // leaving out an artificial cut such as the flat map's 85°S limit.

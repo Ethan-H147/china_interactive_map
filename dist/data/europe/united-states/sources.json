@@ -88,6 +88,14 @@
       "licenseUrl": "https://www.openstreetmap.org/copyright",
       "sha256": "7b3e9efb8c8c2ccefef3778794653c0b8222806d772eb9c6028b1ec31cd16be6",
       "bytes": 483439
+    },
+    {
+      "file": "physical-coast/southeast.json",
+      "url": "https://overpass-api.de/api/interpreter",
+      "provider": "OpenStreetMap contributors, shared southeastern US physical coastline",
+      "license": "ODbL 1.0 · © OpenStreetMap contributors",
+      "licenseUrl": "https://www.openstreetmap.org/copyright",
+      "sha256": "149f6adf59a81d997469f044d4d618e2a2605c6968ddc1aac3707a11113ff1f1"
     }
   ],
   "territoryScope": {
@@ -507,5 +515,28 @@
     "source": "data/us-mexico-frontier.json",
     "method": "One complete US county-derived exterior is the shared display edge. Mexican border municipalities follow it, and their parent states are dissolved from those same leaves. The US-owned stroke, both fallback silhouettes and country previews use that edge. All other international frontiers and inland subdivision edges are retained; coastal endpoint adjustments are limited to one kilometre.",
     "referenceOwner": "united-states"
+  },
+  "physicalCoast": {
+    "provider": "OpenStreetMap contributors",
+    "endpoint": "https://overpass-api.de/api/interpreter",
+    "query": "[out:json][timeout:180][maxsize:536870912];way[\"natural\"=\"coastline\"](23.5,-94.5,37.5,-74.5);out geom;",
+    "bounds": [
+      -94.5,
+      23.5,
+      -74.5,
+      37.5
+    ],
+    "timestamp": "2026-11-12T00:57:51Z",
+    "license": "ODbL 1.0",
+    "licenseUrl": "https://www.openstreetmap.org/copyright",
+    "definition": "https://wiki.openstreetmap.org/wiki/Tag:natural%3Dcoastline",
+    "sha256": "149f6adf59a81d997469f044d4d618e2a2605c6968ddc1aac3707a11113ff1f1",
+    "ways": 38770,
+    "vertices": 3235968,
+    "processing": "One current physical coastline clips every modern administrative level. Historical ownership is partitioned within the same land. Coastline simplification tolerance is approximately 33 m, matching the existing regional atlas detail budget."
+  },
+  "maineBorderFill": {
+    "source": "data/maine-border-background-sources.json",
+    "policy": "The St. Croix border lake cluster is solid in every map view. Existing subdivision IDs, election results, statistics and historical ownership dates are retained."
   }
 }

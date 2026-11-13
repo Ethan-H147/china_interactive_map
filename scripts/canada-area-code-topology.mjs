@@ -1,6 +1,7 @@
 import {command,fc,polygons} from './us-geography.mjs';
 import {lineData} from '../dist/adaptive-lines.mjs';
 import {linesOf,metres,lineIndex,landIndex} from './geo-index.mjs';
+import {geographicAreaKm2} from './geographic-area.mjs';
 import {joinReferencePaths} from './frontier-arcs.mjs';
 
 // Import adjacent footprints together so simplification retains one shared arc.
@@ -42,7 +43,15 @@ export async function coastalCodePartitions(features,provinceLand,boundaries){
  // segment. Cross that segment during polygonization so it actually cuts land.
  for(const path of dividers)for(const side of [0,1]){const at=side?path.length-1:0,p=path[at],q=path[side?at-1:1];if(coast(p)<3){const d=metres(p,q);if(d>0){const end=[p[0]+(p[0]-q[0])*100/d,p[1]+(p[1]-q[1])*100/d];if(side)path.push(end);else path.unshift(end);}}}
  const lines=fc([...rings.map(coordinates=>({type:'Feature',properties:{},geometry:{type:'LineString',coordinates}})),...dividers.map(coordinates=>({type:'Feature',properties:{},geometry:{type:'LineString',coordinates}}))]);
- const cells=await command(lines,'-snap interval=.00002 -polygons gap-tolerance=.00002'),points=await command(cells,'-points inner');
+ const cells=await command(lines,'-snap interval=.00002 -polygons gap-tolerance=.00002');
+ cells.features=cells.features.filter(f=>f.geometry&&geographicAreaKm2(f.geometry)>1e-10);
+ cells.features.forEach((f,i)=>f.properties={...f.properties,_partitionCell:i});
+ const points=await command(cells,'-points inner'),pointByCell=new Map(points.features.filter(f=>f.geometry).map(f=>[f.properties._partitionCell,f.geometry.coordinates]));
+ const fallbackPoint=geometry=>{
+  const rings=polygons(geometry).flat(),ys=[...new Set(rings.flat().map(p=>p[1]))].sort((a,b)=>a-b);let best,width=0;
+  for(let i=1;i<ys.length;i++){const y=(ys[i-1]+ys[i])/2,xs=[];for(const ring of rings)for(let j=1;j<ring.length;j++){const a=ring[j-1],b=ring[j];if((a[1]>y)!==(b[1]>y))xs.push(a[0]+(b[0]-a[0])*(y-a[1])/(b[1]-a[1]));}xs.sort((a,b)=>a-b);for(let j=1;j<xs.length;j+=2)if(xs[j]-xs[j-1]>width){width=xs[j]-xs[j-1];best=[(xs[j]+xs[j-1])/2,y];}}
+  return best;
+ };
  const seeds=features.map(f=>({id:f.properties.id,inside:landIndex(polygons(f.geometry).flat())}));
  // Islands missing from the old envelope inherit the nearest reference area.
  // A segment tree bounds that search without scanning every coastal vertex.
@@ -67,6 +76,6 @@ export async function coastalCodePartitions(features,provinceLand,boundaries){
   visit(root);return id;
  };
  const grouped=new Map(features.map(f=>[f.properties.id,[]]));
- for(let i=0;i<cells.features.length;i++){const p=points.features[i].geometry.coordinates;if(!inside(p))continue;const id=seeds.find(s=>s.inside(p))?.id||nearest(p);grouped.get(id).push(...polygons(cells.features[i].geometry));}
+ for(let i=0;i<cells.features.length;i++){const p=pointByCell.get(i)||fallbackPoint(cells.features[i].geometry);if(!p){if(geographicAreaKm2(cells.features[i].geometry)<1e-6)continue;throw Error('Interior point required for partition cell '+i);}if(!inside(p))continue;const id=seeds.find(s=>s.inside(p))?.id||nearest(p);grouped.get(id).push(...polygons(cells.features[i].geometry));}
  return new Map([...grouped].map(([id,coordinates])=>[id,fc([{type:'Feature',properties:{id},geometry:{type:'MultiPolygon',coordinates}}])]));
 }

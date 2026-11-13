@@ -6,6 +6,7 @@ const labels='[...document.querySelectorAll("[data-atlas-place^=election-],[data
 export default [
  {name:'The US historical snapshot opens from the header, shows each year\'s states, territories and the countries that held the rest, and returns to the present day',options:{width:1360,height:900},async run(p,base){
   await p.open(base,'#united-states');await p.settle();
+  await p.evaluate('AtlasComfort.set({appearance:"light"})');await p.settle();
   assert.deepEqual(await p.evaluate(`[${button}.hidden,${button}.textContent]`),[false,'Historical snapshot']);
   const fill=await p.evaluate('JSON.stringify(map.getPaintProperty("united-states-first-fill","fill-color"))');
   await p.evaluate(`void ${button}.click()`);

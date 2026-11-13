@@ -1,0 +1,13 @@
+# Brazil and Mexico historical snapshots
+
+The header’s Historical snapshot button uses the existing historical renderer, picker, selection cards, labels and keyboard timeline. Present-day country files, statistics and quiz records are unchanged. Each date loads one compact frame; the renderer retains at most two decoded frames and releases them when leaving history.
+
+Brazil has twelve frames: 1808 Portuguese court, 1821 United Kingdom, 1822 First Reign, 1835 Regency, 1872 Second Reign, 1900 First Republic, 1933 provisional government, 1934 constitutional government, 1940 Estado Novo, 1960 Fourth Republic, 1980 military government and 1991 New Republic. The seven IBGE source years also have their dated municipal border networks, displayed from zoom 6 without introducing a second selection hierarchy. The earlier archives contain 641, 1,120, 1,365, 1,574, 2,766 and 3,991 municipal records respectively. The 1991 archive contains 4,601 polygon records, including repeated pieces of the same municipality; pieces with the same official code are dissolved before extracting the boundary network. Early frames are explicitly reconstructed; 1934 borrows only 1933 state geometry.
+
+Mexico has thirteen frames: 1820 New Spain, 1822 First Empire, 1824 First Federal Republic, 1843 centralist republic, 1847 Second Federal Republic, mid-1853 Santa Anna dictatorship, 1857 Reform Republic, 1865 Second Empire, 1870 Restored Republic, January 1910 Porfiriato, 1917 constitutional republic, 1946 PRI era and 2000 democratic transition. The former northern extent reuses Newberry’s dated geometry already retained for the US. Generalized northern provincial boundaries come from the 1821 illustration. The First Empire includes Central America. The Second Empire has all 50 decreed departments, marked as an administrative plan rather than effective control.
+
+In the 1865 frame, land between the rough sketch and the detailed coast or international frontier follows the adjoining historical department. Gaps alongside several departments are split along their shared frontage. This preserves the land outline and avoids carrying a department along its neighbors’ shores.
+
+The source manifests distinguish exact source dates, illustrative georeferencing and modern-state aggregation. These are selected dated administrative maps; they do not map Indigenous nations or imply exhaustive historical sovereignty claims.
+
+Build with npm run build:american-history. Test with npm run test:american-history. Inputs are under scripts/boundary-sources/american-history; links and caveats are also in each country’s history/sources.json and accessible from Sources & coverage. No credentials or network access are required to rebuild.

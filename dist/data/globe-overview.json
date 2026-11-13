@@ -1,8 +1,8 @@
 {
   "version": 1,
   "source": "Existing reconciled atlas land, claims and international frontiers; no external basemap.",
-  "landBytes": 4772315,
-  "borderBytes": 694694,
+  "landBytes": 4872765,
+  "borderBytes": 690257,
   "countries": [
     "afghanistan",
     "albania",
@@ -203,5 +203,6 @@
   "simplificationDegrees": 0.006,
   "sourceZoom": 0,
   "reparseOverscaled": false,
-  "canadaLakes": "data/canada-lakes-sources.json"
+  "canadaLakes": "data/canada-lakes-sources.json",
+  "maineBorderFill": "data/maine-border-background-sources.json"
 }

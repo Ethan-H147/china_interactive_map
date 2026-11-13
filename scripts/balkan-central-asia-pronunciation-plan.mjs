@@ -1,0 +1,5 @@
+import {gunzipSync} from 'node:zlib';
+export async function addBalkanCentralAsiaPronunciations(read,add){
+ const configs=[['croatia','hr','Hrvatska imena županija, jasno i prirodno izgovorena na hrvatskom. Izgovori samo navedeni naziv jednom.'],['serbia','sr','Називи управних округа Србије, јасно и природно изговорени на српском језику. Изговори само наведени назив једном.'],['slovenia','sl','Slovenska krajevna in regionalna imena, jasno in naravno izgovorjena v slovenščini. Izgovori samo navedeno ime enkrat.'],['kazakhstan','kk','Қазақстан өңірлерінің атауларын қазақ тілінде анық және табиғи түрде бір рет оқыңыз.'],['kyrgyzstan','ky','Кыргызстандын аймактарынын аттарын кыргыз тилинде так жана табигый түрдө бир жолу айтыңыз.']];
+ for(const [country,language,context] of configs){const {records}=JSON.parse(gunzipSync(await read(`data/europe/${country}/catalogue.bin`)));for(const r of records.filter(x=>x.level===1)){if(!r.local||r.local.includes('/'))throw Error('Check local name '+r.id);add(country,r.id,1,r.en,r.local,language,{locale:language,context});}}
+}

@@ -9,13 +9,14 @@ import {mesh} from 'topojson-client';
 import {readData} from './read-data.mjs';
 import {polygons} from './international-topology.mjs';
 import {eastChangedCodes,contains} from './east-coast.mjs';
+import {chongmingArtifactAt} from './chongming-shore-artifacts.mjs';
 import {area,run,collection} from './pearl-coast.mjs';
 import {segmentDistanceIndex} from './shenzhen-hongkong.mjs';
 const baseline='3fca3014603c67d0921d63811345e87c1a823cb6',show=name=>{const r=spawnSync('git',['-c','safe.directory='+process.cwd().replaceAll('\\','/'),'show',baseline+':dist/data/'+name],{maxBuffer:60e6});assert.equal(r.status,0);return r.stdout;};
 const m=JSON.parse(show('display-boundaries.parts.json')),before=JSON.parse(gunzipSync(Buffer.concat(m.parts.map(show)))),after=readData('display-boundaries.json');
-const changed=new Set([...eastChangedCodes,440400]);let untouched=0;
+const changed=new Set([...eastChangedCodes,440400,320600]);let untouched=0;
 for(const f of before.subdivisions.features){const next=after.subdivisions.features.find(g=>g.properties.adcode===f.properties.adcode);assert.deepEqual(next.properties,f.properties);if(f.properties.provinceCode!==710000&&!changed.has(f.properties.adcode)){assert.deepEqual(next,f,'Unrelated region changed '+f.properties.adcode);untouched++;}}
-for(const f of before.provinces.features)if(![310000,330000,440000,710000].includes(f.properties.adcode))assert.deepEqual(after.provinces.features.find(g=>g.properties.adcode===f.properties.adcode),f,'Unrelated province changed');
+for(const f of before.provinces.features)if(![310000,320000,330000,440000,710000].includes(f.properties.adcode))assert.deepEqual(after.provinces.features.find(g=>g.properties.adcode===f.properties.adcode),f,'Unrelated province changed');
 for(const name of ['city-districts.bin','korea-boundaries.bin','korea-outline.bin','sar-810000.json','sar-820000.json'])assert.deepEqual(fs.readFileSync('dist/data/'+name),show(name),'Protected geometry changed '+name);
 const source=readData('east-coast-source.json'),raw=gunzipSync(fs.readFileSync('dist/data/east-coast-source.bin')),osm=JSON.parse(raw),land=JSON.parse(gunzipSync(fs.readFileSync('dist/data/east-coast-land.bin'))),report=readData('east-coast-report.json');
 assert.equal(source.sha256,createHash('sha256').update(raw).digest('hex'));
@@ -36,13 +37,13 @@ for(const code of eastChangedCodes){
  const shared=mesh(oldTop,oldTop.objects.regions,(a,b)=>a!==b&&(a.properties.adcode===code||b.properties.adcode===code)),distance=segmentDistanceIndex(polygons(city.geometry).flat());
  for(const line of shared.coordinates)for(let i=1;i<line.length;i++){
   const a=line[i-1],b=line[i],p=[(a[0]+b[0])/2,(a[1]+b[1])/2];
-  if(land.features.some(f=>contains(f,p))){assert(distance(p)<.02,'Shared inland edge moved '+code+' '+p);sharedSamples++;}
+  if(!chongmingArtifactAt(p)&&land.features.some(f=>contains(f,p))){assert(distance(p)<.02,'Unreviewed shared inland edge moved '+code+' '+p);sharedSamples++;}
  }
  counts.push({code,parts:polygons(city.geometry).length,vertices:vertices.length,originalCoastVertices:retained});
 }
 // Main Chongming and its Jiangsu split stay exact; Changxing and Hengsha improve.
 const main=f=>polygons(f.geometry).filter(p=>p[0].some(c=>c[1]>31.6));
-const edgeHash=ps=>createHash('sha256').update(ps.flatMap(p=>p.flatMap(r=>r.slice(1).map((b,i)=>[JSON.stringify(r[i]),JSON.stringify(b)].sort().join('|')))).sort().join('\n')).digest('hex');
+const edgeHash=ps=>createHash('sha256').update(ps.flatMap(p=>p.flatMap(r=>r.slice(1).flatMap((b,i)=>chongmingArtifactAt(r[i])||chongmingArtifactAt(b)?[]:[[JSON.stringify(r[i]),JSON.stringify(b)].sort().join('|')]))).sort().join('\n')).digest('hex');
 assert.equal(edgeHash(main(after.subdivisions.features.find(f=>f.properties.adcode===310151))),edgeHash(main(before.subdivisions.features.find(f=>f.properties.adcode===310151))),'Every main Chongming edge remains exact');
 const owner=p=>after.subdivisions.features.filter(f=>contains(f,p)).map(f=>f.properties.adcode);
 const checkpoints=JSON.parse(fs.readFileSync('scripts/additional-sources/east-coast/island-catalogue.json')).entries.filter(e=>['舟山岛','朱家尖岛','岱山岛'].includes(e.name));
