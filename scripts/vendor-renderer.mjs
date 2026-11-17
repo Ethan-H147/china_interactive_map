@@ -12,11 +12,11 @@ fs.copyFileSync(new URL('LICENSE.txt',library),new URL('maplibre-LICENSE.txt',ou
 // data back, and that copy of China's full geometry blocked the main thread.
 const worker=new URL('maplibre-gl-worker.mjs',output),code=fs.readFileSync(worker,'utf8'),returnData='e.request&&(n.data=e.data),';
 assert.equal(code.split(returnData).length,2,'MapLibre worker changed; review the GeoJSON data-return patch');
-// These UK history sources use setData or feature state, and never apply
+// Historical inputs, including reused regional sources, use setData or feature state, and never apply
 // GeoJSON diffs. Retain only the tile index, without its updateable copy.
 const historyIndexOptions='let n=T(t.geojsonVtOptions||{},{updateable:!0,clusterOptions:Z(t)});';
-assert.equal(code.split(historyIndexOptions).length,2,'MapLibre worker changed; review UK history tile indexing');
-const historyIndex=historyIndexOptions+String.raw`if(/^united-kingdom-history(?:-|$)/.test(t.source)){n.updateable=!1;n.indexMaxZoom=Math.min(n.indexMaxZoom??3,3)}`;
+assert.equal(code.split(historyIndexOptions).length,2,'MapLibre worker changed; review historical input indexing');
+const historyIndex=historyIndexOptions+String.raw`if(/^united-kingdom-history(?:-|$)/.test(t.source)||t.atlasHistorical){n.updateable=!1;n.indexMaxZoom=Math.min(n.indexMaxZoom??3,3)}`;
 fs.writeFileSync(worker,code.replace(returnData,'').replace(historyIndexOptions,historyIndex));
 
 // Keep source coverage reuse scoped to a single native source-update pass. The

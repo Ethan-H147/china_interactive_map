@@ -9,7 +9,7 @@ async function year(p,value){
 }
 async function jump(p,center,zoom,minZoom){
  await p.evaluate('void map.jumpTo('+JSON.stringify({center,zoom})+')');
- if(zoom>=minZoom)await p.waitFor('map.getLayer("'+prefix+'-coast-detail")&&map.getPaintProperty("'+prefix+'-coast-detail","fill-opacity")===1',{timeout:90000});
+ if(zoom>=minZoom)await p.waitFor('map.isSourceLoaded("united-kingdom-first")',{timeout:90000});
  await ready(p);
 }
 async function select(p,point,name){
@@ -32,18 +32,18 @@ export default [{
   await p.send('Page.addScriptToEvaluateOnNewDocument',{source:"localStorage.setItem('boundary-atlas-globe-v1','true');"});
   await p.open(base,'#united-kingdom');
   await p.evaluate('AtlasComfort.set({appearance:"light"});void document.querySelector("#historical-snapshot").click()');
-  await p.waitFor('!!map.getLayer("'+prefix+'-fill")');
+  await p.waitFor('map.getSource("united-kingdom-first")?.type==="vector"');
   await year(p,1779);await jump(p,[-85,30],5.8,7);await select(p,[-82,28],'East and West Florida');
   await jump(p,[-85,30],5.3,7);
   const first=await p.screenshot('historical-fill-solid-florida-overview');
   await solid(first,{left:660,top:490,width:100,height:30});
-  const query=point=>p.evaluate('(()=>{const q=map.project('+JSON.stringify(point)+');return map.queryRenderedFeatures([[q.x-1,q.y-1],[q.x+1,q.y+1]],{layers:["'+prefix+'-selected"]}).length})()');
+  const query=point=>p.evaluate('(()=>{const q=map.project('+JSON.stringify(point)+');return map.queryRenderedFeatures([[q.x-1,q.y-1],[q.x+1,q.y+1]],{layers:["united-kingdom-first-selected"]}).filter(f=>f.layer.paint["line-opacity"]>0).length})()');
   assert.equal(await query([-88,32.382]),0,'The old survey join is not a selected border');
   assert(await query([-88,32+28/60]),'The true northern selected boundary remains');
   for(const zoom of [4.8,5.1,5.49,5.51,6.99,7.01,7.2,5.3]){
    await jump(p,[-85,30],zoom,7);
-   assert.equal(await p.evaluate('map.getSource("'+prefix+'-faces").serialize().tolerance'),0,'Overview faces retain exact paths');
-   if(zoom>=7)assert.equal(await p.evaluate('map.getSource("'+prefix+'-coast-detail").serialize().tolerance'),0,'Detailed faces retain exact paths');
+   assert.equal(await p.evaluate('map.getSource("united-kingdom-first").type'),'vector','Overview uses immutable native geometry');
+   if(zoom>=7)assert.equal(await p.evaluate('map.getSource("united-kingdom-first").type'),'vector','Close zooms retain the same source');
   }
   const repeat=await p.screenshot('historical-fill-solid-florida-return');
   assert.equal(await solid(repeat,{left:660,top:490,width:100,height:30}),await solid(first,{left:660,top:490,width:100,height:30}),'Selection keeps its color through the detail handoff');
@@ -57,13 +57,13 @@ export default [{
    await year(p,entry.year);await jump(p,entry.center,entry.zooms[0],entry.minZoom);await select(p,entry.point,entry.name);
    for(const zoom of entry.zooms){
     await jump(p,entry.center,zoom,entry.minZoom);
-    for(const layer of await p.evaluate('map.getStyle().layers.filter(l=>l.type==="fill"&&l.id.startsWith("'+prefix+'")).map(l=>({source:l.source}))'))
-     assert.equal(await p.evaluate('map.getSource('+JSON.stringify(layer.source)+').serialize().tolerance'),0,entry.name+' uses exact fill geometry');
+    for(const layer of await p.evaluate('map.getStyle().layers.filter(l=>l.type==="fill"&&l.id.startsWith("united-kingdom-first")).map(l=>({source:l.source}))'))
+     assert.equal(await p.evaluate('map.getSource('+JSON.stringify(layer.source)+').serialize().type'),'vector',entry.name+' uses native fill geometry');
     assert(await p.evaluate('mapScene.assertOrder()'));
     await p.screenshot('historical-fill-selected-'+entry.year+'-'+zoom);
    }
   }
-  assert.equal(await p.evaluate('Object.keys(map.getStyle().sources).filter(id=>id==="'+prefix+'-coast-detail").length'),1,'Only the current regional coast source remains resident');
+  assert.equal(await p.evaluate('Object.keys(map.getStyle().sources).filter(id=>id==="united-kingdom-first").length'),1,'Only the current regional coast source remains resident');
  }
 },{
  name:'Selected historical fills stay solid through flat globe and dark appearance changes',
@@ -71,7 +71,7 @@ export default [{
  async run(p,base){
   await p.open(base,'#united-kingdom');
   await p.evaluate('AtlasComfort.set({appearance:"light"});void document.getElementById("historical-snapshot").click()');
-  await p.waitFor('!!map.getLayer("'+prefix+'-fill")');
+  await p.waitFor('map.getSource("united-kingdom-first")?.type==="vector"');
   await year(p,1779);await jump(p,[-85,30],5.3,7);await select(p,[-82,28],'East and West Florida');
   const colors={};
   for(const [projection,appearance] of [['mercator','light'],['mercator','dark'],['globe','dark'],['globe','light']]){
@@ -85,12 +85,12 @@ export default [{
   assert.notEqual(colors.light,colors.dark,'The selected fill follows the appearance');
  }
 },{
- name:'Historical detailed coasts refresh their buffered window when panning within one region',
+ name:'Historical detailed coasts retain geometry when panning within one region',
  options:{width:1600,height:1060},
  async run(p,base){
   await p.send('Page.addScriptToEvaluateOnNewDocument',{source:"localStorage.setItem('boundary-atlas-globe-v1','true');"});
   await p.open(base,'#united-kingdom');await p.evaluate('void document.getElementById("historical-snapshot").click()');
-  await p.waitFor('!!map.getLayer("'+prefix+'-fill")');await year(p,1775);
+  await p.waitFor('map.getSource("united-kingdom-first")?.type==="vector"');await year(p,1775);
   let previous;
   for(const entry of [
    {center:[-73.5,41],land:[-73.9,40.8],water:[-73.1,41.1],name:'Thirteen Colonies'},
@@ -98,9 +98,8 @@ export default [{
    {center:[-73.5,41],land:[-73.9,40.8],water:[-73.1,41.1],name:'Thirteen Colonies'}
   ]){
    await jump(p,entry.center,9,7);
-   const url=await p.evaluate('map.getSource("'+prefix+'-coast-detail").serialize().data');
-   const scope=new URLSearchParams(url.slice(url.indexOf('?')+1)).get('scope');assert(scope,'The coastline tile input is limited to a buffered view');
-   if(previous)assert.notEqual(scope,previous,'A distant pan inside North America rebuilds the local window');previous=scope;
+   const url=await p.evaluate('JSON.stringify(map.getSource("united-kingdom-first").serialize().tiles)');
+   if(previous)assert.equal(url,previous,'A distant pan retains the immutable tile source');previous=url;
    const hover=point=>p.evaluate('currentAtlas().hoverAt(map.project('+JSON.stringify(point)+'))?.en??null');
    assert.equal(await hover(entry.land),entry.name,'The new window retains dated land ownership');
    assert.equal(await hover(entry.water),null,'The new window retains real water');

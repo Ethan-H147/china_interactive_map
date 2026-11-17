@@ -17,6 +17,11 @@ function coastAt(map, entries) {
     lat >= s && lat <= n && wraps(lng, w, e)));
 }
 
+// Native historical tiles use the same coverage guard as retained coast displays.
+export function setHistoricalCoastCoverage(map,entries){
+ if(entries)historicalCoasts.set(mapKey(map),entries);else historicalCoasts.delete(mapKey(map));
+ map.fire?.('atlascontextchange');
+}
 // The dated coast source already covers this area. Avoid decoding and tiling a
 // second copy of the modern coastline while this historical view is open.
 export function hasHistoricalCoast(map) {

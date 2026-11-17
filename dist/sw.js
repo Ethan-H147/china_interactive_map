@@ -3,16 +3,22 @@
 // stored per version, and a new version empties the store. Version 2 also avoids
 // repopulating a fresh store from an older response in the browser HTTP cache. Without a version (local preview,
 // other hosts) nothing is stored and every request goes to the network as usual.
+// Loopback previews always bypass the offline cache, even with a published version file.
 // Pages always come from the network, so a page and the files it asks for share one version.
 // The worker never takes over a page already open: it serves from the next visit on, and the
 // first visit hands it the files it loaded, which it copies in the background.
 const family='atlas-',prefix='atlas-v2-';
+const hostname=new URL(self.registration.scope).hostname;
+const localPreview=hostname==='localhost'||hostname.endsWith('.localhost')||/^127\./.test(hostname)||hostname==='[::1]';
 let checking=null;
 
 self.addEventListener('install',()=>self.skipWaiting());
 
 // version.json bypasses the browser and CDN caches so a deploy is seen at once.
 async function checkVersion({refresh=false}={}){
+ // A checkout may retain the last published version.json. Local edits do not
+ // change that commit, so it must never be used as a preview cache version.
+ if(localPreview){for(const name of await caches.keys())if(name.startsWith(family))await caches.delete(name);return null;}
  let version;
  try{
   const response=await fetch(new URL('version.json?'+Date.now(),self.registration.scope),{cache:'no-store'});if(!response.ok)throw Error('Version unavailable');
@@ -27,7 +33,7 @@ function navigate(request){checking=checkVersion();return fetch(request,{cache:'
 
 async function cached(request){
  let store=null;try{store=await (checking??=checkVersion());}catch{}
- if(!store)return fetch(request);
+ if(!store)return fetch(request,localPreview?{cache:'no-store'}:undefined);
  // A failing store never fails the request: it goes to the network instead.
  let cache;try{cache=await caches.open(store);const hit=await cache.match(request);if(hit)return hit;}catch{cache=null;}
  // Bypass the HTTP cache too: an older response must never enter a new version's store.

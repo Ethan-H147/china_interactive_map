@@ -67,8 +67,8 @@ export function createMapScene(map,{version=globalThis.maplibregl?.getVersion?.(
   const id=place?.boundaryId??place?.id??place?.adcode;
   if(!hoverEnabled||id===undefined||id===null||place?.settlement||place?.point||place?.level===0){if(hoveredTargets.length)clearHover();return;}
   if(hoveredId===id)return;clearHover();const seen=new Set();
-  for(const [layerId,entry]of entries)if(entry.hoverFill&&!seen.has(entry.source)&&sourceIds.get(entry.source)&&map.getSource(entry.source)&&map.getLayoutProperty(layerId,'visibility')!=='none'){
-   seen.add(entry.source);for(const featureId of place.hoverIds||[id]){const target={source:entry.source,id:featureId};map.setFeatureState(target,{hover:true});hoveredTargets.push(target);}
+  for(const [layerId,entry]of entries)if(entry.hoverFill&&!seen.has(entry.source+'|'+(entry.sourceLayer||''))&&sourceIds.get(entry.source)&&map.getSource(entry.source)&&map.getLayoutProperty(layerId,'visibility')!=='none'){
+   seen.add(entry.source+'|'+(entry.sourceLayer||''));for(const featureId of place.hoverIds||[id]){const target={source:entry.source,...(entry.sourceLayer?{sourceLayer:entry.sourceLayer}:{}),id:featureId};map.setFeatureState(target,{hover:true});hoveredTargets.push(target);}
   }
   hoveredId=hoveredTargets.length?id:undefined;
  }
@@ -101,7 +101,7 @@ export function createMapScene(map,{version=globalThis.maplibregl?.getVersion?.(
   if(options.type==='geojson'&&/-(?:outlines|selection|selection-edges)$/.test(id))options={...options,promoteId:options.promoteId||'id',tolerance:.35};
   if(id.endsWith('-selection-edges')&&typeof options.data==='string'&&!options.data.startsWith('atlas-data://'))options={...options,data:'atlas-data://'+id+'?url='+encodeURIComponent(options.data)+'&transform=selection-outline'};
   sourceIds.set(id,options.promoteId);return native.addSource(id,options);
- };const getView=()=>{const bounds=map.getBounds?.()?.toArray?.();return bounds?paddedView(bounds.flat()):[-180,-90,180,90];};let culling=true,horizonCulling=true,selectionCulling=true,view=getView();let overview=false,borderPreparation=false;let satellite={visible:false,opacity:1},snapshot=null,snapshotContexts=[],snapshotKeepsWater=false;
+ };const getView=()=>{const bounds=map.getBounds?.()?.toArray?.();return bounds?paddedView(bounds.flat()):[-180,-90,180,90];};let culling=true,horizonCulling=true,selectionCulling=true,view=getView();let overview=false,borderPreparation=false;let satellite={visible:false,opacity:1},snapshot=null,snapshotContexts=[],snapshotKeepsWater=false,snapshotPreservesContextFeatures=false;
  if(map.removeSource){const remove=map.removeSource.bind(map);map.removeSource=id=>{if(hoveredTargets.some(t=>t.source===id))clearHover();const result=remove(id);sourceIds.delete(id);return result;};}
  // The pinned renderer exposes altitude on its transform. Missing or invalid
  // altitude falls back to the conservative back hemisphere, never tighter culling.
@@ -121,7 +121,7 @@ export function createMapScene(map,{version=globalThis.maplibregl?.getVersion?.(
   const basePaint=clone(layer.paint||{});if(layer.type==='fill'){if(atlas.selection)basePaint['fill-opacity']=1;else if(!atlas.preserveSelectionOpacity&&basePaint['fill-opacity'])basePaint['fill-opacity']=selectedOpacity(basePaint['fill-opacity']);}
   if(layer.type==='line'&&role==='selection'){basePaint['line-width']=regionalLineWidth(1,true);basePaint['line-opacity']=outlineOpacity(layer.source,basePaint['line-opacity']??1);}
   const file=sourceFile(map,layer.source),context=['context','land','water','waterLine'].includes(role)||layer.metadata?.atlasInternationalBorder;
-  return {hoverFill:layer.type==='fill'&&role==='fill'&&!atlas.selection&&!atlas.stableSelectionFill&&(!!atlas.hoverFill||JSON.stringify(basePaint).includes('"feature-state","hover"')),stableSelectionFill:!!atlas.stableSelectionFill,selectionDraw:!!atlas.selectionDraw,preserveSelectionOpacity:!!atlas.preserveSelectionOpacity,selection:!!atlas.selection,detailedBorder:!atlas.overview&&!!layer.metadata?.atlasInternationalBorder,replaceInOverview:!atlas.overview&&(['land','context'].includes(role)||!!layer.metadata?.atlasInternationalBorder),source:layer.source,visibleStates:atlas.visibleStates||(role==='selection'&&JSON.stringify(basePaint).includes('"feature-state"')?selectionStates:null),file:context?file:null,culled:!!(culling&&context&&offscreen(file)),type:layer.type,role,backgroundFill:!!atlas.backgroundFill,contextCountry:atlas.contextCountry,paint:basePaint,satellite:atlas.satellite??{},rendered:{},visibility:layer.layout?.visibility||'visible'};
+  return {hoverFill:layer.type==='fill'&&role==='fill'&&!atlas.selection&&!atlas.stableSelectionFill&&(!!atlas.hoverFill||JSON.stringify(basePaint).includes('"feature-state","hover"')),stableSelectionFill:!!atlas.stableSelectionFill,sourceLayer:layer['source-layer'],selectionDraw:!!atlas.selectionDraw,preserveSelectionOpacity:!!atlas.preserveSelectionOpacity,selection:!!atlas.selection,detailedBorder:!atlas.overview&&!!layer.metadata?.atlasInternationalBorder,replaceInOverview:!atlas.overview&&(['land','context'].includes(role)||!!layer.metadata?.atlasInternationalBorder),source:layer.source,visibleStates:atlas.visibleStates||(role==='selection'&&JSON.stringify(basePaint).includes('"feature-state"')?selectionStates:null),file:context?file:null,culled:!!(culling&&context&&offscreen(file)),type:layer.type,role,backgroundFill:!!atlas.backgroundFill,contextCountry:atlas.contextCountry,paint:basePaint,satellite:atlas.satellite??{},rendered:{},visibility:layer.layout?.visibility||'visible'};
  };
  const rank=layer=>layerBands[entries.get(layer.id)?.role||layer.metadata?.atlas?.role||defaults[layer.type]];
  function anchor(id,role,before){
@@ -157,7 +157,7 @@ export function createMapScene(map,{version=globalThis.maplibregl?.getVersion?.(
  }
  const refreshBorderOwnership=()=>{for(const [id,entry]of entries)if(entry.detailedBorder)native.setLayoutProperty(id,'visibility',visibility(id,entry));};
  const visibility=(id,entry)=>{
-  const hideForSnapshot=snapshot&&!id.startsWith(snapshot+'-')&&(snapshotContexts.includes(entry.contextCountry)||(!(snapshotKeepsWater&&['water','waterLine'].includes(entry.role))&&(['line','circle','symbol'].includes(entry.type)||['water','selection'].includes(entry.role))));
+  const hideForSnapshot=snapshot&&!id.startsWith(snapshot+'-')&&(snapshotContexts.includes(entry.contextCountry)||(!(snapshotKeepsWater&&['water','waterLine'].includes(entry.role))&&(!snapshotPreservesContextFeatures&&['line','circle','symbol'].includes(entry.type)||['water','selection'].includes(entry.role))));
   return coveredBorder(id,entry)||entry.culled||emptySelection(entry)||overview&&entry.replaceInOverview&&!(snapshot&&id.startsWith(snapshot+'-'))&&!(borderPreparation&&entry.detailedBorder)?'none':hideForSnapshot?'none':entry.visibility;
  };
  function render(id,entry){
@@ -226,7 +226,8 @@ export function createMapScene(map,{version=globalThis.maplibregl?.getVersion?.(
   setSelectionDrawCulling(value){selectionDrawCulling=!!value;map.triggerRepaint();},
   setSelectionCulling(value){selectionCulling=!!value;for(const [id,entry]of entries)if(entry.visibleStates)native.setLayoutProperty(id,'visibility',visibility(id,entry));},
   cullingStats(){let culledLayers=0,contextLayers=0,emptySelectionLayers=0;for(const entry of entries.values()){if(entry.culled)culledLayers++;if(entry.file)contextLayers++;if(emptySelection(entry))emptySelectionLayers++;}return {enabled:culling,horizonCulling,selectionCulling,culledLayers,contextLayers,emptySelectionLayers};},
-  setSnapshot(id,{replaceContexts=[],keepWater=false}={}){if(snapshot===id&&same(snapshotContexts,replaceContexts)&&snapshotKeepsWater===keepWater)return;snapshot=id;snapshotContexts=[...replaceContexts];snapshotKeepsWater=keepWater;for(const [key,entry]of entries)native.setLayoutProperty(key,'visibility',visibility(key,entry));map.fire?.('atlascontextchange');},
+  get snapshot(){return {id:snapshot,replaceContexts:[...snapshotContexts],keepWater:snapshotKeepsWater};},
+  setSnapshot(id,{replaceContexts=[],keepWater=false,preserveContextFeatures=false}={}){if(snapshot===id&&same(snapshotContexts,replaceContexts)&&snapshotKeepsWater===keepWater&&snapshotPreservesContextFeatures===preserveContextFeatures)return;snapshot=id;snapshotContexts=[...replaceContexts];snapshotKeepsWater=keepWater;snapshotPreservesContextFeatures=preserveContextFeatures;for(const [key,entry]of entries)native.setLayoutProperty(key,'visibility',visibility(key,entry));map.fire?.('atlascontextchange');},
   setSatellite(visible,opacity=1){
    const next={visible:!!visible,opacity:Math.max(0,Math.min(1,opacity))};
    if(same(next,satellite))return;satellite=next;

@@ -1,9 +1,10 @@
+import {beginPixels,endPixels} from './russia-render-helpers.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {decodeData} from '../../dist/geo-pack.mjs';
 import {landIndex, lineIndex, polygons} from '../geo-index.mjs';
 
-const source = 'united-kingdom-history-coast-detail';
+const source = 'united-kingdom-first-fill';
 const dock = '#united-kingdom-history-dock';
 const modern = await decodeData(fs.readFileSync('dist/data/europe/united-states/first.bin'));
 const names = new Set(['US-NY', 'US-CT', 'US-RI', 'US-MA', 'US-NJ']);
@@ -23,12 +24,12 @@ export default [{
   options: {width: 1440, height: 960},
   async run(p, base) {
     await p.open(base, '#united-kingdom');
-    await p.evaluate('void document.querySelector("#historical-snapshot").click()');
-    await p.waitFor('!!map.getLayer("united-kingdom-history-fill")');
+    await p.evaluate('AtlasComfort.set({appearance:"light"});void document.querySelector("#historical-snapshot").click()');
+    await p.waitFor('map.getSource("united-kingdom-first")?.type==="vector"');
     await p.settle();
     for (const zoom of [6.4, 7.3]) {
       await p.evaluate('void map.jumpTo(' + JSON.stringify({center: [-71.8, 41.3], zoom}) + ')');
-      if(zoom>=7)await p.waitFor('map.getLayer("' + source + '")&&map.getPaintProperty("' + source + '","fill-opacity")===1', {timeout: 90000});
+      if(zoom>=7)await p.waitFor('map.isSourceLoaded("united-kingdom-first")', {timeout: 90000});
       await p.settle();
       const actual = await p.evaluate('(' + (samples => samples.map(point =>
         currentAtlas().hoverAt(map.project(point))?.en === 'British American colonies')).toString() + ')(' + JSON.stringify(points) + ')');
@@ -37,6 +38,8 @@ export default [{
       assert.deepEqual(missing, [], 'Modern dry land retains its dated owner at zoom ' + zoom);
       assert.deepEqual(overhang, [], 'Historical color follows the modern water edge at zoom ' + zoom);
       assert(!await p.evaluate('!!map.getSource("modern-context-detail")'), 'The historical view holds one coastline source');
+      const probes=points.filter(point=>nearCoast(point)>2000).map(([lng,lat])=>({lng,lat,color:land([lng,lat])?[210,156,147]:[237,241,247]}));
+      await beginPixels(p,probes);await p.evaluate('map.triggerRepaint()');await p.settle();const pixels=await endPixels(p);assert(pixels.points>100);assert.equal(pixels.bad,0,JSON.stringify(pixels));
       assert(await p.evaluate('mapScene.assertOrder()'));
       await p.screenshot('uk-history-new-england-aligned-' + zoom);
     }

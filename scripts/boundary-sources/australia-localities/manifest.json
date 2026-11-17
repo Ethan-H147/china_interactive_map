@@ -1,0 +1,423 @@
+{
+  "retrieved": "2026-11-16",
+  "release": {
+    "cache_last_updated": null,
+    "cache_url": null,
+    "created": "2026-11-16T02:29:29.054469",
+    "datastore_active": false,
+    "datastore_contains_all_records_of_source_file": false,
+    "description": "GDA2020",
+    "format": "ZIP",
+    "hash": "",
+    "id": "9af58fc0-da5f-4431-8f02-f3a4156fb277",
+    "last_modified": "2026-11-16T02:29:28.864304",
+    "metadata_modified": "2026-11-16T02:32:49.604063",
+    "mimetype": "application/zip",
+    "mimetype_inner": null,
+    "name": "NOV26 - Geoscape Admin Boundaries - ESRI Shapefile - GDA2020",
+    "package_id": "bdcf5b09-89bc-47ec-9281-6b8e9ee147aa",
+    "position": 2,
+    "resource_type": null,
+    "size": 1282408231,
+    "state": "active",
+    "url": "https://data.gov.au/data/dataset/bdcf5b09-89bc-47ec-9281-6b8e9ee147aa/resource/9af58fc0-da5f-4431-8f02-f3a4156fb277/download/nov26_adminbounds_gda_2020_shp.zip",
+    "url_type": "upload",
+    "zip_extract": false
+  },
+  "license": "CC BY 4.0",
+  "credit": "Incorporates or developed using Administrative Boundaries © Geoscape Australia licensed by the Commonwealth of Australia under Creative Commons Attribution 4.0 International licence",
+  "files": {
+    "nsw_lga.dbf": {
+      "member": "LOCAL-GOVERNMENT-AREAS_202611_ALLSTATES_GDA2020_SHP_002-002-002/nsw_lga.dbf",
+      "bytes": 33292,
+      "sha256": "4ddc9c619c1e2b28d75cfd13840902bdeee8b227acdfe1a01156e84a82c9bf91"
+    },
+    "nsw_lga.prj": {
+      "member": "LOCAL-GOVERNMENT-AREAS_202611_ALLSTATES_GDA2020_SHP_002-002-002/nsw_lga.prj",
+      "bytes": 164,
+      "sha256": "5f7138b2c9f9925c70191b690bafc44c267adb0146a27db18aa0f6337ebfa827"
+    },
+    "nsw_lga_locality.dbf": {
+      "member": "LOCAL-GOVERNMENT-AREAS_202611_ALLSTATES_GDA2020_SHP_002-002-002/nsw_lga_locality.dbf",
+      "bytes": 272646,
+      "sha256": "7b2727691d595a05cf610c58f195b96a24097b5bd127194512118d6e1c2484a2"
+    },
+    "nsw_lga.shx": {
+      "member": "LOCAL-GOVERNMENT-AREAS_202611_ALLSTATES_GDA2020_SHP_002-002-002/nsw_lga.shx",
+      "bytes": 1684,
+      "sha256": "faa226478292e4336ca5f80e8c4a601417d0dc1bdf6a93cb6524feb47b0a8b0a"
+    },
+    "nt_lga.dbf": {
+      "member": "LOCAL-GOVERNMENT-AREAS_202611_ALLSTATES_GDA2020_SHP_002-002-002/nt_lga.dbf",
+      "bytes": 133826,
+      "sha256": "a67cfc603f20c8642b1b9a44f0f5218e3135b38d3a531268ed341a76f14d84e3"
+    },
+    "nt_lga.prj": {
+      "member": "LOCAL-GOVERNMENT-AREAS_202611_ALLSTATES_GDA2020_SHP_002-002-002/nt_lga.prj",
+      "bytes": 164,
+      "sha256": "5f7138b2c9f9925c70191b690bafc44c267adb0146a27db18aa0f6337ebfa827"
+    },
+    "nsw_lga.shp": {
+      "member": "LOCAL-GOVERNMENT-AREAS_202611_ALLSTATES_GDA2020_SHP_002-002-002/nsw_lga.shp",
+      "bytes": 27711000,
+      "sha256": "0a73ed34aef74f7184d01137257c6ca11cb5ddaf2075bc8e0e4cee36ea156a79"
+    },
+    "nt_lga.shx": {
+      "member": "LOCAL-GOVERNMENT-AREAS_202611_ALLSTATES_GDA2020_SHP_002-002-002/nt_lga.shx",
+      "bytes": 6500,
+      "sha256": "40583f1862a5065ddb6da5b796bb3a3396764a76705d5593abd5d5aeaf12667d"
+    },
+    "nt_lga.shp": {
+      "member": "LOCAL-GOVERNMENT-AREAS_202611_ALLSTATES_GDA2020_SHP_002-002-002/nt_lga.shp",
+      "bytes": 1818740,
+      "sha256": "2f33070aa7f3fccfa1be1f3b8377e8677b1757a6d627cc2aafb1964a78571bb3"
+    },
+    "nt_lga_locality.dbf": {
+      "member": "LOCAL-GOVERNMENT-AREAS_202611_ALLSTATES_GDA2020_SHP_002-002-002/nt_lga_locality.dbf",
+      "bytes": 17388,
+      "sha256": "bd3f856498b8108d714a600faed3c57210f84f857e0c94ff2b821338c702b894"
+    },
+    "ot_lga.dbf": {
+      "member": "LOCAL-GOVERNMENT-AREAS_202611_ALLSTATES_GDA2020_SHP_002-002-002/ot_lga.dbf",
+      "bytes": 727,
+      "sha256": "e460666485a2fc3e4913a1a88e75204d1fe482fa3b84a1bccda3ef6369290eb3"
+    },
+    "ot_lga.prj": {
+      "member": "LOCAL-GOVERNMENT-AREAS_202611_ALLSTATES_GDA2020_SHP_002-002-002/ot_lga.prj",
+      "bytes": 164,
+      "sha256": "5f7138b2c9f9925c70191b690bafc44c267adb0146a27db18aa0f6337ebfa827"
+    },
+    "ot_lga.shp": {
+      "member": "LOCAL-GOVERNMENT-AREAS_202611_ALLSTATES_GDA2020_SHP_002-002-002/ot_lga.shp",
+      "bytes": 215276,
+      "sha256": "c2cdcc75d41724abb7e5cae8a3d2646bf4b64582339c6b47288c34c0657d69ef"
+    },
+    "ot_lga_locality.dbf": {
+      "member": "LOCAL-GOVERNMENT-AREAS_202611_ALLSTATES_GDA2020_SHP_002-002-002/ot_lga_locality.dbf",
+      "bytes": 324,
+      "sha256": "427c1806f5d24a60ed702381d933b10c2736200d83c1a8c1de37650dd587d378"
+    },
+    "ot_lga.shx": {
+      "member": "LOCAL-GOVERNMENT-AREAS_202611_ALLSTATES_GDA2020_SHP_002-002-002/ot_lga.shx",
+      "bytes": 124,
+      "sha256": "50fdcbee010854ba3c8d77a7f2c74e20e3ae344e8e3bee752f1194ec0a7bcdd0"
+    },
+    "qld_lga.dbf": {
+      "member": "LOCAL-GOVERNMENT-AREAS_202611_ALLSTATES_GDA2020_SHP_002-002-002/qld_lga.dbf",
+      "bytes": 35296,
+      "sha256": "76f4e0e7893d3fec8b159289f6228b545dc575fc0568b0362d8f94c727e1e862"
+    },
+    "qld_lga.prj": {
+      "member": "LOCAL-GOVERNMENT-AREAS_202611_ALLSTATES_GDA2020_SHP_002-002-002/qld_lga.prj",
+      "bytes": 164,
+      "sha256": "5f7138b2c9f9925c70191b690bafc44c267adb0146a27db18aa0f6337ebfa827"
+    },
+    "qld_lga.shx": {
+      "member": "LOCAL-GOVERNMENT-AREAS_202611_ALLSTATES_GDA2020_SHP_002-002-002/qld_lga.shx",
+      "bytes": 1780,
+      "sha256": "5c1a6011654789067232dd9401b6550baf3c172476a88e7e8fb6dcc350fd50f0"
+    },
+    "sa_lga.dbf": {
+      "member": "LOCAL-GOVERNMENT-AREAS_202611_ALLSTATES_GDA2020_SHP_002-002-002/sa_lga.dbf",
+      "bytes": 29117,
+      "sha256": "a2f533ba392f20652631b8a989daab2e04b35e20cfe7ec67dcebcbbc7366dc6a"
+    },
+    "qld_lga_locality.dbf": {
+      "member": "LOCAL-GOVERNMENT-AREAS_202611_ALLSTATES_GDA2020_SHP_002-002-002/qld_lga_locality.dbf",
+      "bytes": 180846,
+      "sha256": "b8bf34f5d3a9fff7b2b76b0d65bb69df3b4717d65d5b32583f40084e8c4a0dcd"
+    },
+    "sa_lga.prj": {
+      "member": "LOCAL-GOVERNMENT-AREAS_202611_ALLSTATES_GDA2020_SHP_002-002-002/sa_lga.prj",
+      "bytes": 164,
+      "sha256": "5f7138b2c9f9925c70191b690bafc44c267adb0146a27db18aa0f6337ebfa827"
+    },
+    "qld_lga.shp": {
+      "member": "LOCAL-GOVERNMENT-AREAS_202611_ALLSTATES_GDA2020_SHP_002-002-002/qld_lga.shp",
+      "bytes": 5093604,
+      "sha256": "aeda7682d3d79ec1552732bcb2db2ba63a42e174a200ec20cefde2648c69d754"
+    },
+    "sa_lga.shx": {
+      "member": "LOCAL-GOVERNMENT-AREAS_202611_ALLSTATES_GDA2020_SHP_002-002-002/sa_lga.shx",
+      "bytes": 1484,
+      "sha256": "41de41a03f7e0cf891a09947be5c6f68bf92bac4e2908af6458d14ba2629dda9"
+    },
+    "tas_lga.dbf": {
+      "member": "LOCAL-GOVERNMENT-AREAS_202611_ALLSTATES_GDA2020_SHP_002-002-002/tas_lga.dbf",
+      "bytes": 89237,
+      "sha256": "b17f5b813af39d52b50df20d67ea9f0736da058013233fb853f64ae404fc46a7"
+    },
+    "tas_lga.prj": {
+      "member": "LOCAL-GOVERNMENT-AREAS_202611_ALLSTATES_GDA2020_SHP_002-002-002/tas_lga.prj",
+      "bytes": 164,
+      "sha256": "5f7138b2c9f9925c70191b690bafc44c267adb0146a27db18aa0f6337ebfa827"
+    },
+    "sa_lga_locality.dbf": {
+      "member": "LOCAL-GOVERNMENT-AREAS_202611_ALLSTATES_GDA2020_SHP_002-002-002/sa_lga_locality.dbf",
+      "bytes": 112212,
+      "sha256": "0ab033a5d0bc344a4b4166dc056c58ce5f6ce73368745e23d9621eac1064dc94"
+    },
+    "sa_lga.shp": {
+      "member": "LOCAL-GOVERNMENT-AREAS_202611_ALLSTATES_GDA2020_SHP_002-002-002/sa_lga.shp",
+      "bytes": 14855440,
+      "sha256": "fa114a59c9de8b547bd839a2f1e740202950781363e890cd1184ec508c563fe4"
+    },
+    "tas_lga.shx": {
+      "member": "LOCAL-GOVERNMENT-AREAS_202611_ALLSTATES_GDA2020_SHP_002-002-002/tas_lga.shx",
+      "bytes": 4364,
+      "sha256": "291cae37dd463007f794b77d97493026562298717348a22637e96912ccd33f5d"
+    },
+    "vic_lga.dbf": {
+      "member": "LOCAL-GOVERNMENT-AREAS_202611_ALLSTATES_GDA2020_SHP_002-002-002/vic_lga.dbf",
+      "bytes": 15590,
+      "sha256": "68998ee3562b2c199a2e95aad3759d4238a46496265db0a96af32398764de698"
+    },
+    "vic_lga.prj": {
+      "member": "LOCAL-GOVERNMENT-AREAS_202611_ALLSTATES_GDA2020_SHP_002-002-002/vic_lga.prj",
+      "bytes": 164,
+      "sha256": "5f7138b2c9f9925c70191b690bafc44c267adb0146a27db18aa0f6337ebfa827"
+    },
+    "tas_lga.shp": {
+      "member": "LOCAL-GOVERNMENT-AREAS_202611_ALLSTATES_GDA2020_SHP_002-002-002/tas_lga.shp",
+      "bytes": 30814876,
+      "sha256": "8181799f31ae682b82a54cf70cc17bd02b1dd66ca6059adc302dc65738d79c3b"
+    },
+    "tas_lga_locality.dbf": {
+      "member": "LOCAL-GOVERNMENT-AREAS_202611_ALLSTATES_GDA2020_SHP_002-002-002/tas_lga_locality.dbf",
+      "bytes": 48114,
+      "sha256": "084d87fd517451e2e840cd2ad9c2939c6851ccb4a1540888691014c1e05906d0"
+    },
+    "vic_lga.shp": {
+      "member": "LOCAL-GOVERNMENT-AREAS_202611_ALLSTATES_GDA2020_SHP_002-002-002/vic_lga.shp",
+      "bytes": 10996676,
+      "sha256": "c49ece3bdccd22374a734289daa9dd1c6ef1d3c8e31d352cd6eac7aec7343a1b"
+    },
+    "vic_lga.shx": {
+      "member": "LOCAL-GOVERNMENT-AREAS_202611_ALLSTATES_GDA2020_SHP_002-002-002/vic_lga.shx",
+      "bytes": 836,
+      "sha256": "c5d0e5f872d4ea8c42b17da0fd4d6225844561b653745a175621eef9158e8b4a"
+    },
+    "wa_lga.prj": {
+      "member": "LOCAL-GOVERNMENT-AREAS_202611_ALLSTATES_GDA2020_SHP_002-002-002/wa_lga.prj",
+      "bytes": 164,
+      "sha256": "5f7138b2c9f9925c70191b690bafc44c267adb0146a27db18aa0f6337ebfa827"
+    },
+    "vic_lga_locality.dbf": {
+      "member": "LOCAL-GOVERNMENT-AREAS_202611_ALLSTATES_GDA2020_SHP_002-002-002/vic_lga_locality.dbf",
+      "bytes": 180468,
+      "sha256": "27f645ac894d3f9344718e4435654eff42b71e8f12b41edf712cce9cd2756e20"
+    },
+    "wa_lga.dbf": {
+      "member": "LOCAL-GOVERNMENT-AREAS_202611_ALLSTATES_GDA2020_SHP_002-002-002/wa_lga.dbf",
+      "bytes": 33793,
+      "sha256": "a4b0a53351feb2b391dee77d91e245b578d73bc061b839b7b1e43a1364008e23"
+    },
+    "wa_lga.shp": {
+      "member": "LOCAL-GOVERNMENT-AREAS_202611_ALLSTATES_GDA2020_SHP_002-002-002/wa_lga.shp",
+      "bytes": 5412524,
+      "sha256": "3801138877e5dd8300b1b48528beac432137b290dee1c7fe392fa058d6d8ec71"
+    },
+    "wa_lga_locality.dbf": {
+      "member": "LOCAL-GOVERNMENT-AREAS_202611_ALLSTATES_GDA2020_SHP_002-002-002/wa_lga_locality.dbf",
+      "bytes": 94878,
+      "sha256": "14f4feb75b0f585c0ad3887d121f1ae5d43b747a9be098be0a8da8b280c674f7"
+    },
+    "act_localities.dbf": {
+      "member": "LOCALITIES_202611_ALLSTATES_GDA2020_SHP_001-002-002/act_localities.dbf",
+      "bytes": 15906,
+      "sha256": "8ee481b6b8a54aacd1ad1620f81e78141958a5d145dc63925cbe7da7109db486"
+    },
+    "act_localities.prj": {
+      "member": "LOCALITIES_202611_ALLSTATES_GDA2020_SHP_001-002-002/act_localities.prj",
+      "bytes": 164,
+      "sha256": "5f7138b2c9f9925c70191b690bafc44c267adb0146a27db18aa0f6337ebfa827"
+    },
+    "wa_lga.shx": {
+      "member": "LOCAL-GOVERNMENT-AREAS_202611_ALLSTATES_GDA2020_SHP_002-002-002/wa_lga.shx",
+      "bytes": 1708,
+      "sha256": "23c7953f87bb828447e0496445069800cf65079fe3848a83883ce2f9f2bce9f1"
+    },
+    "act_localities.shx": {
+      "member": "LOCALITIES_202611_ALLSTATES_GDA2020_SHP_001-002-002/act_localities.shx",
+      "bytes": 1220,
+      "sha256": "50307bb1c027bfd709264e6c490ee949dadc2b7d79127c087b69fe6b4d981e25"
+    },
+    "act_localities.shp": {
+      "member": "LOCALITIES_202611_ALLSTATES_GDA2020_SHP_001-002-002/act_localities.shp",
+      "bytes": 472132,
+      "sha256": "7472cf76250021143341ee1b8ceb60725ec65d9288b597bd0b70044842e599a8"
+    },
+    "nsw_localities.dbf": {
+      "member": "LOCALITIES_202611_ALLSTATES_GDA2020_SHP_001-002-002/nsw_localities.dbf",
+      "bytes": 516658,
+      "sha256": "d4efe09249e09706e24d32204764d6bc7f19f55528f35133845138b282e508a1"
+    },
+    "nsw_localities.prj": {
+      "member": "LOCALITIES_202611_ALLSTATES_GDA2020_SHP_001-002-002/nsw_localities.prj",
+      "bytes": 164,
+      "sha256": "5f7138b2c9f9925c70191b690bafc44c267adb0146a27db18aa0f6337ebfa827"
+    },
+    "nt_localities.dbf": {
+      "member": "LOCALITIES_202611_ALLSTATES_GDA2020_SHP_001-002-002/nt_localities.dbf",
+      "bytes": 35394,
+      "sha256": "09256530c0d91b07ef4a0de6d82bf4891a49f8cfb83762570d5a506523028d03"
+    },
+    "nsw_localities.shx": {
+      "member": "LOCALITIES_202611_ALLSTATES_GDA2020_SHP_001-002-002/nsw_localities.shx",
+      "bytes": 36988,
+      "sha256": "7d04c0e6969cbb143f5da92bef37fbeae86c01272406a51af95ebd78b4bc78c4"
+    },
+    "nt_localities.prj": {
+      "member": "LOCALITIES_202611_ALLSTATES_GDA2020_SHP_001-002-002/nt_localities.prj",
+      "bytes": 164,
+      "sha256": "5f7138b2c9f9925c70191b690bafc44c267adb0146a27db18aa0f6337ebfa827"
+    },
+    "nt_localities.shp": {
+      "member": "LOCALITIES_202611_ALLSTATES_GDA2020_SHP_001-002-002/nt_localities.shp",
+      "bytes": 1507676,
+      "sha256": "68038aceb69bb01336b26bfb00b4259a4de427bb2a1ccfdda09fd9de471865e9"
+    },
+    "nt_localities.shx": {
+      "member": "LOCALITIES_202611_ALLSTATES_GDA2020_SHP_001-002-002/nt_localities.shx",
+      "bytes": 2612,
+      "sha256": "ac6e43ab5c19ec7e48f4e98189e3827b454ffcd7a86de0e4d434978d80adcea6"
+    },
+    "ot_localities.prj": {
+      "member": "LOCALITIES_202611_ALLSTATES_GDA2020_SHP_001-002-002/ot_localities.prj",
+      "bytes": 164,
+      "sha256": "5f7138b2c9f9925c70191b690bafc44c267adb0146a27db18aa0f6337ebfa827"
+    },
+    "nsw_localities.shp": {
+      "member": "LOCALITIES_202611_ALLSTATES_GDA2020_SHP_001-002-002/nsw_localities.shp",
+      "bytes": 93594752,
+      "sha256": "6c609e7c06b61f3a816aec18082b9bcdae2ef49385d87be39e6effda597c2d2b"
+    },
+    "ot_localities.shp": {
+      "member": "LOCALITIES_202611_ALLSTATES_GDA2020_SHP_001-002-002/ot_localities.shp",
+      "bytes": 493540,
+      "sha256": "bd015734f998ccc1ac4826cdb17d5490c177f3d0986f8bab5a51294360effbe1"
+    },
+    "ot_localities.dbf": {
+      "member": "LOCALITIES_202611_ALLSTATES_GDA2020_SHP_001-002-002/ot_localities.dbf",
+      "bytes": 898,
+      "sha256": "e2f200330de7219da183ea050a597f37c0ce27d7e20d14aad92086562d9ef941"
+    },
+    "ot_localities.shx": {
+      "member": "LOCALITIES_202611_ALLSTATES_GDA2020_SHP_001-002-002/ot_localities.shx",
+      "bytes": 148,
+      "sha256": "82673a9df12e33fb61778cc426b62608fe789d5c55d259676ed3803cba3d6af4"
+    },
+    "qld_localities.prj": {
+      "member": "LOCALITIES_202611_ALLSTATES_GDA2020_SHP_001-002-002/qld_localities.prj",
+      "bytes": 164,
+      "sha256": "5f7138b2c9f9925c70191b690bafc44c267adb0146a27db18aa0f6337ebfa827"
+    },
+    "qld_localities.dbf": {
+      "member": "LOCALITIES_202611_ALLSTATES_GDA2020_SHP_001-002-002/qld_localities.dbf",
+      "bytes": 370722,
+      "sha256": "0cf7604b5f0b1c54020a9fe4b9a0af41ddfb22a52a75bc5e291652c47e42c13b"
+    },
+    "qld_localities.shx": {
+      "member": "LOCALITIES_202611_ALLSTATES_GDA2020_SHP_001-002-002/qld_localities.shx",
+      "bytes": 26564,
+      "sha256": "3b37a98786af19c3b9821d0d6717cb3ee76d87a362063576bc0cddbd1bb578d6"
+    },
+    "sa_localities.dbf": {
+      "member": "LOCALITIES_202611_ALLSTATES_GDA2020_SHP_001-002-002/sa_localities.dbf",
+      "bytes": 212914,
+      "sha256": "ea925e41722a657a96efe137dca8bac50161da37286b0fd6d9ccc06b2de0deb6"
+    },
+    "sa_localities.prj": {
+      "member": "LOCALITIES_202611_ALLSTATES_GDA2020_SHP_001-002-002/sa_localities.prj",
+      "bytes": 164,
+      "sha256": "5f7138b2c9f9925c70191b690bafc44c267adb0146a27db18aa0f6337ebfa827"
+    },
+    "qld_localities.shp": {
+      "member": "LOCALITIES_202611_ALLSTATES_GDA2020_SHP_001-002-002/qld_localities.shp",
+      "bytes": 22084624,
+      "sha256": "8715bc4b40011011be5ab38b47e60db7aae49691969ad0e45e0d09144e65204d"
+    },
+    "tas_localities.dbf": {
+      "member": "LOCALITIES_202611_ALLSTATES_GDA2020_SHP_001-002-002/tas_localities.dbf",
+      "bytes": 87922,
+      "sha256": "7fa6fa9cef026813f8757e1b9947cab2680e80c96908488c2cad0cff76d86e98"
+    },
+    "sa_localities.shp": {
+      "member": "LOCALITIES_202611_ALLSTATES_GDA2020_SHP_001-002-002/sa_localities.shp",
+      "bytes": 17663404,
+      "sha256": "ca6da5a6d097387fb4b62778c15b55713d586090c3d4aa761e0f89cea0d851d1"
+    },
+    "sa_localities.shx": {
+      "member": "LOCALITIES_202611_ALLSTATES_GDA2020_SHP_001-002-002/sa_localities.shx",
+      "bytes": 15292,
+      "sha256": "e2e40cecacba03774111ca7f2b04b2b0b5f2a8a3b244394852aff2e74f6b6696"
+    },
+    "tas_localities.prj": {
+      "member": "LOCALITIES_202611_ALLSTATES_GDA2020_SHP_001-002-002/tas_localities.prj",
+      "bytes": 164,
+      "sha256": "5f7138b2c9f9925c70191b690bafc44c267adb0146a27db18aa0f6337ebfa827"
+    },
+    "tas_localities.shx": {
+      "member": "LOCALITIES_202611_ALLSTATES_GDA2020_SHP_001-002-002/tas_localities.shx",
+      "bytes": 6364,
+      "sha256": "57692ec0e72fbfe9007f46355966ee7d92927cff609a8402cec7d6bae800d970"
+    },
+    "tas_localities.shp": {
+      "member": "LOCALITIES_202611_ALLSTATES_GDA2020_SHP_001-002-002/tas_localities.shp",
+      "bytes": 35761644,
+      "sha256": "ea5d7e9d2fe4f511fc69dded1edacae8442d33ffd3c0abf88e701e16a9caf8a5"
+    },
+    "vic_localities.dbf": {
+      "member": "LOCALITIES_202611_ALLSTATES_GDA2020_SHP_001-002-002/vic_localities.dbf",
+      "bytes": 333202,
+      "sha256": "8db02b58f7e310f0586752740cb3094399eb5048f5267aac2f3997700a96dcb8"
+    },
+    "vic_localities.prj": {
+      "member": "LOCALITIES_202611_ALLSTATES_GDA2020_SHP_001-002-002/vic_localities.prj",
+      "bytes": 164,
+      "sha256": "5f7138b2c9f9925c70191b690bafc44c267adb0146a27db18aa0f6337ebfa827"
+    },
+    "wa_localities.dbf": {
+      "member": "LOCALITIES_202611_ALLSTATES_GDA2020_SHP_001-002-002/wa_localities.dbf",
+      "bytes": 196562,
+      "sha256": "ebf67a038e974d1ed4b962b191b024f0fb6a92920427af9079d200b01744a719"
+    },
+    "vic_localities.shx": {
+      "member": "LOCALITIES_202611_ALLSTATES_GDA2020_SHP_001-002-002/vic_localities.shx",
+      "bytes": 23884,
+      "sha256": "916ceb6bf39cc1b424cb293169b3b11e3adb63797c212fd37098acdceb26ad0e"
+    },
+    "wa_localities.prj": {
+      "member": "LOCALITIES_202611_ALLSTATES_GDA2020_SHP_001-002-002/wa_localities.prj",
+      "bytes": 164,
+      "sha256": "5f7138b2c9f9925c70191b690bafc44c267adb0146a27db18aa0f6337ebfa827"
+    },
+    "vic_localities.shp": {
+      "member": "LOCALITIES_202611_ALLSTATES_GDA2020_SHP_001-002-002/vic_localities.shp",
+      "bytes": 32516564,
+      "sha256": "85bac8def518ae6800c7e7e5adfaef31421d367db74f71699c839a5050bf1257"
+    },
+    "wa_localities.shx": {
+      "member": "LOCALITIES_202611_ALLSTATES_GDA2020_SHP_001-002-002/wa_localities.shx",
+      "bytes": 14124,
+      "sha256": "0080d26495bf66d72bd507d20555713c9b9e1f8dff9bae8485da212946d4e914"
+    },
+    "wa_localities.shp": {
+      "member": "LOCALITIES_202611_ALLSTATES_GDA2020_SHP_001-002-002/wa_localities.shp",
+      "bytes": 28018544,
+      "sha256": "980e5ca0648b2e14f7fb87afd3982daed0af31075bd630252ba5ca0e55977b1f"
+    },
+    "council-matches.json": {
+      "bytes": 164143,
+      "sha256": "b853e5d574e55c2e8ed47ee836bea5caf2ec62c2b67dd139769fd6c389f98e05",
+      "url": "https://data.gov.au/data/dataset/geoscape-administrative-boundaries",
+      "role": "Reviewed identity correspondence; exact unique normalized names plus explicit unincorporated-area aggregation and the Grant/Southern Limestone Coast rename"
+    },
+    "abs-lga-2026-identities.json": {
+      "bytes": 166837,
+      "sha256": "81422dd979dfd81b91501d15b8ed139d4c4483c8385fa9cc7428be92b943cff1",
+      "url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2026/LGA/MapServer/0",
+      "role": "Current ABS council code inventory"
+    }
+  }
+}

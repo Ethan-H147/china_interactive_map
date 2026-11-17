@@ -63,6 +63,12 @@ for(let repeat=0;repeat<4;repeat++)for(const z of [0,3,5,8,12,14,6,9,4])for(cons
 const instances={},worker={workerSources:{},_getWorkerSource(map,type,name){return instances[name]??={_createGeoJSONIndex:(data,params)=>new GeoJSONVT(data,params.geojsonVtOptions)};}};
 installHistoricalTileIndexBudget(worker);const guarded=worker._getWorkerSource('test','geojson','united-kingdom-history-faces')._createGeoJSONIndex(shapes,{geojsonVtOptions:options});assert(guarded._atlasHistoricalTileBudget);const other=worker._getWorkerSource('test','geojson','ordinary-modern')._createGeoJSONIndex(shapes,{geojsonVtOptions:options});assert(!other._atlasHistoricalTileBudget,'Modern indexes retain their existing policy');
 console.log('Actual geojson-vt: 180 varied/repeated tile requests preserve native geometry exactly, including holes/wrapping, while bounding the internal tile cache.');
+const reused=worker._getWorkerSource('test','geojson','russia-first');
+const datedIndex=reused._createGeoJSONIndex(shapes,{request:{url:'atlas-data://russia-dated?url=fixture'},geojsonVtOptions:options});
+assert(datedIndex._atlasHistoricalTileBudget,'A dated input opts the existing regional source into the history budget');
+const restoredIndex=reused._createGeoJSONIndex(shapes,{request:{url:'blob:modern'},geojsonVtOptions:options});
+assert(!restoredIndex._atlasHistoricalTileBudget,'The same source returns to the normal index for modern data');
+console.log('Reused regional sources opt into historical indexing by input URL and restore native indexing with modern data.');
 
 const windows=[[0,0,3,3],[2,0,4,3]],rects=disjointScopes(windows),area=box=>(box[2]-box[0])*(box[3]-box[1]);
 assert.equal(rects.reduce((n,b)=>n+area(b),0),12,'Overlapping scopes cover their union exactly once');

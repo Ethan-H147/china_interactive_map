@@ -15,6 +15,7 @@ const kingdom = year => year < 1801 ? 'Kingdom of Great Britain' : year < 1922 ?
 
 export const ukHistory = {
   label: 'Historical snapshot',
+ vectorTiles:true,
   store: 'atlas-uk-history-year',
   file: 'history/borders.bin',
   sourcesFile: 'history/sources.json',

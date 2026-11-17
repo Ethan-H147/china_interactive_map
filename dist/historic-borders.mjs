@@ -1,4 +1,6 @@
+import {createHistoricalVectorRenderer} from './historical-vector-renderer.mjs';
 import {membershipFilter} from './interaction-policy.mjs';
+import {createHistoricSourceSwap} from './historic-source-swap.mjs';
 import {packShapes,shapeAt,shapeAtLocation} from './historic-shapes.mjs';
 export {packShapes,shapeAt,shapeAtLocation} from './historic-shapes.mjs';
 import {createHistoricalGeometryBudget,createHistoricalTileBudget} from './historical-geometry-budget.mjs';
@@ -50,7 +52,9 @@ export function administrativeBorderPaint(map,lineLayer,scene=getMapScene(map)){
 // selection: a host whose selection is not its first level's ({fill, fillOpacity, line}) names its colours.
 // Historical faces share boundaries across many periods. Simplifying them
 // separately opens seams and inverts narrow pieces, so fills use exact paths.
-export function createHistoricBorders(map,{country,base,file,tag='history',sourceUnit,frontierLines=false,frameOuter=false,lineLayer=country+'-first-lines',selection={},fillTolerance=0,scene=getMapScene(map)}){
+export function createHistoricBorders(map,{country,base,file,tag='history',sourceUnit,frontierLines=false,frameOuter=false,lineLayer=country+'-first-lines',selection={},fillTolerance=0,reuseSources=false,vectorTiles=false,scene=getMapScene(map)}){
+ if(vectorTiles)return createHistoricalVectorRenderer(map,{country,base,scene});
+ if(reuseSources)return createHistoricSourceSwap(map,{country,base,file,scene});
  const batch=task=>scene?.batchFeatureState?scene.batchFeatureState(task):task();
  const prefix=country+'-'+tag;
  const layers={fill:prefix+'-fill',lines:prefix+'-lines',frontiers:prefix+'-frontiers',outer:prefix+'-outer',selected:prefix+'-selected',selectedFill:prefix+'-selected-fill',hostSelectedFill:prefix+'-host-selected-fill',water:prefix+'-water'};

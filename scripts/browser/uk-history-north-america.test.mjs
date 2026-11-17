@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 
-const coast='united-kingdom-history-coast-detail';
+const coast='united-kingdom-first-fill';
 const dock='#united-kingdom-history-dock';
 const hover = (p, point) => p.evaluate('currentAtlas().hoverAt(map.project('+JSON.stringify(point)+'))?.en??null');
 async function year(p, value) {
@@ -10,7 +10,7 @@ async function year(p, value) {
 }
 async function view(p, center, zoom) {
   await p.evaluate('void map.jumpTo('+JSON.stringify({center,zoom})+')');
-  await p.waitFor('map.getLayer("'+coast+'")&&map.getPaintProperty("'+coast+'","fill-opacity")===1',{timeout:90000});
+  await p.waitFor('map.isSourceLoaded("united-kingdom-first")',{timeout:90000});
   await p.settle();
 }
 
@@ -20,7 +20,7 @@ export default [{
   async run(p,base) {
     await p.open(base,'#united-kingdom');
     await p.evaluate('AtlasComfort.set({appearance:"light"});void document.querySelector("#historical-snapshot").click()');
-    await p.waitFor('!!map.getLayer("united-kingdom-history-fill")');
+    await p.waitFor('map.getSource("united-kingdom-first")?.type==="vector"');
     await view(p,[-73.35,40.9],8);
     for(const point of [[-73.459,40.674],[-73.21,40.703],[-73.95,40.9],[-73.94,41.13]]) {
       assert.equal(await hover(p,point),'British American colonies','The former gray patch has the colonial owner '+point);
@@ -32,11 +32,10 @@ export default [{
     assert.equal(await hover(p,[-63.62,44.65]),'Nova Scotia');
     assert.equal(await hover(p,[-63.15,46.24]),'St John’s Island');
     assert.equal(await hover(p,[-60.25,46.13]),'Nova Scotia');
-    assert.equal(await p.evaluate('map.queryRenderedFeatures({layers:["united-kingdom-history-lines","united-kingdom-history-frontiers"]}).length'),0,'Obsolete coarse border strokes are replaced');
     const nearShore=[[-63.94,44.52],[-63.6,44.4],[-62.7,44.7]];
     assert(!await p.evaluate('('+((points)=>points.some(point=>map.queryRenderedFeatures(map.project(point),{
-      layers:['united-kingdom-history-coast-lines','united-kingdom-history-coast-frontiers']
-    }).length)).toString()+')('+JSON.stringify(nearShore)+')'),'Open coastal water has no historical borders');
+      layers:['united-kingdom-first-lines']
+    }).filter(f=>f.layer.paint['line-opacity']>0).length)).toString()+')('+JSON.stringify(nearShore)+')'),'Open coastal water has no historical borders');
     await p.screenshot('uk-history-maritimes-shared-geometry');
     await year(p,1784);
     assert.equal(await hover(p,[-60.25,46.13]),'Cape Breton Island');
@@ -44,10 +43,10 @@ export default [{
     await p.settle();
     await p.evaluate('(()=>{const control=document.querySelector("#gb-province-layer");control.checked=false;control.dispatchEvent(new Event("change"));})()');
     await view(p,[-63.4,45.6],6.7);
-    assert.equal(await p.evaluate('map.getLayoutProperty("united-kingdom-history-coast-lines","visibility")'),'none','New detailed borders respect the outline setting');
+    assert.equal(await p.evaluate('map.getLayoutProperty("united-kingdom-first-lines","visibility")'),'none','New detailed borders respect the outline setting');
     await p.evaluate('(()=>{const control=document.querySelector("#gb-province-layer");control.checked=true;control.dispatchEvent(new Event("change"));})()');
     await p.settle();
-    assert.equal(await p.evaluate('map.getLayoutProperty("united-kingdom-history-coast-lines","visibility")'),'visible');
+    assert.equal(await p.evaluate('map.getLayoutProperty("united-kingdom-first-lines","visibility")'),'visible');
     await year(p,1820);
     assert.equal(await hover(p,[-60.25,46.13]),'Nova Scotia');
 

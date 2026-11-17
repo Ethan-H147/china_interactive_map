@@ -33,10 +33,12 @@ export function installHistoricalTileIndexBudget(worker){
  if(!worker||typeof worker._getWorkerSource!=='function'||worker._atlasHistoricalIndexGuard)return;
  const guarded=new WeakSet();
  const wrap=(instance,type,name)=>{
-  if(type!=='geojson'||!name.startsWith('united-kingdom-history')||guarded.has(instance)||typeof instance._createGeoJSONIndex!=='function')return instance;
+  if(type!=='geojson'||guarded.has(instance)||typeof instance._createGeoJSONIndex!=='function')return instance;
   guarded.add(instance);const create=instance._createGeoJSONIndex;
   instance._createGeoJSONIndex=function(data,params){
-   return boundHistoricalTileIndex(create.call(this,data,{...params,geojsonVtOptions:{...params.geojsonVtOptions,indexMaxZoom:3}}));
+   const historical=name.startsWith('united-kingdom-history')||/^atlas-data:\/\/[^?]+-dated\?/.test(params.request?.url||'');
+   if(!historical)return create.call(this,data,params);
+   return boundHistoricalTileIndex(create.call(this,data,{...params,atlasHistorical:true,geojsonVtOptions:{...params.geojsonVtOptions,indexMaxZoom:3}}));
   };
   return instance;
  };

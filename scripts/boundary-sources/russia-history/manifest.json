@@ -1,0 +1,10 @@
+{
+  "title": "Cliopatria v0.2.1 retained Russia timeline subset",
+  "url": "https://github.com/Seshat-Global-History-Databank/cliopatria/tree/v0.2.1",
+  "download": "https://raw.githubusercontent.com/Seshat-Global-History-Databank/cliopatria/v0.2.1/cliopatria.geojson.zip",
+  "license": "CC BY 4.0",
+  "retrieved": "2026-11-13",
+  "archiveSha256": "e10a4e429fca708788ff9e7572a95fce801fae55852d217cffabc1c59cd4eed4",
+  "records": 58,
+  "processing": "Original source feature properties and geometries retained, filtered to the records used by build-russia-history.mjs. Other current and historical datasets are referenced from the existing atlas."
+}

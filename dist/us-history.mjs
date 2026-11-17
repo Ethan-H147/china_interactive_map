@@ -3,7 +3,8 @@ import {describeShared} from './us-elections.mjs';
 // the end of every year from 1783 to 2000, from scripts/build-us-historic-borders.mjs.
 
 export const usHistory={
- label:'Historical snapshot',store:'atlas-us-history-year',file:'history/borders.bin',defaultYear:1789,
+ label:'Historical snapshot',
+ vectorTiles:true,store:'atlas-us-history-year',file:'history/borders.bin',defaultYear:1789,
  sourceName:'Newberry Library, Atlas of Historical County Boundaries',source:'https://publications.newberry.org/ahcb/',
  outside:'Not part of the United States',
  title:year=>'Boundary changes in '+year,

@@ -1,0 +1,726 @@
+{
+  "retrieved": "2026-11-16",
+  "files": {
+    "kato-2026-11-04.xlsx": {
+      "url": "https://stat.gov.kz/upload/iblock/3af/er0488xunb664axbufnw46sagt10aqsm/%D0%9A%D0%90%D0%A2%D0%9E_04.11.2026.xlsx",
+      "sha256": "20e7db4d65e6cffd6dfbdfb54c9cb1441c603fd2e9a0d4f3b7687a0676f0421d",
+      "bytes": 1003905,
+      "credit": "Bureau of National Statistics, Republic of Kazakhstan",
+      "date": "2026-11-04"
+    },
+    "administration-2026-07.xlsx": {
+      "url": "https://stat.gov.kz/api/iblock/element/512769/file/en/",
+      "sha256": "306d7bf7492e0deb3cc81b77ae981417937565ac33937c2c3906bd398753be14",
+      "bytes": 201890,
+      "credit": "Bureau of National Statistics, Republic of Kazakhstan",
+      "date": "2026-07-01"
+    },
+    "grp-2025.html": {
+      "url": "https://stat.gov.kz/en/industries/economy/national-accounts/publications/513538/",
+      "sha256": "c15f9b6b31ea4cd4c04a44d697e65d25d1770a05cd8478097ff31754cf46e191",
+      "bytes": 68862,
+      "credit": "Bureau of National Statistics, Republic of Kazakhstan",
+      "year": 2025
+    },
+    "osm-17351861.json": {
+      "url": "https://api.openstreetmap.org/api/0.6/relation/17351861/full.json",
+      "sha256": "d042c4f50ef550fcd8258e5e20e4fce7381c8c3a80549dac515a3cb4c526fb79",
+      "bytes": 776239,
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0"
+    },
+    "osm-17351846.json": {
+      "url": "https://api.openstreetmap.org/api/0.6/relation/17351846/full.json",
+      "sha256": "cdf2795e3c69078fc8cb5b70c65ee606fba632cc944d54309f06f42473d67cbf",
+      "bytes": 60583,
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0"
+    },
+    "osm-19733918.json": {
+      "url": "https://api.openstreetmap.org/api/0.6/relation/19733918/full.json",
+      "sha256": "1b429c27143853c8731803030b4344ac89c91ff8173a7ddbcbf6e0654de56906",
+      "bytes": 124239,
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0"
+    },
+    "osm-3407078.json": {
+      "url": "https://api.openstreetmap.org/api/0.6/relation/3407078/full.json",
+      "sha256": "a530743bb4db0c4d4689332787fe0882479add27f408dcef3edba8060f0d2f87",
+      "bytes": 275381,
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0"
+    },
+    "osm-5496366.json": {
+      "url": "https://api.openstreetmap.org/api/0.6/relation/5496366/full.json",
+      "sha256": "cf03868ce1d0efe5039bb2c76c7ec49e1f3edfb1faa0902a2f0ec78902a9cc2e",
+      "bytes": 73947,
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0"
+    },
+    "osm-17322798.json": {
+      "url": "https://api.openstreetmap.org/api/0.6/relation/17322798/full.json",
+      "sha256": "9be359b6a06dd5111b1fb0477d5093ffefa88687ec781c1f7dad402e952d127b",
+      "bytes": 55308,
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0"
+    },
+    "osm-3395772.json": {
+      "url": "https://api.openstreetmap.org/api/0.6/relation/3395772/full.json",
+      "sha256": "5b128f3a65f5602800470fb46ae3fe08599f147d04110ab793ca0d084ac91bc2",
+      "bytes": 731093,
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0"
+    },
+    "osm-3395774.json": {
+      "url": "https://api.openstreetmap.org/api/0.6/relation/3395774/full.json",
+      "sha256": "ac5c9eca7ac8f607db5f39399c0cec4d08ca2a7d0711045b3e90ae0ca0c44244",
+      "bytes": 66339,
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0"
+    },
+    "osm-17012094.json": {
+      "url": "https://api.openstreetmap.org/api/0.6/relation/17012094/full.json",
+      "sha256": "1bc0372701038573b68a3b7465185a5891e485a164af8f5c03957bdcecdadacf",
+      "bytes": 477060,
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0"
+    },
+    "osm-3388834.json": {
+      "url": "https://api.openstreetmap.org/api/0.6/relation/3388834/full.json",
+      "sha256": "c78861023f6a6f7c810279f0415a864399d03810e27dc2cf466fb0c27c3fad05",
+      "bytes": 131464,
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0"
+    },
+    "osm-18817641.json": {
+      "url": "https://api.openstreetmap.org/api/0.6/relation/18817641/full.json",
+      "sha256": "973b0ec77d3f7513a472794f1768d58e94a582537400d9c7c9f90a72707c9713",
+      "bytes": 63916,
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0"
+    },
+    "osm-18817642.json": {
+      "url": "https://api.openstreetmap.org/api/0.6/relation/18817642/full.json",
+      "sha256": "bfcefca19944f269d8e70c35889a49842fecb7bf22c8ecff9ed104d51dabacc8",
+      "bytes": 98195,
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0"
+    },
+    "osm-way-1361103479.json": {
+      "url": "https://api.openstreetmap.org/api/0.6/way/1361103479/full.json",
+      "sha256": "2ef11c4f16cd87a3efb094eb59abac1b2f7a8f2425f37c92eaefc3b9755c6e34",
+      "bytes": 24070,
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0"
+    },
+    "city-103620100.json": {
+      "url": "https://nominatim.openstreetmap.org/search",
+      "sha256": "532f95884228fc19a081743ec85c3d93da2019fb2fde85bea0b98ca9db2e02d1",
+      "bytes": 2890,
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "query": "City name from KATO 103620100, Kazakhstan; countrycodes=kz"
+    },
+    "city-104221100.json": {
+      "url": "https://nominatim.openstreetmap.org/search",
+      "sha256": "76f95b2c1410abd7debe7314aedd931b2d8b91df0298ea678c08ad31c149a41d",
+      "bytes": 2503,
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "query": "City name from KATO 104221100, Kazakhstan; countrycodes=kz"
+    },
+    "city-113220100.json": {
+      "url": "https://nominatim.openstreetmap.org/search",
+      "sha256": "75439f32e62371166abfc290730aea16ac66a207e1ed5c875a40afa239390c06",
+      "bytes": 7284,
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "query": "City name from KATO 113220100, Kazakhstan; countrycodes=kz"
+    },
+    "city-113820100.json": {
+      "url": "https://nominatim.openstreetmap.org/search",
+      "sha256": "bdbdb4f86de73eff4c36e09003fecb2c5665eb56501e2677cfad65f9ca919884",
+      "bytes": 2092,
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "query": "City name from KATO 113820100, Kazakhstan; countrycodes=kz"
+    },
+    "city-114020100.json": {
+      "url": "https://nominatim.openstreetmap.org/search",
+      "sha256": "5790d793367f878287b3a4b383c48596dbc3a94587abca05aa331d203911f1ca",
+      "bytes": 2276,
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "query": "City name from KATO 114020100, Kazakhstan; countrycodes=kz"
+    },
+    "city-114520100.json": {
+      "url": "https://nominatim.openstreetmap.org/search",
+      "sha256": "698a4caccf038e017a2dd1b653c14f86c678c4d506977b7b211c285871eae457",
+      "bytes": 2620,
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "query": "City name from KATO 114520100, Kazakhstan; countrycodes=kz"
+    },
+    "city-114620100.json": {
+      "url": "https://nominatim.openstreetmap.org/search",
+      "sha256": "5c724c945778ff5addbc504bf4e60fef10419c504d54a0966d75b93c2694953e",
+      "bytes": 3444,
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "query": "City name from KATO 114620100, Kazakhstan; countrycodes=kz"
+    },
+    "city-114820100.json": {
+      "url": "https://nominatim.openstreetmap.org/search",
+      "sha256": "d44131c7f37da27c2a85ede71f464420f4438a22fec36623975dd4ddaa9a7ed5",
+      "bytes": 7299,
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "query": "City name from KATO 114820100, Kazakhstan; countrycodes=kz"
+    },
+    "city-115420100.json": {
+      "url": "https://nominatim.openstreetmap.org/search",
+      "sha256": "79231f51dcbf8380e88680b6e9dd7228b4b98c68cdd7994a56515be91d05323e",
+      "bytes": 1001,
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "query": "City name from KATO 115420100, Kazakhstan; countrycodes=kz"
+    },
+    "city-117020100.json": {
+      "url": "https://nominatim.openstreetmap.org/search",
+      "sha256": "f37d7dc185fb7d33686b382635eeb79858eb61cf8052f9ebdc13a7528f84bb8c",
+      "bytes": 1702,
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "query": "City name from KATO 117020100, Kazakhstan; countrycodes=kz"
+    },
+    "city-153220100.json": {
+      "url": "https://nominatim.openstreetmap.org/search",
+      "sha256": "8365f12b80d0a6b1e37800f96f2d6c496364b823c59b84182858c84452537237",
+      "bytes": 7258,
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "query": "City name from KATO 153220100, Kazakhstan; countrycodes=kz"
+    },
+    "city-154820100.json": {
+      "url": "https://nominatim.openstreetmap.org/search",
+      "sha256": "34015f6a46b8301236a3d39b0153bd48d68b9c13e0ccf50196f465616f2ec3a6",
+      "bytes": 2215,
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "query": "City name from KATO 154820100, Kazakhstan; countrycodes=kz"
+    },
+    "city-154823100.json": {
+      "url": "https://nominatim.openstreetmap.org/search",
+      "sha256": "90950bfab66807939faeb3f9149c472bf99220b20e79bb7b9bc6653ac4f012cc",
+      "bytes": 3323,
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "query": "City name from KATO 154823100, Kazakhstan; countrycodes=kz"
+    },
+    "city-154825100.json": {
+      "url": "https://nominatim.openstreetmap.org/search",
+      "sha256": "5a8e3eacddcb434889d8e80a5025f3db19c3be79954d58f587bcd36525f8b4c7",
+      "bytes": 3279,
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "query": "City name from KATO 154825100, Kazakhstan; countrycodes=kz"
+    },
+    "city-155621100.json": {
+      "url": "https://nominatim.openstreetmap.org/search",
+      "sha256": "90ce224da2da6ad2759affdb05007039729ffe900257cc93437b1ff2e8520e69",
+      "bytes": 4777,
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "query": "City name from KATO 155621100, Kazakhstan; countrycodes=kz"
+    },
+    "city-156020100.json": {
+      "url": "https://nominatim.openstreetmap.org/search",
+      "sha256": "1eb39e752634c2734555bb8b05111afab17ec2c866f2fe93666fca03129f3c55",
+      "bytes": 2308,
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "query": "City name from KATO 156020100, Kazakhstan; countrycodes=kz"
+    },
+    "city-156420100.json": {
+      "url": "https://nominatim.openstreetmap.org/search",
+      "sha256": "426a0b8a01bf4dd62209074f82101fa573d88fcbab2d65eda042b9a07e6821c9",
+      "bytes": 7914,
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "query": "City name from KATO 156420100, Kazakhstan; countrycodes=kz"
+    },
+    "city-194020100.json": {
+      "url": "https://nominatim.openstreetmap.org/search",
+      "sha256": "5f82dd3c00f0a577e710f46b2d4ec81e63f70174b89a0951c9d3284b3fc6be35",
+      "bytes": 3707,
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "query": "City name from KATO 194020100, Kazakhstan; countrycodes=kz"
+    },
+    "city-195220100.json": {
+      "url": "https://nominatim.openstreetmap.org/search",
+      "sha256": "74043fca1b8fd10a05573f03a619664861988bb3e391b571ae9571dd8932b4d2",
+      "bytes": 4676,
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "query": "City name from KATO 195220100, Kazakhstan; countrycodes=kz"
+    },
+    "city-196220100.json": {
+      "url": "https://nominatim.openstreetmap.org/search",
+      "sha256": "748d0525a4a79d119a9cbfbfec445e1afb4a33a83fc8d234f3ff5e2ffa8d3b52",
+      "bytes": 5375,
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "query": "City name from KATO 196220100, Kazakhstan; countrycodes=kz"
+    },
+    "city-233620100.json": {
+      "url": "https://nominatim.openstreetmap.org/search",
+      "sha256": "669047ef1d7f3475174e2c4e36b5bc8350a149e83125325de1edaff0da590635",
+      "bytes": 1494,
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "query": "City name from KATO 233620100, Kazakhstan; countrycodes=kz"
+    },
+    "city-273620100.json": {
+      "url": "https://nominatim.openstreetmap.org/search",
+      "sha256": "64e78d231fd53059c5414713c8132c29da998391e11e0d0d8ffcfb55fb75d0b2",
+      "bytes": 6927,
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "query": "City name from KATO 273620100, Kazakhstan; countrycodes=kz"
+    },
+    "city-316020100.json": {
+      "url": "https://nominatim.openstreetmap.org/search",
+      "sha256": "c2682029863f3d85d7f27e43008111e974069cf21640cd28f3c732bc22265db8",
+      "bytes": 1639,
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "query": "City name from KATO 316020100, Kazakhstan; countrycodes=kz"
+    },
+    "city-316220100.json": {
+      "url": "https://nominatim.openstreetmap.org/search",
+      "sha256": "a7d8eade84fd7352afd6365f0fb069d12f9ceadd4f2816ad61babb56bcd353ca",
+      "bytes": 5986,
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "query": "City name from KATO 316220100, Kazakhstan; countrycodes=kz"
+    },
+    "city-316621100.json": {
+      "url": "https://nominatim.openstreetmap.org/search",
+      "sha256": "e96102439c1e133b4bce9bb71ad5770474bbf57d7616d6badbd2c156104838f8",
+      "bytes": 5916,
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "query": "City name from KATO 316621100, Kazakhstan; countrycodes=kz"
+    },
+    "city-333420100.json": {
+      "url": "https://nominatim.openstreetmap.org/search",
+      "sha256": "91a6cf2fce6f957f0532c2e92d9121c8e7f35bff12f37e618d750b5f35708dc8",
+      "bytes": 5514,
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "query": "City name from KATO 333420100, Kazakhstan; countrycodes=kz"
+    },
+    "city-334420100.json": {
+      "url": "https://nominatim.openstreetmap.org/search",
+      "sha256": "dcc064703426e06707c7e4a8441a3890e058f142a49fae9909b2a059ac5ae1fb",
+      "bytes": 6525,
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "query": "City name from KATO 334420100, Kazakhstan; countrycodes=kz"
+    },
+    "city-334620100.json": {
+      "url": "https://nominatim.openstreetmap.org/search",
+      "sha256": "3839acf460b8c97051f73f44202e9427add6da426efd40ebb7ebe9e76a1815e7",
+      "bytes": 2048,
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "query": "City name from KATO 334620100, Kazakhstan; countrycodes=kz"
+    },
+    "city-334820100.json": {
+      "url": "https://nominatim.openstreetmap.org/search",
+      "sha256": "522c80682bf4b071510d194be14ac10c27fb310e7e4edaa75740917ece314cb0",
+      "bytes": 1074,
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "query": "City name from KATO 334820100, Kazakhstan; countrycodes=kz"
+    },
+    "city-353220100.json": {
+      "url": "https://nominatim.openstreetmap.org/search",
+      "sha256": "24361bf9595573b9db64349ed58617ecf0b06695698f647e40aabbc41087c2c4",
+      "bytes": 8101,
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "query": "City name from KATO 353220100, Kazakhstan; countrycodes=kz"
+    },
+    "city-354820100.json": {
+      "url": "https://nominatim.openstreetmap.org/search",
+      "sha256": "33500b80c3bd85352152bac89d223b5252fe492bc2ac3787deff12bf06b5bb45",
+      "bytes": 1230,
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "query": "City name from KATO 354820100, Kazakhstan; countrycodes=kz"
+    },
+    "city-394420100.json": {
+      "url": "https://nominatim.openstreetmap.org/search",
+      "sha256": "ad1dd25ea8c6382ad08b41d07c1d9eb3364eea035b63fd1f1717e2568a4bcc24",
+      "bytes": 3983,
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "query": "City name from KATO 394420100, Kazakhstan; countrycodes=kz"
+    },
+    "city-395420100.json": {
+      "url": "https://nominatim.openstreetmap.org/search",
+      "sha256": "b9e59c0fa1ccaa258b8ccc917cc647e2b8e516a986ad98368262af2e0a8d822c",
+      "bytes": 4813,
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "query": "City name from KATO 395420100, Kazakhstan; countrycodes=kz"
+    },
+    "city-433220100.json": {
+      "url": "https://nominatim.openstreetmap.org/search",
+      "sha256": "9c80a6c75ce17239cfcff0ae263621f13d6f36cc5d6796d13fc53235325ab299",
+      "bytes": 1458,
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "query": "City name from KATO 433220100, Kazakhstan; countrycodes=kz"
+    },
+    "city-434423100.json": {
+      "url": "https://nominatim.openstreetmap.org/search",
+      "sha256": "795890460b531b668e2c2a50728ef9a2cf76cc021b39c8658e4543d8a13a86d2",
+      "bytes": 2289,
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "query": "City name from KATO 434423100, Kazakhstan; countrycodes=kz"
+    },
+    "city-475220100.json": {
+      "url": "https://nominatim.openstreetmap.org/search",
+      "sha256": "68abedc3e5edbeb57227c271554a4ba87927c73e00ab226d7ee1277ed8483786",
+      "bytes": 2443,
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "query": "City name from KATO 475220100, Kazakhstan; countrycodes=kz"
+    },
+    "city-593620100.json": {
+      "url": "https://nominatim.openstreetmap.org/search",
+      "sha256": "dc08428f9f9f837e1aed392521c7fb567f5069e8d610d158cd6a8380e9db6326",
+      "bytes": 1134,
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "query": "City name from KATO 593620100, Kazakhstan; countrycodes=kz"
+    },
+    "city-595220100.json": {
+      "url": "https://nominatim.openstreetmap.org/search",
+      "sha256": "824bec7746a80e57327c8f9f839d92bee06e8c89765d52fe41aec34dfea462e3",
+      "bytes": 1383,
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "query": "City name from KATO 595220100, Kazakhstan; countrycodes=kz"
+    },
+    "city-595620100.json": {
+      "url": "https://nominatim.openstreetmap.org/search",
+      "sha256": "f5f59e04cedc8248e7ce6dc0c68d52bb4d7fc721b0b064b1878d0fc10e7305b5",
+      "bytes": 7806,
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "query": "City name from KATO 595620100, Kazakhstan; countrycodes=kz"
+    },
+    "city-596020100.json": {
+      "url": "https://nominatim.openstreetmap.org/search",
+      "sha256": "1ef565b1d4e7b681c04d89d921411a3ca08833b16ef783fdd3fcb1446cdb0c0c",
+      "bytes": 2356,
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "query": "City name from KATO 596020100, Kazakhstan; countrycodes=kz"
+    },
+    "city-613820100.json": {
+      "url": "https://nominatim.openstreetmap.org/search",
+      "sha256": "d138f2eaba49ba8e974c2f074e201ed21e6a55708b5d2f1d5619481bb96597bc",
+      "bytes": 1177,
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "query": "City name from KATO 613820100, Kazakhstan; countrycodes=kz"
+    },
+    "city-615420100.json": {
+      "url": "https://nominatim.openstreetmap.org/search",
+      "sha256": "3876ebf8dfe48bee29689b155f770b359607234e4d2973881c0e6888239b8c4e",
+      "bytes": 3683,
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "query": "City name from KATO 615420100, Kazakhstan; countrycodes=kz"
+    },
+    "city-615820100.json": {
+      "url": "https://nominatim.openstreetmap.org/search",
+      "sha256": "ea6e1e63047c692dcf46130d0acb110b97280d006f869eaa540eb6095155cbcb",
+      "bytes": 6368,
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "query": "City name from KATO 615820100, Kazakhstan; countrycodes=kz"
+    },
+    "city-616420100.json": {
+      "url": "https://nominatim.openstreetmap.org/search",
+      "sha256": "495ffa154d64ba4f328f8239c67679829de115f9a9279b535459f8d8a4cf76b3",
+      "bytes": 3162,
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "query": "City name from KATO 616420100, Kazakhstan; countrycodes=kz"
+    },
+    "city-634620100.json": {
+      "url": "https://nominatim.openstreetmap.org/search",
+      "sha256": "dc36045f321c786ffaf3733c6dddc04e5344068706f9b5dc45cc290324b880fa",
+      "bytes": 4054,
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "query": "City name from KATO 634620100, Kazakhstan; countrycodes=kz"
+    },
+    "city-634820100.json": {
+      "url": "https://nominatim.openstreetmap.org/search",
+      "sha256": "9fe3e2f3ffdd54af05af6522fc80afe63edbc96f9368bec3b7f5610ac3ca8a84",
+      "bytes": 7475,
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "query": "City name from KATO 634820100, Kazakhstan; countrycodes=kz"
+    },
+    "city-634821100.json": {
+      "url": "https://nominatim.openstreetmap.org/search",
+      "sha256": "489ffcfbc22f7bb609511430fb6e93d17b1a1791a9a301c907edc6cbc120e85a",
+      "bytes": 1354,
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "query": "City name from KATO 634821100, Kazakhstan; countrycodes=kz"
+    },
+    "city-636820100.json": {
+      "url": "https://nominatim.openstreetmap.org/search",
+      "sha256": "b5f3444db969bfe4a94e4ef45eb4ac16e4c2066fa22bb8f38872286ab7e60eac",
+      "bytes": 7720,
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "query": "City name from KATO 636820100, Kazakhstan; countrycodes=kz"
+    },
+    "geocode-Қазалы.json": {
+      "url": "https://nominatim.openstreetmap.org/search?format=json&countrycodes=kz&q=%D2%9A%D0%B0%D0%B7%D0%B0%D0%BB%D1%8B",
+      "sha256": "aa5243ce552cf67612467d9a956a64ecca3a84525cde3dca4e1b432398e19ea9",
+      "bytes": 3231,
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0"
+    },
+    "population-table-43456.xlsx": {
+      "url": "https://stat.gov.kz/api/iblock/element/region/43456/file/ru/",
+      "bytes": 41554,
+      "sha256": "f0f28ad5177457d8860d1b4e81744de53943de41da1d60d62fe9b5410c22a8ab",
+      "credit": "Bureau of National Statistics, Republic of Kazakhstan",
+      "title": "Численность населения (по месяцам) 10.11.2026 40.6 Кб"
+    },
+    "population-table-45553.xlsx": {
+      "url": "https://stat.gov.kz/api/iblock/element/region/45553/file/ru/",
+      "bytes": 64508,
+      "sha256": "0e507b77ca0ad79d681c78b021ccc1371030e13d39024e076fb540ae994f5f9f",
+      "credit": "Bureau of National Statistics, Republic of Kazakhstan",
+      "title": "Численность населения (по месяцам) 04.11.2026 63 Кб"
+    },
+    "population-table-42198.xlsx": {
+      "url": "https://stat.gov.kz/api/iblock/element/region/42198/file/ru/",
+      "bytes": 15001,
+      "sha256": "cab945f7a94a88da5a8fa84679c988b5fcbfa21fa5b973b1fb25c076e4ebbcdb",
+      "credit": "Bureau of National Statistics, Republic of Kazakhstan",
+      "title": "Численность населения (по месяцам) 24.06.2026 14.6 Кб"
+    },
+    "population-table-18870.xlsx": {
+      "url": "https://stat.gov.kz/api/iblock/element/region/18870/file/ru/",
+      "bytes": 21762,
+      "sha256": "24356daefd832dd625ed72418b6f843ecb0427f1d4ebed649d030b145fbc1804",
+      "credit": "Bureau of National Statistics, Republic of Kazakhstan",
+      "title": "Численность населения (по месяцам) 06.11.2026 21.3 Кб"
+    },
+    "population-table-201544.xlsx": {
+      "url": "https://stat.gov.kz/api/iblock/element/region/201544/file/ru/",
+      "bytes": 54227,
+      "sha256": "a905ff21dc3b89a53ec659e4b7c85671538e965425f80b2261ddf3c5ff518606",
+      "credit": "Bureau of National Statistics, Republic of Kazakhstan",
+      "title": "Численность населения (по месяцам) 03.09.2026 53 Кб"
+    },
+    "population-table-316461.xlsx": {
+      "url": "https://stat.gov.kz/api/iblock/element/region/316461/file/ru/",
+      "bytes": 61371,
+      "sha256": "051783e70f934311d7631500b4c1d4020a0b7053147fc4ec99e7db803479adb7",
+      "credit": "Bureau of National Statistics, Republic of Kazakhstan",
+      "title": "Численность населения (по месяцам) 05.11.2026 59.9 Кб"
+    },
+    "population-table-11899.xlsx": {
+      "url": "https://stat.gov.kz/api/iblock/element/region/11899/file/ru/",
+      "bytes": 38145,
+      "sha256": "5aaa9674f983809a02e81cf9e8dde6b83539b609c62004001036c0c8f7aa4a83",
+      "credit": "Bureau of National Statistics, Republic of Kazakhstan",
+      "title": "Численность населения (по месяцам) 10.11.2026 37.3 Кб"
+    },
+    "population-table-514906.xlsx": {
+      "url": "https://stat.gov.kz/api/iblock/element/region/514906/file/ru/",
+      "bytes": 54531,
+      "sha256": "e3a4b1b3c7f86005e4e176615823f45a294e2fad0cbd49f017a9e748f397935e",
+      "credit": "Bureau of National Statistics, Republic of Kazakhstan",
+      "title": "Численность населения (по месяцам) 03.11.2026 53.3 Кб"
+    },
+    "population-table-16039.xlsx": {
+      "url": "https://stat.gov.kz/api/iblock/element/region/16039/file/ru/",
+      "bytes": 61058,
+      "sha256": "28d2a56eaece7c19480bc71031ca51958f423cb86f381c869c88e31311374726",
+      "credit": "Bureau of National Statistics, Republic of Kazakhstan",
+      "title": "Численность населения (по месяцам) 10.11.2026 59.6 Кб"
+    },
+    "population-table-12693.xlsx": {
+      "url": "https://stat.gov.kz/api/iblock/element/region/12693/file/ru/",
+      "bytes": 82150,
+      "sha256": "5181d1c048dc41f3c89732efff400eb78aba86451fffddfcba86a95109fc264c",
+      "credit": "Bureau of National Statistics, Republic of Kazakhstan",
+      "title": "Численность населения (по месяцам) 10.11.2026 80.2 Кб"
+    },
+    "population-table-518044.xlsx": {
+      "url": "https://stat.gov.kz/api/iblock/element/region/518044/file/ru/",
+      "bytes": 21290,
+      "sha256": "58c9a446d95e41149632501fe90f6f7cfccf8a17f15a55d43e713e0ca98ba7c5",
+      "credit": "Bureau of National Statistics, Republic of Kazakhstan",
+      "title": "Численность населения (по месяцам) 09.11.2026 20.8 Кб"
+    },
+    "population-table-87806.xlsx": {
+      "url": "https://stat.gov.kz/api/iblock/element/region/87806/file/ru/",
+      "bytes": 31008,
+      "sha256": "bcef9832261024d2dd050ee3f9c223149ad99abbce9e51b903c42ecbc2d13b02",
+      "credit": "Bureau of National Statistics, Republic of Kazakhstan",
+      "title": "Численность населения (по месяцам) 28.10.2026 30.3 Кб"
+    },
+    "population-table-42410.xlsx": {
+      "url": "https://stat.gov.kz/api/iblock/element/region/42410/file/ru/",
+      "bytes": 68006,
+      "sha256": "5cd3361cfd56e74dcb8567b16668417eb30316dbd1ea0bd55bf28620c753cef8",
+      "credit": "Bureau of National Statistics, Republic of Kazakhstan",
+      "title": "Численность населения (по месяцам) 05.11.2026 66.4 Кб"
+    },
+    "population-table-494849.xlsx": {
+      "url": "https://stat.gov.kz/api/iblock/element/region/494849/file/ru/",
+      "bytes": 56844,
+      "sha256": "272e3e7c890dd094d5ff0d5627ba7a78b0925732079e3bed8ba685f67d3122d1",
+      "credit": "Bureau of National Statistics, Republic of Kazakhstan",
+      "title": "Численность населения (по месяцам) 10.11.2026 55.5 Кб"
+    },
+    "population-table-46336.xlsx": {
+      "url": "https://stat.gov.kz/api/iblock/element/region/46336/file/ru/",
+      "bytes": 155136,
+      "sha256": "5a1c039a0b4d0db057d7cae4cac5a1ed7c115e319c97530f24f4c8bc4668fa2d",
+      "credit": "Bureau of National Statistics, Republic of Kazakhstan",
+      "title": "Численность населения (по месяцам) 08.09.2026 151.5 Кб"
+    },
+    "population-table-184375.xlsx": {
+      "url": "https://stat.gov.kz/api/iblock/element/region/184375/file/ru/",
+      "bytes": 47214,
+      "sha256": "705421e098892c02cd43a3fedd172cd095059564c45c8e25f7bc25a5e91f43bb",
+      "credit": "Bureau of National Statistics, Republic of Kazakhstan",
+      "title": "Численность населения по месяцам 10.11.2026 46.1 Кб"
+    },
+    "population-table-19888.xlsx": {
+      "url": "https://stat.gov.kz/api/iblock/element/region/19888/file/ru/",
+      "bytes": 98399,
+      "sha256": "4d118a5fadad418c23db825b2018fbe82eb2b7644b5c09470e03aeac7acac336",
+      "credit": "Bureau of National Statistics, Republic of Kazakhstan",
+      "title": "Численность населения по месяцам 09.11.2026 96.1 Кб"
+    },
+    "population-table-52538.xlsx": {
+      "url": "https://stat.gov.kz/api/iblock/element/region/52538/file/ru/",
+      "bytes": 47586,
+      "sha256": "c41ee103d38c9ef4a54f646ef3618cf170d3ed35a4646939b39e7928fe162de7",
+      "credit": "Bureau of National Statistics, Republic of Kazakhstan",
+      "title": "Численность населения (месяц) 09.09.2026 46.5 Кб"
+    },
+    "population-table-19513.xlsx": {
+      "url": "https://stat.gov.kz/api/iblock/element/region/19513/file/ru/",
+      "bytes": 59904,
+      "sha256": "3af2a6a60073204b6c960c4e4a7d25c0434f8b447ba07fc66ab3ecddceedca56",
+      "credit": "Bureau of National Statistics, Republic of Kazakhstan",
+      "title": "Численность населения Павлодарской области 16.11.2026 58.5 Кб"
+    },
+    "population-table-44405.xlsx": {
+      "url": "https://stat.gov.kz/api/iblock/element/region/44405/file/ru/",
+      "bytes": 69796,
+      "sha256": "797103e985ef327aa91a425219e63a5ee3f1d99314aeb00908438fb958524646",
+      "credit": "Bureau of National Statistics, Republic of Kazakhstan",
+      "title": "Численность населения на начало периода (по месяцам) 06.11.2026 68.2 Кб"
+    },
+    "population-ulytau-converted.xlsx": {
+      "url": "https://stat.gov.kz/api/iblock/element/region/46336/file/ru/",
+      "credit": "Bureau of National Statistics, Republic of Kazakhstan",
+      "bytes": 57182,
+      "sha256": "7029b91337ac03d513e6a7663e5736eaed732e333fe25415369dc1861c0bd317",
+      "transformation": "Lossless XLS to XLSX conversion using SheetJS 0.18.5, shared strings, for the existing readXlsx helper",
+      "original": "population-table-46336.xlsx"
+    },
+    "district-population.json": {
+      "url": "https://stat.gov.kz/ru/region/",
+      "bytes": 150333,
+      "sha256": "334406934a63538f2e37fcbd5f2a915cb8e4441ee52a74c737321e5669bff18b",
+      "credit": "Bureau of National Statistics, Republic of Kazakhstan",
+      "role": "Reviewed normalized values with workbook, worksheet, row and column provenance for every metric; source workbooks retained alongside this file"
+    },
+    "population-index.json": {
+      "url": "https://stat.gov.kz/ru/region/",
+      "bytes": 5639,
+      "sha256": "1094732f86c8143ca4d9ee69ef2fb1ecadb4d40689b5209f407fbeacfc1a1778",
+      "credit": "Bureau of National Statistics, Republic of Kazakhstan",
+      "role": "Official monthly workbook inventory"
+    },
+    "population-pavlodar-converted.xlsx": {
+      "url": "https://stat.gov.kz/api/iblock/element/region/19513/file/ru/",
+      "credit": "Bureau of National Statistics, Republic of Kazakhstan",
+      "bytes": 51639,
+      "sha256": "8fae7c480cf98b8c70496f80bc0244c4390ba49441e439e1e1264ebbf55000c4",
+      "transformation": "Lossless XLS to XLSX conversion using SheetJS 0.18.5, shared strings, for the existing readXlsx helper",
+      "original": "population-table-19513.xlsx"
+    },
+    "boundary-review.json": {
+      "url": "https://adilet.zan.kz/",
+      "bytes": 1905,
+      "sha256": "9b30f0ef7de2dd7889a8d850b765963adb5fdacfb4f5b3b21bedfb97273c69ef",
+      "role": "Reviewed legal boundary changes, their primary source URLs and explicit outstanding geometry limitations"
+    },
+    "osm-20593940.xml": {
+      "url": "https://api.openstreetmap.org/api/0.6/relation/20593940/full",
+      "bytes": 129080,
+      "sha256": "4578e26f7f58736ebe10a5f46f9999eebeaf093c4e880d3dc2ed1302f0129e40",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0"
+    },
+    "osm-3479876.xml": {
+      "url": "https://api.openstreetmap.org/api/0.6/relation/3479876/full",
+      "bytes": 68225,
+      "sha256": "f2ba81e93da6e609064dfe99ce6a42130bf2a838462f9a73cd4c7fe5ae320caf",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0"
+    },
+    "osm-3482819.xml": {
+      "url": "https://api.openstreetmap.org/api/0.6/relation/3482819/full",
+      "bytes": 140768,
+      "sha256": "1bbd065ba4900971b8a404d1c8b5ac2cb899a58f644eea1c07210b529d2008af",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0"
+    },
+    "osm-3486954.xml": {
+      "url": "https://api.openstreetmap.org/api/0.6/relation/3486954/full",
+      "bytes": 117797,
+      "sha256": "474155c57479fe5c4de1d18ac2d1d2bc63c000d02cdafd4486d81d87b2f1a7ea",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0"
+    },
+    "osm-8593081.xml": {
+      "url": "https://api.openstreetmap.org/api/0.6/relation/8593081/full",
+      "bytes": 71409,
+      "sha256": "a05f9a845d314cadf4689237ff368e4ca33e62e185b0b15fc6432693e0eb22ca",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0"
+    },
+    "egkn-current-cities-raw.json": {
+      "url": "https://map.gov4c.kz/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=egkn:districts&resourceID=districts.186,districts.187,districts.147&outputFormat=application/json",
+      "bytes": 53543,
+      "sha256": "0ba893ac195bfc36a5eca7aa4633f943a0961b07d067e3b8b9ffc1d9d4f73cea",
+      "credit": "Government for Citizens, public cadastral map",
+      "role": "Read-only boundary comparison evidence; native local projection and unrevised footprint; not rendered as current geometry"
+    }
+  }
+}

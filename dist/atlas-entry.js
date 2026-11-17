@@ -3,11 +3,13 @@
 (()=>{
  const registry=window.AtlasCountries,countries=registry.countries;
  const storageKey='boundary-atlas-country-v1';
+ const legacySoviet=/^#soviet-union-1988(?:\/view=(.*))?$/i.exec(location.hash);
+ if(legacySoviet){let suffix='';try{if(legacySoviet[1]){const view=JSON.parse(decodeURIComponent(legacySoviet[1]));view.country='russia';view.scope='history';view.layers=Object.fromEntries(Object.entries(view.layers||{}).map(([id,value])=>[id.replace(/^su-/,'ru-'),value]));suffix='&view='+encodeURIComponent(JSON.stringify(view));}}catch{}history.replaceState(null,'','#russia/history=1988'+suffix);}
  const oldRepublic=hash=>/^#china-1949(?:\/view=.*)?$/i.test(hash);
  const fromHash=hash=>registry.route.exec(hash)?.[1].toLowerCase()||(hash.startsWith('#place=')||oldRepublic(hash)?'china':null);
  let saved;try{saved=localStorage.getItem(storageKey);}catch{}
  const allowed=country=>window.AtlasDev.allows(country);
- const requested=fromHash(location.hash)||(countries[saved]?saved:registry.fallback);
+ const requested=fromHash(location.hash)||(saved==='soviet-union-1988'?'russia':countries[saved]?saved:registry.fallback);
  const initial=allowed(requested)?requested:registry.fallback;
  // Begin China's small search index before styles and modules. Geometry sources
  // load independently; counties load only when their parent area is selected.
@@ -19,7 +21,7 @@
  const root=document.documentElement;root.dataset.atlas=initial;root.dataset.starting='true';
  function persist(country){try{localStorage.setItem(storageKey,country);}catch{}}
  function setUrl(country,preservePlace=true){
-  if(preservePlace&&(location.hash.startsWith('#'+country+'/view=')||country==='china'&&(/^#china\/history=\d+(?:&view=.*)?$/.test(location.hash)||oldRepublic(location.hash))))return;
+  if(preservePlace&&(location.hash.startsWith('#'+country+'/view=')||countries[country]?.map?.history&&location.hash.startsWith('#'+country+'/history=')||country==='china'&&(/^#china\/history=\d+(?:&view=.*)?$/.test(location.hash)||oldRepublic(location.hash))))return;
   const place=country==='china'&&preservePlace?(/^#(?:china\/)?place=(.*)$/.exec(location.hash)?.[1]??null):null;
   history.replaceState(null,'',location.pathname+location.search+'#'+country+(place!==null?'/place='+place:''));
  }

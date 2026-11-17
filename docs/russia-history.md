@@ -1,0 +1,29 @@
+# Russia historical snapshots
+
+Russia’s **Historical snapshot** button opens the shared US-style timeline with 40 selected milestones from Kievan Rus’ in 882 to the Soviet Union’s dissolution in 1991. Blue shows earlier territory; ochre shows substantial additions since the preceding mapped milestone. Rus’ neighbours, imperial protectorates and independent successor states have distinct statuses.
+
+The timeline replaces the data in Russia’s existing first-level sources. It retains the same four fill, border and selection layers, without adding map sources or layers. The original modern source URLs, paint and filters return when leaving history. Date changes within the historical mesh only repaint and refilter its shared cells. Leaving releases the historical geometry and cancels pending requests.
+
+The existing historical tile budget also follows the dated input when it is loaded into a regional source. It bounds cached geometry and avoids retaining an unused editable copy; modern inputs restore the normal policy. Selection outlines use the same packed worker input, and superseded outline URLs are released after their source finishes loading.
+
+All forty frames use one resolved physical partition. Its paths reference runs of vertices in the existing detailed country files, including Russia’s full-resolution `first.bin`. New coordinates are limited to historical political lines and their intersections with that land. The 1956, 1988 and 1991 frames reuse the existing Soviet file’s republic ownership and inland paths within the same partition. The 1988 frame retains the fifteen republics’ flags, period capital names, reported areas and 1989 census counts. Flag date (1 January 1988), boundary date (1 January 1989) and census date (12 January 1989) stay explicit. The final frame labels the fifteen successor states as independent, with Crimea in Ukraine. The old Soviet URL opens the 1988 point in the Russia timeline.
+
+## Sources and limits
+
+The retained input is a 58-record subset of Cliopatria v0.2.1 under CC BY 4.0. Original feature properties and geometry are compressed without editing. The build resolves historical ownership on the existing detailed land, removes rough source coastlines in a coastal reconciliation band and extends inland ownership over the canonical land within the same connected landmass. It retains bays, lagoons and lake holes. Detached islands without an inland core inherit nearby ownership within the same modern region, or use the retained reference when no such land is close. Late Soviet coastal islands inherit their corresponding republic. The retained source’s 50th-parallel Sakhalin frontier remains straight through the coastal band. Russian America directly reuses the existing Alaska land geometry, with its present-day boundary as a disclosed generalized reference; the retained chronology determines when it is present. The result is one topology with per-date ownership; the asset stores external path references instead of another copy of the coast. The world overview is used only to distinguish water from land around the reconciliation band; none of its coordinates enters the historical geometry. The history source manifest records all retained date ranges, source hashes, processing and references.
+
+These are selected, approximate extents. They do not survey local administration, the full geography of Indigenous polities, civil-war fronts or effective control throughout claimed territory. Kievan Rus’ is explicitly described as shared Ukrainian, Belarusian and Russian history.
+
+The 1237 frame resolves the major Rus’ principalities separately; it does not use the source’s tiny remnant labelled Kievan Rus’ as their collective extent. The artificial 180° cut in the older source is extended over the connected Chukotka mainland wherever that source reaches the cut.
+
+Documented corrections include post-annexation source dates for Novgorod and Tver, the generalized 1653 outline at the 1648 Pacific milestone, canonical Finnish land to repair rough coastal omissions, the 1811/1812 union to avoid treating French occupation as a territorial cession, the 1867 removal of Alaska, and a 1913 reference for the pre-war empire. Bessarabia enters at the 1812 cession; earlier Ottoman-frontier occupation and wartime occupation of Romanian land are excluded. Samarkand is excluded before its 1868 conquest, using the existing province as an explicit generalized correction proxy. The 1922 external reconstruction distinguishes allied Bukhara and Khorezm from the founding union republics. The post-war frame uses the 1953 outline to exclude occupation zones in Poland and Germany; small intervening border changes are generalized. The 1956 republic divisions use the disclosed late-Soviet reference rather than claiming to be surveyed 1956 borders.
+
+MSU’s existing research and non-commercial-use terms and attribution remain in the linked Soviet source record. The history source file also links the Library of Congress, the Alaska purchase treaty and the US Department of State’s dissolution history.
+
+The final frontier corrections are also checked against the [Uzbekistan Ministry of Foreign Affairs history](https://gov.uz/en/mfa/sections/view/14508) and the [1812 Treaty of Bucharest reference at Museum With No Frontiers](https://sharinghistory.museumwnf.org/database_item.php?id=object%3BAWE%3Brm%3B38%3Ben).
+
+## Local verification
+
+Run `npm run build:russia-history` to rebuild from retained sources. Run `npm run test:russia-history` for territorial ownership, topology, exact shoreline reuse at Sakhalin, Kamchatka, Chukotka, Crimea, Finland, the Curonian Lagoon and Alaska, navigation, selection, theme, phone layout and restoration checks. The existing Soviet data validator still checks the original geometry and assets.
+
+All work stays local until publication is explicitly requested.

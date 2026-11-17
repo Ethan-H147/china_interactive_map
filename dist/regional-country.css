@@ -113,3 +113,4 @@ body[data-atlas=uruguay],.country-option[data-atlas=uruguay]{--header-stripe:lin
 
 /* Keep Vietnamese stacked tone marks in the same glyph as their vowel. */
 #vietnam-sidebar .country-selection h2,#vietnam-sidebar .first-quiz-question{font-family:'Times New Roman',serif}
+#australia-sidebar .country-selection-heading>h2.long-name{font-size:calc(var(--place-heading-size,36px)*.9)!important}

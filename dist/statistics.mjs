@@ -21,7 +21,7 @@ export function clearStatistics(anchor){
  if(panel){panel.dataset.region='';panel.hidden=true;}
  const population=parent.querySelector(':scope > .archipelago-population');if(population)population.hidden=true;
 }
-function renderPopulation(panel,record,data,onRelatedPlace){
+function renderPopulation(panel,record,data,onRelatedPlace,showExactDate=true){
  const metric=record.population;panel.replaceChildren();panel.hidden=!metric;if(!metric)return;
  const heading=element('h3',metric.label||'Population');
  if(metric.infoNotes&&(metric.scopeNote||metric.coverageNote)){
@@ -31,15 +31,15 @@ function renderPopulation(panel,record,data,onRelatedPlace){
   details.append(summary,body);details.addEventListener('keydown',event=>{if(event.key==='Escape'){details.open=false;summary.focus();event.stopPropagation();}});row.append(heading,details);panel.append(row);
  }else panel.append(heading);
  panel.append(element('p',metric.displayValue||new Intl.NumberFormat('en-US').format(metric.value),'population-total'));
- panel.append(element('p',metric.periodLabel||metric.year+(metric.method==='projection'?' midyear projection':metric.method==='estimate'?' midyear estimate':' census'),'population-scope'));
+ panel.append(element('p',(showExactDate&&metric.periodLabel)||metric.year+(metric.method==='projection'?' midyear projection':metric.method==='estimate'?' midyear estimate':' census'),'population-scope'));
  if(metric.scopeNote&&!metric.infoNotes)panel.append(element('p',metric.scopeNote,'population-note'));
  if(metric.relatedPlace&&onRelatedPlace){const button=element('button',metric.relatedPlace.label,'quiet-button');button.type='button';button.onclick=()=>onRelatedPlace(metric.relatedPlace.id);panel.append(button);}
  if(metric.coverageNote&&!metric.infoNotes)panel.append(element('p',metric.coverageNote,'population-note'));
  const meta=element('p',null,'population-period');
- if(metric.date){const full=metric.date.length===7?metric.date+'-01':metric.date;meta.append(document.createTextNode(new Intl.DateTimeFormat('en-GB',{...(metric.date.length===10?{day:'numeric'}:{}),month:'long',year:'numeric',timeZone:'UTC'}).format(new Date(full+'T00:00:00Z'))+' · '));}
+ if(metric.date&&showExactDate){const full=metric.date.length===7?metric.date+'-01':metric.date;meta.append(document.createTextNode(new Intl.DateTimeFormat('en-GB',{...(metric.date.length===10?{day:'numeric'}:{}),month:'long',year:'numeric',timeZone:'UTC'}).format(new Date(full+'T00:00:00Z'))+' · '));}
  meta.append(link(data.sources[metric.source],'Source'));splitMetadata(meta);panel.append(meta);
 }
-export async function renderStatistics(anchor,key,provided,{onRelatedPlace,populationCard=false}={}){
+export async function renderStatistics(anchor,key,provided,{onRelatedPlace,populationCard=false,populationDateDetails=true}={}){
  if(!anchor?.parentElement)return;
  let population;
  if(populationCard||statisticsUrl(key.split(':')[0])!==baseStatistics){
@@ -57,7 +57,7 @@ export async function renderStatistics(anchor,key,provided,{onRelatedPlace,popul
   const data=provided||await loadStatistics(key);if(panel.dataset.region!==key)return;
   const record=data.regions[key];panel.replaceChildren();
   if(!record){panel.append(element('p','Statistics have not been verified for this division.','statistics-note'));return;}
-  if(population)renderPopulation(population,record,data,onRelatedPlace);
+  if(population)renderPopulation(population,record,data,onRelatedPlace,populationDateDetails);
   if(record.population&&!['area','gdp','gdpPerCapita','gva','gvaPerCapita','realGdp','realGva','exports'].some(field=>record[field])){panel.hidden=true;return;}
   const area=element('section',null,'statistics-area'),economy=element('section',null,'statistics-economy');
   const hasEconomy=!countries[key.split(':')[0]]?.regionalStatistics||['gdp','gva','realGdp','realGva','exports'].some(field=>record[field]);

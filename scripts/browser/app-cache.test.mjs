@@ -1,5 +1,5 @@
 import assert from'node:assert/strict';
-export default [390,820].map(width=>({name:'Refresh app files preserves sign-in, settings, drafts and quiz records '+width,options:{width,height:1000,mobile:width===390},async run(p,base){
+const refreshScenarios=[390,820].map(width=>({name:'Refresh app files preserves sign-in, settings, drafts and quiz records '+width,options:{width,height:1000,mobile:width===390},async run(p,base){
  await p.send('Page.navigate',{url:base+'/refresh.html#united-kingdom'});await p.waitFor("!!document.getElementById('refresh-app')");
  const entries={'boundary-atlas-auth-v1':'keep-signed-in','boundary-atlas-country-v1':'united-kingdom','boundary-atlas-settings-v1':'keep-settings','boundary-atlas-quiz-records-v1:account':'keep-40-rounds','boundary-atlas-quiz-pending-v1:account:attempt':'keep-pending','boundary-atlas-first-quiz-v1':'keep-unfinished-round'};
  await p.evaluate(`(async()=>{for(const[k,v]of Object.entries(${JSON.stringify(entries)}))localStorage.setItem(k,v);for(const name of['atlas-'+ 'a'.repeat(40),'atlas-v2-'+ 'b'.repeat(40),'unrelated-cache']){const c=await caches.open(name);await c.put('/old-countries.js',new Response('old app copy'));}})()`);
@@ -8,3 +8,12 @@ export default [390,820].map(width=>({name:'Refresh app files preserves sign-in,
  await p.screenshot('refresh-app-'+width);await p.tap('#refresh-app');await p.waitFor("document.title==='App refreshed'",{timeout:45000});assert.equal(await p.evaluate('location.hash'),'#united-kingdom');assert(await p.evaluate("new URL(location.href).searchParams.has('app-refreshed')"));
  assert.deepEqual(await p.evaluate(`Object.fromEntries(Object.keys(${JSON.stringify(entries)}).map(k=>[k,localStorage.getItem(k)]))`),entries);assert.deepEqual(await p.evaluate('caches.keys()'),['unrelated-cache']);assert(await p.evaluate('document.documentElement.scrollWidth<=innerWidth'));
 }}));
+export default [...refreshScenarios,{name:'Local preview keeps all levels with a persistent stale application cache',options:{width:1280,height:900},async run(p,base){
+ await p.open(base,'#australia');await p.evaluate('navigator.serviceWorker.ready.then(()=>true)');
+ await p.evaluate('(async()=>{const c=await caches.open("unrelated-cache");await c.put("/keep",new Response("keep"));localStorage.setItem("preview-saved-draft","keep");})()');
+ for(let i=0;i<3;i++){
+  await p.evaluate('(async()=>{const version=await(await fetch("version.json",{cache:"no-store"})).json(),text=await(await fetch("countries.js",{cache:"no-store"})).text(),stale=text.replace("thirdLabel:\'Suburbs & localities\',","").replace("Find a state, council, suburb or locality","Find a state, council or territory"),c=await caches.open("atlas-v2-"+(version.version||"a".repeat(40)));await c.put(new URL("countries.js",location.href).href,new Response(stale,{headers:{"Content-Type":"text/javascript"}}));})()');
+  await p.send('Page.reload');await p.settle();assert(await p.evaluate('document.getElementById("mode-third").checkVisibility()'),'A cached two-level registry cannot hide the third-level button');assert(await p.evaluate('document.getElementById("au-search").placeholder.includes("suburb")'));assert.equal(await p.evaluate('localStorage.getItem("preview-saved-draft")'),'keep');assert(await p.evaluate('(async()=>{const names=await caches.keys();return names.includes("unrelated-cache")&&!names.some(n=>n.startsWith("atlas-"));})()'));
+ }
+ await p.tap('#mode-third');await p.evaluate('void map.jumpTo({center:[151.08,-33.82],zoom:11})');await p.waitFor('!!map.getLayer("australia-third-fill")&&map.queryRenderedFeatures({layers:["australia-third-fill"]}).length>0',{timeout:60000});
+}}];

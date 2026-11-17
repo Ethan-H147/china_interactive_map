@@ -52,7 +52,7 @@ export function createHistoricView(map,{country,base,config,borders:engine,fill,
  let request=0,active=false,year,dock,applied=false,original,focus=null,selectedRecord=null,epoch=0;
  try{year=+localStorage.getItem(config.store)||null;}catch{}
  const neighbour=config.neighbour;
- const context=neighbour&&createHistoricBorders(map,{country:neighbour.country,base:new URL('../'+neighbour.country+'/',new URL(base,document.baseURI)).href,file:'history/borders.bin',tag:'history-context',frontierLines:true,lineLayer:country+'-first-lines',scene});
+ const context=neighbour&&!config.vectorTiles?createHistoricBorders(map,{country:neighbour.country,base:new URL('../'+neighbour.country+'/',new URL(base,document.baseURI)).href,file:'history/borders.bin',tag:'history-context',frontierLines:true,lineLayer:country+'-first-lines',scene}):null;
  let contextUnit=null,contextFrame=null,contextRequest=0;
  const hostLines=createHostLines(map,{country,scene,own:id=>engine.layers.has(id)||context?.layers.has(id)});
  const labelFaces=new Map();
@@ -67,7 +67,9 @@ export function createHistoricView(map,{country,base,config,borders:engine,fill,
   detailFile=file;
  }
  function syncControls(){
-  if(!active||!applied)return;const visible=controls();if(!visible)return;
+  if(!active||!applied)return;const visible=controls();
+  if(config.reuseSources||config.vectorTiles){engine.syncControls(visible||{});return;}
+  if(!visible)return;
   for(const id of engine.layers)if(map.getLayer(id)&&(/-(lines|frontiers|outer)$/.test(id)))map.setLayoutProperty(id,'visibility',visible.borders?'visible':'none');
   if(map.getLayer(detailId))map.setLayoutProperty(detailId,'visibility',visible.details?'visible':'none');
  }
@@ -121,6 +123,7 @@ export function createHistoricView(map,{country,base,config,borders:engine,fill,
 
  function apply(){
   if(!active||!engine.data||!map.getLayer(fillLayer))return;
+  if(config.reuseSources||config.vectorTiles){engine.draw(current(),colorOf);engine.outline(current(),currentUnit(),{highlight:true});applied=true;syncControls();syncFrontiers();labelFaces.clear();onContextChange();return;}
   // hostFills: every layer drawing the present-day first level; the snapshot draws above fillLayer.
   if(!applied)original=new Map(hostFills.filter(id=>map.getLayer(id)).map(id=>[id,scene?.basePaint(id,'fill-color')??map.getPaintProperty(id,'fill-color')]));
   const hostColors=config.reuseHostGeometry&&[...engine.data.hostFaces].flatMap(([face,id])=>{
@@ -151,7 +154,12 @@ export function createHistoricView(map,{country,base,config,borders:engine,fill,
  }
  function restore(){
   contextRequest++;context?.remove();contextUnit=null;
-  if(!applied)return;applied=false;engine.remove();hostLines();
+  if(!applied)return;applied=false;engine.remove();
+  if(config.reuseSources||config.vectorTiles){
+   for(const [id,{base,applied}]of savedFilters)if(map.getLayer(id)&&JSON.stringify(map.getFilter(id))===JSON.stringify(applied))map.setFilter(id,base??null);savedFilters.clear();
+   labelFaces.clear();onContextChange();return;
+  }
+  hostLines();
   if(map.getLayer(detailId))map.removeLayer(detailId);if(map.getSource(detailId))map.removeSource(detailId);detailFile=null;
   for(const [id,{base,applied}]of savedFilters)if(map.getLayer(id)&&JSON.stringify(map.getFilter(id))===JSON.stringify(applied))map.setFilter(id,base??null);savedFilters.clear();
   for(const [id,color] of original)if(map.getLayer(id))map.setPaintProperty(id,'fill-color',color);
@@ -165,7 +173,7 @@ export function createHistoricView(map,{country,base,config,borders:engine,fill,
   const entries=years().map(y=>{const next=engine.data.years[y].config,changed=next!==previous;previous=next;return {year:y,changed,mark:config.labelTicks||!config.periods&&y%20===0};});
   entries.push(...(config.links||[]).map(link=>({...link,mark:config.labelTicks})));
   timeline=buildHistoryDock({id:country+'-history-dock',label:config.label,entries,yearText,onSelect:next=>setYear(next,true),onResize:insets});
-  dock=timeline.dock;if(config.periods)dock.dataset.periods='true';
+  dock=timeline.dock;if(config.periods||config.spacedTicks)dock.dataset.periods='true';
  }
  function renderDock(focusTick=false){
   if(!dock)buildDock();
@@ -189,6 +197,7 @@ export function createHistoricView(map,{country,base,config,borders:engine,fill,
   timeline.showYear(year,focusTick);
  }
  async function setYear(next,focusTick=false){
+  next=config.resolveYear?.(next)??next;
   const token=++request;
   if(!active||!engine.data?.years[next]||next===year)return;
   const nextConfig=engine.data.configs[engine.data.years[next].config],redraw=!applied||nextConfig!==current();
@@ -243,6 +252,7 @@ export function createHistoricView(map,{country,base,config,borders:engine,fill,
   const local=!config.standalone&&unit&&config.localName?.(unit);
   if(local){const names=el('p','korean-name');names.lang='ko';names.append(el('span',undefined,local[0]));if(local[1]){const hanja=el('span','hanja-name',' '+local[1]);hanja.lang='ko-Hani';names.append(hanja);}anchor.append(names);}
   if(unit){
+   if(config.provinceCards&&year>=1988){anchor.hidden=true;return;}
    const version=unit.version&&engine.data.versions.find(v=>v.id===unit.version);
    if(!config.standalone)anchor.append(el('p','election-unit',config.kindLabel(unit,kind(unit))));
    const facts=el('dl','election-facts');
@@ -253,6 +263,7 @@ export function createHistoricView(map,{country,base,config,borders:engine,fill,
    if(facts.childElementCount)anchor.append(facts);
    const note=config.describe(unit,kind(unit));if(note)anchor.append(el('p','country-note',note));
    if(version?.change)anchor.append(el('p','history-change',version.change+' '+version.citation));
+   config.renderUnit?.(anchor,unit,year);
   }
   anchor.append(sourceLink());
  }
@@ -269,7 +280,7 @@ export function createHistoricView(map,{country,base,config,borders:engine,fill,
   const face=engine.pick(point,pickConfig());
   if(config.standalone){if(face!=null)focus={face,location:map.unproject(point)};engine.outline(current(),currentUnit(),{highlight:true});onChange();return {standalone:true,bounds:focusBounds(currentUnit())};}
   if(face==null)return null;
-  const unit=engine.unit(current(),face);focus={face,place:unitPlace(unit)};
+  const unit=engine.unit(current(),face);focus={face,place:unitPlace(unit)||(config.vectorTiles?engine.hostPlace?.(face):null)};
   return {place:focus.place,bounds:unit?.bounds};
  }
  function unitLabels(){
@@ -281,11 +292,11 @@ export function createHistoricView(map,{country,base,config,borders:engine,fill,
  function hoverAt(point){
   if(!active||!engine.data)return undefined;
   const face=engine.pick(point,pickConfig()),unit=face!=null&&engine.unit(current(),face);
-  return unit?{id:'history-'+unit.key,en:unit.name,kind:config.kindLabel(unit,kind(unit))}:contextUnit&&context.unit(contextFrame,context.pick(point))===contextUnit?{id:'history-'+contextUnit.key,en:contextUnit.name,kind:'Colonial claim'}:null;
+  return unit?{id:'history-'+unit.key,en:unit.name,kind:config.kindLabel(unit,kind(unit)),...(engine.hoverIds?{hoverIds:engine.hoverIds(current(),unit)}:{})}:contextUnit&&context.unit(contextFrame,context.pick(point))===contextUnit?{id:'history-'+contextUnit.key,en:contextUnit.name,kind:'Colonial claim'}:null;
  }
  const appearance=()=>{
   if(!active||!engine.data||!snapshot())return;
-  if(current()?.file){apply();renderDock();onChange();}
+  if(current()?.file||config.vectorTiles){apply();renderDock();onChange();}
   else if(config.matchLegendPaint)renderDock();
  };
  const insets=()=>dispatchEvent(new Event('atlas-map-insets'));
@@ -293,12 +304,13 @@ export function createHistoricView(map,{country,base,config,borders:engine,fill,
   get hasDetails(){return !!(active&&engine.data&&snapshot()&&current()?.detail);},get active(){return active;},get currentYear(){return year;},
   async enter(initialYear){
    active=true;const token=++epoch;await engine.load();if(!active||token!==epoch)return;
+   initialYear=config.resolveYear?.(initialYear)??initialYear;year=config.resolveYear?.(year)??year;
    if(initialYear in engine.data.years)year=initialYear;
    else if(!(year in engine.data.years))year=config.defaultYear;
    if(engine.prepare)await engine.prepare(current());if(!active||token!==epoch)return;
    addEventListener('atlas-appearance-change',appearance);
-   if(config.standalone)window.AtlasRegionColorController?.suspend(true);
-   apply();if(config.omitFrontiers)map.on('styledata',syncFrontiers);renderDock();dock.hidden=false;onChange();insets();void syncContext();
+   if(config.standalone||config.vectorTiles)window.AtlasRegionColorController?.suspend(true);
+   apply();if(config.omitFrontiers)map.on('styledata',syncFrontiers);renderDock();dock.hidden=false;timeline.showYear(year);onChange();insets();void syncContext();
   },
   leave(){
    if(!active)return;
@@ -310,12 +322,14 @@ export function createHistoricView(map,{country,base,config,borders:engine,fill,
    if(config.omitFrontiers)map.off('styledata',syncFrontiers);
    restore();
    if(config.releaseOnLeave){engine.dispose();context?.dispose();contextFrame=null;}
-   if(config.standalone&&document.getElementById('map-shell')?.dataset.quiz!=='true')window.AtlasRegionColorController?.suspend(false);
+   if((config.standalone||config.vectorTiles)&&document.getElementById('map-shell')?.dataset.quiz!=='true')window.AtlasRegionColorController?.suspend(false);
    if(dock){dock.hidden=true;insets();}
   },
   apply,syncControls,renderSummary,renderState,pick,unitLabels,hoverAt,setYear,
   coversLabel(center){
    if(!config.replaceContextLabels||!active||!applied)return false;
+   if(config.hideContextLabels)return engine.coversLabel(center);
+   if(config.vectorTiles){const face=engine.pickLocation({lng:center[0],lat:center[1]},pickConfig());return face!=null&&!!engine.unit(current(),face);}
    const key=center.join(",");
    if(!labelFaces.has(key))labelFaces.set(key,engine.pickLocation({lng:center[0],lat:center[1]},pickConfig()));
    const face=labelFaces.get(key);

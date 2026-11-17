@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 export default [{name:'South Asian historical fill remains continuous across regional detail cutoff',options:{width:1300,height:900},async run(p,base){
  await p.open(base,'#united-kingdom');
  await p.evaluate('void document.getElementById("historical-snapshot").click()');
- await p.waitFor('!!map.getLayer("united-kingdom-history-fill")');
+ await p.waitFor('map.getSource("united-kingdom-first")?.type==="vector"');
  await p.evaluate("void document.querySelector('#united-kingdom-history-dock [data-year=\"1857\"]').click()");
  await p.waitFor('document.querySelector("#united-kingdom-history-dock .election-year strong").textContent==="1857"');
  for(const projection of ['mercator','globe']){

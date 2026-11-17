@@ -46,9 +46,10 @@ self.onmessage=async({data})=>{
    self.postMessage(mesh,buffers);return;
   }
   const prepare=part=>{
-   // Omit disconnected channel artifacts along the Aysén–Magallanes boundary.
+   // UK boundaries stop at the shore; omit inferred river and estuary channels.
+   // Also omit disconnected channel artifacts along the Aysén–Magallanes boundary.
    const source=part.boundaries||part.lines;
-   const borders={...source,features:source.features.filter(f=>!f.properties?.channel||!["CL-R-11,CL-R-12","CL-P-113,CL-P-124"].includes([...(f.properties.owners||[])].sort().join(",")))};
+   const borders={...source,features:source.features.filter(f=>!f.properties?.channel||(!(f.properties.owners||[]).some(id=>id.startsWith("GB-"))&&!["CL-R-11,CL-R-12","CL-P-113,CL-P-124"].includes([...(f.properties.owners||[])].sort().join(","))))};
    // A few units (Antarctic claims) replace only their own selected outline,
    // leaving out an artificial cut such as the flat map's 85°S limit.
    const regions=polygonParts(part.regions),overrides=part.selectionOutlineOverrides,replaced=new Set(overrides?.features.map(f=>f.properties.id));

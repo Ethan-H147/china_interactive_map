@@ -12,8 +12,8 @@ export default [
  if(entry.country==='united-kingdom'){
   await p.evaluate('void map.jumpTo({center:[-1,52],zoom:6.2})');await p.settle();await tap(p,[-1,52]);
   await p.waitFor('document.querySelector("#gb-name").textContent==="England"');await p.settle();
-  assert.equal(await p.evaluate('map.getLayer("united-kingdom-history-host-selected-fill").source'),await p.evaluate('map.getLayer("united-kingdom-first-fill").source'),'Home-nation selection reuses the modern land source');
-  assert(await p.evaluate('(()=>{const q=map.project([-1,52]);return map.queryRenderedFeatures(q,{layers:["united-kingdom-history-host-selected-fill"]}).length>0})()'),'The reused host selection is visibly filled');
+  assert.equal(await p.evaluate('map.getLayer("united-kingdom-first-selection-fill").source'),await p.evaluate('map.getLayer("united-kingdom-first-fill").source'),'Home-nation selection reuses the modern land source');
+  assert(await p.evaluate('(()=>{const q=map.project([-1,52]);return map.queryRenderedFeatures(q,{layers:["united-kingdom-first-selection-fill"]}).length>0})()'),'The reused host selection is visibly filled');
  }
 
  await p.evaluate('void map.jumpTo('+JSON.stringify({center:entry.center,zoom:entry.zoom})+')');await p.settle();

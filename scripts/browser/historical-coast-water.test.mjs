@@ -11,7 +11,7 @@ assert(inside(point),'Regression coordinate remains modern Anticosti land');
 export default [{name:'Historical coast restores gray Anticosti land across overview and detailed zooms',options:{width:1400,height:1000},async run(p,base){
  await p.open(base,'#united-kingdom');
  await p.evaluate('AtlasComfort.set({appearance:"light"});void document.getElementById("historical-snapshot").click()');
- await p.waitFor('!!map.getLayer("united-kingdom-history-fill")');
+ await p.waitFor('map.getSource("united-kingdom-first")?.type==="vector"');
  await p.evaluate('void document.querySelector('+JSON.stringify('#united-kingdom-history-dock [data-year="1766"]')+').click()');
  await p.waitFor('document.querySelector("#united-kingdom-history-dock .election-year strong").textContent==="1766"');
  for(const projection of ['mercator','globe']){
@@ -28,14 +28,13 @@ export default [{name:'Historical coast restores gray Anticosti land across over
 }}, {name:'Historical sea correction clears coarse gray overshoot and refreshes after a distant pan',options:{width:1400,height:1000},async run(p,base){
  await p.open(base,'#united-kingdom');
  await p.evaluate('AtlasComfort.set({appearance:"light"});void map.setProjection({type:"globe"});void document.getElementById("historical-snapshot").click()');
- await p.waitFor('!!map.getLayer("united-kingdom-history-water")');
+ await p.waitFor('map.getSource("united-kingdom-first")?.type==="vector"');
  for(const zoom of [6.99,9]){
   await p.evaluate('void map.jumpTo({center:[-64.175,49.95],zoom:'+zoom+'})');await p.settle();
-  await p.waitFor('map.isSourceLoaded("united-kingdom-history-water")');
+  await p.waitFor('map.isSourceLoaded("united-kingdom-first")');
   const sample=await p.evaluate('('+(()=>{const q=map.project(map.getCenter()),r=map.getCanvas().getBoundingClientRect(),c=document.createElement('canvas').getContext('2d');c.fillStyle=map.getPaintProperty('background','background-color');c.fillRect(0,0,1,1);return{x:Math.floor(q.x+r.x),y:Math.floor(q.y+r.y),rgb:Array.from(c.getImageData(0,0,1,1).data).slice(0,3)};})+')()');
   const image=await p.screenshot('coarse-gray-sea-'+zoom),rgb=await sharp(image).extract({left:sample.x,top:sample.y,width:1,height:1}).removeAlpha().raw().toBuffer();
   assert(Math.max(...sample.rgb.map((v,i)=>Math.abs(v-rgb[i])))<4,'Actual sea clears the coarse gray background '+[...rgb]);
  }
- const url=await p.evaluate('map.getSource("united-kingdom-history-water").serialize().data');
- assert(url.includes('transform=historical-water')&&url.includes('scope='),'Sea tiles stay bounded to the current view');
+ assert.equal(await p.evaluate('map.getSource("united-kingdom-first").type'),'vector','Water is compiled into the same source');
 }}];

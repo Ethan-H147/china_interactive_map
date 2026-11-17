@@ -1,0 +1,1401 @@
+{
+  "version": 1,
+  "coverage": "Selected milestones from 882 through 1991. Earlier extents are approximate; related Rus’ states are distinct. The post-1917 map does not survey civil-war control. Soviet republic ownership and inland paths are reused for the explicit late-Soviet reference frames on the shared detailed atlas land.",
+  "sources": [
+    {
+      "title": "Cliopatria v0.2.1, Seshat Global History Databank",
+      "url": "https://github.com/Seshat-Global-History-Databank/cliopatria/tree/v0.2.1",
+      "license": "CC BY 4.0",
+      "sha256": "12cf631939c30b61ce2c027b867d2b13959d0cb63a3b6889b9b8f2498ede77c6",
+      "retained": "scripts/boundary-sources/russia-history/cliopatria.geojson.gz",
+      "note": "Retained original polity geometries; selected date ranges and correction dates are recorded in the frame definitions."
+    },
+    {
+      "title": "Russia: a country study, Federal Research Division, Library of Congress (1998)",
+      "url": "https://tile.loc.gov/storage-services/master/frd/frdcstdy/ru/russiacountrystu00curt/russiacountrystu00curt.pdf"
+    },
+    {
+      "title": "The Russian Discovery of Siberia, Library of Congress",
+      "url": "https://www.loc.gov/collections/meeting-of-frontiers/articles-and-essays/exploration/russian-discovery-of-siberia/"
+    },
+    {
+      "title": "Alaska Purchase treaty, National Archives",
+      "url": "https://www.archives.gov/education/lessons/alaska/purchase-treaty.html"
+    },
+    {
+      "title": "Dissolution of the USSR, US Department of State",
+      "url": "https://2001-2009.state.gov/r/pa/ho/time/pcw/108229.htm"
+    },
+    {
+      "title": "Existing MSU Soviet republic geometry, flags, capitals and 1989 census",
+      "url": "data/europe/soviet-union-1988/sources.json",
+      "license": "Research and other non-commercial use; MSU attribution retained",
+      "sha256": "8e5a5f3cf02a595964a8ec05dbb7d98f2e3036c26458d812f4555723f8a8ffc7"
+    },
+    {
+      "title": "Uzbekistan Ministry of Foreign Affairs, history: Samarkand in 1868 and Khiva in 1873",
+      "url": "https://gov.uz/en/mfa/sections/view/14508"
+    },
+    {
+      "title": "Museum With No Frontiers, Treaty of Bucharest, 1812",
+      "url": "https://sharinghistory.museumwnf.org/database_item.php?id=object%3BAWE%3Brm%3B38%3Ben"
+    }
+  ],
+  "processing": "Detailed atlas first-level geometry supplies the physical land. Rough historical coasts are discarded in a coastal band; nearest inland ownership extends over canonical land within the same connected landmass. Detached islands without an inland core use retained ownership. The Sakhalin 50th-parallel frontier is preserved through the band. The source’s artificial 180-degree cut is resolved onto the connected Chukotka mainland when the retained extent reaches that cut. Exact atlas paths are stored as source-file, ring and vertex-run references. Only political lines and intersection vertices are stored locally. The world overview classifies physical coast versus inland frontier; its coordinates never enter the historical mesh. One topology resolves overlaps, and each date only changes ownership and color. 1478 uses the post-annexation 1482 source; 1485 uses 1487. The 1648 Pacific milestone uses the generalized 1653 source. Finland from 1809 reuses the existing Finnish land to repair omissions at the rough source coast; historical eastern extensions remain from Cliopatria. The 1812 extent unions the 1811 and 1812 sources to avoid treating French occupation of Moscow as a sovereign cession. 1867 removes Alaska from a source interval that ends in that year. The 1914 and 1917 references use the pre-war 1913 source. Protectorates reuse their last independent source outline and remain separately identified. 1922 uses the 1924 external outline after the Far Eastern Republic joined; Bukhara and Khorezm remain separately identified allied republics. The 1945 post-war reference uses the 1953 source to exclude occupation zones in Poland and Germany; small 1945–1953 frontier adjustments are generalized. Late Soviet frames reuse the original republic ownership and inland paths, resolved onto the same detailed physical land as the imperial frames. 1991 relabels the same republic reference as independent successor states.",
+  "frames": [
+    {
+      "year": 882,
+      "sources": [
+        {
+          "Name": "Kievan Rus'",
+          "FromYear": 882,
+          "ToYear": 883,
+          "Area": 560045.632534804,
+          "Type": "POLITY",
+          "Wikipedia": "Kievan Rus'",
+          "Wikidata": "Q1108445",
+          "SeshatID": "ua_kievan_rus",
+          "Components": "",
+          "MemberOf": ""
+        }
+      ]
+    },
+    {
+      "year": 1054,
+      "sources": [
+        {
+          "Name": "Kievan Rus'",
+          "FromYear": 1040,
+          "ToYear": 1235,
+          "Area": 1199824.4493511722,
+          "Type": "POLITY",
+          "Wikipedia": "Kievan Rus'",
+          "Wikidata": "Q1108445",
+          "SeshatID": "ua_kievan_rus",
+          "Components": "",
+          "MemberOf": ""
+        }
+      ]
+    },
+    {
+      "year": 1237,
+      "sources": [
+        {
+          "Name": "Principality of Rostov-Suzdal",
+          "FromYear": 1236,
+          "ToYear": 1240,
+          "Area": 250485.7445952031,
+          "Type": "POLITY",
+          "Wikipedia": "Vladimir-Suzdal",
+          "Wikidata": "Q83546",
+          "SeshatID": "",
+          "Components": "",
+          "MemberOf": ""
+        },
+        {
+          "Name": "Novgorod Republic",
+          "FromYear": 1236,
+          "ToYear": 1240,
+          "Area": 511493.38590701227,
+          "Type": "POLITY",
+          "Wikipedia": "Novgorod Republic",
+          "Wikidata": "Q151536",
+          "SeshatID": "ru_novgorod_rep",
+          "Components": "",
+          "MemberOf": ""
+        },
+        {
+          "Name": "Principality of Kiev",
+          "FromYear": 1236,
+          "ToYear": 1240,
+          "Area": 78401.39136697179,
+          "Type": "POLITY",
+          "Wikipedia": "Principality of Kiev",
+          "Wikidata": "Q1483430",
+          "SeshatID": "",
+          "Components": "",
+          "MemberOf": ""
+        },
+        {
+          "Name": "Principality of Chernigov",
+          "FromYear": 1236,
+          "ToYear": 1240,
+          "Area": 200686.1688013042,
+          "Type": "POLITY",
+          "Wikipedia": "Principality of Chernigov",
+          "Wikidata": "Q1322662",
+          "SeshatID": "",
+          "Components": "",
+          "MemberOf": ""
+        },
+        {
+          "Name": "Principality of Galicia-Volhynia",
+          "FromYear": 1236,
+          "ToYear": 1240,
+          "Area": 188376.42395245147,
+          "Type": "POLITY",
+          "Wikipedia": "Kingdom of Galicia-Volhynia",
+          "Wikidata": "Q239502",
+          "SeshatID": "ua_galicia_volhynia_principality",
+          "Components": "",
+          "MemberOf": ""
+        },
+        {
+          "Name": "Principality of Turov and Pinsk",
+          "FromYear": 1236,
+          "ToYear": 1240,
+          "Area": 69357.70868558846,
+          "Type": "POLITY",
+          "Wikipedia": "Principality of Turov",
+          "Wikidata": "Q671362",
+          "SeshatID": "",
+          "Components": "",
+          "MemberOf": ""
+        },
+        {
+          "Name": "Principality of Smolensk",
+          "FromYear": 1202,
+          "ToYear": 1240,
+          "Area": 116283.40400872432,
+          "Type": "POLITY",
+          "Wikipedia": "Principality of Smolensk",
+          "Wikidata": "Q1483495",
+          "SeshatID": "",
+          "Components": "",
+          "MemberOf": ""
+        },
+        {
+          "Name": "Principality of Polotsky",
+          "FromYear": 1216,
+          "ToYear": 1240,
+          "Area": 34488.002659449405,
+          "Type": "POLITY",
+          "Wikipedia": "Polotsk",
+          "Wikidata": "Q200797",
+          "SeshatID": "",
+          "Components": "",
+          "MemberOf": ""
+        },
+        {
+          "Name": "Principality of Pereyaslavl",
+          "FromYear": 1236,
+          "ToYear": 1240,
+          "Area": 95082.41141723453,
+          "Type": "POLITY",
+          "Wikipedia": "Principality of Pereyaslavl",
+          "Wikidata": "Q1261908",
+          "SeshatID": "",
+          "Components": "",
+          "MemberOf": ""
+        },
+        {
+          "Name": "Principality of Ryazan",
+          "FromYear": 1236,
+          "ToYear": 1240,
+          "Area": 65559.8072186199,
+          "Type": "POLITY",
+          "Wikipedia": "Principality of Ryazan",
+          "Wikidata": "Q269109",
+          "SeshatID": "ru_ryazan_principality",
+          "Components": "",
+          "MemberOf": ""
+        }
+      ]
+    },
+    {
+      "year": 1380,
+      "sources": [
+        {
+          "Name": "Grand Principality of Moscow",
+          "FromYear": 1375,
+          "ToYear": 1394,
+          "Area": 164613.97723877744,
+          "Type": "POLITY",
+          "Wikipedia": "Principality of Moscow",
+          "Wikidata": "Q170770",
+          "SeshatID": "ru_moskva_mongolian_period",
+          "Components": "",
+          "MemberOf": ""
+        },
+        {
+          "Name": "Novgorod Republic",
+          "FromYear": 1375,
+          "ToYear": 1428,
+          "Area": 1490417.1416193328,
+          "Type": "POLITY",
+          "Wikipedia": "Novgorod Republic",
+          "Wikidata": "Q151536",
+          "SeshatID": "ru_novgorod_rep",
+          "Components": "",
+          "MemberOf": ""
+        },
+        {
+          "Name": "Tver",
+          "FromYear": 1344,
+          "ToYear": 1394,
+          "Area": 7142.487763569819,
+          "Type": "POLITY",
+          "Wikipedia": "Tver",
+          "Wikidata": "Q2288",
+          "SeshatID": "",
+          "Components": "",
+          "MemberOf": ""
+        },
+        {
+          "Name": "Pskov Republic",
+          "FromYear": 1285,
+          "ToYear": 1421,
+          "Area": 22600.86964764467,
+          "Type": "POLITY",
+          "Wikipedia": "Pskov Republic",
+          "Wikidata": "Q317078",
+          "SeshatID": "",
+          "Components": "",
+          "MemberOf": ""
+        }
+      ]
+    },
+    {
+      "year": 1462,
+      "sources": [
+        {
+          "Name": "Grand Principality of Moscow",
+          "FromYear": 1453,
+          "ToYear": 1462,
+          "Area": 317906.7961133404,
+          "Type": "POLITY",
+          "Wikipedia": "Principality of Moscow",
+          "Wikidata": "Q170770",
+          "SeshatID": "ru_moskva_mongolian_period",
+          "Components": "",
+          "MemberOf": ""
+        },
+        {
+          "Name": "Novgorod Republic",
+          "FromYear": 1440,
+          "ToYear": 1462,
+          "Area": 1490831.5347069255,
+          "Type": "POLITY",
+          "Wikipedia": "Novgorod Republic",
+          "Wikidata": "Q151536",
+          "SeshatID": "ru_novgorod_rep",
+          "Components": "",
+          "MemberOf": ""
+        },
+        {
+          "Name": "Tver",
+          "FromYear": 1395,
+          "ToYear": 1462,
+          "Area": 7121.73745086785,
+          "Type": "POLITY",
+          "Wikipedia": "Tver",
+          "Wikidata": "Q2288",
+          "SeshatID": "",
+          "Components": "",
+          "MemberOf": ""
+        },
+        {
+          "Name": "Pskov Republic",
+          "FromYear": 1440,
+          "ToYear": 1474,
+          "Area": 21733.819265244638,
+          "Type": "POLITY",
+          "Wikipedia": "Pskov Republic",
+          "Wikidata": "Q317078",
+          "SeshatID": "",
+          "Components": "",
+          "MemberOf": ""
+        },
+        {
+          "Name": "Ryazan",
+          "FromYear": 1453,
+          "ToYear": 1501,
+          "Area": 17025.867411538176,
+          "Type": "POLITY",
+          "Wikipedia": "Ryazan",
+          "Wikidata": "Q269109",
+          "SeshatID": "",
+          "Components": "",
+          "MemberOf": ""
+        }
+      ]
+    },
+    {
+      "year": 1478,
+      "sources": [
+        {
+          "Name": "Grand Principality of Moscow",
+          "FromYear": 1482,
+          "ToYear": 1486,
+          "Area": 1979781.6561523848,
+          "Type": "POLITY",
+          "Wikipedia": "Principality of Moscow",
+          "Wikidata": "Q170770",
+          "SeshatID": "ru_moskva_rurik_dyn",
+          "Components": "",
+          "MemberOf": ""
+        },
+        {
+          "Name": "Tver",
+          "FromYear": 1463,
+          "ToYear": 1481,
+          "Area": 7183.7003327366065,
+          "Type": "POLITY",
+          "Wikipedia": "Tver",
+          "Wikidata": "Q2288",
+          "SeshatID": "",
+          "Components": "",
+          "MemberOf": ""
+        },
+        {
+          "Name": "Pskov Republic",
+          "FromYear": 1475,
+          "ToYear": 1481,
+          "Area": 21841.814049031076,
+          "Type": "POLITY",
+          "Wikipedia": "Pskov Republic",
+          "Wikidata": "Q317078",
+          "SeshatID": "",
+          "Components": "",
+          "MemberOf": ""
+        },
+        {
+          "Name": "Ryazan",
+          "FromYear": 1453,
+          "ToYear": 1501,
+          "Area": 17025.867411538176,
+          "Type": "POLITY",
+          "Wikipedia": "Ryazan",
+          "Wikidata": "Q269109",
+          "SeshatID": "",
+          "Components": "",
+          "MemberOf": ""
+        }
+      ]
+    },
+    {
+      "year": 1485,
+      "sources": [
+        {
+          "Name": "Grand Principality of Moscow",
+          "FromYear": 1487,
+          "ToYear": 1491,
+          "Area": 1979518.3479743628,
+          "Type": "POLITY",
+          "Wikipedia": "Principality of Moscow",
+          "Wikidata": "Q170770",
+          "SeshatID": "ru_moskva_rurik_dyn",
+          "Components": "",
+          "MemberOf": ""
+        },
+        {
+          "Name": "Pskov Republic",
+          "FromYear": 1482,
+          "ToYear": 1506,
+          "Area": 21733.819265244638,
+          "Type": "POLITY",
+          "Wikipedia": "Pskov Republic",
+          "Wikidata": "Q317078",
+          "SeshatID": "",
+          "Components": "",
+          "MemberOf": ""
+        },
+        {
+          "Name": "Ryazan",
+          "FromYear": 1453,
+          "ToYear": 1501,
+          "Area": 17025.867411538176,
+          "Type": "POLITY",
+          "Wikipedia": "Ryazan",
+          "Wikidata": "Q269109",
+          "SeshatID": "",
+          "Components": "",
+          "MemberOf": ""
+        }
+      ]
+    },
+    {
+      "year": 1505,
+      "sources": [
+        {
+          "Name": "Grand Principality of Moscow",
+          "FromYear": 1502,
+          "ToYear": 1506,
+          "Area": 2145256.78463648,
+          "Type": "POLITY",
+          "Wikipedia": "Principality of Moscow",
+          "Wikidata": "Q170770",
+          "SeshatID": "ru_moskva_rurik_dyn",
+          "Components": "",
+          "MemberOf": ""
+        },
+        {
+          "Name": "Pskov Republic",
+          "FromYear": 1482,
+          "ToYear": 1506,
+          "Area": 21733.819265244638,
+          "Type": "POLITY",
+          "Wikipedia": "Pskov Republic",
+          "Wikidata": "Q317078",
+          "SeshatID": "",
+          "Components": "",
+          "MemberOf": ""
+        },
+        {
+          "Name": "Ryazan",
+          "FromYear": 1502,
+          "ToYear": 1506,
+          "Area": 17389.14225551121,
+          "Type": "POLITY",
+          "Wikipedia": "Ryazan",
+          "Wikidata": "Q269109",
+          "SeshatID": "",
+          "Components": "",
+          "MemberOf": ""
+        }
+      ]
+    },
+    {
+      "year": 1547,
+      "sources": [
+        {
+          "Name": "Tsardom of Russia",
+          "FromYear": 1547,
+          "ToYear": 1551,
+          "Area": 2433400.9358926383,
+          "Type": "POLITY",
+          "Wikipedia": "Tsardom of Russia",
+          "Wikidata": "Q186096",
+          "SeshatID": "ru_moskva_rurik_dyn",
+          "Components": "",
+          "MemberOf": ""
+        }
+      ]
+    },
+    {
+      "year": 1552,
+      "sources": [
+        {
+          "Name": "Tsardom of Russia",
+          "FromYear": 1552,
+          "ToYear": 1555,
+          "Area": 2762150.4034125847,
+          "Type": "POLITY",
+          "Wikipedia": "Tsardom of Russia",
+          "Wikidata": "Q186096",
+          "SeshatID": "ru_moskva_rurik_dyn",
+          "Components": "",
+          "MemberOf": ""
+        }
+      ]
+    },
+    {
+      "year": 1556,
+      "sources": [
+        {
+          "Name": "Tsardom of Russia",
+          "FromYear": 1556,
+          "ToYear": 1563,
+          "Area": 3112649.3264560206,
+          "Type": "POLITY",
+          "Wikipedia": "Tsardom of Russia",
+          "Wikidata": "Q186096",
+          "SeshatID": "ru_moskva_rurik_dyn",
+          "Components": "",
+          "MemberOf": ""
+        }
+      ]
+    },
+    {
+      "year": 1582,
+      "sources": [
+        {
+          "Name": "Tsardom of Russia",
+          "FromYear": 1582,
+          "ToYear": 1587,
+          "Area": 3627541.9353791154,
+          "Type": "POLITY",
+          "Wikipedia": "Tsardom of Russia",
+          "Wikidata": "Q186096",
+          "SeshatID": "ru_moskva_rurik_dyn",
+          "Components": "",
+          "MemberOf": ""
+        }
+      ]
+    },
+    {
+      "year": 1598,
+      "sources": [
+        {
+          "Name": "Tsardom of Russia",
+          "FromYear": 1595,
+          "ToYear": 1599,
+          "Area": 4821153.675092522,
+          "Type": "POLITY",
+          "Wikipedia": "Tsardom of Russia",
+          "Wikidata": "Q186096",
+          "SeshatID": "ru_moskva_rurik_dyn",
+          "Components": "",
+          "MemberOf": ""
+        }
+      ]
+    },
+    {
+      "year": 1613,
+      "sources": [
+        {
+          "Name": "Tsardom of Russia",
+          "FromYear": 1612,
+          "ToYear": 1618,
+          "Area": 5302216.93846579,
+          "Type": "POLITY",
+          "Wikipedia": "Tsardom of Russia",
+          "Wikidata": "Q186096",
+          "SeshatID": "ru_moskva_rurik_dyn",
+          "Components": "",
+          "MemberOf": ""
+        }
+      ]
+    },
+    {
+      "year": 1648,
+      "sources": [
+        {
+          "Name": "Tsardom of Russia",
+          "FromYear": 1653,
+          "ToYear": 1658,
+          "Area": 11524087.688158201,
+          "Type": "POLITY",
+          "Wikipedia": "Tsardom of Russia",
+          "Wikidata": "Q186096",
+          "SeshatID": "ru_romanov_dyn_1",
+          "Components": "",
+          "MemberOf": ""
+        }
+      ]
+    },
+    {
+      "year": 1667,
+      "sources": [
+        {
+          "Name": "Tsardom of Russia",
+          "FromYear": 1662,
+          "ToYear": 1669,
+          "Area": 12194872.4140078,
+          "Type": "POLITY",
+          "Wikipedia": "Tsardom of Russia",
+          "Wikidata": "Q186096",
+          "SeshatID": "ru_romanov_dyn_1",
+          "Components": "",
+          "MemberOf": ""
+        }
+      ]
+    },
+    {
+      "year": 1689,
+      "sources": [
+        {
+          "Name": "Tsardom of Russia",
+          "FromYear": 1687,
+          "ToYear": 1690,
+          "Area": 13600877.341539724,
+          "Type": "POLITY",
+          "Wikipedia": "Tsardom of Russia",
+          "Wikidata": "Q186096",
+          "SeshatID": "ru_romanov_dyn_1",
+          "Components": "",
+          "MemberOf": ""
+        }
+      ]
+    },
+    {
+      "year": 1721,
+      "sources": [
+        {
+          "Name": "Russian Empire",
+          "FromYear": 1721,
+          "ToYear": 1726,
+          "Area": 14451555.63238608,
+          "Type": "POLITY",
+          "Wikipedia": "Russian Empire",
+          "Wikidata": "Q34266",
+          "SeshatID": "",
+          "Components": "",
+          "MemberOf": ""
+        }
+      ]
+    },
+    {
+      "year": 1774,
+      "sources": [
+        {
+          "Name": "Russian Empire",
+          "FromYear": 1772,
+          "ToYear": 1774,
+          "Area": 16116309.81496813,
+          "Type": "POLITY",
+          "Wikipedia": "Russian Empire",
+          "Wikidata": "Q34266",
+          "SeshatID": "",
+          "Components": "",
+          "MemberOf": ""
+        }
+      ]
+    },
+    {
+      "year": 1783,
+      "sources": [
+        {
+          "Name": "Russian Empire",
+          "FromYear": 1783,
+          "ToYear": 1787,
+          "Area": 16304561.056950446,
+          "Type": "POLITY",
+          "Wikipedia": "Russian Empire",
+          "Wikidata": "Q34266",
+          "SeshatID": "ru_romanov_dyn_2",
+          "Components": "",
+          "MemberOf": ""
+        }
+      ]
+    },
+    {
+      "year": 1795,
+      "sources": [
+        {
+          "Name": "Russian Empire",
+          "FromYear": 1794,
+          "ToYear": 1795,
+          "Area": 16761875.875572573,
+          "Type": "POLITY",
+          "Wikipedia": "Russian Empire",
+          "Wikidata": "Q34266",
+          "SeshatID": "ru_romanov_dyn_2",
+          "Components": "",
+          "MemberOf": ""
+        }
+      ]
+    },
+    {
+      "year": 1809,
+      "sources": [
+        {
+          "Name": "Russian Empire",
+          "FromYear": 1809,
+          "ToYear": 1810,
+          "Area": 17382792.10361894,
+          "Type": "POLITY",
+          "Wikipedia": "Russian Empire",
+          "Wikidata": "Q34266",
+          "SeshatID": "ru_romanov_dyn_2",
+          "Components": "",
+          "MemberOf": ""
+        }
+      ]
+    },
+    {
+      "year": 1812,
+      "sources": [
+        {
+          "Name": "Russian Empire",
+          "FromYear": 1812,
+          "ToYear": 1813,
+          "Area": 17200631.825086508,
+          "Type": "POLITY",
+          "Wikipedia": "Russian Empire",
+          "Wikidata": "Q34266",
+          "SeshatID": "ru_romanov_dyn_2",
+          "Components": "",
+          "MemberOf": ""
+        }
+      ]
+    },
+    {
+      "year": 1815,
+      "sources": [
+        {
+          "Name": "Russian Empire",
+          "FromYear": 1815,
+          "ToYear": 1823,
+          "Area": 17397989.342078697,
+          "Type": "POLITY",
+          "Wikipedia": "Russian Empire",
+          "Wikidata": "Q34266",
+          "SeshatID": "ru_romanov_dyn_2",
+          "Components": "",
+          "MemberOf": ""
+        }
+      ]
+    },
+    {
+      "year": 1828,
+      "sources": [
+        {
+          "Name": "Russian Empire",
+          "FromYear": 1828,
+          "ToYear": 1829,
+          "Area": 17683938.259165715,
+          "Type": "POLITY",
+          "Wikipedia": "Russian Empire",
+          "Wikidata": "Q34266",
+          "SeshatID": "ru_romanov_dyn_2",
+          "Components": "",
+          "MemberOf": ""
+        }
+      ]
+    },
+    {
+      "year": 1860,
+      "sources": [
+        {
+          "Name": "Russian Empire",
+          "FromYear": 1860,
+          "ToYear": 1861,
+          "Area": 22046213.108503766,
+          "Type": "POLITY",
+          "Wikipedia": "Russian Empire",
+          "Wikidata": "Q34266",
+          "SeshatID": "ru_romanov_dyn_2",
+          "Components": "",
+          "MemberOf": ""
+        }
+      ]
+    },
+    {
+      "year": 1866,
+      "sources": [
+        {
+          "Name": "Russian Empire",
+          "FromYear": 1864,
+          "ToYear": 1867,
+          "Area": 22961321.36268866,
+          "Type": "POLITY",
+          "Wikipedia": "Russian Empire",
+          "Wikidata": "Q34266",
+          "SeshatID": "ru_romanov_dyn_2",
+          "Components": "",
+          "MemberOf": ""
+        }
+      ]
+    },
+    {
+      "year": 1867,
+      "sources": [
+        {
+          "Name": "Russian Empire",
+          "FromYear": 1864,
+          "ToYear": 1867,
+          "Area": 22961321.36268866,
+          "Type": "POLITY",
+          "Wikipedia": "Russian Empire",
+          "Wikidata": "Q34266",
+          "SeshatID": "ru_romanov_dyn_2",
+          "Components": "",
+          "MemberOf": ""
+        }
+      ]
+    },
+    {
+      "year": 1873,
+      "sources": [
+        {
+          "Name": "Russian Empire",
+          "FromYear": 1873,
+          "ToYear": 1876,
+          "Area": 22174398.720455237,
+          "Type": "POLITY",
+          "Wikipedia": "Russian Empire",
+          "Wikidata": "Q34266",
+          "SeshatID": "ru_romanov_dyn_2",
+          "Components": "",
+          "MemberOf": ""
+        },
+        {
+          "Name": "Emirate of Bukhara",
+          "FromYear": 1864,
+          "ToYear": 1867,
+          "Area": 218754.177862479,
+          "Type": "POLITY",
+          "Wikipedia": "Emirate of Bukhara",
+          "Wikidata": "Q746558",
+          "SeshatID": "",
+          "Components": "",
+          "MemberOf": ""
+        },
+        {
+          "Name": "Khanate of Khiva",
+          "FromYear": 1864,
+          "ToYear": 1872,
+          "Area": 384764.54681176867,
+          "Type": "POLITY",
+          "Wikipedia": "Khanate of Khiva",
+          "Wikidata": "Q491106",
+          "SeshatID": "",
+          "Components": "",
+          "MemberOf": ""
+        }
+      ]
+    },
+    {
+      "year": 1885,
+      "sources": [
+        {
+          "Name": "Russian Empire",
+          "FromYear": 1885,
+          "ToYear": 1894,
+          "Area": 22293161.47287146,
+          "Type": "POLITY",
+          "Wikipedia": "Russian Empire",
+          "Wikidata": "Q34266",
+          "SeshatID": "ru_romanov_dyn_2",
+          "Components": "",
+          "MemberOf": ""
+        },
+        {
+          "Name": "Emirate of Bukhara",
+          "FromYear": 1864,
+          "ToYear": 1867,
+          "Area": 218754.177862479,
+          "Type": "POLITY",
+          "Wikipedia": "Emirate of Bukhara",
+          "Wikidata": "Q746558",
+          "SeshatID": "",
+          "Components": "",
+          "MemberOf": ""
+        },
+        {
+          "Name": "Khanate of Khiva",
+          "FromYear": 1864,
+          "ToYear": 1872,
+          "Area": 384764.54681176867,
+          "Type": "POLITY",
+          "Wikipedia": "Khanate of Khiva",
+          "Wikidata": "Q491106",
+          "SeshatID": "",
+          "Components": "",
+          "MemberOf": ""
+        }
+      ]
+    },
+    {
+      "year": 1905,
+      "sources": [
+        {
+          "Name": "Russian Empire",
+          "FromYear": 1905,
+          "ToYear": 1911,
+          "Area": 22299103.14283198,
+          "Type": "POLITY",
+          "Wikipedia": "Russian Empire",
+          "Wikidata": "Q34266",
+          "SeshatID": "ru_romanov_dyn_2",
+          "Components": "",
+          "MemberOf": ""
+        },
+        {
+          "Name": "Emirate of Bukhara",
+          "FromYear": 1864,
+          "ToYear": 1867,
+          "Area": 218754.177862479,
+          "Type": "POLITY",
+          "Wikipedia": "Emirate of Bukhara",
+          "Wikidata": "Q746558",
+          "SeshatID": "",
+          "Components": "",
+          "MemberOf": ""
+        },
+        {
+          "Name": "Khanate of Khiva",
+          "FromYear": 1864,
+          "ToYear": 1872,
+          "Area": 384764.54681176867,
+          "Type": "POLITY",
+          "Wikipedia": "Khanate of Khiva",
+          "Wikidata": "Q491106",
+          "SeshatID": "",
+          "Components": "",
+          "MemberOf": ""
+        }
+      ]
+    },
+    {
+      "year": 1914,
+      "sources": [
+        {
+          "Name": "Russian Empire",
+          "FromYear": 1913,
+          "ToYear": 1913,
+          "Area": 22341773.630902067,
+          "Type": "POLITY",
+          "Wikipedia": "Russian Empire",
+          "Wikidata": "Q34266",
+          "SeshatID": "ru_romanov_dyn_2",
+          "Components": "",
+          "MemberOf": ""
+        },
+        {
+          "Name": "Emirate of Bukhara",
+          "FromYear": 1864,
+          "ToYear": 1867,
+          "Area": 218754.177862479,
+          "Type": "POLITY",
+          "Wikipedia": "Emirate of Bukhara",
+          "Wikidata": "Q746558",
+          "SeshatID": "",
+          "Components": "",
+          "MemberOf": ""
+        },
+        {
+          "Name": "Khanate of Khiva",
+          "FromYear": 1864,
+          "ToYear": 1872,
+          "Area": 384764.54681176867,
+          "Type": "POLITY",
+          "Wikipedia": "Khanate of Khiva",
+          "Wikidata": "Q491106",
+          "SeshatID": "",
+          "Components": "",
+          "MemberOf": ""
+        }
+      ]
+    },
+    {
+      "year": 1917,
+      "sources": [
+        {
+          "Name": "Russian Empire",
+          "FromYear": 1913,
+          "ToYear": 1913,
+          "Area": 22341773.630902067,
+          "Type": "POLITY",
+          "Wikipedia": "Russian Empire",
+          "Wikidata": "Q34266",
+          "SeshatID": "ru_romanov_dyn_2",
+          "Components": "",
+          "MemberOf": ""
+        },
+        {
+          "Name": "Emirate of Bukhara",
+          "FromYear": 1864,
+          "ToYear": 1867,
+          "Area": 218754.177862479,
+          "Type": "POLITY",
+          "Wikipedia": "Emirate of Bukhara",
+          "Wikidata": "Q746558",
+          "SeshatID": "",
+          "Components": "",
+          "MemberOf": ""
+        },
+        {
+          "Name": "Khanate of Khiva",
+          "FromYear": 1864,
+          "ToYear": 1872,
+          "Area": 384764.54681176867,
+          "Type": "POLITY",
+          "Wikipedia": "Khanate of Khiva",
+          "Wikidata": "Q491106",
+          "SeshatID": "",
+          "Components": "",
+          "MemberOf": ""
+        }
+      ]
+    },
+    {
+      "year": 1922,
+      "sources": [
+        {
+          "Name": "Union of Soviet Socialist Republics",
+          "FromYear": 1924,
+          "ToYear": 1925,
+          "Area": 21550953.434164397,
+          "Type": "POLITY",
+          "Wikipedia": "Soviet Union",
+          "Wikidata": "Q15180",
+          "SeshatID": "ru_soviet_union",
+          "Components": "",
+          "MemberOf": ""
+        },
+        {
+          "Name": "Emirate of Bukhara",
+          "FromYear": 1864,
+          "ToYear": 1867,
+          "Area": 218754.177862479,
+          "Type": "POLITY",
+          "Wikipedia": "Emirate of Bukhara",
+          "Wikidata": "Q746558",
+          "SeshatID": "",
+          "Components": "",
+          "MemberOf": ""
+        },
+        {
+          "Name": "Khanate of Khiva",
+          "FromYear": 1864,
+          "ToYear": 1872,
+          "Area": 384764.54681176867,
+          "Type": "POLITY",
+          "Wikipedia": "Khanate of Khiva",
+          "Wikidata": "Q491106",
+          "SeshatID": "",
+          "Components": "",
+          "MemberOf": ""
+        }
+      ]
+    },
+    {
+      "year": 1936,
+      "sources": [
+        {
+          "Name": "Union of Soviet Socialist Republics",
+          "FromYear": 1936,
+          "ToYear": 1939,
+          "Area": 21450537.952632084,
+          "Type": "POLITY",
+          "Wikipedia": "Soviet Union",
+          "Wikidata": "Q15180",
+          "SeshatID": "ru_soviet_union",
+          "Components": "",
+          "MemberOf": ""
+        }
+      ]
+    },
+    {
+      "year": 1940,
+      "sources": [
+        {
+          "Name": "Union of Soviet Socialist Republics",
+          "FromYear": 1940,
+          "ToYear": 1940,
+          "Area": 23485945.49462874,
+          "Type": "POLITY",
+          "Wikipedia": "Soviet Union",
+          "Wikidata": "Q15180",
+          "SeshatID": "ru_soviet_union",
+          "Components": "",
+          "MemberOf": ""
+        }
+      ]
+    },
+    {
+      "year": 1945,
+      "sources": [
+        {
+          "Name": "Union of Soviet Socialist Republics",
+          "FromYear": 1953,
+          "ToYear": 1968,
+          "Area": 21979888.33191418,
+          "Type": "POLITY",
+          "Wikipedia": "Soviet Union",
+          "Wikidata": "Q15180",
+          "SeshatID": "ru_soviet_union",
+          "Components": "",
+          "MemberOf": ""
+        }
+      ]
+    },
+    {
+      "year": 1956,
+      "sources": []
+    },
+    {
+      "year": 1988,
+      "sources": []
+    },
+    {
+      "year": 1991,
+      "sources": []
+    }
+  ],
+  "canonicalLand": {
+    "references": [
+      {
+        "file": "russia/first.bin",
+        "member": "regions",
+        "sha256": "74b537afabe55b588e503583227f2a5317bb27d7e8d0ade0c6276332d09dd40b"
+      },
+      {
+        "file": "europe/ukraine/first.bin",
+        "member": "regions",
+        "sha256": "728488d4786d37e0c49de091ab5d929dfd2cc74fa7aadbd75bad7b0f659113e6"
+      },
+      {
+        "file": "europe/belarus/first.bin",
+        "member": "regions",
+        "sha256": "83f19e43634efb451f4fde560760349f96509fba6aa5db5ef69bc477002057da"
+      },
+      {
+        "file": "europe/moldova/first.bin",
+        "member": "regions",
+        "sha256": "170532e38b5e2aad137ab74b923bfc83d449650be9c560339e8c7e38fad8b085"
+      },
+      {
+        "file": "europe/estonia/first.bin",
+        "member": "regions",
+        "sha256": "e8a7ca26aec67a535cd6996df2c9411ed99a284713e009c6fddbe0b62d4918cc"
+      },
+      {
+        "file": "europe/latvia/first.bin",
+        "member": "regions",
+        "sha256": "7bd12147ad59e1c92e5ab99e765feb968c2677bd2f27208ee7c3708808282d8b"
+      },
+      {
+        "file": "europe/lithuania/first.bin",
+        "member": "regions",
+        "sha256": "311d14ef688caf2d6d5982bc7f11ae465f284b32dd34127058259053eb262302"
+      },
+      {
+        "file": "europe/finland/first.bin",
+        "member": "regions",
+        "sha256": "0a0ea492933686983675b05f884d3398f033fe95313ecaf54c49cc869592788d"
+      },
+      {
+        "file": "europe/poland/first.bin",
+        "member": "regions",
+        "sha256": "c2f3e16bf49f3acae6a0ab9749e80810052e46dae4bc8f16b1e1cc018d421f6e"
+      },
+      {
+        "file": "europe/armenia/first.bin",
+        "member": "regions",
+        "sha256": "6d9404cb9e5b253ce67d20c49d332fdbddae97912b3072f447d8dfef18dafc9f"
+      },
+      {
+        "file": "europe/azerbaijan/first.bin",
+        "member": "regions",
+        "sha256": "540a643957716babf935c7c7cb7297091da143cdb7aea2f2641f5e1c1a269747"
+      },
+      {
+        "file": "europe/georgia/first.bin",
+        "member": "regions",
+        "sha256": "57072e456f59149d89b047414be2c93f824d4d638a4dff485bc06b2f08a1bff6"
+      },
+      {
+        "file": "europe/kazakhstan/first.bin",
+        "member": "regions",
+        "sha256": "b6264d6c74b4a673cd2da02329d416de25942d4f7460de4b1e4a3660f9e6d35c"
+      },
+      {
+        "file": "europe/kyrgyzstan/first.bin",
+        "member": "regions",
+        "sha256": "6ee8e599477fe91b5c10621f11836aa5b48f2d4bac5880f315e79a2183327cd4"
+      },
+      {
+        "file": "europe/tajikistan/first.bin",
+        "member": "regions",
+        "sha256": "c4429e477a820dc6fdb8aabfb9434c9fc492b1c72b59deac3ab6a5f0df55bc76"
+      },
+      {
+        "file": "europe/turkmenistan/first.bin",
+        "member": "regions",
+        "sha256": "fc696d9dcb69971852dc09a90cb49de09c9a0a28a501d4804676f47676f09af3"
+      },
+      {
+        "file": "europe/uzbekistan/first.bin",
+        "member": "regions",
+        "sha256": "b5525405a65ac00828f945605d7fc90a5a5d410f148aa38e06c45c699d27f772"
+      },
+      {
+        "file": "europe/romania/first.bin",
+        "member": "regions",
+        "sha256": "9764859bfc4e0660be612645ea1323b113c5153c27a9bcbd93467d375d6453ee"
+      },
+      {
+        "file": "europe/turkey/first.bin",
+        "member": "regions",
+        "sha256": "01e1d1d0ff78b481c301e13c5c7a47a03f3e2ae5f5b37f712a571f781475d281"
+      },
+      {
+        "file": "europe/iran/first.bin",
+        "member": "regions",
+        "sha256": "ae0455d3e99b2d75000345819e1ea185f6909cedad18c0477ae7ae3e7c599015"
+      },
+      {
+        "file": "europe/sweden/first.bin",
+        "member": "regions",
+        "sha256": "e4d65a977456b80350506f4d33b734add1d894a107bbf5970189af311f09a52c"
+      },
+      {
+        "file": "europe/norway/first.bin",
+        "member": "regions",
+        "sha256": "25f5827bc3b99940c2b498ce42c7b63eb59ed12fab3fbde81a45a0caeb59c1fc"
+      },
+      {
+        "file": "europe/united-states/first.bin",
+        "member": "regions",
+        "sha256": "fb8852b2d0accd9dffe02acec67057220daf71ae548b2233fd8697c8b0518bdd"
+      },
+      {
+        "file": "china-mobile/provinces.bin",
+        "member": null,
+        "sha256": "7c4b9dd1db64ff09b45ac7a2ba2d20c78fa752e68032ac6f65e78e771c951c8a"
+      },
+      {
+        "file": "scoped/mongolia/mongolia-first.bin",
+        "member": null,
+        "sha256": "8bc60d0a387c3a7c0ea748eca88bcb2fa5b023b72f702b68446a151c4cae2fa0"
+      },
+      {
+        "file": "scoped/korea/korea-first.bin",
+        "member": null,
+        "sha256": "1d4786737b8e2c908c4dcaa1a216884872545002342611dbd42306dfd90d8b65"
+      },
+      {
+        "file": "japan-boundaries.bin",
+        "member": "first",
+        "sha256": "9b65b53ac0c2a1f2332d7aeb736e9f88704847aa39dd0c4554a12d4c08fae7cc"
+      },
+      {
+        "file": "europe/soviet-union-1988/first.bin",
+        "member": "regions",
+        "sha256": "8e5a5f3cf02a595964a8ec05dbb7d98f2e3036c26458d812f4555723f8a8ffc7"
+      }
+    ]
+  },
+  "corrections": [
+    "Russian America directly references the existing US Alaska land, using its present-day boundary as a generalized reference. The retained historical extent determines which milestones include it; the year-end 1867 frame excludes it.",
+    "The 1237 frame uses the distinct retained Rus’ principalities rather than the source’s small remnant labelled Kievan Rus’. The artificial 180-degree source cut is resolved onto the connected Chukotka mainland.",
+    "The 1809 Ottoman-frontier occupation is removed using the difference from the 1795 source within the Bessarabian review window. Bessarabia first enters the territorial reference at the 1812 stop.",
+    "The existing Romanian land reference excludes temporary occupations from the imperial frames.",
+    "Samarkand is removed from the 1866 and 1867 frames before its 1868 conquest. The correction uses the existing modern Samarkand province as an explicit generalized boundary proxy; Tashkent remains inside the empire."
+  ],
+  "canonicalReferences": [
+    {
+      "file": "russia/first.bin",
+      "member": "regions",
+      "sha256": "74b537afabe55b588e503583227f2a5317bb27d7e8d0ade0c6276332d09dd40b"
+    },
+    {
+      "file": "europe/ukraine/first.bin",
+      "member": "regions",
+      "sha256": "728488d4786d37e0c49de091ab5d929dfd2cc74fa7aadbd75bad7b0f659113e6"
+    },
+    {
+      "file": "europe/belarus/first.bin",
+      "member": "regions",
+      "sha256": "83f19e43634efb451f4fde560760349f96509fba6aa5db5ef69bc477002057da"
+    },
+    {
+      "file": "europe/moldova/first.bin",
+      "member": "regions",
+      "sha256": "170532e38b5e2aad137ab74b923bfc83d449650be9c560339e8c7e38fad8b085"
+    },
+    {
+      "file": "europe/estonia/first.bin",
+      "member": "regions",
+      "sha256": "e8a7ca26aec67a535cd6996df2c9411ed99a284713e009c6fddbe0b62d4918cc"
+    },
+    {
+      "file": "europe/latvia/first.bin",
+      "member": "regions",
+      "sha256": "7bd12147ad59e1c92e5ab99e765feb968c2677bd2f27208ee7c3708808282d8b"
+    },
+    {
+      "file": "europe/lithuania/first.bin",
+      "member": "regions",
+      "sha256": "311d14ef688caf2d6d5982bc7f11ae465f284b32dd34127058259053eb262302"
+    },
+    {
+      "file": "europe/finland/first.bin",
+      "member": "regions",
+      "sha256": "0a0ea492933686983675b05f884d3398f033fe95313ecaf54c49cc869592788d"
+    },
+    {
+      "file": "europe/poland/first.bin",
+      "member": "regions",
+      "sha256": "c2f3e16bf49f3acae6a0ab9749e80810052e46dae4bc8f16b1e1cc018d421f6e"
+    },
+    {
+      "file": "europe/armenia/first.bin",
+      "member": "regions",
+      "sha256": "6d9404cb9e5b253ce67d20c49d332fdbddae97912b3072f447d8dfef18dafc9f"
+    },
+    {
+      "file": "europe/azerbaijan/first.bin",
+      "member": "regions",
+      "sha256": "540a643957716babf935c7c7cb7297091da143cdb7aea2f2641f5e1c1a269747"
+    },
+    {
+      "file": "europe/georgia/first.bin",
+      "member": "regions",
+      "sha256": "57072e456f59149d89b047414be2c93f824d4d638a4dff485bc06b2f08a1bff6"
+    },
+    {
+      "file": "europe/kazakhstan/first.bin",
+      "member": "regions",
+      "sha256": "b6264d6c74b4a673cd2da02329d416de25942d4f7460de4b1e4a3660f9e6d35c"
+    },
+    {
+      "file": "europe/kyrgyzstan/first.bin",
+      "member": "regions",
+      "sha256": "6ee8e599477fe91b5c10621f11836aa5b48f2d4bac5880f315e79a2183327cd4"
+    },
+    {
+      "file": "europe/tajikistan/first.bin",
+      "member": "regions",
+      "sha256": "c4429e477a820dc6fdb8aabfb9434c9fc492b1c72b59deac3ab6a5f0df55bc76"
+    },
+    {
+      "file": "europe/turkmenistan/first.bin",
+      "member": "regions",
+      "sha256": "fc696d9dcb69971852dc09a90cb49de09c9a0a28a501d4804676f47676f09af3"
+    },
+    {
+      "file": "europe/uzbekistan/first.bin",
+      "member": "regions",
+      "sha256": "b5525405a65ac00828f945605d7fc90a5a5d410f148aa38e06c45c699d27f772"
+    },
+    {
+      "file": "europe/romania/first.bin",
+      "member": "regions",
+      "sha256": "9764859bfc4e0660be612645ea1323b113c5153c27a9bcbd93467d375d6453ee"
+    },
+    {
+      "file": "europe/turkey/first.bin",
+      "member": "regions",
+      "sha256": "01e1d1d0ff78b481c301e13c5c7a47a03f3e2ae5f5b37f712a571f781475d281"
+    },
+    {
+      "file": "europe/iran/first.bin",
+      "member": "regions",
+      "sha256": "ae0455d3e99b2d75000345819e1ea185f6909cedad18c0477ae7ae3e7c599015"
+    },
+    {
+      "file": "europe/sweden/first.bin",
+      "member": "regions",
+      "sha256": "e4d65a977456b80350506f4d33b734add1d894a107bbf5970189af311f09a52c"
+    },
+    {
+      "file": "europe/norway/first.bin",
+      "member": "regions",
+      "sha256": "25f5827bc3b99940c2b498ce42c7b63eb59ed12fab3fbde81a45a0caeb59c1fc"
+    },
+    {
+      "file": "europe/united-states/first.bin",
+      "member": "regions",
+      "sha256": "fb8852b2d0accd9dffe02acec67057220daf71ae548b2233fd8697c8b0518bdd"
+    },
+    {
+      "file": "china-mobile/provinces.bin",
+      "member": null,
+      "sha256": "7c4b9dd1db64ff09b45ac7a2ba2d20c78fa752e68032ac6f65e78e771c951c8a"
+    },
+    {
+      "file": "scoped/mongolia/mongolia-first.bin",
+      "member": null,
+      "sha256": "8bc60d0a387c3a7c0ea748eca88bcb2fa5b023b72f702b68446a151c4cae2fa0"
+    },
+    {
+      "file": "scoped/korea/korea-first.bin",
+      "member": null,
+      "sha256": "1d4786737b8e2c908c4dcaa1a216884872545002342611dbd42306dfd90d8b65"
+    },
+    {
+      "file": "japan-boundaries.bin",
+      "member": "first",
+      "sha256": "9b65b53ac0c2a1f2332d7aeb736e9f88704847aa39dd0c4554a12d4c08fae7cc"
+    },
+    {
+      "file": "europe/soviet-union-1988/first.bin",
+      "member": "regions",
+      "sha256": "8e5a5f3cf02a595964a8ec05dbb7d98f2e3036c26458d812f4555723f8a8ffc7"
+    }
+  ]
+}

@@ -10,7 +10,11 @@
     "osmtogeojson": "^3.0.0-beta.5",
     "sharp": "0.35.5",
     "topojson-client": "3.1.0",
-    "topojson-server": "3.0.1"
+    "topojson-server": "3.0.1",
+    "@maplibre/geojson-vt": "6.1.1",
+    "@maplibre/vt-pbf": "4.3.2",
+    "@mapbox/vector-tile": "3.0.0",
+    "pbf": "5.1.2"
   },
   "private": true,
   "scripts": {
@@ -145,9 +149,9 @@
     "test:korea-history": "node --check dist/korea-history.mjs && node scripts/validate-korea-history.mjs && node scripts/browser/run.mjs korea-history",
     "build:china-history": "node --max-old-space-size=6000 scripts/build-china-history.mjs",
     "test:china-history": "node --check dist/china-history.mjs && node scripts/validate-china-history.mjs && node scripts/browser/run.mjs china-history",
-    "build:uk-history": "npm run build:us-physical-coast && node --max-old-space-size=9000 scripts/build-uk-history.mjs",
-    "test:uk-history": "node scripts/validate-historical-membership.mjs && node scripts/validate-historical-memory-guards.mjs && node scripts/validate-uk-history.mjs && node scripts/browser/run.mjs uk-history",
-    "test:us-history": "node --check dist/historic-borders.mjs && node --check dist/historic-view.mjs && node --check dist/us-history.mjs && node scripts/validate-us-historic-borders.mjs && node scripts/browser/run.mjs us-history",
+    "build:uk-history": "npm run build:us-physical-coast && node --max-old-space-size=9000 scripts/build-uk-history.mjs && npm run build:historical-tiles",
+    "test:uk-history": "node scripts/validate-uk-history.mjs && node scripts/validate-atlantic-history-tiles.mjs united-kingdom && node scripts/browser/run.mjs \"uk-history ›\"",
+    "test:us-history": "node scripts/validate-us-historic-borders.mjs && node scripts/validate-atlantic-history-tiles.mjs united-states && node scripts/browser/run.mjs us-history",
     "build:korea-elections": "node scripts/build-korea-elections.mjs",
     "test:korea-elections": "node --check dist/elections.mjs && node --check dist/korea-elections.mjs && node scripts/validate-korea-elections.mjs && node scripts/browser/run.mjs korea-elections",
     "test:us-local": "node --check dist/us-place-cards.mjs && node scripts/validate-us-local.mjs && node scripts/validate-us-performance.mjs",
@@ -173,7 +177,7 @@
     "test:india-names": "node --check dist/regional-names.mjs && node scripts/validate-india-names.mjs",
     "test:india-names-browser": "node scripts/browser/run.mjs india-names",
     "fetch:oceania": "node --max-old-space-size=8000 scripts/fetch-oceania.mjs",
-    "build:oceania": "node --max-old-space-size=10000 scripts/build-oceania.mjs && node --max-old-space-size=8000 scripts/prepare-oceania-islands.mjs && node scripts/prepare-oceania-statistics.mjs && node scripts/fetch-oceania-flags.mjs && node scripts/prepare-flag-images.mjs && node scripts/build-world-land.mjs && npm run build:compact && node scripts/prepare-region-colors.mjs",
+    "build:oceania": "node --max-old-space-size=10000 scripts/build-oceania.mjs && node --max-old-space-size=8000 scripts/prepare-oceania-islands.mjs && node scripts/prepare-oceania-statistics.mjs && npm run build:australia-localities && node scripts/fetch-oceania-flags.mjs && node scripts/prepare-flag-images.mjs && node scripts/build-world-land.mjs && npm run build:compact && node scripts/prepare-region-colors.mjs",
     "test:oceania": "node --check scripts/build-regional-dataset.mjs && node --check scripts/build-oceania.mjs && node --check scripts/prepare-oceania-islands.mjs && node --check scripts/prepare-oceania-statistics.mjs && node --check dist/oceania-flags.mjs && node --max-old-space-size=8000 scripts/validate-oceania.mjs",
     "test:oceania-browser": "node scripts/browser/run.mjs oceania",
     "fetch:atlantic": "node scripts/fetch-atlantic.mjs && node scripts/fetch-dutch-islands.mjs",
@@ -531,6 +535,12 @@
     "test:shared-physical-coast": "node scripts/validate-shared-physical-coast.mjs && node scripts/browser/run.mjs shared-physical-coast",
     "build:maine-border-background": "node scripts/build-maine-border-background.mjs",
     "build:maine-border-fill": "node --max-old-space-size=10000 scripts/build-maine-border-all-maps.mjs",
-    "test:maine-border-fill": "node scripts/validate-maine-border-fill.mjs && node scripts/browser/run.mjs maine-border-background"
+    "test:maine-border-fill": "node scripts/validate-maine-border-fill.mjs && node scripts/browser/run.mjs maine-border-background",
+    "build:russia-history": "node --max-old-space-size=10000 scripts/build-russia-history.mjs && node --max-old-space-size=8000 scripts/build-russia-history-tiles.mjs",
+    "test:russia-history": "node scripts/validate-russia-history.mjs && node scripts/validate-russia-history-tiles.mjs && node scripts/browser/run.mjs russia-history",
+    "build:historical-tiles": "node --max-old-space-size=14000 scripts/build-atlantic-history-tiles.mjs",
+    "test:historical-tiles": "node scripts/validate-historical-vector-scene.mjs && node scripts/validate-atlantic-history-tiles.mjs && node scripts/browser/run.mjs atlantic-history",
+    "build:australia-localities": "node --max-old-space-size=16000 scripts/build-australia-localities.mjs",
+    "test:australia-localities": "node --check dist/regional-country.mjs && node --max-old-space-size=12000 scripts/validate-australia-localities.mjs && node scripts/validate-oceania.mjs && node scripts/browser/run.mjs australia-localities"
   }
 }
