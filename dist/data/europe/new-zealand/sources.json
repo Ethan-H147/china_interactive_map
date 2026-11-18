@@ -3,7 +3,8 @@
   "coverage": "All 16 regions and the separate Chatham Islands authority, plus 66 other territorial authorities. Whole cross-region districts retain every official regional relationship, without splitting or duplicate populations. 2025 regional geography and 2026 territorial authorities are clipped to full available LINZ land; population retains its 2023 Census basis. Includes the Kermadec and five subantarctic island groups, Tokelau, Cook Islands and Niue (self-governing states in free association), and the labelled Ross Antarctic claim. Named Cook Islands (15 island groups) and Tokelau (three atolls) have land-only local pages and focused entry. These are geographic groups, not fabricated council polygons.",
   "counts": {
     "1": 28,
-    "2": 84
+    "2": 84,
+    "3": 3176
   },
   "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
   "sources": {
@@ -76,6 +77,16 @@
       "license": "CC0",
       "sha256": "362d6cf123d09735b8c960cd7e2a17720512885ed2175c0400bc3332449e52c5",
       "bytes": 280353
+    },
+    "linzLocalities": {
+      "url": "https://data.linz.govt.nz/layer/113764-nz-suburbs-and-localities/",
+      "provider": "Toitū Te Whenua Land Information New Zealand",
+      "license": "CC BY 4.0",
+      "types": [
+        "Locality",
+        "Suburb"
+      ],
+      "count": 3176
     }
   }
 }
