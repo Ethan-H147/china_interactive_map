@@ -42,10 +42,18 @@ export async function addWorldLand(map,{deferBorderPreviews=false}={}){
  // borders, matching the current sea palette and fading for satellite imagery.
  await addWorkerSource(map,'canada-lake-water','data/canada-lakes.bin',{type:'geojson',tolerance:0,maxzoom:12,buffer:64},'parts');
  map.addLayer({id:'canada-lake-water',source:'canada-lake-water',type:'fill',metadata:{atlas:{role:'water',sea:true,satellite:{fill:'fade'}}},paint:{'fill-color':map.getPaintProperty('background','background-color'),'fill-antialias':false}});
+ await addWorkerSource(map,'narva-reservoir-water','data/russia/baltic-water.bin',{type:'geojson',tolerance:0,maxzoom:16,buffer:64,attribution:'Narva Reservoir: © OpenStreetMap contributors'},'parts');
+ map.addLayer({id:'narva-reservoir-water',source:'narva-reservoir-water',type:'fill',filter:['==',['get','osmRelation'],1310009],metadata:{atlas:{role:'water',sea:true,satellite:{fill:'fade'}}},paint:{'fill-color':map.getPaintProperty('background','background-color'),'fill-antialias':false}});
  await addWorkerSource(map,'major-lake-water','data/major-lake-cutouts.bin',{type:'geojson',tolerance:0,maxzoom:16,buffer:128,attribution:'Lake surfaces: Natural Earth (public domain) · <a href="data/major-lake-cutouts-sources.json">Sources</a>'},'parts');
  map.addLayer({id:'major-lake-water',source:'major-lake-water',type:'fill',metadata:{atlas:{role:'water',sea:true,satellite:{fill:'fade'}}},paint:{'fill-color':map.getPaintProperty('background','background-color'),'fill-antialias':false}});
  await addWorkerSource(map,'americas-inland-water','data/americas-inland-water.bin',{type:'geojson',tolerance:0,maxzoom:16,buffer:128},'parts');
  map.addLayer({id:'americas-inland-water',source:'americas-inland-water',type:'fill',metadata:{atlas:{role:'water',sea:true,satellite:{fill:'fade'}}},paint:{'fill-color':map.getPaintProperty('background','background-color'),'fill-antialias':false}});
+ const nzWater='new-zealand-inland-water';
+ await addWorkerSource(map,nzWater,'data/europe/new-zealand/inland-water.bin',{
+  type:'geojson',tolerance:.25,maxzoom:16,buffer:128,
+  attribution:'Lake surfaces: © Toitū Te Whenua LINZ · <a href="data/europe/new-zealand/sources.json">Sources</a>'
+ },'parts');
+ map.addLayer({id:nzWater,source:nzWater,type:'fill',metadata:{atlas:{role:'water',sea:true,satellite:{fill:'fade'}}},paint:{'fill-color':map.getPaintProperty('background','background-color'),'fill-antialias':false}});
  if(await outlines)map.addLayer({id:'world-country-outlines',type:'line',source:'world-country-outlines',metadata:{atlasInternationalBorder:true,atlas:{role:'border'}},layout:{'line-join':'round','line-cap':'round'},paint:internationalBorderPaint()});
  globalThis.addEventListener?.('atlas-developer-change',()=>syncBackgroundLand(map));
  // China's non-atlas land neighbours at the precision of China's outline, in a band along it

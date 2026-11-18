@@ -1,18 +1,19 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import {gzipSync,gunzipSync} from 'node:zlib';
-import {fileURLToPath} from 'node:url';
+import {fileURLToPath,pathToFileURL} from 'node:url';
 const args=Object.fromEntries(process.argv.slice(2).map(a=>{const i=a.indexOf('=');return [a.slice(2,i),a.slice(i+1)];}));
 const root=args.root||process.cwd(),out=args.output||root,source=args.sources||fileURLToPath(new URL('./name-sources/atlantic/',import.meta.url));
 const {scopes,regionScopes,languages}=await import(new URL('scopes.mjs','file:///'+source.replaceAll('\\','/')+'/'));
 const read=p=>{const b=fs.readFileSync(p);return JSON.parse(b[0]===31?gunzipSync(b):b);};
 const write=(file,data)=>{const p=path.join(out,file);fs.mkdirSync(path.dirname(p),{recursive:true});fs.writeFileSync(p,file.endsWith('.bin')?gzipSync(JSON.stringify(data),{level:9}):JSON.stringify(data,null,2)+'\n');};
-const snapshots=['uk-wikidata.json','fr-admin.json',...fs.readdirSync(source).filter(f=>/^codes-.*\.json$/.test(f))];
+export function prepareAtlanticNames(ukSettlements){
+const snapshots=ukSettlements?['uk-wikidata.json']:['uk-wikidata.json','fr-admin.json',...fs.readdirSync(source).filter(f=>/^codes-.*\.json$/.test(f))];
 const bindings=snapshots.flatMap(file=>read(path.join(source,file)).results.bindings.map(b=>({...b,snapshot:file})));
 const byCode=new Map(),byQid=new Map();
 for(const b of bindings){const property=b.property?.value.split('/').pop()||(b.snapshot.startsWith('uk-')?'P836':'P374'),key=property+':'+b.code.value,qid=b.item.value.split('/').pop();for(const [map,id]of [[byCode,key],[byQid,qid]]){if(!map.has(id))map.set(id,[]);map.get(id).push(b);}}
 const cats={},totals={},conflicts=[];
-for(const country of ['united-kingdom','france'])cats[country]=read(path.join(root,'dist/data/europe/'+country+'/catalogue.bin'));
+for(const country of (ukSettlements?['united-kingdom']:['united-kingdom','france']))cats[country]=read(path.join(root,'dist/data/europe/'+country+'/catalogue.bin'));
 const ukIndex=new Map(cats['united-kingdom'].records.map(r=>[r.id,r]));
 function ukLanguages(r){
  const chain=[];let p=r;while(p){chain.push(p.id,p.region,p.provinceId);p=ukIndex.get(p.parent||p.parentId);}
@@ -27,7 +28,7 @@ function frLanguages(r){const dep=r.level===2?r.id.slice(5):r.parent?.slice(5);r
 const identities=read(path.join(source,'uk-identities.json')).results.bindings;
 const identityKey=s=>s?.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase().replace(/[^a-z0-9]/g,'');
 function namesFrom(bindings,allowed,id,english){
- if(english&&id.startsWith('GB-')){const exact=new Set(identities.filter(b=>identityKey(b.english.value)===identityKey(english)).map(b=>b.item.value));const matching=bindings.filter(b=>exact.has(b.item.value));if(matching.length)bindings=matching;}
+ if(bindings.length&&english&&id.startsWith('GB-')){const exact=new Set(identities.filter(b=>identityKey(b.english.value)===identityKey(english)).map(b=>b.item.value));const matching=bindings.filter(b=>exact.has(b.item.value));if(matching.length)bindings=matching;}
  const names=[];for(const lang of allowed){const matches=bindings.filter(b=>b.name['xml:lang']===lang),distinct=[...new Set(matches.map(b=>b.name.value.trim()))];if(distinct.length>1){conflicts.push({id,lang,values:distinct});continue;}if(!distinct.length)continue;const b=matches[0],text=distinct[0];if(!text||/[\p{Script=Cyrillic}\p{Script=Han}]|\(disambiguation\)|\bundefined\b/u.test(text))throw Error('Unexpected native form '+id+' '+text);names.push({lang,language:languages[lang],text,source:b.item.value.replace('http://www.wikidata.org/entity/','https://www.wikidata.org/wiki/'),license:'CC0',provenance:b.snapshot});}return names;
 }
 function apply(record,names){if(!names.length)return;record.regionalNames=names;record.aliases=[...new Set([...(record.aliases||[]),...names.flatMap(n=>[n.text,...(n.aliases||[])])])];}
@@ -43,6 +44,13 @@ function enrich(country,r){
  if(uk&&r.id.startsWith('GB-C-W')&&!native.some(n=>n.lang==='cy')&&r.local?.trim())native.push({lang:'cy',language:'Welsh',text:r.local.trim(),source:'https://www.ons.gov.uk/methodology/geography/geographicalproducts/namescodesandlookups',license:'OGL'});
  const explicit=overrides(r);apply(r,[...native.filter(n=>!explicit.some(e=>e.lang===n.lang)),...explicit]);
 }
+function enrichUKPlaces(records){
+ for(const record of records){
+  enrich('united-kingdom',record);
+  if(record.en==='Belfast'&&record.provinceId==='GB-R-TLN')apply(record,[...(record.regionalNames||[]).filter(n=>n.lang!=='sco-x-ulster'),...manual['GB-C-N09000003']]);
+ }
+}
+if(ukSettlements){enrichUKPlaces(ukSettlements);return;}
 for(const [country,cat]of Object.entries(cats))for(const r of cat.records)enrich(country,r);
 // Gallo entries match a commune within the source's department; theoretical forms are excluded.
 const decode=s=>s.replaceAll('&nbsp;',' ').replaceAll('&#039;',"'").replaceAll('&amp;','&').replaceAll('&rsquo;',"'").replace(/<[^>]*>/g,'').trim();
@@ -65,8 +73,7 @@ for(const section of html.split(/<h2[^>]*>/).slice(1)){
 for(const [country,cat]of Object.entries(cats)){
  write('dist/data/europe/'+country+'/catalogue.bin',cat);
  if(country==='united-kingdom'){
-  const settlements=read(path.join(root,'dist/data/europe/united-kingdom/settlements.bin'));for(const r of settlements.records)enrich(country,r);
-  const belfast=manual['GB-C-N09000003'];for(const r of settlements.records.filter(r=>r.en==='Belfast'))apply(r,[...(r.regionalNames||[]).filter(n=>n.lang!=='sco-x-ulster'),...belfast]);
+  const settlements=read(path.join(root,'dist/data/europe/united-kingdom/settlements.bin'));enrichUKPlaces(settlements.records);
   write('dist/data/europe/united-kingdom/settlements.bin',settlements);
  }
  // City quizzes are separate catalogues: match exact Wikidata identities, never names alone.
@@ -84,3 +91,5 @@ for(const [country,cat]of Object.entries(cats)){
  write('dist/data/europe/'+country+'/regional-names.json',{retrieved:'2026-11-07',coverage:'Attested forms only, matched by official codes, with regional language scope filters. No name is inherited from a parent. Coverage varies by language and subdivision. Gallo theoretical forms and conflicting code-label matches are excluded. The Isle of Man retains its Crown Dependency status.',...totals[country],sources:[{title:'Wikidata, CC0; official GSS and INSEE code matching',url:'https://www.wikidata.org/'},...Object.entries(manual).filter(([id])=>id.startsWith(country==='france'?'FR-':'GB-')).flatMap(([,names])=>names).filter((n,i,a)=>a.findIndex(o=>o.source===n.source)===i).map(n=>({title:n.language+' reference',url:n.source})),...(country==='france'?[{title:'Gallo geographical names: Régis Auffray / Le Petit Matao',url:'https://www.dugaloenbertegn.bzh/fr/les-noms-de-lieux'}]:[{title:'OS Open Names and retained national statistical settlement names',url:'https://www.ordnancesurvey.co.uk/products/os-open-names'}])]});
 }
 write('scripts/name-sources/atlantic/coverage-audit.json',{totals,conflicts});console.log(JSON.stringify({totals,conflicts:conflicts.length},null,2));
+}
+if(process.argv[1]&&import.meta.url===pathToFileURL(path.resolve(process.argv[1])).href)prepareAtlanticNames();

@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';import fs from 'node:fs';import sharp from 'sharp';
 import {chooseMapView} from './map-view-dropdown.test.mjs';
 const {fixtures}=JSON.parse(fs.readFileSync('scripts/boundary-sources/major-lake-cutouts/checks.json'));
-async function pixel(p,point){
+export async function pixel(p,point){
  const position=await p.evaluate('(()=>{const p=map.project('+JSON.stringify(point)+'),r=map.getCanvas().getBoundingClientRect();return {x:Math.round(p.x+r.left),y:Math.round(p.y+r.top),sea:map.getPaintProperty("background","background-color")}})()');
  await p.evaluate('(()=>{const s=document.createElement("style");s.id="water-pixel-check";s.textContent="body *{visibility:hidden!important}#map,#map *{visibility:visible!important}#map .maplibregl-marker{visibility:hidden!important}";document.head.append(s)})()');
  try{const shot=await p.send('Page.captureScreenshot',{format:'png',clip:{x:position.x,y:position.y,width:1,height:1,scale:1}}),data=await sharp(Buffer.from(shot.data,'base64')).removeAlpha().raw().toBuffer();return {rgb:[...data.subarray(0,3)],sea:position.sea.slice(1).match(/../g).map(v=>parseInt(v,16))};}finally{await p.evaluate('document.getElementById("water-pixel-check").remove()');}

@@ -14,7 +14,7 @@ export function createRegionalCapitals(map,{country,base,line,onSelect,labelPrio
    map.addLayer({id,type:'circle',source:id,layout:{visibility:'none'},paint:{'circle-radius':['interpolate',['linear'],['zoom'],3,2.5,9,4],'circle-color':line,'circle-stroke-color':'#fffdf8','circle-stroke-width':1.25}});
   },
   sync(visible){active=!!visible;if(dots)setLayerVisible(map,id,active);},
-  labels(language,bounds,selected){return active?points.filter(p=>p.center[0]>=bounds.getWest()&&p.center[0]<=bounds.getEast()&&p.center[1]>=bounds.getSouth()&&p.center[1]<=bounds.getNorth()).map(p=>({...p,lines:placeLines(p,language),selected:p.parent===selected,priority:labelPriority,className:'settlement-label',onClick:()=>onSelect(p.parent)})):[];},
+  labels(language,bounds,selected){return active?points.filter(p=>p.center[0]>=bounds.getWest()&&p.center[0]<=bounds.getEast()&&p.center[1]>=bounds.getSouth()&&p.center[1]<=bounds.getNorth()).map(p=>({...p,lines:placeLines(p,language),selected:p.parent===selected,priority:labelPriority,pointLabel:true,className:'settlement-label',onClick:()=>onSelect(p.parent)})):[];},
   pick(point){if(!active||!map.getLayer(id))return;return map.queryRenderedFeatures(point,{layers:[id]})[0]?.properties.parent;},
   dispose(){generation++;active=false;loaded=false;points=[];if(map.getLayer(id))map.removeLayer(id);if(map.getSource(id))map.removeSource(id);}
  };

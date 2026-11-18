@@ -37,10 +37,23 @@ export function prepareCountryDetails(anchor){
  const sidebar=anchor.closest?.('.sidebar');
  if(sidebar&&!sidebar.querySelector('.details-expand')){
   const button=document.createElement('button');button.className='details-expand';button.type='button';button.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg>';button.setAttribute('aria-controls',sidebar.id);
-  const expand=value=>{sidebar.classList.toggle('details-expanded',value);button.setAttribute('aria-expanded',String(value));button.setAttribute('aria-label',value?'Collapse region details':'Expand region details');button.title=value?'Collapse details (Esc)':'Expand region details';requestAnimationFrame(()=>window.dispatchEvent(new Event('resize')));};
-  button.onclick=()=>expand(!sidebar.classList.contains('details-expanded'));
-  sidebar.addEventListener('keydown',event=>{if(event.key==='Escape'&&sidebar.classList.contains('details-expanded')){expand(false);button.focus();event.stopPropagation();}});
-  sidebar.append(button);expand(false);
+  const edge=document.createElement('div');edge.className='details-resize-edge';edge.hidden=true;edge.tabIndex=0;edge.setAttribute('role','separator');edge.setAttribute('aria-orientation','vertical');edge.setAttribute('aria-label','Resize menu');edge.setAttribute('aria-controls',sidebar.id);
+  const desktop=matchMedia('(min-width:761px)');
+  let enabled=false,drag=null;
+  const limits=()=>({min:280,max:Math.max(280,Math.min(1000,sidebar.parentElement.clientWidth-280))});
+  const width=()=>sidebar.getBoundingClientRect().width;
+  const resize=value=>{const {min,max}=limits(),next=Math.round(Math.max(min,Math.min(max,value)));sidebar.style.setProperty('--details-width',next+'px');sidebar.classList.toggle('details-expanded',next>=640);edge.setAttribute('aria-valuemin',min);edge.setAttribute('aria-valuemax',max);edge.setAttribute('aria-valuenow',next);edge.setAttribute('aria-valuetext',next+' pixels');};
+  const finish=()=>{const pointer=drag?.id;drag=null;document.documentElement.removeAttribute('data-sidebar-resizing');if(pointer!==undefined&&edge.hasPointerCapture(pointer))edge.releasePointerCapture(pointer);};
+  const enable=value=>{finish();const initial=width();enabled=value&&desktop.matches;sidebar.classList.toggle('details-resizable',enabled);edge.hidden=!enabled;button.setAttribute('aria-pressed',String(enabled));button.setAttribute('aria-label',enabled?'Reset menu width':'Enable menu resizing');button.title=enabled?'Reset menu width':'Enable menu resizing';if(enabled)resize(initial);else{sidebar.classList.remove('details-expanded');sidebar.style.removeProperty('--details-width');}};
+  button.onclick=()=>enable(!enabled);
+  edge.addEventListener('pointerdown',event=>{if(!enabled||event.button!==0)return;event.preventDefault();event.stopPropagation();edge.focus({preventScroll:true});drag={id:event.pointerId,x:event.clientX,width:width()};edge.setPointerCapture(event.pointerId);document.documentElement.setAttribute('data-sidebar-resizing','');});
+  edge.addEventListener('pointermove',event=>{if(drag?.id===event.pointerId)resize(drag.width+event.clientX-drag.x);});
+  for(const event of ['pointerup','pointercancel','lostpointercapture'])edge.addEventListener(event,finish);
+  edge.addEventListener('keydown',event=>{const {min,max}=limits(),step=event.shiftKey?40:10;const next={ArrowLeft:width()-step,ArrowRight:width()+step,Home:min,End:max}[event.key];if(next===undefined)return;event.preventDefault();event.stopPropagation();resize(next);});
+  sidebar.addEventListener('keydown',event=>{if(event.key==='Escape'&&enabled){enable(false);button.focus({preventScroll:true});event.stopPropagation();}});
+  desktop.addEventListener('change',()=>{if(!desktop.matches)enable(false);});
+  window.addEventListener('resize',()=>{if(enabled&&!sidebar.hidden)resize(width());});
+  sidebar.append(button,edge);enable(false);
  }
  return population||anchor;
 }

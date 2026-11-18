@@ -877,7 +877,7 @@ $('mode-lock').onclick=()=>{const locked=$('mode-lock').getAttribute('aria-press
 $('tab-extra').onclick=()=>showPanel('extra');$('tab-explore').onclick=()=>showPanel('explore');$('tab-layers').onclick=()=>showPanel('layers');$('tab-quiz').onclick=()=>openChinaQuiz();
 // Clear a map selection from any focused control without moving the camera.
 document.addEventListener('keydown',event=>{
- if(event.key!=='Escape'||event.isComposing||document.querySelector('dialog[open], [popover]:popover-open')||atlasStarting||countrySwitching||quiz.active)return;
+ if(event.key!=='Escape'||event.isComposing||event.target.closest?.('.details-resizable')||document.querySelector('dialog[open], [popover]:popover-open')||atlasStarting||countrySwitching||quiz.active)return;
  if(cameraBusy){cancelNavigation();const epoch=navigationEpoch;void motionRenderer.end({interactive:true}).then(()=>{if(epoch===navigationEpoch)unlockCamera();});}
  clearHover();
  if(atlasMode==='china'){

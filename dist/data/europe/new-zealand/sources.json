@@ -86,7 +86,21 @@
         "Locality",
         "Suburb"
       ],
-      "count": 3176
+      "count": 3176,
+      "boundaryNeighbours": [
+        "Conservation Land",
+        "Island"
+      ]
+    },
+    "inlandWater": {
+      "url": "https://data.linz.govt.nz/layer/113764-nz-suburbs-and-localities/",
+      "provider": "Toitū Te Whenua Land Information New Zealand",
+      "license": "CC BY 4.0",
+      "counts": {
+        "Lake": 121,
+        "Inland Bay": 289
+      },
+      "processing": "Lake and inland bay polygons dissolved into permanent water surfaces with island holes."
     }
   }
 }

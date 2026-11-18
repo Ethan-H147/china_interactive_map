@@ -28,3 +28,7 @@ Keep `docs/center-dot-usage.md` current when changing visible center-dot separat
 # Reuse and assets
 
 Never create unnecessary new assets. Reuse the existing renderer, UI components, and data assets whenever they can meet the requirement. Adapt data loading or inputs before adding a separate implementation. Add an asset only when the requested behavior requires it and an existing asset cannot serve that purpose.
+
+# Local border slivers
+
+For a reported sliver, compare the two neighboring edges directly and patch only the mismatched stretches. Rebuild only the map files affected by the edit. Skip country-wide and global rebuilds. Check in the data that both fills and the outline follow the same path along every repaired stretch, then spot-check one repaired bend per affected border in the local map.

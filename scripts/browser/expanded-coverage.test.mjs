@@ -3,7 +3,7 @@ import {searchAndSelect} from './countries.test.mjs';
 export default [1280,390].map(width=>({name:'UK small places, India districts and scoped Turkey '+width,options:{width,height:900,mobile:width===390},async run(p,base){
  await p.open(base,'#united-kingdom');
  await searchAndSelect(p,'Castle Combe','Castle Combe');assert.equal(await p.evaluate('currentAtlas().getSelection()'),'GB-OS-osgb4000000074570100');assert(!(await p.evaluate('document.getElementById("gb-statistics").textContent')).includes('NaN'));await p.waitFor('map.queryRenderedFeatures({layers:["united-kingdom-settlements"]}).length>0');await p.screenshot('uk-small-places-'+width);
- await searchAndSelect(p,'Drumbeg','Drumbeg','Town or village');assert.equal(await p.evaluate('currentAtlas().getSelection()'),'GB-OSNI-141');
+ await searchAndSelect(p,'Drumbeg Lisburn and Castlereagh','Drumbeg','Village');assert.equal(await p.evaluate('currentAtlas().getSelection()'),'GB-OSNI-141');
  await searchAndSelect(p,'London overview','London','City');assert.equal(await p.evaluate('currentAtlas().getSelection()'),'GB-S-LONDON');assert(!await p.evaluate('document.getElementById("gb-place-overview").hidden'));
  await p.evaluate("changeAtlas('india',false)");await p.settle();assert(!await p.evaluate('!!map.getSource("india-second")'),'District geometry starts scoped');
  await searchAndSelect(p,'Pune','Pune','District');await p.waitFor('map.queryRenderedFeatures({layers:["india-second-selected"]}).length>0');assert.equal(await p.evaluate('currentAtlas().getSelection()'),'IN-D-490');assert.equal(await p.evaluate('fetch(map.getStyle().sources["india-second"].data).then(r=>r.json()).then(d=>new Set(d.features.map(f=>f.properties.id)).size)'),36);await p.screenshot('india-districts-'+width);

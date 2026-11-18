@@ -2,6 +2,8 @@ import assert from 'node:assert/strict';
 import sharp from 'sharp';
 const magentaPixels=async png=>{const bytes=Buffer.from(png.split(',')[1],'base64'),data=await sharp(bytes).ensureAlpha().raw().toBuffer();let count=0;for(let i=0;i<data.length;i+=4)if(data[i]>180&&data[i+1]<100&&data[i+2]>180)count++;return count;};
 export default [1280,390].map(width=>({name:'Globe rendered dots stay sparse during fast zoom-out '+width,options:{width,height:909,mobile:width===390},async run(p,base){
+ // The pixel counter below measures literal magenta. Give the test its reference palette on every device.
+ await p.send('Emulation.setEmulatedMedia',{features:[{name:'prefers-color-scheme',value:'light'}]});
  await p.send('Page.addScriptToEvaluateOnNewDocument',{source:"localStorage.setItem('boundary-atlas-globe-v1','true');"});
  await p.open(base,'#finland');assert.equal(await p.evaluate('map.getProjection().type'),'globe');
  await p.evaluate(`for(const l of map.getStyle().layers.filter(l=>l.id.startsWith('finland-settlements')))map.setPaintProperty(l.id,'circle-color','#ff00ff');void map.jumpTo({center:[27.126934,68.107676],zoom:16});`);await p.settle();

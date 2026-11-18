@@ -9,13 +9,31 @@ export function labelLines(english,local,language='both',district=false){
  english=compact(english);local=compact(local);
  return language==='en'?[english]:language==='local'?[local||english]:[english,local].filter((s,i,a)=>s&&a.indexOf(s)===i);
 }
+const pointLabelGap=4;
 export function placeLabels(candidates,width,height){
  const occupied=[],accepted=[];
+ const dots=new Map(),cell=40;
+ for(const item of candidates)if(Number.isFinite(item.pointX)){
+  const {pointX,pointY:y}=item;
+  const key=Math.floor(pointX/cell)+','+Math.floor(y/cell);
+  if(!dots.has(key))dots.set(key,[]);dots.get(key).push(item);
+ }
+ function coversDot(item){
+  const {x,y,w,h}=item;
+  if(!dots.size)return false;
+  const left=x-w/2-4,right=x+w/2+4,top=y-h/2-4,bottom=y+h/2+4;
+  for(let col=Math.floor(left/cell);col<=Math.floor(right/cell);col++)for(let row=Math.floor(top/cell);row<=Math.floor(bottom/cell);row++){
+   if(dots.get(col+','+row)?.some(dot=>dot!==item&&dot.pointX>=left&&dot.pointX<=right&&dot.pointY>=top&&dot.pointY<=bottom))return true;
+  }
+  return false;
+ }
  for(const item of [...candidates].sort((a,b)=>Number(!!b.selected)-Number(!!a.selected)||(b.priority||0)-(a.priority||0)||String(a.id).localeCompare(String(b.id)))){
-  const {x,y,w,h}=item;if(x-w/2<12||x+w/2>width-12||y-h/2<72||y+h/2>height-44)continue;
-  const r={left:x-w/2-7,right:x+w/2+7,top:y-h/2-5,bottom:y+h/2+5};
-  if(occupied.some(o=>r.left<o.right&&r.right>o.left&&r.top<o.bottom&&r.bottom>o.top))continue;
-  occupied.push(r);accepted.push(item);
+  const {y,w,h}=item;if(y-h/2<72||y+h/2>height-44)continue;
+  const x=item.x;
+   if(x-w/2<12||x+w/2>width-12||coversDot(item))continue;
+   const r={left:x-w/2-7,right:x+w/2+7,top:y-h/2-5,bottom:y+h/2+5};
+   if(occupied.some(o=>r.left<o.right&&r.right>o.left&&r.top<o.bottom&&r.bottom>o.top))continue;
+   occupied.push(r);accepted.push(item);
  }return accepted;
 }
 // Text widths per font and line; labels are placed again after every map movement.
@@ -40,13 +58,14 @@ export function render(map,candidates,className){
     lines=[item.shortMapLabel];w=textWidth(font(0),item.shortMapLabel);
    }
   }
-  return {...item,lines,x:point.x,y:point.y,w:w+4,h:lines.length*(large?24:21)};
- }).filter(({x,y,w,h})=>{const {clientWidth:width,clientHeight:height}=map.getContainer();return x-w/2>=12&&x+w/2<=width-12&&y-h/2>=72&&y+h/2<=height-44;}).slice(0,LABEL_CANDIDATE_LIMIT);
+  const h=lines.length*(large?24:21);
+  return {...item,lines,x:point.x,...(item.pointLabel?{pointX:point.x,pointY:point.y}:{}),y:item.pointLabel?point.y+pointLabelGap+h/2:point.y,w:w+4,h};
+ }).filter(({x,y,w,h,pointX})=>{const {clientWidth:width,clientHeight:height}=map.getContainer();return (Number.isFinite(pointX)?pointX>=0&&pointX<=width:x-w/2>=12&&x+w/2<=width-12)&&y-h/2>=72&&y+h/2<=height-44;}).slice(0,LABEL_CANDIDATE_LIMIT);
  return placeLabels(items,map.getContainer().clientWidth,map.getContainer().clientHeight).map(item=>{
   const el=document.createElement('div');el.dataset.atlasPlace=String(item.id);el.className=item.className||className;if(item.onClick){el.setAttribute('role','button');el.tabIndex=0;el.onclick=e=>{e.stopPropagation();item.onClick();};el.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();item.onClick();}};}el.classList.toggle('selected-label',!!item.selected);el.textContent=item.lines[0];
   if(item.lang)el.lang=item.lang;
   for(const line of item.lines.slice(1)){const small=document.createElement('small');small.textContent=line;el.append(small);}
-  const marker=new window.maplibregl.Marker({element:el,anchor:'center'}).setLngLat(item.center),pipeline=globalThis.AtlasRenderPipeline;
+  const marker=new window.maplibregl.Marker({element:el,...(item.pointLabel?{anchor:'top',offset:[0,pointLabelGap]}:{anchor:'center'})}).setLngLat(item.center),pipeline=globalThis.AtlasRenderPipeline;
   if(!pipeline)return marker.addTo(map);
   const cancel=pipeline.enqueueLabel(()=>marker.addTo(map)),remove=marker.remove.bind(marker);
   marker.remove=()=>{cancel();return remove();};return marker;

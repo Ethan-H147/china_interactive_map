@@ -51,6 +51,14 @@
       "source": "Russia geoBoundaries 2017 atlas display before Baltic shoreline alignment",
       "license": "ODbL 1.0",
       "sha256": "beec77e49ad0fed285e2ed6b043d478ed48f345128a6a767cdfd69febc7af18a"
+    },
+    "narva-reservoir": {
+      "url": "https://www.openstreetmap.org/relation/1310009",
+      "provider": "OpenStreetMap contributors via Nominatim",
+      "license": "ODbL 1.0",
+      "licenseURL": "https://www.openstreetmap.org/copyright",
+      "relation": 1310009,
+      "sha256": "258fd2a41661fb5916a56f060264cbc70fe7f980cb1a4409c64c417d73265b74"
     }
   },
   "satelliteVerification": {

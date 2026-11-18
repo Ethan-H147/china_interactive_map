@@ -28,6 +28,10 @@ export function placeLines(record,language='both'){
  const local=record.localLang?variants.filter(([code])=>code===record.localLang):variants.filter(([,name])=>name!==record.en);
  return [...new Set([record.en,...local.slice(0,1).map(([,name])=>name)])];
 }
+export function settlementLabelLines(record,language){
+ const lines=record.mapLabel?[record.mapLabel]:placeLines(record,language);
+ return record.labelContext?[...lines,record.labelContext]:lines;
+}
 // A tenfold population decrease needs 2.4 more zoom levels, without abrupt batches. A record
 // without a population can give its own minzoom (Turkey's towns, by rank).
 export function settlementZoom(record){
@@ -35,7 +39,7 @@ export function settlementZoom(record){
  if(record.id?.startsWith('FI-NLS-')&&(record.kind==='Village / hamlet'||record.provenance?.gazetteer?.placeType==='3010110'))return 14+Math.max(0,Math.min(3,(record.minzoom||10)-7))/3;
  if(Number.isFinite(record.minzoom))return record.minzoom;const population=Math.max(1,record.population?.value||0);return Math.max(4,Math.min(9.5,5.8+2.4*Math.log10(100000/population)));
 }
-export function visibleSettlements(records,zoom,bounds,selected){return records.filter(r=>(r.id===selected||zoom>=(r.dotzoom??settlementZoom(r)))&&r.center[0]>=bounds.getWest()&&r.center[0]<=bounds.getEast()&&r.center[1]>=bounds.getSouth()&&r.center[1]<=bounds.getNorth()).sort((a,b)=>(b.population?.value||0)-(a.population?.value||0));}
+export function visibleSettlements(records,zoom,bounds,selected,followDots=false){return records.filter(r=>(r.id===selected||(followDots&&Number.isFinite(r.dotzoom)?zoom>r.dotzoom-.25:zoom>=settlementZoom(r)))&&r.center[0]>=bounds.getWest()&&r.center[0]<=bounds.getEast()&&r.center[1]>=bounds.getSouth()&&r.center[1]<=bounds.getNorth()).sort((a,b)=>(b.population?.value||0)-(a.population?.value||0));}
 // A stable geographic hierarchy gives each point room on screen. Previously admitted
 // points keep priority as the map zooms in; panning cannot reshuffle the visible dots.
 // Compute once per country, never while handling a gesture or waiting for worker tiles.

@@ -423,7 +423,7 @@
       "bytes": 565922
     }
   ],
-  "settlementCoverage": "All Ordnance Survey Open Names cities, towns, villages, hamlets and other settlements in Great Britain, supplemented by OSNI towns/villages and GeoNames populated places in Northern Ireland. No population cutoff for named places; suburban-area-only names, historical/deserted places and individual properties are excluded. Census populations remain attached to their whole statistical areas. Named places take the census count of a smaller official settlement of the same name within 3 km (ONS 2022 built-up areas, NRS 2022 and NISRA settlements), or of a namesake parish or Welsh community without any built-up area within 5 km; other named places have no inferred population.",
+  "settlementCoverage": "Named places use OS Open Names in Great Britain and OSNI and GeoNames in Northern Ireland. Population figures identify their census geography and year. Named OpenStreetMap points locate census places missing from the gazetteers. Scottish locality counts and combined census areas identify their own geography. Combined areas have a separate searchable entry. Where the atlas has only a statistical location, the map label identifies its scope.",
   "settlementSources": [
     {
       "id": "os-open-names",
@@ -462,6 +462,18 @@
       "license": "Open Government Licence v3.0",
       "credit": "Source: Office for National Statistics licensed under the Open Government Licence v3.0. Contains OS data © Crown copyright and database right 2022.",
       "description": "Counts for built-up areas omitted from the towns tables and for parishes and Welsh communities. Smaller NRS and NISRA settlements reuse the retained statistical sources."
+    },
+    {
+      "id": "nrs-localities-2022",
+      "title": "National Records of Scotland, 2022 Census locality populations",
+      "url": "https://maps.gov.scot/server/rest/services/NRS/Census2022/MapServer/6",
+      "license": "Open Government Licence v3.0"
+    },
+    {
+      "id": "osm-place-nodes",
+      "title": "OpenStreetMap contributors, named settlement locations",
+      "url": "https://www.openstreetmap.org/copyright",
+      "license": "ODbL"
     }
   ]
 }

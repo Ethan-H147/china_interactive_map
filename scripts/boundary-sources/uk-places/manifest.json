@@ -39,6 +39,18 @@
       "license": "Open Government Licence v3.0",
       "credit": "Source: Office for National Statistics licensed under the Open Government Licence v3.0. Contains OS data © Crown copyright and database right 2022.",
       "description": "Counts for built-up areas omitted from the towns tables and for parishes and Welsh communities. Smaller NRS and NISRA settlements reuse the retained statistical sources."
+    },
+    {
+      "id": "nrs-localities-2022",
+      "title": "National Records of Scotland, 2022 Census locality populations",
+      "url": "https://maps.gov.scot/server/rest/services/NRS/Census2022/MapServer/6",
+      "license": "Open Government Licence v3.0"
+    },
+    {
+      "id": "osm-place-nodes",
+      "title": "OpenStreetMap contributors, named settlement locations",
+      "url": "https://www.openstreetmap.org/copyright",
+      "license": "ODbL"
     }
   ],
   "files": {
@@ -56,6 +68,11 @@
     },
     "small-place-census.json.gz": {
       "sha256": "e8945972741c72938edb38ed3bc3e098cc7fd8e4c782575fe300a12965056235"
+    },
+    "reviewed-matches.json": {
+      "sha256": "ca08527bdbcc15e32d3e27f5ae46cd43fd7b0e7eb53b7992d0c48facd287a14a",
+      "reviewed": "2026-11-17",
+      "description": "Point-in-polygon checks, NRS locality counts, and matched place names, types and coordinates. Each OSM record retains its node URL and version. The Seahill position is an interior point of its NISRA settlement polygon."
     }
   },
   "coordinateTransform": "OSGB36 British National Grid to WGS84 using the standard seven-parameter Helmert transform. Gazetteer dot positions are approximate to a few metres; they are not survey control."

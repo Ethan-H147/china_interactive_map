@@ -67,7 +67,18 @@ self.onmessage=async({data})=>{
     })
    };
   };
-  const read=async url=>{const payload=await loadCompressed(url);return payload.levels?{levels:payload.levels.map(part=>({level:part.level,...prepare(part)}))}:prepare(payload);};
+  const read=async url=>{
+   if(url.districtUrls){
+    // NZ localities may cross districts. Both district files carry the same complete shape and shared lines.
+    const regions=new Map(),edges=new Map();
+    for(const district of await Promise.all(url.districtUrls.map(path=>loadCompressed(path)))){
+     for(const feature of district.regions.features)regions.set(feature.properties.id,feature);
+     for(const feature of district.boundaries.features)edges.set(JSON.stringify(feature),feature);
+    }
+    const collection=map=>({type:'FeatureCollection',features:[...map.values()]});
+    return prepare({regions:collection(regions),boundaries:collection(edges)});
+   }
+   const payload=await loadCompressed(url);return payload.levels?{levels:payload.levels.map(part=>({level:part.level,...prepare(part)}))}:prepare(payload);};
   self.postMessage(data.urls?{chunks:await Promise.all(data.urls.map(read))}:await read(data.url));
  }catch(error){self.postMessage({error:error.message});}
 };

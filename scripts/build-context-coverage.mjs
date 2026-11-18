@@ -26,7 +26,7 @@ export function geometryBoxes(input){
  for(const box of boxes){const key=Math.floor((box[0]+box[2])/30)+','+Math.floor((box[1]+box[3])/30),old=groups.get(key);if(old){old[0]=Math.min(old[0],box[0]);old[1]=Math.min(old[1],box[1]);old[2]=Math.max(old[2],box[2]);old[3]=Math.max(old[3],box[3]);}else groups.set(key,box);}
  return [...groups.values()].map(b=>b.map((v,i)=>(i<2?Math.floor(v*100):Math.ceil(v*100))/100));
 }
-const overlayFiles=new Set(['canada-lakes.bin','major-lake-cutouts.bin','americas-inland-water.bin',
+const overlayFiles=new Set(['canada-lakes.bin','major-lake-cutouts.bin','americas-inland-water.bin','europe/new-zealand/inland-water.bin',
  ...Object.values(globalThis.AtlasCountries.countries).filter(c=>c.map?.controlBoundary&&c.base?.startsWith('data/')).map(c=>c.base.slice(5)+c.map.controlBoundary)]);
 const selected=name=>overlayFiles.has(name)||/(?:^|\/)(?:[^/]*(?:context|neighbours|international)[^/]*|world-land|world-country-outlines|atlas-frontiers)\.bin$/.test(name);
 export function contextFiles(root='dist/data'){

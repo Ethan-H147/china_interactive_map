@@ -5,7 +5,8 @@ import {settlementFeatures} from '../dist/settlement-layer.mjs';
 const base='dist/data/europe/united-kingdom/',data=load(base+'settlements.json'),catalogue=load(base+'catalogue.bin'),stats=load(base+'statistics.json'),london=data.records.filter(r=>r.provinceId===londonRegion);
 assert.equal(london.length,1);const place=london[0];assert.equal(place.id,londonId);assert.equal(place.en,'London');assert.equal(place.parentId,londonRegion);assert.deepEqual(place.bounds,catalogue.records.find(r=>r.id===londonRegion).bounds);
 assert.equal(catalogue.records.filter(r=>r.parent===londonRegion).length,33,'All borough-level administrative selections survive');
-assert.equal(Object.keys(data.selectionAliases).length,33,'Old settlement links redirect to their corresponding administrative areas');
+const originalLinks=load('scripts/boundary-sources/uk-places/statistical-base.json.gz').selectionAliases;
+assert.equal(Object.keys(originalLinks).length,33);for(const [id,target] of Object.entries(originalLinks))assert.equal(data.selectionAliases[id],target,'London link '+id);
 assert.equal(data.selectionAliases['GB-S-E63004906'],cityOfLondon);
 assert.deepEqual(place.overview.sections.map(s=>s.title),['Greater London','City of London']);
 for(const [section,id]of place.overview.sections.map((s,i)=>[s,[londonRegion,cityOfLondon][i]]))for(const metric of section.metrics){assert.equal(metric.value,stats.regions['united-kingdom:'+id][metric.type].value);assert.equal(metric.year,2024);assert(metric.source.url.startsWith('https://www.ons.gov.uk/'));}
