@@ -421,6 +421,19 @@
       "url": "https://api.openstreetmap.org/api/0.6/relation/1231790/full.json",
       "sha256": "90c303f8cb19e8f296056079d7be074f3fb3d1579feda29d6ac1c0485968f289",
       "bytes": 565922
+    },
+    {
+      "provider": "Ordnance Survey, OS Open Rivers",
+      "url": "https://osdatahub.os.uk/downloads/open/OpenRivers",
+      "license": "Open Government Licence v3.0",
+      "attribution": "Contains OS data © Crown copyright and database right 2026"
+    },
+    {
+      "provider": "Office for National Statistics, Local Authority Districts (December 2024) Boundaries UK BFE",
+      "url": "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/Local_Authority_Districts_December_2024_Boundaries_UK_BFE/FeatureServer/0",
+      "year": 2024,
+      "license": "Open Government Licence v3.0",
+      "attribution": "Source: Office for National Statistics licensed under the Open Government Licence v.3.0. Contains OS data © Crown copyright and database right 2024"
     }
   ],
   "settlementCoverage": "Named places use OS Open Names in Great Britain and OSNI and GeoNames in Northern Ireland. Population figures identify their census geography and year. Named OpenStreetMap points locate census places missing from the gazetteers. Scottish locality counts and combined census areas identify their own geography. Combined areas have a separate searchable entry. Where the atlas has only a statistical location, the map label identifies its scope.",

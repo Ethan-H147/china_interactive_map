@@ -32,7 +32,10 @@ async function process(data,commands,mask){
  const result=await mapshaper.applyCommands('-i water.json '+commands+' -o water.json format=geojson precision=0.000001',input);
  const parsed=JSON.parse(result['water.json']);return parsed.type==='FeatureCollection'?parsed:fc([parsed]);
 }
+// The optional hydrography is clipped to administrative coverage, including Laguna de Términos.
 const mask=load(base+'context.bin');
+const campeche=load(base+'first.bin').selectionOutlineOverrides?.features.find(f=>f.properties.id==='MX-CAM');
+if(campeche)mask.features.push(campeche);
 const lakes=await process(fc(features.filter(f=>f.properties.kind==='lake')),'-clean -clip mask.json -simplify dp interval=.00015 planar keep-shapes -clean',mask);
 // A small corridor preserves international boundary rivers; unlike a state split it cannot cut a river in half.
 const buffered=await process(mask,'-dissolve -buffer 500');

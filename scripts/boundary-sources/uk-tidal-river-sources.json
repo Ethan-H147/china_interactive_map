@@ -1,0 +1,15 @@
+[
+  {
+    "provider": "Ordnance Survey, OS Open Rivers",
+    "url": "https://osdatahub.os.uk/downloads/open/OpenRivers",
+    "license": "Open Government Licence v3.0",
+    "attribution": "Contains OS data © Crown copyright and database right 2026"
+  },
+  {
+    "provider": "Office for National Statistics, Local Authority Districts (December 2024) Boundaries UK BFE",
+    "url": "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/Local_Authority_Districts_December_2024_Boundaries_UK_BFE/FeatureServer/0",
+    "year": 2024,
+    "license": "Open Government Licence v3.0",
+    "attribution": "Source: Office for National Statistics licensed under the Open Government Licence v.3.0. Contains OS data © Crown copyright and database right 2024"
+  }
+]

@@ -7,12 +7,10 @@ let zoomLock;
 const initialCountry=window.AtlasEntry?.initial;
 const lowMemory=!!window.AtlasEntry?.lowMemory;
 let chinaCountyScope;
-const initialBackground=window.AtlasEntry?.countries[initialCountry]?.background||'#f4f0e7';
 const registry=window.AtlasCountries;
-const initialPreview=registry.countries[initialCountry]?.map||null;
 // A polar country opens on the globe overview, ahead of the shared land and other countries (init).
 const overviewStart=!!registry.countries[initialCountry]?.polar;
-const map=new maplibregl.Map({container:'map',maxTileCacheSize:48,maxTileCacheZoomLevels:2,...(lowMemory?{maxTileCacheSize:12,maxTileCacheZoomLevels:2,pixelRatio:Math.min(devicePixelRatio||1,2)}:{}),style:{version:8,sources:{},layers:[{id:'background',type:'background',paint:{'background-color':initialBackground}}],transition:{duration:0,delay:0}},center:initialPreview?.center||[105,36],zoom:initialPreview?.zoom||(initialPreview?2:3),minZoom:.5,maxZoom:16,renderWorldCopies:!!registry.countries[initialCountry]?.worldCopies,dragRotate:false,pitchWithRotate:false,touchPitch:false,maxPitch:0,attributionControl:false,canvasContextAttributes:window.AtlasPerformance.contextOptions(),fadeDuration:0});
+const map=window.AtlasEntry.map;
 // A tall phone viewport must not force a wide country back toward the equator.
 const phoneCameraQuery=matchMedia('(max-width:760px)');
 function constrainPhoneCamera(center,zoom){const camera=window.AtlasGlobeNavigation.constrainCamera(center,zoom,{free:!!registry.countries[document.documentElement.dataset.atlas]?.freeGlobePan&&map.getProjection?.()?.type==='globe',minZoom:map.getMinZoom(),maxZoom:map.getMaxZoom()});return {...camera,center:new maplibregl.LngLat(camera.center.lng,camera.center.lat)};}
@@ -30,7 +28,7 @@ const motionRenderer=window.AtlasMotion.createMotionRenderer(map,initialCountry,
 map.addControl(new maplibregl.AttributionControl({compact:true,customAttribution:'Country silhouettes: Natural Earth · IBGE · IGN · IGM / IDE Uruguay | World land: <a href="https://www.naturalearthdata.com/">Natural Earth</a> (public domain) | Malaysia: <a href="https://github.com/dosm-malaysia/data-open/tree/main/datasets/geodata">DOSM</a> | Singapore: <a href="https://data.gov.sg/datasets/d_29f066d67df3eae91df8a42f443863c8/view">SLA</a> (Singapore Open Data Licence) | Boundaries: <a href="https://datav.aliyun.com/portal/school/atlas/area_selector" target="_blank" rel="noopener">DataV</a> · <a href="https://data.gov.tw/dataset/7442" target="_blank" rel="noopener">NLSC</a> · <a href="https://data.gov.tw/dataset/7441" target="_blank" rel="noopener">NLSC townships</a> · <a href="https://github.com/xiangyuecn/AreaCity-JsSpider-StatsGov" target="_blank" rel="noopener">AreaCity</a> · <a href="https://portal.csdi.gov.hk/csdi-webpage/metadata/landsd_rcd_1637221775627_85634/html" target="_blank" rel="noopener">© HK SAR Government</a> · <a href="https://webmap.gis.gov.mo/MapGIS/index.html" target="_blank" rel="noopener">Macao Government</a> · <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© OpenStreetMap contributors</a>'}));
 window.AtlasMapSources.setupMapSources(map);
 
-const styleReady=new Promise(resolve=>map.once('load',resolve));
+
 const labels=[];
 const countryLabels=window.AtlasLabels.createCountryLabels(map,{allows:country=>window.AtlasDev.allows(country)});
 let labelFrame;
@@ -590,23 +588,23 @@ async function loadChina(){
  if(chinaReady)return;if(chinaLoading)return chinaLoading;
  chinaLoading=(async()=>{
   // Index exact sources once on every device; county geometry loads by selected area.
-  const [china,m,names,administration,population,districtNames,articles,landmarks,provincePop]=await Promise.all([(window.AtlasEntry.takeEarly('chinaRegions')||fetch('data/china-regions.json')).then(r=>{if(!r.ok)throw new Error(`China regions: ${r.status}`);return r.json();}),json('data/manifest.json'),json('data/region-names.json'),json('data/xinjiang-administration.json'),json('data/region-population.json'),json('data/city-district-names.json'),json('data/region-articles.json'),json('data/landmarks.json'),json('data/province-population.json'),styleReady]);manifest=m;regionNames={...names.regions,...districtNames.regions};chinaArticles=articles;xinjiangAdministration=administration;regionPopulation=population;provincePopulation=provincePop;explorer=window.AtlasExplore.createExplorer(articles,landmarks);
+  const [china,m,names,administration,population,districtNames,articles,landmarks,provincePop]=await Promise.all([(window.AtlasEntry.takeEarly('chinaRegions')||fetch('data/china-regions.json')).then(r=>{if(!r.ok)throw new Error(`China regions: ${r.status}`);return r.json();}),json('data/manifest.json'),json('data/region-names.json'),json('data/xinjiang-administration.json'),json('data/region-population.json'),json('data/city-district-names.json'),json('data/region-articles.json'),json('data/landmarks.json'),json('data/province-population.json')]);manifest=m;regionNames={...names.regions,...districtNames.regions};chinaArticles=articles;xinjiangAdministration=administration;regionPopulation=population;provincePopulation=provincePop;explorer=window.AtlasExplore.createExplorer(articles,landmarks);
   $('retrieved').textContent=new Date(m.retrieved).toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'});
   provinceFeatures=china.provinces;
   const chinaSource=async(id,options)=>{
    addSource(id,window.AtlasChinaMobile.emptyCollection(),options);
-   // Index one exact source at a time, without a decoded country-wide pack.
    if(!id.startsWith('city-district'))await window.AtlasChinaMobile.setSourceData(map,id,window.AtlasChinaMobile.mobileChinaUrl(id));
   };
   // The two repaired fills use unsimplified triangles. Other regions use
   // subpixel tile simplification, retaining every original source coordinate.
-  await chinaSource('provinces');await chinaSource('prefectures');await chinaSource('others');
-  await chinaSource('provinces-fragments',fillSourceOptions);await chinaSource('prefectures-fragments',fillSourceOptions);
-  // Simplify line tiles within 0.65 screen pixels and fade subpixel islands.
-  // The stored geometry and selectable polygons retain full detail. Outlines skip
-  // segments drawn by the international border layer or already drawn once.
-  for(const name of china.boundaries)await chinaSource(name+'-boundaries',window.AtlasLines.lineSourceOptions);
-  for(const name of ['provinces','prefectures','others'])await chinaSource(name+'-selection-edges',window.AtlasLines.lineSourceOptions);
+  const sources=[
+   ['provinces'],['prefectures'],['others'],['provinces-fragments',fillSourceOptions],['prefectures-fragments',fillSourceOptions],
+   ...china.boundaries.map(name=>[name+'-boundaries',window.AtlasLines.lineSourceOptions]),
+   ...['provinces','prefectures','others'].map(name=>[name+'-selection-edges',window.AtlasLines.lineSourceOptions])
+  ];
+  // Match indexing concurrency to the available workers and keep phone memory bounded.
+  async function indexSources(){for(let next;(next=sources.shift());)await chinaSource(...next);}
+  await Promise.all(lowMemory?[indexSources()]:[indexSources(),indexSources()]);
   const colors=['match',['get','adcode']];for(const f of provinceFeatures)colors.push(f.properties.adcode,fillColors[Number(f.properties.adcode)/10000%fillColors.length|0]);colors.push(fillColors[0]);normalProvinceColors=colors;
   addFill('province-fill','provinces',provinceColor(),1);addFill('province-fragment-fill','provinces-fragments',provinceColor(),1);addFill('prefecture-fill','prefectures','#d6b974',.025);addFill('prefecture-fragment-fill','prefectures-fragments','#d6b974',.025);addFill('other-fill','others','#dbc886',.1);
   addLine('prefecture-lines','prefecture-boundaries','#b39a77',.7,window.AtlasLines.adaptiveOpacity(.85));addLine('other-lines','other-boundaries','#9f874e',.7,window.AtlasLines.adaptiveOpacity(.85),[3,3]);
@@ -639,7 +637,7 @@ async function loadChina(){
  })().catch(error=>{chinaLoading=null;throw error;});return chinaLoading;
 }
 async function init(){try{
- await styleReady;
+
  // Request every first-view file at once; awaiting each before asking for the next serialised them.
  const early=promise=>{promise.catch(()=>{});return promise;};
  const worldLand=early(import('./world-land.mjs')),compare=early(import('./compare.mjs')),population=early(json('data/province-population.json'));
@@ -651,12 +649,26 @@ async function init(){try{
  // A map that opens on the globe overview (Antarctica) draws only the overview's land and borders,
  // the pole cap and its own country there, so it shows those first; the shared land and borders and
  // the other countries load after that view (map-scene.mjs keeps each layer in its role's band).
+ const land=await worldLand;
+ const overview=await land.addOverview(map);
+ if(overview && map.getZoom()<7){
+  if(overviewEntry)await land.addPoleCap(map);
+  const reveal=()=>{
+   if(!map.isSourceLoaded('globe-overview-land')||!map.isSourceLoaded('globe-overview-borders'))return;
+   map.off('render',reveal);
+   $('map-loading').hidden=true;
+  };
+  map.on('render',reveal);map.triggerRepaint();
+ }
+  const lists=JSON.parse(document.getElementById('first-preloads').textContent);
+  for(const href of lists[initialCountry]||lists.default){
+    const link=document.createElement('link');link.rel='preload';link.as='fetch';link.crossOrigin='anonymous';link.href=href;document.head.append(link);
+  }
  if(overviewEntry){
-  const land=await worldLand;createPortals();portalLoader.ensure(initialCountry).catch(()=>{});
+  createPortals();portalLoader.ensure(initialCountry).catch(()=>{});
   await Promise.all([land.addOverview(map),land.addPoleCap(map)]);
   addSatelliteDisplay();allReady=true;await showFirstView();
  }
- const land=await worldLand;
  await land.addWorldLand(map,{deferBorderPreviews:overviewEntry});
  modernContext=land.createModernContext(map,{registry,active:()=>atlasMode,excludes:replacedContexts,
   allowed:id=>window.AtlasDev.allows(id),changed:syncContextAppearance});
@@ -723,6 +735,8 @@ async function showFirstView(){
  atlasStarting=false;window.AtlasEntry.ready();
  const selection=atlasMode==='china'?selected?.layer.feature.properties.adcode:currentAtlas()?.getSelection();
  if(phoneCameraQuery.matches&&!restored&&(!selection||registry.countries[atlasMode].map?.initialSelection===selection))await navigateBounds(currentAtlas()?.bounds||registry.countries[atlasMode].home.bounds||homeBounds,{maxZoom:registry.countries[atlasMode].home.maxZoom||17,overview:!selection},false);
+ if(window.AtlasEntry.previewCamera&&requestedCountry===initialCountry)map.jumpTo(window.AtlasEntry.previewCamera);
+ window.AtlasEntry.finishPreview();
  finishStartup();controls();refreshStatus();updateLabels();
  $('map-loading').hidden=true;
  storeForRepeatVisits();

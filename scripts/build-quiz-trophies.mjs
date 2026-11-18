@@ -40,8 +40,8 @@ function beam(a,b,w,d=w,mat='gold'){
 }
 function box(x,y,z,w,h,d,mat){beam([x,y-h/2,z],[x,y+h/2,z],w,d,mat);}
 function lathe(profile,mat='gold',segments=64,transform=p=>p){for(let i=0;i<segments;i++){const a=i/segments*Math.PI*2,b=(i+1)/segments*Math.PI*2;for(let j=0;j<profile.length-1;j++){const [r,y]=profile[j],[s,t]=profile[j+1];quad(transform([r*Math.cos(a),y,r*Math.sin(a)]),transform([r*Math.cos(b),y,r*Math.sin(b)]),transform([s*Math.cos(b),t,s*Math.sin(b)]),transform([s*Math.cos(a),t,s*Math.sin(a)]),typeof mat==='function'?mat(profile[j],profile[j+1]):mat);}}}
-function cylinder(x,y,z,r,h,mat='gold',r2=r){lathe([[0,-h/2],[r,-h/2],[r2,h/2],[0,h/2]],mat,48,p=>[p[0]+x,p[1]+y,p[2]+z]);}
-function torus(center,r,t,mat='gold',vertical=false){const profile=[];for(let j=0;j<=12;j++){const a=j/12*Math.PI*2;profile.push([r+t*Math.cos(a),t*Math.sin(a)]);}lathe(profile,mat,72,p=>[p[0]+center[0],(vertical?p[2]:p[1])+center[1],(vertical?p[1]:p[2])+center[2]]);}
+function cylinder(x,y,z,r,h,mat='gold',r2=r,segments=48){lathe([[0,-h/2],[r,-h/2],[r2,h/2],[0,h/2]],mat,segments,p=>[p[0]+x,p[1]+y,p[2]+z]);}
+function torus(center,r,t,mat='gold',vertical=false,segments=72){const profile=[];for(let j=0;j<=12;j++){const a=j/12*Math.PI*2;profile.push([r+t*Math.cos(a),t*Math.sin(a)]);}lathe(profile,mat,segments,p=>[p[0]+center[0],(vertical?p[2]:p[1])+center[1],(vertical?p[1]:p[2])+center[2]]);}
 // Wrap the plaque around the pedestal wall so its center and corners have the same clearance.
 function basePlaque(radius){
  const halfAngle=.52/(2*radius),front=radius+.008,back=radius-.006,bottom=-1.195,top=-1.105,steps=20;
@@ -52,7 +52,8 @@ function basePlaque(radius){
   quad(p,q,r,t,'gold');quad(v,u,x,w,'gold');quad(t,r,w,x,'gold');quad(u,v,q,p,'gold');if(i===0)quad(u,p,t,x,'gold');if(i===steps-1)quad(q,v,w,r,'gold');
  }
 }
-function plinth(radius=1.03){lathe([[0,-1.25],[radius*.88,-1.25],[radius,-1.2],[radius,-1.07],[radius*.94,-1.02],[0,-1.02]],'stone');torus([0,-1.08,0],radius*.97,.018,'gold');cylinder(0,-1.005,0,radius*.91,.025,'stone');basePlaque(radius);}
+const plinthSegments=512;
+function plinth(radius=1.03){lathe([[0,-1.25],[radius*.88,-1.25],[radius,-1.2],[radius,-1.07],[radius*.94,-1.02],[0,-1.02]],'stone',plinthSegments);torus([0,-1.08,0],radius*.97,.018,'gold',false,plinthSegments);cylinder(0,-1.005,0,radius*.91,.025,'stone',radius*.91,plinthSegments);basePlaque(radius);}
 function ribbon(points,height,depth,mat){for(let i=0;i<points.length-1;i++){const [x,y]=points[i],[u,v]=points[i+1],a=[x,y,-depth/2],b=[u,v,-depth/2],c=[u,v+height,-depth/2],d=[x,y+height,-depth/2],e=[x,y,depth/2],f=[u,v,depth/2],g=[u,v+height,depth/2],h=[x,y+height,depth/2];quad(a,b,c,d,mat);quad(f,e,h,g,mat);quad(d,c,g,h,mat);quad(e,f,b,a,mat);if(i===0)quad(e,a,d,h,mat);if(i===points.length-2)quad(b,f,g,c,mat);}}
 function cradle(){
  for(const sign of [-1,1]){const angle=sign*.52,half=.10,inner=.984,outer=1.015,depth=.10;for(let i=0;i<20;i++){const a=angle-half+i/20*half*2,b=angle-half+(i+1)/20*half*2,point=(r,t,z)=>[r*Math.sin(t),.22-r*Math.cos(t),z];const p=point(inner,a,-depth),q=point(inner,b,-depth),r=point(inner,b,depth),t=point(inner,a,depth),u=point(outer,a,-depth),v=point(outer,b,-depth),w=point(outer,b,depth),x=point(outer,a,depth);quad(p,q,r,t,'cradle');quad(v,u,x,w,'cradle');quad(t,r,w,x,'cradle');quad(u,v,q,p,'cradle');if(i===0)quad(u,p,t,x,'cradle');if(i===19)quad(q,v,w,r,'cradle');}beam([sign*.50,-.9925,0],[sign*.50,-.664,0],.045,.10,'cradle');}

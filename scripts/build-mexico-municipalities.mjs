@@ -1,3 +1,4 @@
+import {carveTerminos} from './carve-campeche-lagoon.mjs';
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import path from 'node:path';
@@ -48,6 +49,7 @@ export async function buildMexicoMunicipalities(root='dist/data/europe/mexico/')
  sources.coverage='All 31 states and Mexico City, with all 2,478 INEGI municipal areas: 2,462 municipalities and Mexico City’s 16 boroughs (alcaldías). December 2025 boundary snapshot, checked against the municipal catalogue retrieved 23 October 2026. 2020 census populations are shown only where INEGI publishes them. Inland water remains a separate optional overlay.';
  sources.processing='All municipalities are cleaned and simplified together at .0001 degree tolerance (about 11 m north-south), with parent states dissolved from that same topology. Shared internal edges are stored once. Municipal geometry loads only for the selected federal entity. State statistics and economic sources are retained; no local GDP is inferred.';
  sources.municipalSources=Object.entries(pins.files).map(([file,p])=>({file,...p,provider:pins.provider,license:pins.license}));write(root+'sources.json',sources);
+ await carveTerminos(root);
  // Context is one of the existing compact first-frame sources. Refresh only
  // its copy so the portal and active map use the same tested Mexican outline.
  if(path.resolve(root)===path.resolve('dist/data/europe/mexico')){

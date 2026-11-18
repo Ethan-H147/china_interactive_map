@@ -14,6 +14,13 @@ import {addChinaMongolianPronunciations} from './china-mongolian-pronunciation-p
 import {addBalkanCentralAsiaPronunciations} from './balkan-central-asia-pronunciation-plan.mjs';
 import {addGreeceMoldovaPronunciations} from './greece-moldova-pronunciation-plan.mjs';
 
+const districtContexts={
+  "czechia": "Názvy okresů České republiky, vyslovené přirozeně česky. Přečti pouze zadaný název, jednou.",
+  "slovakia": "Názvy okresov Slovenska, vyslovené prirodzene po slovensky. Vyslov iba zadaný názov, raz.",
+  "hungary": "Magyar járások nevei, természetes magyar kiejtéssel. Csak a megadott nevet mondd ki egyszer.",
+  "germany": "Namen deutscher Landkreise und kreisfreier Städte, natürlich auf Deutsch ausgesprochen. Sprich nur den angegebenen Namen einmal aus."
+};
+
 export async function pronunciationPlan(root=fileURLToPath(new URL('../',import.meta.url))){
  const read=file=>fs.readFile(path.join(root,'dist',file));const entries=[];
  const add=(country,id,level,en,text,language,extra={})=>entries.push({key:country+':'+id+(extra.variant?':'+extra.variant:''),country,id:String(id),level,en,text,language,src:country==='china'?'audio/china/zh-CN/'+id+'.mp3':'audio/pronunciation/'+country+'/'+language+'/'+id+'.mp3',...extra});
@@ -43,11 +50,12 @@ export async function pronunciationPlan(root=fileURLToPath(new URL('../',import.
     add(country,r.id,r.level,display.en,display.local,'ru',{locale:'ru',russianScope:'urban-okrug',context:'Названия городов и городских округов России. Произнеси только указанное название один раз, естественно и чётко по-русски, без вступления, повтора и музыки.'});
     continue;
    }
-   if(country==='turkey'?r.level!==2:r.level!==1&&!(country==='italy'&&r.level===2))continue;
+   const districtContext=r.level===2?districtContexts[country]:undefined;
+   if(country==='turkey'?r.level!==2:r.level!==1&&!(r.level===2&&(country==='italy'||districtContext)))continue;
    const language={russia:'ru',germany:'de',italy:'it','united-states':'en',canada:'en',mexico:'es',brazil:'pt',portugal:'pt',vietnam:'vi',turkey:'tr',poland:'pl',hungary:'hu',ukraine:'uk',romania:'ro',czechia:'cs',slovakia:'sk'}[country];
    const text=country==='canada'||country==='united-states'?r.en:r.local.split('/')[0].trim();
    const locale={'united-states':'en-US',canada:'en-CA',mexico:'es-MX',brazil:'pt-BR',portugal:'pt-PT'}[country]||language;
-   add(country,r.id,r.level,r.en,text,language,{locale});
+   add(country,r.id,r.level,r.en,text,language,{locale,...(districtContext?{context:districtContext}:{})});
    if(country==='canada')add(country,r.id,r.level,r.en,r.local,'fr',{variant:'fr',locale:'fr-CA'});
   }
  }

@@ -47,3 +47,6 @@
 [data-city-preview]>.quiz-primary{font-size:16px;min-height:48px}
 
 .quiz-answer-row[data-answer=shown] .quiz-answer-icon{color:var(--gold)}
+
+.quiz-result-counts{display:inline-flex;flex-wrap:wrap;align-items:baseline;gap:1em;font-variant-numeric:tabular-nums}
+.quiz-result-counts .quiz-answer-row{display:inline-flex;align-items:baseline;gap:.35em;margin:0}

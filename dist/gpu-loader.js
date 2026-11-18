@@ -40,10 +40,40 @@ try{
   modules.AtlasGeoPack='geo-pack.mjs';
   modules.AtlasChinaSources='china-sources.mjs';
   modules.AtlasChinaMobile='china-mobile.mjs';
-  const rendererPromise=import('./vendor/maplibre-gl.mjs');
-  await Promise.all(Object.entries(modules).map(async([name,file])=>{window[name]=await import('./'+file);}));
-  const renderer=await rendererPromise;window.maplibregl=renderer;renderer.setWorkerCount(window.AtlasEntry.lowMemory?1:2);
-  await renderer.importScriptInWorkers(new URL('maplibre-worker-protocols.mjs',location.href).href);
+  const [renderer,performanceSettings,settings]=await Promise.all([
+    import('./vendor/maplibre-gl.mjs'),import('./map-performance.mjs'),import('./settings.mjs')
+  ]);
+  window.maplibregl=renderer;
+  const {initial,lowMemory}=window.AtlasEntry;
+  const country=window.AtlasCountries.countries[initial];
+  const background=getComputedStyle(document.body).getPropertyValue('--map').trim()||country.background||'#f4f0e7';
+  renderer.setWorkerCount(lowMemory?1:2);
+  const map=new renderer.Map({
+    container:'map',maxTileCacheSize:lowMemory?12:48,maxTileCacheZoomLevels:2,
+    ...(lowMemory?{pixelRatio:Math.min(devicePixelRatio||1,2)}:{}),
+    style:{
+      version:8,projection:{type:country.polar?'globe':settings.getSettings().projection},
+      sources:{},layers:[{id:'background',type:'background',paint:{'background-color':background}}],transition:{duration:0,delay:0}
+    },
+    center:country.map?.center||[105,36],zoom:country.map?.zoom??3,
+    ...(!country.map?.center&&country.home.bounds?{bounds:country.home.bounds,fitBoundsOptions:{padding:30}}:{}),
+    minZoom:.5,maxZoom:16,renderWorldCopies:!!country.worldCopies,
+    dragRotate:false,pitchWithRotate:false,touchPitch:false,maxPitch:0,attributionControl:false,
+    canvasContextAttributes:performanceSettings.contextOptions(),fadeDuration:0
+  });
+  window.AtlasEntry.map=map;
+  const rememberCamera=event=>{
+    if(event.originalEvent)window.AtlasEntry.previewCamera={center:map.getCenter(),zoom:map.getZoom()};
+  };
+  map.on('move',rememberCamera);
+  window.AtlasEntry.finishPreview=()=>{
+    map.off('move',rememberCamera);
+  };
+  await new Promise(resolve=>map.once('load',resolve));
+  await Promise.all([
+    renderer.importScriptInWorkers(new URL('maplibre-worker-protocols.mjs',location.href).href),
+    ...Object.entries(modules).map(async([name,file])=>{window[name]=await import('./'+file);})
+  ]);
   window.AtlasChinaPage.mountChinaPage();
   window.AtlasFlagViewer.createFlagViewer();
   const script=document.createElement('script');

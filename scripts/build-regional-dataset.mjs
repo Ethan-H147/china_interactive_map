@@ -1,3 +1,4 @@
+import {smoothCubaCoast} from './smooth-cuba-coast.mjs';
 import {applyPopulationExpansion} from './population-expansion.mjs';
 import {repairHidalgoTlaxcala} from './repair-hidalgo-tlaxcala.mjs';
 import {repairSudanNorthernBorder} from './repair-sudan-northern-border.mjs';
@@ -20,6 +21,8 @@ export async function buildRegionalDataset({country,units,byLevel,sources,covera
   if(country==='sudan'&&level===1)whole[level].boundaries=repairSudanNorthernBorder(regions,whole[level].boundaries);
  }
  const first=new Map(records.filter(r=>r.level===1).map(r=>[r.id,r])),context=await buildContext(country,byLevel,records);
+ // Smooth the detailed display layers after deriving source statistics and the small-scale context.
+ if(country==='cuba')smoothCubaCoast(byLevel[1],byLevel[2]);
  write('context.bin',context);write('international.bin',lineData(fc([])));write('first.bin',whole[1]);
  for(const level of [2,3])if(whole[level])for(const r of records.filter(r=>r.level===level-1)){const ids=new Set(records.filter(c=>c.level===level&&(c.parents||[c.parent]).includes(r.id)).map(c=>c.id));if(!ids.size)continue;const regions=fc(whole[level].regions.features.filter(f=>ids.has(f.properties.id))),boundaries=sharedBorders(regions),file=(level===2?'second/':'third/')+r.id+'.bin',data={regions,boundaries};chunks[r.id]={file,count:ids.size,level,bytes:write(file,data),decodedBytes:Buffer.byteLength(JSON.stringify(data))};}
  // Avoid embedding build-only population/area inputs in the public search catalogue.

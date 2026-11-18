@@ -1,3 +1,4 @@
+import {inRussiaQuizDistrict,districtBounds} from './russia-quiz-districts.mjs';
 import {quizNamePlace} from './quiz-modes.mjs';
 import {createHoverOverview} from './hover-overview.mjs';
 import {createFirstLevelQuiz} from './first-level-quiz.mjs';
@@ -17,7 +18,8 @@ export function createCityQuiz(map,host,atlas,{country,sidebar,tab,prefix,addPic
  const load=()=>data?Promise.resolve(data):loading??=fetch(cities.file).then(r=>{if(!r.ok)throw Error((points?'Club':'City')+' list unavailable');return r.json();}).then(value=>{data=value;quiz?.setup();updateMedal();renderCoverage();return value;}).finally(()=>{loading=undefined;});
  // Every level includes the easier ones. Records carry the chosen level as their parent scope.
  const pointStates=new Map(),pointId=r=>cities.groupLocations?records().find(other=>other.locationId===r.locationId)?.id||r.id:r.id;
- function records(){const scope=quiz?.scope||order[0];if(!data)return [];return cache[scope]??=data.records.filter(r=>order.indexOf(r.tier)<=order.indexOf(scope)).map(r=>({...r,level:3,parent:scope,local:r.local||''}));}
+ function records(){const scope=quiz?.scope||order[0];if(!data)return [];const roster=cache[scope]??=data.records.filter(r=>order.indexOf(r.tier)<=order.indexOf(scope)).map(r=>({...r,level:3,parent:scope,local:r.local||''}));return quiz?.range?roster.filter(r=>inRussiaQuizDistrict(r,quiz.range)):roster;}
+ function frameBounds(){return quiz?.range&&records().length?districtBounds(records(),quiz.range):cities.bounds;}
  function remove(){clearPreviewSelection();pointStates.clear();previewHover?.clear();if(map.getLayer(key+'-dots'))map.removeLayer(key+'-dots');if(map.getSource(key))map.removeSource(key);}
  function enforce(){if(!(quiz?.active||previewing)||enforcing||!hidePrefix)return;enforcing=true;try{for(const layer of sceneLayers(map))if(typeof layer.source==='string'&&layer.source.startsWith(hidePrefix)&&!contextLayers.has(layer.id)){const visibility=map.getLayoutProperty(layer.id,'visibility')||'visible';if(!hidden.has(layer.id))hidden.set(layer.id,visibility);if(visibility!=='none')map.setLayoutProperty(layer.id,'visibility','none');}}finally{enforcing=false;}}
  const state=name=>['boolean',['feature-state',name],false];
@@ -31,7 +33,7 @@ export function createCityQuiz(map,host,atlas,{country,sidebar,tab,prefix,addPic
  async function fitScope({target}={}){
   // Click rounds free the map; typing rounds keep their input in the sheet.
   if(!target&&document.getElementById(prefix+'-quiz-type').value==='find')await window.AtlasSheet?.collapse();
-  const frame=cities.bounds,frameZoom=(definition.home?.maxZoom||8)-1;if(!target)return host.fit(frame,frameZoom,{manual:true,overview:false});
+  const frame=frameBounds(),frameZoom=(definition.home?.maxZoom||8)-1;if(!target)return host.fit(frame,frameZoom,{manual:true,overview:false});
   const [lon,lat]=target.center,cos=Math.cos(lat*Math.PI/180),base=Math.min(frameZoom,map.cameraForBounds(frame,{padding:40})?.zoom??3);
   let nearest=Infinity;for(const r of records())if(r.id!==target.id)nearest=Math.min(nearest,Math.hypot((r.center[0]-lon)*cos,r.center[1]-lat));
   const needed=Number.isFinite(nearest)?Math.log2(32*360*cos/(512*nearest)):base,zoom=Math.min(7.5,Math.max(base+1,needed));
@@ -45,7 +47,7 @@ export function createCityQuiz(map,host,atlas,{country,sidebar,tab,prefix,addPic
  function renderCoverage(){
   if(!data||!quiz)return;
   const includeOverseas=quiz.panel.querySelector('[data-q=overseas]').checked,pool=records().filter(r=>includeOverseas||!r.overseas);
-  coverageSummary.textContent=(cities.plural||'Cities')+' included ('+pool.length+')';coverageList.replaceChildren();if(cities.sourcesFile){const source=document.createElement('a');source.href=cities.sourcesFile;source.textContent='Roster, stadium and crest sources';source.target='_blank';source.rel='noopener';coverageList.append(source);}
+  previewButton.disabled=!pool.length;coverageSummary.textContent=(cities.plural||'Cities')+' included ('+pool.length+')';coverageList.replaceChildren();if(cities.sourcesFile){const source=document.createElement('a');source.href=cities.sourcesFile;source.textContent='Roster, stadium and crest sources';source.target='_blank';source.rel='noopener';coverageList.append(source);}
   for(const level of levels){
    const included=pool.filter(r=>r.tier===level.id).sort((a,b)=>a.en.localeCompare(b.en));if(!included.length)continue;
    const group=document.createElement('section'),heading=document.createElement('h3'),list=document.createElement('ul');heading.textContent=(level.leagueName||level.label)+' · '+included.length;
@@ -56,10 +58,10 @@ export function createCityQuiz(map,host,atlas,{country,sidebar,tab,prefix,addPic
  }
  const medal=document.createElement('p');medal.className='quiz-note quiz-medal-note';medal.hidden=true;
  // The medal shown is the chosen quiz type's own.
- function updateMedal(){if(points){medal.hidden=true;return;}const best=highestMedal(quizRecords.data.bests,country,3,levels,document.getElementById(prefix+'-quiz-type')?.value);medal.hidden=!best;if(best)medal.innerHTML=medalMarkup(best.medal)+'<span>Highest level · '+best.label+'</span>';}
+ function updateMedal(){if(points||quiz?.range){medal.hidden=true;return;}const best=highestMedal(quizRecords.data.bests,country,3,levels,document.getElementById(prefix+'-quiz-type')?.value);medal.hidden=!best;if(best)medal.innerHTML=medalMarkup(best.medal)+'<span>Highest level · '+best.label+'</span>';}
  quiz=createFirstLevelQuiz(map,host,{country,sidebar,prefix,tab,attachTab:false,overlay:true,returnPanelId:prefix+'-quiz-panel',
   config:{level:3,plural:cities.plural||'Cities',singular:cities.singular||'city',title:cities.title||'City quiz',findInstruction:cities.findInstruction,nameInstruction:cities.nameInstruction,identifyInstruction:cities.identifyInstruction,scopeLabel:'Difficulty',scopes:levels.map(l=>({id:l.id,label:l.label})),bounds:cities.bounds,overseasLabel:cities.overseasLabel,includeOverseas:cities.overseasDefault??!!cities.overseasLabel},storageKey:scope=>country+'-'+(points?(cities.storageId||'football'):'cities')+':'+scope,
-  records,fitScope,ready:()=>!!data&&atlas.ready!==false,onOpen:()=>void load().then(renderCoverage),onScopeChange:renderCoverage,
+  records,fitScope,ready:()=>!!data&&atlas.ready!==false,onOpen:()=>void load().then(renderCoverage),onScopeChange:()=>{renderCoverage();updateMedal();},
   fillLayers:[],lineLayer,
   questionImage:r=>cities.crests?r.crest:null,specifiedPlace:r=>cities.groupLocations?{...quizNamePlace(r),aliases:records().filter(other=>other.locationId===r.locationId).flatMap(other=>[other.en,...(other.aliases||[])])}:undefined,resolveChoice:(id,expected)=>cities.groupLocations&&records().find(r=>r.id===id)?.locationId===expected?.locationId?expected.id:id,
   mark:(r,value)=>{if(!map.getSource(key))return;pointStates.set(r.id,{...pointStates.get(r.id),...value});const states=cities.groupLocations?records().filter(other=>other.locationId===r.locationId).map(other=>pointStates.get(other.id)||{}):[value];const merged=Object.fromEntries(['quizCorrect','quizWrong','quizTarget','review'].map(k=>[k,states.some(s=>s[k])]));map.setFeatureState({source:key,id:pointId(r)},merged);},pick,capture:()=>nativeSession?.capture()||{},hideLabels,
@@ -109,7 +111,7 @@ export function createCityQuiz(map,host,atlas,{country,sidebar,tab,prefix,addPic
    quiz.panel.querySelector('[data-q=setup]').hidden=true;previewPanel.hidden=false;sidebar.dataset.quiz='true';
    for(const b of sidebar.querySelectorAll('.panel-tabs button'))b.disabled=b!==tab;
    document.getElementById('home').textContent='End preview';document.getElementById('map-hint').textContent=points?'Hover over or tap a club':'Hover over or tap a city';
-   host.setQuizActive(true);await window.AtlasSheet?.collapse();await host.fit(cities.bounds,7,{manual:true,overview:false});previewEnd.focus({preventScroll:true});
+   host.setQuizActive(true);await window.AtlasSheet?.collapse();await host.fit(frameBounds(),7,{manual:true,overview:false});previewEnd.focus({preventScroll:true});
   }catch(error){await endPreview();previewNote.textContent=error.message;throw error;}finally{previewButton.disabled=false;}
  }
  async function endPreview(){
@@ -136,7 +138,7 @@ export function createCityQuiz(map,host,atlas,{country,sidebar,tab,prefix,addPic
  quiz.panel.querySelector('[data-q=overseas]').addEventListener('change',renderCoverage);
  quizRecords.subscribe(updateMedal);quiz.panel.querySelector('#'+prefix+'-quiz-type').addEventListener('change',updateMedal);updateMedal();
  map.on('styledata',()=>{if(nativeSession||!(quiz.active||previewing)||frame||!hidePrefix)return;frame=requestAnimationFrame(()=>{frame=null;enforce();});});
- return{get active(){return quiz.active||previewing;},get previewing(){return previewing;},get panel(){return quiz.panel;},get scope(){return quiz.scope;},open:options=>{void load();quiz.open(options);},end:()=>previewing?endPreview():quiz.end(),fit:()=>previewing?host.fit(cities.bounds,7,{manual:true,overview:false}):quiz.fit(),labels:()=>quiz.labels(),release(){if(previewing)void endPreview();else remove();}};
+ return{get active(){return quiz.active||previewing;},get previewing(){return previewing;},get panel(){return quiz.panel;},get scope(){return quiz.scope;},open:options=>{void load();quiz.open(options);},end:()=>previewing?endPreview():quiz.end(),fit:()=>previewing?host.fit(frameBounds(),7,{manual:true,overview:false}):quiz.fit(),labels:()=>quiz.labels(),release(){if(previewing)void endPreview();else remove();}};
 }
 // The regional quiz tab keeps each category's setup and progress separate.
 export function attachCityQuiz(map,host,atlas,country){

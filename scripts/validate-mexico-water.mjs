@@ -11,7 +11,7 @@ const areas=land.features.map(f=>({id:f.properties.id,contains:landIndex(polygon
 const wet=waterPolygons.map(f=>({feature:f,contains:landIndex(polygons(f.geometry).flat())}));
 const coastal=landIndex(context.features.flatMap(f=>polygons(f.geometry).flat()));
 for(const [name,point,id] of [
- ['Terminos Lagoon',[-91.7,18.6],'MX-CAM'],
+
  ['Mecoacan Lagoon',[-93.116,18.416],'MX-TAB'],
  ['Machona Lagoon',[-93.619336,18.345438],'MX-TAB'],
  ['Alvarado Lagoon',[-95.78,18.75],'MX-VER'],
@@ -21,6 +21,12 @@ for(const [name,point,id] of [
  assert(coastal(point),name+' has solid context before and after country switching');
  assert(wet.some(w=>w.contains(point)),name+' has an independent blue water polygon');
 }
+const lagoonCenter=[-91.7,18.6],island=[-91.806,18.646];
+const state=areas.find(a=>a.id==='MX-CAM');
+const outline=load(base+'first.bin').selectionOutlineOverrides.features.find(f=>f.properties.id==='MX-CAM');
+assert(landIndex(polygons(outline.geometry).flat())(lagoonCenter),'Original Campeche selection outline spans the lagoon');
+assert(!state.contains(lagoonCenter)&&!coastal(lagoonCenter)&&wet.some(w=>w.contains(lagoonCenter)),'Laguna de Términos has a permanent fill cutout');
+assert(state.contains(island)&&coastal(island),'Isla del Carmen stays land');
 for(const p of [[-92,20],[-94,14],[-90,22]]){assert(!coastal(p),'Open sea remains outside the land mask');assert(!wet.some(w=>w.contains(p)),'Water overlay cannot flood the sea');}
 assert(waterPolygons.some(f=>polygons(f.geometry).some(p=>p.length>1)),'Water islands are retained');
 for(const f of water.features){assert(f.properties.sourceId&&Number.isFinite(f.properties.visibleZoom));assert(['Polygon','MultiPolygon','LineString','MultiLineString'].includes(f.geometry.type));}
@@ -47,4 +53,4 @@ test.setActive(false);test.controller.dispose();assert.equal(test.layers.size,0)
 test.setActive(true);test.controller.sync();await flush();test.setActive(false);test.controller.dispose();resolve(water);await flush();assert.equal(test.sources.size,0,'Late water cannot restore a departed country');
 let attempts=0;const retry=setup(async()=>{if(++attempts===1)throw Error('Expected request failure');return water;});
 retry.toggle(true);await flush();assert(!retry.input.checked&&!retry.status.hidden);retry.toggle(true);await flush();assert.equal(retry.layers.size,3);assert(retry.status.hidden);
-console.log('Mexico water: solid state/coast masks at five lagoons/reservoirs, open-sea exclusion, islands, principal rivers, pinned sources, saved-control registration, lazy toggles, retry and departed-country cleanup passed.');
+console.log('Mexico water: Campeche lagoon cutout and preserved state outline, solid masks at four other waters, open-sea exclusion, islands, principal rivers, pinned sources, saved-control registration, lazy toggles, retry and departed-country cleanup passed.');

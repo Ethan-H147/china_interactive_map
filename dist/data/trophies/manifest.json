@@ -8,8 +8,8 @@
       "addedOrder": 1,
       "title": "Great Wall",
       "file": "data/trophies/china-great-wall.glb",
-      "triangles": 82089,
-      "bytes": 6856632,
+      "triangles": 98089,
+      "bytes": 8008644,
       "source": "Boundary Atlas original"
     },
     {
@@ -18,8 +18,8 @@
       "addedOrder": 2,
       "title": "Vermilion torii",
       "file": "data/trophies/japan.glb",
-      "triangles": 4128,
-      "bytes": 300904,
+      "triangles": 20128,
+      "bytes": 1452920,
       "source": "Boundary Atlas original"
     },
     {
@@ -34,8 +34,8 @@
       "addedOrder": 3,
       "title": "Statue of Liberty",
       "file": "data/trophies/us-statue-of-liberty-v3.glb",
-      "triangles": 92596,
-      "bytes": 6671104
+      "triangles": 108596,
+      "bytes": 7823116
     },
     {
       "country": "france",
@@ -43,8 +43,8 @@
       "addedOrder": 4,
       "title": "Eiffel Tower",
       "file": "data/trophies/france.glb",
-      "triangles": 88686,
-      "bytes": 7434284,
+      "triangles": 104686,
+      "bytes": 8586288,
       "source": {
         "author": "ingoenius",
         "license": "CC0-1.0",
@@ -57,8 +57,8 @@
       "addedOrder": 5,
       "title": "Gyeongbokgung throne hall",
       "file": "data/trophies/korea-gyeongbokgung.glb",
-      "triangles": 104478,
-      "bytes": 7558176,
+      "triangles": 120478,
+      "bytes": 8710188,
       "source": "Boundary Atlas original"
     },
     {
@@ -67,8 +67,8 @@
       "addedOrder": 6,
       "title": "Saint Basil’s Cathedral",
       "file": "data/trophies/russia-saint-basil.glb",
-      "triangles": 103100,
-      "bytes": 7435140,
+      "triangles": 119100,
+      "bytes": 8587156,
       "source": "Boundary Atlas original"
     },
     {
@@ -77,8 +77,8 @@
       "addedOrder": 7,
       "title": "Brandenburg colonnade",
       "file": "data/trophies/germany.glb",
-      "triangles": 37764,
-      "bytes": 2722732,
+      "triangles": 58032,
+      "bytes": 4186160,
       "source": "Boundary Atlas original"
     },
     {
@@ -87,8 +87,8 @@
       "addedOrder": 8,
       "title": "Obelisco medallion",
       "file": "data/trophies/argentina.glb",
-      "triangles": 44647,
-      "bytes": 3247576,
+      "triangles": 60647,
+      "bytes": 4399592,
       "source": "Boundary Atlas original"
     },
     {
@@ -97,8 +97,8 @@
       "addedOrder": 11,
       "title": "Elizabeth Tower",
       "file": "data/trophies/united-kingdom.glb",
-      "triangles": 43682,
-      "bytes": 3299268,
+      "triangles": 59682,
+      "bytes": 4451280,
       "source": "Boundary Atlas original"
     },
     {
@@ -107,8 +107,8 @@
       "addedOrder": 13,
       "title": "Colosseum",
       "file": "data/trophies/italy.glb",
-      "triangles": 101366,
-      "bytes": 7305440,
+      "triangles": 117366,
+      "bytes": 8457452,
       "source": "Boundary Atlas original"
     },
     {
@@ -124,8 +124,8 @@
       "addedOrder": 10,
       "title": "Christ the Redeemer",
       "file": "data/trophies/brazil-christ-v2.glb",
-      "triangles": 77337,
-      "bytes": 6127624
+      "triangles": 93337,
+      "bytes": 7279636
     },
     {
       "country": "chile",
@@ -133,8 +133,8 @@
       "addedOrder": 9,
       "title": "Moai on an ahu",
       "file": "data/trophies/chile.glb",
-      "triangles": 69521,
-      "bytes": 6945832,
+      "triangles": 85521,
+      "bytes": 8097848,
       "source": "Boundary Atlas original"
     },
     {
@@ -143,8 +143,8 @@
       "addedOrder": 12,
       "title": "Sagrada Família",
       "file": "data/trophies/spain.glb",
-      "triangles": 54084,
-      "bytes": 4846800,
+      "triangles": 100562,
+      "bytes": 7253108,
       "source": "Boundary Atlas original"
     }
   ],
@@ -155,8 +155,8 @@
       "release": "developer",
       "title": "Floral matryoshka",
       "file": "data/trophies/reserved/russia-matryoshka.glb",
-      "triangles": 16804,
-      "bytes": 1709264,
+      "triangles": 32804,
+      "bytes": 2861276,
       "source": "Boundary Atlas original"
     },
     {
@@ -165,8 +165,8 @@
       "release": "developer",
       "title": "Jade disc",
       "file": "data/trophies/reserved/china-jade-disc.glb",
-      "triangles": 11796,
-      "bytes": 852340,
+      "triangles": 27796,
+      "bytes": 2004352,
       "source": "Boundary Atlas original"
     },
     {
@@ -175,8 +175,8 @@
       "release": "developer",
       "title": "Cloud-and-crane celadon",
       "file": "data/trophies/reserved/korea-celadon.glb",
-      "triangles": 19108,
-      "bytes": 1691428,
+      "triangles": 35108,
+      "bytes": 2843440,
       "source": "Boundary Atlas original"
     },
     {
@@ -185,8 +185,8 @@
       "release": "developer",
       "title": "Liberty bell",
       "file": "data/trophies/reserved/us-liberty-bell.glb",
-      "triangles": 9208,
-      "bytes": 668048,
+      "triangles": 25208,
+      "bytes": 1820068,
       "source": "Boundary Atlas original"
     }
   ]

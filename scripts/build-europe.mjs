@@ -565,6 +565,16 @@ const round=(v,d=5)=>Math.round(v*10**d)/10**d;
 const manifest=read('manifest.json');
 const processing='Polygons are simplified to about 33 m north-south, with neighbouring units sharing edges; parent units are dissolved from the most detailed level. Spanish and Italian frontier edges within 3 km of the French outline are moved onto it and overlap is erased, so shared frontiers coincide. An outline edge is a land frontier when a point 100, 300 or 600 m beyond it lies inside a neighbouring country and a Natural Earth 1:10m land boundary line passes within 4 km. The Moroccan, Monégasque and Slovenian outlines include territorial waters, so edges facing them must also lie within 200 m of an OpenStreetMap land border way. Gaps of up to 3 km between frontier edges are closed unless they face open sea, and open pieces under 1 km are dropped. Neighbouring outlines (geoBoundaries) and the OpenStreetMap ways are used only for this test; none of their geometry is published. Each shared frontier is stored once (France holds its frontiers with Spain and Italy). Coastlines are not outlined. Mapped areas are spherical polygon areas.';
 for(const [country,c] of Object.entries(countries)){
+ if(country==='united-kingdom'){
+  // Add the surveyed narrow tidal channels at the district level. All parent fills
+  // and selection outlines then inherit the same coastline and administrative seams.
+  const fills=JSON.parse(gunzipSync(fs.readFileSync(new URL('boundary-sources/uk-tidal-river-fills.json.gz',import.meta.url))));
+  for(const f of lowest[country].features){
+   const addition=fills[f.properties.id.slice(5)];
+   if(!addition)continue;
+   f.geometry=single(await command(fc([f,{...f,geometry:addition}]),'-dissolve2 gap-fill-area=0'));
+  }
+ }
  const geometry=outlines[country];
  fs.rmSync(out+'/'+country,{recursive:true,force:true});
  const levels=c.levels||['Country'],maxLevel=levels.length,records=[],chunks={},counts={};
@@ -631,7 +641,7 @@ for(const [country,c] of Object.entries(countries)){
  // A wildcard source name lists every matching file (France has one per département).
  const own=c.file.includes('*')?Object.keys(manifest.files).filter(n=>n.startsWith(c.file.split('*')[0])||n==='france-regions.json'||n==='france-departements.json'):[c.file];
  const files=[...own,'ne-10m-land-boundaries.geojson',...(reconciled[country]?['ne-10m-countries.geojson']:[]),...Object.keys(manifest.files).filter(n=>n.startsWith('neighbour-')||n.startsWith('osm-relation-'))];
- fs.writeFileSync(out+'/'+country+'/sources.json',JSON.stringify({retrieved:manifest.retrieved,counts,coverage:c.coverage,processing,frontierKm:Math.round(length/1000),seamReports:Object.fromEntries(Object.entries(seamReports).filter(([k])=>k.includes(country))),sources:files.map(n=>({file:n,...manifest.files[n]}))},null,2)+'\n');
+ fs.writeFileSync(out+'/'+country+'/sources.json',JSON.stringify({retrieved:manifest.retrieved,counts,coverage:c.coverage,processing,frontierKm:Math.round(length/1000),seamReports:Object.fromEntries(Object.entries(seamReports).filter(([k])=>k.includes(country))),sources:[...files.map(n=>({file:n,...manifest.files[n]})),...(country==='united-kingdom'?JSON.parse(fs.readFileSync(new URL('boundary-sources/uk-tidal-river-sources.json',import.meta.url))):[])]},null,2)+'\n');
  console.log(country,counts,'chunks',Object.keys(chunks).length,'; land frontier',Math.round(length/1000),'km in',paths.length,'paths');
 }
 if(!only||only.includes('india')){const {prepareIndiaNames}=await import('./prepare-india-names.mjs');prepareIndiaNames(out+'/india/');}

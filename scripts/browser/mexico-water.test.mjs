@@ -12,7 +12,7 @@ export default [
   await page.evaluate('window.__mexicoFill=map.getSource("mexico-first");window.__mexicoEdges=map.getSource("mexico-first-edges");0');
   for(const [id,p] of anchors){
    await page.evaluate('map.jumpTo({center:'+JSON.stringify(p)+',zoom:8});0');await page.settle();
-   assert(await page.evaluate(hit('mexico-first-fill',p)),id+' lagoon has solid base land');
+   assert.equal(!!await page.evaluate(hit('mexico-first-fill',p)),id!=='MX-CAM',id+' base fill at water anchor');
   }
   await page.tap('#mx-water-layer');
   await page.waitFor('!!map.getLayer("mexico-lakes")&&map.getLayoutProperty("mexico-lakes","visibility")==="visible"',{timeout:30000,label:'blue water overlay'});
@@ -20,7 +20,7 @@ export default [
   for(const [id,p] of anchors){
    await page.evaluate('map.jumpTo({center:'+JSON.stringify(p)+',zoom:8});0');await page.settle();
    assert(await page.evaluate(hit('mexico-lakes',p)),id+' water renders blue at its mapped location');
-   assert(await page.evaluate(hit('mexico-first-fill',p)),id+' remains selectable beneath water');
+   assert.equal(!!await page.evaluate(hit('mexico-first-fill',p)),id!=='MX-CAM',id+' base fill stays independent of the overlay');
   }
   assert.equal(await page.evaluate('mapScene.assertOrder()'),true);
   await page.evaluate('map.jumpTo({center:[-92.6,18.15],zoom:7});0');await page.settle();
@@ -40,14 +40,16 @@ export default [
  ,{name:'water loaded during satellite mode keeps its blue paint and state borders',options:{width:1280,height:820},async run(page,base){
   await page.send('Fetch.enable',{patterns:[{urlPattern:'*ibasemaps-api.arcgis.com/*'}]});
   page.on('Fetch.requestPaused',event=>{page.send('Fetch.fulfillRequest',{requestId:event.requestId,responseCode:200,responseHeaders:[{name:'Content-Type',value:'image/png'},{name:'Access-Control-Allow-Origin',value:'*'}],body:'iVBORw0KGgoAAAANSUhEUgAAAQAAAAEAAQMAAABmvDolAAAAA1BMVEVnhWd/wHiKAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAH0lEQVRo3u3BAQ0AAADCoPdPbQ43oAAAAAAAAAAAvg0hAAABfxmcpwAAAABJRU5ErkJggg=='}).catch(()=>{});});
-  await page.open(base,'#mexico');await searchAndSelect(page,'Tabasco','Tabasco','State');await page.tap('#mx-tab-layers');await page.tap('#satellite-layer');
+  await page.open(base,'#mexico');await searchAndSelect(page,'Tabasco','Tabasco','State');await page.tap('#mx-tab-layers');
+  const landOpacity=await page.evaluate('map.getPaintProperty("mexico-first-fill","fill-opacity")');
+  await page.tap('#satellite-layer');
   await page.waitFor('satelliteDisplay.state.hasTile',{label:'satellite tile'});await page.tap('#mx-water-layer');
   await page.waitFor('!!map.getLayer("mexico-lakes")&&map.getLayoutProperty("mexico-lakes","visibility")==="visible"');await page.settle();
   assert.equal(await page.evaluate('mapScene.assertOrder()'),true);assert.equal(await page.evaluate('map.getPaintProperty("mexico-lakes","fill-color")'),'#8cb5c4');
   assert(await page.evaluate('map.queryRenderedFeatures({layers:["mexico-first-lines"]}).length>0'));
   await page.tap('#satellite-layer');await page.tap('#mx-water-layer');await page.settle();
   assert.equal(await page.evaluate('map.getLayoutProperty("mexico-lakes","visibility")'),'none');
-  assert.equal(await page.evaluate('map.getPaintProperty("mexico-first-fill","fill-opacity")'),1);
+  assert.deepEqual(await page.evaluate('map.getPaintProperty("mexico-first-fill","fill-opacity")'),landOpacity,'Leaving satellite view restores the original land paint');
  }}
 
 ];
